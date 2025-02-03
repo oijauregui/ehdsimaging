@@ -1,0 +1,8 @@
+input-cache/
+output/
+temp/
+template/
+output/
+fsh-generated/**
+ig-template/**/*.db
+ig-template/**/*index.json
