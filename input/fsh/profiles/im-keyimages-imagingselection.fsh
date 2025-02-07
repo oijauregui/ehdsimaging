@@ -1,7 +1,7 @@
 Profile: ImKeyImagesSelection
 Parent: ImImagingSelection
 Id: im-keyimages-imaging-selection
-Title: "Key images represted as an ImagingSelection"
+Title: "Key images represented as an ImagingSelection"
 * insert SetFmmAndStatusRule( 1, draft )
 * insert MandateLanguageAndSecurity
 

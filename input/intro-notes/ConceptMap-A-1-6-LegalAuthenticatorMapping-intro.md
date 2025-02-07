@@ -40,7 +40,7 @@ classDiagram
     LegalAuthenticator --|> ImComposition
     LegalAuthenticator --|> ImDiagnosticReport
     
-    ImComposition --> ImLegalAuthenticator: atterster.party    
+    ImComposition --> ImLegalAuthenticator: attester.party    
     ImLegalAuthenticator --> ImPractitioner: practitioner
     ImLegalAuthenticator --> ImOrganization: organization  
 

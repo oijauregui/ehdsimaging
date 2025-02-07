@@ -47,7 +47,7 @@ The procedure information is expected to be part of the `ImProcedure` profile an
   // * insert ElementMapping( #performer, "A.5.1.8 Performer", #equivalent, "Performer", #equivalent )
   // * insert ElementMapping( #performerId, "A.5.1.8.1 Performer Id", #equivalent, "Performer Id", #equivalent )
   // * insert ElementMapping( #performerName, "A.5.1.8.2 Performer Name", #equivalent, "Performer Name", #equivalent )
-  // * insert ElementMapping( #performerOrganization, "A.5.1.8.3 Performer Organisation", #equivalent, "Performer Organisation", #equivalent )
+  // * insert ElementMapping( #performerOrganization, "A.5.1.8.3 Performer Organization", #equivalent, "Performer Organization", #equivalent )
   // * insert ElementMapping( #additionalProcedureDetails, "A.5.1.9 Additional procedure details", #equivalent, "Additional procedure details", #equivalent )
 
 * group[+]
@@ -66,8 +66,8 @@ The procedure information is expected to be part of the `ImProcedure` profile an
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-examreport-imaging-proc-description"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-body-structure" 
-  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurenceDateTime, "As a single time", #equivalent )
-  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurencePeriod, "As a time period", #equivalent )
+  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurrenceDateTime, "As a single time", #equivalent )
+  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurrencePeriod, "As a time period", #equivalent )
   // * insert ElementMapping( #procedureText, "A.5.1.3 Procedure text", #note, "", #equivalent )
   // * insert ElementMapping( #procedureCode, "A.5.1.4 Procedure code", #code, "", #equivalent )
   // * insert ElementMapping( #procedureName, "A.5.1.5 Procedure name", #code.display, "Name of procedure in coding standard.", #equivalent )
@@ -80,14 +80,14 @@ The procedure information is expected to be part of the `ImProcedure` profile an
   // * insert ElementMapping( #performer, "A.5.1.8 Performer", #equivalent, "Performer", #equivalent )
   // * insert ElementMapping( #performerId, "A.5.1.8.1 Performer Id", #equivalent, "Performer Id", #equivalent )
   // * insert ElementMapping( #performerName, "A.5.1.8.2 Performer Name", #equivalent, "Performer Name", #equivalent )
-  // * insert ElementMapping( #performerOrganization, "A.5.1.8.3 Performer Organisation", #equivalent, "Performer Organisation", #equivalent )
+  // * insert ElementMapping( #performerOrganization, "A.5.1.8.3 Performer Organization", #equivalent, "Performer Organization", #equivalent )
   // * insert ElementMapping( #additionalProcedureDetails, "A.5.1.9 Additional procedure details", #equivalent, "Additional procedure details", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-examreport-imaging-proc-description"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-imaging-device" 
-  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurenceDateTime, "As a single time", #equivalent )
-  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurencePeriod, "As a time period", #equivalent )
+  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurrenceDateTime, "As a single time", #equivalent )
+  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurrencePeriod, "As a time period", #equivalent )
   // * insert ElementMapping( #procedureText, "A.5.1.3 Procedure text", #note, "", #equivalent )
   // * insert ElementMapping( #procedureCode, "A.5.1.4 Procedure code", #code, "", #equivalent )
   // * insert ElementMapping( #procedureName, "A.5.1.5 Procedure name", #code.display, "Name of procedure in coding standard.", #equivalent )
@@ -98,15 +98,15 @@ The procedure information is expected to be part of the `ImProcedure` profile an
   // * insert ElementMapping( #performer, "A.5.1.8 Performer", #equivalent, "Performer", #equivalent )
   // * insert ElementMapping( #performerId, "A.5.1.8.1 Performer Id", #equivalent, "Performer Id", #equivalent )
   // * insert ElementMapping( #performerName, "A.5.1.8.2 Performer Name", #equivalent, "Performer Name", #equivalent )
-  // * insert ElementMapping( #performerOrganization, "A.5.1.8.3 Performer Organisation", #equivalent, "Performer Organisation", #equivalent )
+  // * insert ElementMapping( #performerOrganization, "A.5.1.8.3 Performer Organization", #equivalent, "Performer Organization", #equivalent )
   // * insert ElementMapping( #additionalProcedureDetails, "A.5.1.9 Additional procedure details", #equivalent, "Additional procedure details", #equivalent )
 
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-examreport-imaging-proc-description"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-imaging-study-phase" 
-  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurenceDateTime, "As a single time", #equivalent )
-  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurencePeriod, "As a time period", #equivalent )
+  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurrenceDateTime, "As a single time", #equivalent )
+  // * insert ElementMapping( #procedureDate, "A.5.1.2 Procedure date", #occurrencePeriod, "As a time period", #equivalent )
   // * insert ElementMapping( #procedureText, "A.5.1.3 Procedure text", #note, "", #equivalent )
   // * insert ElementMapping( #procedureCode, "A.5.1.4 Procedure code", #code, "", #equivalent )
   // * insert ElementMapping( #procedureName, "A.5.1.5 Procedure name", #code.display, "Name of procedure in coding standard.", #equivalent )

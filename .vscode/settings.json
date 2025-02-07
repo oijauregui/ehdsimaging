@@ -1,0 +1,20 @@
+{
+    "cSpell.words": [
+        "EDQM",
+        "LOINC",
+        "UCUM",
+        "WADO",
+        "CodeableConcept",
+        "DICOM"
+    ],
+    "editor.wordWrap": "on",
+    "markdownlint.config": {
+        "default": true,
+        "MD013": false,
+        "MD032": false,
+        "MD033": false,
+        "MD041": false,
+        "no-hard-tabs": true
+    },
+    "editor.tabSize": 2
+}

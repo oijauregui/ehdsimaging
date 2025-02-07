@@ -2,7 +2,7 @@ The figure below presents the eHN DataSet representation and the FHIR profiles i
 
 ```mermaid
 classDiagram
-    class HealthInsurranceAndPayment{
+    class HealthInsuranceAndPayment{
         <<eHN DataSet>>
         providerCode
         providerName
@@ -25,19 +25,19 @@ classDiagram
     class ImComposition{
         <<Composition>>
         section[order].entry[order]
-        section[order].entry[insurrance]
-        section[order].entry[insurranceprovider]
+        section[order].entry[insurance]
+        section[order].entry[insuranceprovider]
     }
-    HealthInsurranceAndPayment --|> ImCoverage
-    HealthInsurranceAndPayment --|> ImHealthInsurerProvider
-    HealthInsurranceAndPayment --|> ImOrder
-    HealthInsurranceAndPayment --|> ImComposition
+    HealthInsuranceAndPayment --|> ImCoverage
+    HealthInsuranceAndPayment --|> ImHealthInsurerProvider
+    HealthInsuranceAndPayment --|> ImOrder
+    HealthInsuranceAndPayment --|> ImComposition
     
     ImCoverage --> ImHealthInsurerProvider: insurer
     ImOrder --> ImCoverage: insurance
     ImComposition --> ImOrder: section[order].entry[order]
-    ImComposition --> ImCoverage: section[order].entry[insurrance]
-    ImComposition --> ImHealthInsurerProvider: section[order].entry[insyrranceprovider]
+    ImComposition --> ImCoverage: section[order].entry[insurance]
+    ImComposition --> ImHealthInsurerProvider: section[order].entry[insuranceprovider]
 
 ```
 

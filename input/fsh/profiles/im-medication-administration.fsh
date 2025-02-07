@@ -2,7 +2,7 @@ Profile: ImMedicationAdministration
 Parent: MedicationAdministration
 Id: im-medication-administration
 Title: "Medication Administration"
-Description: "Record of medication adminstration during imaging procedure."
+Description: "Record of medication administration during imaging procedure."
 * insert SetFmmAndStatusRule( 1, draft )
 * insert MandateLanguageAndSecurity
 

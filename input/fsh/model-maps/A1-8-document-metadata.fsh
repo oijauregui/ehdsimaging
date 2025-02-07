@@ -145,7 +145,7 @@ Title: "Mapping of A.1.8 Document Metadata"
     * code = #studyInstanceUID
     * display = "A.1.8.10 Legal Study Instance UID"
     * target
-      * code = #imagingstudy.identifier:studyUID
+      * code = #identifier:studyUID
       * display = ""
       * relationship = #equivalent
 

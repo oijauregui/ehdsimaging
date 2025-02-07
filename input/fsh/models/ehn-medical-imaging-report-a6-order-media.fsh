@@ -26,7 +26,7 @@ Description: "Key images associated with this report"
   """
 * performer 0..1 Base "A.6.8 Performer" """
   Identifies the performer of the imaging acquisition process. 
-  Performer may include: performer identifier, performer name, performer type, performer medical speciality, performer organisation, and performer contact details.
+  Performer may include: performer identifier, performer name, performer type, performer medical specialty, performer organization, and performer contact details.
   """
   * performerId 0..1 Identifier "A.6.8.1 Performer Id" """
     Performer identifier unique within a given context (namespace). Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number.
@@ -40,8 +40,8 @@ Description: "Key images associated with this report"
   * performerMedicalSpecialty 0..1 CodeableConcept "A.6.8.4 Performer Medical Specialty" """
     Medical specialty of the performer. SNOMED CT
     """
-  * performerOrganization 0..1 string "A.6.8.5 Performer Organisation" """
-    The healthcare provider organisation information.
+  * performerOrganization 0..1 string "A.6.8.5 Performer Organization" """
+    The healthcare provider organization information.
     """
   * performerContactDetails 0..1 ContactPoint "A.6.8.6 Performer Contact Details" """
     Contact details of the performer (address and telecom details).

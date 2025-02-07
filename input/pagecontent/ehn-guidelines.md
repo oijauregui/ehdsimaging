@@ -6,9 +6,9 @@ Medical imaging studies and reports, release 1.1)[https://health.ec.europa.eu/pu
 
 It could also serve as a guiding principle for the national development and implementation of imaging study reports.
 
-### eHN Guideline logical model.
+### eHN Guideline logical model
 
-The eHN Imaging Guideline in section 4 specifies a DATASET, which is a simplified logical model of a imaging study manifest and report. The data set comprises of several basic parts as visualised in the diagram below.
+The eHN Imaging Guideline in section 4 specifies a DATASET, which is a simplified logical model of a imaging study manifest and report. The data set comprises of several basic parts as visualized in the diagram below.
 
 {% include img.html img="eHN-imaging-study-and-report-dataset.png" caption="Figure: eHN Imaging Study and Report dataset" %}
 
@@ -25,10 +25,9 @@ The HL7 FHIR logical model requires that element cardinality is specified, while
   ]
 } %}
 
-
 ### Logical model mapping onto HL7 FHIR
 
-The following FHIR `ConcepMaps` describe the way the logical model has been mapped onto the FHIR profiles defined in this specification.
+The following FHIR `ConceptMaps` describe the way the logical model has been mapped onto the FHIR profiles defined in this specification.
 
 {% sql {
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='ConceptMap' ORDER BY Name",
@@ -38,4 +37,3 @@ The following FHIR `ConcepMaps` describe the way the logical model has been mapp
     { "name" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}
-
