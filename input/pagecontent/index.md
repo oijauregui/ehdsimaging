@@ -22,11 +22,13 @@ The development of this implementation guide is promoted by HL7 Europe, but real
 
 ### Related specifications
 
+
 This specification defines the representation of the data sets required by {{ehnImagingFull}}".
 
 Besides the requirements defined in the {{ehnImagingGuidelines}}, it also uses input  from other related activities:
 
 * Related activities in other Standard Development Organizations (SDO):
+
   * IHE-RAD
   * HL7 FHIR Imaging Integration
 * Related specifications:

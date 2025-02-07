@@ -31,7 +31,6 @@ dependencies:
   hl7.fhir.uv.extensions: 5.1.0
   hl7.fhir.eu.extensions: current
   hl7.fhir.eu.base.r5: current
-  
   fhir.dicom:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom
