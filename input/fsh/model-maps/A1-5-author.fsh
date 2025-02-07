@@ -11,145 +11,47 @@ Title: "Mapping of A.1.5 Information Author"
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-author"
   
-  * element[+]
-    * code = #authorIdentifier
-    * display = "A.1.5.1 Author identifier"
-    * target 
-      * code = #practitioner.identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerName
-    * display = "A.1.5.2 Author name"
-    * target 
-      * code = #practitioner.name
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerOrganization
-    * display = "A.1.5.3 Author organization"
-    * target 
-      * code = #organization.name
-      * display = ""
-      * relationship = #equivalent
-
-  // * element[+]
-  //   * code = #providerTelecom
-  //   * display = "A.1.5.4 Authoring date and time"
-  //   * target 
-  //     * code = #practitioner.telecom
-  //     * display = ""
-  //     * relationship = #equivalent
+  * insert ElementMapping( #authorIdentifier, "A.1.5.1 Author identifier", #practitioner.identifier, "", #equivalent )
+  * insert ElementMapping( #providerName, "A.1.5.2 Author name", #practitioner.name, "", #equivalent )
+  * insert ElementMapping( #providerOrganization, "A.1.5.3 Author organization", #organization.name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-practitioner"
   
-  * element[+]
-    * code = #authorIdentifier
-    * display = "A.1.5.1 Author identifier"
-    * target 
-      * code = #identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerName
-    * display = "A.1.5.2 Author name"
-    * target 
-      * code = #name
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #authorIdentifier, "A.1.5.1 Author identifier", #identifier, "", #equivalent )
+  * insert ElementMapping( #providerName, "A.1.5.2 Author name", #name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-organization"
   
-  * element[+]
-    * code = #authorOrganization
-    * display = "A.1.5.3 Author organization"
-    * target 
-      * code = #organization.name
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #authorOrganization, "A.1.5.3 Author organization", #organization.name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-diagnostic-report"
-  * element[+]
-    * code = #authoringDateTime
-    * display = "A.1.5 Authoring Datetime"
-    * target 
-      * code = #issued
-      * display = ""
-      * relationship = #source-is-narrower-than-target	
+  
+  * insert ElementMapping( #authoringDateTime, "A.1.5 Authoring Datetime", #issued, "", #source-is-narrower-than-target )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-composition"
 
-  * element[+]
-    * code = #author
-    * display = "A.1.5 Author"
-    * target 
-      * code = #author[author]
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #author
-    * display = "A.1.5 Authoring Device"
-    * target 
-      * code = #author[authoring-device]
-      * display = ""
-      * relationship = #equivalent
-      
-  * element[+]
-    * code = #authoringDateTime
-    * display = "A.1.5 Author"
-    * target 
-      * code = #date
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #author, "A.1.5 Author", #author[author], "", #equivalent )
+  * insert ElementMapping( #author, "A.1.5 Authoring Device", #author[authoring-device], "", #equivalent )
+  * insert ElementMapping( #authoringDateTime, "A.1.5 Author", #date, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-diagnostic-report"
 
-  * element[+]
-    * code = #author
-    * display = "A.1.5 Author"
-    * target 
-      * code = #resultsInterpreter[author]
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #author
-    * display = "A.1.5 Authoring Device"
-    * target 
-      * code = #resultsInterpreter
-      * display = "Is not mapped"
-      * relationship = #not-related-to
+  * insert ElementMapping( #author, "A.1.5 Author", #resultsInterpreter[author], "", #equivalent )
+  * insert ElementMapping( #author, "A.1.5 Authoring Device", #resultsInterpreter, "Is not mapped", #not-related-to )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-authoring-device"
 
-  * element[+]
-    * code = #authorIdentifier
-    * display = "A.1.5 Author"
-    * target 
-      * code = #identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #authorName
-    * display = "A.1.5 Author"
-    * target 
-      * code = #name
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #authorIdentifier, "A.1.5 Author", #identifier, "", #equivalent )
+  * insert ElementMapping( #authorName, "A.1.5 Author", #name, "", #equivalent )

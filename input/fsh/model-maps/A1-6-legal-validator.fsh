@@ -11,98 +11,32 @@ Title: "Mapping of A.1.6 Legal Authenticator"
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-legal-authenticator"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-legal-authenticator"
   
-  * element[+]
-    * code = #authenticatorIdentifier
-    * display = "A.1.6.1 Legal Authenticator identifier"
-    * target 
-      * code = #practitioner.identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #authenticatorName
-    * display = "A.1.6.2 Legal Authenticator name"
-    * target 
-      * code = #practitioner.name
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #authenticatorOrganization
-    * display = "A.1.6.3 Legal Authenticator organization"
-    * target 
-      * code = #organization.name
-      * display = ""
-      * relationship = #equivalent
-
-  // * element[+]
-  //   * code = #providerTelecom
-  //   * display = "A.1.6.4 Authoring date and time"
-  //   * target 
-  //     * code = #practitioner.telecom
-  //     * display = ""
-  //     * relationship = #equivalent
+  * insert ElementMapping( #authenticatorIdentifier, "A.1.6.1 Legal Authenticator identifier", #practitioner.identifier, "", #equivalent )
+  * insert ElementMapping( #authenticatorName, "A.1.6.2 Legal Authenticator name", #practitioner.name, "", #equivalent )
+  * insert ElementMapping( #authenticatorOrganization, "A.1.6.3 Legal Authenticator organization", #organization.name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-practitioner"
   
-  * element[+]
-    * code = #authenticatorIdentifier
-    * display = "A.1.6.1 Legal Authenticator identifier"
-    * target 
-      * code = #identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #authenticatorName
-    * display = "A.1.6.2 Legal Authenticator name"
-    * target 
-      * code = #name
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #authenticatorIdentifier, "A.1.6.1 Legal Authenticator identifier", #identifier, "", #equivalent )
+  * insert ElementMapping( #authenticatorName, "A.1.6.2 Legal Authenticator name", #name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-organization"
   
-  * element[+]
-    * code = #authenticatorOrganization
-    * display = "A.1.6.3 Legal Authenticator organization"
-    * target 
-      * code = #name
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #authenticatorOrganization, "A.1.6.3 Legal Authenticator organization", #name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-author"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-diagnostic-report"
-  * element[+]
-    * code = #authenticatingDateTime
-    * display = "A.1.6 Authentication date and timeDatetime"
-    * target 
-      * code = #issued
-      * display = ""
-      * relationship = #source-is-narrower-than-target	
+  
+  * insert ElementMapping( #authenticatingDateTime, "A.1.6 Authentication date and time", #issued, "", #source-is-narrower-than-target )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-composition"
 
-  * element[+]
-    * code = #authenticator
-    * display = "A.1.6 Legal Authenticator"
-    * target 
-      * code = #attester[legal-authenticator]
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #authenticatingDateTime
-    * display = "A.1.6 Authentication date and time"
-    * target 
-      * code = #attester[legal-authenticator].time
-      * display = ""
-      * relationship = #equivalent
-      
+  * insert ElementMapping( #authenticator, "A.1.6 Legal Authenticator", #attester[legal-authenticator], "", #equivalent )
+  * insert ElementMapping( #authenticatingDateTime, "A.1.6 Authentication date and time", #attester[legal-authenticator].time, "", #equivalent )

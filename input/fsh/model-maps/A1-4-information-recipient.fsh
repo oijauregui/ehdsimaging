@@ -11,118 +11,31 @@ Title: "Mapping of A.1.4 Information Recipient"
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-information-recipient"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-information-recipient"
   
-  * element[+]
-    * code = #recipientIdentifier
-    * display = "A.1.4.1 Recipient identifier"
-    * target 
-      * code = #practitioner.identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerName
-    * display = "A.1.4.2 Recipient name"
-    * target 
-      * code = #practitioner.name
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerOrganization
-    * display = "A.1.4.3 Recipient organization"
-    * target 
-      * code = #organization.name
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerAddress
-    * display = "A.1.4.4 Recipient address"
-    * target 
-      * code = #practitioner.address
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerCountry
-    * display = "A.1.4.5 Recipient Country"
-    * target 
-      * code = #practitioner.address
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerTelecom
-    * display = "A.1.4.6 Recipient Telecom"
-    * target 
-      * code = #practitioner.telecom
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #recipientIdentifier, "A.1.4.1 Recipient identifier", ##practitioner.identifier, "", #equivalent )
+  * insert ElementMapping( #providerName, "A.1.4.2 Recipient name", #practitioner.name, "", #equivalent )
+  * insert ElementMapping( #providerOrganization, "A.1.4.3 Recipient organization", #organization.name, "", #equivalent )
+  * insert ElementMapping( #providerAddress, "A.1.4.4 Recipient address", #practitioner.address, "", #equivalent )
+  * insert ElementMapping( #providerCountry, "A.1.4.5 Recipient Country", #practitioner.address, "", #equivalent )
+  * insert ElementMapping( #providerTelecom, "A.1.4.6 Recipient Telecom", #practitioner.telecom, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-information-recipient"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-practitioner"
   
-  * element[+]
-    * code = #recipientIdentifier
-    * display = "A.1.4.1 Recipient identifier"
-    * target 
-      * code = #identifier
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerName
-    * display = "A.1.4.2 Recipient name"
-    * target 
-      * code = #name
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerAddress
-    * display = "A.1.4.4 Recipient address"
-    * target 
-      * code = #address
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerCountry
-    * display = "A.1.4.5 Recipient Country"
-    * target 
-      * code = #address
-      * display = ""
-      * relationship = #equivalent
-
-  * element[+]
-    * code = #providerTelecom
-    * display = "A.1.4.6 Recipient Telecom"
-    * target 
-      * code = #practitioner.telecom
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #recipientIdentifier, "A.1.4.1 Recipient identifier", #identifier, "", #equivalent )
+  * insert ElementMapping( #providerName, "A.1.4.2 Recipient name", #name, "", #equivalent )
+  * insert ElementMapping( #providerAddress, "A.1.4.4 Recipient address", #address, "", #equivalent )
+  * insert ElementMapping( #providerCountry, "A.1.4.5 Recipient Country", #address, "", #equivalent )
+  * insert ElementMapping( #providerTelecom, "A.1.4.6 Recipient Telecom", #practitioner.telecom, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header-information-recipient"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-organization"
   
-  * element[+]
-    * code = #providerOrganization
-    * display = "A.1.4.3 Recipient organization"
-    * target 
-      * code = #organization.name
-      * display = ""
-      * relationship = #equivalent
+  * insert ElementMapping( #providerOrganization, "A.1.4.3 Recipient organization", #organization.name, "", #equivalent )
 
 * group[+]
   * source = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-header"
   * target = "http://hl7.eu/fhir/imaging/StructureDefinition/im-composition"
 
-  * element[+]
-    * code = #informationRecipient
-    * display = "A.1.4 Information Recipient"
-    * target 
-      * code = #extension[informationRecipient]
-      * display = "Follow choices in HL7 EU laboratory."
-      * relationship = #equivalent
+  * insert ElementMapping( #informationRecipient, "A.1.4 Information Recipient", #extension[informationRecipient], "Follow choices in HL7 EU laboratory.", #equivalent )
