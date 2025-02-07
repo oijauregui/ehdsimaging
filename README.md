@@ -1,7 +1,7 @@
-# HL7 Europe Imaging Study Reports FHIR IG
+# HL7 EU Imaging Studies and Reports Implementation Guide.
 
-The HL7 Europe Imaging Study Report FHIR IG.
+This github repository contains the source material for the HL7 EU Imaging Studies and Reports Implementation Guide.
 
-Web-build: https://build.fhir.org/ig/hl7-eu/imaging/
+* Current Web-build: https://build.fhir.org/ig/hl7-eu/imaging/index.html
+* Issues: https://github.com/hl7-eu/imaging/issues 
 
-Issues: https://github.com/hl7-eu/imaging/issues 

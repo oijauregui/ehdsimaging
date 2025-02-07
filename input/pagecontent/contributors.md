@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 ### Authors and Contributors
 
 This guide is the result of a multi  stakeholders effort involving different experts from several 
@@ -8,9 +10,9 @@ European countries, projects (e.g. XpanDH) and initiatives (e.g. MyHealth@EU); o
 The following picture provide an overview of the origin of the participants.
 
 <div>
-<img src="eu-coverage.png"  alt="Coverage" width="40%">
-<p>Figure 1 - Experts distribution</p>
-<p></p>
+    <img src="eu-coverage.png"  alt="Coverage" width="40%">
+    <p>Figure 1 - Experts distribution</p>
+    <p></p>
 </div>
 
 |Role | Name             | Affiliation |
