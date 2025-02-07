@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 The sections in this chapter elaborate on the design considerations and decisions that drove important parts of the modelling in this guide.
 
 {% include design-consideration-composition-diagnosticreport.md %}

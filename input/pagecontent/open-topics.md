@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 This page contains open topics detected in the specification that are recognized and still need to be resolved.
 
 * The definition of what a _information recipient_ is is not completely clear. We follow the guidance from hdr in this until more information is available. If it represents a request for info - CommunicationRequest would be an option, if it represents a log of who received the info, Communication or Provenance could address this.

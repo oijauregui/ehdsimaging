@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 ### Authors and Contributors
 
 This guide is the result of a multi  stakeholders effort involving different experts from several 

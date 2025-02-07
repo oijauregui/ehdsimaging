@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 When the resource points to a bodysite it:
 
 * SHALL populate the `bodysite` field.
