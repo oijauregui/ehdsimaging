@@ -56,7 +56,7 @@
 <artifact id="StructureDefinition/im-imagingstudy" key="StructureDefinition-im-imagingstudy" name="ImagingStudy"/>
 <artifact id="StructureDefinition/im-impression" key="StructureDefinition-im-impression" name="Impression"/>
 <artifact id="StructureDefinition/im-information-recipient" key="StructureDefinition-im-information-recipient" name="Information Recipient"/>
-<artifact id="StructureDefinition/im-keyimages-imaging-selection" key="StructureDefinition-im-keyimages-imaging-selection" name="Key images represted as an ImagingSelection"/>
+<artifact id="StructureDefinition/im-keyimages-imaging-selection" key="StructureDefinition-im-keyimages-imaging-selection" name="Key images represented as an ImagingSelection"/>
 <artifact id="StructureDefinition/im-legal-authenticator" key="StructureDefinition-im-legal-authenticator" name="Legal Authenticator"/>
 <artifact id="ConceptMap/A-1-1-PatientInformationMapping" key="ConceptMap-A-1-1-PatientInformationMapping" name="Mapping of A.1.1 Identification of the patient/subject"/>
 <artifact id="ConceptMap/A-1-2-PatientContactInformationMapping" key="ConceptMap-A-1-2-PatientContactInformationMapping" name="Mapping of A.1.2 Patient/subject related contact information"/>
