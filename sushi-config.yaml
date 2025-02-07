@@ -32,9 +32,9 @@ dependencies:
   hl7.fhir.eu.extensions: current
   hl7.fhir.eu.base.r5: current
   fhir.dicom:
-      id: DICOM
-      uri: http://fhir.org/packages/fhir.dicom
-      version: 2024.2.20240331
+    id: DICOM
+    uri: http://fhir.org/packages/fhir.dicom
+    version: 2024.2.20240331
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -52,8 +52,8 @@ pages:
     title: Home
   ehn-guidelines.md:
     title: eHN Imaging Studies and Reports Guidelines
-  design-decisions.md:
-    title: Design Decisions
+  design-considerations.md:
+    title: Design Considerations
   contributors.md:
     title: Contributors
   open-topics.md:
@@ -95,8 +95,9 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
   eHN Guidelines: ehn-guidelines.html
+  Artifacts: artifacts.html
+  Design Considerations: design-considerations.html
   Open Topics: open-topics.html
   
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -195,6 +196,13 @@ groups:
       - StructureDefinition/ehn-medical-imaging-report-presented-form
       - StructureDefinition/ehn-medical-imaging-report-specimen-information
       - StructureDefinition/ehn-imaging-study-manifest-dataset
+  dataEntryPoints:
+    name: Data Entry Points
+    description: The key resources representing the entry points for imaging study reports.
+    resources:
+      - StructureDefinition/im-diagnostic-report
+      - StructureDefinition/im-imagingstudy
+      - StructureDefinition/im-composition
 
 #     name: Group A
 #     description: The Alpha Group

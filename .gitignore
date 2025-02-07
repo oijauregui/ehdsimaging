@@ -1,8 +1,11 @@
 input-cache/
 output/
+output-stable/
 temp/
 template/
 output/
 fsh-generated/**
 ig-template/**/*.db
 ig-template/**/*index.json
+publisher.jar
+/.idea

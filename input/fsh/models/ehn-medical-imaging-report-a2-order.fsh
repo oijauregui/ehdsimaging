@@ -21,6 +21,6 @@ Description:  "Note: an imaging report could respond to multiple orders."
 * orderPlacerContactDetails 0..1 ContactPoint "A.2.6 Order placer contact details" """
   Contact details of order placer (address and telecom details).
   """
-* orderPlacerOrganization 0..1 string "A.2.7 Order placer organisation" """
-  Order placer organisation information.
+* orderPlacerOrganization 0..1 string "A.2.7 Order placer organization" """
+  Order placer organization information.
   """
