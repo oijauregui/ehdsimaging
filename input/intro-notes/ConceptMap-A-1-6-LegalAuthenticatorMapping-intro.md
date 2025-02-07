@@ -1,4 +1,4 @@
-This ConceptMap maps section A.1.7 of the eHN logical model on the IG FHIR model.
+The figure below presents the eHN DataSet representation and the FHIR profiles it maps to. For each FHIR profile the impacted fields are listed.
 
 ```mermaid
 classDiagram
@@ -42,6 +42,6 @@ classDiagram
     
     ImComposition --> ImLegalAuthenticator: atterster.party    
     ImLegalAuthenticator --> ImPractitioner: practitioner
-    ImLegalAuthenticator --> ImOrganization: organization
-    
+    ImLegalAuthenticator --> ImOrganization: organization  
+
 ```

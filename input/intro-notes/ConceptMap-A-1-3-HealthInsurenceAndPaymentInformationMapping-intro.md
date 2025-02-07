@@ -1,4 +1,4 @@
-This concept map defines the mapping between the A.1.3. Health Insurance and Payment Information section and the FHIR profiles.
+The figure below presents the eHN DataSet representation and the FHIR profiles it maps to. For each FHIR profile the impacted fields are listed.
 
 ```mermaid
 classDiagram
@@ -24,6 +24,9 @@ classDiagram
     }
     class ImComposition{
         <<Composition>>
+        section[order].entry[order]
+        section[order].entry[insurrance]
+        section[order].entry[insurranceprovider]
     }
     HealthInsurranceAndPayment --|> ImCoverage
     HealthInsurranceAndPayment --|> ImHealthInsurerProvider
