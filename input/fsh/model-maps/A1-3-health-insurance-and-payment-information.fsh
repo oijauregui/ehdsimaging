@@ -77,7 +77,7 @@ Title: "Mapping of A.1.3 Health Insurance and Payment Information"
     * display = "A.1.3 Health insurance"
     * target 
       * code = #section[order].entry[order]
-      * display = "Insurrance coverage"
+      * display = "Insurance coverage"
       * relationship = #equivalent
 
   * element[+]
@@ -85,13 +85,13 @@ Title: "Mapping of A.1.3 Health Insurance and Payment Information"
     * display = "A.1.3 Health insurance"
     * target 
       * code = #section[order].entry[insurance]
-      * display = "Insurrance coverage"
+      * display = "Insurance coverage"
       * relationship = #equivalent
 
   * element[+]
     * code = #insuranceAndPayment
     * display = "A.1.3 Health insurance"
     * target 
-      * code = #section[order].entry[insurranceprovider]
-      * display = "Insurrance Provider"
+      * code = #section[order].entry[insuranceprovider]
+      * display = "Insurance Provider"
       * relationship = #equivalent

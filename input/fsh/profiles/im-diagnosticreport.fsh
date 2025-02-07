@@ -34,7 +34,7 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 
 * issued 1..1 MS
   * ^short = "DateTime that this diagnostic report is published."
-  * ^definition = "The date and time that this version of the imaging repor"
+  * ^definition = "The date and time that this version of the imaging report."
 
 * result MS
   * insert SetPopulateIfKnown

@@ -3,7 +3,6 @@
 This guide is part of the HL7 EU suite of report related implementation guides that also includes [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/StructureDefinition-Payer.html), [HL7 Europe Hospital Discharge Report](https://build.fhir.org/ig/hl7-eu/hdr/index.html] and (HL7 Europe Patient Summary)[https://build.fhir.org/ig/hl7-eu/eps/).
 
 This implementation guide follows the approach taken by those specifications in that a Imaging Study Report is:
-
 * represented by one `DiagnosticReport` and and `Composition` resource.
 * the `DiagnosticReport` will always point to a  `Composition`.
 * the referred Composition:

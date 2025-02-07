@@ -28,7 +28,7 @@ Description: "This profile on Device represents the imaging device."
 
 * udiCarrier 0..* MS
   * ^definition = """ 
-    Normalised identifier of the acquisition modality equipment instance such as UDI according to REGULATION (EU) 2017/745.
+    Normalized identifier of the acquisition modality equipment instance such as UDI according to REGULATION (EU) 2017/745.
     """
   * insert SetPopulateIfKnown
   * deviceIdentifier 1..1 MS

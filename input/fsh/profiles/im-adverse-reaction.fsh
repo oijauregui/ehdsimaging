@@ -22,7 +22,7 @@ Description: "Adverse event during imaging procedure."
 * suspectEntity ^slicing.discriminator.type = #type
 * suspectEntity ^slicing.discriminator.path = ".instanceReference[x]"
 * suspectEntity ^slicing.rules = #open
-* suspectEntity ^slicing.description = "Slice refernces to the Procedure instance in which it the adverse event occured."
+* suspectEntity ^slicing.description = "Slice references to the Procedure instance in which it the adverse event occurred."
 * suspectEntity ^slicing.ordered = false
 * suspectEntity contains procedureEvent 1..1 MS
 and medicationAdministered 0..1 MS

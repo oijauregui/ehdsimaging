@@ -45,7 +45,7 @@ Description: "Identification of the patient/subject"
   provided.
   """
 * gender 0..1 CodeableConcept "A.1.1.5 Gender" """
-This field must contain a recognised valid value for 
+This field must contain a recognized valid value for 
 \"administrative gender\". If different, \"physiological gender\" 
 should be communicated elsewhere in the relevant clinical 
 information section.
@@ -106,8 +106,8 @@ Description: """
 * recipientName 0..* HumanName "A.1.4.2 Recipient name" """
   Person name [the structure of the name will be the same as for the patient (given name, family name / surname)].
   """
-* recipientOrganization 0..1 string "A.1.4.3 Recipient organisation" """
-  The healthcare provider organisation information.
+* recipientOrganization 0..1 string "A.1.4.3 Recipient organization" """
+  The healthcare provider organization information.
   """
 * recipientAddress 0..1 Address "A.1.4.4 Address" """
   Mailing and home or office addresses. The addresses are always sequences of address parts (e.g., street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose.
@@ -132,8 +132,8 @@ Description: """
 * authorName 0..* HumanName "A.1.5.2 Author name" """
   Person or device name.
   """
-* authorOrganization 0..1 string "A.1.5.3 Author organisation" """
-  The healthcare provider organisation information.
+* authorOrganization 0..1 string "A.1.5.3 Author organization" """
+  The healthcare provider organization information.
   """
 * authoringDateTime 0..1 dateTime "A.1.5.4 Authoring date and time" """
   Date and time the document was last modified. ISO 8601
@@ -152,8 +152,8 @@ Description: """
 * authenticatorName 0..* HumanName "A.1.6.2 Authenticator name" """
   Person name [the structure of the name will be the same as for the patient (given name, family name / surname)].
   """
-* authenticatorOrganization 0..1 string "A.1.6.3 Authenticator organisation" """
-  The healthcare provider organisation information.
+* authenticatorOrganization 0..1 string "A.1.6.3 Authenticator organization" """
+  The healthcare provider organization information.
   """
 * authenticatorDateTime 0..1 dateTime "A.1.6.4 Authenticator date and time" """
   Date and time the document was last authenticated. ISO 8601
@@ -170,8 +170,8 @@ Description: "Result validator"
 * validatorName 0..* HumanName "A.1.7.2 Result validator name" """
   Person name.
   """
-* validatorOrganization 0..1 string "A.1.7.3 Result validator organisation" """
-  The healthcare provider organisation information.
+* validatorOrganization 0..1 string "A.1.7.3 Result validator organization" """
+  The healthcare provider organization information.
   """
 * validationDateTime 0..1 dateTime "A.1.7.4 Validation date and time" """
   Date and time when the document was validated. ISO 8601
@@ -201,7 +201,7 @@ Description: "Document metadata"
   Imaging study procedure(s) performed. This element is relevant for the interactive selection of the available studies. LOINC, SNOMED CT.
   """
 * reportCustodian 0..1 string "A.1.8.6 Report custodian" """
-  Organisation that is in charge of maintaining the imaging report.
+  Organization that is in charge of maintaining the imaging report.
   """
 * confidentiality 0..1 CodeableConcept "A.1.8.7 Confidentiality" """
   Level of confidentiality of the document. Implicit value is normal. hl7:Confidentiality.

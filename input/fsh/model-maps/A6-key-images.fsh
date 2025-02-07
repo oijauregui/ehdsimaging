@@ -11,7 +11,7 @@ Description: """Maps the A.6 Key Images section of the eHN Medical Imaging Repor
 * description = """
 This concept map defines the mapping between the eHN A.6 Key images associated with this report section and the FHIR profiles. \n
 \n
-A key choice in modelling this dataset is the resources to use. Based on design condieration on [key image representation](http://130.145.232.202:8081/design-considerations.html#representation-of-key-images), both the DocumentReference and ImagingSelection resources are used to represent the key images. 
+A key choice in modelling this dataset is the resources to use, the model is based on the design consideration on [key image representation](http://130.145.232.202:8081/design-considerations.html#representation-of-key-images), both the DocumentReference and ImagingSelection resources are used to represent the key images. 
 """
 * sourceScopeUri = "http://hl7.eu/fhir/imaging/StructureDefinition/ehn-medical-imaging-report-order-media"
 

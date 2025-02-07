@@ -4,7 +4,7 @@ Id: im-radiation-dose-information
 Title: "Radiation Dose Observation"
 Description: """
 A record for the radiation dose the subject has been exposed to during an imaging procedure.\n
-This resource is a placegholder pending further refinement in this topic.\n
+This resource is a placeholder pending further refinement in this topic.\n
 \n
 E.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html.
 """	

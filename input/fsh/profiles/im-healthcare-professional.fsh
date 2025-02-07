@@ -65,7 +65,7 @@ Parent: http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
 Id: im-practitioner-role
 Title: "Practitioner Role"
 Description: """
-    Practitioner Role profile for healthcare professionals, all references to healtcare professionals
+    Practitioner Role profile for healthcare professionals, all references to healthcare professionals
     will be of this type.
 """
 * insert SetFmmAndStatusRule( 1, draft )
