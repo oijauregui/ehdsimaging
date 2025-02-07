@@ -1,4 +1,4 @@
-## Adverse reaction (Adverse reactions manifested during imaging investigation.)
+### Adverse reaction (Adverse reactions manifested during imaging investigation.)
 
 Dataset A5.3 relates to the register of adverse events that occurred during or due to imaging procedures. This includes both allergy-caused reactions as well as non-allergic ones.
 
