@@ -1,4 +1,3 @@
-
 {% include variable-definitions.md %}
 
 ### Overview

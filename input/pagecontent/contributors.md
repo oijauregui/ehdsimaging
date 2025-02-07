@@ -4,7 +4,6 @@
 
 This guide is the result of a multi  stakeholders effort involving different experts from several 
 European countries, projects (e.g. XpanDH) and initiatives (e.g. MyHealth@EU); organized in two collaborating sub-groups:
-
 - one focusing on semantic and functional requirements, and
 - one working on the HL7 FHIR specifications
 
