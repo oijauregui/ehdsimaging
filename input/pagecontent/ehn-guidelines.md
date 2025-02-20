@@ -7,6 +7,8 @@
  </blockquote>
 </div>
 
+{% include worknote.html text='Update the model' %}
+
 ### Overview
 
 The European eHealth Network "{{ehnImagingFull}}" is addressed to the Member States of the European Union and applies to the implementation of interoperable cross-border exchange of imaging study reports in order to support safe and efficient provisioning of care services in another member state.
