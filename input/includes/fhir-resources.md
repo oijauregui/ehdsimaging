@@ -2,7 +2,7 @@
 <!-- // Resources -->
 {% assign Account  = "[`Account`](https://www.hl7.org/fhir/R5/composition.html)" %}
 {% assign ActivityDefinition = "[`ActivityDefinition`](https://www.hl7.org/fhir/R5/composition.html) %}
-{% assign ActorDefinition    = "[`ActorDefinition`](https://www.hl7.org/fhir/R5/ActorDefinition.html) %}}
+{% assign ActorDefinition    = "[`ActorDefinition`](https://www.hl7.org/fhir/R5/ActorDefinition.html) %}
 {% assign AdministrableProductDefinition = "[`AdministrableProductDefinition`](https://www.hl7.org/fhir/R5/AdministrableProductDefinition.html)" %}
 {% assign AdverseEvent = "[`AdverseEvent`](https://www.hl7.org/fhir/R5/AdverseEvent.html)" %}
 {% assign AllergyIntolerance = "[`AllergyIntolerance`](https://www.hl7.org/fhir/R5/AllergyIntolerance.html)" %}
