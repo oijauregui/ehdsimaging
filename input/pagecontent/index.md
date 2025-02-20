@@ -4,7 +4,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <blockquote class="stu-note">  
-   This is an early draft of the specification that is still under rapid development. It is intended as a starting point of discussions and does not represent any final decisions. The content of this implementation guide will be discussed and tested in the Feb 2025 HL7 EU WGM. After the WGM, further work on the IG will be discussed in weekly telco's. This initial version is based on FHIR R5. Once the model stabilizes, the FHIR R4 version will be derived from it.
+   This is an early draft of the specification that is still under rapid development. It is intended as a starting point of discussions and does not represent any final decisions. 
+   
+   The content of this implementation guide is discussed HL7 EU calls ([HL7-eu imaging on Confluence](https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings)).
+   
+   This initial version is based on FHIR R5. Once the model stabilizes, the FHIR R4 version will be derived from it.  
+   
  </blockquote>
 </div>
 
@@ -20,8 +25,7 @@ The goal of this Implementation Guide is to define an European standard for the 
 
 The development of this implementation guide is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects. The aspiration of this guide is that of being used as basis for European National Guides, the European EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
 
-### Related specifications
-
+### References
 
 This specification defines the representation of the data sets required by {{ehnImagingFull}}".
 

@@ -1,5 +1,12 @@
 {% include variable-definitions.md %}
 
+<div xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <blockquote class="stu-note">  
+   This model is (still) based on a logical model based on the {{ehnImagingGuidelines}}. It will need to be updated to the XtEHR model./
+ </blockquote>
+</div>
+
 ### Overview
 
 The European eHealth Network "{{ehnImagingFull}}" is addressed to the Member States of the European Union and applies to the implementation of interoperable cross-border exchange of imaging study reports in order to support safe and efficient provisioning of care services in another member state.
