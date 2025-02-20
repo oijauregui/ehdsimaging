@@ -215,7 +215,7 @@ The `text` field of each section SHALL contain a textual representation of all l
       impression 0..* MS and
       keyimage 0..* MS
   * entry[finding] only Reference(ImFinding)
-  * entry[impression] only Reference(ImFinding)
+  * entry[impression] only Reference(ImImpression)
   * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImagesSelection)
 
 /////////////////// RECOMMENDATION SECTION //////////////////////////
