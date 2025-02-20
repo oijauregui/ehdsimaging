@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <blockquote class="stu-note">  
-   This model is (still) based on a logical model based on the {{ehnImagingGuidelines}}. It will need to be updated to the XtEHR model./
+   This model is (still) based on a logical model based on the {{ehnImagingHtml}}. It will need to be updated to the {{XtEhrImagingHtml}}
  </blockquote>
 </div>
 
