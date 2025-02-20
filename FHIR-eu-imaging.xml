@@ -31,6 +31,7 @@
 <artifact id="StructureDefinition/im-allergic-reaction" key="StructureDefinition-im-allergic-reaction" name="Allergic Reaction"/>
 <artifact id="StructureDefinition/ehn-imaging-study-manifest-dataset" key="StructureDefinition-ehn-imaging-study-manifest-dataset" name="B Imaging study manifest data set (eHN)"/>
 <artifact id="StructureDefinition/im-bundle" key="StructureDefinition-im-bundle" name="Bundle: Imaging Study Report"/>
+<artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology for Endpoint resources used in the EU Imaging IG."/>
 <artifact id="StructureDefinition/im-coverage" key="StructureDefinition-im-coverage" name="Coverage information"/>
 <artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="Diagnostic Report Support Info Code System"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="DiagnosticReport supportInfo codes"/>
@@ -92,13 +93,22 @@
 <artifact id="StructureDefinition/im-author" key="StructureDefinition-im-author" name="Report Author"/>
 <artifact id="StructureDefinition/ImImagingSelection" key="StructureDefinition-ImImagingSelection" name="Represents the part of an imaging study."/>
 <artifact id="StructureDefinition/im-result-validator" key="StructureDefinition-im-result-validator" name="Result Validator"/>
+<artifact id="StructureDefinition/im-viewer-endpoint" key="StructureDefinition-im-viewer-endpoint" name="Viewer endpoint"/>
+<artifact id="StructureDefinition/im-wado-endpoint" key="StructureDefinition-im-wado-endpoint" name="WADO endpoint"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="actors-and-transactions" name="Actors and Transactions"/>
+<page key="adapting" name="Adapting Guidelines for Country use"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="changes" name="Changes"/>
 <page key="contributors" name="Contributors"/>
 <page key="design-considerations" name="Design Considerations"/>
+<page key="domain-model" name="Domain Model"/>
 <page key="index" name="Home"/>
 <page key="open-topics" name="Open Topics"/>
+<page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>
+<page key="transactions" name="Transactions"/>
+<page key="use-cases" name="Use Cases"/>
 <page key="ehn-guidelines" name="eHN Imaging Studies and Reports Guidelines"/>
 </specification>
