@@ -1,18 +1,15 @@
-# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
-# │  used properties are included. For a list of all supported properties and their functions,     │
-# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.eu.imaging
 canonical: http://hl7.eu/fhir/imaging
 name: HL7EuImagingStudyReport
 title: HL7 Europe Imaging Study Report
 description: This guide describes how a Imaging Study Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
+experimental: false
 version: 0.1.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+#fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
@@ -28,7 +25,7 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.extensions: 5.1.0
+  hl7.fhir.uv.extensions: current
   hl7.fhir.eu.extensions: current
   hl7.fhir.eu.base.r5: current
   fhir.dicom:
@@ -36,20 +33,27 @@ dependencies:
     uri: http://fhir.org/packages/fhir.dicom
     version: 2024.2.20240331
 
-# The pages property corresponds to IG.definition.page. SUSHI can
-# auto-generate the page list, but if the author includes pages in
-# this file, it is assumed that the author will fully manage the
-# pages section and SUSHI will not generate any page entries.
-# The page file name is used as the key. If title is not provided,
-# then the title will be generated from the file name.  If a
-# generation value is not provided, it will be inferred from the
-# file name extension.  Any subproperties that are valid filenames
-# with supported extensions (e.g., .md/.xml) will be treated as
-# sub-pages.
-#
+meta:
+  profile:
+    - http://smart.who.int/base/StructureDefinition/SGImplementationGuide
+    
 pages:
   index.md:
     title: Home
+    changes.md: 
+      title: Changes
+    adapting.md: 
+      title: Adapting Guidelines for Country use	
+  actors-and-transactions.md:
+    title: Actors and Transactions
+    system-actors.md:
+      title: System Actors
+    use-cases.md:
+      title: Use Cases
+    transactions.md:
+      title: Transactions
+  domain-model.md: 
+    title: Domain Model
   ehn-guidelines.md:
     title: eHN Imaging Studies and Reports Guidelines
   design-considerations.md:
@@ -58,6 +62,7 @@ pages:
     title: Contributors
   open-topics.md:
     title: Open Topics
+
 
 #   implementation.xml:
 #   examples.xml:
@@ -94,8 +99,21 @@ parameters:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
-  eHN Guidelines: ehn-guidelines.html
+  Home:
+    Summary: index.html
+    Changes: changes.html
+    Dependencies: index.html#dependencies
+    References: index.html#references
+    Adapting Guidelines for Country use: adapting.html
+  eHN Guidelines: 
+    Summary: ehn-guidelines.html
+    Logical Model: ehn-guidelines.html#ehn-imaging-studies-and-reports-guidelines-logical-model
+    Concept Maps: ehn-guidelines.html#logical-model-mapping-onto-hl7-fhir
+  Actors and Transactions:
+    System Actors: system-actors.html
+    Use Cases: use-cases.html
+    Transactions: transactions.html
+  Domain Model: domain-model.html
   Artifacts: artifacts.html
   Design Considerations: design-considerations.html
   Open Topics: open-topics.html
