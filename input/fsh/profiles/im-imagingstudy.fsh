@@ -29,7 +29,12 @@ This profile represents an imaging study instance.
 * description 0..1 MS
   * insert SetPopulateIfKnown
 
-* endpoint 0..1 MS
+
+* endpoint 0..* MS  
+  * insert SliceElement( #profile, $this )
+* endpoint contains wado 0..1 MS and iid 0..1 MS
+* endpoint[wado] only Reference( ImWadoEndpoint )
+* endpoint[iid] only Reference( ImImageIidViewerEndpoint )
 
 * series MS
   * performer 0..1 MS
@@ -48,7 +53,13 @@ This profile represents an imaging study instance.
   * description 0..1 MS
   * modality 1..1 MS
   * number 0..1 MS
-  * endpoint 0..1 MS  
+    
+  * endpoint 0..* MS  
+    * insert SliceElement( #profile, $this )
+  * endpoint contains wado 0..1 MS and iid 0..1 MS
+  * endpoint[wado] only Reference( ImWadoEndpoint )
+  * endpoint[iid] only Reference( ImImageIidViewerEndpoint )
+  
   * instance MS
     * uid 1..1 MS
     * sopClass 1..1 MS
