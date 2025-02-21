@@ -22,7 +22,3 @@
 {% assign dicomSr2fhir      = "[DICOM-SR-2-FHIR](https://build.fhir.org/ig/HL7/dicom-sr/)" %}
 
 {% include fhir-resources.md %}
-
-
- access using {{[DICOMweb WADO](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/) and https://dicom.nema.org/medical/dicom/current/output/html/part18.html.}} The required media types from section 8.7.4 are included in this endpoint.\n
-Implementations SHALL support serving thumbnails as specified in the DICOMweb standard.
