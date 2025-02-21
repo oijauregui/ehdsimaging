@@ -31,6 +31,5 @@ The application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Document
       text-html 1..1 MS
   * mimeType[text-html] = #text/html
 
-
 * address 1..1 MS
 

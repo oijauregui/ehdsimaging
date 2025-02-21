@@ -6,6 +6,8 @@
  <blockquote class="stu-note">  
    <p>This is an early draft of the specification that is still under rapid development. It is intended as a starting point of discussions and does not represent any final decisions.
    </p>
+   <p>The source of this IG is stored on github (<a href="https://github.com/hl7-eu/imaging">https://github.com/hl7-eu/imaging</a>).
+   </p>
    <p> The content of this implementation guide is discussed HL7 EU calls (<a href="https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings">HL7-eu imaging on Confluence</a>).
    </p>
    <p> This initial version is based on FHIR R5. Once the model stabilizes, the FHIR R4 version will be derived from it.  
@@ -25,9 +27,9 @@ The specification is to be used in a variety of deployment models, which include
 Both on the national level as on cross border exchange, it has to fit into an existing ecosystem.
 
 Current approaches within Europe use two different approaches to information exchange:
-* Document based exchange, the document is represented as a FHIR Document Bundle.
-* REST API based access to documents, a {{Composition}} and {{DiagnosticReport}} for each document including instances of the referred resources
-* REST API based access o resources, documents are provided ({{Composition}} + {{DiagnosticReport}}), the resources in the documents are aligned, i.e. they all point to the same {{Patient}} resource
+* **Document based exchange**, the document is represented as a FHIR Document Bundle.
+* **REST API based access to document**s, a {{Composition}} and {{DiagnosticReport}} for each document including instances of the referred resources
+* **REST API based access to resources**, documents are provided ({{Composition}} + {{DiagnosticReport}}), the resources in the documents are aligned, i.e. they all point to the same {{Patient}} resource
 
 The specification will be designed in such a way that it can be used in both deployment scenarios.
 
