@@ -2,10 +2,20 @@ RuleSet: SetFmmAndStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 
+RuleSet: ShallPopulateAndIncludeInNarrative
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[name].valueString = "Producer SHALL populate and include in narrative"
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[code][+].valueCode = #SHALL:in-narrative
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[code][+].valueCode = #SHALL:populate-if-known
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProducer)
+
 RuleSet: SetPopulateIfKnown
-* ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[code].valueCode = #SHALL:populate-if-known
-* ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor].valueCanonical = Canonical(ImProducer)
-  
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProducer)
+
+RuleSet: ShallIncludeInNarrative
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:in-narrative
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProducer)
+
 RuleSet: RequireField( field, cardinality )
 * {field} {cardinality} MS
   * insert SetPopulateIfKnown

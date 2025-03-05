@@ -12,11 +12,16 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
   * ^slicing.rules = #open
   * ^slicing.description = "Slice on identifier"
   * ^slicing.ordered = false
-* identifier contains accessionNumber 0..1 MS  
+* identifier contains accessionNumber 0..1 and orderId 0..1 
 * identifier[accessionNumber]
   * insert SetPopulateIfKnown
   * type 1..1 MS
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
+  * value 1..1 MS
+  * system 1..1 MS
+* identifier[orderId]
+  * insert SetPopulateIfKnown
+  * type 0..1 MS
   * value 1..1 MS
   * system 1..1 MS
 

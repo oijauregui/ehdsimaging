@@ -15,8 +15,8 @@ The following picture provide an overview of the origin of the participants.
     <p></p>
 </div>
 
-|Role | Name             | Affiliation |
-|------------------|------------------|-------------|
-| Project facilitator|  Bas van den Heuvel | HL7 EU |
-| Author |  | |
-| Contributor |  || 
+|Role                | Name                | Affiliation        |
+|--------------------|---------------------|--------------------|
+| Project facilitator|  Bas van den Heuvel | Philips Healthcare |
+| Author             |                     |                    |
+| Contributor        |                     |                    |
