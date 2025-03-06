@@ -95,12 +95,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section.entry MS
 * section.code 1..1 MS  // LOINC code for the section
 * section.title MS
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProducer)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "SHALL correspond to the laguage specific display of `section.code`"
-* section.text
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProducer)
+* section.text MS
 * section contains 
     imagingstudy 1..1 MS and 
     order 1..1 MS and 
@@ -134,17 +129,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Order"
   * ^definition = "This section holds information related to the order for the imaging study."
   * code = $loinc#55115-0 "Order"
-  * text
-    * ^short = "Narrative on the order and clinical questions"
-    * ^definition = """
-        The text field of the order section SHALL contain a textual representation of the following data elements:
-        * The order identifiers
-        * The order status
-        * The orderer (including the organization)
-        * The order date
-        * The order reason
-        * The order insurance
-        """  
   * entry MS
     * insert SliceElement( #profile, "$this" )
   * entry contains order 0..* MS 
