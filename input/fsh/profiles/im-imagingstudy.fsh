@@ -17,10 +17,8 @@ This profile represents an imaging study instance.
 
 * status MS
   * insert SetPopulateIfKnown
-  * insert ShallIncludeInNarrative
 
 * identifier MS
-  * insert ShallIncludeInNarrative
   * insert SliceElement( #value, system )
 * identifier contains studyInstanceUid 1..1 MS
 * identifier[studyInstanceUid]
@@ -29,13 +27,10 @@ This profile represents an imaging study instance.
   * value 1.. MS
 
 * description 0..1 MS
-  * insert ShallPopulateAndIncludeInNarrative
+  * insert SetPopulateIfKnown
 
-* modality MS
-  * insert ShallPopulateAndIncludeInNarrative
 
 * endpoint 0..* MS  
-  * insert ShallPopulateAndIncludeInNarrative
   * insert SliceElement( #profile, $this )
 * endpoint contains wado 0..1 MS and iid 0..1 MS
 * endpoint[wado] only Reference( ImWadoEndpoint )
@@ -46,13 +41,13 @@ This profile represents an imaging study instance.
     * insert SliceElement( #type, actor )
   * performer contains performer 0..1 MS and device 0..1 MS and custodian 0..1 MS
   * performer[performer]
-    * insert ShallPopulateAndIncludeInNarrative
+    * insert SetPopulateIfKnown
     * actor only Reference( ImPractitionerRole )
   * performer[custodian]
-    * insert ShallPopulateAndIncludeInNarrative
+    * insert SetPopulateIfKnown
     * actor only Reference( ImOrganization )
   * performer[device]
-    * insert ShallPopulateAndIncludeInNarrative
+    * insert SetPopulateIfKnown
     * actor only Reference( ImImagingDevice )
   * uid 1..1 MS
   * description 0..1 MS
@@ -71,7 +66,6 @@ This profile represents an imaging study instance.
     * number 0..1 MS
 
 * subject 1..1 MS
-  * insert ShallPopulateAndIncludeInNarrative
 * subject only Reference(ImPatient)
 
 Invariant: im-imagingstudy-01
