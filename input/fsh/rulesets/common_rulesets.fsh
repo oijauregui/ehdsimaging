@@ -4,7 +4,7 @@ RuleSet: SetFmmAndStatusRule ( fmm, status )
 
 RuleSet: SetPopulateIfKnown
 * ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[code].valueCode = #SHALL:populate-if-known
-* ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor].valueCanonical = Canonical(ImProducer)
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor].valueCanonical = Canonical(ImProvider)
   
 RuleSet: RequireField( field, cardinality )
 * {field} {cardinality} MS
