@@ -51,7 +51,8 @@
 <artifact id="StructureDefinition/im-patient" key="StructureDefinition-im-patient" name="Imaging Patient"/>
 <artifact id="StructureDefinition/im-procedure" key="StructureDefinition-im-procedure" name="Imaging Procedure"/>
 <artifact id="ValueSet/im-reportType-eu-lab" key="ValueSet-im-reportType-eu-lab" name="Imaging Report Types"/>
-<artifact id="ActorDefinition/ImProducer" key="ActorDefinition-ImProducer" name="Imaging Study Reports Producer"/>
+<artifact id="ActorDefinition/ImConsumer" key="ActorDefinition-ImConsumer" name="Imaging Study and Reports Consumer"/>
+<artifact id="ActorDefinition/ImProvider" key="ActorDefinition-ImProvider" name="Imaging Study and Reports Provider"/>
 <artifact id="StructureDefinition/im-imaging-study-phase" key="StructureDefinition-im-imaging-study-phase" name="Imaging results from Procedure Phase"/>
 <artifact id="StructureDefinition/im-performer" key="StructureDefinition-im-performer" name="Imaging study performer"/>
 <artifact id="StructureDefinition/im-imagingstudy" key="StructureDefinition-im-imagingstudy" name="ImagingStudy"/>
