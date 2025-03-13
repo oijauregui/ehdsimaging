@@ -2,7 +2,7 @@ CodeSystem: DiagnosticReportSupportingInfoCodeSystem
 Id: codesystem-diagnostic-report-support-info
 Title: "Diagnostic Report Support Info Code System"
 Description: "Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports."
-* ^experimental = true
+* ^experimental = false
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 
@@ -13,5 +13,6 @@ ValueSet: DiagnosticReportSupportingInfoVCodes
 Id: valueset-diagnosticreport-report-support-info
 Title: "DiagnosticReport supportInfo codes"
 Description: "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports."
+* ^experimental = false
 * include codes from system DiagnosticReportSupportingInfoCodeSystem
 
