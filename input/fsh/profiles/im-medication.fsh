@@ -1,3 +1,25 @@
+Profile: ImMedicationProvider
+Parent: ImMedication
+Id: im-medication-provider
+Title: "Medication (ImProvider)"
+Description: "Requirements for the provider of the medication."
+* insert SetFmmAndStatusRule( 1, draft )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* extension[productName]
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* code
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* ingredient
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+  * item
+    * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+  * strength[x]
+    * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+
+
 Profile: ImMedication
 // TODO align with mpd or eps
 Parent: Medication
@@ -5,20 +27,8 @@ Id: im-medication
 Title: "Medication"
 Description: "Based on EPD Medication profile. Reference it once it is published."
 * insert SetFmmAndStatusRule( 1, draft )
-* insert MandateLanguageAndSecurity
 
 * insert MedicationEpCommon
-* extension[productName] MS
-* code MS
-  * insert SetPopulateIfKnown
-* ingredient MS
-  * insert SetPopulateIfKnown
-  * item MS
-  * strength[x] MS
-// //   * insert ElementMapping( #code, "A.5.2.2 Code", #code, "", #equivalent )
-//   * insert ElementMapping( #activeIngredientList, "A.5.2.3 Active ingredient list", #ingredient, "", #equivalent )
-//   * insert ElementMapping( #strength, "A.5.2.4 Strength", #ingredient.strength, "", #equivalent )
-//   * insert ElementMapping( #pharmaceuticalDoseForm, "A.5.2.5 Pharmaceutical dose form", #doseForm, "", #equivalent )
 
 // SOURCE EPD R5 Build
 RuleSet: MedicationEpCommon
@@ -40,13 +50,13 @@ RuleSet: MedicationEpCommon
 * extension contains PackageType named packageType 0..1
 * extension[packageType] ^short = "Type of container. This information is more relevant in cases when the packaging has an impact on administration of the product (e.g. pre-filled syringe)"
 
-* identifier // MS 
+* identifier // 
   * ^short = "Identifier for the medicinal product, its generic representation, or packaged product." //identifier
-* code // MS 
+* code // 
   * ^short = "A terminology-based code for the product" // productCode
-* ingredient // MS 
+* ingredient // 
   * ^short = "Ingredient or a part product. For combination packs, each ingredient can be a separate manufactured item with its own ingredients, dose form, and strength" // item
-  * isActive // MS // item.ingredient.role
+  * isActive // // item.ingredient.role
 
 
 

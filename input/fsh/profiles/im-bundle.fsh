@@ -1,3 +1,15 @@
+Profile: ImBundleProvider
+Parent: ImBundle
+Id: im-bundle-provider
+Title: "Bundle: Imaging Study Report (ImProvider)"
+Description: "Requirements for the provider of the Imaging Study Report."
+* insert SetFmmAndStatusRule( 1, draft )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+
+
 Profile: ImBundle
 Parent: Bundle
 Id: im-bundle
@@ -13,7 +25,6 @@ While a Composition defines the structure, it does not actually contain the cont
 of which the Composition is the first resource contained.
 """
 * insert SetFmmAndStatusRule( 1, draft )
-* insert MandateLanguageAndSecurity
 
 * identifier ^short = "Business identifier for this Imaging Study Report"
 * identifier 1..

@@ -1,10 +1,20 @@
+Profile: ImAllergicReactionProvider
+Parent: ImAllergicReaction
+Id: im-allergic-reaction-provider
+Title: "Allergic Reaction (ImProvider)"
+Description: "Requirements for the provider of the allergic reaction."
+* insert SetFmmAndStatusRule( 1, draft )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+
 Profile: ImAllergicReaction
 Parent: AllergyIntolerance
 Id: im-allergic-reaction
 Title: "Allergic Reaction"
 Description: "This profile represents a suspected allergic reaction occurred during or due to an imaging study procedure."
 * insert SetFmmAndStatusRule( 1, draft )
-* insert MandateLanguageAndSecurity
 
 * verificationStatus 0..1 MS
   * ^short = "Verification status of the allergic reaction"

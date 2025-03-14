@@ -1,3 +1,26 @@
+Profile: ImImagingStudyProvider
+Parent: ImImagingStudy
+Id: im-imagingstudy-provider
+Title: "ImagingStudy (ImProvider)"
+Description: "Requirements for the provider of the imaging study."
+* insert SetFmmAndStatusRule( 1, draft )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* status 
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* description
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* endpoint
+* series
+  * performer[performer]
+    * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+  * performer[custodian]
+    * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+  * performer[device]
+    * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+
 Profile: ImImagingStudy
 Parent: ImagingStudy
 Id: im-imagingstudy
@@ -6,66 +29,56 @@ Description: """
 This profile represents an imaging study instance.
 """
 * insert SetFmmAndStatusRule( 1, draft )
-* insert MandateLanguageAndSecurity
 * obeys im-imagingstudy-01
 
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 * basedOn
   * insert SliceElement( #type, $this )
-* basedOn contains imorderaccession 0..1 MS
+* basedOn contains imorderaccession 0..1 
 * insert BasedOnImOrderReference( imorderaccession )
 
-* status MS
-  * insert SetPopulateIfKnown
-
-* identifier MS
+* identifier
   * insert SliceElement( #value, system )
-* identifier contains studyInstanceUid 1..1 MS
+* identifier contains studyInstanceUid 1..1 
 * identifier[studyInstanceUid]
-  * system MS
+  * system 
   * system = "urn:dicom:uid"
-  * value 1.. MS
+  * value 1.. 
+  * value
 
-* description 0..1 MS
-  * insert SetPopulateIfKnown
-
-
-* endpoint 0..* MS  
+* endpoint 0..*
   * insert SliceElement( #profile, $this )
-* endpoint contains wado 0..1 MS and iid 0..1 MS
+* endpoint contains wado 0..1 and iid 0..1
 * endpoint[wado] only Reference( ImWadoEndpoint )
 * endpoint[iid] only Reference( ImImageIidViewerEndpoint )
 
-* series MS
-  * performer 0..1 MS
+* series
+  * performer 0..1
     * insert SliceElement( #type, actor )
-  * performer contains performer 0..1 MS and device 0..1 MS and custodian 0..1 MS
+  * performer contains performer 0..1 and device 0..1 and custodian 0..1
   * performer[performer]
-    * insert SetPopulateIfKnown
     * actor only Reference( ImPractitionerRole )
   * performer[custodian]
-    * insert SetPopulateIfKnown
     * actor only Reference( ImOrganization )
   * performer[device]
-    * insert SetPopulateIfKnown
     * actor only Reference( ImImagingDevice )
-  * uid 1..1 MS
-  * description 0..1 MS
-  * modality 1..1 MS
-  * number 0..1 MS
-    
-  * endpoint 0..* MS  
+  * uid 1..1
+  * description 0..1
+  * modality 1..1
+  * number 0..1
+  
+  * endpoint 0..*
     * insert SliceElement( #profile, $this )
-  * endpoint contains wado 0..1 MS and iid 0..1 MS
+  * endpoint contains wado 0..1 and iid 0..1
   * endpoint[wado] only Reference( ImWadoEndpoint )
   * endpoint[iid] only Reference( ImImageIidViewerEndpoint )
   
-  * instance MS
-    * uid 1..1 MS
-    * sopClass 1..1 MS
-    * number 0..1 MS
+  * instance
+    * uid 1..1
+    * sopClass 1..1
+    * number 0..1
 
-* subject 1..1 MS
+* subject 1..1
 * subject only Reference(ImPatient)
 
 Invariant: im-imagingstudy-01

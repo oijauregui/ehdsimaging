@@ -1,22 +1,25 @@
+Profile: ImAdverseReactionProvider
+Parent: ImAdverseReaction
+Id: im-adversereaction-provider
+Title: "Adverse Event (ImProvider)"
+Description: "Requirements for the provider of the adverse event."
+* insert SetFmmAndStatusRule( 1, draft )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+
 Profile: ImAdverseReaction
 Parent: AdverseEvent
 Id: im-adversereaction
 Title: "Adverse Event"
 Description: "Adverse event during imaging procedure."
 * insert SetFmmAndStatusRule( 1, draft )
-* insert MandateLanguageAndSecurity
 
 * extension contains ImAdverseEventCriticality named criticality 0..1
+* seriousness 0..1
 
-* code MS
-
-* category 0..* MS
-
-* resultingEffect 0..* MS
-
-* seriousness 0..1 MS
-
-* occurrence[x] 0..1 MS
+* occurrence[x] 0..1
 * occurrence[x] only dateTime
 
 * suspectEntity ^slicing.discriminator.type = #type
@@ -24,8 +27,7 @@ Description: "Adverse event during imaging procedure."
 * suspectEntity ^slicing.rules = #open
 * suspectEntity ^slicing.description = "Slice references to the Procedure instance in which it the adverse event occurred."
 * suspectEntity ^slicing.ordered = false
-* suspectEntity contains procedureEvent 1..1 MS
-and medicationAdministered 0..1 MS
+* suspectEntity contains procedureEvent 1..1 and medicationAdministered 0..1
 
 * suspectEntity[procedureEvent] 
   * instance[x] only Reference(ImProcedure)
@@ -33,17 +35,16 @@ and medicationAdministered 0..1 MS
 * suspectEntity[medicationAdministered]
   * instance[x] only CodeableConcept or Reference(ImMedicationAdministration)
 
-* suspectEntity.causality 0..1 MS
+* suspectEntity.causality 0..1
   // * causality
-  //   * entityRelatedness 0..1 MS
-  // * instance[x] 1..1 MS
+  //   * entityRelatedness 0..1
+  // * instance[x] 1..1
   // * instance[x] only CodeableConcept or Reference(ImProcedure or Substance or Medication or MedicationAdministration)
 
-* contributingFactor 0..* MS
-  * item[x] 1..1 MS
+* contributingFactor 0..*
+  * item[x] 1..1
   * item[x] only Reference(ImAllergicReaction)
 
-* note MS
 
 Extension: ImAdverseEventCriticality
 Id: im-adverse-event-criticality

@@ -1,3 +1,23 @@
+Profile: ImWadoEndpointProvider
+Parent: ImWadoEndpoint
+Id: im-wado-endpoint-provider
+Title: "WADO endpoint (ImProvider)"
+Description: """ImProvider requirements for WADO endpoints."""
+* insert SetFmmAndStatusRule( 1, "draft" )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* status
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+
+* name
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* description
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* managingOrganization
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+
 Profile: ImWadoEndpoint
 Parent: Endpoint
 Id: im-wado-endpoint
@@ -6,52 +26,50 @@ Description: """
 This profile defines the WADO endpoint for accessing imaging study content.
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
-* insert MandateLanguageAndSecurity
 
-* status MS
+* status
 
 * connectionType 
   * insert SliceElement( #value, coding )
-* connectionType contains wado 1..1 MS
+* connectionType contains wado 1..1
 * connectionType[wado] = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
 
-* name MS
-  * insert SetPopulateIfKnown
-* description 0..1 MS
-* managingOrganization 0..1 MS
-* payload MS
+* name
+* description 0..1
+* managingOrganization 0..1
+* payload
   * insert SliceElement( #value, type )
-* payload contains wadors 1..1 MS
+* payload contains wadors 1..1
 * payload[wadors]
-  * type 1..1 MS
+  * type 1..1
   * type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
-  * mimeType MS
+  * mimeType
     * insert SliceElement( #value, $this )
   * mimeType contains 
       // source dicom
-      dicom 1..1 MS and 
-      dicom-octet 1..1 MS and
-      dicom-xml 1..1 MS and 
-      dicom-json 1..1 MS and 
+      dicom 1..1 and 
+      dicom-octet 1..1 and
+      dicom-xml 1..1 and 
+      dicom-json 1..1 and 
       // image
-      image-jpg 1..1 MS and
-      image-gif 1..1 MS and
-      image-jp2 1..1 MS and
-      image-jph 1..1 MS and
-      image-jxl 1..1 MS and
+      image-jpg 1..1 and
+      image-gif 1..1 and
+      image-jp2 1..1 and
+      image-jph 1..1 and
+      image-jxl 1..1 and
       // multiframe
-      // image-gif 0..1 MS and
-      // image-jxl 0..1 MS and
+      // image-gif 0..1 and
+      // image-jxl 0..1 and
       // video
-      video-mpeg 1..1 MS and
-      video-mp4 1..1 MS and
-      video-H265 1..1 MS and
+      video-mpeg 1..1 and
+      video-mp4 1..1 and
+      video-H265 1..1 and
       // text
-      text-html 1..1 MS and
-      text-plain 1..1 MS and
-      text-xml 1..1 MS and  
-      text-rtf 1..1 MS and
-      application-pdf 1..1 MS
+      text-html 1..1 and
+      text-plain 1..1 and
+      text-xml 1..1 and  
+      text-rtf 1..1 and
+      application-pdf 1..1
 
   * mimeType[dicom]           = #application/dicom
   * mimeType[dicom-octet]     = #application/octet-stream
