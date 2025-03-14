@@ -1,6 +1,7 @@
 Profile: ImImagingSelectionProvider
 Parent: ImImagingSelection
-Title: "Requirements for the provider of the imaging selection."
+Title: "Represents the part of an imaging study. (ImProvider)"
+Description: "Requirements for the provider of the imaging selection."
 * insert SetFmmAndStatusRule( 1, draft )
 * meta.security
   * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
@@ -13,7 +14,8 @@ Title: "Requirements for the provider of the imaging selection."
 Profile: ImImagingStudyPhaseProvider
 Parent: ImImagingStudyPhase
 Id: im-imaging-study-phase-provider
-Title: "Requirements for the provider of the imaging study phase."
+Title: "Imaging results from Procedure Phase (ImProvider)"
+Description: "Requirements for the provider of the imaging study phase."
 * insert SetFmmAndStatusRule( 1, draft )
 * meta.security
   * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
