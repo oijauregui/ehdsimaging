@@ -245,3 +245,34 @@ Description: """
 * insert ExtensionContext(Composition)
 * insert SetFmmAndStatusRule ( 2, trial-use)
 * value[x] only Reference (ImDiagnosticReport)
+
+Instance: ImComposition-example
+InstanceOf: ImComposition
+Title: "Brain MRI example"
+Description: "This is an example of a EU Imaging IG Composition for a Brain MRI report."
+* status = #draft
+* language = #es-AR
+* subject = Reference(ImPatient-example)
+* extension[diagnosticreport-reference].valueReference = Reference(ImDiagnosticReport-example)
+* extension[basedOn].valueReference = Reference(ImOrder-example)
+* extension[informationRecipient].valueReference = Reference(ImInformationRecipient-example)
+* extension[artifactVersion].valueString = "0.1.0"
+* identifier
+  * system = "http://example.org/composition"
+  * value = "123456"
+* type = $loinc#18726-0
+* date = "2021-01-01T00:00:00Z"
+* author[0] = Reference(ImAuthor-example)
+* author[+] = Reference(ImAuthoringDevice-example)
+* title = "Brain MRI pre and post contrast"
+* attester[legalAuthenticator].mode = #legal
+* attester[legalAuthenticator].party = Reference(ImLegalAuthenticator-example)
+* attester[resultValidator].mode = #professional
+* attester[resultValidator].party = Reference(ImResultValidator-example)
+* custodian = Reference(ImOrganization-example)
+// Imaging Study Section
+* section[imagingstudy].title = "Brain MRI pre and post contrast"
+* section[imagingstudy].code = $loinc#18726-0
+  * text = "Brain MRI pre and post contrast"
+* section[imagingstudy].entry[0] = Reference(ImImagingStudy-example)
+// Order Section

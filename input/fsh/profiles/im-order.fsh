@@ -72,3 +72,10 @@ RuleSet: BasedOnImOrderReference( slicename )
 * identifier 0..1 MS
 * identifier only ImAccessionNumberIdentifier
   * insert SetPopulateIfKnown
+
+// placeholder example for ImOrder
+Instance: ImOrder-example
+InstanceOf: ImOrder
+* status = #draft
+* intent = #order
+* subject = Reference(ImPatient-example)
