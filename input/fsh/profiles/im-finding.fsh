@@ -62,3 +62,10 @@ Description: "Finding during imaging procedure."
 * derivedFrom[imagingselection] only Reference( ImImagingSelection )
   * ^short = "Series or image that produced this observation"
   * insert SetPopulateIfKnown   
+
+// placeholder for a finding instance
+Instance: ImFinding-example
+InstanceOf: ImFinding
+
+* code = $sct#363406005 "Clinical finding"
+* status = #final

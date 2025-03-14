@@ -32,3 +32,9 @@ Description: "This profile on Procedure represents the imaging procedure."
     * coding contains imaging-equipment 0..1 MS 
     * coding[imaging-equipment] = $sct#314789007 "Diagnostic imaging equipment" // TODO check this code
   * actor only Reference(ImImagingDevice)
+
+Instance: ImProcedure-example
+InstanceOf: ImProcedure
+* basedOn = Reference(ImOrder-example)
+* status = #completed
+* subject = Reference(ImPatient-example)
