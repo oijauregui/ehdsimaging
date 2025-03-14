@@ -42,8 +42,8 @@
 <artifact id="StructureDefinition/im-composition-diagnosticReportReference" key="StructureDefinition-im-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
 <artifact id="StructureDefinition/im-finding" key="StructureDefinition-im-finding" name="Finding"/>
 <artifact id="StructureDefinition/im-finding-provider" key="StructureDefinition-im-finding-provider" name="Finding (ImProvider)"/>
-<artifact id="StructureDefinition/im-health-insurance-provider" key="StructureDefinition-im-health-insurance-provider" name="Health Insurance Provider"/>
-<artifact id="StructureDefinition/im-health-insurance-provider-provider" key="StructureDefinition-im-health-insurance-provider-provider" name="Health Insurance Provider (ImProvider)"/>
+<artifact id="StructureDefinition/im-health-insurance-prov" key="StructureDefinition-im-health-insurance-prov" name="Health Insurance Provider"/>
+<artifact id="StructureDefinition/im-health-insurance-prov-provider" key="StructureDefinition-im-health-insurance-prov-provider" name="Health Insurance Provider (ImProvider)"/>
 <artifact id="StructureDefinition/im-body-structure" key="StructureDefinition-im-body-structure" name="ImBodyStructure"/>
 <artifact id="StructureDefinition/im-body-structure-provider" key="StructureDefinition-im-body-structure-provider" name="ImBodyStructureProvider"/>
 <artifact id="StructureDefinition/im-accession-number-identifier" key="StructureDefinition-im-accession-number-identifier" name="Imaging Accession Number Identifier"/>
@@ -70,6 +70,7 @@
 <artifact id="ActorDefinition/ImConsumer" key="ActorDefinition-ImConsumer" name="Imaging Study and Reports Consumer"/>
 <artifact id="ActorDefinition/ImProvider" key="ActorDefinition-ImProvider" name="Imaging Study and Reports Provider"/>
 <artifact id="StructureDefinition/im-imaging-study-phase" key="StructureDefinition-im-imaging-study-phase" name="Imaging results from Procedure Phase"/>
+<artifact id="StructureDefinition/im-imaging-study-phase-provider" key="StructureDefinition-im-imaging-study-phase-provider" name="Imaging results from Procedure Phase (ImProvider)"/>
 <artifact id="StructureDefinition/im-performer" key="StructureDefinition-im-performer" name="Imaging study performer"/>
 <artifact id="StructureDefinition/im-imagingstudy" key="StructureDefinition-im-imagingstudy" name="ImagingStudy"/>
 <artifact id="StructureDefinition/im-imagingstudy-provider" key="StructureDefinition-im-imagingstudy-provider" name="ImagingStudy (ImProvider)"/>
@@ -77,6 +78,7 @@
 <artifact id="StructureDefinition/im-impression-provider" key="StructureDefinition-im-impression-provider" name="Impression (ImProvider)"/>
 <artifact id="StructureDefinition/im-information-recipient" key="StructureDefinition-im-information-recipient" name="Information Recipient"/>
 <artifact id="StructureDefinition/im-keyimages-imaging-selection" key="StructureDefinition-im-keyimages-imaging-selection" name="Key images represented as an ImagingSelection"/>
+<artifact id="StructureDefinition/im-keyimages-imaging-selection-provider" key="StructureDefinition-im-keyimages-imaging-selection-provider" name="Key images represented as an ImagingSelection (ImProvider)"/>
 <artifact id="StructureDefinition/im-legal-authenticator" key="StructureDefinition-im-legal-authenticator" name="Legal Authenticator"/>
 <artifact id="ConceptMap/A-1-1-PatientInformationMapping" key="ConceptMap-A-1-1-PatientInformationMapping" name="Mapping of A.1.1 Identification of the patient/subject"/>
 <artifact id="ConceptMap/A-1-2-PatientContactInformationMapping" key="ConceptMap-A-1-2-PatientContactInformationMapping" name="Mapping of A.1.2 Patient/subject related contact information"/>
@@ -119,9 +121,7 @@
 <artifact id="StructureDefinition/im-recommended-careplan-provider" key="StructureDefinition-im-recommended-careplan-provider" name="Recommended CarePlan (ImProvider)"/>
 <artifact id="StructureDefinition/im-author" key="StructureDefinition-im-author" name="Report Author"/>
 <artifact id="StructureDefinition/ImImagingSelection" key="StructureDefinition-ImImagingSelection" name="Represents the part of an imaging study."/>
-<artifact id="StructureDefinition/ImImagingSelectionProvider" key="StructureDefinition-ImImagingSelectionProvider" name="Requirements for the provider of the imaging selection."/>
-<artifact id="StructureDefinition/im-imaging-study-phase-provider" key="StructureDefinition-im-imaging-study-phase-provider" name="Requirements for the provider of the imaging study phase."/>
-<artifact id="StructureDefinition/im-keyimages-imaging-selection-provider" key="StructureDefinition-im-keyimages-imaging-selection-provider" name="Requirements for the provider of the key images selection."/>
+<artifact id="StructureDefinition/ImImagingSelectionProvider" key="StructureDefinition-ImImagingSelectionProvider" name="Represents the part of an imaging study. (ImProvider)"/>
 <artifact id="StructureDefinition/im-result-validator" key="StructureDefinition-im-result-validator" name="Result Validator"/>
 <artifact id="StructureDefinition/im-viewer-endpoint" key="StructureDefinition-im-viewer-endpoint" name="Viewer endpoint"/>
 <artifact id="StructureDefinition/im-viewer-endpoint-provider" key="StructureDefinition-im-viewer-endpoint-provider" name="Viewer endpoint (ImProvider)"/>
@@ -129,8 +129,10 @@
 <artifact id="StructureDefinition/im-wado-endpoint-provider" key="StructureDefinition-im-wado-endpoint-provider" name="WADO endpoint (ImProvider)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="ig-artifacts-obligations" name="Actors and Obligations"/>
 <page key="actors-and-transactions" name="Actors and Transactions"/>
 <page key="adapting" name="Adapting Guidelines for Country use"/>
+<page key="ig-artifacts" name="Artifacts"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="contributors" name="Contributors"/>
@@ -138,6 +140,7 @@
 <page key="domain-model" name="Domain Model"/>
 <page key="index" name="Home"/>
 <page key="open-topics" name="Open Topics"/>
+<page key="ig-artifacts-structural" name="Structural Artifacts"/>
 <page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>
 <page key="transactions" name="Transactions"/>

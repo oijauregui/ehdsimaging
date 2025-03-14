@@ -1,7 +1,8 @@
 Profile: ImKeyImagesSelectionProvider
 Parent: ImKeyImagesSelection
 Id: im-keyimages-imaging-selection-provider
-Title: "Requirements for the provider of the key images selection."
+Title: "Key images represented as an ImagingSelection (ImProvider)"
+Description: "Requirements for the provider of the key images selection."
 * insert SetFmmAndStatusRule( 1, draft )
 * meta.security
   * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )

@@ -60,6 +60,12 @@ pages:
     title: Design Considerations
   contributors.md:
     title: Contributors
+  ig-artifacts.md:
+    title: Artifacts
+    ig-artifacts-structural.md:
+      title: Structural Artifacts
+    ig-artifacts-obligations.md:
+      title: Actors and Obligations
   open-topics.md:
     title: Open Topics
 
@@ -114,7 +120,11 @@ menu:
     Use Cases: use-cases.html
     Transactions: transactions.html
   Domain Model: domain-model.html
-  Artifacts: artifacts.html
+  Artifacts:
+    Overview: ig-artifacts.html
+    Structural: ig-artifacts-structural.html
+    Actors and Obligations: ig-artifacts-obligations.html
+    All: artifacts.html
   Design Considerations: design-considerations.html
   Open Topics: open-topics.html
   

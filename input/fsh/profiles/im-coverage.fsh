@@ -44,7 +44,7 @@ Description: "Health Insurance and Payment Information. This resource represents
 
 Profile: ImHealthInsuranceProviderProvider
 Parent: ImHealthInsuranceProvider
-Id: im-health-insurance-provider-provider
+Id: im-health-insurance-prov-provider
 Title: "Health Insurance Provider (ImProvider)"
 Description: "Requirements for the provider of the health insurance provider."
 * insert SetFmmAndStatusRule( 1, draft )
@@ -60,7 +60,7 @@ Description: "Requirements for the provider of the health insurance provider."
 
 Profile: ImHealthInsuranceProvider
 Parent: http://hl7.eu/fhir/base/StructureDefinition/organization-eu
-Id: im-health-insurance-provider
+Id: im-health-insurance-prov
 Title: "Health Insurance Provider"
 Description: """
     Health Insurance Provider profile for healthcare organizations, this resource contains all information
