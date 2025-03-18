@@ -75,7 +75,7 @@ The procedure information is expected to be part of the `ImProcedure` profile an
   * insert ElementMapping( #bodyLocation, "A.5.1.6.1 Body location", #morphology, "", #source-is-broader-than-target )
   * insert ElementMapping( #bodyLocation, "A.5.1.6.1 Body location", #includedStructure, "", #source-is-broader-than-target )
   * insert ElementMapping( #bodyLocation, "A.5.1.6.1 Body location", #excludedStructure, "", #source-is-broader-than-target )
-  * insert ElementMapping( #laterality, "A.5.1.6.2 Laterality", #includedStructure.laterality, "", #source-is-broader-than-target )
+  * insert ElementMapping( #laterality, "A.5.1.6.2 Laterality", #includedStructure.laterality, "", #equivalent )
   // * insert ElementMapping( #deviceId, "A.5.1.7 Device ID", #equivalent, "Device ID", #equivalent )
   // * insert ElementMapping( #performer, "A.5.1.8 Performer", #equivalent, "Performer", #equivalent )
   // * insert ElementMapping( #performerId, "A.5.1.8.1 Performer Id", #equivalent, "Performer Id", #equivalent )
