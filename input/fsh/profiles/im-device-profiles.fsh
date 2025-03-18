@@ -39,5 +39,3 @@ Description: "This profile on Device represents the imaging device."
     Name of the imaging device.
     """
   * insert SetPopulateIfKnown
-
-

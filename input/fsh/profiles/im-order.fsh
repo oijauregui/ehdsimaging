@@ -72,4 +72,3 @@ RuleSet: BasedOnImOrderReference( slicename )
 * identifier 0..1 MS
 * identifier only ImAccessionNumberIdentifier
   * insert SetPopulateIfKnown
-

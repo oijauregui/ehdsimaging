@@ -85,4 +85,3 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 * presentedForm MS
   * insert SetPopulateIfKnown
   * ^short = "Printed versions of the report."
-

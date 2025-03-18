@@ -40,4 +40,3 @@ Description: "Human patient representing the subject of a medical imaging study 
 
 * telecom 0..* MS
   * insert SetPopulateIfKnown
-

@@ -21,4 +21,3 @@ Description: "Impression of the imaging study. A conclusion drawn by the author 
 
 // do we have to add evidence to the impression?
 // TODO further refinement of this model.
-

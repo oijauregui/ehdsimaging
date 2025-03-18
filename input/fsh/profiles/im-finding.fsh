@@ -62,4 +62,3 @@ Description: "Finding during imaging procedure."
 * derivedFrom[imagingselection] only Reference( ImImagingSelection )
   * ^short = "Series or image that produced this observation"
   * insert SetPopulateIfKnown   
-
