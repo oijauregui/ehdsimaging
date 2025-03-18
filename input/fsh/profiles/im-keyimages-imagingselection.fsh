@@ -26,9 +26,3 @@ Title: "Key images represented as an ImagingSelection"
 * performer[device]
   * insert SetPopulateIfKnown
   * actor only Reference( ImImagingDevice )
-
-Instance: ImKeyImagesSelection-example
-InstanceOf: ImKeyImagesSelection
-* status = #available
-* subject = Reference(ImPatient/example)
-* code = $dicomOntology#113000

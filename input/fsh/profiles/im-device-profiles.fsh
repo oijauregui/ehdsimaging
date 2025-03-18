@@ -40,7 +40,4 @@ Description: "This profile on Device represents the imaging device."
     """
   * insert SetPopulateIfKnown
 
-// 
-Instance: ImAuthoringDevice-example
-InstanceOf: ImAuthoringDevice
-* status = #active
+

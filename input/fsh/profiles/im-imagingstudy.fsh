@@ -73,10 +73,3 @@ Description: "A DICOM instance UID must start with 'urn:oid:'"
 Severity: #warning
 Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:')"
 
-Instance: ImImagingStudy-example
-InstanceOf: ImImagingStudy
-* subject = Reference(ImPatient-example)
-* identifier[studyInstanceUid]
-  * system = "urn:dicom:uid"
-  * value = "urn:oid:1234.1234.1234.1234"
-* status = #available

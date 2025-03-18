@@ -19,8 +19,3 @@ Contains the narrative containing the plan including proposals, goals, and order
 * contributor MS
 * contributor only Reference(ImPractitionerRole)
 
-Instance: ImRecommendedCarePlan-example
-InstanceOf: ImRecommendedCarePlan
-* status = #active
-* intent = #proposal
-* subject = Reference(ImPatient/example)
