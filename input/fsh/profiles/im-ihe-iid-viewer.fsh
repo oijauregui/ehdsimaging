@@ -1,3 +1,16 @@
+Profile: ImImageIidViewerEndpointProvider
+Parent: ImImageIidViewerEndpoint
+Id: im-viewer-endpoint-provider
+Title: "Viewer endpoint (ImProvider)"
+Description: "Requirements for the provider of the viewer endpoint."
+* insert SetFmmAndStatusRule( 1, "draft" )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* name
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+
 Profile: ImImageIidViewerEndpoint
 Parent: Endpoint
 Id: im-viewer-endpoint
@@ -7,29 +20,20 @@ This profile defines a placeholder for an Endpoint for a viewer that can be used
 The application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf).
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
-* insert MandateLanguageAndSecurity
-
-* status MS
 
 * connectionType 
   * insert SliceElement( #value, coding )
-* connectionType contains iid 1..1 MS
+* connectionType contains iid 1..1
 * connectionType[iid] = Hl7EuImagingEndpointTerminologyCodeSystem#ihe-iid "IHE IID endpoint"
 
-* name MS
-  * insert SetPopulateIfKnown
-* description 0..1 MS
-* managingOrganization 0..1 MS
-
 * payload 1..*
-* payload MS
-  * type 1..1 MS
+* payload 
+  * type 1..1 
     * text = "IHE IID"
-  * mimeType MS
+  * mimeType
     * insert SliceElement( #value, $this )
-  * mimeType contains 
-      text-html 1..1 MS
+  * mimeType contains text-html 1..1
   * mimeType[text-html] = #text/html
 
-* address 1..1 MS
+* address 1..1
 

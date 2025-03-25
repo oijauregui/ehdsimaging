@@ -1,3 +1,18 @@
+Profile: ImRadiationDoseObservationProvider
+Parent: ImRadiationDoseObservation
+Id: im-radiation-dose-information-provider
+Title: "Radiation Dose Observation (ImProvider)"
+Description: "REquirements for the provider of radiation dose information."	
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* category
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+* valueQuantity 
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
+
+
 Profile: ImRadiationDoseObservation
 Parent: ImFinding
 Id: im-radiation-dose-information
@@ -17,13 +32,13 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 // revision of this guideline."
 
 
-* category 1..1 MS
+* category 1..1
   // add radiation dose category in line with current vital signs designs.
 
-* code 1..1 MS
+* code 1..1
   * coding
     * insert SliceElement( #value, $this )
-  * coding contains magiccode 1..1 MS
+  * coding contains magiccode 1..1
   * coding[magiccode] = $loinc#LP190649-6 "Radiation dose"
   // TODO what code/valueset to use.
   // do we need a magic code for radiation dose?
@@ -32,7 +47,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 * valueQuantity 
   * ^binding.valueSet = Canonical( ImRadiationDoseObservationUnitValueSet )
   * ^binding.strength = #extensible
-// * value contains dose 0..1 MS and doselength 0..1 MS
+// * value contains dose 0..1 and doselength 0..1
 // * value[dose]
 //   * unit = "mGy"
 //   * system = "http://unitsofmeasure.org"
