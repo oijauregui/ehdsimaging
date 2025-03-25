@@ -1,3 +1,24 @@
+Profile: ImCompositionProvider
+Parent: ImComposition
+Id: im-composition-provider
+Title: "Imaging Composition (ImProvider)"
+Description: "Requirements for the provider of the Imaging Composition."
+* insert SetFmmAndStatusRule( 1, draft )
+* meta.security
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
+* language
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* custodian
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* attester[legalAuthenticator]
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* attester[resultValidator]
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* author[author] only Reference(ImPractitionerRole)
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+* author[authoring-device] only Reference(ImAuthoringDevice)
+  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
+
 Profile: ImComposition
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: im-composition
@@ -15,10 +36,9 @@ of which the Composition is the first resource contained.\n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
 """
 * insert SetFmmAndStatusRule( 1, draft )
-* insert MandateLanguageAndSecurity
 
 * extension contains 
-    ImDiagnosticReportReference named diagnosticreport-reference 1..1 MS and
+    ImDiagnosticReportReference named diagnosticreport-reference 1..1 and
     $event-basedOn-url named basedOn 0..* and
     $information-recipient-url named informationRecipient 0..* and
     $artifact-version-url named artifactVersion 0..1
@@ -28,9 +48,9 @@ The `text` field of each section SHALL contain a textual representation of all l
 * extension[informationRecipient].valueReference only Reference ( ImInformationRecipient )
 
 * meta
-  * security 0..* MS
+  * security 0..*
 
-* language 0..1 MS
+* language 0..1
 
 //business identifier and relation with the DiagnosticReport resource
 * identifier
@@ -42,37 +62,33 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Status of the Report"
   * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
-* subject 1..1 MS
+* subject 1..1
 * subject only Reference(ImPatient)
 
-* custodian MS
+* custodian
 * custodian only Reference(ImOrganization)
   * ^short = "Organization that manages the Imaging Report"
-  * insert SetPopulateIfKnown
-
-* attester 0..* MS
-  * insert SetPopulateIfKnown
+  
+* attester 0..*
   * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "$this.mode"
   * ^slicing.rules = #open
   * ^slicing.ordered = false
-* attester contains legalAuthenticator 0..* MS and resultValidator 0..* MS
+* attester contains legalAuthenticator 0..* and resultValidator 0..*
 * attester[legalAuthenticator]
-  * insert SetPopulateIfKnown
-  * mode 1..1 MS
+  * mode 1..1
   * mode = #legal
   * party only Reference(ImLegalAuthenticator)
 * attester[resultValidator]
-  * insert SetPopulateIfKnown
-  * mode 1..1 MS
+  * mode 1..1
   * mode = #professional
   * party only Reference(ImResultValidator)
 
-* author 1..* MS
+* author 1..*
   * insert SliceElement( #profile, $this )
 * author contains 
-    author 0..* MS and 
-    authoring-device 0..* MS
+    author 0..* and 
+    authoring-device 0..*
 * author[author] only Reference(ImPractitionerRole)
 * author[authoring-device] only Reference(ImAuthoringDevice)
 
@@ -84,28 +100,28 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "Specifies that it refers to a Imaging Report"
   * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
 
-* date MS
+* date
   * ^short = "Date the report was last changed."
 
-* section MS
+* section
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
   * ^slicing.ordered = false
-* section.entry MS
-* section.code 1..1 MS  // LOINC code for the section
-* section.title MS
-* section.text MS
+* section.entry
+* section.code 1..1  // LOINC code for the section
+* section.title
+* section.text
 * section contains 
-    imagingstudy 1..1 MS and 
-    order 1..1 MS and 
-    history 1..1 MS and
-    procedure 1..1 MS and
-    comparison 1..1 MS and
-    findings 1..1 MS and
-    impression 1..1 MS and
-    recommendation 1..1 MS and
-    communication 1..1 MS
+    imagingstudy 1..1 and 
+    order 1..1 and 
+    history 1..1 and
+    procedure 1..1 and
+    comparison 1..1 and
+    findings 1..1 and
+    impression 1..1 and
+    recommendation 1..1 and
+    communication 1..1
 
 ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
 * section[imagingstudy]
@@ -113,12 +129,12 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0
-  * entry MS
+  * entry
     * ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
     * ^slicing.ordered = false
-  * entry contains imagingstudy 1..* MS
+  * entry contains imagingstudy 1..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
@@ -130,13 +146,13 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the order for the imaging study."
   * code = $loinc#55115-0 "Order"
 
-  * entry MS
+  * entry
     * insert SliceElement( #profile, "$this" )
   * entry contains 
-      order 0..* MS and 
-      orderPlacer 0..* MS and 
-      insurance 0..* MS and 
-      insurranceprovider 0..* MS
+      order 0..* and 
+      orderPlacer 0..* and 
+      insurance 0..* and 
+      insurranceprovider 0..*
 
   * entry[order]
     * ^short = "Order reference"
@@ -168,14 +184,14 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[procedure]
   * ^short = "Procedure"
   * code = $loinc#55111-9 "Procedure"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      procedure 0..* MS and
-      performer 0..* MS and
-      imaging-device 0..* MS and
-      imaging-phase 0..* MS and
-      medication 0..* MS
+      procedure 0..* and
+      performer 0..* and
+      imaging-device 0..* and
+      imaging-phase 0..* and
+      medication 0..*
   * entry[procedure] only Reference(ImProcedure)
   * entry[performer] only Reference(ImPerformer) 
   * entry[imaging-device] only Reference(ImImagingDevice)
@@ -186,21 +202,21 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[comparison]
   * ^short = "History"
   * code = $loinc#18834-2 "Comparison"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      comparedstudy 0..* MS
+      comparedstudy 0..*
   * entry[comparedstudy] only Reference(ImImagingStudy or ImImagingSelection)
 
 /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 "Findings"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      finding 0..* MS and
-      keyimage 0..* MS
+      finding 0..* and
+      keyimage 0..*
   * entry[finding] only Reference(ImFinding)
   * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImagesSelection)
 
@@ -208,12 +224,12 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 "Impression"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      finding 0..* MS and
-      impression 0..* MS and
-      keyimage 0..* MS
+      finding 0..* and
+      impression 0..* and
+      keyimage 0..*
   * entry[finding] only Reference(ImFinding)
   * entry[impression] only Reference(ImImpression)
   * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImagesSelection)
@@ -222,10 +238,10 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 "Recommendation"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      recommendedCarePlan 0..* MS
+      recommendedCarePlan 0..*
   * entry[recommendedCarePlan] only Reference(ImRecommendedCarePlan)
 
 

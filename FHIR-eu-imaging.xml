@@ -28,36 +28,57 @@
 <artifact id="StructureDefinition/ehn-medical-imaging-report-comparison-study" key="StructureDefinition-ehn-medical-imaging-report-comparison-study" name="A.7 Comparison study"/>
 <artifact id="StructureDefinition/ehn-medical-imaging-report-presented-form" key="StructureDefinition-ehn-medical-imaging-report-presented-form" name="A.8 Presented form"/>
 <artifact id="StructureDefinition/im-adversereaction" key="StructureDefinition-im-adversereaction" name="Adverse Event"/>
+<artifact id="StructureDefinition/im-adversereaction-provider" key="StructureDefinition-im-adversereaction-provider" name="Adverse Event (ImProvider)"/>
 <artifact id="StructureDefinition/im-allergic-reaction" key="StructureDefinition-im-allergic-reaction" name="Allergic Reaction"/>
+<artifact id="StructureDefinition/im-allergic-reaction-provider" key="StructureDefinition-im-allergic-reaction-provider" name="Allergic Reaction (ImProvider)"/>
 <artifact id="StructureDefinition/ehn-imaging-study-manifest-dataset" key="StructureDefinition-ehn-imaging-study-manifest-dataset" name="B Imaging study manifest data set (eHN)"/>
 <artifact id="StructureDefinition/im-bundle" key="StructureDefinition-im-bundle" name="Bundle: Imaging Study Report"/>
+<artifact id="StructureDefinition/im-bundle-provider" key="StructureDefinition-im-bundle-provider" name="Bundle: Imaging Study Report (ImProvider)"/>
 <artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology for Endpoint resources used in the EU Imaging IG."/>
+<artifact id="StructureDefinition/im-coverage-provider" key="StructureDefinition-im-coverage-provider" name="Coverage (ImProvider)"/>
 <artifact id="StructureDefinition/im-coverage" key="StructureDefinition-im-coverage" name="Coverage information"/>
 <artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="Diagnostic Report Support Info Code System"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="DiagnosticReport supportInfo codes"/>
 <artifact id="StructureDefinition/im-composition-diagnosticReportReference" key="StructureDefinition-im-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
 <artifact id="StructureDefinition/im-finding" key="StructureDefinition-im-finding" name="Finding"/>
-<artifact id="StructureDefinition/im-health-insurance-provider" key="StructureDefinition-im-health-insurance-provider" name="Health Insurance Provider"/>
+<artifact id="StructureDefinition/im-finding-provider" key="StructureDefinition-im-finding-provider" name="Finding (ImProvider)"/>
+<artifact id="StructureDefinition/im-health-insurance-prov" key="StructureDefinition-im-health-insurance-prov" name="Health Insurance Provider"/>
+<artifact id="StructureDefinition/im-health-insurance-prov-provider" key="StructureDefinition-im-health-insurance-prov-provider" name="Health Insurance Provider (ImProvider)"/>
 <artifact id="StructureDefinition/im-body-structure" key="StructureDefinition-im-body-structure" name="ImBodyStructure"/>
+<artifact id="StructureDefinition/im-body-structure-provider" key="StructureDefinition-im-body-structure-provider" name="ImBodyStructureProvider"/>
 <artifact id="StructureDefinition/im-accession-number-identifier" key="StructureDefinition-im-accession-number-identifier" name="Imaging Accession Number Identifier"/>
 <artifact id="StructureDefinition/im-order-reference" key="StructureDefinition-im-order-reference" name="Imaging Accession Number Reference"/>
 <artifact id="StructureDefinition/im-adverse-event-criticality" key="StructureDefinition-im-adverse-event-criticality" name="Imaging Adverse Event Criticality"/>
 <artifact id="StructureDefinition/im-authoring-device" key="StructureDefinition-im-authoring-device" name="Imaging Authoring Device"/>
+<artifact id="StructureDefinition/im-authoring-device-provider" key="StructureDefinition-im-authoring-device-provider" name="Imaging Authoring Device (ImProvider)"/>
 <artifact id="StructureDefinition/im-composition" key="StructureDefinition-im-composition" name="Imaging Composition"/>
+<artifact id="StructureDefinition/im-composition-provider" key="StructureDefinition-im-composition-provider" name="Imaging Composition (ImProvider)"/>
 <artifact id="StructureDefinition/im-imaging-device" key="StructureDefinition-im-imaging-device" name="Imaging Device"/>
+<artifact id="StructureDefinition/im-imaging-device-provider" key="StructureDefinition-im-imaging-device-provider" name="Imaging Device (ImProvider)"/>
 <artifact id="StructureDefinition/im-diagnostic-report" key="StructureDefinition-im-diagnostic-report" name="Imaging Diagnostic Report"/>
+<artifact id="StructureDefinition/im-diagnostic-report-provider" key="StructureDefinition-im-diagnostic-report-provider" name="Imaging Diagnostic Report (ImProvider)"/>
 <artifact id="StructureDefinition/im-keyimages-document-reference" key="StructureDefinition-im-keyimages-document-reference" name="Imaging Key Image Document Reference"/>
+<artifact id="StructureDefinition/im-keyimages-document-reference-provider" key="StructureDefinition-im-keyimages-document-reference-provider" name="Imaging Key Image Document Reference (ImProvider)"/>
 <artifact id="StructureDefinition/im-order" key="StructureDefinition-im-order" name="Imaging Order"/>
+<artifact id="StructureDefinition/im-order-provider" key="StructureDefinition-im-order-provider" name="Imaging Order (ImProvider)"/>
 <artifact id="StructureDefinition/im-patient" key="StructureDefinition-im-patient" name="Imaging Patient"/>
+<artifact id="StructureDefinition/im-patient-consumer" key="StructureDefinition-im-patient-consumer" name="Imaging Patient (ImConsumer)"/>
+<artifact id="StructureDefinition/im-patient-provider" key="StructureDefinition-im-patient-provider" name="Imaging Patient (ImProvider)"/>
 <artifact id="StructureDefinition/im-procedure" key="StructureDefinition-im-procedure" name="Imaging Procedure"/>
+<artifact id="StructureDefinition/im-procedure-provider" key="StructureDefinition-im-procedure-provider" name="Imaging Procedure (ImProvider)"/>
 <artifact id="ValueSet/im-reportType-eu-lab" key="ValueSet-im-reportType-eu-lab" name="Imaging Report Types"/>
-<artifact id="ActorDefinition/ImProducer" key="ActorDefinition-ImProducer" name="Imaging Study Reports Producer"/>
+<artifact id="ActorDefinition/ImConsumer" key="ActorDefinition-ImConsumer" name="Imaging Study and Reports Consumer"/>
+<artifact id="ActorDefinition/ImProvider" key="ActorDefinition-ImProvider" name="Imaging Study and Reports Provider"/>
 <artifact id="StructureDefinition/im-imaging-study-phase" key="StructureDefinition-im-imaging-study-phase" name="Imaging results from Procedure Phase"/>
+<artifact id="StructureDefinition/im-imaging-study-phase-provider" key="StructureDefinition-im-imaging-study-phase-provider" name="Imaging results from Procedure Phase (ImProvider)"/>
 <artifact id="StructureDefinition/im-performer" key="StructureDefinition-im-performer" name="Imaging study performer"/>
 <artifact id="StructureDefinition/im-imagingstudy" key="StructureDefinition-im-imagingstudy" name="ImagingStudy"/>
+<artifact id="StructureDefinition/im-imagingstudy-provider" key="StructureDefinition-im-imagingstudy-provider" name="ImagingStudy (ImProvider)"/>
 <artifact id="StructureDefinition/im-impression" key="StructureDefinition-im-impression" name="Impression"/>
+<artifact id="StructureDefinition/im-impression-provider" key="StructureDefinition-im-impression-provider" name="Impression (ImProvider)"/>
 <artifact id="StructureDefinition/im-information-recipient" key="StructureDefinition-im-information-recipient" name="Information Recipient"/>
 <artifact id="StructureDefinition/im-keyimages-imaging-selection" key="StructureDefinition-im-keyimages-imaging-selection" name="Key images represented as an ImagingSelection"/>
+<artifact id="StructureDefinition/im-keyimages-imaging-selection-provider" key="StructureDefinition-im-keyimages-imaging-selection-provider" name="Key images represented as an ImagingSelection (ImProvider)"/>
 <artifact id="StructureDefinition/im-legal-authenticator" key="StructureDefinition-im-legal-authenticator" name="Legal Authenticator"/>
 <artifact id="ConceptMap/A-1-1-PatientInformationMapping" key="ConceptMap-A-1-1-PatientInformationMapping" name="Mapping of A.1.1 Identification of the patient/subject"/>
 <artifact id="ConceptMap/A-1-2-PatientContactInformationMapping" key="ConceptMap-A-1-2-PatientContactInformationMapping" name="Mapping of A.1.2 Patient/subject related contact information"/>
@@ -81,24 +102,37 @@
 <artifact id="ConceptMap/A-8-PresentedFormMapping" key="ConceptMap-A-8-PresentedFormMapping" name="Mapping of A.8 Presented Form"/>
 <artifact id="ConceptMap/B-ImagingstudyMnifestDataset" key="ConceptMap-B-ImagingstudyMnifestDataset" name="Mapping of B Imaging study manifest data set"/>
 <artifact id="StructureDefinition/im-medication" key="StructureDefinition-im-medication" name="Medication"/>
+<artifact id="StructureDefinition/im-medication-provider" key="StructureDefinition-im-medication-provider" name="Medication (ImProvider)"/>
 <artifact id="StructureDefinition/im-medication-administration" key="StructureDefinition-im-medication-administration" name="Medication Administration"/>
+<artifact id="StructureDefinition/im-medication-administration-provider" key="StructureDefinition-im-medication-administration-provider" name="Medication Administration (ImProvider)"/>
 <artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="Missing DICOM Terminology"/>
 <artifact id="StructureDefinition/im-order-placer" key="StructureDefinition-im-order-placer" name="Order Placer"/>
+<artifact id="StructureDefinition/im-order-placer-provider" key="StructureDefinition-im-order-placer-provider" name="Order Placer (ImProvider)"/>
 <artifact id="StructureDefinition/im-organization" key="StructureDefinition-im-organization" name="Organization"/>
+<artifact id="StructureDefinition/im-organization-provider" key="StructureDefinition-im-organization-provider" name="Organization (ImProvider)"/>
 <artifact id="StructureDefinition/im-practitioner" key="StructureDefinition-im-practitioner" name="Practitioner"/>
+<artifact id="StructureDefinition/im-practitioner-provider" key="StructureDefinition-im-practitioner-provider" name="Practitioner (ImProvider)"/>
 <artifact id="StructureDefinition/im-practitioner-role" key="StructureDefinition-im-practitioner-role" name="Practitioner Role"/>
+<artifact id="StructureDefinition/im-practitioner-role-provider" key="StructureDefinition-im-practitioner-role-provider" name="Practitioner Role (ImProvider)"/>
 <artifact id="StructureDefinition/im-radiation-dose-information" key="StructureDefinition-im-radiation-dose-information" name="Radiation Dose Observation"/>
+<artifact id="StructureDefinition/im-radiation-dose-information-provider" key="StructureDefinition-im-radiation-dose-information-provider" name="Radiation Dose Observation (ImProvider)"/>
 <artifact id="ValueSet/im-radiation-dose-observation-unit-vs" key="ValueSet-im-radiation-dose-observation-unit-vs" name="Radiation Dose Observation Unit ValueSet"/>
 <artifact id="StructureDefinition/im-recommended-careplan" key="StructureDefinition-im-recommended-careplan" name="Recommended CarePlan"/>
+<artifact id="StructureDefinition/im-recommended-careplan-provider" key="StructureDefinition-im-recommended-careplan-provider" name="Recommended CarePlan (ImProvider)"/>
 <artifact id="StructureDefinition/im-author" key="StructureDefinition-im-author" name="Report Author"/>
 <artifact id="StructureDefinition/ImImagingSelection" key="StructureDefinition-ImImagingSelection" name="Represents the part of an imaging study."/>
+<artifact id="StructureDefinition/ImImagingSelectionProvider" key="StructureDefinition-ImImagingSelectionProvider" name="Represents the part of an imaging study. (ImProvider)"/>
 <artifact id="StructureDefinition/im-result-validator" key="StructureDefinition-im-result-validator" name="Result Validator"/>
 <artifact id="StructureDefinition/im-viewer-endpoint" key="StructureDefinition-im-viewer-endpoint" name="Viewer endpoint"/>
+<artifact id="StructureDefinition/im-viewer-endpoint-provider" key="StructureDefinition-im-viewer-endpoint-provider" name="Viewer endpoint (ImProvider)"/>
 <artifact id="StructureDefinition/im-wado-endpoint" key="StructureDefinition-im-wado-endpoint" name="WADO endpoint"/>
+<artifact id="StructureDefinition/im-wado-endpoint-provider" key="StructureDefinition-im-wado-endpoint-provider" name="WADO endpoint (ImProvider)"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="ig-artifacts-obligations" name="Actors and Obligations"/>
 <page key="actors-and-transactions" name="Actors and Transactions"/>
 <page key="adapting" name="Adapting Guidelines for Country use"/>
+<page key="ig-artifacts" name="Artifacts"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="contributors" name="Contributors"/>
@@ -106,6 +140,7 @@
 <page key="domain-model" name="Domain Model"/>
 <page key="index" name="Home"/>
 <page key="open-topics" name="Open Topics"/>
+<page key="ig-artifacts-structural" name="Structural Artifacts"/>
 <page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>
 <page key="transactions" name="Transactions"/>

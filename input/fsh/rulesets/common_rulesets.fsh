@@ -2,13 +2,26 @@ RuleSet: SetFmmAndStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 
-RuleSet: SetPopulateIfKnown
-* ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[code].valueCode = #SHALL:populate-if-known
-* ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor].valueCanonical = Canonical(ImProducer)
-  
-RuleSet: RequireField( field, cardinality )
-* {field} {cardinality} MS
-  * insert SetPopulateIfKnown
+RuleSet: SetObligation( code, actor, source, documentation )
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = {code}
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical({actor})
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "Source: {source}, {documentation}"
+
+RuleSet: SetObligationWithPath( path, code, actor, source, documentation )
+* {path}
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = {code}
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical({actor})
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "{documentation}"
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "Source: {source}, {documentation}"
+
+
+// RuleSet: SetPopulateIfKnown
+// * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
+// * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProvider)
+
+// RuleSet: SetHandleCorrectly
+// * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:correctly-handle
+// * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImConsumer)
 
 RuleSet: ExtensionContext(path)
 // copied by mCode
@@ -37,7 +50,7 @@ RuleSet: SliceElementWithDescription( type, path, description )
 * ^slicing.description = "{description}"
 * ^slicing.ordered = false
 
-RuleSet: MandateLanguageAndSecurity
-* meta
-  * security 0..* MS
-* language 0..1 MS
+// RuleSet: MandateLanguageAndSecurity
+// * meta
+//   * security 0..* MS
+// * language 0..1 MS
