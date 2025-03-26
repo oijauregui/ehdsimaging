@@ -185,42 +185,14 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-groups:
-  eHNGuidelines:
-    name: eHN Imaging Studies and Reports Guidelines (informative)
-    description: Logical models  representing the eHN Imaging Studies and Reports Guidelines. This is informative material.
-    resources:
-      - StructureDefinition/ehn-medical-imaging-report
-      - StructureDefinition/ehn-medical-imaging-report-header
-      - StructureDefinition/ehn-medical-imaging-report-header-patient-identification
-      - StructureDefinition/ehn-medical-imaging-report-header-patient-contact
-      - StructureDefinition/ehn-medical-imaging-report-header-health-insurance-information
-      - StructureDefinition/ehn-medical-imaging-report-header-information-recipient
-      - StructureDefinition/ehn-medical-imaging-report-header-author
-      - StructureDefinition/ehn-medical-imaging-report-header-legal-authenticator
-      - StructureDefinition/ehn-medical-imaging-report-header-result-validator
-      - StructureDefinition/ehn-medical-imaging-report-header-document-metadata
-      - StructureDefinition/ehn-medical-imaging-report-comparison-study
-      - StructureDefinition/ehn-medical-imaging-report-examreport
-      - StructureDefinition/ehn-medical-imaging-report-examreport-imaging-proc-description
-      - StructureDefinition/ehn-medical-imaging-report-examreport-medication
-      - StructureDefinition/ehn-medical-imaging-report-examreport-adverse-reaction
-      - StructureDefinition/ehn-medical-imaging-report-examreport-results
-      - StructureDefinition/ehn-medical-imaging-report-examreport-conclusion
-      - StructureDefinition/ehn-medical-imaging-report-examreport-recommendation
-      - StructureDefinition/ehn-medical-imaging-report-order
-      - StructureDefinition/ehn-medical-imaging-report-order-media
-      - StructureDefinition/ehn-medical-imaging-report-order-reason
-      - StructureDefinition/ehn-medical-imaging-report-presented-form
-      - StructureDefinition/ehn-medical-imaging-report-specimen-information
-      - StructureDefinition/ehn-imaging-study-manifest-dataset
-  dataEntryPoints:
-    name: Data Entry Points
-    description: The key resources representing the entry points for imaging study reports.
-    resources:
-      - StructureDefinition/im-diagnostic-report
-      - StructureDefinition/im-imagingstudy
-      - StructureDefinition/im-composition
+# groups:
+#   dataEntryPoints:
+#     name: Data Entry Points
+#     description: The key resources representing the entry points for imaging study reports.
+#     resources:
+#       - StructureDefinition/im-diagnostic-report
+#       - StructureDefinition/im-imagingstudy
+#       - StructureDefinition/im-composition
 
 #     name: Group A
 #     description: The Alpha Group

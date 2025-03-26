@@ -1,10 +1,10 @@
-Instance: ImProducer
+Instance: ImProvider
 InstanceOf: ActorDefinition
-Title: "Imaging Study Reports Producer"
+Title: "Imaging Study and Reports Provider"
 Description: "Producer profile for this IG"
 Usage: #definition
-* name = "IM Producer"
-* title = "IM Producer"
+* title = "IM Provider"
+* name = "Imaging study and report provider"
 * status = #draft
-* description = "Producer of the data."
+* description = "Provides the Imaging study and reports."
 * type = #system
