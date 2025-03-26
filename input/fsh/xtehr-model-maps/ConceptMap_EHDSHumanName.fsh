@@ -13,7 +13,7 @@ Description: "Map for EHDSHumanName"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
-  * target = "http://hl7.eu/fhir/imaging/http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu"
+  * target = "http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu"
   * element[+]
     * code = #use
     * target[+]
@@ -51,4 +51,5 @@ Description: "Map for EHDSHumanName"
     * target[+]
       * code = #suffix
       * relationship = #related-to
+
 ////////////////////////////////////////////////////
