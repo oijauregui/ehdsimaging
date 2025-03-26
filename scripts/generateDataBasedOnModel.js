@@ -66,9 +66,13 @@ function generateConceptMapFiles(parsedData, srcResources) {
             writable.write(`* sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/${srcResource}"\n`);
 
             tgtResources.forEach(tgtResource => {
+                let target = tgtResource.startsWith('http:') 
+                    ? tgtResource 
+                    : `http://hl7.eu/fhir/imaging/${tgtResource}`;
+                
                 writable.write(`* group[+]\n`);
                 writable.write(`  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/${srcResource}"\n`);
-                writable.write(`  * target = "http://hl7.eu/fhir/imaging/${tgtResource}"\n`);
+                writable.write(`  * target = "${tgtResource}"\n`);
 
                 const elementCodes = new Set(
                     parsedData
@@ -107,7 +111,7 @@ function generateConceptMapFiles(parsedData, srcResources) {
                     });
                 });
             });
-
+            writable.write(`\n`);
             writable.write(`////////////////////////////////////////////////////\n`);
             writable.end();
         }
@@ -172,8 +176,10 @@ function generateIntroFiles(parsedData, srcResources) {
             if (row[indices.srcResource] === srcResource && row[indices.tgtResource] === tgtResource && row[indices.tgtRefType]) {
             const refResources = row[indices.tgtRefType].split(',');
             const referenceName = row[indices.tgtElement];
+
             refResources.forEach(refResource => {
-                linkRows.add(`${tgtResource} --> ${refResource}:${referenceName}\n`);
+                const refResourceClassName = refResource.substring(refResource.lastIndexOf('/') + 1);
+                linkRows.add(`${tgtResourceClassName} --> ${refResourceClassName} : ${referenceName}\n`);
             });
             }
         });

@@ -13,7 +13,7 @@ Description: "Map for EHDSTelecom"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
-  * target = "http://hl7.eu/fhir/imaging/http://hl7.org/fhir/StructureDefinition/ContactPoint"
+  * target = "http://hl7.org/fhir/StructureDefinition/ContactPoint"
   * element[+]
     * code = #use
     * target[+]
@@ -29,4 +29,5 @@ Description: "Map for EHDSTelecom"
     * target[+]
       * code = #value
       * relationship = #equivalent
+
 ////////////////////////////////////////////////////

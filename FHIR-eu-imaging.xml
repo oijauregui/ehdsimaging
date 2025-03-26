@@ -14,6 +14,7 @@
 <artifact id="StructureDefinition/im-composition-diagnosticReportReference" key="StructureDefinition-im-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
 <artifact id="StructureDefinition/im-finding" key="StructureDefinition-im-finding" name="Finding"/>
 <artifact id="StructureDefinition/im-health-insurance-provider" key="StructureDefinition-im-health-insurance-provider" name="Health Insurance Provider"/>
+<artifact id="StructureDefinition/EHDSHealthProfessional" key="StructureDefinition-EHDSHealthProfessional" name="Health professional model"/>
 <artifact id="StructureDefinition/EHDSHumanName" key="StructureDefinition-EHDSHumanName" name="Human name model"/>
 <artifact id="StructureDefinition/im-body-structure" key="StructureDefinition-im-body-structure" name="ImBodyStructure"/>
 <artifact id="StructureDefinition/im-accession-number-identifier" key="StructureDefinition-im-accession-number-identifier" name="Imaging Accession Number Identifier"/>
@@ -37,7 +38,9 @@
 <artifact id="StructureDefinition/im-keyimages-imaging-selection" key="StructureDefinition-im-keyimages-imaging-selection" name="Key images represented as an ImagingSelection"/>
 <artifact id="StructureDefinition/im-legal-authenticator" key="StructureDefinition-im-legal-authenticator" name="Legal Authenticator"/>
 <artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
+<artifact id="ConceptMap/EHDSHealthProfessionalMap" key="ConceptMap-EHDSHealthProfessionalMap" name="Map for EHDSHealthProfessional"/>
 <artifact id="ConceptMap/EHDSHumanNameMap" key="ConceptMap-EHDSHumanNameMap" name="Map for EHDSHumanName"/>
+<artifact id="ConceptMap/EHDSOrganizationMap" key="ConceptMap-EHDSOrganizationMap" name="Map for EHDSOrganization"/>
 <artifact id="ConceptMap/EHDSPatientMap" key="ConceptMap-EHDSPatientMap" name="Map for EHDSPatient"/>
 <artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
 <artifact id="StructureDefinition/im-medication" key="StructureDefinition-im-medication" name="Medication"/>
@@ -45,6 +48,7 @@
 <artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="Missing DICOM Terminology"/>
 <artifact id="StructureDefinition/im-order-placer" key="StructureDefinition-im-order-placer" name="Order Placer"/>
 <artifact id="StructureDefinition/im-organization" key="StructureDefinition-im-organization" name="Organization"/>
+<artifact id="StructureDefinition/EHDSOrganization" key="StructureDefinition-EHDSOrganization" name="Organization model"/>
 <artifact id="StructureDefinition/EHDSPatient" key="StructureDefinition-EHDSPatient" name="Patient model"/>
 <artifact id="StructureDefinition/im-practitioner" key="StructureDefinition-im-practitioner" name="Practitioner"/>
 <artifact id="StructureDefinition/im-practitioner-role" key="StructureDefinition-im-practitioner-role" name="Practitioner Role"/>

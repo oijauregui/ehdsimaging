@@ -13,7 +13,7 @@ Description: "Map for EHDSAddress"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
-  * target = "http://hl7.eu/fhir/imaging/http://hl7.eu/fhir/base/StructureDefinition/Address-eu"
+  * target = "http://hl7.eu/fhir/base/StructureDefinition/Address-eu"
   * element[+]
     * code = #use
     * target[+]
@@ -71,4 +71,5 @@ Description: "Map for EHDSAddress"
     * target[+]
       * code = #country.extension[countryCode]
       * relationship = #equivalent
+
 ////////////////////////////////////////////////////
