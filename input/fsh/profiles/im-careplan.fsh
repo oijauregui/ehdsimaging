@@ -20,3 +20,11 @@ Contains the narrative containing the plan including proposals, goals, and order
     http://hl7.eu/fhir/base/StructureDefinition/organization-eu or
     CareTeam
   )
+* contributor only Reference(
+    http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu or 
+    http://hl7.eu/fhir/base/StructureDefinition/patient-eu or
+    Device or
+    RelatedPerson or
+    http://hl7.eu/fhir/base/StructureDefinition/organization-eu or
+    CareTeam
+  )
