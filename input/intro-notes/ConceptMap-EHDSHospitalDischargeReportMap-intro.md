@@ -12,10 +12,8 @@ class EHDSHospitalDischargeReport {
 }
 class ImDiagnosticReport{
   presentedForm
-  media
 }
 
 EHDSHospitalDischargeReport --> ImDiagnosticReport
-ImDiagnosticReport --> DocumentReference : media
 ```
 

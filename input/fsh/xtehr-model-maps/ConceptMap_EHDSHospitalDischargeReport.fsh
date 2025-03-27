@@ -19,11 +19,5 @@ Description: "Map for EHDSHospitalDischargeReport"
     * target[+]
       * code = #presentedForm
       * relationship = #related-to
-  * element[+]
-    * code = #hospitalDischargeReportAttachments[x]
-    * target[+]
-      * code = #media
-      * comment = "When generated as part of the report"
-      * relationship = #related-to
 
 ////////////////////////////////////////////////////
