@@ -13,7 +13,7 @@ Description: "Map for EHDSPatient"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"
-  * target = "ImPatient"
+  * target = "http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core"
   * element[+]
     * code = #personalIdentifier
     * target[+]

@@ -17,7 +17,7 @@ class organization-eu{
   identifier
   type
   name
-  address
+  contact.address
   contact.telecom
   partOf
 }

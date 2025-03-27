@@ -27,7 +27,7 @@ Description: "Map for EHDSHealthProfessional"
   * element[+]
     * code = #specialty
     * target[+]
-      * code = #speciality
+      * code = #specialty
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"

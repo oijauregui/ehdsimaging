@@ -16,7 +16,7 @@ class EHDSPatient {
   citizenship
   communicationLanguage
 }
-class ImPatient{
+class patient-eu-core{
   identifier
   name
   birthDate
@@ -29,6 +29,6 @@ class ImPatient{
   communication.language
 }
 
-EHDSPatient --> ImPatient
+EHDSPatient --> patient-eu-core
 ```
 

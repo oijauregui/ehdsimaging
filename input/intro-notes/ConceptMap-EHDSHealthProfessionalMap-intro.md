@@ -17,7 +17,7 @@ class EHDSHealthProfessional {
 class practitionerRole-eu{
   code
   organization
-  speciality
+  specialty
 }
 
 class practitioner-eu{
