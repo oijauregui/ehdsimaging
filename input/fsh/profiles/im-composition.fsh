@@ -193,10 +193,6 @@ The `text` field of each section SHALL contain a textual representation of all l
       imaging-phase 0..* and
       medication 0..*
   * entry[procedure] only Reference(ImProcedure)
-  * entry[performer] only Reference(ImPerformer) 
-  * entry[imaging-device] only Reference(ImImagingDevice)
-  * entry[imaging-phase] only Reference(ImImagingStudyPhase)
-  * entry[medication] only Reference(ImMedicationAdministration)
 
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
