@@ -23,8 +23,9 @@ const AdditionalObligationResources = new Map([
     ['http://hl7.eu/fhir/base/StructureDefinition/patient-eu', 'PatientEu'],
     ['http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu', 'PractitionerEu'],
     ['http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu', 'PractitionerRoleEu'],
-    ['http://hl7.eu/fhir/base/StructureDefinition/organization-eu', 'OrganizationEu']]
-);
+    ['http://hl7.eu/fhir/base/StructureDefinition/organization-eu', 'OrganizationEu'],
+    ['http://hl7.org/fhir/StructureDefinition/Device', 'Device'],
+]);
 
 function extractAndCopyResources(parsedData, srcResources ) {
     // Extract unique source resources
