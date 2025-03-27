@@ -18,6 +18,13 @@ const indices = {
     tgtRefType: 13,
 };
 
+// additional resources for which obligations are to be created.
+const AdditionalObligationResources = new Map([
+    ['http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu', 'PractitionerEu'],
+    ['http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu', 'PractitionerRoleEu'],
+    ['http://hl7.eu/fhir/base/StructureDefinition/organization-eu', 'OrganizationEu']]
+);
+
 function extractAndCopyResources(parsedData, srcResources ) {
     // Extract unique source resources
     
@@ -194,89 +201,90 @@ function generateIntroFiles(parsedData, srcResources) {
 }
 
 function generateObligationFiles(parsedData) {
-    // Generate Obligations
-    const obligationResources = new Set(
-    parsedData.filter((row, index) => index > 0)
-          .filter(row => row[indices.tgtResource])
-          .filter(row => row[indices.tgtResource].length > 0)
-          .filter(row => !row[indices.tgtResource].startsWith('http:'))
-          .map(row => row[indices.tgtResource])
-    );
+  // Generate Obligations
+  const obligationResources = new Map(AdditionalObligationResources);
+  parsedData
+    .filter((row, index) => index > 0)
+    .filter(row => row[indices.tgtResource])
+    .filter(row => row[indices.tgtResource].length > 0)
+    .filter(row => !row[indices.tgtResource].startsWith('http:'))
+    .forEach(row => obligationResources.set( row[indices.tgtResource], row[indices.tgtResource] ));
+  
+  obligationResources.forEach( (resourceName, resourceUrl, index) => {
+      const shallPopulateObligations = new Set();
 
-    obligationResources.forEach(resource => {
-    const shallPopulateObligations = new Set();
-    parsedData
-        .filter(row => row[indices.tgtResource] === resource)
-        .filter(row => row[indices.tgtElement])
-        .filter(row => row[indices.tgtElement].length > 0)
-        .filter(row => row[indices.srcResource].length > 0)
-        .forEach(row => { 
-        shallPopulateObligations.add(row[indices.tgtElement])
-        if (row[indices.srcType] && row[indices.srcType].length > 0) {
-            const srcType = row[indices.srcType].trim();
-            let res = parsedData
-            .filter(r => r[indices.srcResource] === srcType)
-            res
-            .filter(r => r[indices.tgtElement])
-            .filter(r => r[indices.tgtElement].length > 0)
-            .forEach(r => {
-            shallPopulateObligations.add(row[indices.tgtElement] + '.' + r[indices.tgtElement]);
-            })
-        }
-        });
+      parsedData
+          .filter(row => row[indices.tgtResource] === resourceUrl )
+          .filter(row => row[indices.tgtElement])
+          .filter(row => row[indices.tgtElement].length > 0)
+          .filter(row => row[indices.srcResource].length > 0)
+          .forEach(row => { 
+              shallPopulateObligations.add(row[indices.tgtElement])
+              if (row[indices.srcType] && row[indices.srcType].length > 0) {
+                  const srcType = row[indices.srcType].trim();
+                  let res = parsedData
+                      .filter(r => r[indices.srcResource] === srcType)
+                  res
+                      .filter(r => r[indices.tgtElement])
+                      .filter(r => r[indices.tgtElement].length > 0)
+                      .forEach(r => {
+                          shallPopulateObligations.add(row[indices.tgtElement] + '.' + r[indices.tgtElement]);
+                      })
+              }
+      });
 
-    const shallHandleCorrectlyObligations = new Set(parsedData
-        .filter(row => row[indices.tgtResource] === resource)
-        .filter(row => row[indices.tgtElement])
-        .filter(row => row[indices.tgtElement].length > 0)
-        .filter(row => row[indices.srcResource].length == 0)
-        .map(row => row[indices.tgtElement])
-    );
-    const allObligations = new Set([...shallPopulateObligations, ...shallHandleCorrectlyObligations]);  
+      const shallHandleCorrectlyObligations = new Set(parsedData
+          .filter(row => row[indices.tgtResource] === resourceUrl)
+          .filter(row => row[indices.tgtElement])
+          .filter(row => row[indices.tgtElement].length > 0)
+          .filter(row => row[indices.srcResource].length == 0)
+          .map(row => row[indices.tgtElement])
+      );
+      const allObligations = new Set([...shallPopulateObligations, ...shallHandleCorrectlyObligations]);  
 
-    if (allObligations.size > 0) {  
-        const obligationPath = `${obligationsDir}/Obligation_${resource}.fsh`;
-        console.log(obligationPath);
-        const writable = fs.createWriteStream(obligationPath);
+      if (allObligations.size > 0) {  
+          const obligationPath = `${obligationsDir}/Obligation_${resourceName}.fsh`;
+          console.log(obligationPath);
+          const writable = fs.createWriteStream(obligationPath);
 
-        writable.write(`////////////////////////////////////////////////////\n`);
-        writable.write(`// Generated file. Do not edit.\n`);
-        writable.write(`////////////////////////////////////////////////////\n`);
+          writable.write(`////////////////////////////////////////////////////\n`);
+          writable.write(`// Generated file. Do not edit.\n`);
+          writable.write(`////////////////////////////////////////////////////\n`);
 
-        writable.write(`Profile: ProducerObligation${resource}\n`);
-        writable.write(`Parent: ${resource}\n`);
-        writable.write(`Title: "Producer obligation for ${resource}"\n`);
-        writable.write(`Description: "Producer obligations for ${resource}"\n`);
+          writable.write(`Profile: ProducerObligation${resourceName}\n`);
+          writable.write(`Parent: ${resourceUrl}\n`);
+          writable.write(`Title: "Producer obligation for ${resourceName}"\n`);
+          writable.write(`Description: "Producer obligations for ${resourceName}"\n`);
 
-        allObligations.forEach(obligation => {
-        writable.write(`* ${obligation}\n`);
-        if (shallHandleCorrectlyObligations.has(obligation)) {
-            writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate\n`);
-            writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProvider)\n`);
-        } else if (shallPopulateObligations.has(obligation)) {
-            writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known\n`);
-            writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProvider)\n`);
-        }
-        });
+          allObligations.forEach(obligation => {
+              writable.write(`* ${obligation}\n`);
+              if (shallHandleCorrectlyObligations.has(obligation)) {
+                  writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate\n`);
+                  writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProvider)\n`);
+              } else if (shallPopulateObligations.has(obligation)) {
+                  writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known\n`);
+                  writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProvider)\n`);
+              }
+          });
 
-        if (shallHandleCorrectlyObligations.size > 0) {  
-        writable.write(`\n`);
-        writable.write(`Profile: ConsumerObligation${resource}\n`);
-        writable.write(`Title: "Consumer obligation for ${resource}"\n`);
-        writable.write(`Description: "Consumer obligations for ${resource}"\n`);
+          if (shallHandleCorrectlyObligations.size > 0) {  
+          writable.write(`\n`);
+          writable.write(`Profile: ConsumerObligation${resourceName}\n`);
+          writable.write(`Parent: ${resourceUrl}\n`);
+          writable.write(`Title: "Consumer obligation for ${resourceName}"\n`);
+          writable.write(`Description: "Consumer obligations for ${resourceName}"\n`);
 
-        shallHandleCorrectlyObligations.forEach(obligation => {
-            writable.write(`* ${obligation}\n`);
-            if (shallPopulateObligations.has(obligation)) {
-            writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
-            writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImConsumer)\n`);
-            }
-        });
-        }
-        writable.write(`////////////////////////////////////////////////////\n`);
-        writable.end();
-    }
-    });
+          shallHandleCorrectlyObligations.forEach(obligation => {
+              writable.write(`* ${obligation}\n`);
+              writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
+              writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImConsumer)\n`);
+          });
+          }
+          writable.write(`\n`);
+          writable.write(`////////////////////////////////////////////////////\n`);
+          writable.end();
+      }
+  });
 }
 
 function main() {

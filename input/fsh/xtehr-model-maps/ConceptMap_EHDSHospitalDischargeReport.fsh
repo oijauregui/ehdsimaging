@@ -13,6 +13,17 @@ Description: "Map for EHDSHospitalDischargeReport"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHospitalDischargeReport"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHospitalDischargeReport"
-  * target = "ImComposition"
+  * target = "ImDiagnosticReport"
+  * element[+]
+    * code = #presentedForms
+    * target[+]
+      * code = #presentedForm
+      * relationship = #related-to
+  * element[+]
+    * code = #hospitalDischargeReportAttachments[x]
+    * target[+]
+      * code = #media
+      * comment = "When generated as part of the report"
+      * relationship = #related-to
 
 ////////////////////////////////////////////////////

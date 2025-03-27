@@ -10,7 +10,12 @@ class EHDSHospitalDischargeReport {
   presentedForms
   hospitalDischargeReportAttachments[x]
 }
-class ImComposition
-EHDSHospitalDischargeReport --> ImComposition
+class ImDiagnosticReport{
+  presentedForm
+  media
+}
+
+EHDSHospitalDischargeReport --> ImDiagnosticReport
+ImDiagnosticReport --> DocumentReference : media
 ```
 

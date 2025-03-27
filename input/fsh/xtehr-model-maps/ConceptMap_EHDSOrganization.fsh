@@ -32,7 +32,7 @@ Description: "Map for EHDSOrganization"
   * element[+]
     * code = #address
     * target[+]
-      * code = #address
+      * code = #contact.address
       * relationship = #equivalent
   * element[+]
     * code = #telecom
