@@ -20,6 +20,7 @@ const indices = {
 
 // additional resources for which obligations are to be created.
 const AdditionalObligationResources = new Map([
+    ['http://hl7.eu/fhir/base/StructureDefinition/patient-eu', 'PatientEu'],
     ['http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu', 'PractitionerEu'],
     ['http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu', 'PractitionerRoleEu'],
     ['http://hl7.eu/fhir/base/StructureDefinition/organization-eu', 'OrganizationEu']]
@@ -96,6 +97,7 @@ function generateConceptMapFiles(parsedData, srcResources) {
                     parsedData
                         .filter(row => row[indices.srcResource] === srcResource && row[indices.tgtResource] === tgtResource)
                         .filter(row => row[indices.srcField].trim() === code.trim())
+                        .filter(row => row[indices.srcField].trim().length > 0 )
                         .forEach(row => {
                             const comment = row[indices.tgtRationale];
                             const tgtField = row[indices.tgtElement];
@@ -259,7 +261,7 @@ function generateObligationFiles(parsedData) {
           allObligations.forEach(obligation => {
               writable.write(`* ${obligation}\n`);
               if (shallHandleCorrectlyObligations.has(obligation)) {
-                  writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate\n`);
+                  writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
                   writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImProvider)\n`);
               } else if (shallPopulateObligations.has(obligation)) {
                   writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known\n`);
