@@ -25,9 +25,9 @@ class CareplanEu{
   status
   intent
   title
-  title.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]
+  title.extension[http\://hl7.org/fhir/StructureDefinition/rendering-xhtml]
   description
-  description.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]
+  description.extension[http\://hl7.org/fhir/StructureDefinition/rendering-xhtml]
   subject
   period
   custodian

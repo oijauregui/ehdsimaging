@@ -174,7 +174,11 @@ function generateIntroFiles(parsedData, srcResources) {
         writable.write(`class ${tgtResourceClassName}`);
         if (tgtFields.size > 0) {
             writable.write(`{\n`);
-            tgtFields.forEach(field => writable.write(`  ${field}\n`));
+            tgtFields.forEach(field => {
+                let targetField = field.replace(new RegExp('\:','g'),'\\:')        
+                
+                writable.write(`  ${targetField}\n`)
+            } )
             writable.write(`}\n`);
         }
         writable.write(`\n`);
