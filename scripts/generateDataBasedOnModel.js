@@ -227,7 +227,8 @@ function generateObligationFiles(parsedData) {
           .filter(row => row[indices.srcResource].length > 0)
           .forEach(row => { 
               shallPopulateObligations.add(row[indices.tgtElement])
-              if (row[indices.srcType] && row[indices.srcType].length > 0) {
+              // if it has a type that exists in parseData and is not a reference, include sibling elements
+              if (row[indices.srcType] && row[indices.srcType].length > 0 && row[indices.tgtRefType].length==0 ) {
                   const srcType = row[indices.srcType].trim();
                   let res = parsedData
                       .filter(r => r[indices.srcResource] === srcType)
