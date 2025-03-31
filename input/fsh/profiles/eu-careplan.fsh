@@ -10,9 +10,9 @@ Contains the narrative containing the plan including proposals, goals, and order
 * description
   * extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named xthml 0..1
 
-* subject only Reference(http://hl7.eu/fhir/base/StructureDefinition/patient-eu or Group)
+* subject only Reference ( http://hl7.eu/fhir/base/StructureDefinition/patient-eu or Group )
 
-* custodian only Reference(
+* custodian only Reference (
     http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu or 
     http://hl7.eu/fhir/base/StructureDefinition/patient-eu or
     Device or
@@ -20,7 +20,7 @@ Contains the narrative containing the plan including proposals, goals, and order
     http://hl7.eu/fhir/base/StructureDefinition/organization-eu or
     CareTeam
   )
-* contributor only Reference(
+* contributor only Reference (
     http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu or 
     http://hl7.eu/fhir/base/StructureDefinition/patient-eu or
     Device or
