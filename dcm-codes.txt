@@ -1,0 +1,162 @@
+                                <para xml:id="para_224cbbe4-ca8c-48cb-878a-899214275fe2">EV <link linkend="DCM_122130" xrefstyle="select: nopage">(122130, DCM, "Dose Area Product")</link>
+                                <para xml:id="para_d5af4fa5-ca23-47de-a39e-591006dcfa8a">UNITS = DT (mGy.cm2, UCUM, "mGy.cm2")</para>
+--
+                                <para xml:id="para_3c46d2a2-5b6f-4b00-b4e0-9847e2dd49a0">IFF <xref linkend="sect_TID_10001" xrefstyle="select: labelnumber nopage"/> Row 2 = <link linkend="DCM_113704" xrefstyle="select: nopage">(113704, DCM, "Projection X-Ray")</link>
+                                <para xml:id="para_ff8ea70d-297e-45b1-a77c-37fbd78a6265">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_a0ab780b-9763-44c8-83e0-df9a4894cc62">EV <link linkend="DCM_111636" xrefstyle="select: nopage">(111636, DCM, "Entrance Exposure at RP")</link>
+                                <para xml:id="para_633fa819-91a2-4dff-b0b1-6599caa12e34">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_7b6b1701-fdb9-4ee7-ab94-0009ea07f798">IFF (<xref linkend="sect_TID_10001" xrefstyle="select: labelnumber nopage"/> Row 2 = <link linkend="DCM_113704" xrefstyle="select: nopage">(113704, DCM, "Projection X-Ray")</link>)
+                                <para xml:id="para_3d7bc38b-3d13-4726-ab02-66d122f1b4ee">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_57d22c0b-1ac4-474d-b436-0a0717330cd3">EV <link linkend="DCM_111631" xrefstyle="select: nopage">(111631, DCM, "Average Glandular Dose")</link>
+                                <para xml:id="para_77756805-a1c4-4799-a853-1fb72cb4e35d">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_8ab25e3d-f2f9-446a-8da8-616a2f936f21">EV <link linkend="DCM_113726" xrefstyle="select: nopage">(113726, DCM, "Fluoro Dose Area Product Total")</link>
+                                <para xml:id="para_bb5797d2-5357-4fbf-b50b-8b16d42bc88a">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_0e5ef50b-4801-4ec2-9b96-8b23aad152b0">IFF <xref linkend="sect_TID_10003" xrefstyle="select: labelnumber nopage"/> Row 7 value = <link xl:href="http://snomed.info/id/44491008" xl:show="new">(44491008, SCT, "Fluoroscopy")</link> for at least one irradiation event AND any of the values of TID (10001) Row 18 are not <link linkend="DCM_113858" xrefstyle="select: nopage">(113858, DCM, "MPPS Content")</link>.</para>
+                                <para xml:id="para_41f023ca-7586-4a11-bb9d-c68270b0958e">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_aee12830-bc94-4b9f-933d-383c41c509aa">IF any of the values of TID (10001) Row 18 are not <link linkend="DCM_113858" xrefstyle="select: nopage">(113858, DCM, "MPPS Content")</link>.</para>
+                                <para xml:id="para_1943120a-da31-4e4d-88be-8d7a1662977b">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_f854aa6b-a1a7-4efb-b559-c8789f1ec39a">IF any of the values of TID (10001) Row 18 are not <link linkend="DCM_113858" xrefstyle="select: nopage">(113858, DCM, "MPPS Content")</link>.</para>
+                                <para xml:id="para_c129e24a-9691-47f5-8b72-026c7fa76ca5">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_163c6270-a5ed-4840-a372-05b1513eed3b">EV <link linkend="DCM_111637" xrefstyle="select: nopage">(111637, DCM, "Accumulated Average Glandular Dose")</link>
+                                <para xml:id="para_c57f4de1-0042-4539-a21f-2753943eed81">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_fb07e5bd-0909-44e5-a8cd-9e5b77a184d8">EV <link linkend="DCM_113722" xrefstyle="select: nopage">(113722, DCM, "Dose Area Product Total")</link>
+                                <para xml:id="para_dc7e6d8b-7981-471f-90e1-28000a3ae88c">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_4e1f4500-ab9c-4a24-bd41-f9fc4beadeaa">EV <link linkend="DCM_113722" xrefstyle="select: nopage">(113722, DCM, "Dose Area Product Total")</link>
+                                <para xml:id="para_4c4ba097-5bac-46a7-83ac-03a28bdcbf46">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_84a4c0a7-6e0e-4f77-8b55-58ad786eccf5">IF <xref linkend="sect_TID_10001" xrefstyle="select: labelnumber nopage"/> Row 4 = <link linkend="DCM_113958" xrefstyle="select: nopage">(113958, DCM, "Integrated Projection Radiography System")</link> or any of the values of TID (10001) Row 18 are not <link linkend="DCM_113958" xrefstyle="select: nopage">(113858, DCM, "MPPS Content")</link>.</para>
+                                <para xml:id="para_3782d762-1f4f-4532-809e-ccd334544158">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_5b1cd13d-0382-4a83-9ab3-147d49ecdbff">EV <link linkend="DCM_113813" xrefstyle="select: nopage">(113813, DCM, "CT Dose Length Product Total")</link>
+                                <para xml:id="para_556ac8c3-7371-4d1e-896f-70f529cad8f2">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_f1ecb55a-c507-4b84-935b-6ba6fb029e1d">EV <link linkend="DCM_130745" xrefstyle="select: nopage">(130745, DCM, "CT Dose Length Product Sub-Total")</link>
+                                <para xml:id="para_354857ce-f77f-41f1-83e0-ef9de40ea816">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_6152515f-e02f-45e1-87b7-4d7bf91c906d">EV <link linkend="DCM_113814" xrefstyle="select: nopage">(113814, DCM, "CT Effective Dose Total")</link>
+                                <para xml:id="para_5ef04b4a-fdc3-4f00-a92a-5804ad322329">UNITS = EV (mSv, UCUM, "mSv")</para>
+--
+                                <para xml:id="para_05fcfe8f-321a-4e61-9356-f7f917b5e9dc">EV <link linkend="DCM_113830" xrefstyle="select: nopage">(113830, DCM, "Mean CTDIvol")</link>
+                                <para xml:id="para_72c14a7d-0b8f-4944-9f45-8d618d966784">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_19fb0fa6-4a9c-4395-93c5-d172c86c303d">EV <link linkend="DCM_113836" xrefstyle="select: nopage">(113836, DCM, "CTDIfreeair Calculation Factor")</link>
+                                <para xml:id="para_96c3b1bd-6313-45a3-8951-39f5933491f6">UNITS = EV (mGy/mA.s, UCUM, "mGy/mA.s")</para>
+--
+                                <para xml:id="para_2c162ec8-8bc7-40a8-b640-b830a2032069">EV <link linkend="DCM_113837" xrefstyle="select: nopage">(113837, DCM, "Mean CTDIfreeair")</link>
+                                <para xml:id="para_26d71702-86dd-4781-bfe9-373ce33d59dd">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_91c0f3ac-a91b-40f2-81db-d3a3c476a39d">EV <link linkend="DCM_113838" xrefstyle="select: nopage">(113838, DCM, "DLP")</link>
+                                <para xml:id="para_9dff6d36-28c1-4c54-9dc4-974a69516986">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_82e26512-667a-4628-85fe-54c2bf9b1492">EV <link linkend="DCM_113839" xrefstyle="select: nopage">(113839, DCM, "Effective Dose")</link>
+                                <para xml:id="para_2f851fcb-e255-40ec-bb29-535fbcc5cfae">UNITS = EV (mSv, UCUM, "mSv")</para>
+--
+                                <para xml:id="para_60ba0bf8-42c6-431e-b384-4f4fc0a613a3">IF Row 28 is present and equals <link linkend="DCM_113800" xrefstyle="select: nopage">(113800, DCM, "DLP to E conversion via MC computation")</link> or equals <link linkend="DCM_113802" xrefstyle="select: nopage">(113802, DCM, "DLP to E conversion via measurement")</link>
+                                <para xml:id="para_5dc90350-5792-4eff-b500-2b152824b140">UNITS = EV (mSv/mGy.cm, UCUM, "mSv/mGy.cm")</para>
+--
+                                <para xml:id="para_68b0029d-93e7-4631-ac5b-ba77aeb9a20f">EV <link linkend="DCM_113930" xrefstyle="select: nopage">(113930, DCM, "Size Specific Dose Estimate")</link>
+                                <para xml:id="para_a767bf6c-d7d7-4e47-a1f0-ab01d19538d3">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_1e0e45a9-5c5c-46f7-9b0b-c2c777ab495f">IF value of Row 31 = <link linkend="DCM_113989" xrefstyle="select: nopage">(113989, DCM, "Arithmetic Average of SSDE(z)")</link>
+                                <para xml:id="para_b6da1749-f1f9-4987-81ff-5994a23cd047">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_cd47c64e-947d-40a9-a9e7-e46086387f36">EV <link linkend="DCM_113903" xrefstyle="select: nopage">(113903, DCM, "DLP Alert Value")</link>
+                                <para xml:id="para_c3941a70-bf81-411b-afae-ca521361226b">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_30ccf617-5d6c-453a-b2dd-581482cebff2">EV <link linkend="DCM_113904" xrefstyle="select: nopage">(113904, DCM, "CTDIvol Alert Value")</link>
+                                <para xml:id="para_e25276db-b325-4277-b7e7-428690ee5733">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_c20bfead-8565-40fa-a7a9-4f9f812a68cd">EV <link linkend="DCM_113905" xrefstyle="select: nopage">(113905, DCM, "Accumulated DLP Forward Estimate")</link>
+                                <para xml:id="para_4c6a3feb-b3fd-4558-9afb-0f157f2032b1">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_2b6cb2ed-3a30-407b-abe1-cfca82cb2787">EV <link linkend="DCM_113906" xrefstyle="select: nopage">(113906, DCM, "Accumulated CTDIvol Forward Estimate")</link>
+                                <para xml:id="para_80dc3a0c-2089-47ef-a5e7-3cd5ca3feac1">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_5a93015f-a0ca-4a10-913c-29dee9842829">EV <link linkend="DCM_113911" xrefstyle="select: nopage">(113911, DCM, "DLP Notification Value")</link>
+                                <para xml:id="para_a194f67f-a8a6-4d4d-b6b8-bd743e2aff10">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_b3f2c5ef-c7e3-476a-8d8c-09ad5a2f05c6">EV <link linkend="DCM_113912" xrefstyle="select: nopage">(113912, DCM, "CTDIvol Notification Value")</link>
+                                <para xml:id="para_a46a758d-4121-425a-8cb6-70998ff08199">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_ee72ea9a-0388-4c4a-9416-5d3678692c3e">EV <link linkend="DCM_113913" xrefstyle="select: nopage">(113913, DCM, "DLP Forward Estimate")</link>
+                                <para xml:id="para_c2da58ef-05ff-4db8-8bbd-43ced529e4f8">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_3d80f953-d1f7-462a-ae0f-3dcb2c6e4bc3">EV <link linkend="DCM_113914" xrefstyle="select: nopage">(113914, DCM, "CTDIvol Forward Estimate")</link>
+                                <para xml:id="para_3d7aa3e6-c6fe-4b52-acb4-047dc47603e2">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_744153e8-63d6-49f9-b2da-5a4166b87927">EV <link linkend="DCM_113518" xrefstyle="select: nopage">(113518, DCM, "Organ Dose")</link>
+                                <para xml:id="para_dbbbacc9-3c29-4fc6-90c5-da4bf4222199">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                        <tr valign="top">
+                                <para xml:id="para_bc3798a1-48bf-4914-a2f5-2df40387822c">UNITS = EV (mGy, UCUM, "mGy")</para>
+                        <tr valign="top">
+                                <para xml:id="para_6abbc614-802a-4736-8eb6-11463be1c868">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                        <tr valign="top">
+                                <para xml:id="para_090f2da4-2419-42f2-a820-3c979b3a3612">UNITS = EV (mSv, UCUM, "mSv")</para>
+                        <tr valign="top">
+                                <para xml:id="para_c34d6b04-ed36-47e0-8d43-2d91ba33c91c">UNITS = EV (mSv, UCUM, "mSv")</para>
+--
+                                <para xml:id="para_ced07866-5b21-490d-b094-211ebb6c0d85">EV <link linkend="DCM_113722" xrefstyle="select: nopage">(113722, DCM, "Dose Area Product Total")</link>
+                                <para xml:id="para_226d36d7-327d-4ec4-8459-a62470b39fa0">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_aa228852-0c38-444e-ace0-77df49a7d604">EV <link linkend="DCM_113726" xrefstyle="select: nopage">(113726, DCM, "Fluoro Dose Area Product Total")</link>
+                                <para xml:id="para_8cb45c61-36ba-4681-8382-4f0a2a694f7c">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_28164888-5c83-4907-8d30-1c7c0b825fc3">EV <link linkend="DCM_113727" xrefstyle="select: nopage">(113727, DCM, "Acquisition Dose Area Product Total")</link>
+                                <para xml:id="para_46c19445-978b-41b8-982e-ace744667881">UNITS = EV (Gy.m2, UCUM, "Gy.m2")</para>
+--
+                                <para xml:id="para_02b5ac13-2002-4097-b0d1-fc9b9b5bf794">EV <link linkend="DCM_111637" xrefstyle="select: nopage">(111637, DCM, "Accumulated Average Glandular Dose")</link>
+                                <para xml:id="para_e8d36955-7309-4e3f-9c0f-d3972523c4ad">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_a4e08b40-7e4d-4fd6-80af-ad40f8721bc4">EV <link linkend="DCM_113725" xrefstyle="select: nopage">(113725, DCM, "Dose (RP) Total")</link>
+                                <para xml:id="para_41cbf34d-8ac5-4765-afd6-70747aaccc40">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_9e171e7a-a6da-4a8c-a9cc-f2a01e82fd46">EV <link linkend="DCM_113728" xrefstyle="select: nopage">(113728, DCM, "Fluoro Dose (RP) Total")</link>
+                                <para xml:id="para_322ea4eb-ff46-4e9c-97fe-8e4bd70e169b">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_a13ac04a-5450-41ee-8aa5-671bb3e51aaa">EV <link linkend="DCM_113729" xrefstyle="select: nopage">(113729, DCM, "Acquisition Dose (RP) Total")</link>
+                                <para xml:id="para_27f3a821-c20b-4663-bc65-f3712189a33c">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_d8967323-34bc-4e25-a05f-2c12188a237d">EV <link linkend="DCM_130745" xrefstyle="select: nopage">(130745, DCM, "CT Dose Length Product Sub-Total")</link>
+                                <para xml:id="para_39869c55-5896-4979-9a82-6e3e5e201e6d">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_b2577eb6-f4bb-42e8-8db9-7fc2f9720f3e">EV <link linkend="DCM_113738" xrefstyle="select: nopage">(113738, DCM, "Dose (RP)")</link>
+                                <para xml:id="para_c04ddc90-4157-418e-b7e0-36d0277ccc9f">UNITS = EV (Gy, UCUM, "Gy")</para>
+--
+                                <para xml:id="para_ecde9bab-a6fd-447a-bdaf-0f8d1c6f95e0">EV <link linkend="DCM_111631" xrefstyle="select: nopage">(111631, DCM, "Average Glandular Dose")</link>
+                                <para xml:id="para_71e0f0ee-34bb-4f07-b480-05569b549870">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_f973278e-c9fb-4b97-a646-d4d0cb305e96">EV <link linkend="DCM_113830" xrefstyle="select: nopage">(113830, DCM, "Mean CTDIvol")</link>
+                                <para xml:id="para_c7ec9f8b-3c63-48c3-99f5-207173f03e75">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_a85236ae-b15c-4296-b9e4-267fd95bde1c">EV <link linkend="DCM_113836" xrefstyle="select: nopage">(113836, DCM, "CTDIfreeair Calculation Factor")</link>
+                                <para xml:id="para_be546623-53bb-42b2-899a-2fe4c9b6d7b7">UNITS = EV (mGy/mA.s, UCUM, "mGy/mA.s")</para>
+--
+                                <para xml:id="para_431d6388-6245-474c-89ec-d67ed3065342">EV <link linkend="DCM_113837" xrefstyle="select: nopage">(113837, DCM, "Mean CTDIfreeair")</link>
+                                <para xml:id="para_c336997a-5259-407e-a3df-51e598d00c20">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_a94c2c3a-e154-4ea6-b2ba-523a98f20158">EV <link linkend="DCM_113838" xrefstyle="select: nopage">(113838, DCM, "DLP")</link>
+                                <para xml:id="para_6b5a71e4-6593-4aa8-96fa-07c55aa7bb66">UNITS = EV (mGy.cm, UCUM, "mGy.cm")</para>
+--
+                                <para xml:id="para_1990767e-3fa6-4550-bfea-0d1635982bcd">EV <link linkend="DCM_113930" xrefstyle="select: nopage">(113930, DCM, "Size Specific Dose Estimate")</link>
+                                <para xml:id="para_6c7b8648-b438-4c1f-b947-ed36911260df">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_c5b161ff-cd46-4964-be1f-17041e379e13">EV <link linkend="DCM_130515" xrefstyle="select: nopage">(130515, DCM, "Air Kerma at Output Measurement Point")</link>
+                                <para xml:id="para_18666659-b42e-4600-a29c-795010603f8d">UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                                <para xml:id="para_54cb75bc-ab7b-4a79-b431-9d6263decec8">COLUMN 2 = EV <link linkend="DCM_130515" xrefstyle="select: nopage">(130515, DCM, "Air Kerma at Output Measurement Point")</link>
+                                <para xml:id="para_6c19d17d-05c4-4688-be45-b7e4b2c95945">COLUMN 2 UNITS = EV (mGy, UCUM, "mGy")</para>
+--
+                        <para xml:id="para_737a2913-4e6e-4864-a70e-a0897d514c70">EV <link linkend="DCM_130092" xrefstyle="select: nopage">(130092, DCM, "High Dose Fraction Transition Dose")</link>
+                        <para xml:id="para_43c8555a-f41f-412e-a89d-e24ab9ccc129">UNITS = EV (Gy, UCUM, "Gray")</para>
