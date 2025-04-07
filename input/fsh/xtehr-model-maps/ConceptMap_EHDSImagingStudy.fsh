@@ -150,5 +150,17 @@ Description: "Map for EHDSImagingStudy"
     * target[+]
       * code = #series.instance.number
       * relationship = #related-to
+  * element[+]
+    * code = #series.instancesInTheSeries.radiationDoseInformation
+    * target[+]
+      * code = #series.instance
+      * comment = "Present in referred DICOM SR document"
+      * relationship = #source-is-narrower-than-target
+  * element[+]
+    * code = #phase.radiationDose
+    * target[+]
+      * code = #series.instance
+      * comment = "Present in referred DICOM SR document"
+      * relationship = #source-is-narrower-than-target
 
 ////////////////////////////////////////////////////

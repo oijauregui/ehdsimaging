@@ -45,7 +45,7 @@ class BodyStructureEu{
 EHDSSpecimen --> SpecimenEu
 SpecimenEu --> PatientAnimalEu : subject
 SpecimenEu --> BodyStructureEu : collection.bodySite
-SpecimenEu --> DeviceEu : container.device
+SpecimenEu --> $DeviceEu : container.device
 EHDSSpecimen --> PatientAnimalEu
 EHDSSpecimen --> BodyStructureEu
 ```

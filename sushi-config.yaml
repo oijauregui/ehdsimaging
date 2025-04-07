@@ -28,6 +28,8 @@ dependencies:
   hl7.fhir.uv.extensions: current
   hl7.fhir.eu.extensions: current
   hl7.fhir.eu.base.r5: current
+  # required for medication extensions
+  ihe.pharm.mpd: current
   fhir.dicom:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom
@@ -54,6 +56,10 @@ pages:
       title: Transactions
   domain-model.md: 
     title: Domain Model
+  imaging-manifest.md:
+    title: Imaging Manifest
+  imaging-report.md:
+    title: Imaging Report
   ehn-guidelines.md:
     title: eHN Imaging Studies and Reports Guidelines
   design-considerations.md:
@@ -89,6 +95,8 @@ parameters:
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  # add all fsh results to _data directory
+  produce-jekyll-data: true
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
