@@ -17,7 +17,7 @@ This profile represents an imaging study instance.
   * value 1.. MS
 
 * subject 1..1
-* subject only Reference( http://hl7.eu/fhir/base/StructureDefinition/patient-eu or DeviceEu )
+* subject only Reference( $PatientEu or $DeviceEu )
 
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 * basedOn
@@ -40,7 +40,7 @@ This profile represents an imaging study instance.
     * actor only Reference( http://hl7.eu/fhir/base/StructureDefinition/organization-eu )
   * performer[device]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
-    * actor only Reference( DeviceEu ) 
+    * actor only Reference( ImImagingDevice ) 
 
   * insert EndpointTypes 
 

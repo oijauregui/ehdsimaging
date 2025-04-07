@@ -10,36 +10,76 @@
 <artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology for Endpoint resources used in the EU Imaging IG."/>
 <artifact id="StructureDefinition/ConsumerObligationCareplanEu" key="StructureDefinition-ConsumerObligationCareplanEu" name="Consumer obligation for CareplanEu"/>
 <artifact id="StructureDefinition/ConsumerObligationImDiagnosticReport" key="StructureDefinition-ConsumerObligationImDiagnosticReport" name="Consumer obligation for ImDiagnosticReport"/>
+<artifact id="StructureDefinition/ConsumerObligationImImagingStudy" key="StructureDefinition-ConsumerObligationImImagingStudy" name="Consumer obligation for ImImagingStudy"/>
 <artifact id="StructureDefinition/ConsumerObligationOrganizationEu" key="StructureDefinition-ConsumerObligationOrganizationEu" name="Consumer obligation for OrganizationEu"/>
 <artifact id="StructureDefinition/ConsumerObligationPractitionerEu" key="StructureDefinition-ConsumerObligationPractitionerEu" name="Consumer obligation for PractitionerEu"/>
-<artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="Diagnostic Report Support Info Code System"/>
-<artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="DiagnosticReport supportInfo codes"/>
+<artifact id="StructureDefinition/EHDSDevice" key="StructureDefinition-EHDSDevice" name="Device model"/>
+<artifact id="StructureDefinition/im-composition-diagnosticReportReference" key="StructureDefinition-im-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
+<artifact id="StructureDefinition/allergyintolerance-eu" key="StructureDefinition-allergyintolerance-eu" name="EU AllergyIntolerance"/>
+<artifact id="StructureDefinition/eu-bodystructure" key="StructureDefinition-eu-bodystructure" name="EU BodyStructure"/>
 <artifact id="StructureDefinition/eu-careplan" key="StructureDefinition-eu-careplan" name="EU CarePlan"/>
+<artifact id="StructureDefinition/condition-eu" key="StructureDefinition-condition-eu" name="EU Condition"/>
+<artifact id="StructureDefinition/encounter-eu" key="StructureDefinition-encounter-eu" name="EU Encounter"/>
+<artifact id="StructureDefinition/endpoint-eu" key="StructureDefinition-endpoint-eu" name="EU Endpoint"/>
+<artifact id="StructureDefinition/eu-location" key="StructureDefinition-eu-location" name="EU Location"/>
+<artifact id="StructureDefinition/medication-eu" key="StructureDefinition-medication-eu" name="EU Medication"/>
+<artifact id="StructureDefinition/observation-eu" key="StructureDefinition-observation-eu" name="EU Observation"/>
+<artifact id="StructureDefinition/procedure-eu" key="StructureDefinition-procedure-eu" name="EU Procedure"/>
+<artifact id="StructureDefinition/im-finding" key="StructureDefinition-im-finding" name="Finding"/>
 <artifact id="StructureDefinition/EHDSHealthProfessional" key="StructureDefinition-EHDSHealthProfessional" name="Health professional model"/>
 <artifact id="StructureDefinition/EHDSHospitalDischargeReport" key="StructureDefinition-EHDSHospitalDischargeReport" name="Hospital Discharge Report"/>
 <artifact id="StructureDefinition/EHDSHumanName" key="StructureDefinition-EHDSHumanName" name="Human name model"/>
+<artifact id="StructureDefinition/im-accession-number-identifier" key="StructureDefinition-im-accession-number-identifier" name="Imaging Accession Number Identifier"/>
+<artifact id="StructureDefinition/im-composition" key="StructureDefinition-im-composition" name="Imaging Composition"/>
+<artifact id="ValueSet/im-imaging-device-type" key="ValueSet-im-imaging-device-type" name="Imaging Device Type"/>
 <artifact id="StructureDefinition/im-diagnostic-report" key="StructureDefinition-im-diagnostic-report" name="Imaging Diagnostic Report"/>
+<artifact id="StructureDefinition/im-order" key="StructureDefinition-im-order" name="Imaging Order"/>
 <artifact id="ValueSet/im-reportType-eu-lab" key="ValueSet-im-reportType-eu-lab" name="Imaging Report Types"/>
+<artifact id="ValueSet/im-imaging-study-performer-type" key="ValueSet-im-imaging-study-performer-type" name="Imaging Study Performer Type Value Set"/>
 <artifact id="ActorDefinition/ImConsumer" key="ActorDefinition-ImConsumer" name="Imaging Study and Reports Consumer"/>
 <artifact id="ActorDefinition/ImProvider" key="ActorDefinition-ImProvider" name="Imaging Study and Reports Provider"/>
+<artifact id="StructureDefinition/EHDSImagingStudy" key="StructureDefinition-EHDSImagingStudy" name="Imaging study model"/>
+<artifact id="StructureDefinition/im-imagingdevice" key="StructureDefinition-im-imagingdevice" name="ImagingDevice"/>
+<artifact id="StructureDefinition/im-imagingstudy" key="StructureDefinition-im-imagingstudy" name="ImagingStudy"/>
+<artifact id="StructureDefinition/imm-imagingstudy-manifest" key="StructureDefinition-imm-imagingstudy-manifest" name="ImagingStudy Manifest"/>
+<artifact id="StructureDefinition/imm-imagingstudy-manifest-imagingstudy" key="StructureDefinition-imm-imagingstudy-manifest-imagingstudy" name="ImagingStudy study present in an ImagingStudy Manifest"/>
+<artifact id="StructureDefinition/instance-description" key="StructureDefinition-instance-description" name="Instance Description"/>
+<artifact id="StructureDefinition/EHDSLocation" key="StructureDefinition-EHDSLocation" name="Location model"/>
 <artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
 <artifact id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
 <artifact id="ConceptMap/EHDSCarePlanMap" key="ConceptMap-EHDSCarePlanMap" name="Map for EHDSCarePlan"/>
+<artifact id="ConceptMap/EHDSDeviceMap" key="ConceptMap-EHDSDeviceMap" name="Map for EHDSDevice"/>
 <artifact id="ConceptMap/EHDSHealthProfessionalMap" key="ConceptMap-EHDSHealthProfessionalMap" name="Map for EHDSHealthProfessional"/>
 <artifact id="ConceptMap/EHDSHospitalDischargeReportMap" key="ConceptMap-EHDSHospitalDischargeReportMap" name="Map for EHDSHospitalDischargeReport"/>
 <artifact id="ConceptMap/EHDSHumanNameMap" key="ConceptMap-EHDSHumanNameMap" name="Map for EHDSHumanName"/>
+<artifact id="ConceptMap/EHDSImagingStudyMap" key="ConceptMap-EHDSImagingStudyMap" name="Map for EHDSImagingStudy"/>
+<artifact id="ConceptMap/EHDSLocationMap" key="ConceptMap-EHDSLocationMap" name="Map for EHDSLocation"/>
 <artifact id="ConceptMap/EHDSOrganizationMap" key="ConceptMap-EHDSOrganizationMap" name="Map for EHDSOrganization"/>
 <artifact id="ConceptMap/EHDSPatientMap" key="ConceptMap-EHDSPatientMap" name="Map for EHDSPatient"/>
+<artifact id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
 <artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
 <artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="Missing DICOM Terminology"/>
 <artifact id="StructureDefinition/EHDSOrganization" key="StructureDefinition-EHDSOrganization" name="Organization model"/>
 <artifact id="StructureDefinition/EHDSPatient" key="StructureDefinition-EHDSPatient" name="Patient model"/>
+<artifact id="StructureDefinition/patient-animal-eu" key="StructureDefinition-patient-animal-eu" name="Patient: Animal"/>
+<artifact id="StructureDefinition/periods-of-life-extension" key="StructureDefinition-periods-of-life-extension" name="Periods of Life Extension"/>
+<artifact id="ValueSet/periods-of-life-value-set" key="ValueSet-periods-of-life-value-set" name="Periods of Life Extension"/>
+<artifact id="StructureDefinition/ProducerObligationBodyStructureEu" key="StructureDefinition-ProducerObligationBodyStructureEu" name="Producer obligation for BodyStructureEu"/>
 <artifact id="StructureDefinition/ProducerObligationCareplanEu" key="StructureDefinition-ProducerObligationCareplanEu" name="Producer obligation for CareplanEu"/>
+<artifact id="StructureDefinition/ProducerObligationDevice" key="StructureDefinition-ProducerObligationDevice" name="Producer obligation for Device"/>
 <artifact id="StructureDefinition/ProducerObligationImDiagnosticReport" key="StructureDefinition-ProducerObligationImDiagnosticReport" name="Producer obligation for ImDiagnosticReport"/>
+<artifact id="StructureDefinition/ProducerObligationImImagingStudy" key="StructureDefinition-ProducerObligationImImagingStudy" name="Producer obligation for ImImagingStudy"/>
+<artifact id="StructureDefinition/ProducerObligationLocationEu" key="StructureDefinition-ProducerObligationLocationEu" name="Producer obligation for LocationEu"/>
 <artifact id="StructureDefinition/ProducerObligationOrganizationEu" key="StructureDefinition-ProducerObligationOrganizationEu" name="Producer obligation for OrganizationEu"/>
+<artifact id="StructureDefinition/ProducerObligationPatientAnimalEu" key="StructureDefinition-ProducerObligationPatientAnimalEu" name="Producer obligation for PatientAnimalEu"/>
 <artifact id="StructureDefinition/ProducerObligationPractitionerEu" key="StructureDefinition-ProducerObligationPractitionerEu" name="Producer obligation for PractitionerEu"/>
 <artifact id="StructureDefinition/ProducerObligationPractitionerRoleEu" key="StructureDefinition-ProducerObligationPractitionerRoleEu" name="Producer obligation for PractitionerRoleEu"/>
+<artifact id="StructureDefinition/ProducerObligationSpecimenEu" key="StructureDefinition-ProducerObligationSpecimenEu" name="Producer obligation for SpecimenEu"/>
+<artifact id="StructureDefinition/EHDSSpecimen" key="StructureDefinition-EHDSSpecimen" name="Specimen model"/>
+<artifact id="StructureDefinition/specimen-eu" key="StructureDefinition-specimen-eu" name="Specimen: Laboratory"/>
 <artifact id="StructureDefinition/EHDSTelecom" key="StructureDefinition-EHDSTelecom" name="Telecom model"/>
+<artifact id="StructureDefinition/im-viewer-endpoint" key="StructureDefinition-im-viewer-endpoint" name="Viewer endpoint"/>
+<artifact id="StructureDefinition/im-wado-endpoint" key="StructureDefinition-im-wado-endpoint" name="WADO endpoint"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="actors-and-transactions" name="Actors and Transactions"/>
@@ -50,6 +90,8 @@
 <page key="design-considerations" name="Design Considerations"/>
 <page key="domain-model" name="Domain Model"/>
 <page key="index" name="Home"/>
+<page key="imaging-manifest" name="Imaging Manifest"/>
+<page key="imaging-report" name="Imaging Report"/>
 <page key="open-topics" name="Open Topics"/>
 <page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>

@@ -13,18 +13,18 @@ Contains the narrative containing the plan including proposals, goals, and order
 * subject only Reference ( http://hl7.eu/fhir/base/StructureDefinition/patient-eu or Group )
 
 * custodian only Reference (
-    http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu or 
-    http://hl7.eu/fhir/base/StructureDefinition/patient-eu or
+    $PractitionerRoleEu or 
+    $PatientEu or
     Device or
     RelatedPerson or
-    http://hl7.eu/fhir/base/StructureDefinition/organization-eu or
+    $OrganizationEu or
     CareTeam
   )
 * contributor only Reference (
-    http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu or 
-    http://hl7.eu/fhir/base/StructureDefinition/patient-eu or
+    $PractitionerRoleEu or 
+    $PatientEu or
     Device or
     RelatedPerson or
-    http://hl7.eu/fhir/base/StructureDefinition/organization-eu or
+    $OrganizationEu or
     CareTeam
   )

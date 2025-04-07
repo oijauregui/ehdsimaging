@@ -1,23 +1,28 @@
 Profile: ImOrder
-Parent: ServiceRequest
+Parent: $ServiceRequestEu
 Id: im-order
 Title: "Imaging Order"
 Description: "This profile on ServiceRequest represents the order for the Imaging Study and report."
 * insert SetFmmAndStatusRule( 1, draft )
 
-// * identifier 
-//   * ^slicing.discriminator.type = #value
-//   * ^slicing.discriminator.path = "type"
-//   * ^slicing.rules = #open
-//   * ^slicing.description = "Slice on identifier"
-//   * ^slicing.ordered = false
-// * identifier contains accessionNumber 0..1 MS  
-// * identifier[accessionNumber]
-//   * insert SetPopulateIfKnown
-//   * type 1..1 MS
-//   * type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
-//   * value 1..1 MS
-//   * system 1..1 MS
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains imaging 1..1
+* category[imaging] = $SCT#363679005 "Imaging"
+
+* identifier
+  * insert SliceElement( #value, type )
+* identifier contains accessionNumber 0..1
+* identifier[accessionNumber]
+  * type 1..1 
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
+  * value 1..1 
+  * system 1..1 
+
+* supportingInfo 0..*
+  * insert SliceElement( #value, $this )
+* supportingInfo contains pregnacy 0..1
+* supportingInfo[pregnacy] from http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
 
 // * status 1..1 MS
 
@@ -70,3 +75,16 @@ RuleSet: BasedOnImOrderReference( slicename )
 * basedOn[{slicename}] only Reference( ImOrder )
   * identifier 1..1 MS
   * identifier only ImAccessionNumberIdentifier
+
+Mapping: DicomToImOrder
+Source: ImOrder
+Target: "http://nema.org/dicom"
+Id: dicom-2-im-order-mapping
+Title: "Mapping from DICOM to Imaging Order"
+Description: "Mapping from DICOM to Imaging Order."
+* identifier[accessionNumber] -> "AccessionNumber (0008,0050)"
+* subject -> "(0010/*)"
+* note -> "RequestedProcedureDescription (0040,0100)"
+* code -> "RequestedProcedureCodeSequence (0040,1001)"
+* reason.concept.text -> "ReasonForTheRequestedProcedure (0040,1002)"
+* reason.concept -> "ReasonForTheRequestedProcedure (0040,100A)"
