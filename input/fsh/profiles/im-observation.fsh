@@ -1,5 +1,5 @@
 Profile: ImGestationalAgeObservation
-Parent: $ObservationEu
+Parent: $EuObservation
 Id: im-gestational-age-observation
 Title: "Gestational Age Observation"
 Description: "Gestational Age Observation"

@@ -5,21 +5,24 @@ classDiagram
   class ImImagingStudyManifest {
   <<Bundle>>
   }
-  ImmImagingStudyManifest *-- "1" ImManifestImagingStudy
+  ImImagingStudyManifest *-- "1" ImManifestImagingStudy
   
-  ImmImagingStudyManifest *-- PatientEU
-  ImmManifestImagingStudy --> PatientEU: subject
+  ImImagingStudyManifest *-- PatientEU
+  ImManifestImagingStudy --> PatientEU: subject
+  ImManifestImagingStudy --> PractitionerRoleEu: referrer
 
-  ImmImagingStudyManifest *-- ImOrder
+  ImImagingStudyManifest *-- ImImagingDevice
+  ImManifestImagingStudy --> ImImagingDevice: series.performer[device]
+  ImManifestImagingStudy --> PractitionerRoleEu: series.performer[performer]
+  
+  ImImagingStudyManifest *-- ImOrder
   ImOrder --> PatientEU: subject
+  ImOrder --> PractitionerRoleEu: referrer
 
-  ImmImagingStudyManifest *-- ImImageIidViewerEndpoint
-  ImmImagingStudyManifest *-- ImWadoEndpoint
-  ImmManifestImagingStudy --> ImWadoEndpoint: endpoint / series.endpoint
-  ImmManifestImagingStudy --> ImImageIidViewerEndpoint: endpoint / series.endpoint
-
-  ImmImagingStudyManifest *-- ImImagingDevice
-  ImmManifestImagingStudy --> ImImagingDevice: series.performer[device]
+  ImImagingStudyManifest *-- ImImageIidViewerEndpoint
+  ImImagingStudyManifest *-- ImWadoEndpoint
+  ImManifestImagingStudy --> ImWadoEndpoint: endpoint / series.endpoint
+  ImManifestImagingStudy --> ImImageIidViewerEndpoint: endpoint / series.endpoint
   
 ```
 

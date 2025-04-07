@@ -1,9 +1,10 @@
 Profile: ImOrder
-Parent: $ServiceRequestEu
+Parent: $EuServiceRequest
 Id: im-order
 Title: "Imaging Order"
 Description: "This profile on ServiceRequest represents the order for the Imaging Study and report."
 * insert SetFmmAndStatusRule( 1, draft )
+* insert PartOfImagingManifest
 
 * category 1..*
   * insert SliceElement( #value, $this )

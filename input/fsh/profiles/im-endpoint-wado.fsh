@@ -6,6 +6,7 @@ Description: """
 This profile defines the WADO endpoint for accessing imaging study content.
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
+* insert PartOfImagingManifest
 
 * connectionType 
   * insert SliceElement( #value, coding )

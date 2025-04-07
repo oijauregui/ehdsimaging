@@ -30,12 +30,12 @@ The `text` field of each section SHALL contain a textual representation of all l
 * attester[legalAuthenticator]
   * mode 1..1
   * mode = #legal
-  * party only Reference($PractitionerRoleEu)
+  * party only Reference($EuPractitionerRole)
   * time 1..1
 * attester[resultValidator]
   * mode 1..1
   * mode = #professional
-  * party only Reference($PractitionerRoleEu)
+  * party only Reference($EuPractitionerRole)
   * time 1..1
 
 * author 1..* MS
@@ -43,8 +43,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 * author contains 
     author 0..* MS and 
     authoring-device 0..* MS
-* author[author] only Reference($PractitionerRoleEu)
-* author[authoring-device] only Reference($DeviceEu)
+* author[author] only Reference($EuPractitionerRole)
+* author[authoring-device] only Reference($EuDevice)
 
 // type of the report. Matching DiagnosticReport.code
 // code 

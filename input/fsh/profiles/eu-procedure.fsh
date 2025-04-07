@@ -9,4 +9,4 @@ Description: "A procedure profile for the EU."
 * used
   * insert SliceElement( #type, concept )
 * used contains device 0..1 
-* used[device] only CodeableReference( $DeviceEu )
+* used[device] only CodeableReference( $EuDevice )
