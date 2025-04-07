@@ -1,5 +1,5 @@
 Profile: ImProcedure
-Parent: $ProcedureEu
+Parent: $EuProcedure
 Id: im-procedure
 Title: "Imaging Procedure"
 Description: "This profile on Procedure represents the imaging procedure."
@@ -24,7 +24,7 @@ Description: "This profile on Procedure represents the imaging procedure."
       * insert SliceElement( #value, "$this" )
     * coding contains healthcare-professional 0..1
     * coding[healthcare-professional] = $sct#223366009 "Healthcare professional" // TODO check this code
-  * actor only Reference($PractitionerRoleEu)
+  * actor only Reference($EuPractitionerRole)
 * performer[imaging-device]
   * function
     * coding

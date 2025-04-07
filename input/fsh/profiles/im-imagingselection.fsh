@@ -9,7 +9,7 @@ Description: "Imaging Selection referring to a DICOM SR instance"
 * identifier contains sopInstanceUid 1..1
 * identifier[sopInstanceUid].type = MissingDicomTerminology#00080018 "SOP Instance UID"
 
-* subject only Reference( $PatientEu )
+* subject only Reference( $EuPatient )
 
 * derivedFrom 1..*
   * insert SliceElement( #profile, $this )

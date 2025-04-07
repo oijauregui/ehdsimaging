@@ -8,7 +8,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
-* subject only Reference ( PatientEuCore or Group  or $DeviceEu or Substance or LocationEu )
+* subject only Reference ( PatientEuCore or Group  or $EuDevice or Substance or LocationEu )
 * parent only Reference(SpecimenEu)
 
 * collection
@@ -16,5 +16,5 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
   * collected[x] 1..1
 
 * container
-  * device only Reference($DeviceEu)
+  * device only Reference($EuDevice)
   * location only Reference(LocationEu)

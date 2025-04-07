@@ -1,5 +1,5 @@
 Profile: ImRadiationDoseObservation
-Parent: $ObservationEu
+Parent: $EuObservation
 Id: im-radiation-dose-observation
 Title: "Radiation Dose Observation"
 Description: """
@@ -36,7 +36,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
   * coding[radiation-dose] = $loinc#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 
 * subject 1..1
-* subject only Reference( $PatientEu )
+* subject only Reference( $EuPatient )
 
 // value
 * value[x] 1..1 

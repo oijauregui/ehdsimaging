@@ -6,6 +6,7 @@ Description: """
 This profile represents an imaging study instance.
 """
 * insert SetFmmAndStatusRule( 1, draft )
+* insert PartOfImagingManifest
 * obeys im-imagingstudy-01
 
 * identifier MS
@@ -17,7 +18,7 @@ This profile represents an imaging study instance.
   * value 1.. MS
 
 * subject 1..1
-* subject only Reference( $PatientEu or $DeviceEu )
+* subject only Reference( $EuPatient or $EuDevice )
 
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 * basedOn
