@@ -1,0 +1,45 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSTelecomMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSTelecomMap",
+  "title": "EHDSTelecom Mapping",
+  "description": "Map for EHDSTelecom",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "use",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "use"
+        },
+        {
+          "target": [
+            {
+              "code": "system",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "type"
+        },
+        {
+          "target": [
+            {
+              "code": "value",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "value"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom",
+      "target": "ContactPoint"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
+}

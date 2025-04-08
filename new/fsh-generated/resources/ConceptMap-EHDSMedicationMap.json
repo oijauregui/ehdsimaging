@@ -1,0 +1,21 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSMedicationMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSMedicationMap",
+  "title": "EHDSMedication Mapping",
+  "description": "Map for EHDSMedication",
+  "group": [
+    {
+      "element": [
+        {
+          "noMap": true
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication",
+      "target": "MedicationEu"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"
+}

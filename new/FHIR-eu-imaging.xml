@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
+<artifact id="ConceptMap/EHDSAllergyIntoleranceMap" key="ConceptMap-EHDSAllergyIntoleranceMap" name="Map for EHDSAllergyIntolerance"/>
+<artifact id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
+<artifact id="ConceptMap/EHDSCarePlanMap" key="ConceptMap-EHDSCarePlanMap" name="Map for EHDSCarePlan"/>
+<artifact id="ConceptMap/EHDSConditionMap" key="ConceptMap-EHDSConditionMap" name="Map for EHDSCondition"/>
+<artifact id="ConceptMap/EHDSCoverageMap" key="ConceptMap-EHDSCoverageMap" name="Map for EHDSCoverage"/>
+<artifact id="ConceptMap/EHDSDeviceMap" key="ConceptMap-EHDSDeviceMap" name="Map for EHDSDevice"/>
+<artifact id="ConceptMap/EHDSEncounterMap" key="ConceptMap-EHDSEncounterMap" name="Map for EHDSEncounter"/>
+<artifact id="ConceptMap/EHDSEndpointMap" key="ConceptMap-EHDSEndpointMap" name="Map for EHDSEndpoint"/>
+<artifact id="ConceptMap/EHDSEpisodeOfCareMap" key="ConceptMap-EHDSEpisodeOfCareMap" name="Map for EHDSEpisodeOfCare"/>
+<artifact id="ConceptMap/EHDSHealthProfessionalMap" key="ConceptMap-EHDSHealthProfessionalMap" name="Map for EHDSHealthProfessional"/>
+<artifact id="ConceptMap/EHDSHumanNameMap" key="ConceptMap-EHDSHumanNameMap" name="Map for EHDSHumanName"/>
+<artifact id="ConceptMap/EHDSImagingReportMap" key="ConceptMap-EHDSImagingReportMap" name="Map for EHDSImagingReport"/>
+<artifact id="ConceptMap/EHDSImagingReportBodyMap" key="ConceptMap-EHDSImagingReportBodyMap" name="Map for EHDSImagingReportBody"/>
+<artifact id="ConceptMap/EHDSImagingReportHeaderMap" key="ConceptMap-EHDSImagingReportHeaderMap" name="Map for EHDSImagingReportHeader"/>
+<artifact id="ConceptMap/EHDSImagingStudyMap" key="ConceptMap-EHDSImagingStudyMap" name="Map for EHDSImagingStudy"/>
+<artifact id="ConceptMap/EHDSLocationMap" key="ConceptMap-EHDSLocationMap" name="Map for EHDSLocation"/>
+<artifact id="ConceptMap/EHDSMediaMap" key="ConceptMap-EHDSMediaMap" name="Map for EHDSMedia"/>
+<artifact id="ConceptMap/EHDSMedicationMap" key="ConceptMap-EHDSMedicationMap" name="Map for EHDSMedication"/>
+<artifact id="ConceptMap/EHDSMedicationAdministrationMap" key="ConceptMap-EHDSMedicationAdministrationMap" name="Map for EHDSMedicationAdministration"/>
+<artifact id="ConceptMap/EHDSObservationMap" key="ConceptMap-EHDSObservationMap" name="Map for EHDSObservation"/>
+<artifact id="ConceptMap/EHDSOrganizationMap" key="ConceptMap-EHDSOrganizationMap" name="Map for EHDSOrganization"/>
+<artifact id="ConceptMap/EHDSPatientMap" key="ConceptMap-EHDSPatientMap" name="Map for EHDSPatient"/>
+<artifact id="ConceptMap/EHDSProcedureMap" key="ConceptMap-EHDSProcedureMap" name="Map for EHDSProcedure"/>
+<artifact id="ConceptMap/EHDSRelatedPersonMap" key="ConceptMap-EHDSRelatedPersonMap" name="Map for EHDSRelatedPerson"/>
+<artifact id="ConceptMap/EHDSReportHeaderMap" key="ConceptMap-EHDSReportHeaderMap" name="Map for EHDSReportHeader"/>
+<artifact id="ConceptMap/EHDSServiceRequestMap" key="ConceptMap-EHDSServiceRequestMap" name="Map for EHDSServiceRequest"/>
+<artifact id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
+<artifact id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
+<artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="adapting" name="Adapting Guidelines for Country use"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="changes" name="Changes"/>
+<page key="index" name="Home"/>
+<page key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
+<page key="toc" name="Table of Contents"/>
+<page key="xtehr" name="XtEHR"/>
+<page key="xtehr-logical-model" name="XtEHR Logical Model"/>
+</specification>

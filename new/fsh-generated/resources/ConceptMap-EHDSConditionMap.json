@@ -1,0 +1,194 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSConditionMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSConditionMap",
+  "title": "EHDSCondition Mapping",
+  "description": "Map for EHDSCondition",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "note",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "description"
+        },
+        {
+          "target": [
+            {
+              "code": "code",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "code"
+        },
+        {
+          "target": [
+            {
+              "code": "onset[x]",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "onsetDate"
+        },
+        {
+          "target": [
+            {
+              "code": "abetement[x]",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "endDate"
+        },
+        {
+          "target": [
+            {
+              "code": "category",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "category"
+        },
+        {
+          "target": [
+            {
+              "code": "clinicalStatus",
+              "comment": "Target binding is required",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "clinicalStatus"
+        },
+        {
+          "target": [
+            {
+              "code": "evidence.concept",
+              "comment": "When condition is inactive, the evidence for this should be listed here.",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "resolutionCircumstances"
+        },
+        {
+          "target": [
+            {
+              "code": "severity",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "severity"
+        },
+        {
+          "target": [
+            {
+              "code": "bodySite",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "anatomicLocation"
+        },
+        {
+          "target": [
+            {
+              "code": "stage",
+              "relationship": "equivalent"
+            },
+            {
+              "code": "stage.summary",
+              "comment": "stage code",
+              "relationship": "equivalent"
+            },
+            {
+              "code": "stage.type",
+              "comment": "stage type",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "stage"
+        },
+        {
+          "target": [
+            {
+              "code": "subject",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "patient"
+        },
+        {
+          "target": [
+            {
+              "code": "participant",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "participant"
+        },
+        {
+          "target": [
+            {
+              "code": "participant.function",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "participant.function"
+        },
+        {
+          "target": [
+            {
+              "code": "participant.actor",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "participant.actor"
+        },
+        {
+          "target": [
+            {
+              "code": "stage.assessment",
+              "comment": "Evidence for the condition stage",
+              "relationship": "source-is-broader-than-target"
+            },
+            {
+              "code": "extension[artiface-relatedArtifact]",
+              "comment": "Refer to external sources.",
+              "relationship": "source-is-broader-than-target"
+            },
+            {
+              "code": "evidence",
+              "comment": "Evidence for the condidation",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "externalResourceRelatedWith"
+        },
+        {
+          "target": [
+            {
+              "code": "verificationStatus",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "diagnosisAssertionStatus"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition",
+      "target": "EuCondition"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"
+}

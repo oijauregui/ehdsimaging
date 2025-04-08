@@ -1,0 +1,439 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.eu.imaging",
+  "meta": {
+    "profile": [
+      "http://smart.who.int/base/StructureDefinition/SGImplementationGuide"
+    ]
+  },
+  "url": "http://hl7.eu/fhir/imaging/ImplementationGuide/hl7.fhir.eu.imaging",
+  "version": "0.1.0",
+  "name": "HL7EuImagingStudyReport",
+  "title": "HL7 Europe Imaging Study Report",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7 Europe",
+  "contact": [
+    {
+      "name": "HL7 Europe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.eu"
+        }
+      ]
+    }
+  ],
+  "description": "This guide describes how a Imaging Study Report can be represented in the European REALM.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "150",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "copyright": "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "packageId": "hl7.fhir.eu.imaging",
+  "fhirVersion": [
+    "5.0.0"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.extensions",
+      "version": "current",
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "id": "hl7_fhir_uv_extensions"
+    },
+    {
+      "packageId": "hl7.fhir.eu.extensions",
+      "version": "current",
+      "uri": "http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions",
+      "id": "hl7_fhir_eu_extensions"
+    },
+    {
+      "packageId": "hl7.fhir.eu.base.r5",
+      "version": "current",
+      "uri": "http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base.r5",
+      "id": "hl7_fhir_eu_base_r5"
+    },
+    {
+      "packageId": "eu.ehds.models",
+      "version": "current",
+      "uri": "https://www.xt-ehr.eu/specifications/fhir/ImplementationGuide/eu.ehds.models",
+      "id": "eu_ehds_models"
+    },
+    {
+      "packageId": "ihe.pharm.mpd",
+      "version": "current",
+      "uri": "http://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd",
+      "id": "ihe_pharm_mpd"
+    },
+    {
+      "id": "DICOM",
+      "packageId": "fhir.dicom",
+      "uri": "http://fhir.org/packages/fhir.dicom",
+      "version": "2024.2.20240331"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSAddressMap"
+        },
+        "name": "Map for EHDSAddress",
+        "description": "Map for EHDSAddress",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSAllergyIntoleranceMap"
+        },
+        "name": "Map for EHDSAllergyIntolerance",
+        "description": "Map for EHDSAllergyIntolerance",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSAttachmentMap"
+        },
+        "name": "Map for EHDSAttachment",
+        "description": "Map for EHDSAttachment",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSCarePlanMap"
+        },
+        "name": "Map for EHDSCarePlan",
+        "description": "Map for EHDSCarePlan",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSConditionMap"
+        },
+        "name": "Map for EHDSCondition",
+        "description": "Map for EHDSCondition",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSCoverageMap"
+        },
+        "name": "Map for EHDSCoverage",
+        "description": "Map for EHDSCoverage",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSDeviceMap"
+        },
+        "name": "Map for EHDSDevice",
+        "description": "Map for EHDSDevice",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSEncounterMap"
+        },
+        "name": "Map for EHDSEncounter",
+        "description": "Map for EHDSEncounter",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSEndpointMap"
+        },
+        "name": "Map for EHDSEndpoint",
+        "description": "Map for EHDSEndpoint",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSEpisodeOfCareMap"
+        },
+        "name": "Map for EHDSEpisodeOfCare",
+        "description": "Map for EHDSEpisodeOfCare",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSHealthProfessionalMap"
+        },
+        "name": "Map for EHDSHealthProfessional",
+        "description": "Map for EHDSHealthProfessional",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSHumanNameMap"
+        },
+        "name": "Map for EHDSHumanName",
+        "description": "Map for EHDSHumanName",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSImagingReportMap"
+        },
+        "name": "Map for EHDSImagingReport",
+        "description": "Map for EHDSImagingReport",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSImagingReportBodyMap"
+        },
+        "name": "Map for EHDSImagingReportBody",
+        "description": "Map for EHDSImagingReportBody",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSImagingReportHeaderMap"
+        },
+        "name": "Map for EHDSImagingReportHeader",
+        "description": "Map for EHDSImagingReportHeader",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSImagingStudyMap"
+        },
+        "name": "Map for EHDSImagingStudy",
+        "description": "Map for EHDSImagingStudy",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSLocationMap"
+        },
+        "name": "Map for EHDSLocation",
+        "description": "Map for EHDSLocation",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSMediaMap"
+        },
+        "name": "Map for EHDSMedia",
+        "description": "Map for EHDSMedia",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSMedicationMap"
+        },
+        "name": "Map for EHDSMedication",
+        "description": "Map for EHDSMedication",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSMedicationAdministrationMap"
+        },
+        "name": "Map for EHDSMedicationAdministration",
+        "description": "Map for EHDSMedicationAdministration",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSObservationMap"
+        },
+        "name": "Map for EHDSObservation",
+        "description": "Map for EHDSObservation",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSOrganizationMap"
+        },
+        "name": "Map for EHDSOrganization",
+        "description": "Map for EHDSOrganization",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSPatientMap"
+        },
+        "name": "Map for EHDSPatient",
+        "description": "Map for EHDSPatient",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSProcedureMap"
+        },
+        "name": "Map for EHDSProcedure",
+        "description": "Map for EHDSProcedure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSRelatedPersonMap"
+        },
+        "name": "Map for EHDSRelatedPerson",
+        "description": "Map for EHDSRelatedPerson",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSReportHeaderMap"
+        },
+        "name": "Map for EHDSReportHeader",
+        "description": "Map for EHDSReportHeader",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSServiceRequestMap"
+        },
+        "name": "Map for EHDSServiceRequest",
+        "description": "Map for EHDSServiceRequest",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSSpecimenMap"
+        },
+        "name": "Map for EHDSSpecimen",
+        "description": "Map for EHDSSpecimen",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSSubstanceMap"
+        },
+        "name": "Map for EHDSSubstance",
+        "description": "Map for EHDSSubstance",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ConceptMap/EHDSTelecomMap"
+        },
+        "name": "Map for EHDSTelecom",
+        "description": "Map for EHDSTelecom",
+        "isExample": false
+      }
+    ],
+    "page": {
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "title": "Home",
+          "generation": "markdown",
+          "page": [
+            {
+              "title": "Changes",
+              "generation": "markdown",
+              "name": "changes.html",
+              "sourceUrl": "changes.html"
+            },
+            {
+              "title": "Adapting Guidelines for Country use",
+              "generation": "markdown",
+              "name": "adapting.html",
+              "sourceUrl": "adapting.html"
+            }
+          ],
+          "name": "index.html",
+          "sourceUrl": "index.html"
+        },
+        {
+          "title": "XtEHR",
+          "generation": "markdown",
+          "page": [
+            {
+              "title": "XtEHR Logical Model",
+              "generation": "markdown",
+              "name": "xtehr-logical-model.html",
+              "sourceUrl": "xtehr-logical-model.html"
+            },
+            {
+              "title": "Mapping to XtEHR Logical Model",
+              "generation": "markdown",
+              "name": "xtehr-mapping.html",
+              "sourceUrl": "xtehr-mapping.html"
+            }
+          ],
+          "name": "xtehr.html",
+          "sourceUrl": "xtehr.html"
+        }
+      ],
+      "name": "toc.html",
+      "sourceUrl": "toc.html"
+    },
+    "parameter": [
+      {
+        "code": {
+          "code": "copyrightyear",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "2025+"
+      },
+      {
+        "code": {
+          "code": "releaselabel",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "ci-build"
+      },
+      {
+        "code": {
+          "code": "apply-contact",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "apply-jurisdiction",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "apply-publisher",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "apply-version",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "show-inherited-invariants",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "usage-stats-opt-out",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "produce-jekyll-data",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      }
+    ]
+  }
+}

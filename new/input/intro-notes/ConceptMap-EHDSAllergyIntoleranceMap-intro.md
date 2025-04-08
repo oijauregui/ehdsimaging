@@ -1,0 +1,57 @@
+{% include variable-definitions.md %}
+
+The figure below presents the {{XtEhrImaging}} DataSet representation and the FHIR profiles it maps to. For each FHIR profile the impacted fields are listed.
+
+```mermaid
+classDiagram
+direction LR
+class EHDSAllergyIntolerance {
+  <<XtEHR dataset>>
+  identifier
+  allergyDescription
+  typeOfPropensity
+  allergyManifestation
+  allergyManifestation.date
+  allergyManifestation.severity
+  allergyManifestation.description
+  allergyManifestation.manifestation
+  criticality
+  onsetDate
+  onsetLifePeriod
+  endDate
+  endDateLifePeriod
+  status
+  certainty
+  agentOrAllergen
+  patient
+}
+link EHDSAllergyIntolerance "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSAllergyIntolerance.html"
+class AllergyIntolerance{
+  <<FHIR>>
+  identifier
+  text
+  type
+  reaction
+  reaction.onset
+  reaction.severity
+  reaction.description
+  reaction.manifestation
+  criticality
+  onset[x]
+  onsetDateTime
+  onset[x].extension[onsetperiod]
+  extension[abatement].valueDateTime
+  clinicalStatus
+  certainty
+  code
+  reaction.substance
+  patient
+}
+
+class PatientEu {
+  <<FHIR>>
+}
+EHDSAllergyIntolerance --> AllergyIntolerance
+AllergyIntolerance --> PatientEu : patient
+```
+

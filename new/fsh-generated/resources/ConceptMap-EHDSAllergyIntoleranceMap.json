@@ -1,0 +1,175 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSAllergyIntoleranceMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSAllergyIntoleranceMap",
+  "title": "EHDSAllergyIntolerance Mapping",
+  "description": "Map for EHDSAllergyIntolerance",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "comment": "Not mapped",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "allergyDescription"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "typeOfPropensity"
+        },
+        {
+          "target": [
+            {
+              "code": "reaction",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "allergyManifestation"
+        },
+        {
+          "target": [
+            {
+              "code": "reaction.onset",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "allergyManifestation.date"
+        },
+        {
+          "target": [
+            {
+              "code": "reaction.severity",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "allergyManifestation.severity"
+        },
+        {
+          "target": [
+            {
+              "code": "reaction.description",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "allergyManifestation.description"
+        },
+        {
+          "target": [
+            {
+              "code": "reaction.manifestation",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "allergyManifestation.manifestation"
+        },
+        {
+          "target": [
+            {
+              "code": "criticality",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "criticality"
+        },
+        {
+          "target": [
+            {
+              "code": "onset[x]",
+              "relationship": "related-to"
+            },
+            {
+              "code": "onsetDateTime",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "onsetDate"
+        },
+        {
+          "target": [
+            {
+              "code": "onset[x].extension[onsetperiod]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "onsetLifePeriod"
+        },
+        {
+          "target": [
+            {
+              "code": "extension[abatement].valueDateTime",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "endDate"
+        },
+        {
+          "code": "endDateLifePeriod",
+          "noMap": true
+        },
+        {
+          "target": [
+            {
+              "code": "clinicalStatus",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "status"
+        },
+        {
+          "target": [
+            {
+              "code": "certainty",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "certainty"
+        },
+        {
+          "target": [
+            {
+              "code": "code",
+              "relationship": "related-to"
+            },
+            {
+              "code": "reaction.substance",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "agentOrAllergen"
+        },
+        {
+          "target": [
+            {
+              "code": "patient",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "patient"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance",
+      "target": "AllergyIntolerance"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"
+}

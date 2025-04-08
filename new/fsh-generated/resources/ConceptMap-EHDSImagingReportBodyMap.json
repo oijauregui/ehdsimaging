@@ -1,0 +1,708 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSImagingReportBodyMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSImagingReportBodyMap",
+  "title": "EHDSImagingReportBody Mapping",
+  "description": "Map for EHDSImagingReportBody",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "section[order]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "identifier",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[order].entry[order]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderId"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderDateAndTime"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderPlacer"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "reason.concept.text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderReasonText"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderReason"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.clinicalQuestion"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "comment": "elements from patient history relevant for the report.",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "orderInformation.supportingInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.observation"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.condition"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.medicationAdministration"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.devices"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.pregnancyStatus"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.gestationalAge"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "subject",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.sexForClinicalUse"
+        },
+        {
+          "target": [
+            {
+              "code": "section[history].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[history].entry",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.otherSupportingInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "section[study].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "specimen"
+        },
+        {
+          "target": [
+            {
+              "code": "section[order].entry[order]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "serviceRequest"
+        },
+        {
+          "target": [
+            {
+              "code": "section[procedure].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.modality"
+        },
+        {
+          "target": [
+            {
+              "code": "section[procedure].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[procedure].entry[procedure]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.imagingProcedures"
+        },
+        {
+          "target": [
+            {
+              "code": "section[procedure].text",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[procedure].entry[procedure]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.medication"
+        },
+        {
+          "target": [
+            {
+              "code": "section[procedure].text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.adverseReaction"
+        },
+        {
+          "target": [
+            {
+              "code": "section[findings]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.resultData"
+        },
+        {
+          "target": [
+            {
+              "code": "section[findings].extension[note]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.resultData.resultText"
+        },
+        {
+          "target": [
+            {
+              "code": "section[findings].entry[ImFinding]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.resultData.observationResults"
+        },
+        {
+          "target": [
+            {
+              "code": "section[impression]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.conclusion"
+        },
+        {
+          "target": [
+            {
+              "code": "section[impression].extension[note]",
+              "relationship": "related-to"
+            },
+            {
+              "code": "conclusion",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.conclusion.impression"
+        },
+        {
+          "target": [
+            {
+              "code": "section[impression].entry[ImImpression]",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[impression].entry[ImFinding]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.conclusion.conditionOrFinding[x]"
+        },
+        {
+          "target": [
+            {
+              "code": "section[recommendation]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "recommendation"
+        },
+        {
+          "target": [
+            {
+              "code": "section[recommendation].extension[note]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "recommendation.description"
+        },
+        {
+          "target": [
+            {
+              "code": "section[recommendation].entry[careplan]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "recommendation.carePlan"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImComposition"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "authoredOn",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderDateAndTime"
+        },
+        {
+          "target": [
+            {
+              "code": "reason.concept",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderReason"
+        },
+        {
+          "target": [
+            {
+              "code": "reason.concept",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.clinicalQuestion"
+        },
+        {
+          "target": [
+            {
+              "code": "supportingInfo.reference",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "supportingInfo",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.observation"
+        },
+        {
+          "target": [
+            {
+              "code": "supportingInfo",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.condition"
+        },
+        {
+          "target": [
+            {
+              "code": "reason",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.medicationAdministration"
+        },
+        {
+          "target": [
+            {
+              "code": "supportingInfo",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.devices"
+        },
+        {
+          "target": [
+            {
+              "code": "supportingInfo",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.pregnancyStatus"
+        },
+        {
+          "code": "serviceRequest",
+          "noMap": true
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImOrder"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "practitioner",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.orderPlacer"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "imOrder"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "valueQuantity",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.gestationalAge"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImGestationalAgeObservation"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "extension[sexParameterForClinicalUse]",
+              "relationship": "related-to"
+            },
+            {
+              "code": "extension[sexParameterForClinicalUse].value",
+              "relationship": "related-to"
+            },
+            {
+              "code": "extension[sexParameterForClinicalUse].period",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "orderInformation.supportingInformation.sexForClinicalUse"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImPatient"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "series.specimen",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "specimen"
+        },
+        {
+          "target": [
+            {
+              "code": "series.modality",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.modality"
+        },
+        {
+          "target": [
+            {
+              "code": "series.bodySite",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.bodyPart.bodyLocation"
+        },
+        {
+          "target": [
+            {
+              "code": "series.bodySite",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.bodyPart.laterality"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImImagingStudy"
+    },
+    {
+      "element": [
+        {
+          "code": "exposureInformation",
+          "noMap": true
+        },
+        {
+          "target": [
+            {
+              "code": "component.value",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "exposureInformation.effectiveDose"
+        },
+        {
+          "target": [
+            {
+              "code": "component.value",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "exposureInformation.equivalentDoseInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "component.value",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "exposureInformation.equivalentDoseInformation.equivalentDose"
+        },
+        {
+          "target": [
+            {
+              "code": "bodySite",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "exposureInformation.equivalentDoseInformation.tissueType"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImRadiationDoseObservation"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "series.bodySite",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.bodyPart.bodyLocation"
+        },
+        {
+          "target": [
+            {
+              "code": "includedStructure.laterality",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.bodyPart.laterality"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "BodyStructure"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "partOf",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.medication"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImMedicationAdministration"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "supectEntity[procedure]",
+              "relationship": "related-to"
+            },
+            {
+              "code": "contributingFactor[allery]",
+              "relationship": "related-to"
+            },
+            {
+              "code": "status",
+              "relationship": "related-to"
+            },
+            {
+              "code": "actuality",
+              "relationship": "related-to"
+            },
+            {
+              "code": "code",
+              "relationship": "related-to"
+            },
+            {
+              "code": "subject",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.adverseReaction"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImAdverseEvent"
+    },
+    {
+      "element": [
+        {
+          "code": "examinationReport.adverseReaction",
+          "noMap": true
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "EuAllergyIntolerance"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "result",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "examinationReport.resultData.observationResults"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "ImDiagnosticReport"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "section[comparison].entry[study]",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "comparisonStudy"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+      "target": "imComposition"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
+}
