@@ -1,0 +1,81 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSHumanNameMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSHumanNameMap",
+  "title": "EHDSHumanName Mapping",
+  "description": "Map for EHDSHumanName",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "use",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "use"
+        },
+        {
+          "target": [
+            {
+              "code": "text",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "text"
+        },
+        {
+          "target": [
+            {
+              "code": "family",
+              "comment": "Concatenation of family names.",
+              "relationship": "source-is-broader-than-target"
+            },
+            {
+              "code": "family.extension[fathersFamily]",
+              "relationship": "source-is-broader-than-target"
+            },
+            {
+              "code": "family.extension[mothersFamily]",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "family"
+        },
+        {
+          "target": [
+            {
+              "code": "given",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "given"
+        },
+        {
+          "target": [
+            {
+              "code": "prefix",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "prefix"
+        },
+        {
+          "target": [
+            {
+              "code": "suffix",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "suffix"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName",
+      "target": "HumanNameEU"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
+}

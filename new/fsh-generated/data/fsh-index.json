@@ -1,0 +1,242 @@
+[
+  {
+    "outputFile": "ConceptMap-EHDSAddressMap.json",
+    "fshName": "EHDSAddressMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSAddress.fsh",
+    "startLine": 5,
+    "endLine": 73
+  },
+  {
+    "outputFile": "ConceptMap-EHDSAllergyIntoleranceMap.json",
+    "fshName": "EHDSAllergyIntoleranceMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSAllergyIntolerance.fsh",
+    "startLine": 5,
+    "endLine": 106
+  },
+  {
+    "outputFile": "ConceptMap-EHDSAttachmentMap.json",
+    "fshName": "EHDSAttachmentMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSAttachment.fsh",
+    "startLine": 5,
+    "endLine": 77
+  },
+  {
+    "outputFile": "ConceptMap-EHDSCarePlanMap.json",
+    "fshName": "EHDSCarePlanMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSCarePlan.fsh",
+    "startLine": 5,
+    "endLine": 87
+  },
+  {
+    "outputFile": "ConceptMap-EHDSConditionMap.json",
+    "fshName": "EHDSConditionMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSCondition.fsh",
+    "startLine": 5,
+    "endLine": 120
+  },
+  {
+    "outputFile": "ConceptMap-EHDSCoverageMap.json",
+    "fshName": "EHDSCoverageMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSCoverage.fsh",
+    "startLine": 5,
+    "endLine": 50
+  },
+  {
+    "outputFile": "ConceptMap-EHDSDeviceMap.json",
+    "fshName": "EHDSDeviceMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSDevice.fsh",
+    "startLine": 5,
+    "endLine": 71
+  },
+  {
+    "outputFile": "ConceptMap-EHDSEncounterMap.json",
+    "fshName": "EHDSEncounterMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSEncounter.fsh",
+    "startLine": 5,
+    "endLine": 146
+  },
+  {
+    "outputFile": "ConceptMap-EHDSEndpointMap.json",
+    "fshName": "EHDSEndpointMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSEndpoint.fsh",
+    "startLine": 5,
+    "endLine": 66
+  },
+  {
+    "outputFile": "ConceptMap-EHDSEpisodeOfCareMap.json",
+    "fshName": "EHDSEpisodeOfCareMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSEpisodeOfCare.fsh",
+    "startLine": 5,
+    "endLine": 56
+  },
+  {
+    "outputFile": "ConceptMap-EHDSHealthProfessionalMap.json",
+    "fshName": "EHDSHealthProfessionalMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSHealthProfessional.fsh",
+    "startLine": 5,
+    "endLine": 54
+  },
+  {
+    "outputFile": "ConceptMap-EHDSHumanNameMap.json",
+    "fshName": "EHDSHumanNameMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSHumanName.fsh",
+    "startLine": 5,
+    "endLine": 53
+  },
+  {
+    "outputFile": "ConceptMap-EHDSImagingReportBodyMap.json",
+    "fshName": "EHDSImagingReportBodyMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingReportBody.fsh",
+    "startLine": 5,
+    "endLine": 416
+  },
+  {
+    "outputFile": "ConceptMap-EHDSImagingReportHeaderMap.json",
+    "fshName": "EHDSImagingReportHeaderMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingReportHeader.fsh",
+    "startLine": 5,
+    "endLine": 265
+  },
+  {
+    "outputFile": "ConceptMap-EHDSImagingReportMap.json",
+    "fshName": "EHDSImagingReportMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingReport.fsh",
+    "startLine": 5,
+    "endLine": 86
+  },
+  {
+    "outputFile": "ConceptMap-EHDSImagingStudyMap.json",
+    "fshName": "EHDSImagingStudyMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingStudy.fsh",
+    "startLine": 5,
+    "endLine": 238
+  },
+  {
+    "outputFile": "ConceptMap-EHDSLocationMap.json",
+    "fshName": "EHDSLocationMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSLocation.fsh",
+    "startLine": 5,
+    "endLine": 67
+  },
+  {
+    "outputFile": "ConceptMap-EHDSMediaMap.json",
+    "fshName": "EHDSMediaMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSMedia.fsh",
+    "startLine": 5,
+    "endLine": 85
+  },
+  {
+    "outputFile": "ConceptMap-EHDSMedicationAdministrationMap.json",
+    "fshName": "EHDSMedicationAdministrationMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSMedicationAdministration.fsh",
+    "startLine": 5,
+    "endLine": 97
+  },
+  {
+    "outputFile": "ConceptMap-EHDSMedicationMap.json",
+    "fshName": "EHDSMedicationMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSMedication.fsh",
+    "startLine": 5,
+    "endLine": 18
+  },
+  {
+    "outputFile": "ConceptMap-EHDSObservationMap.json",
+    "fshName": "EHDSObservationMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSObservation.fsh",
+    "startLine": 5,
+    "endLine": 279
+  },
+  {
+    "outputFile": "ConceptMap-EHDSOrganizationMap.json",
+    "fshName": "EHDSOrganizationMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSOrganization.fsh",
+    "startLine": 5,
+    "endLine": 46
+  },
+  {
+    "outputFile": "ConceptMap-EHDSPatientMap.json",
+    "fshName": "EHDSPatientMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSPatient.fsh",
+    "startLine": 5,
+    "endLine": 64
+  },
+  {
+    "outputFile": "ConceptMap-EHDSProcedureMap.json",
+    "fshName": "EHDSProcedureMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSProcedure.fsh",
+    "startLine": 5,
+    "endLine": 90
+  },
+  {
+    "outputFile": "ConceptMap-EHDSRelatedPersonMap.json",
+    "fshName": "EHDSRelatedPersonMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSRelatedPerson.fsh",
+    "startLine": 5,
+    "endLine": 41
+  },
+  {
+    "outputFile": "ConceptMap-EHDSReportHeaderMap.json",
+    "fshName": "EHDSReportHeaderMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSReportHeader.fsh",
+    "startLine": 5,
+    "endLine": 26
+  },
+  {
+    "outputFile": "ConceptMap-EHDSServiceRequestMap.json",
+    "fshName": "EHDSServiceRequestMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSServiceRequest.fsh",
+    "startLine": 5,
+    "endLine": 89
+  },
+  {
+    "outputFile": "ConceptMap-EHDSSpecimenMap.json",
+    "fshName": "EHDSSpecimenMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSSpecimen.fsh",
+    "startLine": 5,
+    "endLine": 100
+  },
+  {
+    "outputFile": "ConceptMap-EHDSSubstanceMap.json",
+    "fshName": "EHDSSubstanceMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSSubstance.fsh",
+    "startLine": 5,
+    "endLine": 56
+  },
+  {
+    "outputFile": "ConceptMap-EHDSTelecomMap.json",
+    "fshName": "EHDSTelecomMap",
+    "fshType": "Instance",
+    "fshFile": "xtehr-model-maps/ConceptMap_EHDSTelecom.fsh",
+    "startLine": 5,
+    "endLine": 31
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSAttachmentMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSAttachmentMap",
+  "title": "EHDSAttachment Mapping",
+  "description": "Map for EHDSAttachment",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "contentType",
+              "comment": "FHIR requires binding.",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "contentType"
+        },
+        {
+          "target": [
+            {
+              "code": "language",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "language"
+        },
+        {
+          "target": [
+            {
+              "code": "data",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "data"
+        },
+        {
+          "target": [
+            {
+              "code": "url",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "url"
+        },
+        {
+          "target": [
+            {
+              "code": "size",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "size"
+        },
+        {
+          "target": [
+            {
+              "code": "hash",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "hash"
+        },
+        {
+          "target": [
+            {
+              "code": "title",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "title"
+        },
+        {
+          "target": [
+            {
+              "code": "creation",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "creationDate"
+        },
+        {
+          "target": [
+            {
+              "code": "height",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "height"
+        },
+        {
+          "target": [
+            {
+              "code": "width",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "width"
+        },
+        {
+          "target": [
+            {
+              "code": "frames",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "frames"
+        },
+        {
+          "target": [
+            {
+              "code": "duration",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "duration"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment",
+      "target": "Attachment"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"
+}

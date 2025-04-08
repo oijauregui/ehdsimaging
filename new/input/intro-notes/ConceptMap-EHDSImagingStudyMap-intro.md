@@ -1,0 +1,122 @@
+{% include variable-definitions.md %}
+
+The figure below presents the {{XtEhrImaging}} DataSet representation and the FHIR profiles it maps to. For each FHIR profile the impacted fields are listed.
+
+```mermaid
+classDiagram
+direction LR
+class EHDSImagingStudy {
+  <<XtEHR dataset>>
+  identifier
+  modality
+  subject
+  encounter
+  started
+  basedOn
+  numberOfSeries
+  numberOfInstances
+  description
+  studyCustodian
+  studyEndpoint
+  series
+  series.seriesUid
+  series.number
+  series.acquisitionModality
+  series.description
+  series.numberOfInstances
+  series.seriesEndpoint
+  series.bodySite
+  series.laterality
+  series.specimen
+  series.started
+  series.instancesInTheSeries
+  series.instancesInTheSeries.instanceTitle
+  series.instancesInTheSeries.instanceUid
+  series.instancesInTheSeries.sopClass
+  series.instancesInTheSeries.instanceNumber
+  series.instancesInTheSeries.radiationDoseInformation
+  series.instancesInTheSeries.radiationDoseInformation.kap
+  series.instancesInTheSeries.radiationDoseInformation.totalKerma
+  series.instancesInTheSeries.radiationDoseInformation.endTubeKerma
+  series.instancesInTheSeries.radiationDoseInformation.breastThickness
+  series.instancesInTheSeries.radiationDoseInformation.abd
+  phase
+  phase.phaseCode
+  phase.radiationDose
+}
+link EHDSImagingStudy "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSImagingStudy.html"
+class ImImagingStudy{
+  <<FHIR>>
+  identifier[studyInstanceUid]
+  modality
+  subject
+  encounter
+  started
+  basedOn
+  numberOfSeries
+  numberOfInstances
+  description
+  series.performer[custodian]
+  endpoint
+  series
+  series.uid
+  series.number
+  series.modality
+  series.description
+  series.numberOfInstances
+  series.endpoint
+  series.bodySite
+  series.laterality
+  series.specimen
+  section[study].text
+  series.started
+  series.instance
+  series.instance.extension[instance-description]
+  series.instance.uid
+  series.instance.sopClass
+  series.instance.number
+}
+
+class ImComposition{
+  <<FHIR>>
+  section[study].text
+}
+
+class ImRadiationDoseObservation{
+  <<FHIR>>
+  component.value
+}
+
+class patient-eu {
+  <<FHIR>>
+}
+class Encounter {
+  <<FHIR>>
+}
+class ServiceRequest {
+  <<FHIR>>
+}
+class OrganizationEu {
+  <<FHIR>>
+}
+class Endpoint {
+  <<FHIR>>
+}
+class BodyStructureEu {
+  <<FHIR>>
+}
+class SpecimenEu {
+  <<FHIR>>
+}
+EHDSImagingStudy --> ImImagingStudy
+ImImagingStudy --> patient-eu : subject
+ImImagingStudy --> Encounter : encounter
+ImImagingStudy --> ServiceRequest : basedOn
+ImImagingStudy --> OrganizationEu : series.performer[custodian]
+ImImagingStudy --> Endpoint : endpoint
+ImImagingStudy --> BodyStructureEu : series.bodySite
+ImImagingStudy --> SpecimenEu : series.specimen
+EHDSImagingStudy --> ImComposition
+EHDSImagingStudy --> ImRadiationDoseObservation
+```
+

@@ -1,0 +1,36 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSReportHeaderMap",
+  "url": "http://hl7.eu/fhir/imaging/ConceptMap/EHDSReportHeaderMap",
+  "title": "EHDSReportHeader Mapping",
+  "description": "Map for EHDSReportHeader",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "presentedForm",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.presentedForm"
+        },
+        {
+          "target": [
+            {
+              "code": "media",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.media"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader",
+      "target": "ImDiagnosticReport"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader"
+}

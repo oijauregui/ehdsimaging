@@ -1,0 +1,58 @@
+{% include variable-definitions.md %}
+
+The figure below presents the {{XtEhrImaging}} DataSet representation and the FHIR profiles it maps to. For each FHIR profile the impacted fields are listed.
+
+```mermaid
+classDiagram
+direction LR
+class EHDSMedicationAdministration {
+  <<XtEHR dataset>>
+  identifier
+  status
+  statusReason
+  medication
+  occurance[x]
+  reason
+  note
+  dosage
+  dosage.dosageDescription
+  dosage.site
+  dosage.route
+  dosage.method
+  dosage.dose
+  dosage.rate[x]
+  sibject
+}
+link EHDSMedicationAdministration "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSMedicationAdministration.html"
+class MedicationAdministration{
+  <<FHIR>>
+  identifier
+  status
+  statusReason
+  medication
+  occuranceDateTime
+  occurancePeriod
+  reason
+  note
+  dosage
+  dosage.text
+  dosage.site
+  dosage.route
+  dosage.method
+  dosage,dose
+  dosage.rateRatio
+  dosage.rateQuantity
+  subject
+}
+
+class Medication {
+  <<FHIR>>
+}
+class PatientEu {
+  <<FHIR>>
+}
+EHDSMedicationAdministration --> MedicationAdministration
+MedicationAdministration --> Medication : medication
+MedicationAdministration --> PatientEu : subject
+```
+
