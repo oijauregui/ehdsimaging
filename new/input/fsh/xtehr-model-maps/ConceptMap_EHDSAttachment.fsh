@@ -10,10 +10,11 @@ Description: "Map for EHDSAttachment"
 * status = #draft
 * experimental = true
 * title = "EHDSAttachment Mapping"
+* name = "EHDSAttachmentMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"
-  * target = "Attachment"
+  * target = "$AttachmentUrl"
   * element[+]
     * code = #contentType
     * target[+]

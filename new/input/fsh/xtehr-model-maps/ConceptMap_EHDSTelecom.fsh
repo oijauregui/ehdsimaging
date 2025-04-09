@@ -10,10 +10,11 @@ Description: "Map for EHDSTelecom"
 * status = #draft
 * experimental = true
 * title = "EHDSTelecom Mapping"
+* name = "EHDSTelecomMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
-  * target = "ContactPoint"
+  * target = "$ContactPointUrl"
   * element[+]
     * code = #use
     * target[+]

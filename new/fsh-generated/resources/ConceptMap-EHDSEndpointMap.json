@@ -99,10 +99,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint",
-      "target": "Endpoint"
+      "target": "$EndpointUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSEndpointMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"
 }

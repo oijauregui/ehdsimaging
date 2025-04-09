@@ -39,10 +39,11 @@ class EHDSImagingReportHeader {
 link EHDSImagingReportHeader "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSImagingReportHeader.html"
 class ImComposition{
   <<FHIR>>
-  extension[diagnosticreport-reference]
+  extension[diagnosticreport-reference ]
   subject
   extension[basedOn]
   extension[informationRecipient]
+  author
   author[author]
   author[authoringDevice]
   date
@@ -143,10 +144,10 @@ class ImOrder {
   <<FHIR>>
 }
 EHDSImagingReportHeader --> ImComposition
-ImComposition --> ImDiagnosticReport : extension[diagnosticreport-reference]
+ImComposition --> ImDiagnosticReport : extension[diagnosticreport-reference ]
 ImComposition --> EuPatient : subject
 ImComposition --> ImServiceRequest : extension[basedOn]
-ImComposition --> EuPractitionerRole : 
+ImComposition --> EuPractitionerRole : author
 ImComposition --> EuDevice : author[author]
 ImComposition --> EuPractitionerRole : author[authoringDevice]
 ImComposition --> EuPractitionerRole : attester[resultValidator].party

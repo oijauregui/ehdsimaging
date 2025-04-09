@@ -81,10 +81,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance",
-      "target": "Substance"
+      "target": "$SubstanceUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSSubstanceMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance"
 }

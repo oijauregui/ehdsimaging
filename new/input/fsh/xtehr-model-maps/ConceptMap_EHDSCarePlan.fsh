@@ -10,10 +10,11 @@ Description: "Map for EHDSCarePlan"
 * status = #draft
 * experimental = true
 * title = "EHDSCarePlan Mapping"
+* name = "EHDSCarePlanMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"
-  * target = "CareplanEu"
+  * target = "$EuCarePlanUrl"
   * element[+]
     * code = #identifier
     * target[+]

@@ -118,10 +118,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment",
-      "target": "Attachment"
+      "target": "$AttachmentUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSAttachmentMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"
 }

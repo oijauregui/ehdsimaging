@@ -426,7 +426,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
-      "target": "ObservationEu"
+      "target": "$EuObservationUrl"
     },
     {
       "element": [
@@ -441,10 +441,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
-      "target": "ServiceRequest"
+      "target": "$ServiceRequestUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSObservationMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
 }

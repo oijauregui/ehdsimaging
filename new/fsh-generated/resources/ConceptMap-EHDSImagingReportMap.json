@@ -19,10 +19,30 @@
         {
           "code": "imagingReportStructuredBody",
           "noMap": true
+        },
+        {
+          "target": [
+            {
+              "code": "section[comparison].entry[study]",
+              "comment": "Comparison studie",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[comparison].entry[study]",
+              "comment": "key images",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[comparison].entry[study]",
+              "comment": "other data",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "imagingReportAttachments[x]"
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
-      "target": "Composition"
+      "target": "$ImCompositionUrl"
     },
     {
       "element": [
@@ -33,13 +53,7 @@
         {
           "code": "imagingReportStructuredBody",
           "noMap": true
-        }
-      ],
-      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
-      "target": "DiagnosticReport"
-    },
-    {
-      "element": [
+        },
         {
           "target": [
             {
@@ -60,33 +74,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
-      "target": "ImDiagnosticReport"
-    },
-    {
-      "element": [
-        {
-          "target": [
-            {
-              "code": "section[comparison].entry[study]",
-              "comment": "Comparison studie",
-              "relationship": "related-to"
-            },
-            {
-              "code": "section[comparison].entry[study]",
-              "comment": "key images",
-              "relationship": "related-to"
-            },
-            {
-              "code": "section[comparison].entry[study]",
-              "comment": "other data",
-              "relationship": "related-to"
-            }
-          ],
-          "code": "imagingReportAttachments[x]"
-        }
-      ],
-      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
-      "target": "ImComposition"
+      "target": "$ImDiagnosticReportUrl"
     },
     {
       "element": [
@@ -112,7 +100,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
-      "target": "ImFinding"
+      "target": "$ImFindingUrl"
     },
     {
       "element": [
@@ -122,10 +110,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
-      "target": "ImImagingStudy"
+      "target": "$ImImagingStudyUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSImagingReportMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
 }

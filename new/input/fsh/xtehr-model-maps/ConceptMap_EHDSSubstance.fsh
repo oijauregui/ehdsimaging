@@ -10,10 +10,11 @@ Description: "Map for EHDSSubstance"
 * status = #draft
 * experimental = true
 * title = "EHDSSubstance Mapping"
+* name = "EHDSSubstanceMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance"
-  * target = "Substance"
+  * target = "$SubstanceUrl"
   * element[+]
     * code = #identifier
     * target[+]

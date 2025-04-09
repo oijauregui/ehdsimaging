@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BodyStructureEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/BodyStructureEu",
+  "name": "BodyStructureEu",
+  "title": "EU BodyStructure",
+  "status": "draft",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "BodyStructure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/BodyStructure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "BodyStructure.patient",
+        "path": "BodyStructure.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/patient-eu"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -10,10 +10,11 @@ Description: "Map for EHDSCondition"
 * status = #draft
 * experimental = true
 * title = "EHDSCondition Mapping"
+* name = "EHDSConditionMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"
-  * target = "EuCondition"
+  * target = "$EuConditionUrl"
   * element[+]
     * code = #identifier
     * target[+]

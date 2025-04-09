@@ -166,10 +166,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance",
-      "target": "AllergyIntolerance"
+      "target": "$AllergyIntoleranceUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSAllergyIntoleranceMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"
 }

@@ -10,21 +10,8 @@
 {% endcomment %} -->
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="index.html">Summary</a>
-      </li>
-    </ul>
-  </li>
   <li>
-    Volume 1
-  </li>
-  <li>
-    Volume 2
+    <a href="index.html">Home</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3
@@ -32,13 +19,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="xtehr.html">xtehr</a>
+        <a href="xtehr.html">XtEHR</a>
       </li>
       <li>
-        <a href="xtehr-logical-model.html">model</a>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
       </li>
       <li>
-        <a href="xtehr-mapping.html">mapping</a>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+      <li>
+        <a href="imaging-manifest.html">manifest</a>
       </li>
     </ul>
   </li>

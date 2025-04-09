@@ -81,10 +81,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare",
-      "target": "EpisodeOfCare"
+      "target": "$EpisodeOfCareUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSEpisodeOfCareMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"
 }

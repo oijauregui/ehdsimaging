@@ -152,10 +152,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration",
-      "target": "MedicationAdministration"
+      "target": "$MedicationAdministrationUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSMedicationAdministrationMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"
 }

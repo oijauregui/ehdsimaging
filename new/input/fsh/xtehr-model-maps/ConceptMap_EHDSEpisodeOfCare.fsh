@@ -10,10 +10,11 @@ Description: "Map for EHDSEpisodeOfCare"
 * status = #draft
 * experimental = true
 * title = "EHDSEpisodeOfCare Mapping"
+* name = "EHDSEpisodeOfCareMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"
-  * target = "EpisodeOfCare"
+  * target = "$EpisodeOfCareUrl"
   * element[+]
     * code = #identifier
     * target[+]

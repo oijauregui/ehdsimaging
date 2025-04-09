@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AllergyIntoleranceEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/AllergyIntoleranceEu",
+  "name": "AllergyIntoleranceEu",
+  "title": "EU AllergyIntolerance",
+  "status": "draft",
+  "description": "A allergyintolerance profile for the EU.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AllergyIntolerance.extension",
+        "path": "AllergyIntolerance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.extension:abatement",
+        "path": "AllergyIntolerance.extension",
+        "sliceName": "abatement",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.onset[x].extension:periodsOfLife",
+        "path": "AllergyIntolerance.onset[x].extension",
+        "sliceName": "periodsOfLife",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.eu/fhir/imaging/StructureDefinition/periods-of-life-extension"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

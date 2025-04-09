@@ -14,21 +14,16 @@ class EHDSImagingReport {
   dicomStudyMetadata
 }
 link EHDSImagingReport "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSImagingReport.html"
-class Composition{
+class ImComposition{
   <<FHIR>>
   section
+  section[comparison].entry[study]
 }
 
-class DiagnosticReport
 class ImDiagnosticReport{
   <<FHIR>>
   presentedForm
   media
-}
-
-class ImComposition{
-  <<FHIR>>
-  section[comparison].entry[study]
 }
 
 class ImFinding{
@@ -37,27 +32,25 @@ class ImFinding{
 }
 
 class ImImagingStudy
-class EuDocumentReference {
-  <<FHIR>>
-}
 class ImImagingStudy {
   <<FHIR>>
 }
 class ImImagingSelection {
   <<FHIR>>
 }
+class EuDocumentReference {
+  <<FHIR>>
+}
 class DocumentReference {
   <<FHIR>>
 }
-EHDSImagingReport --> Composition
-EHDSImagingReport --> DiagnosticReport
-EHDSImagingReport --> ImDiagnosticReport
-ImDiagnosticReport --> EuDocumentReference : media
 EHDSImagingReport --> ImComposition
 ImComposition --> ImImagingStudy : section[comparison].entry[study]
 ImComposition --> ImImagingSelection : section[comparison].entry[study]
 ImComposition --> EuDocumentReference : section[comparison].entry[study]
 ImComposition --> DocumentReference : section[comparison].entry[study]
+EHDSImagingReport --> ImDiagnosticReport
+ImDiagnosticReport --> EuDocumentReference : media
 EHDSImagingReport --> ImFinding
 ImFinding --> ImImagingStudy : derivedFrom
 ImFinding --> ImImagingSelection : derivedFrom

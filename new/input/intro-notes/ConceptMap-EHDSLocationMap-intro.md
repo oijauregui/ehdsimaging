@@ -19,7 +19,7 @@ class EHDSLocation {
   partOf
 }
 link EHDSLocation "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSLocation.html"
-class LocationEu{
+class EuLocation{
   <<FHIR>>
   identifier
   name
@@ -39,8 +39,8 @@ class organization-eu {
 class Location {
   <<FHIR>>
 }
-EHDSLocation --> LocationEu
-LocationEu --> organization-eu : managingOrganization
-LocationEu --> Location : partOf
+EHDSLocation --> EuLocation
+EuLocation --> organization-eu : managingOrganization
+EuLocation --> Location : partOf
 ```
 

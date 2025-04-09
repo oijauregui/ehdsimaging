@@ -116,7 +116,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
-      "target": "DocumentReference"
+      "target": "$DocumentReferenceUrl"
     },
     {
       "element": [
@@ -131,10 +131,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
-      "target": "Device"
+      "target": "$DeviceUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSMediaMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
 }

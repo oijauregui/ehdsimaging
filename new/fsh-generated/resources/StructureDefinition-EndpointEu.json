@@ -1,0 +1,41 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "EndpointEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/EndpointEu",
+  "name": "EndpointEu",
+  "title": "EU Endpoint",
+  "status": "draft",
+  "description": "The FHIR endpoint resource with EU specific references.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Endpoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Endpoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Endpoint.managingOrganization",
+        "path": "Endpoint.managingOrganization",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/organization-eu"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

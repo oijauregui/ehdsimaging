@@ -10,10 +10,11 @@ Description: "Map for EHDSReportHeader"
 * status = #draft
 * experimental = true
 * title = "EHDSReportHeader Mapping"
+* name = "EHDSReportHeaderMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader"
-  * target = "ImDiagnosticReport"
+  * target = "$ImDiagnosticReportUrl"
   * element[+]
     * code = #documentMetadata.presentedForm
     * target[+]

@@ -16,7 +16,7 @@ class EHDSHealthProfessional {
   specialty
 }
 link EHDSHealthProfessional "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSHealthProfessional.html"
-class PractitionerEU{
+class EuPractitioner{
   <<FHIR>>
   identifier
   name
@@ -24,7 +24,7 @@ class PractitionerEU{
   telecom
 }
 
-class PractitionerRoleEU{
+class EuPractitionerRole{
   <<FHIR>>
   code
   organization
@@ -34,8 +34,8 @@ class PractitionerRoleEU{
 class organization-eu {
   <<FHIR>>
 }
-EHDSHealthProfessional --> PractitionerEU
-EHDSHealthProfessional --> PractitionerRoleEU
-PractitionerRoleEU --> organization-eu : organization
+EHDSHealthProfessional --> EuPractitioner
+EHDSHealthProfessional --> EuPractitionerRole
+EuPractitionerRole --> organization-eu : organization
 ```
 

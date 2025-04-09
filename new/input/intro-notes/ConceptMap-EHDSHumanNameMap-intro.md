@@ -15,7 +15,7 @@ class EHDSHumanName {
   suffix
 }
 link EHDSHumanName "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSHumanName.html"
-class HumanNameEU{
+class EuHumanName{
   <<FHIR>>
   use
   text
@@ -27,6 +27,6 @@ class HumanNameEU{
   suffix
 }
 
-EHDSHumanName --> HumanNameEU
+EHDSHumanName --> EuHumanName
 ```
 

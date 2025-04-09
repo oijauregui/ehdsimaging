@@ -63,10 +63,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization",
-      "target": "OrganizationEU"
+      "target": "$EuOrganizationUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSOrganizationMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"
 }

@@ -10,10 +10,11 @@ Description: "Map for EHDSProcedure"
 * status = #draft
 * experimental = true
 * title = "EHDSProcedure Mapping"
+* name = "EHDSProcedureMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure"
-  * target = "Procedure"
+  * target = "$ProcedureUrl"
   * element[+]
     * code = #identifier
     * target[+]

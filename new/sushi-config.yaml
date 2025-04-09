@@ -54,7 +54,9 @@ pages:
       title: XtEHR Logical Model
     xtehr-mapping.md:
       title: Mapping to XtEHR Logical Model
-
+  profiles.md:
+    imaging-manifest.md:
+      title: Imaging Manifest
   # actors-and-transactions.md:
   #   title: Actors and Transactions
   #   system-actors.md:
@@ -116,15 +118,15 @@ parameters:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home:
-    Summary: index.html
-  Volume 1:
-  Volume 2:
+  Home: index.html
+  # Volume 1:
+  # Volume 2:
   Volume 3:
-    xtehr: xtehr.html
-    model: xtehr-logical-model.html
-    mapping: xtehr-mapping.html
-  
+    XtEHR: xtehr.html
+    XtEHR-model: xtehr-logical-model.html
+    XtEHR-mapping: xtehr-mapping.html
+    manifest: imaging-manifest.html
+
   #   Changes: changes.html
   #   Dependencies: index.html#dependencies
   #   References: index.html#references

@@ -10,10 +10,11 @@ Description: "Map for EHDSSpecimen"
 * status = #draft
 * experimental = true
 * title = "EHDSSpecimen Mapping"
+* name = "EHDSSpecimenMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"
-  * target = "SpecimenEu"
+  * target = "$EuSpecimenUrl"
   * element[+]
     * code = #identifier
     * target[+]
@@ -84,7 +85,7 @@ Description: "Map for EHDSSpecimen"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"
-  * target = "PatientAnimalEu"
+  * target = "$EuPatientAnimalUrl"
   * element[+]
     * code = #typeOfSpecies
     * target[+]
@@ -92,7 +93,7 @@ Description: "Map for EHDSSpecimen"
       * relationship = #equivalent
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"
-  * target = "BodyStructureEu"
+  * target = "$EuBodyStructureUrl"
   * element[+]
     * code = #morphology
     * target[+]

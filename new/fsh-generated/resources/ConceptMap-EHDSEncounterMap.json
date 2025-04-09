@@ -243,10 +243,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter",
-      "target": "EncounterEu"
+      "target": "$EuEncounterUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSEncounterMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"
 }

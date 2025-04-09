@@ -35,7 +35,7 @@ class EHDSEncounter {
   location.organizationPart
 }
 link EHDSEncounter "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSEncounter.html"
-class EncounterEu{
+class EuEncounter{
   <<FHIR>>
   identifier
   priority
@@ -83,12 +83,12 @@ class OrganizationEu {
 class Appointment {
   <<FHIR>>
 }
-EHDSEncounter --> EncounterEu
-EncounterEu --> PatientEu : subject
-EncounterEu --> EpisodeOfCare : episodeOfCare
-EncounterEu --> ServiceRequest : basedOn
-EncounterEu --> Encounter : partOf
-EncounterEu --> OrganizationEu : serviceProvider
-EncounterEu --> Appointment : appointment
+EHDSEncounter --> EuEncounter
+EuEncounter --> PatientEu : subject
+EuEncounter --> EpisodeOfCare : episodeOfCare
+EuEncounter --> ServiceRequest : basedOn
+EuEncounter --> Encounter : partOf
+EuEncounter --> OrganizationEu : serviceProvider
+EuEncounter --> Appointment : appointment
 ```
 

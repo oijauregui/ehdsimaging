@@ -45,7 +45,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional",
-      "target": "PractitionerEU"
+      "target": "$EuPractitionerUrl"
     },
     {
       "element": [
@@ -78,10 +78,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional",
-      "target": "PractitionerRoleEU"
+      "target": "$EuPractitionerRoleUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSHealthProfessionalMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
 }

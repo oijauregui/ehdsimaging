@@ -10,10 +10,11 @@ Description: "Map for EHDSHealthProfessional"
 * status = #draft
 * experimental = true
 * title = "EHDSHealthProfessional Mapping"
+* name = "EHDSHealthProfessionalMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
-  * target = "PractitionerEU"
+  * target = "$EuPractitionerUrl"
   * element[+]
     * code = #identifier
     * target[+]
@@ -36,7 +37,7 @@ Description: "Map for EHDSHealthProfessional"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
-  * target = "PractitionerRoleEU"
+  * target = "$EuPractitionerRoleUrl"
   * element[+]
     * code = #role
     * target[+]

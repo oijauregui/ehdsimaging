@@ -185,10 +185,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition",
-      "target": "EuCondition"
+      "target": "$EuConditionUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSConditionMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"
 }

@@ -10,10 +10,11 @@ Description: "Map for EHDSObservation"
 * status = #draft
 * experimental = true
 * title = "EHDSObservation Mapping"
+* name = "EHDSObservationMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
-  * target = "ObservationEu"
+  * target = "$EuObservationUrl"
   * element[+]
     * code = #observationDate[x]
     * target[+]
@@ -271,7 +272,7 @@ Description: "Map for EHDSObservation"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
-  * target = "ServiceRequest"
+  * target = "$ServiceRequestUrl"
   * element[+]
     * code = #order
     * target[+]

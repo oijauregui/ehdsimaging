@@ -1,0 +1,60 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "periods-of-life-extension",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+      "valueCode": "can-bind"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/periods-of-life-extension",
+  "name": "PeriodsOfLifeExtension",
+  "title": "Periods of Life Extension",
+  "status": "draft",
+  "description": "Allows to indicate a time period in a person's life as a reference to a coded value for that life period.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "AllergyIntolerance.onset[x]",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Periods of Life Extension",
+        "definition": "Allows to indicate a time period in a person's life as a reference to a coded value for that life period."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.eu/fhir/imaging/StructureDefinition/periods-of-life-extension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.eu/fhir/imaging/ValueSet/periods-of-life-value-set"
+        }
+      }
+    ]
+  }
+}

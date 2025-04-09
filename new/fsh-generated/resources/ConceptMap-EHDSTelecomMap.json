@@ -36,10 +36,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom",
-      "target": "ContactPoint"
+      "target": "$ContactPointUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSTelecomMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
 }

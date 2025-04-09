@@ -10,10 +10,11 @@ Description: "Map for EHDSEndpoint"
 * status = #draft
 * experimental = true
 * title = "EHDSEndpoint Mapping"
+* name = "EHDSEndpointMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"
-  * target = "Endpoint"
+  * target = "$EndpointUrl"
   * element[+]
     * code = #identifier
     * target[+]

@@ -106,10 +106,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress",
-      "target": "AddressEu"
+      "target": "$EuAddressUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSAddressMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
 }

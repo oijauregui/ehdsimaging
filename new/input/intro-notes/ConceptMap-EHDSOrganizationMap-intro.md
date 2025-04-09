@@ -15,7 +15,7 @@ class EHDSOrganization {
   partOf
 }
 link EHDSOrganization "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSOrganization.html"
-class OrganizationEU{
+class EuOrganization{
   <<FHIR>>
   identifier
   type
@@ -28,7 +28,7 @@ class OrganizationEU{
 class organization-eu {
   <<FHIR>>
 }
-EHDSOrganization --> OrganizationEU
-OrganizationEU --> organization-eu : partOf
+EHDSOrganization --> EuOrganization
+EuOrganization --> organization-eu : partOf
 ```
 

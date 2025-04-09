@@ -10,10 +10,11 @@ Description: "Map for EHDSCoverage"
 * status = #draft
 * experimental = true
 * title = "EHDSCoverage Mapping"
+* name = "EHDSCoverageMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"
-  * target = "Coverage"
+  * target = "$CoverageUrl"
   * element[+]
     * code = #identifier
     * target[+]

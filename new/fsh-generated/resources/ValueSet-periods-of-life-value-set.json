@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "PeriodsOfLifeValueSet",
+  "id": "periods-of-life-value-set",
+  "title": "Periods of Life Extension",
+  "description": "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+  "url": "http://hl7.eu/fhir/imaging/ValueSet/periods-of-life-value-set",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "282032007"
+          }
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "282032007"
+          }
+        ]
+      }
+    ]
+  }
+}
