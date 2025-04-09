@@ -10,10 +10,11 @@ Description: "Map for EHDSMedia"
 * status = #draft
 * experimental = true
 * title = "EHDSMedia Mapping"
+* name = "EHDSMediaMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
-  * target = "DocumentReference"
+  * target = "$DocumentReferenceUrl"
   * element[+]
     * code = #identifier
     * target[+]
@@ -77,7 +78,7 @@ Description: "Map for EHDSMedia"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
-  * target = "Device"
+  * target = "$DeviceUrl"
   * element[+]
     * code = #deviceName
     * target[+]

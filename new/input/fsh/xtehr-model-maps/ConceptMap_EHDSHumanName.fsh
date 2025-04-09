@@ -10,10 +10,11 @@ Description: "Map for EHDSHumanName"
 * status = #draft
 * experimental = true
 * title = "EHDSHumanName Mapping"
+* name = "EHDSHumanNameMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
-  * target = "HumanNameEU"
+  * target = "$EuHumanNameUrl"
   * element[+]
     * code = #use
     * target[+]

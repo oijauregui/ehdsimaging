@@ -45,7 +45,7 @@ class EHDSObservation {
   status
 }
 link EHDSObservation "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSObservation.html"
-class ObservationEu{
+class EuObservation{
   <<FHIR>>
   effectiveDateTime
   effectivePeriod
@@ -127,13 +127,13 @@ class Resource {
 class HealtcareProffesionalEu {
   <<FHIR>>
 }
-EHDSObservation --> ObservationEu
-ObservationEu --> EuDevice : device
-ObservationEu --> ServiceRequest : basedOn
-ObservationEu --> PractitionerRoleEU : performer
-ObservationEu --> ObervationEu : triggeredBy.observation
-ObservationEu --> ObervationEu : hasMember
-ObservationEu --> Resource : subject
+EHDSObservation --> EuObservation
+EuObservation --> EuDevice : device
+EuObservation --> ServiceRequest : basedOn
+EuObservation --> PractitionerRoleEU : performer
+EuObservation --> ObervationEu : triggeredBy.observation
+EuObservation --> ObervationEu : hasMember
+EuObservation --> Resource : subject
 EHDSObservation --> ServiceRequest
 ServiceRequest --> HealtcareProffesionalEu : requester
 ```

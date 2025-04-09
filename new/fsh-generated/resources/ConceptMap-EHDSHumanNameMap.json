@@ -72,10 +72,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName",
-      "target": "HumanNameEU"
+      "target": "$EuHumanNameUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSHumanNameMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
 }

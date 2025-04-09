@@ -10,10 +10,11 @@ Description: "Map for EHDSAddress"
 * status = #draft
 * experimental = true
 * title = "EHDSAddress Mapping"
+* name = "EHDSAddressMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
-  * target = "AddressEu"
+  * target = "$EuAddressUrl"
   * element[+]
     * code = #use
     * target[+]

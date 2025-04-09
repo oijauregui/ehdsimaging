@@ -1,0 +1,98 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SpecimenEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/SpecimenEu",
+  "name": "SpecimenEu",
+  "title": "Specimen: Laboratory",
+  "status": "draft",
+  "description": "This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Specimen",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Specimen",
+        "path": "Specimen",
+        "short": "Laboratory Specimen",
+        "definition": "Laboratory specimen"
+      },
+      {
+        "id": "Specimen.subject",
+        "path": "Specimen.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/patient-eu",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Substance",
+              "http://hl7.eu/fhir/imaging/StructureDefinition/LocationEu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Specimen.parent",
+        "path": "Specimen.parent",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging/StructureDefinition/SpecimenEu"
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Specimen.collection.collected[x]",
+        "path": "Specimen.collection.collected[x]",
+        "min": 1
+      },
+      {
+        "id": "Specimen.collection.bodySite",
+        "path": "Specimen.collection.bodySite",
+        "type": [
+          {
+            "code": "CodeableReference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging/StructureDefinition/BodyStructureEu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Specimen.container.location",
+        "path": "Specimen.container.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging/StructureDefinition/LocationEu"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

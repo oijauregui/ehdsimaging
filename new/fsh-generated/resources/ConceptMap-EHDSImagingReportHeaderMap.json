@@ -35,8 +35,13 @@
           "code": "intendedRecipient"
         },
         {
-          "code": "authorship",
-          "noMap": true
+          "target": [
+            {
+              "code": "author",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "authorship"
         },
         {
           "target": [
@@ -270,7 +275,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
-      "target": "ImComposition"
+      "target": "$ImCompositionUrl"
     },
     {
       "element": [
@@ -348,7 +353,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
-      "target": "ImDiagnosticReport"
+      "target": "$ImDiagnosticReportUrl"
     },
     {
       "element": [
@@ -363,7 +368,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
-      "target": "ImServiceRequest"
+      "target": "$ImServiceRequestUrl"
     },
     {
       "element": [
@@ -387,7 +392,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
-      "target": "ImProcedure"
+      "target": "$ImProcedureUrl"
     },
     {
       "element": [
@@ -424,7 +429,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
-      "target": "ImImagingStudy"
+      "target": "$ImImagingStudyUrl"
     },
     {
       "element": [
@@ -443,10 +448,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
-      "target": "ImOrder"
+      "target": "$ImOrderUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSImagingReportHeaderMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
 }

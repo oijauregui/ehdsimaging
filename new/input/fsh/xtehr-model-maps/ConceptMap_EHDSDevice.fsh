@@ -10,10 +10,11 @@ Description: "Map for EHDSDevice"
 * status = #draft
 * experimental = true
 * title = "EHDSDevice Mapping"
+* name = "EHDSDeviceMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"
-  * target = "Device"
+  * target = "$DeviceUrl"
   * element[+]
     * code = #identifier
     * target[+]

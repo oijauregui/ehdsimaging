@@ -4,6 +4,33 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology used in Endpoint resources in the EU Imaging IG."/>
+<artifact id="StructureDefinition/AllergyIntoleranceEu" key="StructureDefinition-AllergyIntoleranceEu" name="EU AllergyIntolerance"/>
+<artifact id="StructureDefinition/BodyStructureEu" key="StructureDefinition-BodyStructureEu" name="EU BodyStructure"/>
+<artifact id="StructureDefinition/CareplanEu" key="StructureDefinition-CareplanEu" name="EU CarePlan"/>
+<artifact id="StructureDefinition/CompositionEu" key="StructureDefinition-CompositionEu" name="EU Composition"/>
+<artifact id="StructureDefinition/ConditionEU" key="StructureDefinition-ConditionEU" name="EU Condition"/>
+<artifact id="StructureDefinition/EncounterEU" key="StructureDefinition-EncounterEU" name="EU Encounter"/>
+<artifact id="StructureDefinition/EndpointEu" key="StructureDefinition-EndpointEu" name="EU Endpoint"/>
+<artifact id="StructureDefinition/LocationEu" key="StructureDefinition-LocationEu" name="EU Location"/>
+<artifact id="StructureDefinition/EuMedication" key="StructureDefinition-EuMedication" name="EU Medication"/>
+<artifact id="StructureDefinition/ObservationEu" key="StructureDefinition-ObservationEu" name="EU Observation"/>
+<artifact id="StructureDefinition/ProcedureEu" key="StructureDefinition-ProcedureEu" name="EU Procedure"/>
+<artifact id="StructureDefinition/quantity-eu" key="StructureDefinition-quantity-eu" name="EU Quantity"/>
+<artifact id="StructureDefinition/range-eu" key="StructureDefinition-range-eu" name="EU Range"/>
+<artifact id="StructureDefinition/im-viewer-endpoint" key="StructureDefinition-im-viewer-endpoint" name="IM Image Viewer Endpoint"/>
+<artifact id="StructureDefinition/im-order" key="StructureDefinition-im-order" name="IM Imaging Order"/>
+<artifact id="StructureDefinition/im-patient" key="StructureDefinition-im-patient" name="IM Imaging Patient"/>
+<artifact id="StructureDefinition/im-procedure" key="StructureDefinition-im-procedure" name="IM Imaging Procedure"/>
+<artifact id="StructureDefinition/im-imagingstudy" key="StructureDefinition-im-imagingstudy" name="IM Imaging Study"/>
+<artifact id="StructureDefinition/im-imagingstudy-manifest" key="StructureDefinition-im-imagingstudy-manifest" name="IM ImagingStudy Manifest"/>
+<artifact id="StructureDefinition/im-wado-endpoint" key="StructureDefinition-im-wado-endpoint" name="IM WADO Endpoint"/>
+<artifact id="StructureDefinition/im-imagingdevice" key="StructureDefinition-im-imagingdevice" name="Im Imaging Device"/>
+<artifact id="StructureDefinition/im-accession-number-identifier" key="StructureDefinition-im-accession-number-identifier" name="Imaging Accession Number Identifier"/>
+<artifact id="ValueSet/im-imaging-device-type" key="ValueSet-im-imaging-device-type" name="Imaging Device Type"/>
+<artifact id="ValueSet/im-procedure-type" key="ValueSet-im-procedure-type" name="Imaging Procedure Type"/>
+<artifact id="ValueSet/im-imaging-study-performer-type" key="ValueSet-im-imaging-study-performer-type" name="Imaging Study Performer Type Value Set"/>
+<artifact id="StructureDefinition/instance-description" key="StructureDefinition-instance-description" name="Instance Description"/>
 <artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
 <artifact id="ConceptMap/EHDSAllergyIntoleranceMap" key="ConceptMap-EHDSAllergyIntoleranceMap" name="Map for EHDSAllergyIntolerance"/>
 <artifact id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
@@ -34,13 +61,19 @@
 <artifact id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
 <artifact id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
 <artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
+<artifact id="StructureDefinition/PatientAnimalEu" key="StructureDefinition-PatientAnimalEu" name="Patient: Animal"/>
+<artifact id="StructureDefinition/periods-of-life-extension" key="StructureDefinition-periods-of-life-extension" name="Periods of Life Extension"/>
+<artifact id="ValueSet/periods-of-life-value-set" key="ValueSet-periods-of-life-value-set" name="Periods of Life Extension"/>
+<artifact id="StructureDefinition/SpecimenEu" key="StructureDefinition-SpecimenEu" name="Specimen: Laboratory"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="adapting" name="Adapting Guidelines for Country use"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="index" name="Home"/>
+<page key="imaging-manifest" name="Imaging Manifest"/>
 <page key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
+<page key="profiles" name="Profiles"/>
 <page key="toc" name="Table of Contents"/>
 <page key="xtehr" name="XtEHR"/>
 <page key="xtehr-logical-model" name="XtEHR Logical Model"/>

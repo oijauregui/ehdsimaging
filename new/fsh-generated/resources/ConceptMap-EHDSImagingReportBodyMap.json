@@ -353,7 +353,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImComposition"
+      "target": "$ImCompositionUrl"
     },
     {
       "element": [
@@ -444,7 +444,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImOrder"
+      "target": "$ImOrderUrl"
     },
     {
       "element": [
@@ -459,7 +459,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "imOrder"
+      "target": "$imOrderUrl"
     },
     {
       "element": [
@@ -474,7 +474,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImGestationalAgeObservation"
+      "target": "$ImGestationalAgeObservationUrl"
     },
     {
       "element": [
@@ -497,7 +497,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImPatient"
+      "target": "$ImPatientUrl"
     },
     {
       "element": [
@@ -539,7 +539,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImImagingStudy"
+      "target": "$ImImagingStudyUrl"
     },
     {
       "element": [
@@ -585,7 +585,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImRadiationDoseObservation"
+      "target": "$ImRadiationDoseObservationUrl"
     },
     {
       "element": [
@@ -609,7 +609,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "BodyStructure"
+      "target": "$BodyStructureUrl"
     },
     {
       "element": [
@@ -624,7 +624,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImMedicationAdministration"
+      "target": "$ImMedicationAdministrationUrl"
     },
     {
       "element": [
@@ -659,7 +659,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImAdverseEvent"
+      "target": "$ImAdverseEventUrl"
     },
     {
       "element": [
@@ -669,7 +669,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "EuAllergyIntolerance"
+      "target": "$EuAllergyIntoleranceUrl"
     },
     {
       "element": [
@@ -684,7 +684,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "ImDiagnosticReport"
+      "target": "$ImDiagnosticReportUrl"
     },
     {
       "element": [
@@ -699,10 +699,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
-      "target": "imComposition"
+      "target": "$imCompositionUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSImagingReportBodyMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
 }

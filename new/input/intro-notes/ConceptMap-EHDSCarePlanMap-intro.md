@@ -22,7 +22,7 @@ class EHDSCarePlan {
   note
 }
 link EHDSCarePlan "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSCarePlan.html"
-class CareplanEu{
+class EuCarePlan{
   <<FHIR>>
   identifier
   status
@@ -49,10 +49,10 @@ class practitionerRole-eu {
 class EuGoal {
   <<FHIR>>
 }
-EHDSCarePlan --> CareplanEu
-CareplanEu --> patient-eu : subject
-CareplanEu --> practitionerRole-eu : custodian
-CareplanEu --> practitionerRole-eu : contributor
-CareplanEu --> EuGoal : goal
+EHDSCarePlan --> EuCarePlan
+EuCarePlan --> patient-eu : subject
+EuCarePlan --> practitionerRole-eu : custodian
+EuCarePlan --> practitionerRole-eu : contributor
+EuCarePlan --> EuGoal : goal
 ```
 

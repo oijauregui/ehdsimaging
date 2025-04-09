@@ -10,10 +10,11 @@ Description: "Map for EHDSImagingReport"
 * status = #draft
 * experimental = true
 * title = "EHDSImagingReport Mapping"
+* name = "EHDSImagingReportMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
-  * target = "Composition"
+  * target = "$ImCompositionUrl"
   * element[+]
     * code = #imagingReportHeader
     * target[+]
@@ -22,18 +23,29 @@ Description: "Map for EHDSImagingReport"
   * element[+]
     * code = #imagingReportStructuredBody
     * noMap = true
+  * element[+]
+    * code = #imagingReportAttachments[x]
+    * target[+]
+      * code = #section[comparison].entry[study]
+      * comment = "Comparison studie"
+      * relationship = #related-to
+    * target[+]
+      * code = #section[comparison].entry[study]
+      * comment = "key images"
+      * relationship = #related-to
+    * target[+]
+      * code = #section[comparison].entry[study]
+      * comment = "other data"
+      * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
-  * target = "DiagnosticReport"
+  * target = "$ImDiagnosticReportUrl"
   * element[+]
     * code = #imagingReportHeader
     * noMap = true
   * element[+]
     * code = #imagingReportStructuredBody
     * noMap = true
-* group[+]
-  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
-  * target = "ImDiagnosticReport"
   * element[+]
     * code = #presentedForms
     * target[+]
@@ -46,24 +58,7 @@ Description: "Map for EHDSImagingReport"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
-  * target = "ImComposition"
-  * element[+]
-    * code = #imagingReportAttachments[x]
-    * target[+]
-      * code = #section[comparison].entry[study]
-      * comment = "Comparison studie"
-      * relationship = #related-to
-    * target[+]
-      * code = #section[comparison].entry[study]
-      * comment = "key images"
-      * relationship = #related-to
-    * target[+]
-      * code = #section[comparison].entry[study]
-      * comment = "other data"
-      * relationship = #related-to
-* group[+]
-  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
-  * target = "ImFinding"
+  * target = "$ImFindingUrl"
   * element[+]
     * code = #imagingReportAttachments[x]
     * target[+]
@@ -80,7 +75,7 @@ Description: "Map for EHDSImagingReport"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
-  * target = "ImImagingStudy"
+  * target = "$ImImagingStudyUrl"
   * element[+]
     * code = #dicomStudyMetadata
     * noMap = true

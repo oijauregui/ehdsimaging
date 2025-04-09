@@ -10,10 +10,11 @@ Description: "Map for EHDSLocation"
 * status = #draft
 * experimental = true
 * title = "EHDSLocation Mapping"
+* name = "EHDSLocationMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation"
-  * target = "LocationEu"
+  * target = "$EuLocationUrl"
   * element[+]
     * code = #identifier
     * target[+]

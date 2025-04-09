@@ -18,7 +18,7 @@ class EHDSAddress {
   country
 }
 link EHDSAddress "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSAddress.html"
-class AddressEu{
+class EuAddress{
   <<FHIR>>
   use
   type
@@ -33,6 +33,6 @@ class AddressEu{
   country.extension[countryCode]
 }
 
-EHDSAddress --> AddressEu
+EHDSAddress --> EuAddress
 ```
 

@@ -10,10 +10,11 @@ Description: "Map for EHDSImagingStudy"
 * status = #draft
 * experimental = true
 * title = "EHDSImagingStudy Mapping"
+* name = "EHDSImagingStudyMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
-  * target = "ImImagingStudy"
+  * target = "$ImImagingStudyUrl"
   * element[+]
     * code = #identifier
     * target[+]
@@ -161,7 +162,7 @@ Description: "Map for EHDSImagingStudy"
       * relationship = #source-is-narrower-than-target
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
-  * target = "ImComposition"
+  * target = "$ImCompositionUrl"
   * element[+]
     * code = #identifier
     * target[+]
@@ -204,7 +205,7 @@ Description: "Map for EHDSImagingStudy"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
-  * target = "ImRadiationDoseObservation"
+  * target = "$ImRadiationDoseObservationUrl"
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.kap
     * target[+]

@@ -38,7 +38,7 @@ class EHDSMedication {
   batch.expirationDate
 }
 link EHDSMedication "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSMedication.html"
-class MedicationEu
-EHDSMedication --> MedicationEu
+class EuMedication
+EHDSMedication --> EuMedication
 ```
 

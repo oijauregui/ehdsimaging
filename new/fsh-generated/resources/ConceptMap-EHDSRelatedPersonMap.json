@@ -54,10 +54,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson",
-      "target": "RelatedPerson"
+      "target": "$RelatedPersonUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSRelatedPersonMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"
 }

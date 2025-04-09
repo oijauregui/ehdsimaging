@@ -19,6 +19,8 @@ const indices = {
     tgtRefType: 12,
 };
 
+const XtEHRBaseUrl = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/";
+
 function extractAndCopyResources(parsedData, srcResources ) {
     // Extract unique source resources
     
@@ -64,16 +66,14 @@ function generateConceptMapFiles(parsedData, srcResources) {
             writable.write(`* status = #draft\n`);
             writable.write(`* experimental = true\n`);
             writable.write(`* title = "${srcResource} Mapping"\n`);
-            writable.write(`* sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/${srcResource}"\n`);
+            writable.write(`* name = "${srcResource}Map"\n`);
+            writable.write(`* sourceScopeUri = "${XtEHRBaseUrl}${srcResource}"\n`);
 
             tgtResources.forEach(tgtResource => {
-                let target = tgtResource.startsWith('http:') 
-                    ? tgtResource 
-                    : `http://hl7.eu/fhir/imaging/${tgtResource}`;
                 
                 writable.write(`* group[+]\n`);
-                writable.write(`  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/${srcResource}"\n`);
-                writable.write(`  * target = "${tgtResource}"\n`);
+                writable.write(`  * source = "${XtEHRBaseUrl}${srcResource}"\n`);
+                writable.write(`  * target = "$${tgtResource}Url"\n`);
 
                 const elementCodes = new Set(
                     parsedData

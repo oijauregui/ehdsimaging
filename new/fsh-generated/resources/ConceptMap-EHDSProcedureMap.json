@@ -140,10 +140,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure",
-      "target": "Procedure"
+      "target": "$ProcedureUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSProcedureMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure"
 }

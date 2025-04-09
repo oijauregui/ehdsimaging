@@ -22,7 +22,7 @@ class EHDSSpecimen {
   container.containerDevice
 }
 link EHDSSpecimen "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSSpecimen.html"
-class SpecimenEu{
+class EuSpecimen{
   <<FHIR>>
   identifier
   accessionIdentifier
@@ -37,12 +37,12 @@ class SpecimenEu{
   container.device
 }
 
-class PatientAnimalEu{
+class EuPatientAnimal{
   <<FHIR>>
   extension[http\://hl7.org/fhir/StructureDefinition/patient-animal]
 }
 
-class BodyStructureEu{
+class EuBodyStructure{
   <<FHIR>>
   morphology
 }
@@ -56,11 +56,11 @@ class BodyStructureEu {
 class DeviceEu {
   <<FHIR>>
 }
-EHDSSpecimen --> SpecimenEu
-SpecimenEu --> PatientAnimalEu : subject
-SpecimenEu --> BodyStructureEu : collection.bodySite
-SpecimenEu --> DeviceEu : container.device
-EHDSSpecimen --> PatientAnimalEu
-EHDSSpecimen --> BodyStructureEu
+EHDSSpecimen --> EuSpecimen
+EuSpecimen --> PatientAnimalEu : subject
+EuSpecimen --> BodyStructureEu : collection.bodySite
+EuSpecimen --> DeviceEu : container.device
+EHDSSpecimen --> EuPatientAnimal
+EHDSSpecimen --> EuBodyStructure
 ```
 

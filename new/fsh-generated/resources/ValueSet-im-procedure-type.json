@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ImProcedureType",
+  "id": "im-procedure-type",
+  "title": "Imaging Procedure Type",
+  "description": "This value set includes all imaging procedure types.",
+  "url": "http://hl7.eu/fhir/imaging/ValueSet/im-procedure-type",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "=",
+            "value": "363679005"
+          }
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "363679005"
+          }
+        ]
+      }
+    ]
+  }
+}

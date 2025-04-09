@@ -10,10 +10,11 @@ Description: "Map for EHDSAllergyIntolerance"
 * status = #draft
 * experimental = true
 * title = "EHDSAllergyIntolerance Mapping"
+* name = "EHDSAllergyIntoleranceMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"
-  * target = "AllergyIntolerance"
+  * target = "$AllergyIntoleranceUrl"
   * element[+]
     * code = #identifier
     * target[+]

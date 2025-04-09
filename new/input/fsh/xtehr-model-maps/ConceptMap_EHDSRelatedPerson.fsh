@@ -10,10 +10,11 @@ Description: "Map for EHDSRelatedPerson"
 * status = #draft
 * experimental = true
 * title = "EHDSRelatedPerson Mapping"
+* name = "EHDSRelatedPersonMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"
-  * target = "RelatedPerson"
+  * target = "$RelatedPersonUrl"
   * element[+]
     * code = #personalIdentifier
     * target[+]

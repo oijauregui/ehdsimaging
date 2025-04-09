@@ -10,10 +10,11 @@ Description: "Map for EHDSOrganization"
 * status = #draft
 * experimental = true
 * title = "EHDSOrganization Mapping"
+* name = "EHDSOrganizationMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"
-  * target = "OrganizationEU"
+  * target = "$EuOrganizationUrl"
   * element[+]
     * code = #identifier
     * target[+]

@@ -10,10 +10,11 @@ Description: "Map for EHDSPatient"
 * status = #draft
 * experimental = true
 * title = "EHDSPatient Mapping"
+* name = "EHDSPatientMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"
-  * target = "PatientEuCore"
+  * target = "$PatientEuCoreUrl"
   * element[+]
     * code = #personalIdentifier
     * target[+]

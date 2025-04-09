@@ -100,10 +100,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation",
-      "target": "LocationEu"
+      "target": "$EuLocationUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSLocationMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation"
 }

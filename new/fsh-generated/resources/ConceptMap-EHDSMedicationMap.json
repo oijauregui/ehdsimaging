@@ -12,10 +12,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication",
-      "target": "MedicationEu"
+      "target": "$EuMedicationUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSMedicationMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"
 }

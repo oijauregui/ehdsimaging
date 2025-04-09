@@ -130,7 +130,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
-      "target": "SpecimenEu"
+      "target": "$EuSpecimenUrl"
     },
     {
       "element": [
@@ -145,7 +145,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
-      "target": "PatientAnimalEu"
+      "target": "$EuPatientAnimalUrl"
     },
     {
       "element": [
@@ -160,10 +160,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
-      "target": "BodyStructureEu"
+      "target": "$EuBodyStructureUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSSpecimenMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"
 }

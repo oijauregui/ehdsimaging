@@ -27,10 +27,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader",
-      "target": "ImDiagnosticReport"
+      "target": "$ImDiagnosticReportUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSReportHeaderMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader"
 }

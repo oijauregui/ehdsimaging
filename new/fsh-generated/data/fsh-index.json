@@ -1,11 +1,19 @@
 [
   {
+    "outputFile": "CodeSystem-codesystem-endpoint-terminology.json",
+    "fshName": "Hl7EuImagingEndpointTerminologyCodeSystem",
+    "fshType": "CodeSystem",
+    "fshFile": "terminologies/EndpointTerminology.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
     "outputFile": "ConceptMap-EHDSAddressMap.json",
     "fshName": "EHDSAddressMap",
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSAddress.fsh",
     "startLine": 5,
-    "endLine": 73
+    "endLine": 74
   },
   {
     "outputFile": "ConceptMap-EHDSAllergyIntoleranceMap.json",
@@ -13,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSAllergyIntolerance.fsh",
     "startLine": 5,
-    "endLine": 106
+    "endLine": 107
   },
   {
     "outputFile": "ConceptMap-EHDSAttachmentMap.json",
@@ -21,7 +29,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSAttachment.fsh",
     "startLine": 5,
-    "endLine": 77
+    "endLine": 78
   },
   {
     "outputFile": "ConceptMap-EHDSCarePlanMap.json",
@@ -29,7 +37,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSCarePlan.fsh",
     "startLine": 5,
-    "endLine": 87
+    "endLine": 88
   },
   {
     "outputFile": "ConceptMap-EHDSConditionMap.json",
@@ -37,7 +45,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSCondition.fsh",
     "startLine": 5,
-    "endLine": 120
+    "endLine": 121
   },
   {
     "outputFile": "ConceptMap-EHDSCoverageMap.json",
@@ -45,7 +53,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSCoverage.fsh",
     "startLine": 5,
-    "endLine": 50
+    "endLine": 51
   },
   {
     "outputFile": "ConceptMap-EHDSDeviceMap.json",
@@ -53,7 +61,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSDevice.fsh",
     "startLine": 5,
-    "endLine": 71
+    "endLine": 72
   },
   {
     "outputFile": "ConceptMap-EHDSEncounterMap.json",
@@ -61,7 +69,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSEncounter.fsh",
     "startLine": 5,
-    "endLine": 146
+    "endLine": 147
   },
   {
     "outputFile": "ConceptMap-EHDSEndpointMap.json",
@@ -69,7 +77,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSEndpoint.fsh",
     "startLine": 5,
-    "endLine": 66
+    "endLine": 67
   },
   {
     "outputFile": "ConceptMap-EHDSEpisodeOfCareMap.json",
@@ -77,7 +85,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSEpisodeOfCare.fsh",
     "startLine": 5,
-    "endLine": 56
+    "endLine": 57
   },
   {
     "outputFile": "ConceptMap-EHDSHealthProfessionalMap.json",
@@ -85,7 +93,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSHealthProfessional.fsh",
     "startLine": 5,
-    "endLine": 54
+    "endLine": 55
   },
   {
     "outputFile": "ConceptMap-EHDSHumanNameMap.json",
@@ -93,7 +101,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSHumanName.fsh",
     "startLine": 5,
-    "endLine": 53
+    "endLine": 54
   },
   {
     "outputFile": "ConceptMap-EHDSImagingReportBodyMap.json",
@@ -101,7 +109,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingReportBody.fsh",
     "startLine": 5,
-    "endLine": 416
+    "endLine": 417
   },
   {
     "outputFile": "ConceptMap-EHDSImagingReportHeaderMap.json",
@@ -109,7 +117,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingReportHeader.fsh",
     "startLine": 5,
-    "endLine": 265
+    "endLine": 268
   },
   {
     "outputFile": "ConceptMap-EHDSImagingReportMap.json",
@@ -117,7 +125,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingReport.fsh",
     "startLine": 5,
-    "endLine": 86
+    "endLine": 81
   },
   {
     "outputFile": "ConceptMap-EHDSImagingStudyMap.json",
@@ -125,7 +133,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSImagingStudy.fsh",
     "startLine": 5,
-    "endLine": 238
+    "endLine": 239
   },
   {
     "outputFile": "ConceptMap-EHDSLocationMap.json",
@@ -133,7 +141,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSLocation.fsh",
     "startLine": 5,
-    "endLine": 67
+    "endLine": 68
   },
   {
     "outputFile": "ConceptMap-EHDSMediaMap.json",
@@ -141,7 +149,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSMedia.fsh",
     "startLine": 5,
-    "endLine": 85
+    "endLine": 86
   },
   {
     "outputFile": "ConceptMap-EHDSMedicationAdministrationMap.json",
@@ -149,7 +157,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSMedicationAdministration.fsh",
     "startLine": 5,
-    "endLine": 97
+    "endLine": 98
   },
   {
     "outputFile": "ConceptMap-EHDSMedicationMap.json",
@@ -157,7 +165,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSMedication.fsh",
     "startLine": 5,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "ConceptMap-EHDSObservationMap.json",
@@ -165,7 +173,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSObservation.fsh",
     "startLine": 5,
-    "endLine": 279
+    "endLine": 280
   },
   {
     "outputFile": "ConceptMap-EHDSOrganizationMap.json",
@@ -173,7 +181,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSOrganization.fsh",
     "startLine": 5,
-    "endLine": 46
+    "endLine": 47
   },
   {
     "outputFile": "ConceptMap-EHDSPatientMap.json",
@@ -181,7 +189,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSPatient.fsh",
     "startLine": 5,
-    "endLine": 64
+    "endLine": 65
   },
   {
     "outputFile": "ConceptMap-EHDSProcedureMap.json",
@@ -189,7 +197,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSProcedure.fsh",
     "startLine": 5,
-    "endLine": 90
+    "endLine": 91
   },
   {
     "outputFile": "ConceptMap-EHDSRelatedPersonMap.json",
@@ -197,7 +205,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSRelatedPerson.fsh",
     "startLine": 5,
-    "endLine": 41
+    "endLine": 42
   },
   {
     "outputFile": "ConceptMap-EHDSReportHeaderMap.json",
@@ -205,7 +213,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSReportHeader.fsh",
     "startLine": 5,
-    "endLine": 26
+    "endLine": 27
   },
   {
     "outputFile": "ConceptMap-EHDSServiceRequestMap.json",
@@ -213,7 +221,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSServiceRequest.fsh",
     "startLine": 5,
-    "endLine": 89
+    "endLine": 90
   },
   {
     "outputFile": "ConceptMap-EHDSSpecimenMap.json",
@@ -221,7 +229,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSSpecimen.fsh",
     "startLine": 5,
-    "endLine": 100
+    "endLine": 101
   },
   {
     "outputFile": "ConceptMap-EHDSSubstanceMap.json",
@@ -229,7 +237,7 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSSubstance.fsh",
     "startLine": 5,
-    "endLine": 56
+    "endLine": 57
   },
   {
     "outputFile": "ConceptMap-EHDSTelecomMap.json",
@@ -237,6 +245,246 @@
     "fshType": "Instance",
     "fshFile": "xtehr-model-maps/ConceptMap_EHDSTelecom.fsh",
     "startLine": 5,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-AllergyIntoleranceEu.json",
+    "fshName": "AllergyIntoleranceEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-allergyintolerance.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-BodyStructureEu.json",
+    "fshName": "BodyStructureEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-bodystructure.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-CarePlanEu.json",
+    "fshName": "CarePlanEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-careplan.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-CompositionEu.json",
+    "fshName": "CompositionEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-composition.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-ConditionEU.json",
+    "fshName": "ConditionEU",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-condition.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-EncounterEU.json",
+    "fshName": "EncounterEU",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-encounter.fsh",
+    "startLine": 1,
     "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-EndpointEu.json",
+    "fshName": "EndpointEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-endpoint.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-LocationEu.json",
+    "fshName": "LocationEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-location.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-MedicationEu.json",
+    "fshName": "MedicationEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-medication.fsh",
+    "startLine": 3,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-ObservationEu.json",
+    "fshName": "ObservationEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-observation.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-PatientAnimalEu.json",
+    "fshName": "PatientAnimalEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-patient-animal.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-ProcedureEu.json",
+    "fshName": "ProcedureEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-procedure.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "StructureDefinition-SpecimenEu.json",
+    "fshName": "SpecimenEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-specimen.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "StructureDefinition-im-accession-number-identifier.json",
+    "fshName": "ImAccessionNumberIdentifier",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-order.fsh",
+    "startLine": 53,
+    "endLine": 62
+  },
+  {
+    "outputFile": "StructureDefinition-im-imagingdevice.json",
+    "fshName": "ImImagingDevice",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-imaging-device.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-im-imagingstudy-manifest.json",
+    "fshName": "ImImagingStudyManifest",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-imagingsstudy-manifest.fsh",
+    "startLine": 1,
+    "endLine": 37
+  },
+  {
+    "outputFile": "StructureDefinition-im-imagingstudy.json",
+    "fshName": "ImImagingStudy",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-imagingstudy.fsh",
+    "startLine": 1,
+    "endLine": 50
+  },
+  {
+    "outputFile": "StructureDefinition-im-order.json",
+    "fshName": "ImOrder",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-order.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-im-patient.json",
+    "fshName": "ImPatient",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-patient.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-im-procedure.json",
+    "fshName": "ImProcedure",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-procedure.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-im-viewer-endpoint.json",
+    "fshName": "ImImageIidViewerEndpoint",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-endpoint-ihe-iid-viewer.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-im-wado-endpoint.json",
+    "fshName": "ImWadoEndpoint",
+    "fshType": "Profile",
+    "fshFile": "profiles/im-endpoint-wado.fsh",
+    "startLine": 1,
+    "endLine": 66
+  },
+  {
+    "outputFile": "StructureDefinition-instance-description.json",
+    "fshName": "ImImagingStudyInstanceDescription",
+    "fshType": "Extension",
+    "fshFile": "profiles/im-imagingstudy.fsh",
+    "startLine": 53,
+    "endLine": 58
+  },
+  {
+    "outputFile": "StructureDefinition-periods-of-life-extension.json",
+    "fshName": "PeriodsOfLifeExtension",
+    "fshType": "Extension",
+    "fshFile": "profiles-eu/eu-allergyintolerance.fsh",
+    "startLine": 11,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-quantity-eu.json",
+    "fshName": "QuantityEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-observation.fsh",
+    "startLine": 45,
+    "endLine": 52
+  },
+  {
+    "outputFile": "StructureDefinition-range-eu.json",
+    "fshName": "RangeEu",
+    "fshType": "Profile",
+    "fshFile": "profiles-eu/eu-observation.fsh",
+    "startLine": 54,
+    "endLine": 65
+  },
+  {
+    "outputFile": "ValueSet-im-imaging-device-type.json",
+    "fshName": "ImImagingDeviceType",
+    "fshType": "ValueSet",
+    "fshFile": "profiles/im-imaging-device.fsh",
+    "startLine": 17,
+    "endLine": 21
+  },
+  {
+    "outputFile": "ValueSet-im-imaging-study-performer-type.json",
+    "fshName": "ImImagingStudyPerformerTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "terminologies/imaging-study-performer-type.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-im-procedure-type.json",
+    "fshName": "ImProcedureType",
+    "fshType": "ValueSet",
+    "fshFile": "terminologies/ImProcedureType.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-periods-of-life-value-set.json",
+    "fshName": "PeriodsOfLifeValueSet",
+    "fshType": "ValueSet",
+    "fshFile": "profiles-eu/eu-allergyintolerance.fsh",
+    "startLine": 20,
+    "endLine": 25
   }
 ]

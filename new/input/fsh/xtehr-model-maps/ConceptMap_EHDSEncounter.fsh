@@ -10,10 +10,11 @@ Description: "Map for EHDSEncounter"
 * status = #draft
 * experimental = true
 * title = "EHDSEncounter Mapping"
+* name = "EHDSEncounterMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"
-  * target = "EncounterEu"
+  * target = "$EuEncounterUrl"
   * element[+]
     * code = #identifier
     * target[+]

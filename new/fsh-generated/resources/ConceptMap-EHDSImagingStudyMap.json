@@ -267,7 +267,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy",
-      "target": "ImImagingStudy"
+      "target": "$ImImagingStudyUrl"
     },
     {
       "element": [
@@ -345,7 +345,7 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy",
-      "target": "ImComposition"
+      "target": "$ImCompositionUrl"
     },
     {
       "element": [
@@ -406,10 +406,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy",
-      "target": "ImRadiationDoseObservation"
+      "target": "$ImRadiationDoseObservationUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSImagingStudyMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
 }

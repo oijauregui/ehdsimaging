@@ -139,10 +139,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest",
-      "target": "ServiceRequest"
+      "target": "$ServiceRequestUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSServiceRequestMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"
 }

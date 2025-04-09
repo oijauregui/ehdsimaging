@@ -130,10 +130,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan",
-      "target": "CareplanEu"
+      "target": "$EuCarePlanUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSCarePlanMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"
 }

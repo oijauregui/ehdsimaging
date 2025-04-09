@@ -10,10 +10,11 @@ Description: "Map for EHDSMedicationAdministration"
 * status = #draft
 * experimental = true
 * title = "EHDSMedicationAdministration Mapping"
+* name = "EHDSMedicationAdministrationMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"
-  * target = "MedicationAdministration"
+  * target = "$MedicationAdministrationUrl"
   * element[+]
     * code = #identifier
     * target[+]

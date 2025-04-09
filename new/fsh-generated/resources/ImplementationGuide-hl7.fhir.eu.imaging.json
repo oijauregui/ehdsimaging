@@ -83,6 +83,221 @@
     "resource": [
       {
         "reference": {
+          "reference": "CodeSystem/codesystem-endpoint-terminology"
+        },
+        "name": "CodeSystem for terminology used in Endpoint resources in the EU Imaging IG.",
+        "description": "This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AllergyIntoleranceEu"
+        },
+        "name": "EU AllergyIntolerance",
+        "description": "A allergyintolerance profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BodyStructureEu"
+        },
+        "name": "EU BodyStructure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CarePlanEu"
+        },
+        "name": "EU CarePlan",
+        "description": "Care plan for the patient. \nContains the narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that the care plan could be provided in a structured and coded format.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CompositionEu"
+        },
+        "name": "EU Composition",
+        "description": "Clinical document used to represent a report for the scope of the HL7 Europe project.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConditionEU"
+        },
+        "name": "EU Condition",
+        "description": "A condition profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EncounterEU"
+        },
+        "name": "EU Encounter",
+        "description": "A encounter profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EndpointEu"
+        },
+        "name": "EU Endpoint",
+        "description": "The FHIR endpoint resource with EU specific references.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LocationEu"
+        },
+        "name": "EU Location",
+        "description": "Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationEu"
+        },
+        "name": "EU Medication",
+        "description": "A medication profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationEu"
+        },
+        "name": "EU Observation",
+        "description": "A observation profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ProcedureEu"
+        },
+        "name": "EU Procedure",
+        "description": "A procedure profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/quantity-eu"
+        },
+        "name": "EU Quantity",
+        "description": "A quantity profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/range-eu"
+        },
+        "name": "EU Range",
+        "description": "A range profile for the EU.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-viewer-endpoint"
+        },
+        "name": "IM Image Viewer Endpoint",
+        "description": "This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.\nThe application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf).",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-imagingdevice"
+        },
+        "name": "Im Imaging Device",
+        "description": "The device the made the image.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-order"
+        },
+        "name": "IM Imaging Order",
+        "description": "This profile on ServiceRequest represents the order for the Imaging Study and report.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-patient"
+        },
+        "name": "IM Imaging Patient",
+        "description": "This profile on Patient represents the Imaging Patient.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-procedure"
+        },
+        "name": "IM Imaging Procedure",
+        "description": "This profile on Procedure represents the imaging procedure.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-imagingstudy"
+        },
+        "name": "IM Imaging Study",
+        "description": "This profile represents an imaging study instance.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-imagingstudy-manifest"
+        },
+        "name": "IM ImagingStudy Manifest",
+        "description": "This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-wado-endpoint"
+        },
+        "name": "IM WADO Endpoint",
+        "description": "This profile defines the WADO endpoint for accessing imaging study content.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-accession-number-identifier"
+        },
+        "name": "Imaging Accession Number Identifier",
+        "description": "This profile on Identifier represents the Accession Number for the Imaging Order.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-imaging-device-type"
+        },
+        "name": "Imaging Device Type",
+        "description": "Imaging Device Type.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-procedure-type"
+        },
+        "name": "Imaging Procedure Type",
+        "description": "This value set includes all imaging procedure types.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-imaging-study-performer-type"
+        },
+        "name": "Imaging Study Performer Type Value Set",
+        "description": "Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/instance-description"
+        },
+        "name": "Instance Description",
+        "description": "A description of the instance in an ImagingStudy.",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/EHDSAddressMap"
         },
         "name": "Map for EHDSAddress",
@@ -320,6 +535,38 @@
         "name": "Map for EHDSTelecom",
         "description": "Map for EHDSTelecom",
         "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PatientAnimalEu"
+        },
+        "name": "Patient: Animal",
+        "description": "This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide. This is used (among others) to identify the species when a specimen is collected from an animal.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/periods-of-life-extension"
+        },
+        "name": "Periods of Life Extension",
+        "description": "Allows to indicate a time period in a person's life as a reference to a coded value for that life period.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/periods-of-life-value-set"
+        },
+        "name": "Periods of Life Extension",
+        "description": "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SpecimenEu"
+        },
+        "name": "Specimen: Laboratory",
+        "description": "This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide.",
+        "isExample": false
       }
     ],
     "page": {
@@ -365,6 +612,20 @@
           ],
           "name": "xtehr.html",
           "sourceUrl": "xtehr.html"
+        },
+        {
+          "title": "Profiles",
+          "generation": "markdown",
+          "page": [
+            {
+              "title": "Imaging Manifest",
+              "generation": "markdown",
+              "name": "imaging-manifest.html",
+              "sourceUrl": "imaging-manifest.html"
+            }
+          ],
+          "name": "profiles.html",
+          "sourceUrl": "profiles.html"
         }
       ],
       "name": "toc.html",

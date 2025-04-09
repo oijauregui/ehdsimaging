@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ProcedureEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ProcedureEu",
+  "name": "ProcedureEu",
+  "title": "EU Procedure",
+  "status": "draft",
+  "description": "A procedure profile for the EU.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/patient-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.used",
+        "path": "Procedure.used",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "concept"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Procedure.used:device",
+        "path": "Procedure.used",
+        "sliceName": "device",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableReference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

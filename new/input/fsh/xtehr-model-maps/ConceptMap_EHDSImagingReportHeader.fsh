@@ -10,10 +10,11 @@ Description: "Map for EHDSImagingReportHeader"
 * status = #draft
 * experimental = true
 * title = "EHDSImagingReportHeader Mapping"
+* name = "EHDSImagingReportHeaderMap"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "ImComposition"
+  * target = "$ImCompositionUrl"
   * element[+]
     * code = #subject
     * target[+]
@@ -31,7 +32,9 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
   * element[+]
     * code = #authorship
-    * noMap = true
+    * target[+]
+      * code = #author
+      * relationship = #related-to
   * element[+]
     * code = #authorship.author
     * target[+]
@@ -169,7 +172,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "ImDiagnosticReport"
+  * target = "$ImDiagnosticReportUrl"
   * element[+]
     * code = #subject
     * target[+]
@@ -212,7 +215,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "ImServiceRequest"
+  * target = "$ImServiceRequestUrl"
   * element[+]
     * code = #healthInsuranceAndPaymentInformation
     * target[+]
@@ -220,7 +223,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "ImProcedure"
+  * target = "$ImProcedureUrl"
   * element[+]
     * code = #documentMetadata.eventType
     * target[+]
@@ -233,7 +236,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "ImImagingStudy"
+  * target = "$ImImagingStudyUrl"
   * element[+]
     * code = #documentMetadata.eventType
     * target[+]
@@ -254,7 +257,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "ImOrder"
+  * target = "$ImOrderUrl"
   * element[+]
     * code = #documentMetadata.accessionNumber
     * target[+]

@@ -108,10 +108,11 @@
         }
       ],
       "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice",
-      "target": "Device"
+      "target": "$DeviceUrl"
     }
   ],
   "status": "draft",
   "experimental": true,
+  "name": "EHDSDeviceMap",
   "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"
 }
