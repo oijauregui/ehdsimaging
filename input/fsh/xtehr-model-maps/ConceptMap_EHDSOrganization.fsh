@@ -14,7 +14,7 @@ Description: "Map for EHDSOrganization"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"
-  * target = "$EuOrganizationUrl"
+  * target = $EuOrganizationUrl
   * element[+]
     * code = #identifier
     * target[+]

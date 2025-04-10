@@ -14,7 +14,7 @@ Description: "Map for EHDSImagingReportHeader"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "$ImCompositionUrl"
+  * target = $ImCompositionUrl
   * element[+]
     * code = #subject
     * target[+]
@@ -172,7 +172,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "$ImDiagnosticReportUrl"
+  * target = $ImDiagnosticReportUrl
   * element[+]
     * code = #subject
     * target[+]
@@ -215,7 +215,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "$ImServiceRequestUrl"
+  * target = $ImServiceRequestUrl
   * element[+]
     * code = #healthInsuranceAndPaymentInformation
     * target[+]
@@ -223,7 +223,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "$ImProcedureUrl"
+  * target = $ImProcedureUrl
   * element[+]
     * code = #documentMetadata.eventType
     * target[+]
@@ -236,7 +236,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "$ImImagingStudyUrl"
+  * target = $ImImagingStudyUrl
   * element[+]
     * code = #documentMetadata.eventType
     * target[+]
@@ -257,7 +257,7 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = "$ImOrderUrl"
+  * target = $ImOrderUrl
   * element[+]
     * code = #documentMetadata.accessionNumber
     * target[+]

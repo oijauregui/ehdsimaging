@@ -23,7 +23,7 @@ class EHDSServiceRequest {
   coverage
 }
 link EHDSServiceRequest "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSServiceRequest.html"
-class ServiceRequest{
+class EuServiceRequest{
   <<FHIR>>
   text
   code.concept
@@ -51,9 +51,9 @@ class Encounter {
 class CoverageEu {
   <<FHIR>>
 }
-EHDSServiceRequest --> ServiceRequest
-ServiceRequest --> Specimen : specimen
-ServiceRequest --> Encounter : encounter
-ServiceRequest --> CoverageEu : insurrance
+EHDSServiceRequest --> EuServiceRequest
+EuServiceRequest --> Specimen : specimen
+EuServiceRequest --> Encounter : encounter
+EuServiceRequest --> CoverageEu : insurrance
 ```
 

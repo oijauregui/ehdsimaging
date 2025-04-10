@@ -14,7 +14,7 @@ Description: "Map for EHDSObservation"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
-  * target = "$EuObservationUrl"
+  * target = $EuObservationUrl
   * element[+]
     * code = #observationDate[x]
     * target[+]
@@ -272,7 +272,7 @@ Description: "Map for EHDSObservation"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
-  * target = "$ServiceRequestUrl"
+  * target = $EuServiceRequestUrl
   * element[+]
     * code = #order
     * target[+]

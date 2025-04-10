@@ -24,7 +24,7 @@ class EHDSMedicationAdministration {
   sibject
 }
 link EHDSMedicationAdministration "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSMedicationAdministration.html"
-class MedicationAdministration{
+class EuMedicationAdministration{
   <<FHIR>>
   identifier
   status
@@ -51,8 +51,8 @@ class Medication {
 class PatientEu {
   <<FHIR>>
 }
-EHDSMedicationAdministration --> MedicationAdministration
-MedicationAdministration --> Medication : medication
-MedicationAdministration --> PatientEu : subject
+EHDSMedicationAdministration --> EuMedicationAdministration
+EuMedicationAdministration --> Medication : medication
+EuMedicationAdministration --> PatientEu : subject
 ```
 

@@ -1,6 +1,5 @@
 Profile: ImImagingSelection
 Parent: ImagingSelection
-Id: im-imaging-selection
 Title: "Imaging Selection"
 Description: "Imaging Selection"
 * insert SetFmmAndStatusRule( 1, draft )
@@ -14,7 +13,6 @@ Description: "Imaging Selection"
 
 Profile: ImSrInstanceImagingSelection
 Parent: ImImagingSelection
-Id: im-sr-instance-imaging-selection
 Title: "Imaging Selection referring to a DICOM SR instance"
 Description: "Imaging Selection referring to a DICOM SR instance"
 * insert SetFmmAndStatusRule( 1, draft )

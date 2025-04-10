@@ -55,7 +55,8 @@ These define constraints on FHIR resources for systems conforming to this implem
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name IN ('ImImagingStudyManifest', 'ImImagingStudy', 'ImWadoEndpoint', 'ImImageIidViewerEndpoint', 'ImOrder') ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Title", "target" : "Web"},
+    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
     { "name" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}

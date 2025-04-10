@@ -14,7 +14,7 @@ Description: "Map for EHDSMedia"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
-  * target = "$DocumentReferenceUrl"
+  * target = $EuDocumentReferenceUrl
   * element[+]
     * code = #identifier
     * target[+]
@@ -78,7 +78,7 @@ Description: "Map for EHDSMedia"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
-  * target = "$DeviceUrl"
+  * target = $EuDeviceUrl
   * element[+]
     * code = #deviceName
     * target[+]

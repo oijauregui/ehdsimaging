@@ -14,7 +14,7 @@ Description: "Map for EHDSPatient"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"
-  * target = "$PatientEuCoreUrl"
+  * target = $EuPatientUrl
   * element[+]
     * code = #personalIdentifier
     * target[+]

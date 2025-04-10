@@ -14,7 +14,7 @@ Description: "Map for EHDSImagingReportBody"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImCompositionUrl"
+  * target = $ImCompositionUrl
   * element[+]
     * code = #orderInformation
     * target[+]
@@ -219,13 +219,23 @@ Description: "Map for EHDSImagingReportBody"
     * target[+]
       * code = #section[recommendation].entry[careplan]
       * relationship = #related-to
+  * element[+]
+    * code = #comparisonStudy
+    * target[+]
+      * code = #section[comparison].entry[study]
+      * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImOrderUrl"
+  * target = $ImOrderUrl
   * element[+]
     * code = #orderInformation.orderDateAndTime
     * target[+]
       * code = #authoredOn
+      * relationship = #related-to
+  * element[+]
+    * code = #orderInformation.orderPlacer
+    * target[+]
+      * code = #practitioner
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.orderReason
@@ -272,15 +282,7 @@ Description: "Map for EHDSImagingReportBody"
     * noMap = true
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$imOrderUrl"
-  * element[+]
-    * code = #orderInformation.orderPlacer
-    * target[+]
-      * code = #practitioner
-      * relationship = #related-to
-* group[+]
-  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImGestationalAgeObservationUrl"
+  * target = $ImGestationalAgeObservationUrl
   * element[+]
     * code = #orderInformation.supportingInformation.gestationalAge
     * target[+]
@@ -288,7 +290,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImPatientUrl"
+  * target = $ImPatientUrl
   * element[+]
     * code = #orderInformation.supportingInformation.sexForClinicalUse
     * target[+]
@@ -302,7 +304,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImImagingStudyUrl"
+  * target = $ImImagingStudyUrl
   * element[+]
     * code = #specimen
     * target[+]
@@ -325,7 +327,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImRadiationDoseObservationUrl"
+  * target = $ImRadiationDoseObservationUrl
   * element[+]
     * code = #exposureInformation
     * noMap = true
@@ -351,7 +353,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$BodyStructureUrl"
+  * target = $EuBodyStructureUrl
   * element[+]
     * code = #examinationReport.bodyPart.bodyLocation
     * target[+]
@@ -364,7 +366,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImMedicationAdministrationUrl"
+  * target = $ImMedicationAdministrationUrl
   * element[+]
     * code = #examinationReport.medication
     * target[+]
@@ -372,7 +374,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImAdverseEventUrl"
+  * target = $ImAdverseEventUrl
   * element[+]
     * code = #examinationReport.adverseReaction
     * target[+]
@@ -395,25 +397,17 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$EuAllergyIntoleranceUrl"
+  * target = $EuAllergyIntoleranceUrl
   * element[+]
     * code = #examinationReport.adverseReaction
     * noMap = true
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$ImDiagnosticReportUrl"
+  * target = $ImDiagnosticReportUrl
   * element[+]
     * code = #examinationReport.resultData.observationResults
     * target[+]
       * code = #result
-      * relationship = #related-to
-* group[+]
-  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = "$imCompositionUrl"
-  * element[+]
-    * code = #comparisonStudy
-    * target[+]
-      * code = #section[comparison].entry[study]
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

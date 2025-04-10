@@ -1,6 +1,5 @@
 Profile: ImImageIidViewerEndpoint
 Parent: EndpointEu
-Id: im-viewer-endpoint
 Title: "IM Image Viewer Endpoint"
 Description: """
 This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.

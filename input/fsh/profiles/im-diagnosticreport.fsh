@@ -1,6 +1,5 @@
 Profile: ImDiagnosticReport
 Parent: DiagnosticReport
-Id: im-diagnostic-report
 Title: "Imaging Diagnostic Report"
 Description: """
 Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the `Composition` resource that contains the narrative text of the report.
@@ -24,7 +23,7 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 * basedOn
   * insert SliceElement( #type, $this )
-* basedOn contains imorderaccession 0..1 MS
+* basedOn contains imorderaccession 0..1
 * insert BasedOnImOrderReference( imorderaccession )
 
 
@@ -44,19 +43,19 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 // TODO only main elements or all elements of the eHN dataset?   
 
 // author etc.
-* resultsInterpreter 0..* MS
+* resultsInterpreter 0..*
   * insert SliceElement( #profile, [[resolve()]] )
 * resultsInterpreter contains 
-    author 0..* MS 
+    author 0..* 
 * resultsInterpreter[author] only Reference($EuPractitionerRole)
 
 // refer to the mandatory composition
-* composition 1..1 MS
+* composition 1..1
 * composition ^short = "Imaging Diagnostic Report"
 * composition only Reference(ImComposition)
 
 // code 
-* code 1.. MS
+* code 1..
 * code from ImagingReportTypesEuVS (preferred) // valueset to be revised. 
   * ^short = "Type of Imaging Diagnostic Report"
   * ^definition = "Specifies that it refers to a Imaging Report"

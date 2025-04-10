@@ -1,6 +1,5 @@
 Profile: ImProcedure
 Parent: $EuProcedure
-Id: im-procedure
 Title: "IM Imaging Procedure"
 Description: "This profile on Procedure represents the imaging procedure."
 * insert SetFmmAndStatusRule( 1, draft )
@@ -8,7 +7,7 @@ Description: "This profile on Procedure represents the imaging procedure."
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 // * basedOn
 //   * insert SliceElement( #type, $this )
-// * basedOn contains imorderaccession 0..1 MS
+// * basedOn contains imorderaccession 0..1
 // * insert BasedOnImOrderReference( imorderaccession )
 
 * code 1..1
@@ -17,7 +16,7 @@ Description: "This profile on Procedure represents the imaging procedure."
 * performer 0..*
   * insert SliceElementWithDescription( #value, "function", [[Different performers can be added to the procedure.]] )
   * function 1..1
-* performer contains performer 0..* MS and imaging-device 0..*
+* performer contains performer 0..* and imaging-device 0..*
 * performer[performer]
   * function
     * coding

@@ -26,7 +26,7 @@ class EHDSAllergyIntolerance {
   patient
 }
 link EHDSAllergyIntolerance "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSAllergyIntolerance.html"
-class AllergyIntolerance{
+class EuAllergyIntolerance{
   <<FHIR>>
   identifier
   text
@@ -51,7 +51,7 @@ class AllergyIntolerance{
 class PatientEu {
   <<FHIR>>
 }
-EHDSAllergyIntolerance --> AllergyIntolerance
-AllergyIntolerance --> PatientEu : patient
+EHDSAllergyIntolerance --> EuAllergyIntolerance
+EuAllergyIntolerance --> PatientEu : patient
 ```
 

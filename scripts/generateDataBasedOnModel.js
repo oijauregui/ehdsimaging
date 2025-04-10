@@ -73,7 +73,7 @@ function generateConceptMapFiles(parsedData, srcResources) {
                 
                 writable.write(`* group[+]\n`);
                 writable.write(`  * source = "${XtEHRBaseUrl}${srcResource}"\n`);
-                writable.write(`  * target = "$${tgtResource}Url"\n`);
+                writable.write(`  * target = $${tgtResource}Url\n`);
 
                 const elementCodes = new Set(
                     parsedData

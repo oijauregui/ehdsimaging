@@ -1,6 +1,5 @@
 Profile: ImRadiationDoseObservation
 Parent: $EuObservation
-Id: im-radiation-dose-observation
 Title: "Radiation Dose Observation"
 Description: """
 A record for the radiation dose the subject has been exposed to during an imaging procedure.
@@ -10,7 +9,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 
 * basedOn
   * insert SliceElement( #type, $this )
-* basedOn contains imorderaccession 0..1 MS
+* basedOn contains imorderaccession 0..1
 * insert BasedOnImOrderReference( imorderaccession )
 
 * identifier 0..*

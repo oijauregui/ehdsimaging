@@ -23,7 +23,7 @@ class EHDSProcedure {
   subject
 }
 link EHDSProcedure "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSProcedure.html"
-class Procedure{
+class EuProcedure{
   <<FHIR>>
   identifier
   text
@@ -54,10 +54,10 @@ class LocationEu {
 class PatientEu {
   <<FHIR>>
 }
-EHDSProcedure --> Procedure
-Procedure --> HealthcareProffesionalEu : performer.actor
-Procedure --> DeviceEu : used.concept[device]
-Procedure --> LocationEu : location
-Procedure --> PatientEu : subject
+EHDSProcedure --> EuProcedure
+EuProcedure --> HealthcareProffesionalEu : performer.actor
+EuProcedure --> DeviceEu : used.concept[device]
+EuProcedure --> LocationEu : location
+EuProcedure --> PatientEu : subject
 ```
 

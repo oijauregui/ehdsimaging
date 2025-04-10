@@ -14,7 +14,7 @@ Description: "Map for EHDSAttachment"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"
-  * target = "$AttachmentUrl"
+  * target = $EuAttachmentUrl
   * element[+]
     * code = #contentType
     * target[+]

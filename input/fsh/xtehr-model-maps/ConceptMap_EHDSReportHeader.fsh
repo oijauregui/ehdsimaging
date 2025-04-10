@@ -14,7 +14,7 @@ Description: "Map for EHDSReportHeader"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader"
-  * target = "$ImDiagnosticReportUrl"
+  * target = $ImDiagnosticReportUrl
   * element[+]
     * code = #documentMetadata.presentedForm
     * target[+]

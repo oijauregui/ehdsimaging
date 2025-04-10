@@ -14,7 +14,7 @@ Description: "Map for EHDSProcedure"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure"
-  * target = "$ProcedureUrl"
+  * target = $EuProcedureUrl
   * element[+]
     * code = #identifier
     * target[+]

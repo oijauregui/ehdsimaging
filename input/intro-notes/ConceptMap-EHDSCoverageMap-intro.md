@@ -15,7 +15,7 @@ class EHDSCoverage {
   payor.subscriberId
 }
 link EHDSCoverage "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSCoverage.html"
-class Coverage{
+class EuCoverage{
   <<FHIR>>
   identifier
   type
@@ -41,11 +41,11 @@ class  OrganizationEU {
 class OrganizationEu {
   <<FHIR>>
 }
-EHDSCoverage --> Coverage
-Coverage --> PatientEu : beneficiary
-Coverage --> PatientEU : paymentBy.party
-Coverage -->  RelatedPersion : paymentBy.party
-Coverage -->  OrganizationEU : paymentBy.party
-Coverage --> OrganizationEu : insurer
+EHDSCoverage --> EuCoverage
+EuCoverage --> PatientEu : beneficiary
+EuCoverage --> PatientEU : paymentBy.party
+EuCoverage -->  RelatedPersion : paymentBy.party
+EuCoverage -->  OrganizationEU : paymentBy.party
+EuCoverage --> OrganizationEu : insurer
 ```
 

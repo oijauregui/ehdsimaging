@@ -21,7 +21,7 @@ class EHDSEndpoint {
   header
 }
 link EHDSEndpoint "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSEndpoint.html"
-class Endpoint{
+class EuEndpoint{
   <<FHIR>>
   identifier
   status
@@ -38,7 +38,7 @@ class Endpoint{
 class OrganizationEu {
   <<FHIR>>
 }
-EHDSEndpoint --> Endpoint
-Endpoint --> OrganizationEu : managingOrganization
+EHDSEndpoint --> EuEndpoint
+EuEndpoint --> OrganizationEu : managingOrganization
 ```
 

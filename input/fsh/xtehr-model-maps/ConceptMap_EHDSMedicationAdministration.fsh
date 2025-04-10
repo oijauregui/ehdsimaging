@@ -14,7 +14,7 @@ Description: "Map for EHDSMedicationAdministration"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"
-  * target = "$MedicationAdministrationUrl"
+  * target = $EuMedicationAdministrationUrl
   * element[+]
     * code = #identifier
     * target[+]

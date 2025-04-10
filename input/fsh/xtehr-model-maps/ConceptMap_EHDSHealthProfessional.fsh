@@ -14,7 +14,7 @@ Description: "Map for EHDSHealthProfessional"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
-  * target = "$EuPractitionerUrl"
+  * target = $EuPractitionerUrl
   * element[+]
     * code = #identifier
     * target[+]
@@ -37,7 +37,7 @@ Description: "Map for EHDSHealthProfessional"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
-  * target = "$EuPractitionerRoleUrl"
+  * target = $EuPractitionerRoleUrl
   * element[+]
     * code = #role
     * target[+]
