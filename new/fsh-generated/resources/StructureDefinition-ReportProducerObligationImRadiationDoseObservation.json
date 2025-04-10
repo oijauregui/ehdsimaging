@@ -1,0 +1,38 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ReportProducerObligationImRadiationDoseObservation",
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ReportProducerObligationImRadiationDoseObservation",
+  "name": "ReportProducerObligationImRadiationDoseObservation",
+  "title": "ReportProducer obligation for ImRadiationDoseObservation",
+  "status": "draft",
+  "description": "ReportProducer obligations for ImRadiationDoseObservation",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.eu/fhir/imaging/StructureDefinition/im-radiation-dose-observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.bodySite",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "Observation.bodySite"
+      }
+    ]
+  }
+}

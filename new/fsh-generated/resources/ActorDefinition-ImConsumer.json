@@ -1,0 +1,10 @@
+{
+  "resourceType": "ActorDefinition",
+  "id": "ImConsumer",
+  "url": "http://hl7.eu/fhir/imaging/ActorDefinition/ImConsumer",
+  "title": "IM Consumer",
+  "description": "Application that searches for imaging studies and reports, retrieves them and uses them in a clinical context.",
+  "name": "Imaging study and report consumer",
+  "status": "draft",
+  "type": "system"
+}

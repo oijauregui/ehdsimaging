@@ -10,14 +10,17 @@ Alias: $EuAllergyIntoleranceUrl = http://hl7.eu/fhir/imaging/StructureDefinition
 Alias: $EuBodyStructure      = BodyStructureEu
 Alias: $EuBodyStructureUrl   = http://hl7.eu/fhir/imaging/StructureDefinition/BodyStructureEu
 
-Alias: $EuCondition          = ConditionEu
+Alias: $EuCondition          = ConditionEU
 Alias: $EuConditionUrl       = http://hl7.eu/fhir/imaging/StructureDefinition/ConditionEu
 
-Alias: $EuCarePlan           = ConditionEu
-Alias: $EuCarePlanUrl        = http://hl7.eu/fhir/imaging/StructureDefinition/ConditionEu
+Alias: $EuCarePlan           = CarePlanEu
+Alias: $EuCarePlanUrl        = http://hl7.eu/fhir/imaging/StructureDefinition/CarePlanEu
 
 Alias: $EuDevice             = Device
 Alias: $EuDeviceUrl          = http://hl7.org/fhir/StructureDefinition/Device
+
+Alias: $EuDocumentReference  = DocumentReference
+Alias: $EuDocumentReferenceUrl = http://hl7.org/fhir/StructureDefinition/DocumentReference
 
 Alias: $EuEncounter          = EncounterEU
 Alias: $EuEncounterUrl       = http://hl7.eu/fhir/imaging/StructureDefinition/EncounterEu

@@ -11,12 +11,12 @@ const indices = {
     srcResource: 1,
     srcField: 2,
     srcType: 5,
-    actors: 14,
     tgtResource: 8,
     tgtElement: 9,
     tgtEquivalence: 10,
     tgtRationale: 11,
     tgtRefType: 12,
+    actors: 15,
 };
 
 const XtEHRBaseUrl = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/";
@@ -301,22 +301,22 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
                 }
             });
   
-            if (shallHandleCorrectlyObligations.size > 0) {  
-            writable.write(`\n`);
-            writable.write(`Profile: ConsumerObligation${resourceName}\n`);
-            writable.write(`Parent: ${resourceUrl}\n`);
-            writable.write(`Title: "Consumer obligation for ${resourceName}"\n`);
-            writable.write(`Description: "Consumer obligations for ${resourceName}"\n`);
+            // if (shallHandleCorrectlyObligations.size > 0) {  
+            // writable.write(`\n`);
+            // writable.write(`Profile: ConsumerObligation${resourceName}\n`);
+            // writable.write(`Parent: ${resourceUrl}\n`);
+            // writable.write(`Title: "Consumer obligation for ${resourceName}"\n`);
+            // writable.write(`Description: "Consumer obligations for ${resourceName}"\n`);
   
-            shallHandleCorrectlyObligations.forEach(obligation => {
-                writable.write(`* ${obligation}\n`);
-                writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
-                writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImConsumer)\n`);
-            });
-            }
-            writable.write(`\n`);
-            writable.write(`////////////////////////////////////////////////////\n`);
-            writable.end();
+            // shallHandleCorrectlyObligations.forEach(obligation => {
+            //     writable.write(`* ${obligation}\n`);
+            //     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
+            //     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImConsumer)\n`);
+            // });
+            // }
+            // writable.write(`\n`);
+            // writable.write(`////////////////////////////////////////////////////\n`);
+            // writable.end();
         }
     });
 }
@@ -356,9 +356,7 @@ function main() {
         generateIntroFiles(parsedData, srcResources);
         
         
-        // generateObligationFiles(parsedData);
-
-        
+        generateObligationFiles(parsedData);        
     });
 }
 

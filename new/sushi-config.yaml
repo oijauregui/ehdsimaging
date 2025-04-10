@@ -57,6 +57,9 @@ pages:
   profiles.md:
     imaging-manifest.md:
       title: Imaging Manifest
+    imaging-report.md:
+      title: Imaging Report
+
   # actors-and-transactions.md:
   #   title: Actors and Transactions
   #   system-actors.md:
@@ -80,14 +83,6 @@ pages:
   # open-topics.md:
   #   title: Open Topics
 
-
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
-#
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -107,7 +102,7 @@ parameters:
   show-inherited-invariants: true
   usage-stats-opt-out: true
   # add all fsh results to _data directory
-  produce-jekyll-data: true
+  # produce-jekyll-data: true
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -119,13 +114,11 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  # Volume 1:
-  # Volume 2:
-  Volume 3:
-    XtEHR: xtehr.html
+  XtEHR model:
     XtEHR-model: xtehr-logical-model.html
     XtEHR-mapping: xtehr-mapping.html
-    manifest: imaging-manifest.html
+  Imaging Manifest: imaging-manifest.html
+  Imaging Report: imaging-report.html
 
   #   Changes: changes.html
   #   Dependencies: index.html#dependencies
