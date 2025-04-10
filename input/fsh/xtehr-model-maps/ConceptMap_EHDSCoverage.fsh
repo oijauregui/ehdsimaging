@@ -14,7 +14,7 @@ Description: "Map for EHDSCoverage"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"
-  * target = "$CoverageUrl"
+  * target = $EuCoverageUrl
   * element[+]
     * code = #identifier
     * target[+]

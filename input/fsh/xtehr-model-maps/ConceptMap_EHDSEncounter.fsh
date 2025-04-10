@@ -14,7 +14,7 @@ Description: "Map for EHDSEncounter"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"
-  * target = "$EuEncounterUrl"
+  * target = $EuEncounterUrl
   * element[+]
     * code = #identifier
     * target[+]

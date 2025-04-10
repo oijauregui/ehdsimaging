@@ -1,6 +1,5 @@
 Profile: ImOrder
 Parent: $EuServiceRequest
-Id: im-order
 Title: "IM Imaging Order"
 Description: "This profile on ServiceRequest represents the order for the Imaging Study and report."
 * insert SetFmmAndStatusRule( 1, draft )
@@ -25,26 +24,26 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
 * supportingInfo contains pregnacy 0..1
 * supportingInfo[pregnacy] from http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
 
-// * status 1..1 MS
+// * status 1..1
 
-// * subject 1..1 MS
+// * subject 1..1
 // * subject only Reference(ImPatient)
 
 // // TODO obligation for client?
-// * intent 1..1 MS
+// * intent 1..1
 
-// * insurance 0..1 MS
+// * insurance 0..1
 //   * insert SetPopulateIfKnown
 // * insurance only Reference(ImCoverage)
 
-// * requester 0..1 MS
+// * requester 0..1
 //   * insert SetPopulateIfKnown
 // * requester only Reference(ImOrderPlacer or ImPatient)
 
-// * authoredOn 0..1 MS
+// * authoredOn 0..1
 //   * insert SetPopulateIfKnown
 
-// * reason 0..* MS
+// * reason 0..*
 //   * insert SetPopulateIfKnown
 //   * ^short = "Clinical question/reason for the order"
 //   * ^definition = "The reason for the order. Can be coded, textual or a reference to a structured element."
@@ -56,9 +55,9 @@ Id: im-accession-number-identifier
 Title: "Imaging Accession Number Identifier"
 Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
 * insert SetFmmAndStatusRule( 1, draft )
-* system 1..1 MS
-* value 1..1 MS
-* type 1..1 MS
+* system 1..1
+* value 1..1
+* type 1..1
 * type = http://terminology.hl7.org/5.1.0/CodeSystem-v2-0203.html#ACSN
 
 // Profile: ImOrderReference
@@ -67,14 +66,14 @@ Description: "This profile on Identifier represents the Accession Number for the
 // Title: "Imaging Accession Number Reference"
 // Description: "This profile on Reference represents a reference to an Imaging Order."
 // * insert SetFmmAndStatusRule( 1, draft )
-// * reference 1..1 MS
-// * identifier 0..1 MS
+// * reference 1..1
+// * identifier 0..1
 // * identifier only ImAccessionNumberIdentifier
 //   * insert SetPopulateIfKnown
 
 RuleSet: BasedOnImOrderReference( slicename )
 * basedOn[{slicename}] only Reference( ImOrder )
-  * identifier 1..1 MS
+  * identifier 1..1
   * identifier only ImAccessionNumberIdentifier
 
 Mapping: DicomToImOrder

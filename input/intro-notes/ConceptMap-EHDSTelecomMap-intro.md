@@ -12,13 +12,13 @@ class EHDSTelecom {
   value
 }
 link EHDSTelecom "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSTelecom.html"
-class ContactPoint{
+class EuContactPoint{
   <<FHIR>>
   use
   system
   value
 }
 
-EHDSTelecom --> ContactPoint
+EHDSTelecom --> EuContactPoint
 ```
 

@@ -14,7 +14,7 @@ Description: "Map for EHDSEpisodeOfCare"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"
-  * target = "$EpisodeOfCareUrl"
+  * target = $EuEpisodeOfCareUrl
   * element[+]
     * code = #identifier
     * target[+]

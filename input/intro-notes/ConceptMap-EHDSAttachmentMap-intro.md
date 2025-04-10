@@ -21,7 +21,7 @@ class EHDSAttachment {
   duration
 }
 link EHDSAttachment "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSAttachment.html"
-class Attachment{
+class EuAttachment{
   <<FHIR>>
   contentType
   language
@@ -37,6 +37,6 @@ class Attachment{
   duration
 }
 
-EHDSAttachment --> Attachment
+EHDSAttachment --> EuAttachment
 ```
 

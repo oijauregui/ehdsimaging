@@ -1,6 +1,5 @@
 Profile: ImImagingStudy
 Parent: ImagingStudy
-Id: im-imagingstudy
 Title: "IM Imaging Study"
 Description: """ 
 This profile represents an imaging study instance.
@@ -9,13 +8,13 @@ This profile represents an imaging study instance.
 * insert PartOfImagingManifest
 * obeys im-imagingstudy-01
 
-* identifier MS
+* identifier
   * insert SliceElement( #value, system )
-* identifier contains studyInstanceUid 1..1 MS
+* identifier contains studyInstanceUid 1..1
 * identifier[studyInstanceUid]
-  * system MS
+  * system
   * system = "urn:dicom:uid"
-  * value 1.. MS
+  * value 1..
 
 * subject 1..1
 * subject only Reference( $EuPatient or $EuDevice )
@@ -23,7 +22,7 @@ This profile represents an imaging study instance.
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 * basedOn
   * insert SliceElement( #type, $this )
-* basedOn contains imorderaccession 0..1 MS
+* basedOn contains imorderaccession 0..1
 * insert BasedOnImOrderReference( imorderaccession )
 
 * insert EndpointTypes 
@@ -32,7 +31,7 @@ This profile represents an imaging study instance.
   * performer.function from ImImagingStudyPerformerTypeVS (extensible)
   * performer
     * insert SliceElement( #type, actor )
-  * performer contains performer 0..1 MS and device 0..1 MS and custodian 0..1 MS
+  * performer contains performer 0..1 and device 0..1 and custodian 0..1
   * performer[performer]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF
     * actor only Reference( http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu )
@@ -63,8 +62,8 @@ Severity: #warning
 Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:')"
 
 RuleSet: EndpointTypes
-* endpoint 0..* MS  
+* endpoint 0..*  
   * insert SliceElement( #profile, $this )
-* endpoint contains wado 0..1 MS and iid 0..1 MS
+* endpoint contains wado 0..1 and iid 0..1
 * endpoint[wado] only Reference( ImWadoEndpoint )
 * endpoint[iid] only Reference( ImImageIidViewerEndpoint )

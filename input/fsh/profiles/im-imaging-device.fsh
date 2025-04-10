@@ -1,6 +1,5 @@
 Profile: ImImagingDevice
 Parent: Device
-Id: im-imagingdevice
 Title: "Im Imaging Device"
 Description: """The device the made the image."""	
 * insert SetFmmAndStatusRule( 1, draft )

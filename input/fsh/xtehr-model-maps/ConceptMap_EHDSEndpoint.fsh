@@ -14,7 +14,7 @@ Description: "Map for EHDSEndpoint"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"
-  * target = "$EndpointUrl"
+  * target = $EuEndpointUrl
   * element[+]
     * code = #identifier
     * target[+]

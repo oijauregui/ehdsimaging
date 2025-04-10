@@ -14,7 +14,7 @@ Description: "Map for EHDSRelatedPerson"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"
-  * target = "$RelatedPersonUrl"
+  * target = $EuRelatedPersonUrl
   * element[+]
     * code = #personalIdentifier
     * target[+]

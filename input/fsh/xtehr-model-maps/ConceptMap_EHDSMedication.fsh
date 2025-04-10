@@ -14,7 +14,7 @@ Description: "Map for EHDSMedication"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"
-  * target = "$EuMedicationUrl"
+  * target = $EuMedicationUrl
   * element[+]
     * noMap = true
 

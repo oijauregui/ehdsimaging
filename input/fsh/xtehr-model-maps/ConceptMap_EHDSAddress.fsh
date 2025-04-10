@@ -14,7 +14,7 @@ Description: "Map for EHDSAddress"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"
-  * target = "$EuAddressUrl"
+  * target = $EuAddressUrl
   * element[+]
     * code = #use
     * target[+]

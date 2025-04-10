@@ -104,7 +104,7 @@ class EuObservation{
   status.value
 }
 
-class ServiceRequest{
+class EuServiceRequest{
   <<FHIR>>
   requester
 }
@@ -134,7 +134,7 @@ EuObservation --> PractitionerRoleEU : performer
 EuObservation --> ObervationEu : triggeredBy.observation
 EuObservation --> ObervationEu : hasMember
 EuObservation --> Resource : subject
-EHDSObservation --> ServiceRequest
-ServiceRequest --> HealtcareProffesionalEu : requester
+EHDSObservation --> EuServiceRequest
+EuServiceRequest --> HealtcareProffesionalEu : requester
 ```
 

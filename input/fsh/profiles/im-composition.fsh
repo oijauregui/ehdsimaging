@@ -1,6 +1,5 @@
 Profile: ImComposition
 Parent: CompositionEu
-Id: im-composition
 Title: "Imaging Composition"
 Description: "Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project."
 * . ^short = "Imaging Report composition"
@@ -26,7 +25,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * attester 0..*
   * insert SliceElement( #value, mode )
-* attester contains legalAuthenticator 0..* MS and resultValidator 0..* MS
+* attester contains legalAuthenticator 0..* and resultValidator 0..*
 * attester[legalAuthenticator]
   * mode 1..1
   * mode = #legal
@@ -38,11 +37,11 @@ The `text` field of each section SHALL contain a textual representation of all l
   * party only Reference($EuPractitionerRole)
   * time 1..1
 
-* author 1..* MS
+* author 1..*
   * insert SliceElement( #profile, $this )
 * author contains 
-    author 0..* MS and 
-    authoring-device 0..* MS
+    author 0..* and 
+    authoring-device 0..*
 * author[author] only Reference($EuPractitionerRole)
 * author[authoring-device] only Reference($EuDevice)
 
@@ -64,8 +63,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 * event 2..*
   * insert SliceElement( #value, detail.concept )
 * event contains 
-    study 1..* MS and 
-    procedure 1..* MS
+    study 1..* and 
+    procedure 1..*
 * event[study]
   * ^short = "Modality"
   * ^definition = "The type of imaging modality used to perform the study."
@@ -101,7 +100,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18726-0
   * entry 
     * insert SliceElement( #profile, $this )
-  * entry contains imagingstudy 1..* MS
+  * entry contains imagingstudy 1..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
@@ -113,10 +112,10 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the order for the imaging study."
   * code = $loinc#55115-0 "Order"
 
-  * entry MS
+  * entry
     * insert SliceElement( #profile, "$this" )
   * entry contains 
-      order 0..* MS
+      order 0..*
 
   * entry[order]
     * ^short = "Order reference"
@@ -136,7 +135,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry 
     * insert SliceElement( #profile, $this )
   * entry contains 
-      procedure 0..* MS
+      procedure 0..*
   * entry[procedure] only Reference(ImProcedure)
 
 
@@ -144,21 +143,21 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[comparison]
   * ^short = "History"
   * code = $loinc#18834-2 "Comparison"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      comparedstudy 0..* MS
+      comparedstudy 0..*
   * entry[comparedstudy] only Reference( ImImagingStudy or ImImagingSelection )
 
 // /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 "Findings"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      finding 0..* MS and
-      keyimage 0..* MS
+      finding 0..* and
+      keyimage 0..*
   * entry[finding] only Reference(ImFinding)
   * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImageImagingSelection)
 
@@ -166,12 +165,12 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 "Impression"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      finding 0..* MS and
-      impression 0..* MS and
-      keyimage 0..* MS
+      finding 0..* and
+      impression 0..* and
+      keyimage 0..*
   * entry[finding] only Reference(ImFinding)
   * entry[impression] only Reference( $EuCondition )
   * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImageImagingSelection)
@@ -180,10 +179,10 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 "Recommendation"
-  * entry MS
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      recommendedCarePlan 0..* MS
+      recommendedCarePlan 0..*
   * entry[recommendedCarePlan] only Reference($EuCarePlan)
 
 

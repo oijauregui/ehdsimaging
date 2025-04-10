@@ -14,7 +14,7 @@ Description: "Map for EHDSTelecom"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom"
-  * target = "$ContactPointUrl"
+  * target = $EuContactPointUrl
   * element[+]
     * code = #use
     * target[+]

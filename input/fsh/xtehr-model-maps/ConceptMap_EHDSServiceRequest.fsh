@@ -14,7 +14,7 @@ Description: "Map for EHDSServiceRequest"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"
-  * target = "$ServiceRequestUrl"
+  * target = $EuServiceRequestUrl
   * element[+]
     * code = #serviceText
     * target[+]

@@ -17,7 +17,7 @@ class EHDSEpisodeOfCare {
   patient
 }
 link EHDSEpisodeOfCare "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSEpisodeOfCare.html"
-class EpisodeOfCare{
+class EuEpisodeOfCare{
   <<FHIR>>
   identifier
   type
@@ -29,6 +29,6 @@ class EpisodeOfCare{
   subject
 }
 
-EHDSEpisodeOfCare --> EpisodeOfCare
+EHDSEpisodeOfCare --> EuEpisodeOfCare
 ```
 

@@ -63,10 +63,11 @@ The manifest is a FHIR bundle that includes ImComposition and ImDiagnosticReport
 These define constraints on FHIR resources for systems conforming to this implementation guide.
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name NOT IN ('ImImagingStudyManifest', 'ImWadoEndpoint', 'ImImageIidViewerEndpoint') AND Name NOT LIKE 'EU%' ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name NOT IN ('ImImagingStudyManifest', 'ImWadoEndpoint', 'ImImageIidViewerEndpoint') AND Name LIKE 'Im%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Title", "target" : "Web"},
+    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
     { "name" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}

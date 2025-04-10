@@ -1,6 +1,5 @@
 Profile: ImWadoEndpoint
 Parent: EndpointEu
-Id: im-wado-endpoint
 Title: "IM WADO Endpoint"
 Description: """
 This profile defines the WADO endpoint for accessing imaging study content.
@@ -45,7 +44,7 @@ This profile defines the WADO endpoint for accessing imaging study content.
       text-plain 1..1 and
       text-xml 1..1 and  
       text-rtf 1..1 and
-      application-pdf 1..1 MS
+      application-pdf 1..1
 
   * mimeType[dicom]           = #application/dicom
   * mimeType[dicom-octet]     = #application/octet-stream

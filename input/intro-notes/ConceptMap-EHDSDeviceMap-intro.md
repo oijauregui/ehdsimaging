@@ -20,7 +20,7 @@ class EHDSDevice {
   note
 }
 link EHDSDevice "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSDevice.html"
-class Device{
+class EuDevice{
   <<FHIR>>
   identifier
   manufacturer
@@ -35,6 +35,6 @@ class Device{
   note
 }
 
-EHDSDevice --> Device
+EHDSDevice --> EuDevice
 ```
 

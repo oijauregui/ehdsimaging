@@ -22,7 +22,7 @@ class EHDSMedia {
   performer
 }
 link EHDSMedia "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSMedia.html"
-class DocumentReference{
+class EuDocumentReference{
   <<FHIR>>
   identifier
   modality
@@ -35,7 +35,7 @@ class DocumentReference{
   extension[note]
 }
 
-class Device{
+class EuDevice{
   <<FHIR>>
   name
 }
@@ -49,10 +49,10 @@ class PractitionerRole {
 class  Practitioner {
   <<FHIR>>
 }
-EHDSMedia --> DocumentReference
-DocumentReference --> Device : author
-DocumentReference --> PractitionerRole : author
-DocumentReference -->  Practitioner : author
-EHDSMedia --> Device
+EHDSMedia --> EuDocumentReference
+EuDocumentReference --> Device : author
+EuDocumentReference --> PractitionerRole : author
+EuDocumentReference -->  Practitioner : author
+EHDSMedia --> EuDevice
 ```
 

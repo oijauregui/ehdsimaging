@@ -55,10 +55,13 @@ pages:
     xtehr-mapping.md:
       title: Mapping to XtEHR Logical Model
   profiles.md:
+    title: Deployment profiles
     imaging-manifest.md:
       title: Imaging Manifest
     imaging-report.md:
       title: Imaging Report
+    design-considerations.md:
+      title: Design Considerations
 
   # actors-and-transactions.md:
   #   title: Actors and Transactions
@@ -114,12 +117,17 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  #   Changes: changes.html
+  #   Dependencies: index.html#dependencies
+  #   References: index.html#references
+  #   Adapting Guidelines for Country use: adapting.html
   XtEHR model:
     XtEHR-model: xtehr-logical-model.html
     XtEHR-mapping: xtehr-mapping.html
   Imaging Manifest: imaging-manifest.html
   Imaging Report: imaging-report.html
-
+  Artifacts: artifacts.html
+  Design Considerations: design-considerations.html
   #   Changes: changes.html
   #   Dependencies: index.html#dependencies
   #   References: index.html#references

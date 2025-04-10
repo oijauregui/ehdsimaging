@@ -18,7 +18,7 @@ class EHDSPatient {
   communicationLanguage
 }
 link EHDSPatient "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSPatient.html"
-class PatientEuCore{
+class EuPatient{
   <<FHIR>>
   identifier
   name
@@ -32,6 +32,6 @@ class PatientEuCore{
   communication.language
 }
 
-EHDSPatient --> PatientEuCore
+EHDSPatient --> EuPatient
 ```
 

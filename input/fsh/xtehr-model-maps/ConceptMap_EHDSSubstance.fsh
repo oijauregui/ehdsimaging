@@ -14,7 +14,7 @@ Description: "Map for EHDSSubstance"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance"
-  * target = "$SubstanceUrl"
+  * target = $EuSubstanceUrl
   * element[+]
     * code = #identifier
     * target[+]

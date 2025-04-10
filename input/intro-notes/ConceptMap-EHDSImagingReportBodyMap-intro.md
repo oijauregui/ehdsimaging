@@ -74,20 +74,17 @@ class ImComposition{
   section[recommendation]
   section[recommendation].extension[note]
   section[recommendation].entry[careplan]
+  section[comparison].entry[study]
 }
 
 class ImOrder{
   <<FHIR>>
   authoredOn
+  practitioner
   reason.concept
   supportingInfo.reference
   supportingInfo
   reason
-}
-
-class imOrder{
-  <<FHIR>>
-  practitioner
 }
 
 class ImGestationalAgeObservation{
@@ -115,7 +112,7 @@ class ImRadiationDoseObservation{
   bodySite
 }
 
-class BodyStructure{
+class EuBodyStructure{
   <<FHIR>>
   series.bodySite
   includedStructure.laterality
@@ -140,11 +137,6 @@ class EuAllergyIntolerance
 class ImDiagnosticReport{
   <<FHIR>>
   result
-}
-
-class imComposition{
-  <<FHIR>>
-  section[comparison].entry[study]
 }
 
 class ImOrder {
@@ -177,10 +169,13 @@ class ImImpression {
 class EuCarePlan {
   <<FHIR>>
 }
-class ObservationEu {
+class ImImagingStudy {
   <<FHIR>>
 }
 class PractitionerRoleEu {
+  <<FHIR>>
+}
+class ObservationEu {
   <<FHIR>>
 }
 class ImProcedure {
@@ -190,9 +185,6 @@ class EuAllergyIntolerance {
   <<FHIR>>
 }
 class  ImRadiationDoseObservation {
-  <<FHIR>>
-}
-class ImImagingStudy {
   <<FHIR>>
 }
 EHDSImagingReportBody --> ImComposition
@@ -207,15 +199,15 @@ ImComposition --> ImFinding : section[findings].entry[ImFinding]
 ImComposition --> ImFinding : section[impression].entry[ImImpression]
 ImComposition --> ImImpression : section[impression].entry[ImFinding]
 ImComposition --> EuCarePlan : section[recommendation].entry[careplan]
+ImComposition --> ImImagingStudy : section[comparison].entry[study]
 EHDSImagingReportBody --> ImOrder
+ImOrder --> PractitionerRoleEu : practitioner
 ImOrder --> ObservationEu : supportingInfo.reference
-EHDSImagingReportBody --> imOrder
-imOrder --> PractitionerRoleEu : practitioner
 EHDSImagingReportBody --> ImGestationalAgeObservation
 EHDSImagingReportBody --> ImPatient
 EHDSImagingReportBody --> ImImagingStudy
 EHDSImagingReportBody --> ImRadiationDoseObservation
-EHDSImagingReportBody --> BodyStructure
+EHDSImagingReportBody --> EuBodyStructure
 EHDSImagingReportBody --> ImMedicationAdministration
 ImMedicationAdministration --> ImProcedure : partOf
 EHDSImagingReportBody --> ImAdverseEvent
@@ -225,7 +217,5 @@ EHDSImagingReportBody --> EuAllergyIntolerance
 EHDSImagingReportBody --> ImDiagnosticReport
 ImDiagnosticReport --> ImFinding : result
 ImDiagnosticReport -->  ImRadiationDoseObservation : result
-EHDSImagingReportBody --> imComposition
-imComposition --> ImImagingStudy : section[comparison].entry[study]
 ```
 

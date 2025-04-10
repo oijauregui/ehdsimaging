@@ -14,7 +14,7 @@ Description: "Map for EHDSDevice"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"
-  * target = "$DeviceUrl"
+  * target = $EuDeviceUrl
   * element[+]
     * code = #identifier
     * target[+]

@@ -14,7 +14,7 @@ Description: "Map for EHDSHumanName"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"
-  * target = "$EuHumanNameUrl"
+  * target = $EuHumanNameUrl
   * element[+]
     * code = #use
     * target[+]

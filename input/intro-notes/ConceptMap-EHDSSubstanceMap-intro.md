@@ -17,7 +17,7 @@ class EHDSSubstance {
   ingredients.substance
 }
 link EHDSSubstance "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSSubstance.html"
-class Substance{
+class EuSubstance{
   <<FHIR>>
   identifier
   code
@@ -32,7 +32,7 @@ class Substance{
 class SubstanceEu {
   <<FHIR>>
 }
-EHDSSubstance --> Substance
-Substance --> SubstanceEu : ingredient.substanceReference
+EHDSSubstance --> EuSubstance
+EuSubstance --> SubstanceEu : ingredient.substanceReference
 ```
 

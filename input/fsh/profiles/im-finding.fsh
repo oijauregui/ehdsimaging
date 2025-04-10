@@ -1,6 +1,5 @@
 Profile: ImFinding
 Parent: Observation
-Id: im-finding
 Title: "Finding"
 Description: "Finding during imaging procedure."
 * insert SetFmmAndStatusRule( 1, draft )
@@ -12,14 +11,14 @@ Description: "Finding during imaging procedure."
 
 * basedOn
   * insert SliceElement( #type, $this )
-* basedOn contains imorderaccession 0..1 MS
+* basedOn contains imorderaccession 0..1
 * insert BasedOnImOrderReference( imorderaccession )
   
-// * partOf MS
+// * partOf
 //   * insert SliceElement( #type, $this )
 // * partOf contains 
-//     imagingstudy 0..* MS and
-//     procedure 0..* MS
+//     imagingstudy 0..* and
+//     procedure 0..*
 // * partOf[imagingstudy] only Reference( ImImagingStudy )
 //   * ^short = "Imaging study that produced this observation"
 //   * insert SetPopulateIfKnown
@@ -27,39 +26,39 @@ Description: "Finding during imaging procedure."
 //   * ^short = "Procedure that produced this observation"
 //   * insert SetPopulateIfKnown
 
-// * status MS
+// * status
 
-// * category MS
+// * category
 //   * insert SliceElement( #value, $this )
-// * category contains imaging 1..1 MS
+// * category contains imaging 1..1
 // * category[imaging] = http://terminology.hl7.org/CodeSystem/observation-category#imaging
 
-// * code MS
+// * code
 
-// * subject MS
+// * subject
 // * subject only Reference( ImPatient )
 
-// * effective[x] MS
+// * effective[x]
 //   * insert SetPopulateIfKnown
 
-// * performer MS
+// * performer
 // * performer only Reference( ImPractitionerRole )
 //   * insert SetPopulateIfKnown
 
-// * value[x] MS
+// * value[x]
 //   * insert SetPopulateIfKnown
 
-// * note MS
+// * note
 //   * insert SetPopulateIfKnown
 
-// * method MS
+// * method
 //   * insert SetPopulateIfKnown
 
-// * derivedFrom MS
+// * derivedFrom
 //   * insert SliceElement( #type, $this )
 // * derivedFrom contains 
-//     imagingstudy 0..* MS and
-//     imagingselection 0..* MS
+//     imagingstudy 0..* and
+//     imagingselection 0..*
 // * derivedFrom[imagingstudy] only Reference( ImImagingStudy )
 //   * ^short = "Imaging study that produced this observation"
 //   * insert SetPopulateIfKnown

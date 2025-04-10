@@ -14,7 +14,7 @@ Description: "Map for EHDSCondition"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition"
-  * target = "$EuConditionUrl"
+  * target = $EuConditionUrl
   * element[+]
     * code = #identifier
     * target[+]

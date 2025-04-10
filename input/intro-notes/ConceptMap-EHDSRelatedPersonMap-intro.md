@@ -14,7 +14,7 @@ class EHDSRelatedPerson {
   telecom
 }
 link EHDSRelatedPerson "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSRelatedPerson.html"
-class RelatedPerson{
+class EuRelatedPerson{
   <<FHIR>>
   identifier
   name
@@ -23,6 +23,6 @@ class RelatedPerson{
   telecom
 }
 
-EHDSRelatedPerson --> RelatedPerson
+EHDSRelatedPerson --> EuRelatedPerson
 ```
 

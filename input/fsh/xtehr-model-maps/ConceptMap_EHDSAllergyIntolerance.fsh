@@ -14,7 +14,7 @@ Description: "Map for EHDSAllergyIntolerance"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"
-  * target = "$AllergyIntoleranceUrl"
+  * target = $EuAllergyIntoleranceUrl
   * element[+]
     * code = #identifier
     * target[+]
