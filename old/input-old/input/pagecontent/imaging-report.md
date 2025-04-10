@@ -1,1 +1,0 @@
-This page describes the imaging report.
