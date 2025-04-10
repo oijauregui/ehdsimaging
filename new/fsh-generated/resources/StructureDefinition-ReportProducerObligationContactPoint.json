@@ -1,0 +1,76 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ReportProducerObligationContactPoint",
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ReportProducerObligationContactPoint",
+  "name": "ReportProducerObligationContactPoint",
+  "title": "ReportProducer obligation for ContactPoint",
+  "status": "draft",
+  "description": "ReportProducer obligations for ContactPoint",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "ContactPoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ContactPoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ContactPoint.system",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ContactPoint.system"
+      },
+      {
+        "id": "ContactPoint.value",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ContactPoint.value"
+      },
+      {
+        "id": "ContactPoint.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ContactPoint.use"
+      }
+    ]
+  }
+}

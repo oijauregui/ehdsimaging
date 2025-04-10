@@ -1,0 +1,540 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ReportProducerObligationImDiagnosticReport",
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ReportProducerObligationImDiagnosticReport",
+  "name": "ReportProducerObligationImDiagnosticReport",
+  "title": "ReportProducer obligation for ImDiagnosticReport",
+  "status": "draft",
+  "description": "ReportProducer obligations for ImDiagnosticReport",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.eu/fhir/imaging/StructureDefinition/im-diagnostic-report",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.meta.security",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle-correctly"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.meta.security"
+      },
+      {
+        "id": "DiagnosticReport.language",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle-correctly"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.language"
+      },
+      {
+        "id": "DiagnosticReport.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.identifier"
+      },
+      {
+        "id": "DiagnosticReport.basedOn",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.basedOn"
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle-correctly"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.status"
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle-correctly"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.code"
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.subject"
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DiagnosticReport.effective[x]:effectivePeriod",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.effective[x]",
+        "sliceName": "effectivePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.issued"
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.result"
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.media"
+      },
+      {
+        "id": "DiagnosticReport.composition",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.composition"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.contentType",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.contentType"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.language",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.language"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.data",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.data"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.url",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.url"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.size",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.size"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.hash",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.hash"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.title",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.title"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.creation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.creation"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.height",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.height"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.width",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.width"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.frames",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.frames"
+      },
+      {
+        "id": "DiagnosticReport.presentedForm.duration",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DiagnosticReport.presentedForm.duration"
+      }
+    ]
+  }
+}

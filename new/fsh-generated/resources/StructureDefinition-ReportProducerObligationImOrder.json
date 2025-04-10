@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ReportProducerObligationImOrder",
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ReportProducerObligationImOrder",
+  "name": "ReportProducerObligationImOrder",
+  "title": "ReportProducer obligation for ImOrder",
+  "status": "draft",
+  "description": "ReportProducer obligations for ImOrder",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.eu/fhir/imaging/StructureDefinition/im-order",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.identifier:accessionNumber",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.identifier",
+        "sliceName": "accessionNumber"
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.authoredOn"
+      },
+      {
+        "id": "ServiceRequest.reason",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.reason"
+      },
+      {
+        "id": "ServiceRequest.reason.concept",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.reason.concept"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.supportingInfo"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.supportingInfo.reference"
+      }
+    ]
+  }
+}

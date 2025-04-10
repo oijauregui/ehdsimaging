@@ -91,6 +91,46 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/codesystem-diagnostic-report-support-info"
+        },
+        "name": "Diagnostic Report Support Info Code System",
+        "description": "Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/valueset-diagnosticreport-report-support-info"
+        },
+        "name": "DiagnosticReport supportInfo codes",
+        "description": "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-composition-diagnosticReportReference"
+        },
+        "name": "Document DiagnosticReport Reference",
+        "description": "This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-dose-length-units"
+        },
+        "name": "Dose Length Units",
+        "description": "Units for Dose Length.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-effective-dose-units"
+        },
+        "name": "Effective Dose Units",
+        "description": "Units for Effective Dose.",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/AllergyIntoleranceEu"
         },
         "name": "EU AllergyIntolerance",
@@ -194,6 +234,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/im-finding"
+        },
+        "name": "Finding",
+        "description": "Finding during imaging procedure.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-gestational-age-observation"
+        },
+        "name": "Gestational Age Observation",
+        "description": "Gestational Age Observation",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-gray-square-units"
+        },
+        "name": "Gray Square Units",
+        "description": "Units for Gray Square.",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/im-viewer-endpoint"
         },
         "name": "IM Image Viewer Endpoint",
@@ -266,6 +330,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/im-composition"
+        },
+        "name": "Imaging Composition",
+        "description": "Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project.",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/im-imaging-device-type"
         },
         "name": "Imaging Device Type",
@@ -274,10 +346,66 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/im-diagnostic-report"
+        },
+        "name": "Imaging Diagnostic Report",
+        "description": "Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the `Composition` resource that contains the narrative text of the report.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-keyimages-document-reference"
+        },
+        "name": "Imaging Key Image Document Reference",
+        "description": "A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.\n\nWhen the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element. ",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/im-procedure-type"
         },
         "name": "Imaging Procedure Type",
         "description": "This value set includes all imaging procedure types.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-reportType-eu-lab"
+        },
+        "name": "Imaging Report Types",
+        "description": "Imaging Report Types.\nThis version includes only one code as suggested by the eHN guideline.\nTo add specificity the https://loinc.org/kb/users-guide/loinc-rsna-radiology-playbook-user-guide/ could be incorporated as the source of imaging study/report types.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-imaging-selection"
+        },
+        "name": "Imaging Selection",
+        "description": "Imaging Selection",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-sr-instance-imaging-selection"
+        },
+        "name": "Imaging Selection referring to a DICOM SR instance",
+        "description": "Imaging Selection referring to a DICOM SR instance",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ImConsumer"
+        },
+        "name": "Imaging Study and Reports Consumer",
+        "description": "Application consumer the imaging studies and reports and uses them in a clinical context.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ImProvider"
+        },
+        "name": "Imaging Study and Reports Provider",
+        "description": "Producer profile for this IG",
         "isExample": false
       },
       {
@@ -294,6 +422,125 @@
         },
         "name": "Instance Description",
         "description": "A description of the instance in an ImagingStudy.",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-keyimage-imaging-selection"
+        },
+        "name": "Key images represented as an ImagingSelection",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationAttachment"
+        },
+        "name": "ManifestProducer obligation for Attachment",
+        "description": "ManifestProducer obligations for Attachment",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationBodyStructure"
+        },
+        "name": "ManifestProducer obligation for BodyStructure",
+        "description": "ManifestProducer obligations for BodyStructure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationContactPoint"
+        },
+        "name": "ManifestProducer obligation for ContactPoint",
+        "description": "ManifestProducer obligations for ContactPoint",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationDevice"
+        },
+        "name": "ManifestProducer obligation for Device",
+        "description": "ManifestProducer obligations for Device",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationDocumentReference"
+        },
+        "name": "ManifestProducer obligation for DocumentReference",
+        "description": "ManifestProducer obligations for DocumentReference",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationEndpoint"
+        },
+        "name": "ManifestProducer obligation for Endpoint",
+        "description": "ManifestProducer obligations for Endpoint",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationImImagingStudy"
+        },
+        "name": "ManifestProducer obligation for ImImagingStudy",
+        "description": "ManifestProducer obligations for ImImagingStudy",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationImOrder"
+        },
+        "name": "ManifestProducer obligation for ImOrder",
+        "description": "ManifestProducer obligations for ImOrder",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationImPatient"
+        },
+        "name": "ManifestProducer obligation for ImPatient",
+        "description": "ManifestProducer obligations for ImPatient",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationImProcedure"
+        },
+        "name": "ManifestProducer obligation for ImProcedure",
+        "description": "ManifestProducer obligations for ImProcedure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationPatientEuCore"
+        },
+        "name": "ManifestProducer obligation for PatientEuCore",
+        "description": "ManifestProducer obligations for PatientEuCore",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationProcedure"
+        },
+        "name": "ManifestProducer obligation for Procedure",
+        "description": "ManifestProducer obligations for Procedure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationRelatedPerson"
+        },
+        "name": "ManifestProducer obligation for RelatedPerson",
+        "description": "ManifestProducer obligations for RelatedPerson",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ManifestProducerObligationServiceRequest"
+        },
+        "name": "ManifestProducer obligation for ServiceRequest",
+        "description": "ManifestProducer obligations for ServiceRequest",
         "isExample": false
       },
       {
@@ -538,6 +785,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/codesystem-missing-dicom-terminology"
+        },
+        "name": "Missing DICOM Terminology",
+        "description": "Code system for codes that are defined in DICOM but for which no matching code system is available in FHIR.",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/PatientAnimalEu"
         },
         "name": "Patient: Animal",
@@ -558,6 +813,198 @@
         },
         "name": "Periods of Life Extension",
         "description": "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-radiation-dose-observation"
+        },
+        "name": "Radiation Dose Observation",
+        "description": "A record for the radiation dose the subject has been exposed to during an imaging procedure.\nE.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html and https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/index.html",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationAllergyIntolerance"
+        },
+        "name": "ReportProducer obligation for AllergyIntolerance",
+        "description": "ReportProducer obligations for AllergyIntolerance",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationAttachment"
+        },
+        "name": "ReportProducer obligation for Attachment",
+        "description": "ReportProducer obligations for Attachment",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationBodyStructure"
+        },
+        "name": "ReportProducer obligation for BodyStructure",
+        "description": "ReportProducer obligations for BodyStructure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationContactPoint"
+        },
+        "name": "ReportProducer obligation for ContactPoint",
+        "description": "ReportProducer obligations for ContactPoint",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationCoverage"
+        },
+        "name": "ReportProducer obligation for Coverage",
+        "description": "ReportProducer obligations for Coverage",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationDevice"
+        },
+        "name": "ReportProducer obligation for Device",
+        "description": "ReportProducer obligations for Device",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationDocumentReference"
+        },
+        "name": "ReportProducer obligation for DocumentReference",
+        "description": "ReportProducer obligations for DocumentReference",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationEpisodeOfCare"
+        },
+        "name": "ReportProducer obligation for EpisodeOfCare",
+        "description": "ReportProducer obligations for EpisodeOfCare",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImComposition"
+        },
+        "name": "ReportProducer obligation for ImComposition",
+        "description": "ReportProducer obligations for ImComposition",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImDiagnosticReport"
+        },
+        "name": "ReportProducer obligation for ImDiagnosticReport",
+        "description": "ReportProducer obligations for ImDiagnosticReport",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImFinding"
+        },
+        "name": "ReportProducer obligation for ImFinding",
+        "description": "ReportProducer obligations for ImFinding",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImGestationalAgeObservation"
+        },
+        "name": "ReportProducer obligation for ImGestationalAgeObservation",
+        "description": "ReportProducer obligations for ImGestationalAgeObservation",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImImagingStudy"
+        },
+        "name": "ReportProducer obligation for ImImagingStudy",
+        "description": "ReportProducer obligations for ImImagingStudy",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImOrder"
+        },
+        "name": "ReportProducer obligation for ImOrder",
+        "description": "ReportProducer obligations for ImOrder",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImPatient"
+        },
+        "name": "ReportProducer obligation for ImPatient",
+        "description": "ReportProducer obligations for ImPatient",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImProcedure"
+        },
+        "name": "ReportProducer obligation for ImProcedure",
+        "description": "ReportProducer obligations for ImProcedure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationImRadiationDoseObservation"
+        },
+        "name": "ReportProducer obligation for ImRadiationDoseObservation",
+        "description": "ReportProducer obligations for ImRadiationDoseObservation",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationMedicationAdministration"
+        },
+        "name": "ReportProducer obligation for MedicationAdministration",
+        "description": "ReportProducer obligations for MedicationAdministration",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationPatientEuCore"
+        },
+        "name": "ReportProducer obligation for PatientEuCore",
+        "description": "ReportProducer obligations for PatientEuCore",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationProcedure"
+        },
+        "name": "ReportProducer obligation for Procedure",
+        "description": "ReportProducer obligations for Procedure",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationRelatedPerson"
+        },
+        "name": "ReportProducer obligation for RelatedPerson",
+        "description": "ReportProducer obligations for RelatedPerson",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationServiceRequest"
+        },
+        "name": "ReportProducer obligation for ServiceRequest",
+        "description": "ReportProducer obligations for ServiceRequest",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ReportProducerObligationSubstance"
+        },
+        "name": "ReportProducer obligation for Substance",
+        "description": "ReportProducer obligations for Substance",
         "isExample": false
       },
       {
@@ -622,6 +1069,12 @@
               "generation": "markdown",
               "name": "imaging-manifest.html",
               "sourceUrl": "imaging-manifest.html"
+            },
+            {
+              "title": "Imaging Report",
+              "generation": "markdown",
+              "name": "imaging-report.html",
+              "sourceUrl": "imaging-report.html"
             }
           ],
           "name": "profiles.html",
@@ -684,13 +1137,6 @@
       {
         "code": {
           "code": "usage-stats-opt-out",
-          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
-        },
-        "value": "true"
-      },
-      {
-        "code": {
-          "code": "produce-jekyll-data",
           "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
         },
         "value": "true"

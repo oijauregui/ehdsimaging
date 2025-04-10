@@ -1,0 +1,10 @@
+{
+  "resourceType": "ActorDefinition",
+  "id": "ImProvider",
+  "url": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider",
+  "title": "IM Provider",
+  "description": "Provides the Imaging study and reports.",
+  "name": "Imaging study and report provider",
+  "status": "draft",
+  "type": "system"
+}

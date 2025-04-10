@@ -1,0 +1,307 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ManifestProducerObligationServiceRequest",
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ManifestProducerObligationServiceRequest",
+  "name": "ManifestProducerObligationServiceRequest",
+  "title": "ManifestProducer obligation for ServiceRequest",
+  "status": "draft",
+  "description": "ManifestProducer obligations for ServiceRequest",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.text"
+      },
+      {
+        "id": "ServiceRequest.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle-correctly"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.status"
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle-correctly"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.intent"
+      },
+      {
+        "id": "ServiceRequest.priority",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.priority"
+      },
+      {
+        "id": "ServiceRequest.code.concept",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.code.concept"
+      },
+      {
+        "id": "ServiceRequest.quantity[x]",
+        "path": "ServiceRequest.quantity[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.quantity[x]:quantityQuantity",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.quantity[x]",
+        "sliceName": "quantityQuantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.subject"
+      },
+      {
+        "id": "ServiceRequest.encounter",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.encounter"
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.requester"
+      },
+      {
+        "id": "ServiceRequest.reason.concept",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.reason.concept"
+      },
+      {
+        "id": "ServiceRequest.reason.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.reason.reference"
+      },
+      {
+        "id": "ServiceRequest.supportingInfo.reference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.supportingInfo.reference"
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.specimen"
+      },
+      {
+        "id": "ServiceRequest.bodySite",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "ServiceRequest.bodySite"
+      }
+    ]
+  }
+}

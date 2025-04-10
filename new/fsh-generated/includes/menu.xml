@@ -14,22 +14,22 @@
     <a href="index.html">Home</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li>
-        <a href="xtehr.html">XtEHR</a>
-      </li>
       <li>
         <a href="xtehr-logical-model.html">XtEHR-model</a>
       </li>
       <li>
         <a href="xtehr-mapping.html">XtEHR-mapping</a>
       </li>
-      <li>
-        <a href="imaging-manifest.html">manifest</a>
-      </li>
     </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
   </li>
 </ul>

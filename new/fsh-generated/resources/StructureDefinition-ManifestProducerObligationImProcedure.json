@@ -1,0 +1,38 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ManifestProducerObligationImProcedure",
+  "url": "http://hl7.eu/fhir/imaging/StructureDefinition/ManifestProducerObligationImProcedure",
+  "name": "ManifestProducerObligationImProcedure",
+  "title": "ManifestProducer obligation for ImProcedure",
+  "status": "draft",
+  "description": "ManifestProducer obligations for ImProcedure",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.eu/fhir/imaging/StructureDefinition/im-procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.location",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging/ActorDefinition/ImProvider"
+              }
+            ]
+          }
+        ],
+        "path": "Procedure.location"
+      }
+    ]
+  }
+}
