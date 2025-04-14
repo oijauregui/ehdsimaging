@@ -164,11 +164,6 @@ Description: "Map for EHDSImagingReportBody"
       * code = #section[procedure].entry[procedure]
       * relationship = #related-to
   * element[+]
-    * code = #examinationReport.adverseReaction
-    * target[+]
-      * code = #section[procedure].text
-      * relationship = #related-to
-  * element[+]
     * code = #examinationReport.resultData
     * target[+]
       * code = #section[findings]
@@ -402,6 +397,9 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
     * target[+]
       * code = #subject
+      * relationship = #related-to
+    * target[+]
+      * code = #suspectEntity[procedure]
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"

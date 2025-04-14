@@ -74,10 +74,10 @@ Description: "Map for EHDSServiceRequest"
   * element[+]
     * code = #occurance[x]
     * target[+]
-      * code = #occuranceDateTime
+      * code = #occurenceDateTime
       * relationship = #related-to
     * target[+]
-      * code = #occurancePeriod
+      * code = #occurencePeriod
       * relationship = #related-to
   * element[+]
     * code = #patientInstructions

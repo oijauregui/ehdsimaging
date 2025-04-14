@@ -41,9 +41,9 @@ The `text` field of each section SHALL contain a textual representation of all l
   * insert SliceElement( #profile, $this )
 * author contains 
     author 0..* and 
-    authoring-device 0..*
+    authoringDevice 0..*
 * author[author] only Reference($EuPractitionerRole)
-* author[authoring-device] only Reference($EuDevice)
+* author[authoringDevice] only Reference($EuDevice)
 
 // type of the report. Matching DiagnosticReport.code
 // code 
@@ -63,9 +63,9 @@ The `text` field of each section SHALL contain a textual representation of all l
 * event 2..*
   * insert SliceElement( #value, detail.concept )
 * event contains 
-    study 1..* and 
+    imagingstudy 1..* and 
     procedure 1..*
-* event[study]
+* event[imagingstudy]
   * ^short = "Modality"
   * ^definition = "The type of imaging modality used to perform the study."
   * detail 1..*
@@ -178,12 +178,13 @@ The `text` field of each section SHALL contain a textual representation of all l
 // /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
   * ^short = "Recommendations"
+  * extension contains $note-url named note 0..1
   * code = $loinc#18783-1 "Recommendation"
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      recommendedCarePlan 0..*
-  * entry[recommendedCarePlan] only Reference($EuCarePlan)
+      careplan 0..*
+  * entry[careplan] only Reference($EuCarePlan)
 
 
 // /////////////////// COMMUNICATION SECTION //////////////////////////

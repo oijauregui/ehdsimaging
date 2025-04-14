@@ -26,6 +26,10 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 * basedOn contains imorderaccession 0..1
 * insert BasedOnImOrderReference( imorderaccession )
 
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains imaging 1..1
+* category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
 
 * subject only Reference(ImPatient)
 
@@ -41,6 +45,11 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
   * type = DiagnosticReportSupportingInfoCodeSystem#imaging-procedure
   * reference only Reference(ImProcedure)
 // TODO only main elements or all elements of the eHN dataset?   
+
+* performer 
+  * insert SliceElement( #profile, $this )
+* performer contains author 1..*
+* performer[author] only Reference($EuPractitionerRole)
 
 // author etc.
 * resultsInterpreter 0..*

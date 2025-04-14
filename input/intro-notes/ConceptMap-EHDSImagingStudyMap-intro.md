@@ -68,7 +68,6 @@ class ImImagingStudy{
   series.bodySite
   series.laterality
   series.specimen
-  section[study].text
   series.started
   series.instance
   series.instance.extension[instance-description]
@@ -99,10 +98,10 @@ class EuServiceRequest {
 class OrganizationEu {
   <<FHIR>>
 }
-class Endpoint {
+class EuEndpoint {
   <<FHIR>>
 }
-class BodyStructureEu {
+class EuBodyStructure {
   <<FHIR>>
 }
 class EuSpecimen {
@@ -113,8 +112,9 @@ ImImagingStudy --> patient-eu : subject
 ImImagingStudy --> Encounter : encounter
 ImImagingStudy --> EuServiceRequest : basedOn
 ImImagingStudy --> OrganizationEu : series.performer[custodian]
-ImImagingStudy --> Endpoint : endpoint
-ImImagingStudy --> BodyStructureEu : series.bodySite
+ImImagingStudy --> EuEndpoint : endpoint
+ImImagingStudy --> EuEndpoint : series.endpoint
+ImImagingStudy --> EuBodyStructure : series.bodySite
 ImImagingStudy --> EuSpecimen : series.specimen
 EHDSImagingStudy --> ImComposition
 EHDSImagingStudy --> ImRadiationDoseObservation

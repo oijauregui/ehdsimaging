@@ -120,9 +120,6 @@ Description: "Map for EHDSImagingStudy"
     * target[+]
       * code = #series.specimen
       * relationship = #related-to
-    * target[+]
-      * code = #section[study].text
-      * relationship = #related-to
   * element[+]
     * code = #series.started
     * target[+]
@@ -200,6 +197,11 @@ Description: "Map for EHDSImagingStudy"
       * relationship = #related-to
   * element[+]
     * code = #series.laterality
+    * target[+]
+      * code = #section[study].text
+      * relationship = #related-to
+  * element[+]
+    * code = #series.specimen
     * target[+]
       * code = #section[study].text
       * relationship = #related-to

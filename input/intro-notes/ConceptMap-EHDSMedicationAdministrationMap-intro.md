@@ -30,8 +30,8 @@ class EuMedicationAdministration{
   status
   statusReason
   medication
-  occuranceDateTime
-  occurancePeriod
+  occurenceDateTime
+  occurencePeriod
   reason
   note
   dosage
