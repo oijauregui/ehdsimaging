@@ -209,32 +209,32 @@ Description: "Map for EHDSImagingStudy"
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.kap
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.totalKerma
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.endTubeKerma
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.breastThickness
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.abd
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #phase.radiationDose
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * comment = "Present in referred DICOM SR document"
       * relationship = #source-is-narrower-than-target
 

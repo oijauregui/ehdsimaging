@@ -53,7 +53,8 @@ Description: "Map for EHDSServiceRequest"
   * element[+]
     * code = #supportingInformation
     * target[+]
-      * code = #supportingInfo.reference
+      * code = #supportingInfo
+      * comment = "Point to observations and conditions"
       * relationship = #related-to
   * element[+]
     * code = #specimen
@@ -86,7 +87,7 @@ Description: "Map for EHDSServiceRequest"
   * element[+]
     * code = #coverage
     * target[+]
-      * code = #insurrance
+      * code = #insurance
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

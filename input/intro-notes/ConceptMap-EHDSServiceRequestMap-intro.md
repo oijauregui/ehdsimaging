@@ -32,16 +32,22 @@ class EuServiceRequest{
   bodySite
   reason.reference
   priority
-  supportingInfo.reference
+  supportingInfo
   specimen
   subject
   encounter
   occuranceDateTime
   occurancePeriod
   patientInstructionMarkdown
-  insurrance
+  insurance
 }
 
+class EuCondition {
+  <<FHIR>>
+}
+class  EuObservation {
+  <<FHIR>>
+}
 class Specimen {
   <<FHIR>>
 }
@@ -52,8 +58,10 @@ class CoverageEu {
   <<FHIR>>
 }
 EHDSServiceRequest --> EuServiceRequest
+EuServiceRequest --> EuCondition : supportingInfo
+EuServiceRequest -->  EuObservation : supportingInfo
 EuServiceRequest --> Specimen : specimen
 EuServiceRequest --> Encounter : encounter
-EuServiceRequest --> CoverageEu : insurrance
+EuServiceRequest --> CoverageEu : insurance
 ```
 

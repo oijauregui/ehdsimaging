@@ -33,10 +33,10 @@ Description: "Map for EHDSProcedure"
   * element[+]
     * code = #date[x]
     * target[+]
-      * code = #occurenceDateTime
+      * code = #occurrenceDateTime
       * relationship = #related-to
     * target[+]
-      * code = #occurancePeriod
+      * code = #occurrencePeriod
       * relationship = #related-to
   * element[+]
     * code = #performer

@@ -44,7 +44,7 @@ Description: "Map for EHDSMedia"
   * element[+]
     * code = #reason
     * target[+]
-      * code = #extension[workflow-reason].concept
+      * code = #extension[workflow-reason].valueCodeableReference.concept
       * relationship = #related-to
   * element[+]
     * code = #bodysite

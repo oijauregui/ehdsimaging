@@ -80,11 +80,11 @@ class ImComposition{
 class ImOrder{
   <<FHIR>>
   authoredOn
-  practitioner
+  requester
   reason.concept
-  supportingInfo.reference
   supportingInfo
   reason
+  supportingInfo[pregnacy]
 }
 
 class ImGestationalAgeObservation{
@@ -95,8 +95,8 @@ class ImGestationalAgeObservation{
 class ImPatient{
   <<FHIR>>
   extension[sexParameterForClinicalUse]
-  extension[sexParameterForClinicalUse].value
-  extension[sexParameterForClinicalUse].period
+  extension[sexParameterForClinicalUse].extension[value].valueCodeableConcept
+  extension[sexParameterForClinicalUse].extension[period].valuePeriod
 }
 
 class ImImagingStudy{
@@ -108,17 +108,18 @@ class ImImagingStudy{
 
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.value
+  component.value[x]
   bodySite
 }
 
 class EuBodyStructure{
   <<FHIR>>
-  series.bodySite
+  morphology
+  includedStructure.structure
   includedStructure.laterality
 }
 
-class ImMedicationAdministration{
+class EuMedicationAdministration{
   <<FHIR>>
   partOf
 }
@@ -145,7 +146,7 @@ class ImOrder {
 class ConditionEu {
   <<FHIR>>
 }
-class MedicationAdministrationEu {
+class EuMedicationAdministration {
   <<FHIR>>
 }
 class DeviceEu {
@@ -175,7 +176,22 @@ class ImImagingStudy {
 class PractitionerRoleEu {
   <<FHIR>>
 }
-class ObservationEu {
+class EuCondition {
+  <<FHIR>>
+}
+class  EuObservation {
+  <<FHIR>>
+}
+class EuObservation {
+  <<FHIR>>
+}
+class EuDevice {
+  <<FHIR>>
+}
+class EuSpecimen {
+  <<FHIR>>
+}
+class EuBodyStructure {
   <<FHIR>>
 }
 class ImProcedure {
@@ -190,7 +206,7 @@ class  ImRadiationDoseObservation {
 EHDSImagingReportBody --> ImComposition
 ImComposition --> ImOrder : section[order].entry[order]
 ImComposition --> ConditionEu : section[history].entry
-ImComposition --> MedicationAdministrationEu : section[history].text
+ImComposition --> EuMedicationAdministration : section[history].text
 ImComposition --> DeviceEu : section[history].entry
 ImComposition --> Observation-pregnancy-status-uv-ips : section[history].entry
 ImComposition --> ImGestationalAgeObservation : section[history].entry
@@ -201,15 +217,21 @@ ImComposition --> ImImpression : section[impression].entry[ImFinding]
 ImComposition --> EuCarePlan : section[recommendation].entry[careplan]
 ImComposition --> ImImagingStudy : section[comparison].entry[study]
 EHDSImagingReportBody --> ImOrder
-ImOrder --> PractitionerRoleEu : practitioner
-ImOrder --> ObservationEu : supportingInfo.reference
+ImOrder --> PractitionerRoleEu : requester
+ImOrder --> EuCondition : supportingInfo
+ImOrder -->  EuObservation : supportingInfo
+ImOrder --> EuObservation : supportingInfo
+ImOrder --> EuMedicationAdministration : reason
+ImOrder --> EuDevice : supportingInfo
 EHDSImagingReportBody --> ImGestationalAgeObservation
 EHDSImagingReportBody --> ImPatient
 EHDSImagingReportBody --> ImImagingStudy
+ImImagingStudy --> EuSpecimen : series.specimen
+ImImagingStudy --> EuBodyStructure : series.bodySite
 EHDSImagingReportBody --> ImRadiationDoseObservation
 EHDSImagingReportBody --> EuBodyStructure
-EHDSImagingReportBody --> ImMedicationAdministration
-ImMedicationAdministration --> ImProcedure : partOf
+EHDSImagingReportBody --> EuMedicationAdministration
+EuMedicationAdministration --> ImProcedure : partOf
 EHDSImagingReportBody --> ImAdverseEvent
 ImAdverseEvent --> ImProcedure : supectEntity[procedure]
 ImAdverseEvent --> EuAllergyIntolerance : contributingFactor[allery]

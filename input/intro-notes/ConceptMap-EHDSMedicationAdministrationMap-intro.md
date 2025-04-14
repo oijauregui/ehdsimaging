@@ -39,20 +39,20 @@ class EuMedicationAdministration{
   dosage.site
   dosage.route
   dosage.method
-  dosage,dose
+  dosage.dose
   dosage.rateRatio
   dosage.rateQuantity
   subject
 }
 
-class Medication {
+class EuMedication {
   <<FHIR>>
 }
 class PatientEu {
   <<FHIR>>
 }
 EHDSMedicationAdministration --> EuMedicationAdministration
-EuMedicationAdministration --> Medication : medication
+EuMedicationAdministration --> EuMedication : medication
 EuMedicationAdministration --> PatientEu : subject
 ```
 

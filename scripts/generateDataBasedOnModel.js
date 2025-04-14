@@ -286,7 +286,7 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
             writable.write(`////////////////////////////////////////////////////\n`);
   
             writable.write(`Profile: ${actor}ProducerObligation${resourceName}\n`);
-            writable.write(`Parent: ${resourceUrl}\n`);
+            writable.write(`Parent: ${resourceUrl.startsWith("Im")?resourceUrl:'$'+resourceUrl}\n`);
             writable.write(`Title: "${actor}Producer obligation for ${resourceName}"\n`);
             writable.write(`Description: "${actor}Producer obligations for ${resourceName}"\n`);
   

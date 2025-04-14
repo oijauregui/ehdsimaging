@@ -84,7 +84,7 @@ class ImComposition{
 
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.value
+  component.value[x]
 }
 
 class patient-eu {
@@ -93,7 +93,7 @@ class patient-eu {
 class Encounter {
   <<FHIR>>
 }
-class ServiceRequest {
+class EuServiceRequest {
   <<FHIR>>
 }
 class OrganizationEu {
@@ -105,17 +105,17 @@ class Endpoint {
 class BodyStructureEu {
   <<FHIR>>
 }
-class SpecimenEu {
+class EuSpecimen {
   <<FHIR>>
 }
 EHDSImagingStudy --> ImImagingStudy
 ImImagingStudy --> patient-eu : subject
 ImImagingStudy --> Encounter : encounter
-ImImagingStudy --> ServiceRequest : basedOn
+ImImagingStudy --> EuServiceRequest : basedOn
 ImImagingStudy --> OrganizationEu : series.performer[custodian]
 ImImagingStudy --> Endpoint : endpoint
 ImImagingStudy --> BodyStructureEu : series.bodySite
-ImImagingStudy --> SpecimenEu : series.specimen
+ImImagingStudy --> EuSpecimen : series.specimen
 EHDSImagingStudy --> ImComposition
 EHDSImagingStudy --> ImRadiationDoseObservation
 ```

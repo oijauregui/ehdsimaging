@@ -58,7 +58,6 @@ class EuObservation{
   value[x]
   component.value[x]
   text
-  value[x[
   valueQuantity
   component.valueQuantity
   valueRange
@@ -112,7 +111,7 @@ class EuServiceRequest{
 class EuDevice {
   <<FHIR>>
 }
-class ServiceRequest {
+class EuServiceRequest {
   <<FHIR>>
 }
 class PractitionerRoleEU {
@@ -129,7 +128,7 @@ class HealtcareProffesionalEu {
 }
 EHDSObservation --> EuObservation
 EuObservation --> EuDevice : device
-EuObservation --> ServiceRequest : basedOn
+EuObservation --> EuServiceRequest : basedOn
 EuObservation --> PractitionerRoleEU : performer
 EuObservation --> ObervationEu : triggeredBy.observation
 EuObservation --> ObervationEu : hasMember

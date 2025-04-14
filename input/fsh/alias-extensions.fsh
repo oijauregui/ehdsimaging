@@ -23,3 +23,4 @@ Alias: $note-url                             = http://hl7.org/fhir/StructureDefi
 Alias: $performer-function-url               = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $allergyintolerance-abatement-url     = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
 Alias: $sexParameter-for-clinical-use-url    = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
+Alias: $workflow-reason-url                  = http://hl7.org/fhir/StructureDefinition/workflow-reason

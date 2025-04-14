@@ -28,8 +28,8 @@ class EuProcedure{
   identifier
   text
   code
-  occurenceDateTime
-  occurancePeriod
+  occurrenceDateTime
+  occurrencePeriod
   performer.actor
   bodySite
   reason
