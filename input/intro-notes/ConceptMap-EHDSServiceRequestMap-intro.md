@@ -36,8 +36,8 @@ class EuServiceRequest{
   specimen
   subject
   encounter
-  occuranceDateTime
-  occurancePeriod
+  occurenceDateTime
+  occurencePeriod
   patientInstructionMarkdown
   insurance
 }

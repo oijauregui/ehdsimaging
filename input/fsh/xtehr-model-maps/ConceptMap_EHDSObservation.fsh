@@ -109,16 +109,16 @@ Description: "Map for EHDSObservation"
       * code = #valueQuantity.code
       * relationship = #source-is-broader-than-target
     * target[+]
-      * code = #ValueRange.low.system
+      * code = #valueRange.low.system
       * relationship = #source-is-broader-than-target
     * target[+]
-      * code = #ValueRange.low.code
+      * code = #valueRange.low.code
       * relationship = #source-is-broader-than-target
     * target[+]
-      * code = #ValueRange.high.system
+      * code = #valueRange.high.system
       * relationship = #source-is-broader-than-target
     * target[+]
-      * code = #ValueRange.high.unit
+      * code = #valueRange.high.unit
       * relationship = #source-is-broader-than-target
   * element[+]
     * code = #observationResult.numericResult.uncertainty
@@ -209,13 +209,13 @@ Description: "Map for EHDSObservation"
       * code = #component.valueQuantity
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange
+      * code = #component.valueRange
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange.low
+      * code = #component.valueRange.low
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange.high
+      * code = #component.valueRange.high
       * relationship = #related-to
   * element[+]
     * code = #component.numericResult.units
@@ -226,16 +226,16 @@ Description: "Map for EHDSObservation"
       * code = #component.valueQuantity.code
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange.low.system
+      * code = #component.valueRange.low.system
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange.low.code
+      * code = #component.valueRange.low.code
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange.high.system
+      * code = #component.valueRange.high.system
       * relationship = #related-to
     * target[+]
-      * code = #component.ValueRange.high.unit
+      * code = #component.valueRange.high.unit
       * relationship = #related-to
   * element[+]
     * code = #component.numericResult.uncertainty

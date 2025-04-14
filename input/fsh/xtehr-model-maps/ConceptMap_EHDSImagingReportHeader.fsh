@@ -119,20 +119,20 @@ Description: "Map for EHDSImagingReportHeader"
   * element[+]
     * code = #documentMetadata.eventType
     * target[+]
-      * code = #event.detail[study]
+      * code = #event[imagingstudy]
       * comment = "modality"
       * relationship = #related-to
     * target[+]
-      * code = #event.detail[procedure]
+      * code = #event[procedure]
       * comment = "study type"
       * relationship = #related-to
   * element[+]
     * code = #documentMetadata.specialty
     * target[+]
-      * code = #event.detail[procedure]
+      * code = #event[procedure]
       * relationship = #related-to
     * target[+]
-      * code = #event.detail[study]
+      * code = #event[imagingstudy]
       * relationship = #related-to
   * element[+]
     * code = #documentMetadata.reportCustodian
@@ -165,10 +165,10 @@ Description: "Map for EHDSImagingReportHeader"
   * element[+]
     * code = #documentMetadata.studyInstanceUid
     * target[+]
-      * code = #event.detail[study]
+      * code = #event[imagingstudy]
       * relationship = #related-to
     * target[+]
-      * code = #study
+      * code = #section[imagingstudy].entry[imagingstudy]
       * relationship = #related-to
   * element[+]
     * code = #documentMetadata.accessionNumber

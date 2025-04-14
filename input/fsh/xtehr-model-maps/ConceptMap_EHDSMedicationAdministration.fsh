@@ -38,10 +38,10 @@ Description: "Map for EHDSMedicationAdministration"
   * element[+]
     * code = #occurance[x]
     * target[+]
-      * code = #occuranceDateTime
+      * code = #occurenceDateTime
       * relationship = #related-to
     * target[+]
-      * code = #occurancePeriod
+      * code = #occurencePeriod
       * relationship = #related-to
   * element[+]
     * code = #reason

@@ -132,6 +132,7 @@ class ImAdverseEvent{
   actuality
   code
   subject
+  suspectEntity[procedure]
 }
 
 class EuAllergyIntolerance
@@ -235,6 +236,7 @@ EuMedicationAdministration --> ImProcedure : partOf
 EHDSImagingReportBody --> ImAdverseEvent
 ImAdverseEvent --> ImProcedure : supectEntity[procedure]
 ImAdverseEvent --> EuAllergyIntolerance : contributingFactor[allery]
+ImAdverseEvent --> ImProcedure : suspectEntity[procedure]
 EHDSImagingReportBody --> EuAllergyIntolerance
 EHDSImagingReportBody --> ImDiagnosticReport
 ImDiagnosticReport --> ImFinding : result

@@ -65,10 +65,10 @@ class EuObservation{
   valueRange.high
   valueQuantity.system
   valueQuantity.code
-  ValueRange.low.system
-  ValueRange.low.code
-  ValueRange.high.system
-  ValueRange.high.unit
+  valueRange.low.system
+  valueRange.low.code
+  valueRange.high.system
+  valueRange.high.unit
   valueQuantity.extension[iso21090-uncertainty]
   valueQuantity.extension[iso21090-uncertaintyType]
   valueRange.low.extension[iso21090-uncertainty]
@@ -85,15 +85,15 @@ class EuObservation{
   subject
   component
   valueString
-  component.ValueRange
-  component.ValueRange.low
-  component.ValueRange.high
+  component.valueRange
+  component.valueRange.low
+  component.valueRange.high
   component.valueQuantity.system
   component.valueQuantity.code
-  component.ValueRange.low.system
-  component.ValueRange.low.code
-  component.ValueRange.high.system
-  component.ValueRange.high.unit
+  component.valueRange.low.system
+  component.valueRange.low.code
+  component.valueRange.high.system
+  component.valueRange.high.unit
   component.valueQuantity.extension[iso21090-uncertainty]
   component.valueQuantity.extension[iso21090-uncertaintyType]
   component.valudeCodeableConcept

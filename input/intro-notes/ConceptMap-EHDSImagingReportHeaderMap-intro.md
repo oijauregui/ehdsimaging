@@ -59,15 +59,15 @@ class ImComposition{
   status
   event.period
   title
-  event.detail[study]
-  event.detail[procedure]
+  event[imagingstudy]
+  event[procedure]
   custodian
   category[template/hl7eu-imaging]
   meta.security
   language
   extension[additional-language]
   version
-  study
+  section[imagingstudy].entry[imagingstudy]
 }
 
 class ImDiagnosticReport{
@@ -117,10 +117,13 @@ class EuPractitionerRole {
 class EuDevice {
   <<FHIR>>
 }
+class ImImagingStudy {
+  <<FHIR>>
+}
 class ImProcedure {
   <<FHIR>>
 }
-class ImImagingStudy {
+class EuOrganization {
   <<FHIR>>
 }
 class ImImagingstudy {
@@ -143,15 +146,17 @@ ImComposition --> EuPractitionerRole : author
 ImComposition --> EuDevice : author[author]
 ImComposition --> EuPractitionerRole : author[authoringDevice]
 ImComposition --> EuPractitionerRole : attester[resultValidator].party
-ImComposition --> EuPractitionerRole : attester[legalAuthenticator]
-ImComposition --> ImProcedure : event.detail[study]
-ImComposition --> ImImagingStudy : event.detail[procedure]
-ImComposition --> ImImagingstudy : event.detail[study]
-ImComposition --> ImImagingstudy : study
+ImComposition --> EuPractitionerRole : attester[legalAuthenticator].party
+ImComposition --> ImImagingStudy : event[imagingstudy]
+ImComposition --> ImProcedure : event[procedure]
+ImComposition --> EuOrganization : custodian
+ImComposition --> ImImagingstudy : event[imagingstudy]
+ImComposition --> ImImagingstudy : section[imagingstudy].entry[imagingstudy]
 EHDSImagingReportHeader --> ImDiagnosticReport
 ImDiagnosticReport --> ImComposition : composition
 ImDiagnosticReport --> EuPatient : subject
 ImDiagnosticReport --> ImOrder : basedOn
+ImDiagnosticReport --> EuPractitionerRole : performer[author]
 EHDSImagingReportHeader --> ImOrder
 ImOrder --> EuCoverage : insurance
 EHDSImagingReportHeader --> ImProcedure

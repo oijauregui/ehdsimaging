@@ -1,6 +1,7 @@
 // lists of EU profiles. Some of the EU profiles are defined in this IG as there has not yet been a
 // decision on where to host them. Using Aliases for them moves that choice to FHIR shorthand.
 
+Alias: $ImAdverseEvent                  = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImAdverseEvent
 Alias: $ImDiagnosticReportUrl           = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImDiagnosticReport
 Alias: $ImFindingUrl                    = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImFinding
 Alias: $ImGestationalAgeObservationUrl  = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImGestationalAgeObservation
