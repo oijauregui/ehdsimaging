@@ -19,7 +19,7 @@ Description: "Imaging Selection referring to a DICOM SR instance"
 * identifier 1..*
   * insert SliceElement( #value, type )
 * identifier contains sopInstanceUid 1..1
-* identifier[sopInstanceUid].type = MissingDicomTerminology#00080018 "SOP Instance UID"
+* identifier[sopInstanceUid] only ImSopInstanceUidIdentifier
 
 * studyUid 1..1
 * seriesUid 1..1

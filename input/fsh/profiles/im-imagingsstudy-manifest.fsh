@@ -14,6 +14,7 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
     and      order 0..1
     and      endpoint 1..*
     and      imagingdevice 0..*
+    and      practitioner 0..*
 * entry[imagingstudy]
   * fullUrl 1..1
   * resource 1..1
@@ -34,6 +35,10 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
   * fullUrl 1..1
   * resource 1..1
   * resource only ImImagingDevice
+* entry[practitioner]
+  * fullUrl 1..1
+  * resource 1..1
+  * resource only $EuPractitioner or $EuPractitionerRole
 
 
 // Profile: ImManifestImagingStudy

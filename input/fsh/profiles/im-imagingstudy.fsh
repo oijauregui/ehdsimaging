@@ -11,10 +11,7 @@ This profile represents an imaging study instance.
 * identifier
   * insert SliceElement( #value, system )
 * identifier contains studyInstanceUid 1..1
-* identifier[studyInstanceUid]
-  * system
-  * system = "urn:dicom:uid"
-  * value 1..
+* identifier[studyInstanceUid] only ImStudyInstanceUidIdentifier
 
 * subject 1..1
 * subject only Reference( $EuPatient or $EuDevice )

@@ -13,11 +13,7 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
 * identifier
   * insert SliceElement( #value, type )
 * identifier contains accessionNumber 0..1
-* identifier[accessionNumber]
-  * type 1..1 
-  * type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
-  * value 1..1 
-  * system 1..1 
+* identifier[accessionNumber] only ImAccessionNumberIdentifier
 
 * supportingInfo 0..*
   * insert SliceElement( #value, $this )
@@ -49,32 +45,7 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
 //   * ^definition = "The reason for the order. Can be coded, textual or a reference to a structured element."
 
 
-Profile: ImAccessionNumberIdentifier
-Parent: Identifier
-Id: im-accession-number-identifier
-Title: "Imaging Accession Number Identifier"
-Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
-* insert SetFmmAndStatusRule( 1, draft )
-* system 1..1
-* value 1..1
-* type 1..1
-* type = http://terminology.hl7.org/5.1.0/CodeSystem-v2-0203.html#ACSN
 
-// Profile: ImOrderReference
-// Parent: Reference
-// Id: im-order-reference
-// Title: "Imaging Accession Number Reference"
-// Description: "This profile on Reference represents a reference to an Imaging Order."
-// * insert SetFmmAndStatusRule( 1, draft )
-// * reference 1..1
-// * identifier 0..1
-// * identifier only ImAccessionNumberIdentifier
-//   * insert SetPopulateIfKnown
-
-RuleSet: BasedOnImOrderReference( slicename )
-* basedOn[{slicename}] only Reference( ImOrder )
-  * identifier 1..1
-  * identifier only ImAccessionNumberIdentifier
 
 Mapping: DicomToImOrder
 Source: ImOrder

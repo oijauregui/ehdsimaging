@@ -1,5 +1,5 @@
-id: hl7.fhir.eu.imaging
-canonical: http://hl7.eu/fhir/imaging
+id: hl7.fhir.eu.imaging.r5
+canonical: http://hl7.eu/fhir/imaging/r5
 name: HL7EuImagingStudyReport
 title: HL7 Europe Imaging Study Report
 description: This guide describes how a Imaging Study Report can be represented in the European REALM.
