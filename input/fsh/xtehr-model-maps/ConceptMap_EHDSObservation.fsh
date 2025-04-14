@@ -81,7 +81,7 @@ Description: "Map for EHDSObservation"
   * element[+]
     * code = #observationResult.numericResult
     * target[+]
-      * code = #value[x[
+      * code = #value[x]
       * relationship = #source-is-narrower-than-target
   * element[+]
     * code = #observationResult.numericResult.numericValue[x]

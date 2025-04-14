@@ -83,9 +83,10 @@ class ImDiagnosticReport{
   effectivePeriod
 }
 
-class ImServiceRequest{
+class ImOrder{
   <<FHIR>>
-  insurrance
+  insurance
+  identifier[accessionNumber]
 }
 
 class ImProcedure{
@@ -101,19 +102,13 @@ class ImImagingStudy{
   identifier[studyInstanceUid]
 }
 
-class ImOrder{
-  <<FHIR>>
-  identifier[accessionNumber]
-  extension[basedOn]
-}
-
 class ImDiagnosticReport {
   <<FHIR>>
 }
 class EuPatient {
   <<FHIR>>
 }
-class ImServiceRequest {
+class ImOrder {
   <<FHIR>>
 }
 class EuPractitionerRole {
@@ -140,13 +135,10 @@ class EuCoverage {
 class LocationEu {
   <<FHIR>>
 }
-class ImOrder {
-  <<FHIR>>
-}
 EHDSImagingReportHeader --> ImComposition
 ImComposition --> ImDiagnosticReport : extension[diagnosticreport-reference]
 ImComposition --> EuPatient : subject
-ImComposition --> ImServiceRequest : extension[basedOn]
+ImComposition --> ImOrder : extension[basedOn]
 ImComposition --> EuPractitionerRole : author
 ImComposition --> EuDevice : author[author]
 ImComposition --> EuPractitionerRole : author[authoringDevice]
@@ -159,13 +151,11 @@ ImComposition --> ImImagingstudy : study
 EHDSImagingReportHeader --> ImDiagnosticReport
 ImDiagnosticReport --> ImComposition : composition
 ImDiagnosticReport --> EuPatient : subject
-ImDiagnosticReport --> ImServiceRequest : basedOn
-EHDSImagingReportHeader --> ImServiceRequest
-ImServiceRequest --> EuCoverage : insurrance
+ImDiagnosticReport --> ImOrder : basedOn
+EHDSImagingReportHeader --> ImOrder
+ImOrder --> EuCoverage : insurance
 EHDSImagingReportHeader --> ImProcedure
 ImProcedure --> LocationEu : location
 EHDSImagingReportHeader --> ImImagingStudy
-EHDSImagingReportHeader --> ImOrder
-ImOrder --> ImOrder : extension[basedOn]
 ```
 

@@ -235,7 +235,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.orderPlacer
     * target[+]
-      * code = #practitioner
+      * code = #requester
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.orderReason
@@ -250,17 +250,20 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation
     * target[+]
-      * code = #supportingInfo.reference
+      * code = #supportingInfo
+      * comment = "Point to observations and conditions"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.observation
     * target[+]
       * code = #supportingInfo
+      * comment = "Refer to observations"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.condition
     * target[+]
       * code = #supportingInfo
+      * comment = "Refer to conditions"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.medicationAdministration
@@ -271,11 +274,13 @@ Description: "Map for EHDSImagingReportBody"
     * code = #orderInformation.supportingInformation.devices
     * target[+]
       * code = #supportingInfo
+      * comment = "Refer to device, might be replaced by a more constraint reference."
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.pregnancyStatus
     * target[+]
-      * code = #supportingInfo
+      * code = #supportingInfo[pregnacy]
+      * comment = "Code in supporting info, could be a observation as well"
       * relationship = #related-to
   * element[+]
     * code = #serviceRequest
@@ -297,10 +302,10 @@ Description: "Map for EHDSImagingReportBody"
       * code = #extension[sexParameterForClinicalUse]
       * relationship = #related-to
     * target[+]
-      * code = #extension[sexParameterForClinicalUse].value
+      * code = #extension[sexParameterForClinicalUse].extension[value].valueCodeableConcept
       * relationship = #related-to
     * target[+]
-      * code = #extension[sexParameterForClinicalUse].period
+      * code = #extension[sexParameterForClinicalUse].extension[period].valuePeriod
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
@@ -334,17 +339,17 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #exposureInformation.effectiveDose
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation.equivalentDose
     * target[+]
-      * code = #component.value
+      * code = #component.value[x]
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation.tissueType
@@ -357,7 +362,10 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #examinationReport.bodyPart.bodyLocation
     * target[+]
-      * code = #series.bodySite
+      * code = #morphology
+      * relationship = #related-to
+    * target[+]
+      * code = #includedStructure.structure
       * relationship = #related-to
   * element[+]
     * code = #examinationReport.bodyPart.laterality
@@ -366,7 +374,7 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
-  * target = $ImMedicationAdministrationUrl
+  * target = $EuMedicationAdministrationUrl
   * element[+]
     * code = #examinationReport.medication
     * target[+]

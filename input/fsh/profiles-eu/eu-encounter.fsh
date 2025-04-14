@@ -1,4 +1,4 @@
-Profile: EncounterEU
+Profile: EncounterEu
 Parent: Encounter
 Title: "EU Encounter"
 Description: "A encounter profile for the EU."

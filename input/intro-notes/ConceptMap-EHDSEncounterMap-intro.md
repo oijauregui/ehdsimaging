@@ -71,7 +71,7 @@ class PatientEu {
 class EpisodeOfCare {
   <<FHIR>>
 }
-class ServiceRequest {
+class EuServiceRequest {
   <<FHIR>>
 }
 class Encounter {
@@ -86,7 +86,7 @@ class Appointment {
 EHDSEncounter --> EuEncounter
 EuEncounter --> PatientEu : subject
 EuEncounter --> EpisodeOfCare : episodeOfCare
-EuEncounter --> ServiceRequest : basedOn
+EuEncounter --> EuServiceRequest : basedOn
 EuEncounter --> Encounter : partOf
 EuEncounter --> OrganizationEu : serviceProvider
 EuEncounter --> Appointment : appointment

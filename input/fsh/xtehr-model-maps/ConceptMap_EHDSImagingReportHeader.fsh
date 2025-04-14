@@ -170,6 +170,11 @@ Description: "Map for EHDSImagingReportHeader"
     * target[+]
       * code = #study
       * relationship = #related-to
+  * element[+]
+    * code = #documentMetadata.accessionNumber
+    * target[+]
+      * code = #extension[basedOn]
+      * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
   * target = $ImDiagnosticReportUrl
@@ -215,11 +220,16 @@ Description: "Map for EHDSImagingReportHeader"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = $ImServiceRequestUrl
+  * target = $ImOrderUrl
   * element[+]
     * code = #healthInsuranceAndPaymentInformation
     * target[+]
-      * code = #insurrance
+      * code = #insurance
+      * relationship = #related-to
+  * element[+]
+    * code = #documentMetadata.accessionNumber
+    * target[+]
+      * code = #identifier[accessionNumber]
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
@@ -254,17 +264,6 @@ Description: "Map for EHDSImagingReportHeader"
     * code = #documentMetadata.studyInstanceUid
     * target[+]
       * code = #identifier[studyInstanceUid]
-      * relationship = #related-to
-* group[+]
-  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
-  * target = $ImOrderUrl
-  * element[+]
-    * code = #documentMetadata.accessionNumber
-    * target[+]
-      * code = #identifier[accessionNumber]
-      * relationship = #related-to
-    * target[+]
-      * code = #extension[basedOn]
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

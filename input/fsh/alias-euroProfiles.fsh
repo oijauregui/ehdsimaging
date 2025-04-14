@@ -28,17 +28,17 @@ Alias: $EuContactPointUrl    = http://hl7.org/fhir/StructureDefinition/ContactPo
 Alias: $EuDevice             = Device
 Alias: $EuDeviceUrl          = http://hl7.org/fhir/StructureDefinition/Device
 
-Alias: $EuDocumentReference  = DocumentReference
+Alias: $EuDocumentReference  = DocumentReferenceEu
 Alias: $EuDocumentReferenceUrl = http://hl7.org/fhir/StructureDefinition/DocumentReference
 
-Alias: $EuEncounter          = EncounterEU
+Alias: $EuEncounter          = EncounterEu
 Alias: $EuEncounterUrl       = http://hl7.eu/fhir/imaging/r5/StructureDefinition/EncounterEu
 
 Alias: $EuEndpoint           = EndpointEu
 Alias: $EuEndpointUrl        = http://hl7.eu/fhir/imaging/r5/StructureDefinition/EndpointEu
 
-Alias: $EuHumanName          = HumanName
-Alias: $EuHumanNameUrl       = http://hl7.org/fhir/StructureDefinition/HumanName
+Alias: $EuHumanName          = http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu
+Alias: $EuHumanNameUrl       = http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu
 
 Alias: $EuEpisodeOfCare      = EpisodeOfCare
 Alias: $EuEpisodeOfCareUrl   = http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
@@ -73,8 +73,8 @@ Alias: $EuPatientAnimalUrl   = http://hl7.eu/fhir/base/StructureDefinition/patie
 Alias: $EuPractitionerRole   = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
 Alias: $EuPractitionerRoleUrl = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
 
-Alias: $EuPractitioner       = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
-Alias: $EuPractitionerUrl    = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
+Alias: $EuPractitioner       = http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu
+Alias: $EuPractitionerUrl    = http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu
 
 Alias: $EuProcedure          = ProcedureEu
 Alias: $EuProcedureUrl       = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ProcedureEu

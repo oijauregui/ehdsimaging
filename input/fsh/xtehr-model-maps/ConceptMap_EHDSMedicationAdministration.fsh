@@ -81,7 +81,7 @@ Description: "Map for EHDSMedicationAdministration"
   * element[+]
     * code = #dosage.dose
     * target[+]
-      * code = #dosage,dose
+      * code = #dosage.dose
       * relationship = #source-is-broader-than-target
   * element[+]
     * code = #dosage.rate[x]
