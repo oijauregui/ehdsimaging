@@ -40,19 +40,19 @@ class EuCarePlan{
   note
 }
 
-class patient-eu {
+class EuPatient {
   <<FHIR>>
 }
-class practitionerRole-eu {
+class EuPractitionerRole {
   <<FHIR>>
 }
 class EuGoal {
   <<FHIR>>
 }
 EHDSCarePlan --> EuCarePlan
-EuCarePlan --> patient-eu : subject
-EuCarePlan --> practitionerRole-eu : custodian
-EuCarePlan --> practitionerRole-eu : contributor
+EuCarePlan --> EuPatient : subject
+EuCarePlan --> EuPractitionerRole : custodian
+EuCarePlan --> EuPractitionerRole : contributor
 EuCarePlan --> EuGoal : goal
 ```
 

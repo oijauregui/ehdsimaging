@@ -47,19 +47,19 @@ class EuBodyStructure{
   morphology
 }
 
-class PatientAnimalEu {
+class EuPatientAnimal {
   <<FHIR>>
 }
-class BodyStructureEu {
+class EuBodyStructure {
   <<FHIR>>
 }
-class DeviceEu {
+class EuDevice {
   <<FHIR>>
 }
 EHDSSpecimen --> EuSpecimen
-EuSpecimen --> PatientAnimalEu : subject
-EuSpecimen --> BodyStructureEu : collection.bodySite
-EuSpecimen --> DeviceEu : container.device
+EuSpecimen --> EuPatientAnimal : subject
+EuSpecimen --> EuBodyStructure : collection.bodySite
+EuSpecimen --> EuDevice : container.device
 EHDSSpecimen --> EuPatientAnimal
 EHDSSpecimen --> EuBodyStructure
 ```

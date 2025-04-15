@@ -4,6 +4,9 @@
 Alias: $EuAddress            = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
 Alias: $EuAddressUrl         = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
 
+Alias: $EuAppointment        = Appointment
+Alias: $EuAppointmentUrl     = http://hl7.org/fhir/StructureDefinition/Appointment
+
 Alias: $EuAllergyIntolerance = AllergyIntoleranceEu
 Alias: $EuAllergyIntoleranceUrl = http://hl7.eu/fhir/imaging/r5/StructureDefinition/AllergyIntoleranceEu
 

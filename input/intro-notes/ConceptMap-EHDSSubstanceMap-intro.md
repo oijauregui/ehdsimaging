@@ -29,10 +29,10 @@ class EuSubstance{
   ingredient.substanceReference
 }
 
-class SubstanceEu {
+class EuSubstance {
   <<FHIR>>
 }
 EHDSSubstance --> EuSubstance
-EuSubstance --> SubstanceEu : ingredient.substanceReference
+EuSubstance --> EuSubstance : ingredient.substanceReference
 ```
 

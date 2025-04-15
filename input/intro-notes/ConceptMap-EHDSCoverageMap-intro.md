@@ -26,26 +26,23 @@ class EuCoverage{
   subscriberId
 }
 
-class PatientEu {
+class EuPatient {
   <<FHIR>>
 }
-class PatientEU {
+class  EuRelatedPersion {
   <<FHIR>>
 }
-class  RelatedPersion {
+class  EuOrganization {
   <<FHIR>>
 }
-class  OrganizationEU {
-  <<FHIR>>
-}
-class OrganizationEu {
+class EuOrganization {
   <<FHIR>>
 }
 EHDSCoverage --> EuCoverage
-EuCoverage --> PatientEu : beneficiary
-EuCoverage --> PatientEU : paymentBy.party
-EuCoverage -->  RelatedPersion : paymentBy.party
-EuCoverage -->  OrganizationEU : paymentBy.party
-EuCoverage --> OrganizationEu : insurer
+EuCoverage --> EuPatient : beneficiary
+EuCoverage --> EuPatient : paymentBy.party
+EuCoverage -->  EuRelatedPersion : paymentBy.party
+EuCoverage -->  EuOrganization : paymentBy.party
+EuCoverage --> EuOrganization : insurer
 ```
 

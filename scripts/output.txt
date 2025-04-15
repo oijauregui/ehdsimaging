@@ -4,7 +4,7 @@ info    /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging
 info  No output path specified. Output to ..
 info  Using configuration file: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/sushi-config.yaml
 info  Importing FSH text...
-info  Preprocessed 136 documents with 139 aliases.
+info  Preprocessed 136 documents with 141 aliases.
 info  Imported 113 definitions and 32 instances.
 info  Resolved hl7.fhir.uv.tools.r5#latest to concrete version 0.4.1
 info  Loaded hl7.fhir.uv.tools.r5#0.4.1 with 94 resources
@@ -19,6 +19,13 @@ info  Loaded fhir.dicom#2024.2.20240331 with 1354 resources
 info  Loaded hl7.fhir.r5.core#5.0.0 with 2968 resources
 info  Loaded virtual package sushi-local#LOCAL with 0 resources
 info  Converting FSH to FHIR resources...
+error No element found at path extension[workflow-reason].valueCodeableReference.concept for CaretValueRule in ManifestProducerObligationEuDocumentReference, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuDocumentReference.fsh
+  Line: 21
+error No element found at path extension[workflow-reason].valueCodeableReference.concept for CaretValueRule in ManifestProducerObligationEuDocumentReference, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuDocumentReference.fsh
+  Line: 22
+error No element found at path extension[workflow-reason].extension for CardRule in ManifestProducerObligationEuDocumentReference, skipping rule
 error No element found at path used.concept[device] for CaretValueRule in ManifestProducerObligationEuProcedure, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuProcedure.fsh
   Line: 39
@@ -121,6 +128,13 @@ error No element found at path extension[artiface-relatedArtifact] for CaretValu
 error No element found at path extension[artiface-relatedArtifact] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
   Line: 64
+error No element found at path extension[workflow-reason].valueCodeableReference.concept for CaretValueRule in ReportProducerObligationEuDocumentReference, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuDocumentReference.fsh
+  Line: 21
+error No element found at path extension[workflow-reason].valueCodeableReference.concept for CaretValueRule in ReportProducerObligationEuDocumentReference, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuDocumentReference.fsh
+  Line: 22
+error No element found at path extension[workflow-reason].extension for CardRule in ReportProducerObligationEuDocumentReference, skipping rule
 error No element found at path participant[admission].actor for CaretValueRule in ReportProducerObligationEuEncounter, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEncounter.fsh
   Line: 48
@@ -181,9 +195,6 @@ error No element found at path kind for CaretValueRule in ReportProducerObligati
 error No element found at path kind for CaretValueRule in ReportProducerObligationEuSubstance, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuSubstance.fsh
   Line: 34
-error No element found at path suspectEntity.procedure for OnlyRule in ImAdverseEvent, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/profiles/im-adverseevent.fsh
-  Line: 12
 error No element found at path supectEntity[procedure] for CaretValueRule in ReportProducerObligationImAdverseEvent, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImAdverseEvent.fsh
   Line: 9
@@ -273,6 +284,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| You've spawned some errors.            77 Errors     0 Warnings |
+| The docs might be bene-fish-al.        82 Errors     0 Warnings |
 ===================================================================
 

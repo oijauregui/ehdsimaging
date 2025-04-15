@@ -33,14 +33,14 @@ class EuLocation{
   partOf
 }
 
-class organization-eu {
+class EuOrganization {
   <<FHIR>>
 }
-class Location {
+class EuLocation {
   <<FHIR>>
 }
 EHDSLocation --> EuLocation
-EuLocation --> organization-eu : managingOrganization
-EuLocation --> Location : partOf
+EuLocation --> EuOrganization : managingOrganization
+EuLocation --> EuLocation : partOf
 ```
 

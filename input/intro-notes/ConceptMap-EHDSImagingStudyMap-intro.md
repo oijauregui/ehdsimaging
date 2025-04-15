@@ -86,16 +86,16 @@ class ImRadiationDoseObservation{
   component.value[x]
 }
 
-class patient-eu {
+class EuPatient {
   <<FHIR>>
 }
-class Encounter {
+class EuEncounter {
   <<FHIR>>
 }
 class EuServiceRequest {
   <<FHIR>>
 }
-class OrganizationEu {
+class EuOrganization {
   <<FHIR>>
 }
 class EuEndpoint {
@@ -108,10 +108,10 @@ class EuSpecimen {
   <<FHIR>>
 }
 EHDSImagingStudy --> ImImagingStudy
-ImImagingStudy --> patient-eu : subject
-ImImagingStudy --> Encounter : encounter
+ImImagingStudy --> EuPatient : subject
+ImImagingStudy --> EuEncounter : encounter
 ImImagingStudy --> EuServiceRequest : basedOn
-ImImagingStudy --> OrganizationEu : series.performer[custodian]
+ImImagingStudy --> EuOrganization : series.performer[custodian]
 ImImagingStudy --> EuEndpoint : endpoint
 ImImagingStudy --> EuEndpoint : series.endpoint
 ImImagingStudy --> EuBodyStructure : series.bodySite

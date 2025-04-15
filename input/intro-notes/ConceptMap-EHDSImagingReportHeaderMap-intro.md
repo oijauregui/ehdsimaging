@@ -135,7 +135,7 @@ class ImComposition {
 class EuCoverage {
   <<FHIR>>
 }
-class LocationEu {
+class EuLocation {
   <<FHIR>>
 }
 EHDSImagingReportHeader --> ImComposition
@@ -160,7 +160,7 @@ ImDiagnosticReport --> EuPractitionerRole : performer[author]
 EHDSImagingReportHeader --> ImOrder
 ImOrder --> EuCoverage : insurance
 EHDSImagingReportHeader --> ImProcedure
-ImProcedure --> LocationEu : location
+ImProcedure --> EuLocation : location
 EHDSImagingReportHeader --> ImImagingStudy
 ```
 

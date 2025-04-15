@@ -25,10 +25,10 @@ class EuOrganization{
   partOf
 }
 
-class organization-eu {
+class EuOrganization {
   <<FHIR>>
 }
 EHDSOrganization --> EuOrganization
-EuOrganization --> organization-eu : partOf
+EuOrganization --> EuOrganization : partOf
 ```
 

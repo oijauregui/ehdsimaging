@@ -41,21 +41,16 @@ class ImImagingSelection {
 class EuDocumentReference {
   <<FHIR>>
 }
-class DocumentReference {
-  <<FHIR>>
-}
 EHDSImagingReport --> ImComposition
 ImComposition --> ImImagingStudy : section[comparison].entry[study]
 ImComposition --> ImImagingSelection : section[comparison].entry[study]
 ImComposition --> EuDocumentReference : section[comparison].entry[study]
-ImComposition --> DocumentReference : section[comparison].entry[study]
 EHDSImagingReport --> ImDiagnosticReport
 ImDiagnosticReport --> EuDocumentReference : media
 EHDSImagingReport --> ImFinding
 ImFinding --> ImImagingStudy : derivedFrom
 ImFinding --> ImImagingSelection : derivedFrom
 ImFinding --> EuDocumentReference : derivedFrom
-ImFinding --> DocumentReference : derivedFrom
 EHDSImagingReport --> ImImagingStudy
 ```
 
