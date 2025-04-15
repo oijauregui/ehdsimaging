@@ -1,0 +1,278 @@
+info  Running SUSHI v3.15.0 (implements FHIR Shorthand specification v3.0.0)
+info  Arguments:
+info    /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging
+info  No output path specified. Output to ..
+info  Using configuration file: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/sushi-config.yaml
+info  Importing FSH text...
+info  Preprocessed 136 documents with 139 aliases.
+info  Imported 113 definitions and 32 instances.
+info  Resolved hl7.fhir.uv.tools.r5#latest to concrete version 0.4.1
+info  Loaded hl7.fhir.uv.tools.r5#0.4.1 with 94 resources
+info  Resolved hl7.terminology.r5#latest to concrete version 6.2.0
+info  Loaded hl7.terminology.r5#6.2.0 with 4323 resources
+info  Loaded hl7.fhir.uv.extensions#current with 765 resources
+info  Loaded hl7.fhir.eu.extensions#current with 16 resources
+info  Loaded hl7.fhir.eu.base.r5#current with 23 resources
+info  Loaded eu.ehds.models#current with 67 resources
+info  Loaded ihe.pharm.mpd#current with 40 resources
+info  Loaded fhir.dicom#2024.2.20240331 with 1354 resources
+info  Loaded hl7.fhir.r5.core#5.0.0 with 2968 resources
+info  Loaded virtual package sushi-local#LOCAL with 0 resources
+info  Converting FSH to FHIR resources...
+error No element found at path used.concept[device] for CaretValueRule in ManifestProducerObligationEuProcedure, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuProcedure.fsh
+  Line: 39
+error No element found at path used.concept[device] for CaretValueRule in ManifestProducerObligationEuProcedure, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuProcedure.fsh
+  Line: 40
+error No element found at path occurenceDateTime for CaretValueRule in ManifestProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuServiceRequest.fsh
+  Line: 45
+error No element found at path occurenceDateTime for CaretValueRule in ManifestProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuServiceRequest.fsh
+  Line: 46
+error No element found at path occurencePeriod for CaretValueRule in ManifestProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuServiceRequest.fsh
+  Line: 48
+error No element found at path occurencePeriod for CaretValueRule in ManifestProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuServiceRequest.fsh
+  Line: 49
+error No element found at path patientInstructionMarkdown for CaretValueRule in ManifestProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuServiceRequest.fsh
+  Line: 51
+error No element found at path patientInstructionMarkdown for CaretValueRule in ManifestProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_EuServiceRequest.fsh
+  Line: 52
+error No element found at path section[comparison].entry[study] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 12
+error No element found at path section[comparison].entry[study] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 13
+error No element found at path reason.concept.text for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 27
+error No element found at path reason.concept.text for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 28
+error No element found at path section[study].text for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 39
+error No element found at path section[study].text for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 40
+error No element found at path section[findings].extension[note] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 51
+error No element found at path section[findings].extension[note] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 52
+error No element found at path section[impression].extension[note] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 60
+error No element found at path section[impression].extension[note] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 61
+error No element found at path conclusion for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 63
+error No element found at path conclusion for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 64
+error No element found at path section[impression].entry[ImImpression] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 66
+error No element found at path section[impression].entry[ImImpression] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 67
+error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 144
+error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 145
+error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 153
+error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
+  Line: 154
+error No element found at path onset[x].extension[onsetperiod] for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
+  Line: 42
+error No element found at path onset[x].extension[onsetperiod] for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
+  Line: 43
+error No element found at path certainty for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
+  Line: 51
+error No element found at path certainty for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
+  Line: 52
+error No element found at path abetement[x] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
+  Line: 21
+error No element found at path abetement[x] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
+  Line: 22
+error No element found at path extension[artiface-relatedArtifact] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
+  Line: 63
+error No element found at path extension[artiface-relatedArtifact] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
+  Line: 64
+error No element found at path participant[admission].actor for CaretValueRule in ReportProducerObligationEuEncounter, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEncounter.fsh
+  Line: 48
+error No element found at path participant[admission].actor for CaretValueRule in ReportProducerObligationEuEncounter, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEncounter.fsh
+  Line: 49
+error No element found at path participant[referrrer].actor for CaretValueRule in ReportProducerObligationEuEncounter, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEncounter.fsh
+  Line: 57
+error No element found at path participant[referrrer].actor for CaretValueRule in ReportProducerObligationEuEncounter, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEncounter.fsh
+  Line: 58
+error No element found at path subject for CaretValueRule in ReportProducerObligationEuEpisodeOfCare, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEpisodeOfCare.fsh
+  Line: 30
+error No element found at path subject for CaretValueRule in ReportProducerObligationEuEpisodeOfCare, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuEpisodeOfCare.fsh
+  Line: 31
+error No element found at path component.valudeCodeableConcept for CaretValueRule in ReportProducerObligationEuObservation, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuObservation.fsh
+  Line: 156
+error No element found at path component.valudeCodeableConcept for CaretValueRule in ReportProducerObligationEuObservation, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuObservation.fsh
+  Line: 157
+error No element found at path component.value[x].extension[dataAbsenseReason] for CaretValueRule in ReportProducerObligationEuObservation, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuObservation.fsh
+  Line: 159
+error No element found at path component.value[x].extension[dataAbsenseReason] for CaretValueRule in ReportProducerObligationEuObservation, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuObservation.fsh
+  Line: 160
+error No element found at path used.concept[device] for CaretValueRule in ReportProducerObligationEuProcedure, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuProcedure.fsh
+  Line: 39
+error No element found at path used.concept[device] for CaretValueRule in ReportProducerObligationEuProcedure, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuProcedure.fsh
+  Line: 40
+error No element found at path occurenceDateTime for CaretValueRule in ReportProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuServiceRequest.fsh
+  Line: 45
+error No element found at path occurenceDateTime for CaretValueRule in ReportProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuServiceRequest.fsh
+  Line: 46
+error No element found at path occurencePeriod for CaretValueRule in ReportProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuServiceRequest.fsh
+  Line: 48
+error No element found at path occurencePeriod for CaretValueRule in ReportProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuServiceRequest.fsh
+  Line: 49
+error No element found at path patientInstructionMarkdown for CaretValueRule in ReportProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuServiceRequest.fsh
+  Line: 51
+error No element found at path patientInstructionMarkdown for CaretValueRule in ReportProducerObligationEuServiceRequest, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuServiceRequest.fsh
+  Line: 52
+error No element found at path kind for CaretValueRule in ReportProducerObligationEuSubstance, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuSubstance.fsh
+  Line: 33
+error No element found at path kind for CaretValueRule in ReportProducerObligationEuSubstance, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuSubstance.fsh
+  Line: 34
+error No element found at path suspectEntity.procedure for OnlyRule in ImAdverseEvent, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/profiles/im-adverseevent.fsh
+  Line: 12
+error No element found at path supectEntity[procedure] for CaretValueRule in ReportProducerObligationImAdverseEvent, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImAdverseEvent.fsh
+  Line: 9
+error No element found at path supectEntity[procedure] for CaretValueRule in ReportProducerObligationImAdverseEvent, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImAdverseEvent.fsh
+  Line: 10
+error No element found at path contributingFactor[allery] for CaretValueRule in ReportProducerObligationImAdverseEvent, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImAdverseEvent.fsh
+  Line: 12
+error No element found at path contributingFactor[allery] for CaretValueRule in ReportProducerObligationImAdverseEvent, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImAdverseEvent.fsh
+  Line: 13
+error No element found at path section[comparison].entry[study] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 12
+error No element found at path section[comparison].entry[study] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 13
+error No element found at path reason.concept.text for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 27
+error No element found at path reason.concept.text for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 28
+error No element found at path section[study].text for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 39
+error No element found at path section[study].text for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 40
+error No element found at path section[findings].extension[note] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 51
+error No element found at path section[findings].extension[note] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 52
+error No element found at path section[impression].extension[note] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 60
+error No element found at path section[impression].extension[note] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 61
+error No element found at path conclusion for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 63
+error No element found at path conclusion for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 64
+error No element found at path section[impression].entry[ImImpression] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 66
+error No element found at path section[impression].entry[ImImpression] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 67
+error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 144
+error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 145
+error No element found at path extension[additional-language] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 153
+error No element found at path extension[additional-language] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
+  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
+  Line: 154
+info  Converted 101 FHIR StructureDefinitions.
+info  Converted 3 FHIR CodeSystems.
+info  Converted 9 FHIR ValueSets.
+info  Converted 32 FHIR instances.
+info  Exporting FHIR resources as JSON...
+info  Exported 145 FHIR resources as JSON.
+info  Assembling Implementation Guide sources...
+info  Generated ImplementationGuide-hl7.fhir.eu.imaging.r5.json
+info  Assembled Implementation Guide sources; ready for IG Publisher.
+
+========================= SUSHI RESULTS ===========================
+|  -------------------------------------------------------------  |
+| |    Profiles   |  Extensions  |   Logicals   |   Resources   | |
+| |-------------------------------------------------------------| |
+| |      98       |      3       |      0       |       0       | |
+|  -------------------------------------------------------------  |
+|  -------------------------------------------------------------  |
+| |      ValueSets     |    CodeSystems    |     Instances      | |
+| |-------------------------------------------------------------| |
+| |         9          |         3         |         32         | |
+|  -------------------------------------------------------------  |
+|                                                                 |
+===================================================================
+| You've spawned some errors.            77 Errors     0 Warnings |
+===================================================================
+

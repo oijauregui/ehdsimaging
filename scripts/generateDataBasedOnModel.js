@@ -198,10 +198,12 @@ function generateIntroFiles(parsedData, srcResources) {
                     if (row[indices.srcResource] === srcResource && row[indices.tgtResource] === tgtResource && row[indices.tgtRefType]) {
                     const refResources = row[indices.tgtRefType].split(',');
                     const referenceName = row[indices.tgtElement];
-                    refResources.forEach(refResource => {
-                        const refResourceClassName = refResource.substring(refResource.lastIndexOf('/') + 1);
-                        linkedClasses.add(refResourceClassName);
-                        linkRows.add(`${tgtResourceClassName} --> ${refResourceClassName} : ${referenceName}\n`);
+                    refResources
+                        .filter(refResource => refResource !== '-' )
+                        .forEach(refResource => {
+                            const refResourceClassName = refResource.substring(refResource.lastIndexOf('/') + 1);
+                            linkedClasses.add(refResourceClassName);
+                            linkRows.add(`${tgtResourceClassName} --> ${refResourceClassName} : ${referenceName}\n`);
                     });
                     }
                 });

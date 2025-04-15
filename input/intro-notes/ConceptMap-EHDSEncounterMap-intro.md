@@ -83,6 +83,9 @@ class OrganizationEu {
 class Appointment {
   <<FHIR>>
 }
+class EuLocation {
+  <<FHIR>>
+}
 EHDSEncounter --> EuEncounter
 EuEncounter --> PatientEu : subject
 EuEncounter --> EpisodeOfCare : episodeOfCare
@@ -90,5 +93,6 @@ EuEncounter --> EuServiceRequest : basedOn
 EuEncounter --> Encounter : partOf
 EuEncounter --> OrganizationEu : serviceProvider
 EuEncounter --> Appointment : appointment
+EuEncounter --> EuLocation : location.location
 ```
 

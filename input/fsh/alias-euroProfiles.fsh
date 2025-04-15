@@ -79,7 +79,7 @@ Alias: $EuPractitionerUrl    = http://hl7.eu/fhir/base/StructureDefinition/pract
 Alias: $EuProcedure          = ProcedureEu
 Alias: $EuProcedureUrl       = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ProcedureEu
 
-Alias: $EuRelatedPerson      = RelatedPerson
+Alias: $EuRelatedPerson      = RelatedPersonEu
 Alias: $EuRelatedPersonUrl   = http://hl7.org/fhir/StructureDefinition/RelatedPerson
 
 Alias: $EuServiceRequest     = ServiceRequest
