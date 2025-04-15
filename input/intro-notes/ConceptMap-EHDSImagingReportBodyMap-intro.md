@@ -129,7 +129,6 @@ class ImAdverseEvent{
   supectEntity[procedure]
   contributingFactor[allery]
   status
-  actuality
   code
   subject
   suspectEntity[procedure]
@@ -144,7 +143,10 @@ class ImDiagnosticReport{
 class ImOrder {
   <<FHIR>>
 }
-class ConditionEu {
+class EuObservation {
+  <<FHIR>>
+}
+class EuCondition {
   <<FHIR>>
 }
 class EuMedicationAdministration {
@@ -162,6 +164,9 @@ class ImGestationalAgeObservation {
 class ImPatient {
   <<FHIR>>
 }
+class EuProcedure {
+  <<FHIR>>
+}
 class ImFinding {
   <<FHIR>>
 }
@@ -177,13 +182,7 @@ class ImImagingStudy {
 class PractitionerRoleEu {
   <<FHIR>>
 }
-class EuCondition {
-  <<FHIR>>
-}
 class  EuObservation {
-  <<FHIR>>
-}
-class EuObservation {
   <<FHIR>>
 }
 class EuDevice {
@@ -206,12 +205,14 @@ class  ImRadiationDoseObservation {
 }
 EHDSImagingReportBody --> ImComposition
 ImComposition --> ImOrder : section[order].entry[order]
-ImComposition --> ConditionEu : section[history].entry
-ImComposition --> EuMedicationAdministration : section[history].text
+ImComposition --> EuObservation : section[history].entry
+ImComposition --> EuCondition : section[history].entry
+ImComposition --> EuMedicationAdministration : section[history].entry
 ImComposition --> DeviceEu : section[history].entry
 ImComposition --> Observation-pregnancy-status-uv-ips : section[history].entry
 ImComposition --> ImGestationalAgeObservation : section[history].entry
 ImComposition --> ImPatient : subject
+ImComposition --> EuProcedure : section[procedure].entry[procedure]
 ImComposition --> ImFinding : section[findings].entry[ImFinding]
 ImComposition --> ImFinding : section[impression].entry[ImImpression]
 ImComposition --> ImImpression : section[impression].entry[ImFinding]
@@ -236,6 +237,7 @@ EuMedicationAdministration --> ImProcedure : partOf
 EHDSImagingReportBody --> ImAdverseEvent
 ImAdverseEvent --> ImProcedure : supectEntity[procedure]
 ImAdverseEvent --> EuAllergyIntolerance : contributingFactor[allery]
+ImAdverseEvent --> ImPatient : subject
 ImAdverseEvent --> ImProcedure : suspectEntity[procedure]
 EHDSImagingReportBody --> EuAllergyIntolerance
 EHDSImagingReportBody --> ImDiagnosticReport

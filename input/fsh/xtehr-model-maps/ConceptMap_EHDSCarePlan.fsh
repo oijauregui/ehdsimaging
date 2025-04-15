@@ -74,7 +74,6 @@ Description: "Map for EHDSCarePlan"
     * code = #goal
     * target[+]
       * code = #goal
-      * comment = "http://hl7.org/fhir/StructureDefinition/Goal"
       * relationship = #related-to
   * element[+]
     * code = #activity

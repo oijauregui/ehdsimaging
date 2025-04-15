@@ -390,9 +390,6 @@ Description: "Map for EHDSImagingReportBody"
       * code = #status
       * relationship = #related-to
     * target[+]
-      * code = #actuality
-      * relationship = #related-to
-    * target[+]
       * code = #code
       * relationship = #related-to
     * target[+]
