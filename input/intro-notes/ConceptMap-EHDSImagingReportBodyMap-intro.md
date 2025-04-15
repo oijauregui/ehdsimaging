@@ -152,7 +152,7 @@ class EuCondition {
 class EuMedicationAdministration {
   <<FHIR>>
 }
-class DeviceEu {
+class EuDevice {
   <<FHIR>>
 }
 class Observation-pregnancy-status-uv-ips {
@@ -179,13 +179,10 @@ class EuCarePlan {
 class ImImagingStudy {
   <<FHIR>>
 }
-class PractitionerRoleEu {
+class EuPractitionerRole {
   <<FHIR>>
 }
 class  EuObservation {
-  <<FHIR>>
-}
-class EuDevice {
   <<FHIR>>
 }
 class EuSpecimen {
@@ -208,7 +205,7 @@ ImComposition --> ImOrder : section[order].entry[order]
 ImComposition --> EuObservation : section[history].entry
 ImComposition --> EuCondition : section[history].entry
 ImComposition --> EuMedicationAdministration : section[history].entry
-ImComposition --> DeviceEu : section[history].entry
+ImComposition --> EuDevice : section[history].entry
 ImComposition --> Observation-pregnancy-status-uv-ips : section[history].entry
 ImComposition --> ImGestationalAgeObservation : section[history].entry
 ImComposition --> ImPatient : subject
@@ -219,7 +216,7 @@ ImComposition --> ImImpression : section[impression].entry[ImFinding]
 ImComposition --> EuCarePlan : section[recommendation].entry[careplan]
 ImComposition --> ImImagingStudy : section[comparison].entry[study]
 EHDSImagingReportBody --> ImOrder
-ImOrder --> PractitionerRoleEu : requester
+ImOrder --> EuPractitionerRole : requester
 ImOrder --> EuCondition : supportingInfo
 ImOrder -->  EuObservation : supportingInfo
 ImOrder --> EuObservation : supportingInfo

@@ -65,34 +65,34 @@ class EuEncounter{
   location.location
 }
 
-class PatientEu {
+class EuPatient {
   <<FHIR>>
 }
-class EpisodeOfCare {
+class EuEpisodeOfCare {
   <<FHIR>>
 }
 class EuServiceRequest {
   <<FHIR>>
 }
-class Encounter {
+class EuEncounter {
   <<FHIR>>
 }
-class OrganizationEu {
+class EuOrganization {
   <<FHIR>>
 }
-class Appointment {
+class EuAppointment {
   <<FHIR>>
 }
 class EuLocation {
   <<FHIR>>
 }
 EHDSEncounter --> EuEncounter
-EuEncounter --> PatientEu : subject
-EuEncounter --> EpisodeOfCare : episodeOfCare
+EuEncounter --> EuPatient : subject
+EuEncounter --> EuEpisodeOfCare : episodeOfCare
 EuEncounter --> EuServiceRequest : basedOn
-EuEncounter --> Encounter : partOf
-EuEncounter --> OrganizationEu : serviceProvider
-EuEncounter --> Appointment : appointment
+EuEncounter --> EuEncounter : partOf
+EuEncounter --> EuOrganization : serviceProvider
+EuEncounter --> EuAppointment : appointment
 EuEncounter --> EuLocation : location.location
 ```
 

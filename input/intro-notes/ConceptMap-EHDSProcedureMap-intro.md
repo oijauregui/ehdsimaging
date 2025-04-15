@@ -42,22 +42,22 @@ class EuProcedure{
   subject
 }
 
-class HealthcareProffesionalEu {
+class EuPractitionerRole {
   <<FHIR>>
 }
-class DeviceEu {
+class EuDevice {
   <<FHIR>>
 }
-class LocationEu {
+class EuLocation {
   <<FHIR>>
 }
-class PatientEu {
+class EuPatient {
   <<FHIR>>
 }
 EHDSProcedure --> EuProcedure
-EuProcedure --> HealthcareProffesionalEu : performer.actor
-EuProcedure --> DeviceEu : used.concept[device]
-EuProcedure --> LocationEu : location
-EuProcedure --> PatientEu : subject
+EuProcedure --> EuPractitionerRole : performer.actor
+EuProcedure --> EuDevice : used.concept[device]
+EuProcedure --> EuLocation : location
+EuProcedure --> EuPatient : subject
 ```
 

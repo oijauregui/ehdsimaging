@@ -48,20 +48,20 @@ class EuCondition {
 class  EuObservation {
   <<FHIR>>
 }
-class Specimen {
+class EuSpecimen {
   <<FHIR>>
 }
-class Encounter {
+class EuEncounter {
   <<FHIR>>
 }
-class CoverageEu {
+class EuCoverage {
   <<FHIR>>
 }
 EHDSServiceRequest --> EuServiceRequest
 EuServiceRequest --> EuCondition : supportingInfo
 EuServiceRequest -->  EuObservation : supportingInfo
-EuServiceRequest --> Specimen : specimen
-EuServiceRequest --> Encounter : encounter
-EuServiceRequest --> CoverageEu : insurance
+EuServiceRequest --> EuSpecimen : specimen
+EuServiceRequest --> EuEncounter : encounter
+EuServiceRequest --> EuCoverage : insurance
 ```
 

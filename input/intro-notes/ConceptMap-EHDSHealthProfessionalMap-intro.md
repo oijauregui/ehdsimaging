@@ -31,11 +31,11 @@ class EuPractitionerRole{
   specialty
 }
 
-class organization-eu {
+class EuOrganization {
   <<FHIR>>
 }
 EHDSHealthProfessional --> EuPractitioner
 EHDSHealthProfessional --> EuPractitionerRole
-EuPractitionerRole --> organization-eu : organization
+EuPractitionerRole --> EuOrganization : organization
 ```
 

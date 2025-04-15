@@ -35,10 +35,10 @@ class EuEndpoint{
   header
 }
 
-class OrganizationEu {
+class EuOrganization {
   <<FHIR>>
 }
 EHDSEndpoint --> EuEndpoint
-EuEndpoint --> OrganizationEu : managingOrganization
+EuEndpoint --> EuOrganization : managingOrganization
 ```
 

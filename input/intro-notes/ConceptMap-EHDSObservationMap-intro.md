@@ -114,26 +114,23 @@ class EuDevice {
 class EuServiceRequest {
   <<FHIR>>
 }
-class PractitionerRoleEU {
+class EuPractitionerRole {
   <<FHIR>>
 }
-class ObervationEu {
+class EuObervation {
   <<FHIR>>
 }
 class Resource {
   <<FHIR>>
 }
-class HealtcareProffesionalEu {
-  <<FHIR>>
-}
 EHDSObservation --> EuObservation
 EuObservation --> EuDevice : device
 EuObservation --> EuServiceRequest : basedOn
-EuObservation --> PractitionerRoleEU : performer
-EuObservation --> ObervationEu : triggeredBy.observation
-EuObservation --> ObervationEu : hasMember
+EuObservation --> EuPractitionerRole : performer
+EuObservation --> EuObervation : triggeredBy.observation
+EuObservation --> EuObervation : hasMember
 EuObservation --> Resource : subject
 EHDSObservation --> EuServiceRequest
-EuServiceRequest --> HealtcareProffesionalEu : requester
+EuServiceRequest --> EuPractitionerRole : requester
 ```
 

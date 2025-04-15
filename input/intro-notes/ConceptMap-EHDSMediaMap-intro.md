@@ -40,19 +40,19 @@ class EuDevice{
   name
 }
 
-class Device {
+class EuDevice {
   <<FHIR>>
 }
-class PractitionerRole {
+class EuPractitionerRole {
   <<FHIR>>
 }
-class  Practitioner {
+class  EuPractitioner {
   <<FHIR>>
 }
 EHDSMedia --> EuDocumentReference
-EuDocumentReference --> Device : author
-EuDocumentReference --> PractitionerRole : author
-EuDocumentReference -->  Practitioner : author
+EuDocumentReference --> EuDevice : author
+EuDocumentReference --> EuPractitionerRole : author
+EuDocumentReference -->  EuPractitioner : author
 EHDSMedia --> EuDevice
 ```
 

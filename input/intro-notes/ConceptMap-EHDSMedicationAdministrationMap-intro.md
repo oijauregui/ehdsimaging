@@ -48,11 +48,11 @@ class EuMedicationAdministration{
 class EuMedication {
   <<FHIR>>
 }
-class PatientEu {
+class EuPatient {
   <<FHIR>>
 }
 EHDSMedicationAdministration --> EuMedicationAdministration
 EuMedicationAdministration --> EuMedication : medication
-EuMedicationAdministration --> PatientEu : subject
+EuMedicationAdministration --> EuPatient : subject
 ```
 

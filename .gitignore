@@ -10,3 +10,5 @@ ig-template/**/*index.json
 publisher.jar
 /.idea
 .vscode/launch.json
+
+/input/fsh/obligations/**

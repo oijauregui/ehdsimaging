@@ -48,10 +48,10 @@ class EuAllergyIntolerance{
   patient
 }
 
-class PatientEu {
+class EuPatient {
   <<FHIR>>
 }
 EHDSAllergyIntolerance --> EuAllergyIntolerance
-EuAllergyIntolerance --> PatientEu : patient
+EuAllergyIntolerance --> EuPatient : patient
 ```
 
