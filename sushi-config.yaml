@@ -60,9 +60,9 @@ pages:
       title: Imaging Manifest
     imaging-report.md:
       title: Imaging Report
-    design-considerations.md:
-      title: Design Considerations
-
+  design-considerations.md:
+    title: Design Considerations
+    
   # actors-and-transactions.md:
   #   title: Actors and Transactions
   #   system-actors.md:

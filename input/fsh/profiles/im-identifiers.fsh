@@ -18,7 +18,7 @@ Profile: ImStudyInstanceUidIdentifier
 Parent: Identifier
 Id: im-study-instance-uid-identifier
 Title: "Study Instance UID Identifier"
-Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
+Description: "This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order."
 * insert SetFmmAndStatusRule( 1, draft )
 * system = "urn:dicom:uid"
 * value 1..1
@@ -28,8 +28,8 @@ Description: "This profile on Identifier represents the Accession Number for the
 Profile: ImSopInstanceUidIdentifier
 Parent: Identifier
 Id: im-sop-instance-uid-identifier
-Title: "Imaging Accession Number Identifier"
-Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
+Title: "Imaging SOP Class UID Identifier"
+Description: "This profile on Identifier represents the SOP Class UID (0008,0018) for the Imaging Order."
 * insert SetFmmAndStatusRule( 1, draft )
 * system = "urn:dicom:uid"
 * value 1..1
