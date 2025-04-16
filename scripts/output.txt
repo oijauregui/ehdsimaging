@@ -21,16 +21,16 @@ info  Loaded virtual package sushi-local#LOCAL with 0 resources
 info  Converting FSH to FHIR resources...
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
-  Line: 138
+  Line: 141
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
-  Line: 139
+  Line: 142
 error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
-  Line: 147
+  Line: 150
 error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
-  Line: 148
+  Line: 151
 error No element found at path certainty for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
   Line: 51
@@ -45,16 +45,16 @@ error No element found at path extension[artiface-relatedArtifact] for CaretValu
   Line: 64
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
-  Line: 138
+  Line: 141
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
-  Line: 139
+  Line: 142
 error No element found at path extension[additional-language] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
-  Line: 147
+  Line: 150
 error No element found at path extension[additional-language] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
-  Line: 148
+  Line: 151
 info  Converted 101 FHIR StructureDefinitions.
 info  Converted 3 FHIR CodeSystems.
 info  Converted 9 FHIR ValueSets.
@@ -78,6 +78,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| Are you lost at sea?                   12 Errors     0 Warnings |
+| That was 'crab-tastic'.                12 Errors     0 Warnings |
 ===================================================================
 
