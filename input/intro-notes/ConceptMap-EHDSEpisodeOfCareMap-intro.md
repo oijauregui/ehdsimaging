@@ -26,7 +26,7 @@ class EuEpisodeOfCare{
   diagnosis
   diagnosis.condition.concept.text
   diagnosis.condition
-  subject
+  patient
 }
 
 EHDSEpisodeOfCare --> EuEpisodeOfCare

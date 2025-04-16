@@ -38,7 +38,7 @@ Description: "Map for EHDSCondition"
   * element[+]
     * code = #endDate
     * target[+]
-      * code = #abetement[x]
+      * code = #abatement[x]
       * relationship = #equivalent
   * element[+]
     * code = #category

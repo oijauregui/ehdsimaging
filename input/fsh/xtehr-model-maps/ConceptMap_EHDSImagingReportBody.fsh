@@ -46,9 +46,6 @@ Description: "Map for EHDSImagingReportBody"
     * target[+]
       * code = #section[order].text
       * relationship = #related-to
-    * target[+]
-      * code = #reason.concept.text
-      * relationship = #related-to
   * element[+]
     * code = #orderInformation.orderReason
     * target[+]
@@ -135,7 +132,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #specimen
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #serviceRequest
@@ -171,7 +168,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #examinationReport.resultData.resultText
     * target[+]
-      * code = #section[findings].extension[note]
+      * code = #section[findings].text
       * relationship = #related-to
   * element[+]
     * code = #examinationReport.resultData.observationResults
@@ -186,15 +183,12 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #examinationReport.conclusion.impression
     * target[+]
-      * code = #section[impression].extension[note]
-      * relationship = #related-to
-    * target[+]
-      * code = #conclusion
+      * code = #section[impression].text
       * relationship = #related-to
   * element[+]
     * code = #examinationReport.conclusion.conditionOrFinding[x]
     * target[+]
-      * code = #section[impression].entry[ImImpression]
+      * code = #section[impression].entry[impression]
       * relationship = #related-to
     * target[+]
       * code = #section[impression].entry[ImFinding]
@@ -207,7 +201,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #recommendation.description
     * target[+]
-      * code = #section[recommendation].extension[note]
+      * code = #section[recommendation].text
       * relationship = #related-to
   * element[+]
     * code = #recommendation.carePlan
@@ -217,7 +211,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #comparisonStudy
     * target[+]
-      * code = #section[comparison].entry[study]
+      * code = #section[comparison].entry[comparedstudy]
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
@@ -231,6 +225,11 @@ Description: "Map for EHDSImagingReportBody"
     * code = #orderInformation.orderPlacer
     * target[+]
       * code = #requester
+      * relationship = #related-to
+  * element[+]
+    * code = #orderInformation.orderReasonText
+    * target[+]
+      * code = #reason.concept.text
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.orderReason
@@ -381,10 +380,10 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #examinationReport.adverseReaction
     * target[+]
-      * code = #supectEntity[procedure]
+      * code = #suspectEntity[procedure]
       * relationship = #related-to
     * target[+]
-      * code = #contributingFactor[allery]
+      * code = #contributingFactor[allergy]
       * relationship = #related-to
     * target[+]
       * code = #status
@@ -394,9 +393,6 @@ Description: "Map for EHDSImagingReportBody"
       * relationship = #related-to
     * target[+]
       * code = #subject
-      * relationship = #related-to
-    * target[+]
-      * code = #suspectEntity[procedure]
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
@@ -411,6 +407,11 @@ Description: "Map for EHDSImagingReportBody"
     * code = #examinationReport.resultData.observationResults
     * target[+]
       * code = #result
+      * relationship = #related-to
+  * element[+]
+    * code = #examinationReport.conclusion.impression
+    * target[+]
+      * code = #conclusion
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

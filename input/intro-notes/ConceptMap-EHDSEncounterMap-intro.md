@@ -50,14 +50,13 @@ class EuEncounter{
   actualPeriod
   plannedStartDate
   plannedEndDate
-  participant[admission].actor
+  admission
   participant[admitter].actor
   admission.admitSource
-  participant[referrrer].actor
+  participant[referrer].actor
   reason.value.reference
   reason.value.concept.text
   extension[legalStatus]
-  admission
   admission.dischargeDisposition
   admission.destination
   location

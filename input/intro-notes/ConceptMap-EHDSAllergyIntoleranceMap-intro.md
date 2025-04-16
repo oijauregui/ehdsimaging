@@ -39,7 +39,7 @@ class EuAllergyIntolerance{
   criticality
   onset[x]
   onsetDateTime
-  onset[x].extension[onsetperiod]
+  onset[x].extension[periodsOfLife]
   extension[abatement].valueDateTime
   clinicalStatus
   certainty

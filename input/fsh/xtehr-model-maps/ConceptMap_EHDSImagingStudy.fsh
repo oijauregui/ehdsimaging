@@ -163,47 +163,47 @@ Description: "Map for EHDSImagingStudy"
   * element[+]
     * code = #identifier
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #modality
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #description
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #series.seriesUid
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #series.acquisitionModality
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #series.description
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #series.bodySite
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #series.laterality
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
   * element[+]
     * code = #series.specimen
     * target[+]
-      * code = #section[study].text
+      * code = #section[imagingstudy].text
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"

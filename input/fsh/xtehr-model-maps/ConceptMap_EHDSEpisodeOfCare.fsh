@@ -53,7 +53,7 @@ Description: "Map for EHDSEpisodeOfCare"
   * element[+]
     * code = #patient
     * target[+]
-      * code = #subject
+      * code = #patient
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

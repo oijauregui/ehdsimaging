@@ -32,7 +32,7 @@ class EuCondition{
   note
   code
   onset[x]
-  abetement[x]
+  abatement[x]
   category
   clinicalStatus
   evidence.concept

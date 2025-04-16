@@ -28,7 +28,6 @@ class EuDocumentReference{
   modality
   subject
   period
-  extension[workflow-reason].valueCodeableReference.concept
   bodySite.concept
   author
   content.attachment
