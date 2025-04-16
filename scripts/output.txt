@@ -31,12 +31,6 @@ error No element found at path extension[additional-language] for CaretValueRule
 error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
   Line: 151
-error No element found at path certainty for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
-  Line: 51
-error No element found at path certainty for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
-  Line: 52
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
   Line: 141
@@ -72,6 +66,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| You're sailing rough seas.             10 Errors     0 Warnings |
+| Unfor-tuna-tely, there are errors.     8 Errors      0 Warnings |
 ===================================================================
 

@@ -90,7 +90,7 @@ Description: "Map for EHDSAllergyIntolerance"
   * element[+]
     * code = #certainty
     * target[+]
-      * code = #certainty
+      * code = #verificationStatus
       * relationship = #related-to
   * element[+]
     * code = #agentOrAllergen

@@ -42,7 +42,7 @@ class EuAllergyIntolerance{
   onset[x].extension[periodsOfLife]
   extension[abatement].valueDateTime
   clinicalStatus
-  certainty
+  verificationStatus
   code
   reaction.substance
   patient
