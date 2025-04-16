@@ -155,7 +155,7 @@ Description: "Map for EHDSImagingReportHeader"
       * code = #language
       * relationship = #related-to
     * target[+]
-      * code = #extension[additional-language]
+      * code = #extension[additionalLanguage]
       * relationship = #related-to
   * element[+]
     * code = #documentMetadata.version

@@ -4,8 +4,8 @@ info    /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging
 info  No output path specified. Output to ..
 info  Using configuration file: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/sushi-config.yaml
 info  Importing FSH text...
-info  Preprocessed 136 documents with 142 aliases.
-info  Imported 113 definitions and 32 instances.
+info  Preprocessed 137 documents with 142 aliases.
+info  Imported 114 definitions and 32 instances.
 info  Resolved hl7.fhir.uv.tools.r5#latest to concrete version 0.4.1
 info  Loaded hl7.fhir.uv.tools.r5#0.4.1 with 94 resources
 info  Resolved hl7.terminology.r5#latest to concrete version 6.2.0
@@ -25,30 +25,18 @@ error No element found at path category[template/hl7eu-imaging] for CaretValueRu
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
   Line: 142
-error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
-  Line: 150
-error No element found at path extension[additional-language] for CaretValueRule in ManifestProducerObligationImComposition, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Manifest_ImComposition.fsh
-  Line: 151
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
   Line: 141
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
   Line: 142
-error No element found at path extension[additional-language] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
-  Line: 150
-error No element found at path extension[additional-language] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
-  Line: 151
-info  Converted 101 FHIR StructureDefinitions.
+info  Converted 102 FHIR StructureDefinitions.
 info  Converted 3 FHIR CodeSystems.
 info  Converted 9 FHIR ValueSets.
 info  Converted 32 FHIR instances.
 info  Exporting FHIR resources as JSON...
-info  Exported 145 FHIR resources as JSON.
+info  Exported 146 FHIR resources as JSON.
 info  Assembling Implementation Guide sources...
 info  Generated ImplementationGuide-hl7.fhir.eu.imaging.r5.json
 info  Assembled Implementation Guide sources; ready for IG Publisher.
@@ -57,7 +45,7 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |
 | |-------------------------------------------------------------| |
-| |      98       |      3       |      0       |       0       | |
+| |      98       |      4       |      0       |       0       | |
 |  -------------------------------------------------------------  |
 |  -------------------------------------------------------------  |
 | |      ValueSets     |    CodeSystems    |     Instances      | |
@@ -66,6 +54,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| Unfor-tuna-tely, there are errors.     8 Errors      0 Warnings |
+| Having a sinking feeling?              4 Errors      0 Warnings |
 ===================================================================
 
