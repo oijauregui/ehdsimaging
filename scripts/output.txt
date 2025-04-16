@@ -78,6 +78,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| Call a FSH sturgeon!                   12 Errors     0 Warnings |
+| Are you lost at sea?                   12 Errors     0 Warnings |
 ===================================================================
 
