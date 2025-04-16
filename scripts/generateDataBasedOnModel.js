@@ -16,7 +16,8 @@ const indices = {
     tgtEquivalence: 10,
     tgtRationale: 11,
     tgtRefType: 12,
-    actors: 15,
+    includeAsWell: 13,
+    actors: 16,
 };
 
 const XtEHRBaseUrl = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/";
@@ -245,7 +246,7 @@ function generateObligationFiles(parsedData) {
 }
 
 function writeActorObligationFiles( parsedData, obligationResources, actor) {
-    obligationResources.forEach( (resourceName, resourceUrl, index) => {
+    function getShallPopulateObligations( parsedData, resourceUrl ) {
         const shallPopulateObligations = new Set();
   
         parsedData
@@ -268,7 +269,10 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
                         })
                 }
         });
-  
+        return shallPopulateObligations;
+    }
+
+    function getShallHandleCorrectlyObligations( parsedData, resourceUrl ) {
         const shallHandleCorrectlyObligations = new Set(parsedData
             .filter(row => row[indices.tgtResource] === resourceUrl)
             .filter(row => row[indices.tgtElement])
@@ -276,9 +280,40 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
             .filter(row => row[indices.srcResource].length == 0)
             .map(row => row[indices.tgtElement])
         );
+        return shallHandleCorrectlyObligations;
+    }
+
+    obligationResources.forEach( (resourceName, resourceUrl, index) => {
+        const shallPopulateObligations = getShallPopulateObligations( parsedData, resourceUrl );
+        
+        const shallHandleCorrectlyObligations = getShallHandleCorrectlyObligations( parsedData, resourceUrl );
+
+        const onlyMentioned = parsedData
+            .filter(row => row[indices.tgtResource] === resourceUrl )
+            .filter(row => !row[indices.tgtElement] || row[indices.tgtElement].length == 0)
+        ;
+
+        const includeAsWell = new Set( parsedData
+            .filter(row => row[indices.tgtResource] === resourceUrl )
+            .filter(row => row[indices.includeAsWell] && row[indices.includeAsWell].length > 0)
+            .map(row => row[indices.includeAsWell])
+        );
+        
+        includeAsWell.forEach( asWell => {
+            const shallHandleCorrectlyObligationsAsWell = getShallHandleCorrectlyObligations( parsedData, asWell );
+            const shallPopulateObligationsAsWell =    getShallPopulateObligations( parsedData, asWell );
+            
+            shallHandleCorrectlyObligationsAsWell.forEach( obligation => {
+                shallHandleCorrectlyObligations.add(obligation);
+            });
+            shallPopulateObligationsAsWell.forEach( obligation => {
+                shallPopulateObligations.add(obligation);
+            });     
+         });
+
         const allObligations = new Set([...shallPopulateObligations, ...shallHandleCorrectlyObligations]);  
   
-        if (allObligations.size > 0) {  
+        if ( onlyMentioned.length > 0 || allObligations.size > 0) {  
             const obligationPath = `${obligationsDir}/${actor}_${resourceName}.fsh`;
             console.log(obligationPath);
             const writable = fs.createWriteStream(obligationPath);

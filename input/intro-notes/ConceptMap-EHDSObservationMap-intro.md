@@ -67,12 +67,12 @@ class EuObservation{
   valueRange.low.code
   valueRange.high.system
   valueRange.high.unit
-  valueQuantity.extension[iso21090-uncertainty]
-  valueQuantity.extension[iso21090-uncertaintyType]
-  valueRange.low.extension[iso21090-uncertainty]
-  valueRange.low.extension[iso21090-uncertaintyType]
-  valueRange.high.extension[iso21090-uncertainty]
-  valueRange.high.extension[iso21090-uncertaintyType]
+  valueQuantity.extension[uncertainty]
+  valueQuantity.extension[uncertaintyType]
+  valueRange.low.extension[uncertainty]
+  valueRange.low.extension[uncertaintyType]
+  valueRange.high.extension[uncertainty]
+  valueRange.high.extension[uncertaintyType]
   valueCodeableConcept
   referenceRange
   interpretation
