@@ -55,7 +55,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * category 1..*
   * insert SliceElement( #value, $this )
-* category contains imaging 1..1
+* category contains imaging 1..1 
 * category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
 
 * status 
@@ -98,7 +98,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0
-  * extension contains $note-url named note 0..1
   * entry 
     * insert SliceElement( #profile, $this )
   * entry contains imagingstudy 1..*
