@@ -1,5 +1,7 @@
 Alias: $allergy-intolerance-certainty-url     = http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty
+Alias: $allergyintolerance-abatement-url      = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
 Alias: $artifact-description-url              = http://hl7.org/fhir/StructureDefinition/artifact-title
+Alias: $artifact-related-artifact-url         = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
 Alias: $artifact-title-url                    = http://hl7.org/fhir/StructureDefinition/artifact-description
 Alias: $artifact-version-url                  = http://hl7.org/fhir/StructureDefinition/artifact-version
 Alias: $data-absent-reason-url                = http://hl7.org/fhir/StructureDefinition/data-absent-reason
@@ -21,6 +23,5 @@ Alias: $iso21090-uncertainty-type-url         = http://hl7.org/fhir/StructureDef
 Alias: $iso21090-uncertainty-url              = http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty
 Alias: $note-url                              = http://hl7.org/fhir/StructureDefinition/note
 Alias: $performer-function-url                = http://hl7.org/fhir/StructureDefinition/event-performerFunction
-Alias: $allergyintolerance-abatement-url      = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
 Alias: $sexParameter-for-clinical-use-url     = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
 Alias: $workflow-reason-url                   = http://hl7.org/fhir/StructureDefinition/workflow-reason
