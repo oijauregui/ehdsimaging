@@ -65,7 +65,7 @@ class ImComposition{
   category[template/hl7eu-imaging]
   meta.security
   language
-  extension[additional-language]
+  extension[additionalLanguage]
   version
   section[imagingstudy].entry[imagingstudy]
 }
