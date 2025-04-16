@@ -64,7 +64,7 @@ Description: "Map for EHDSAllergyIntolerance"
   * element[+]
     * code = #onsetDate
     * target[+]
-      * code = #onset[x]
+      * code = #onsetPeriod.start
       * relationship = #related-to
     * target[+]
       * code = #onsetDateTime
@@ -72,7 +72,8 @@ Description: "Map for EHDSAllergyIntolerance"
   * element[+]
     * code = #onsetLifePeriod
     * target[+]
-      * code = #onset[x].extension[periodsOfLife]
+      * code = #onsetPeriod.extension[periodsOfLife]
+      * comment = "mapping on onset[x] not possible. Choose Period as carrier as specifying a period should be possible. If not possible, add data-absense-extension."
       * relationship = #related-to
   * element[+]
     * code = #endDate

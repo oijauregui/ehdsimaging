@@ -66,14 +66,6 @@ Description: "Map for EHDSObservation"
       * code = #performer.extension[performerFunction]
       * relationship = #source-is-broader-than-target
   * element[+]
-    * code = #observationResult
-    * target[+]
-      * code = #value[x]
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #component.value[x]
-      * relationship = #source-is-broader-than-target
-  * element[+]
     * code = #observationResult.textualResult
     * target[+]
       * code = #text
@@ -81,7 +73,7 @@ Description: "Map for EHDSObservation"
   * element[+]
     * code = #observationResult.numericResult
     * target[+]
-      * code = #value[x]
+      * code = #valueQuantity
       * relationship = #source-is-narrower-than-target
   * element[+]
     * code = #observationResult.numericResult.numericValue[x]
@@ -147,9 +139,7 @@ Description: "Map for EHDSObservation"
       * relationship = #related-to
   * element[+]
     * code = #dataAbsentReason
-    * target[+]
-      * code = #value[x].extension[dataAbsentReason]
-      * relationship = #related-to
+    * noMap = true
   * element[+]
     * code = #referenceRange
     * target[+]
@@ -249,11 +239,6 @@ Description: "Map for EHDSObservation"
     * code = #component.codedResult
     * target[+]
       * code = #component.valueCodeableConcept
-      * relationship = #related-to
-  * element[+]
-    * code = #component.dataAbsentReason
-    * target[+]
-      * code = #component.value[x].extension[dataAbsentReason]
       * relationship = #related-to
   * element[+]
     * code = #component.referenceRange

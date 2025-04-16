@@ -83,7 +83,7 @@ class ImComposition{
 
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.value[x]
+  component.valueQuantity
 }
 
 class EuPatient {

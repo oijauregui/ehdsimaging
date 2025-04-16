@@ -108,7 +108,7 @@ class ImImagingStudy{
 
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.value[x]
+  component.valueQuantity
   bodySite
 }
 

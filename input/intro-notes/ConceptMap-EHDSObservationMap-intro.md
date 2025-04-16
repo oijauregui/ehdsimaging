@@ -55,8 +55,6 @@ class EuObservation{
   basedOn
   performer
   performer.extension[performerFunction]
-  value[x]
-  component.value[x]
   text
   valueQuantity
   component.valueQuantity
@@ -76,7 +74,6 @@ class EuObservation{
   valueRange.high.extension[iso21090-uncertainty]
   valueRange.high.extension[iso21090-uncertaintyType]
   valueCodeableConcept
-  value[x].extension[dataAbsentReason]
   referenceRange
   interpretation
   triggeredBy.observation
@@ -97,7 +94,6 @@ class EuObservation{
   component.valueQuantity.extension[iso21090-uncertainty]
   component.valueQuantity.extension[iso21090-uncertaintyType]
   component.valueCodeableConcept
-  component.value[x].extension[dataAbsentReason]
   component.referenceRange
   component.interpretation
   status.value
