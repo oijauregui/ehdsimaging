@@ -142,7 +142,8 @@ Description: "Map for EHDSImagingReportHeader"
   * element[+]
     * code = #documentMetadata.documentFormat
     * target[+]
-      * code = #category[template/hl7eu-imaging]
+      * code = #category[imaging]
+      * comment = "Could be extended with list of approved templates as a separate category in the future."
       * relationship = #related-to
   * element[+]
     * code = #documentMetadata.confidentiality

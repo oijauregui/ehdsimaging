@@ -62,7 +62,6 @@ class ImComposition{
   event[imagingstudy]
   event[procedure]
   custodian
-  category[template/hl7eu-imaging]
   meta.security
   language
   extension[additionalLanguage]
