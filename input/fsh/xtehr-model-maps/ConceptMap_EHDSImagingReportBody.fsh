@@ -44,7 +44,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.orderReasonText
     * target[+]
-      * code = #section[order].text
+      * code = #section[order].extension[note]
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.orderReason
@@ -168,7 +168,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #examinationReport.resultData.resultText
     * target[+]
-      * code = #section[findings].text
+      * code = #section[findings].extension[note]
       * relationship = #related-to
   * element[+]
     * code = #examinationReport.resultData.observationResults
@@ -188,10 +188,10 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #examinationReport.conclusion.conditionOrFinding[x]
     * target[+]
-      * code = #section[impression].entry[impression]
+      * code = #section[impression].entry[ImFinding]
       * relationship = #related-to
     * target[+]
-      * code = #section[impression].entry[ImFinding]
+      * code = #section[impression].entry[impression]
       * relationship = #related-to
   * element[+]
     * code = #recommendation

@@ -56,6 +56,7 @@ class ImComposition{
   section[order].text
   identifier
   section[order].entry[order]
+  section[order].extension[note]
   section[history].text
   section[history].entry
   subject
@@ -63,12 +64,12 @@ class ImComposition{
   section[procedure].text
   section[procedure].entry[procedure]
   section[findings]
-  section[findings].text
+  section[findings].extension[note]
   section[findings].entry[ImFinding]
   section[impression]
   section[impression].text
-  section[impression].entry[impression]
   section[impression].entry[ImFinding]
+  section[impression].entry[impression]
   section[recommendation]
   section[recommendation].text
   section[recommendation].entry[careplan]
@@ -210,8 +211,8 @@ ImComposition --> ImGestationalAgeObservation : section[history].entry
 ImComposition --> ImPatient : subject
 ImComposition --> EuProcedure : section[procedure].entry[procedure]
 ImComposition --> ImFinding : section[findings].entry[ImFinding]
-ImComposition --> ImFinding : section[impression].entry[impression]
-ImComposition --> ImImpression : section[impression].entry[ImFinding]
+ImComposition --> ImFinding : section[impression].entry[ImFinding]
+ImComposition --> ImImpression : section[impression].entry[impression]
 ImComposition --> EuCarePlan : section[recommendation].entry[careplan]
 ImComposition --> ImImagingStudy : section[comparison].entry[comparedstudy]
 EHDSImagingReportBody --> ImOrder
