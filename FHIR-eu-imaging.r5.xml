@@ -67,10 +67,12 @@
 <artifact id="StructureDefinition/Manifest-EuProcedure" key="StructureDefinition-Manifest-EuProcedure" name="Manifest obligations for EuProcedure"/>
 <artifact id="StructureDefinition/Manifest-EuServiceRequest" key="StructureDefinition-Manifest-EuServiceRequest" name="Manifest obligations for EuServiceRequest"/>
 <artifact id="StructureDefinition/Manifest-EuSpecimen" key="StructureDefinition-Manifest-EuSpecimen" name="Manifest obligations for EuSpecimen"/>
+<artifact id="StructureDefinition/Manifest-ImImageIidViewerEndpoint" key="StructureDefinition-Manifest-ImImageIidViewerEndpoint" name="Manifest obligations for ImImageIidViewerEndpoint"/>
 <artifact id="StructureDefinition/Manifest-ImImagingStudy" key="StructureDefinition-Manifest-ImImagingStudy" name="Manifest obligations for ImImagingStudy"/>
 <artifact id="StructureDefinition/Manifest-ImOrder" key="StructureDefinition-Manifest-ImOrder" name="Manifest obligations for ImOrder"/>
 <artifact id="StructureDefinition/Manifest-ImPatient" key="StructureDefinition-Manifest-ImPatient" name="Manifest obligations for ImPatient"/>
 <artifact id="StructureDefinition/Manifest-ImProcedure" key="StructureDefinition-Manifest-ImProcedure" name="Manifest obligations for ImProcedure"/>
+<artifact id="StructureDefinition/Manifest-ImWadoEndpoint" key="StructureDefinition-Manifest-ImWadoEndpoint" name="Manifest obligations for ImWadoEndpoint"/>
 <artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
 <artifact id="ConceptMap/EHDSAllergyIntoleranceMap" key="ConceptMap-EHDSAllergyIntoleranceMap" name="Map for EHDSAllergyIntolerance"/>
 <artifact id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
@@ -121,6 +123,7 @@
 <artifact id="StructureDefinition/Report-EuEpisodeOfCare" key="StructureDefinition-Report-EuEpisodeOfCare" name="Report obligations for EuEpisodeOfCare"/>
 <artifact id="StructureDefinition/Report-EuHumanName" key="StructureDefinition-Report-EuHumanName" name="Report obligations for EuHumanName"/>
 <artifact id="StructureDefinition/Report-EuLocation" key="StructureDefinition-Report-EuLocation" name="Report obligations for EuLocation"/>
+<artifact id="StructureDefinition/Report-EuMedication" key="StructureDefinition-Report-EuMedication" name="Report obligations for EuMedication"/>
 <artifact id="StructureDefinition/Report-EuMedicationAdministration" key="StructureDefinition-Report-EuMedicationAdministration" name="Report obligations for EuMedicationAdministration"/>
 <artifact id="StructureDefinition/Report-EuObservation" key="StructureDefinition-Report-EuObservation" name="Report obligations for EuObservation"/>
 <artifact id="StructureDefinition/Report-EuOrganization" key="StructureDefinition-Report-EuOrganization" name="Report obligations for EuOrganization"/>

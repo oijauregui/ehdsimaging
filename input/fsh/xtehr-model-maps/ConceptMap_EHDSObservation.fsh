@@ -115,22 +115,22 @@ Description: "Map for EHDSObservation"
   * element[+]
     * code = #observationResult.numericResult.uncertainty
     * target[+]
-      * code = #valueQuantity.extension[iso21090-uncertainty]
+      * code = #valueQuantity.extension[uncertainty]
       * relationship = #related-to
     * target[+]
-      * code = #valueQuantity.extension[iso21090-uncertaintyType]
+      * code = #valueQuantity.extension[uncertaintyType]
       * relationship = #related-to
     * target[+]
-      * code = #valueRange.low.extension[iso21090-uncertainty]
+      * code = #valueRange.low.extension[uncertainty]
       * relationship = #related-to
     * target[+]
-      * code = #valueRange.low.extension[iso21090-uncertaintyType]
+      * code = #valueRange.low.extension[uncertaintyType]
       * relationship = #related-to
     * target[+]
-      * code = #valueRange.high.extension[iso21090-uncertainty]
+      * code = #valueRange.high.extension[uncertainty]
       * relationship = #related-to
     * target[+]
-      * code = #valueRange.high.extension[iso21090-uncertaintyType]
+      * code = #valueRange.high.extension[uncertaintyType]
       * relationship = #related-to
   * element[+]
     * code = #observationResult.codedResult

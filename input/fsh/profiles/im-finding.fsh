@@ -1,5 +1,5 @@
 Profile: ImFinding
-Parent: Observation
+Parent: $EuObservation
 Title: "Finding"
 Description: "Finding during imaging procedure."
 * insert SetFmmAndStatusRule( 1, draft )
