@@ -4,6 +4,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/AdditionalLanguageExtension" key="StructureDefinition-AdditionalLanguageExtension" name="Additional Language Extension"/>
 <artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology used in Endpoint resources in the EU Imaging IG."/>
 <artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="Diagnostic Report Support Info Code System"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="DiagnosticReport supportInfo codes"/>
@@ -51,6 +52,30 @@
 <artifact id="ActorDefinition/ImProvider" key="ActorDefinition-ImProvider" name="Imaging Study and Reports Provider"/>
 <artifact id="StructureDefinition/instance-description" key="StructureDefinition-instance-description" name="Instance Description"/>
 <artifact id="StructureDefinition/ImKeyImageImagingSelection" key="StructureDefinition-ImKeyImageImagingSelection" name="Key images represented as an ImagingSelection"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuAddress" key="StructureDefinition-ManifestProducerObligationEuAddress" name="ManifestProducer obligation for EuAddress"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuAttachment" key="StructureDefinition-ManifestProducerObligationEuAttachment" name="ManifestProducer obligation for EuAttachment"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuBodyStructure" key="StructureDefinition-ManifestProducerObligationEuBodyStructure" name="ManifestProducer obligation for EuBodyStructure"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuContactPoint" key="StructureDefinition-ManifestProducerObligationEuContactPoint" name="ManifestProducer obligation for EuContactPoint"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuDevice" key="StructureDefinition-ManifestProducerObligationEuDevice" name="ManifestProducer obligation for EuDevice"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuDocumentReference" key="StructureDefinition-ManifestProducerObligationEuDocumentReference" name="ManifestProducer obligation for EuDocumentReference"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuEndpoint" key="StructureDefinition-ManifestProducerObligationEuEndpoint" name="ManifestProducer obligation for EuEndpoint"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuHumanName" key="StructureDefinition-ManifestProducerObligationEuHumanName" name="ManifestProducer obligation for EuHumanName"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuLocation" key="StructureDefinition-ManifestProducerObligationEuLocation" name="ManifestProducer obligation for EuLocation"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuMedicationAdministration" key="StructureDefinition-ManifestProducerObligationEuMedicationAdministration" name="ManifestProducer obligation for EuMedicationAdministration"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuOrganization" key="StructureDefinition-ManifestProducerObligationEuOrganization" name="ManifestProducer obligation for EuOrganization"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuPatient" key="StructureDefinition-ManifestProducerObligationEuPatient" name="ManifestProducer obligation for EuPatient"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuPatientAnimal" key="StructureDefinition-ManifestProducerObligationEuPatientAnimal" name="ManifestProducer obligation for EuPatientAnimal"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuPractitioner" key="StructureDefinition-ManifestProducerObligationEuPractitioner" name="ManifestProducer obligation for EuPractitioner"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuPractitionerRole" key="StructureDefinition-ManifestProducerObligationEuPractitionerRole" name="ManifestProducer obligation for EuPractitionerRole"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuProcedure" key="StructureDefinition-ManifestProducerObligationEuProcedure" name="ManifestProducer obligation for EuProcedure"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuRelatedPerson" key="StructureDefinition-ManifestProducerObligationEuRelatedPerson" name="ManifestProducer obligation for EuRelatedPerson"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuServiceRequest" key="StructureDefinition-ManifestProducerObligationEuServiceRequest" name="ManifestProducer obligation for EuServiceRequest"/>
+<artifact id="StructureDefinition/ManifestProducerObligationEuSpecimen" key="StructureDefinition-ManifestProducerObligationEuSpecimen" name="ManifestProducer obligation for EuSpecimen"/>
+<artifact id="StructureDefinition/ManifestProducerObligationImComposition" key="StructureDefinition-ManifestProducerObligationImComposition" name="ManifestProducer obligation for ImComposition"/>
+<artifact id="StructureDefinition/ManifestProducerObligationImImagingStudy" key="StructureDefinition-ManifestProducerObligationImImagingStudy" name="ManifestProducer obligation for ImImagingStudy"/>
+<artifact id="StructureDefinition/ManifestProducerObligationImOrder" key="StructureDefinition-ManifestProducerObligationImOrder" name="ManifestProducer obligation for ImOrder"/>
+<artifact id="StructureDefinition/ManifestProducerObligationImPatient" key="StructureDefinition-ManifestProducerObligationImPatient" name="ManifestProducer obligation for ImPatient"/>
+<artifact id="StructureDefinition/ManifestProducerObligationImProcedure" key="StructureDefinition-ManifestProducerObligationImProcedure" name="ManifestProducer obligation for ImProcedure"/>
 <artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
 <artifact id="ConceptMap/EHDSAllergyIntoleranceMap" key="ConceptMap-EHDSAllergyIntoleranceMap" name="Map for EHDSAllergyIntolerance"/>
 <artifact id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
@@ -87,6 +112,42 @@
 <artifact id="StructureDefinition/periods-of-life-extension" key="StructureDefinition-periods-of-life-extension" name="Periods of Life Extension"/>
 <artifact id="StructureDefinition/ImRadiationDoseObservation" key="StructureDefinition-ImRadiationDoseObservation" name="Radiation Dose Observation"/>
 <artifact id="StructureDefinition/RelatedPersonEu" key="StructureDefinition-RelatedPersonEu" name="RelatedPerson Eu"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuAddress" key="StructureDefinition-ReportProducerObligationEuAddress" name="ReportProducer obligation for EuAddress"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuAllergyIntolerance" key="StructureDefinition-ReportProducerObligationEuAllergyIntolerance" name="ReportProducer obligation for EuAllergyIntolerance"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuAttachment" key="StructureDefinition-ReportProducerObligationEuAttachment" name="ReportProducer obligation for EuAttachment"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuBodyStructure" key="StructureDefinition-ReportProducerObligationEuBodyStructure" name="ReportProducer obligation for EuBodyStructure"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuCarePlan" key="StructureDefinition-ReportProducerObligationEuCarePlan" name="ReportProducer obligation for EuCarePlan"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuCondition" key="StructureDefinition-ReportProducerObligationEuCondition" name="ReportProducer obligation for EuCondition"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuContactPoint" key="StructureDefinition-ReportProducerObligationEuContactPoint" name="ReportProducer obligation for EuContactPoint"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuCoverage" key="StructureDefinition-ReportProducerObligationEuCoverage" name="ReportProducer obligation for EuCoverage"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuDevice" key="StructureDefinition-ReportProducerObligationEuDevice" name="ReportProducer obligation for EuDevice"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuDocumentReference" key="StructureDefinition-ReportProducerObligationEuDocumentReference" name="ReportProducer obligation for EuDocumentReference"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuEncounter" key="StructureDefinition-ReportProducerObligationEuEncounter" name="ReportProducer obligation for EuEncounter"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuEpisodeOfCare" key="StructureDefinition-ReportProducerObligationEuEpisodeOfCare" name="ReportProducer obligation for EuEpisodeOfCare"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuHumanName" key="StructureDefinition-ReportProducerObligationEuHumanName" name="ReportProducer obligation for EuHumanName"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuLocation" key="StructureDefinition-ReportProducerObligationEuLocation" name="ReportProducer obligation for EuLocation"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuMedicationAdministration" key="StructureDefinition-ReportProducerObligationEuMedicationAdministration" name="ReportProducer obligation for EuMedicationAdministration"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuObservation" key="StructureDefinition-ReportProducerObligationEuObservation" name="ReportProducer obligation for EuObservation"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuOrganization" key="StructureDefinition-ReportProducerObligationEuOrganization" name="ReportProducer obligation for EuOrganization"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuPatient" key="StructureDefinition-ReportProducerObligationEuPatient" name="ReportProducer obligation for EuPatient"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuPatientAnimal" key="StructureDefinition-ReportProducerObligationEuPatientAnimal" name="ReportProducer obligation for EuPatientAnimal"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuPractitioner" key="StructureDefinition-ReportProducerObligationEuPractitioner" name="ReportProducer obligation for EuPractitioner"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuPractitionerRole" key="StructureDefinition-ReportProducerObligationEuPractitionerRole" name="ReportProducer obligation for EuPractitionerRole"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuProcedure" key="StructureDefinition-ReportProducerObligationEuProcedure" name="ReportProducer obligation for EuProcedure"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuRelatedPerson" key="StructureDefinition-ReportProducerObligationEuRelatedPerson" name="ReportProducer obligation for EuRelatedPerson"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuServiceRequest" key="StructureDefinition-ReportProducerObligationEuServiceRequest" name="ReportProducer obligation for EuServiceRequest"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuSpecimen" key="StructureDefinition-ReportProducerObligationEuSpecimen" name="ReportProducer obligation for EuSpecimen"/>
+<artifact id="StructureDefinition/ReportProducerObligationEuSubstance" key="StructureDefinition-ReportProducerObligationEuSubstance" name="ReportProducer obligation for EuSubstance"/>
+<artifact id="StructureDefinition/ReportProducerObligationImAdverseEvent" key="StructureDefinition-ReportProducerObligationImAdverseEvent" name="ReportProducer obligation for ImAdverseEvent"/>
+<artifact id="StructureDefinition/ReportProducerObligationImComposition" key="StructureDefinition-ReportProducerObligationImComposition" name="ReportProducer obligation for ImComposition"/>
+<artifact id="StructureDefinition/ReportProducerObligationImDiagnosticReport" key="StructureDefinition-ReportProducerObligationImDiagnosticReport" name="ReportProducer obligation for ImDiagnosticReport"/>
+<artifact id="StructureDefinition/ReportProducerObligationImFinding" key="StructureDefinition-ReportProducerObligationImFinding" name="ReportProducer obligation for ImFinding"/>
+<artifact id="StructureDefinition/ReportProducerObligationImGestationalAgeObservation" key="StructureDefinition-ReportProducerObligationImGestationalAgeObservation" name="ReportProducer obligation for ImGestationalAgeObservation"/>
+<artifact id="StructureDefinition/ReportProducerObligationImImagingStudy" key="StructureDefinition-ReportProducerObligationImImagingStudy" name="ReportProducer obligation for ImImagingStudy"/>
+<artifact id="StructureDefinition/ReportProducerObligationImOrder" key="StructureDefinition-ReportProducerObligationImOrder" name="ReportProducer obligation for ImOrder"/>
+<artifact id="StructureDefinition/ReportProducerObligationImPatient" key="StructureDefinition-ReportProducerObligationImPatient" name="ReportProducer obligation for ImPatient"/>
+<artifact id="StructureDefinition/ReportProducerObligationImProcedure" key="StructureDefinition-ReportProducerObligationImProcedure" name="ReportProducer obligation for ImProcedure"/>
+<artifact id="StructureDefinition/ReportProducerObligationImRadiationDoseObservation" key="StructureDefinition-ReportProducerObligationImRadiationDoseObservation" name="ReportProducer obligation for ImRadiationDoseObservation"/>
 <artifact id="StructureDefinition/SpecimenEu" key="StructureDefinition-SpecimenEu" name="Specimen: Laboratory"/>
 <artifact id="StructureDefinition/im-study-instance-uid-identifier" key="StructureDefinition-im-study-instance-uid-identifier" name="Study Instance UID Identifier"/>
 <page key="NA" name="(NA)"/>

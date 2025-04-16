@@ -42,6 +42,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| That went swimmingly!                  0 Errors      0 Warnings |
+| You're making waves now!               0 Errors      0 Warnings |
 ===================================================================
 

@@ -333,17 +333,20 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #exposureInformation.effectiveDose
     * target[+]
-      * code = #component.value[x]
+      * code = #component.valueQuantity
+      * comment = "choose one of the slices"
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation
     * target[+]
-      * code = #component.value[x]
+      * code = #component.valueQuantity
+      * comment = "choose one of the slices"
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation.equivalentDose
     * target[+]
-      * code = #component.value[x]
+      * code = #component.valueQuantity
+      * comment = "choose one of the slices"
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation.tissueType

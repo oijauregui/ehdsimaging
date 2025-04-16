@@ -15,32 +15,11 @@ Description: "A observation profile for the EU."
 * value[x] 1..1 
 * value[x] only QuantityEu or RangeEu or CodeableConcept or string or integer or Ratio or SampledData or time or dateTime or Period or Attachment or Reference
   * extension contains $data-absent-reason-url named dataAbsentReason 0..1
-// * valueQuantity
-//   * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-//   * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
-// * valueRange
-//   * low
-//     * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-//     * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
-//   * high
-//     * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-//     * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
 
 * component
   * value[x] 1..1
   * value[x] only QuantityEu or RangeEu or CodeableConcept or string or integer or Ratio or SampledData or time or dateTime or Period or Attachment or Reference
     * extension contains $data-absent-reason-url named dataAbsentReason 0..1
-  //   * extension contains $data-absent-reason-url named dataAbsentReason 0..1
-  // * valueQuantity
-  //   * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  //   * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
-  // * valueRange
-  //   * low
-  //     * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  //     * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
-  //   * high
-  //     * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  //     * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
 
 Profile: QuantityEu
 Parent: Quantity

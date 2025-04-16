@@ -37,9 +37,9 @@ class EuAllergyIntolerance{
   reaction.description
   reaction.manifestation
   criticality
-  onset[x]
+  onsetPeriod.start
   onsetDateTime
-  onset[x].extension[periodsOfLife]
+  onsetPeriod.extension[periodsOfLife]
   extension[abatement].valueDateTime
   clinicalStatus
   verificationStatus
