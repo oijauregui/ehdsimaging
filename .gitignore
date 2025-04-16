@@ -1,14 +1,11 @@
+/.idea
+.vscode/launch.json
 input-cache/
 output/
 output-stable/
 temp/
 template/
-output/
 fsh-generated/**
 ig-template/**/*.db
 ig-template/**/*index.json
 publisher.jar
-/.idea
-.vscode/launch.json
-
-/input/fsh/obligations/**
