@@ -279,7 +279,7 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
         const allObligations = new Set([...shallPopulateObligations, ...shallHandleCorrectlyObligations]);  
   
         if (allObligations.size > 0) {  
-            const obligationPath = `${obligationsDir}/Obligation_${actor}_${resourceName}.fsh`;
+            const obligationPath = `${obligationsDir}/${actor}_${resourceName}.fsh`;
             console.log(obligationPath);
             const writable = fs.createWriteStream(obligationPath);
   
@@ -287,10 +287,11 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
             writable.write(`// Generated file. Do not edit.\n`);
             writable.write(`////////////////////////////////////////////////////\n`);
   
-            writable.write(`Profile: ${actor}ProducerObligation${resourceName}\n`);
+            writable.write(`Profile: ${actor}_${resourceName}\n`);
             writable.write(`Parent: ${resourceUrl.startsWith("Im")?resourceUrl:'$'+resourceUrl}\n`);
-            writable.write(`Title: "${actor}Producer obligation for ${resourceName}"\n`);
-            writable.write(`Description: "${actor}Producer obligations for ${resourceName}"\n`);
+            writable.write(`Id: ${actor}-${resourceName}\n`);
+            writable.write(`Title: "${actor} obligations for ${resourceName}"\n`);
+            writable.write(`Description: "${actor} obligations for ${resourceName}"\n`);
   
             allObligations.forEach(obligation => {
                 writable.write(`* ${obligation}\n`);

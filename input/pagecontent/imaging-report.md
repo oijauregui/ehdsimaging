@@ -58,12 +58,26 @@ classDiagram
 
 The manifest is a FHIR bundle that includes ImComposition and ImDiagnosticReport resources and all resources in tree of resources that referred to (see ($document)[https://www.hl7.org/fhir/composition-operation-document.html]).
 
-### Structural Profiles
+### Report Profiles
 
-These define constraints on FHIR resources for systems conforming to this implementation guide.
+These define obligations on FHIR resources for systems conforming to this implementation guide.
+
+The imaging specific obligations are specified in:
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name NOT IN ('ImImagingStudyManifest', 'ImWadoEndpoint', 'ImImageIidViewerEndpoint') AND Name LIKE 'Im%' ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Im%' ORDER BY Name",
+  "class" : "lines",
+  "columns" : [
+    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
+    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+  ]
+} %}
+
+The common obligations are specified in:
+
+{% sql {
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Eu%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
