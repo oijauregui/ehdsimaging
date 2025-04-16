@@ -19,10 +19,13 @@ classDiagram
   class ImOrder {
   <<ServiceRequest>>
   }
+  class ImPatient{
+  <<Patient>>
+  }
   ImImagingStudyManifest *-- "1" ImManifestImagingStudy
   
-  ImImagingStudyManifest *-- PatientEU
-  ImManifestImagingStudy --> PatientEU: subject
+  ImImagingStudyManifest *-- ImPatient
+  ImManifestImagingStudy --> ImPatient: subject
   ImManifestImagingStudy --> PractitionerRoleEu: referrer
 
   ImImagingStudyManifest *-- ImImagingDevice
@@ -30,7 +33,7 @@ classDiagram
   ImManifestImagingStudy --> PractitionerRoleEu: series.performer[performer]
   
   ImImagingStudyManifest *-- ImOrder
-  ImOrder --> PatientEU: subject
+  ImOrder --> ImPatient: subject
   ImOrder --> PractitionerRoleEu: referrer
 
   ImImagingStudyManifest *-- ImImageIidViewerEndpoint
@@ -47,12 +50,14 @@ Besides the {{ImagingStudy}} and {{Endpoint}} resources, it is also recommended 
 
 The mapping from DICOM these resources is defined in the mapping sections of the resources.
 
-### Structural Profiles
+### Manifest Profiles
 
 These define constraints on FHIR resources for systems conforming to this implementation guide.
 
+The imaging specific obligations are specified in:
+
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name IN ('ImImagingStudyManifest', 'ImImagingStudy', 'ImWadoEndpoint', 'ImImageIidViewerEndpoint', 'ImOrder') ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Im%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
@@ -61,3 +66,14 @@ These define constraints on FHIR resources for systems conforming to this implem
   ]
 } %}
 
+The common obligations are specified in:
+
+{% sql {
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Eu%' ORDER BY Name",
+  "class" : "lines",
+  "columns" : [
+    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
+    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+  ]
+} %}

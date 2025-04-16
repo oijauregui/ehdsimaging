@@ -207,6 +207,24 @@ Description: "Map for EHDSImagingStudy"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
+  * target = $ImWadoEndpointUrl
+  * element[+]
+    * code = #studyEndpoint
+    * noMap = true
+  * element[+]
+    * code = #series.seriesEndpoint
+    * noMap = true
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
+  * target = $ImImageIidViewerEndpointUrl
+  * element[+]
+    * code = #studyEndpoint
+    * noMap = true
+  * element[+]
+    * code = #series.seriesEndpoint
+    * noMap = true
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
   * target = $ImRadiationDoseObservationUrl
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.kap

@@ -81,6 +81,8 @@ class ImComposition{
   section[imagingstudy].text
 }
 
+class ImWadoEndpoint
+class ImImageIidViewerEndpoint
 class ImRadiationDoseObservation{
   <<FHIR>>
   component.valueQuantity
@@ -101,6 +103,12 @@ class EuOrganization {
 class EuEndpoint {
   <<FHIR>>
 }
+class  ImWadoEndpoint {
+  <<FHIR>>
+}
+class  ImImageIidViewerEndpoint {
+  <<FHIR>>
+}
 class EuBodyStructure {
   <<FHIR>>
 }
@@ -113,10 +121,16 @@ ImImagingStudy --> EuEncounter : encounter
 ImImagingStudy --> EuServiceRequest : basedOn
 ImImagingStudy --> EuOrganization : series.performer[custodian]
 ImImagingStudy --> EuEndpoint : endpoint
+ImImagingStudy -->  ImWadoEndpoint : endpoint
+ImImagingStudy -->  ImImageIidViewerEndpoint : endpoint
 ImImagingStudy --> EuEndpoint : series.endpoint
+ImImagingStudy -->  ImWadoEndpoint : series.endpoint
+ImImagingStudy -->  ImImageIidViewerEndpoint : series.endpoint
 ImImagingStudy --> EuBodyStructure : series.bodySite
 ImImagingStudy --> EuSpecimen : series.specimen
 EHDSImagingStudy --> ImComposition
+EHDSImagingStudy --> ImWadoEndpoint
+EHDSImagingStudy --> ImImageIidViewerEndpoint
 EHDSImagingStudy --> ImRadiationDoseObservation
 ```
 
