@@ -107,7 +107,7 @@ Description: "Map for EHDSCondition"
       * comment = "Evidence for the condition stage"
       * relationship = #source-is-broader-than-target
     * target[+]
-      * code = #extension[artiface-relatedArtifact]
+      * code = #extension[relatedArtifact]
       * comment = "Refer to external sources."
       * relationship = #source-is-broader-than-target
     * target[+]

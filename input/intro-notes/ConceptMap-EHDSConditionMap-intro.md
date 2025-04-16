@@ -46,7 +46,7 @@ class EuCondition{
   participant.function
   participant.actor
   stage.assessment
-  extension[artiface-relatedArtifact]
+  extension[relatedArtifact]
   evidence
   verificationStatus
 }

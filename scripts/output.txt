@@ -4,7 +4,7 @@ info    /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging
 info  No output path specified. Output to ..
 info  Using configuration file: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/sushi-config.yaml
 info  Importing FSH text...
-info  Preprocessed 136 documents with 141 aliases.
+info  Preprocessed 136 documents with 142 aliases.
 info  Imported 113 definitions and 32 instances.
 info  Resolved hl7.fhir.uv.tools.r5#latest to concrete version 0.4.1
 info  Loaded hl7.fhir.uv.tools.r5#0.4.1 with 94 resources
@@ -37,12 +37,6 @@ error No element found at path certainty for CaretValueRule in ReportProducerObl
 error No element found at path certainty for CaretValueRule in ReportProducerObligationEuAllergyIntolerance, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuAllergyIntolerance.fsh
   Line: 52
-error No element found at path extension[artiface-relatedArtifact] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
-  Line: 63
-error No element found at path extension[artiface-relatedArtifact] for CaretValueRule in ReportProducerObligationEuCondition, skipping rule
-  File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_EuCondition.fsh
-  Line: 64
 error No element found at path category[template/hl7eu-imaging] for CaretValueRule in ReportProducerObligationImComposition, skipping rule
   File: /home/nly98977/SwArchives/hl7eu/bvdh-hl7eu-imaging/input/fsh/obligations/Obligation_Report_ImComposition.fsh
   Line: 141
@@ -78,6 +72,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| That was 'crab-tastic'.                12 Errors     0 Warnings |
+| You're sailing rough seas.             10 Errors     0 Warnings |
 ===================================================================
 
