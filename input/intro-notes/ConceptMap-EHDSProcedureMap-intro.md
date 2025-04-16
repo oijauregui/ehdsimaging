@@ -35,7 +35,7 @@ class EuProcedure{
   reason
   outcome
   complication.concept
-  used.concept[device]
+  used[device]
   focalDevice.manipulated
   location
   note
@@ -56,7 +56,7 @@ class EuPatient {
 }
 EHDSProcedure --> EuProcedure
 EuProcedure --> EuPractitionerRole : performer.actor
-EuProcedure --> EuDevice : used.concept[device]
+EuProcedure --> EuDevice : used[device]
 EuProcedure --> EuLocation : location
 EuProcedure --> EuPatient : subject
 ```

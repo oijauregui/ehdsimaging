@@ -26,15 +26,15 @@ Description: "Map for EHDSImagingReport"
   * element[+]
     * code = #imagingReportAttachments[x]
     * target[+]
-      * code = #section[comparison].entry[study]
+      * code = #section[comparison].entry[comparedstudy]
       * comment = "Comparison studie"
       * relationship = #related-to
     * target[+]
-      * code = #section[comparison].entry[study]
+      * code = #section[comparison].entry[comparedstudy]
       * comment = "key images"
       * relationship = #related-to
     * target[+]
-      * code = #section[comparison].entry[study]
+      * code = #section[comparison].entry[comparedstudy]
       * comment = "other data"
       * relationship = #related-to
 * group[+]

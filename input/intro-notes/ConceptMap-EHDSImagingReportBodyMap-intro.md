@@ -56,31 +56,30 @@ class ImComposition{
   section[order].text
   identifier
   section[order].entry[order]
-  reason.concept.text
   section[history].text
   section[history].entry
   subject
-  section[study].text
+  section[imagingstudy].text
   section[procedure].text
   section[procedure].entry[procedure]
   section[findings]
-  section[findings].extension[note]
+  section[findings].text
   section[findings].entry[ImFinding]
   section[impression]
-  section[impression].extension[note]
-  conclusion
-  section[impression].entry[ImImpression]
+  section[impression].text
+  section[impression].entry[impression]
   section[impression].entry[ImFinding]
   section[recommendation]
-  section[recommendation].extension[note]
+  section[recommendation].text
   section[recommendation].entry[careplan]
-  section[comparison].entry[study]
+  section[comparison].entry[comparedstudy]
 }
 
 class ImOrder{
   <<FHIR>>
   authoredOn
   requester
+  reason.concept.text
   reason.concept
   supportingInfo
   reason
@@ -126,18 +125,18 @@ class EuMedicationAdministration{
 
 class ImAdverseEvent{
   <<FHIR>>
-  supectEntity[procedure]
-  contributingFactor[allery]
+  suspectEntity[procedure]
+  contributingFactor[allergy]
   status
   code
   subject
-  suspectEntity[procedure]
 }
 
 class EuAllergyIntolerance
 class ImDiagnosticReport{
   <<FHIR>>
   result
+  conclusion
 }
 
 class ImOrder {
@@ -211,10 +210,10 @@ ImComposition --> ImGestationalAgeObservation : section[history].entry
 ImComposition --> ImPatient : subject
 ImComposition --> EuProcedure : section[procedure].entry[procedure]
 ImComposition --> ImFinding : section[findings].entry[ImFinding]
-ImComposition --> ImFinding : section[impression].entry[ImImpression]
+ImComposition --> ImFinding : section[impression].entry[impression]
 ImComposition --> ImImpression : section[impression].entry[ImFinding]
 ImComposition --> EuCarePlan : section[recommendation].entry[careplan]
-ImComposition --> ImImagingStudy : section[comparison].entry[study]
+ImComposition --> ImImagingStudy : section[comparison].entry[comparedstudy]
 EHDSImagingReportBody --> ImOrder
 ImOrder --> EuPractitionerRole : requester
 ImOrder --> EuCondition : supportingInfo
@@ -232,10 +231,9 @@ EHDSImagingReportBody --> EuBodyStructure
 EHDSImagingReportBody --> EuMedicationAdministration
 EuMedicationAdministration --> ImProcedure : partOf
 EHDSImagingReportBody --> ImAdverseEvent
-ImAdverseEvent --> ImProcedure : supectEntity[procedure]
-ImAdverseEvent --> EuAllergyIntolerance : contributingFactor[allery]
-ImAdverseEvent --> ImPatient : subject
 ImAdverseEvent --> ImProcedure : suspectEntity[procedure]
+ImAdverseEvent --> EuAllergyIntolerance : contributingFactor[allergy]
+ImAdverseEvent --> ImPatient : subject
 EHDSImagingReportBody --> EuAllergyIntolerance
 EHDSImagingReportBody --> ImDiagnosticReport
 ImDiagnosticReport --> ImFinding : result

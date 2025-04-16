@@ -78,7 +78,7 @@ class ImImagingStudy{
 
 class ImComposition{
   <<FHIR>>
-  section[study].text
+  section[imagingstudy].text
 }
 
 class ImRadiationDoseObservation{

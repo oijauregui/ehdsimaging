@@ -83,7 +83,7 @@ Description: "Map for EHDSEncounter"
   * element[+]
     * code = #admission
     * target[+]
-      * code = #participant[admission].actor
+      * code = #admission
       * relationship = #related-to
   * element[+]
     * code = #admission.admitter
@@ -98,7 +98,7 @@ Description: "Map for EHDSEncounter"
   * element[+]
     * code = #admission.referringProfessional
     * target[+]
-      * code = #participant[referrrer].actor
+      * code = #participant[referrer].actor
       * relationship = #related-to
   * element[+]
     * code = #admission.admissionReason
@@ -118,7 +118,7 @@ Description: "Map for EHDSEncounter"
   * element[+]
     * code = #discharge
     * target[+]
-      * code = #admission
+      * code = #admission.dischargeDisposition
       * relationship = #related-to
   * element[+]
     * code = #discharge.destinationType

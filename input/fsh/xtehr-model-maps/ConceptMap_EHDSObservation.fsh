@@ -248,12 +248,12 @@ Description: "Map for EHDSObservation"
   * element[+]
     * code = #component.codedResult
     * target[+]
-      * code = #component.valudeCodeableConcept
+      * code = #component.valueCodeableConcept
       * relationship = #related-to
   * element[+]
     * code = #component.dataAbsentReason
     * target[+]
-      * code = #component.value[x].extension[dataAbsenseReason]
+      * code = #component.value[x].extension[dataAbsentReason]
       * relationship = #related-to
   * element[+]
     * code = #component.referenceRange

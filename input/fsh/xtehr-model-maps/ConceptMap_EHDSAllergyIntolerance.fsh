@@ -72,7 +72,7 @@ Description: "Map for EHDSAllergyIntolerance"
   * element[+]
     * code = #onsetLifePeriod
     * target[+]
-      * code = #onset[x].extension[onsetperiod]
+      * code = #onset[x].extension[periodsOfLife]
       * relationship = #related-to
   * element[+]
     * code = #endDate

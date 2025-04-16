@@ -67,7 +67,7 @@ Description: "Map for EHDSProcedure"
   * element[+]
     * code = #deviceUsed
     * target[+]
-      * code = #used.concept[device]
+      * code = #used[device]
       * relationship = #related-to
   * element[+]
     * code = #focalDevice

@@ -17,7 +17,7 @@ link EHDSImagingReport "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/Structure
 class ImComposition{
   <<FHIR>>
   section
-  section[comparison].entry[study]
+  section[comparison].entry[comparedstudy]
 }
 
 class ImDiagnosticReport{
@@ -42,9 +42,9 @@ class EuDocumentReference {
   <<FHIR>>
 }
 EHDSImagingReport --> ImComposition
-ImComposition --> ImImagingStudy : section[comparison].entry[study]
-ImComposition --> ImImagingSelection : section[comparison].entry[study]
-ImComposition --> EuDocumentReference : section[comparison].entry[study]
+ImComposition --> ImImagingStudy : section[comparison].entry[comparedstudy]
+ImComposition --> ImImagingSelection : section[comparison].entry[comparedstudy]
+ImComposition --> EuDocumentReference : section[comparison].entry[comparedstudy]
 EHDSImagingReport --> ImDiagnosticReport
 ImDiagnosticReport --> EuDocumentReference : media
 EHDSImagingReport --> ImFinding

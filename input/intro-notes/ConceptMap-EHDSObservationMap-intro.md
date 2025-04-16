@@ -96,8 +96,8 @@ class EuObservation{
   component.valueRange.high.unit
   component.valueQuantity.extension[iso21090-uncertainty]
   component.valueQuantity.extension[iso21090-uncertaintyType]
-  component.valudeCodeableConcept
-  component.value[x].extension[dataAbsenseReason]
+  component.valueCodeableConcept
+  component.value[x].extension[dataAbsentReason]
   component.referenceRange
   component.interpretation
   status.value
