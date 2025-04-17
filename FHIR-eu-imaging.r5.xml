@@ -5,7 +5,14 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/AdditionalLanguageExtension" key="StructureDefinition-AdditionalLanguageExtension" name="Additional Language Extension"/>
+<artifact id="StructureDefinition/EHDSAddress" key="StructureDefinition-EHDSAddress" name="Address model"/>
+<artifact id="StructureDefinition/EHDSAllergyIntolerance" key="StructureDefinition-EHDSAllergyIntolerance" name="Allergy intolerance model"/>
+<artifact id="StructureDefinition/EHDSAttachment" key="StructureDefinition-EHDSAttachment" name="Attachment model"/>
+<artifact id="StructureDefinition/EHDSCarePlan" key="StructureDefinition-EHDSCarePlan" name="Care plan model"/>
 <artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology used in Endpoint resources in the EU Imaging IG."/>
+<artifact id="StructureDefinition/EHDSCondition" key="StructureDefinition-EHDSCondition" name="Condition model"/>
+<artifact id="StructureDefinition/EHDSCoverage" key="StructureDefinition-EHDSCoverage" name="Coverage model"/>
+<artifact id="StructureDefinition/EHDSDevice" key="StructureDefinition-EHDSDevice" name="Device model"/>
 <artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="Diagnostic Report Support Info Code System"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="DiagnosticReport supportInfo codes"/>
 <artifact id="StructureDefinition/im-composition-diagnosticReportReference" key="StructureDefinition-im-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
@@ -25,9 +32,14 @@
 <artifact id="StructureDefinition/quantity-eu" key="StructureDefinition-quantity-eu" name="EU Quantity"/>
 <artifact id="StructureDefinition/range-eu" key="StructureDefinition-range-eu" name="EU Range"/>
 <artifact id="ValueSet/im-effective-dose-units" key="ValueSet-im-effective-dose-units" name="Effective Dose Units"/>
+<artifact id="StructureDefinition/EHDSEncounter" key="StructureDefinition-EHDSEncounter" name="Encounter model"/>
+<artifact id="StructureDefinition/EHDSEndpoint" key="StructureDefinition-EHDSEndpoint" name="Endpoint model"/>
+<artifact id="StructureDefinition/EHDSEpisodeOfCare" key="StructureDefinition-EHDSEpisodeOfCare" name="Episode of care model"/>
 <artifact id="StructureDefinition/ImFinding" key="StructureDefinition-ImFinding" name="Finding"/>
 <artifact id="StructureDefinition/ImGestationalAgeObservation" key="StructureDefinition-ImGestationalAgeObservation" name="Gestational Age Observation"/>
 <artifact id="ValueSet/im-gray-square-units" key="ValueSet-im-gray-square-units" name="Gray Square Units"/>
+<artifact id="StructureDefinition/EHDSHealthProfessional" key="StructureDefinition-EHDSHealthProfessional" name="Health professional model"/>
+<artifact id="StructureDefinition/EHDSHumanName" key="StructureDefinition-EHDSHumanName" name="Human name model"/>
 <artifact id="StructureDefinition/ImImageIidViewerEndpoint" key="StructureDefinition-ImImageIidViewerEndpoint" name="IM Image Viewer Endpoint"/>
 <artifact id="StructureDefinition/ImOrder" key="StructureDefinition-ImOrder" name="IM Imaging Order"/>
 <artifact id="StructureDefinition/ImPatient" key="StructureDefinition-ImPatient" name="IM Imaging Patient"/>
@@ -42,16 +54,21 @@
 <artifact id="ValueSet/im-imaging-device-type" key="ValueSet-im-imaging-device-type" name="Imaging Device Type"/>
 <artifact id="StructureDefinition/ImDiagnosticReport" key="StructureDefinition-ImDiagnosticReport" name="Imaging Diagnostic Report"/>
 <artifact id="StructureDefinition/ImKeyImageDocumentReference" key="StructureDefinition-ImKeyImageDocumentReference" name="Imaging Key Image Document Reference"/>
+<artifact id="ActorDefinition/ImManifestProvider" key="ActorDefinition-ImManifestProvider" name="Imaging Manifest Reports Provider/Creator"/>
 <artifact id="ValueSet/im-procedure-type" key="ValueSet-im-procedure-type" name="Imaging Procedure Type"/>
 <artifact id="ValueSet/im-reportType-eu-lab" key="ValueSet-im-reportType-eu-lab" name="Imaging Report Types"/>
 <artifact id="StructureDefinition/im-sop-instance-uid-identifier" key="StructureDefinition-im-sop-instance-uid-identifier" name="Imaging SOP Class UID Identifier"/>
 <artifact id="StructureDefinition/ImImagingSelection" key="StructureDefinition-ImImagingSelection" name="Imaging Selection"/>
 <artifact id="StructureDefinition/ImSrInstanceImagingSelection" key="StructureDefinition-ImSrInstanceImagingSelection" name="Imaging Selection referring to a DICOM SR instance"/>
 <artifact id="ValueSet/im-imaging-study-performer-type" key="ValueSet-im-imaging-study-performer-type" name="Imaging Study Performer Type Value Set"/>
-<artifact id="ActorDefinition/ImConsumer" key="ActorDefinition-ImConsumer" name="Imaging Study and Reports Consumer"/>
-<artifact id="ActorDefinition/ImProvider" key="ActorDefinition-ImProvider" name="Imaging Study and Reports Provider"/>
+<artifact id="ActorDefinition/ImReportProvider" key="ActorDefinition-ImReportProvider" name="Imaging Study Report Provider/Creator"/>
+<artifact id="StructureDefinition/EHDSImagingReportBody" key="StructureDefinition-EHDSImagingReportBody" name="Imaging report body model"/>
+<artifact id="StructureDefinition/EHDSImagingReportHeader" key="StructureDefinition-EHDSImagingReportHeader" name="Imaging report header model"/>
+<artifact id="StructureDefinition/EHDSImagingReport" key="StructureDefinition-EHDSImagingReport" name="Imaging report model"/>
+<artifact id="StructureDefinition/EHDSImagingStudy" key="StructureDefinition-EHDSImagingStudy" name="Imaging study model"/>
 <artifact id="StructureDefinition/instance-description" key="StructureDefinition-instance-description" name="Instance Description"/>
 <artifact id="StructureDefinition/ImKeyImageImagingSelection" key="StructureDefinition-ImKeyImageImagingSelection" name="Key images represented as an ImagingSelection"/>
+<artifact id="StructureDefinition/EHDSLocation" key="StructureDefinition-EHDSLocation" name="Location model"/>
 <artifact id="StructureDefinition/Manifest-EuAddress" key="StructureDefinition-Manifest-EuAddress" name="Manifest obligations for EuAddress"/>
 <artifact id="StructureDefinition/Manifest-EuBodyStructure" key="StructureDefinition-Manifest-EuBodyStructure" name="Manifest obligations for EuBodyStructure"/>
 <artifact id="StructureDefinition/Manifest-EuContactPoint" key="StructureDefinition-Manifest-EuContactPoint" name="Manifest obligations for EuContactPoint"/>
@@ -103,12 +120,21 @@
 <artifact id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
 <artifact id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
 <artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
+<artifact id="StructureDefinition/EHDSMedia" key="StructureDefinition-EHDSMedia" name="Media model"/>
+<artifact id="StructureDefinition/EHDSMedicationAdministration" key="StructureDefinition-EHDSMedicationAdministration" name="Medication administration model"/>
+<artifact id="StructureDefinition/EHDSMedication" key="StructureDefinition-EHDSMedication" name="Medicinal product model"/>
 <artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="Missing DICOM Terminology"/>
+<artifact id="StructureDefinition/EHDSObservation" key="StructureDefinition-EHDSObservation" name="Observation model"/>
+<artifact id="StructureDefinition/EHDSOrganization" key="StructureDefinition-EHDSOrganization" name="Organization model"/>
+<artifact id="StructureDefinition/EHDSPatient" key="StructureDefinition-EHDSPatient" name="Patient model"/>
 <artifact id="StructureDefinition/PatientAnimalEu" key="StructureDefinition-PatientAnimalEu" name="Patient: Animal"/>
 <artifact id="ValueSet/periods-of-life-value-set" key="ValueSet-periods-of-life-value-set" name="Periods of Life"/>
 <artifact id="StructureDefinition/periods-of-life-extension" key="StructureDefinition-periods-of-life-extension" name="Periods of Life Extension"/>
+<artifact id="StructureDefinition/EHDSProcedure" key="StructureDefinition-EHDSProcedure" name="Procedure model"/>
 <artifact id="StructureDefinition/ImRadiationDoseObservation" key="StructureDefinition-ImRadiationDoseObservation" name="Radiation Dose Observation"/>
+<artifact id="StructureDefinition/EHDSRelatedPerson" key="StructureDefinition-EHDSRelatedPerson" name="Related person model"/>
 <artifact id="StructureDefinition/RelatedPersonEu" key="StructureDefinition-RelatedPersonEu" name="RelatedPerson Eu"/>
+<artifact id="StructureDefinition/EHDSReportHeader" key="StructureDefinition-EHDSReportHeader" name="Report header model"/>
 <artifact id="StructureDefinition/Report-EuAddress" key="StructureDefinition-Report-EuAddress" name="Report obligations for EuAddress"/>
 <artifact id="StructureDefinition/Report-EuAllergyIntolerance" key="StructureDefinition-Report-EuAllergyIntolerance" name="Report obligations for EuAllergyIntolerance"/>
 <artifact id="StructureDefinition/Report-EuAttachment" key="StructureDefinition-Report-EuAttachment" name="Report obligations for EuAttachment"/>
@@ -146,11 +172,17 @@
 <artifact id="StructureDefinition/Report-ImPatient" key="StructureDefinition-Report-ImPatient" name="Report obligations for ImPatient"/>
 <artifact id="StructureDefinition/Report-ImProcedure" key="StructureDefinition-Report-ImProcedure" name="Report obligations for ImProcedure"/>
 <artifact id="StructureDefinition/Report-ImRadiationDoseObservation" key="StructureDefinition-Report-ImRadiationDoseObservation" name="Report obligations for ImRadiationDoseObservation"/>
+<artifact id="StructureDefinition/EHDSServiceRequest" key="StructureDefinition-EHDSServiceRequest" name="Service request model"/>
+<artifact id="StructureDefinition/EHDSSpecimen" key="StructureDefinition-EHDSSpecimen" name="Specimen model"/>
 <artifact id="StructureDefinition/SpecimenEu" key="StructureDefinition-SpecimenEu" name="Specimen: Laboratory"/>
 <artifact id="StructureDefinition/im-study-instance-uid-identifier" key="StructureDefinition-im-study-instance-uid-identifier" name="Study Instance UID Identifier"/>
+<artifact id="StructureDefinition/EHDSSubstance" key="StructureDefinition-EHDSSubstance" name="Substance model"/>
+<artifact id="StructureDefinition/EHDSTelecom" key="StructureDefinition-EHDSTelecom" name="Telecom model"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="actors-and-transactions" name="Actors and Transactions"/>
 <page key="adapting" name="Adapting Guidelines for Country use"/>
+<page key="artifacts-intro" name="Artifacts"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="profiles" name="Deployment profiles"/>
@@ -159,7 +191,11 @@
 <page key="imaging-manifest" name="Imaging Manifest"/>
 <page key="imaging-report" name="Imaging Report"/>
 <page key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
+<page key="artifacts-structural" name="Structural artifacts"/>
+<page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>
+<page key="transactions" name="Transactions"/>
+<page key="use-cases" name="Use Cases"/>
 <page key="xtehr" name="XtEHR"/>
 <page key="xtehr-logical-model" name="XtEHR Logical Model"/>
 </specification>

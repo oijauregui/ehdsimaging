@@ -8,7 +8,8 @@ The following FHIR `ConceptMaps` describe the way the logical model has been map
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='ConceptMap' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Title", "target" : "Web"},
+    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
     { "name" : "Description", "type" : "markdown", "source" : "Description"}
   ]
 } %}
