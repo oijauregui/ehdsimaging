@@ -48,6 +48,13 @@ pages:
       title: Changes
     adapting.md: 
       title: Adapting Guidelines for Country use	
+  actors-and-transactions.md:
+    title: Actors and Transactions
+    system-actors.md:
+      title: System Actors
+    use-cases.md:
+      title: Use Cases
+    transactions.md:
   xtehr.md:
     title: XtEHR
     xtehr-logical-model.md:
@@ -62,30 +69,10 @@ pages:
       title: Imaging Report
   design-considerations.md:
     title: Design Considerations
-    
-  # actors-and-transactions.md:
-  #   title: Actors and Transactions
-  #   system-actors.md:
-  #     title: System Actors
-  #   use-cases.md:
-  #     title: Use Cases
-  #   transactions.md:
-  #     title: Transactions
-  # domain-model.md: 
-  #   title: Domain Model
-  # imaging-manifest.md:
-  #   title: Imaging Manifest
-  # imaging-report.md:
-  #   title: Imaging Report
-  # ehn-guidelines.md:
-  #   title: eHN Imaging Studies and Reports Guidelines
-  # design-considerations.md:
-  #   title: Design Considerations
-  # contributors.md:
-  #   title: Contributors
-  # open-topics.md:
-  #   title: Open Topics
-
+  artifacts-intro.md:
+    title: Artifacts
+    artifacts-structural.md:
+      title: Structural artifacts
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -116,17 +103,25 @@ parameters:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
-  #   Changes: changes.html
-  #   Dependencies: index.html#dependencies
-  #   References: index.html#references
-  #   Adapting Guidelines for Country use: adapting.html
+  Home:
+    Introduction: index.html
+    Changes: changes.html
+    Dependencies: index.html#dependencies
+    References: index.html#references
+    Adapting Guidelines for Country use: adapting.html
+  Actors and Transactions:
+    System Actors: system-actors.html
+    Use Cases: use-cases.html
+    Transactions: transactions.html
   XtEHR model:
     XtEHR-model: xtehr-logical-model.html
     XtEHR-mapping: xtehr-mapping.html
   Imaging Manifest: imaging-manifest.html
   Imaging Report: imaging-report.html
-  Artifacts: artifacts.html
+  Artifacts: 
+    All: artifacts.html
+    Structural: artifacts-structural.html
+    Mapping: xtehr-mapping.html
   Design Considerations: design-considerations.html
   #   Changes: changes.html
   #   Dependencies: index.html#dependencies

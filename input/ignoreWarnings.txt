@@ -6,3 +6,9 @@
 
 # ConceptMaps in this IG also refer to structure definitions
 %refers to a resource that has the wrong type. Found StructureDefinition expecting one of [CodeSystem]
+
+# ConceptMaps in this IG also refer to structure definitions
+Reference must be to a ValueSet, but found a StructureDefinition instead
+
+# Broken link in R5
+%The link 'http://hl7.org/fhir/R5/valueset-diagnostic-requests.html' for "here" cannot be resolved%
