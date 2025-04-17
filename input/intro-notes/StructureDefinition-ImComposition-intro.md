@@ -11,7 +11,9 @@ The content and ordering of the sections reflect organization of the content, no
 The American College of Radiology provides specific guidance in the ACR Practice Parameter for Communication of Diagnostic Imaging Findings on recommended report sections and content. While the titles may vary and the section groupings may differ slightly from practice to practice and from country to country, the approach of medical imaging clinicians to organizing report content is broadly consistent.
 
 > Note 1: Words are bolded to call attention to key details.
+> 
 > Note 2: Report sections and format are not formally standardized at some sites.
+> 
 > Note 3: When there is no content for a section in a given report, the section is sometimes omitted.
 
 Patient information such as name, age, gender, birthdate, and medical record number is typically provided first.
