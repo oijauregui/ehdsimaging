@@ -65,7 +65,7 @@ These define obligations on FHIR resources for systems conforming to this implem
 The imaging specific obligations are specified in:
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Im%' ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Report_Im%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
@@ -77,7 +77,7 @@ The imaging specific obligations are specified in:
 The common obligations are specified in:
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Eu%' ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Report_Eu%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
