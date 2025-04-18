@@ -50,6 +50,7 @@ class EuObservation{
   effectiveDateTime
   effectivePeriod
   code
+  code.coding.display
   method
   device
   basedOn
@@ -77,7 +78,9 @@ class EuObservation{
   referenceRange
   interpretation
   triggeredBy.observation
+  triggeredBy.type
   hasMember
+  note
   bodySite
   subject
   component

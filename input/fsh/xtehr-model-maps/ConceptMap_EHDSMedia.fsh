@@ -22,7 +22,10 @@ Description: "Map for EHDSMedia"
       * relationship = #related-to
   * element[+]
     * code = #type
-    * noMap = true
+    * target[+]
+      * code = #type
+      * comment = "part of the mimetype"
+      * relationship = #related-to
   * element[+]
     * code = #modality
     * target[+]
@@ -30,7 +33,9 @@ Description: "Map for EHDSMedia"
       * relationship = #related-to
   * element[+]
     * code = #view
-    * noMap = true
+    * target[+]
+      * code = #extension[view]
+      * relationship = #related-to
   * element[+]
     * code = #subject[x]
     * target[+]

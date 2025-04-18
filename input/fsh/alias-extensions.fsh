@@ -4,6 +4,7 @@ Alias: $artifact-description-url              = http://hl7.org/fhir/StructureDef
 Alias: $artifact-related-artifact-url         = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
 Alias: $artifact-title-url                    = http://hl7.org/fhir/StructureDefinition/artifact-description
 Alias: $artifact-version-url                  = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0-ballot
+Alias: $body-site-url                         = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $data-absent-reason-url                = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $diagnostic-report-composition-url     = http://hl7.org/fhir/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $document-reference-thumbnail-url      = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail

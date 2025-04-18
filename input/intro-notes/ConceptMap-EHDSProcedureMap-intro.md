@@ -32,6 +32,7 @@ class EuProcedure{
   occurrencePeriod
   performer.actor
   bodySite
+  bodySite.extension[bodyStructure]
   reason
   outcome
   complication.concept
@@ -40,6 +41,12 @@ class EuProcedure{
   location
   note
   subject
+}
+
+class EuBodyStructure{
+  <<FHIR>>
+  includedStructure.laterality
+  includedStructure.
 }
 
 class EuPractitionerRole {
@@ -59,5 +66,6 @@ EuProcedure --> EuPractitionerRole : performer.actor
 EuProcedure --> EuDevice : used[device]
 EuProcedure --> EuLocation : location
 EuProcedure --> EuPatient : subject
+EHDSProcedure --> EuBodyStructure
 ```
 
