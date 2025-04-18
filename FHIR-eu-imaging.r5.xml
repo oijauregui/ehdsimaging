@@ -121,6 +121,7 @@
 <artifact id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
 <artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
 <artifact id="StructureDefinition/EHDSMedia" key="StructureDefinition-EHDSMedia" name="Media model"/>
+<artifact id="StructureDefinition/CrossversionMediaViewExtension" key="StructureDefinition-CrossversionMediaViewExtension" name="Media.view extension"/>
 <artifact id="StructureDefinition/EHDSMedicationAdministration" key="StructureDefinition-EHDSMedicationAdministration" name="Medication administration model"/>
 <artifact id="StructureDefinition/EHDSMedication" key="StructureDefinition-EHDSMedication" name="Medicinal product model"/>
 <artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="Missing DICOM Terminology"/>

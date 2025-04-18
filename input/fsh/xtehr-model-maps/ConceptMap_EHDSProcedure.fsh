@@ -49,6 +49,10 @@ Description: "Map for EHDSProcedure"
       * code = #bodySite
       * comment = "bodysite"
       * relationship = #related-to
+    * target[+]
+      * code = #bodySite.extension[bodyStructure]
+      * comment = "bodysite"
+      * relationship = #related-to
   * element[+]
     * code = #reason
     * target[+]
@@ -88,6 +92,19 @@ Description: "Map for EHDSProcedure"
     * code = #subject
     * target[+]
       * code = #subject
+      * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure"
+  * target = $EuBodyStructureUrl
+  * element[+]
+    * code = #anatomicLocation
+    * target[+]
+      * code = #includedStructure.laterality
+      * comment = "laterality"
+      * relationship = #related-to
+    * target[+]
+      * code = #includedStructure.
+      * comment = "bodysite"
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

@@ -30,7 +30,9 @@ Description: "Map for EHDSObservation"
       * relationship = #related-to
   * element[+]
     * code = #observationName
-    * noMap = true
+    * target[+]
+      * code = #code.coding.display
+      * relationship = #related-to
   * element[+]
     * code = #observationOriginalName
     * noMap = true
@@ -155,6 +157,9 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #triggeredBy.observation
       * relationship = #related-to
+    * target[+]
+      * code = #triggeredBy.type
+      * relationship = #related-to
   * element[+]
     * code = #hasMember[x]
     * target[+]
@@ -162,7 +167,9 @@ Description: "Map for EHDSObservation"
       * relationship = #related-to
   * element[+]
     * code = #resultDescription
-    * noMap = true
+    * target[+]
+      * code = #note
+      * relationship = #related-to
   * element[+]
     * code = #anatomicLocation
     * target[+]

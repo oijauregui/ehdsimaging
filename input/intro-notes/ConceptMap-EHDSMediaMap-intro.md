@@ -25,7 +25,9 @@ link EHDSMedia "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefiniti
 class EuDocumentReference{
   <<FHIR>>
   identifier
+  type
   modality
+  extension[view]
   subject
   period
   bodySite.concept
