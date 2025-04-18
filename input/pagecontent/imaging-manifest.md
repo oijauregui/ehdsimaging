@@ -5,6 +5,7 @@ The imaging manifest represent a summary of the data stored in a DICOM imaging s
 
 ```mermaid
 classDiagram
+direction LR
   class ImImagingStudyManifest {
   <<Bundle>>
   }
@@ -23,6 +24,16 @@ classDiagram
   class ImPatient{
   <<Patient>>
   }
+  class ImProcedure{
+  <<Procedure>>
+  }
+  class OrganizationEu{
+  <<Organization>>
+  }
+  class PractitionerRoleEu{
+  <<PractitionerRole>>
+  }
+  
   ImImagingStudyManifest *-- "1" ImImagingStudy
   
   ImImagingStudyManifest *-- ImPatient
