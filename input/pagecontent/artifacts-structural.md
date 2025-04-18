@@ -1,3 +1,4 @@
+{% include variable-definitions.md %}
 This page lists the structural profiles defined in this specification
 
 ### Code systems
