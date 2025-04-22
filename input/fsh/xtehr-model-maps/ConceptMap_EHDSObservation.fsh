@@ -333,5 +333,11 @@ Description: "Map for EHDSObservation"
       * code = #requester
       * display = "C.10.7 - Order"
       * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
+  * element[+]
+    * code = #observationResult
+    * noMap = true
+    * display = "(C.10.10 - Observation result)"
 
 ////////////////////////////////////////////////////

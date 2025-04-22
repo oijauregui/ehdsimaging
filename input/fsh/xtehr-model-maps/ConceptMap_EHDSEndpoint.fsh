@@ -75,5 +75,15 @@ Description: "Map for EHDSEndpoint"
       * code = #header
       * display = "C.33.8 - Header"
       * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"
+  * element[+]
+    * code = #payload.profileCanonical
+    * noMap = true
+    * display = "lt refers to resources and logical models retrieved by an endpoint url. This is not the typical use of an Endpoint resource but more typically associated with Attachements. (C.33.6.3 - Profile Canonical)"
+  * element[+]
+    * code = #payload.profileUri
+    * noMap = true
+    * display = "lt refers to resources and logical models retrieved by an endpoint url. This is not the typical use of an Endpoint resource but more typically associated with Attachements. (C.33.6.4 - Profile uri)"
 
 ////////////////////////////////////////////////////

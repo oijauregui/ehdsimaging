@@ -30,6 +30,7 @@ class EuDocumentReference{
   extension[view]
   subject
   period
+  event
   bodySite.concept
   author
   content.attachment

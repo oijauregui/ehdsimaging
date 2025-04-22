@@ -4,7 +4,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/AdditionalLanguageExtension" key="StructureDefinition-AdditionalLanguageExtension" name="Additional Language Extension"/>
 <artifact id="StructureDefinition/EHDSAddress" key="StructureDefinition-EHDSAddress" name="Address model"/>
 <artifact id="StructureDefinition/EHDSAllergyIntolerance" key="StructureDefinition-EHDSAllergyIntolerance" name="Allergy intolerance model"/>
 <artifact id="StructureDefinition/EHDSAttachment" key="StructureDefinition-EHDSAttachment" name="Attachment model"/>
@@ -116,7 +115,6 @@
 <artifact id="ConceptMap/EHDSPatientMap" key="ConceptMap-EHDSPatientMap" name="Map for EHDSPatient"/>
 <artifact id="ConceptMap/EHDSProcedureMap" key="ConceptMap-EHDSProcedureMap" name="Map for EHDSProcedure"/>
 <artifact id="ConceptMap/EHDSRelatedPersonMap" key="ConceptMap-EHDSRelatedPersonMap" name="Map for EHDSRelatedPerson"/>
-<artifact id="ConceptMap/EHDSReportHeaderMap" key="ConceptMap-EHDSReportHeaderMap" name="Map for EHDSReportHeader"/>
 <artifact id="ConceptMap/EHDSServiceRequestMap" key="ConceptMap-EHDSServiceRequestMap" name="Map for EHDSServiceRequest"/>
 <artifact id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
 <artifact id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
@@ -136,7 +134,6 @@
 <artifact id="StructureDefinition/ImRadiationDoseObservation" key="StructureDefinition-ImRadiationDoseObservation" name="Radiation Dose Observation"/>
 <artifact id="StructureDefinition/EHDSRelatedPerson" key="StructureDefinition-EHDSRelatedPerson" name="Related person model"/>
 <artifact id="StructureDefinition/RelatedPersonEu" key="StructureDefinition-RelatedPersonEu" name="RelatedPerson Eu"/>
-<artifact id="StructureDefinition/EHDSReportHeader" key="StructureDefinition-EHDSReportHeader" name="Report header model"/>
 <artifact id="StructureDefinition/Report-EuAddress" key="StructureDefinition-Report-EuAddress" name="Report obligations for EuAddress"/>
 <artifact id="StructureDefinition/Report-EuAllergyIntolerance" key="StructureDefinition-Report-EuAllergyIntolerance" name="Report obligations for EuAllergyIntolerance"/>
 <artifact id="StructureDefinition/Report-EuAttachment" key="StructureDefinition-Report-EuAttachment" name="Report obligations for EuAttachment"/>

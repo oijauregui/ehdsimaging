@@ -84,7 +84,7 @@ Usage: #inline
     * number = 36
 
 Instance: Example1-WadoEndpoint
-InstanceOf: Manifest_ImWadoEndpoint
+InstanceOf: ImWadoEndpoint
 Title: "Example WADO Endpoint"
 Usage: #inline
 * id = "endpoint"
