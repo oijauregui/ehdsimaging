@@ -64,7 +64,6 @@ class ImComposition{
   custodian
   meta.security
   language
-  extension[additionalLanguage]
   version
   section[imagingstudy].entry[imagingstudy]
 }
