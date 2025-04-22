@@ -1,0 +1,17 @@
+////////////////////////////////////////////////////
+// Generated file. Do not edit.
+////////////////////////////////////////////////////
+Profile: Manifest_EuPractitionerRole
+Parent: $EuPractitionerRole
+Id: Manifest-EuPractitionerRole
+Title: "Manifest obligations for EuPractitionerRole"
+Description: "Manifest obligations for EuPractitionerRole"
+* code
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImManifestProvider)
+* organization
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImManifestProvider)
+* specialty
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImManifestProvider)
