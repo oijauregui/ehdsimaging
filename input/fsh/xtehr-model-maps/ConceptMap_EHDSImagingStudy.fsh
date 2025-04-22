@@ -187,63 +187,6 @@ Description: "Map for EHDSImagingStudy"
       * relationship = #source-is-narrower-than-target
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
-  * target = $ImCompositionUrl
-  * element[+]
-    * code = #identifier
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.1 - Identifier"
-      * relationship = #related-to
-  * element[+]
-    * code = #modality
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.2 - Modality"
-      * relationship = #related-to
-  * element[+]
-    * code = #description
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.9 - Description"
-      * relationship = #related-to
-  * element[+]
-    * code = #series.seriesUid
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.12.1 - Series UID"
-      * relationship = #related-to
-  * element[+]
-    * code = #series.acquisitionModality
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.12.3 - Acquisition modality"
-      * relationship = #related-to
-  * element[+]
-    * code = #series.description
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.12.4 - Description"
-      * relationship = #related-to
-  * element[+]
-    * code = #series.bodySite
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.12.7 - Body site"
-      * relationship = #related-to
-  * element[+]
-    * code = #series.laterality
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.12.8 - Laterality"
-      * relationship = #related-to
-  * element[+]
-    * code = #series.specimen
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "C.32.12.9 - Specimen"
-      * relationship = #related-to
-* group[+]
-  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
   * target = $ImWadoEndpointUrl
   * element[+]
     * code = #studyEndpoint
