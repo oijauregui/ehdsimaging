@@ -51,6 +51,11 @@ function generateConceptMapFiles(parsedData, srcResources) {
                       .filter(row => row[indices.tgtResource].length > 0)
                       .map(row => row[indices.tgtResource])
         );
+        const srcFields = new Set( 
+            parsedData.filter(row => row[indices.srcResource] === srcResource)
+                      .filter(row => row[indices.srcField].length > 0)
+                      .map(row => row[indices.srcField])
+        );
         if (tgtResources.size > 0) {
             const conceptMapPath = `${conceptMapDir}/ConceptMap_${srcResource}.fsh`;
             console.log(conceptMapPath);
@@ -83,6 +88,7 @@ function generateConceptMapFiles(parsedData, srcResources) {
                         .map(row => row[indices.srcField].trim())
                         .filter(code => code.length > 0)
                 );
+                elementCodes.forEach(code => srcFields.delete(code));
 
                 if ( elementCodes.size == 0 ) {
                     writable.write(`  * element[+]\n`);
@@ -131,6 +137,16 @@ function generateConceptMapFiles(parsedData, srcResources) {
                     });
                 });
             });
+            if ( srcFields.size > 0 ) {
+                writable.write(`* group[+]\n`);
+                writable.write(`  * source = "${XtEHRBaseUrl}${srcResource}"\n`);
+                srcFields.forEach(code => {
+                    console.log(`No mapping for ${srcResource}.${code}`);
+                    writable.write(`  * element[+]\n`);
+                    writable.write(`    * code = #${code}\n`);
+                    writable.write(`    * noMap = true\n`);
+                });
+            }
             writable.write(`\n`);
             writable.write(`////////////////////////////////////////////////////\n`);
             writable.end();
