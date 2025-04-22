@@ -18,6 +18,7 @@ const indices = {
     tgtRationale: 11,
     tgtRefType: 12,
     includeAsWell: 13,
+    tgtModeling: 14,
     actors: 16,
 };
 
@@ -137,14 +138,25 @@ function generateConceptMapFiles(parsedData, srcResources) {
                     });
                 });
             });
+            // add entries for missed fields
             if ( srcFields.size > 0 ) {
                 writable.write(`* group[+]\n`);
                 writable.write(`  * source = "${XtEHRBaseUrl}${srcResource}"\n`);
                 srcFields.forEach(code => {
                     console.log(`No mapping for ${srcResource}.${code}`);
+                    const rows = parsedData
+                        .filter( row => row[indices.srcResource] === srcResource && row[indices.srcField] === code );
+                    const comment = rows.length > 0 ? rows[0][indices.tgtRationale] : undefined;
+                    const display = rows.length > 0 ? rows[0][indices.srcReq] : undefined;
+                    const modelling = rows.length > 0 ? rows[0][indices.tgtModeling] : undefined;
                     writable.write(`  * element[+]\n`);
                     writable.write(`    * code = #${code}\n`);
                     writable.write(`    * noMap = true\n`);
+                    let str = 
+                        `${comment}${comment.length>0?' - '+modelling:modelling} ${display.length>0?"("+display+")":''} `.replace(/\s+/g, ' ').trim();
+                    if (str.length > 0 ) {
+                        writable.write(`    * display = "${str}"\n`);
+                    }
                 });
             }
             writable.write(`\n`);
@@ -350,13 +362,24 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
             writable.write(`Description: "${actor} obligations for ${resourceName}"\n`);
   
             allObligations.forEach(obligation => {
+                const rows = parsedData
+                    .filter(row => row[indices.tgtResource] === resourceUrl )
+                    .filter(row => row[indices.tgtElement] === obligation )
+                ;
+                const documentation = rows
+                    .map(row => `${row[indices.srcResource]}.${row[indices.srcField]}`)
+                    .filter(row => row.length > 0)
+                    .join(', ')
+                ;
                 writable.write(`* ${obligation}\n`);
                 if (shallHandleCorrectlyObligations.has(obligation)) {
                     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
                     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(Im${actor}Provider)\n`);
+                    // writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "${documentation}"\n`);
                 } else if (shallPopulateObligations.has(obligation)) {
                     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known\n`);
                     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(Im${actor}Provider)\n`);
+                    // writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "${documentation}"\n`);
                 }
             });
   

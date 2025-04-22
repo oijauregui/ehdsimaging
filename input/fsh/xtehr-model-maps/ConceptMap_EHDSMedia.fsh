@@ -53,6 +53,13 @@ Description: "Map for EHDSMedia"
       * display = "C.14.6 - Created"
       * relationship = #related-to
   * element[+]
+    * code = #reason
+    * target[+]
+      * code = #event
+      * comment = "Event codes the context or the reason for the DocumentReference."
+      * display = "C.14.7 - Reason"
+      * relationship = #related-to
+  * element[+]
     * code = #bodysite
     * target[+]
       * code = #bodySite.concept

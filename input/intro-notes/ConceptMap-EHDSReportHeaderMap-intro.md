@@ -42,14 +42,9 @@ class EHDSReportHeader {
 link EHDSReportHeader "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSReportHeader.html"
 class ImDiagnosticReport{
   <<FHIR>>
-  presentedForm
   media
 }
 
-class EuDocumentReference {
-  <<FHIR>>
-}
 EHDSReportHeader --> ImDiagnosticReport
-ImDiagnosticReport --> EuDocumentReference : media
 ```
 

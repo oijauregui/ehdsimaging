@@ -99,5 +99,11 @@ Description: "Map for EHDSCarePlan"
       * code = #note
       * display = "C.19.13 - Note"
       * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"
+  * element[+]
+    * code = #addresses
+    * noMap = true
+    * display = "(C.19.10 - Addresses)"
 
 ////////////////////////////////////////////////////

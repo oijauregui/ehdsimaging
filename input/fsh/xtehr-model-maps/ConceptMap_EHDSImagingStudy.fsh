@@ -305,5 +305,15 @@ Description: "Map for EHDSImagingStudy"
       * comment = "choose one of the slices"
       * display = "C.32.13.2 - Radiation dose"
       * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"
+  * element[+]
+    * code = #phase
+    * noMap = true
+    * display = "(C.32.13 - Phase)"
+  * element[+]
+    * code = #phase.phaseCode
+    * noMap = true
+    * display = "(C.32.13.1 - Phase code)"
 
 ////////////////////////////////////////////////////

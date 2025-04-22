@@ -501,5 +501,15 @@ Description: "Map for EHDSImagingReportBody"
       * code = #conclusion
       * display = "B.1.5.7.1 - Impression"
       * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
+  * element[+]
+    * code = #examinationReport
+    * noMap = true
+    * display = "(B.1.5 - Examination Report)"
+  * element[+]
+    * code = #examinationReport.bodyPart
+    * noMap = true
+    * display = "(B.1.5.2 - Body part)"
 
 ////////////////////////////////////////////////////
