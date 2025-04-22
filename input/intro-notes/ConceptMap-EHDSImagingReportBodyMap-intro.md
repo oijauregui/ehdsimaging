@@ -53,25 +53,19 @@ link EHDSImagingReportBody "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/Struc
 class ImComposition{
   <<FHIR>>
   section[order]
-  section[order].text
   identifier
   section[order].entry[order]
   section[order].extension[note]
-  section[history].text
   section[history].entry
   subject
-  section[imagingstudy].text
-  section[procedure].text
   section[procedure].entry[procedure]
   section[findings]
   section[findings].extension[note]
   section[findings].entry[ImFinding]
   section[impression]
-  section[impression].text
   section[impression].entry[ImFinding]
   section[impression].entry[impression]
   section[recommendation]
-  section[recommendation].text
   section[recommendation].entry[careplan]
   section[comparison].entry[comparedstudy]
 }
@@ -138,6 +132,11 @@ class ImDiagnosticReport{
   <<FHIR>>
   result
   conclusion
+}
+
+class EuCarePlan{
+  <<FHIR>>
+  description
 }
 
 class ImOrder {
@@ -239,5 +238,6 @@ EHDSImagingReportBody --> EuAllergyIntolerance
 EHDSImagingReportBody --> ImDiagnosticReport
 ImDiagnosticReport --> ImFinding : result
 ImDiagnosticReport -->  ImRadiationDoseObservation : result
+EHDSImagingReportBody --> EuCarePlan
 ```
 

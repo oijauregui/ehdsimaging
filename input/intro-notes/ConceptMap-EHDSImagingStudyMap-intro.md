@@ -76,11 +76,6 @@ class ImImagingStudy{
   series.instance.number
 }
 
-class ImComposition{
-  <<FHIR>>
-  section[imagingstudy].text
-}
-
 class ImWadoEndpoint
 class ImImageIidViewerEndpoint
 class ImRadiationDoseObservation{
@@ -128,7 +123,6 @@ ImImagingStudy -->  ImWadoEndpoint : series.endpoint
 ImImagingStudy -->  ImImageIidViewerEndpoint : series.endpoint
 ImImagingStudy --> EuBodyStructure : series.bodySite
 ImImagingStudy --> EuSpecimen : series.specimen
-EHDSImagingStudy --> ImComposition
 EHDSImagingStudy --> ImWadoEndpoint
 EHDSImagingStudy --> ImImageIidViewerEndpoint
 EHDSImagingStudy --> ImRadiationDoseObservation

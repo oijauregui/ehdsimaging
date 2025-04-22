@@ -24,10 +24,6 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.orderId
     * target[+]
-      * code = #section[order].text
-      * display = "B.1.1.1 - Order Id"
-      * relationship = #related-to
-    * target[+]
       * code = #identifier
       * display = "B.1.1.1 - Order Id"
       * relationship = #related-to
@@ -36,41 +32,13 @@ Description: "Map for EHDSImagingReportBody"
       * display = "B.1.1.1 - Order Id"
       * relationship = #related-to
   * element[+]
-    * code = #orderInformation.orderDateAndTime
-    * target[+]
-      * code = #section[order].text
-      * display = "B.1.1.2 - Order date and time"
-      * relationship = #related-to
-  * element[+]
-    * code = #orderInformation.orderPlacer
-    * target[+]
-      * code = #section[order].text
-      * display = "B.1.1.3 - Order placer"
-      * relationship = #related-to
-  * element[+]
     * code = #orderInformation.orderReasonText
     * target[+]
       * code = #section[order].extension[note]
       * display = "B.1.1.4 - Order reason text"
       * relationship = #related-to
   * element[+]
-    * code = #orderInformation.orderReason
-    * target[+]
-      * code = #section[order].text
-      * display = "B.1.1.5 - Order reason"
-      * relationship = #related-to
-  * element[+]
-    * code = #orderInformation.clinicalQuestion
-    * target[+]
-      * code = #section[order].text
-      * display = "B.1.1.6 - Clinical question"
-      * relationship = #related-to
-  * element[+]
     * code = #orderInformation.supportingInformation
-    * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7 - Supporting information"
-      * relationship = #related-to
     * target[+]
       * code = #section[history].entry
       * comment = "elements from patient history relevant for the report."
@@ -79,19 +47,11 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.observation
     * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.1 - Observation"
-      * relationship = #related-to
-    * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.1 - Observation"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.condition
-    * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.2 - Condition"
-      * relationship = #related-to
     * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.2 - Condition"
@@ -99,19 +59,11 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.medicationAdministration
     * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.3 - Medication Administration"
-      * relationship = #related-to
-    * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.3 - Medication Administration"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.devices
-    * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.4 - Devices"
-      * relationship = #related-to
     * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.4 - Devices"
@@ -119,19 +71,11 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.pregnancyStatus
     * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.5 - Pregnancy status"
-      * relationship = #related-to
-    * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.5 - Pregnancy status"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.gestationalAge
-    * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.6 - Gestational age"
-      * relationship = #related-to
     * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.6 - Gestational age"
@@ -139,28 +83,14 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.sexForClinicalUse
     * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.7 - Sex for clinical use"
-      * relationship = #related-to
-    * target[+]
       * code = #subject
       * display = "B.1.1.7.7 - Sex for clinical use"
       * relationship = #related-to
   * element[+]
     * code = #orderInformation.supportingInformation.otherSupportingInformation
     * target[+]
-      * code = #section[history].text
-      * display = "B.1.1.7.8 - Other supporting information"
-      * relationship = #related-to
-    * target[+]
       * code = #section[history].entry
       * display = "B.1.1.7.8 - Other supporting information"
-      * relationship = #related-to
-  * element[+]
-    * code = #specimen
-    * target[+]
-      * code = #section[imagingstudy].text
-      * display = "B.1.2 - Specimen"
       * relationship = #related-to
   * element[+]
     * code = #serviceRequest
@@ -169,33 +99,13 @@ Description: "Map for EHDSImagingReportBody"
       * display = "B.1.3 - Service request"
       * relationship = #related-to
   * element[+]
-    * code = #exposureInformation
-    * target[+]
-      * code = #section[procedure].text
-      * display = "B.1.4 - Exposure information"
-      * relationship = #related-to
-  * element[+]
-    * code = #examinationReport.modality
-    * target[+]
-      * code = #section[procedure].text
-      * display = "B.1.5.1 - Modality"
-      * relationship = #related-to
-  * element[+]
     * code = #examinationReport.imagingProcedures
-    * target[+]
-      * code = #section[procedure].text
-      * display = "B.1.5.3 - Imaging procedures"
-      * relationship = #related-to
     * target[+]
       * code = #section[procedure].entry[procedure]
       * display = "B.1.5.3 - Imaging procedures"
       * relationship = #related-to
   * element[+]
     * code = #examinationReport.medication
-    * target[+]
-      * code = #section[procedure].text
-      * display = "B.1.5.4 - Medication"
-      * relationship = #related-to
     * target[+]
       * code = #section[procedure].entry[procedure]
       * display = "B.1.5.4 - Medication"
@@ -225,12 +135,6 @@ Description: "Map for EHDSImagingReportBody"
       * display = "B.1.5.7 - Conclusion"
       * relationship = #related-to
   * element[+]
-    * code = #examinationReport.conclusion.impression
-    * target[+]
-      * code = #section[impression].text
-      * display = "B.1.5.7.1 - Impression"
-      * relationship = #related-to
-  * element[+]
     * code = #examinationReport.conclusion.conditionOrFinding[x]
     * target[+]
       * code = #section[impression].entry[ImFinding]
@@ -245,12 +149,6 @@ Description: "Map for EHDSImagingReportBody"
     * target[+]
       * code = #section[recommendation]
       * display = "B.1.6 - Recommendation"
-      * relationship = #related-to
-  * element[+]
-    * code = #recommendation.description
-    * target[+]
-      * code = #section[recommendation].text
-      * display = "B.1.6.1 - Description"
       * relationship = #related-to
   * element[+]
     * code = #recommendation.carePlan
@@ -500,6 +398,15 @@ Description: "Map for EHDSImagingReportBody"
     * target[+]
       * code = #conclusion
       * display = "B.1.5.7.1 - Impression"
+      * relationship = #related-to
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
+  * target = $EuCarePlanUrl
+  * element[+]
+    * code = #recommendation.description
+    * target[+]
+      * code = #description
+      * display = "B.1.6.1 - Description"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"
