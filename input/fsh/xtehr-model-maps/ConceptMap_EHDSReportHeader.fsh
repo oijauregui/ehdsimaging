@@ -19,11 +19,13 @@ Description: "Map for EHDSReportHeader"
     * code = #documentMetadata.presentedForm
     * target[+]
       * code = #presentedForm
+      * display = "A.1.10 - Presented form"
       * relationship = #related-to
   * element[+]
     * code = #documentMetadata.media
     * target[+]
       * code = #media
+      * display = "A.1.11 - Media"
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

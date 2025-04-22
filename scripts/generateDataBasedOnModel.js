@@ -11,6 +11,7 @@ const indices = {
     srcResource: 1,
     srcField: 2,
     srcType: 5,
+    srcReq:7,
     tgtResource: 8,
     tgtElement: 9,
     tgtEquivalence: 10,
@@ -110,17 +111,21 @@ function generateConceptMapFiles(parsedData, srcResources) {
                         });
 
                     if ( targets.size == 0 ) {
-                        writable.write(`    * noMap = true\n`);
+                        writable.write(`    * noMap = true\n`); // TODO not sure this is correct
                     }
         
                                 
                     targets.forEach((value, key) => {
                         const comment = value[indices.tgtRationale];
+                        const srcReq  = value[indices.srcReq];
                         const tgtField = value[indices.tgtElement];
                         writable.write(`    * target[+]\n`);
                         writable.write(`      * code = #${tgtField}\n`);
                         if (comment.length > 0) {
                             writable.write(`      * comment = "${comment}"\n`);
+                        }
+                        if (srcReq.length > 0) {
+                            writable.write(`      * display = "${srcReq}"\n`);
                         }
                         writable.write(`      * relationship = ${getEquivalence(value[indices.tgtEquivalence])}\n`);
                     });

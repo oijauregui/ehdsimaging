@@ -19,16 +19,19 @@ Description: "Map for EHDSTelecom"
     * code = #use
     * target[+]
       * code = #use
+      * display = "C.6.1 - Use"
       * relationship = #equivalent
   * element[+]
     * code = #type
     * target[+]
       * code = #system
+      * display = "C.6.2 - Type"
       * relationship = #equivalent
   * element[+]
     * code = #value
     * target[+]
       * code = #value
+      * display = "C.6.3 - Value"
       * relationship = #equivalent
 
 ////////////////////////////////////////////////////
