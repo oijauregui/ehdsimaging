@@ -183,10 +183,6 @@ Description: "Map for EHDSImagingReportHeader"
       * code = #language
       * display = "A.1.9.12 - Language"
       * relationship = #related-to
-    * target[+]
-      * code = #extension[additionalLanguage]
-      * display = "A.1.9.12 - Language"
-      * relationship = #related-to
   * element[+]
     * code = #documentMetadata.version
     * target[+]

@@ -13,8 +13,7 @@ Description: "Clinical document used to represent a report for the scope of the 
 * extension contains 
     $event-basedOn-url          named basedOn 0..* and
     $information-recipient-url  named informationRecipient 0..* and
-    $artifact-version-url       named artifactVersion 0..1 and
-    AdditionalLanguageExtension named additionalLanguage 0..*
+    $artifact-version-url       named artifactVersion 0..1
 
 * category 1..*
   * insert SliceElement( #value, $this )
