@@ -19,21 +19,25 @@ Description: "Map for EHDSHealthProfessional"
     * code = #identifier
     * target[+]
       * code = #identifier
+      * display = "C.2.1 - Identifier"
       * relationship = #related-to
   * element[+]
     * code = #name
     * target[+]
       * code = #name
+      * display = "C.2.2 - Name"
       * relationship = #related-to
   * element[+]
     * code = #address
     * target[+]
       * code = #address
+      * display = "C.2.3 - Address"
       * relationship = #related-to
   * element[+]
     * code = #telecom
     * target[+]
       * code = #telecom
+      * display = "C.2.4 - Telecom"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"
@@ -42,16 +46,19 @@ Description: "Map for EHDSHealthProfessional"
     * code = #role
     * target[+]
       * code = #code
+      * display = "C.2.5 - Role"
       * relationship = #related-to
   * element[+]
     * code = #organization
     * target[+]
       * code = #organization
+      * display = "C.2.6 - Organization"
       * relationship = #related-to
   * element[+]
     * code = #specialty
     * target[+]
       * code = #specialty
+      * display = "C.2.7 - Specialty"
       * relationship = #related-to
 
 ////////////////////////////////////////////////////

@@ -19,6 +19,7 @@ Description: "Map for EHDSImagingReport"
     * code = #imagingReportHeader
     * target[+]
       * code = #section
+      * display = "A.1 - Imaging Report header"
       * relationship = #related-to
   * element[+]
     * code = #imagingReportStructuredBody
@@ -28,14 +29,17 @@ Description: "Map for EHDSImagingReport"
     * target[+]
       * code = #section[comparison].entry[comparedstudy]
       * comment = "Comparison studie"
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
     * target[+]
       * code = #section[comparison].entry[comparedstudy]
       * comment = "key images"
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
     * target[+]
       * code = #section[comparison].entry[comparedstudy]
       * comment = "other data"
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
@@ -50,11 +54,13 @@ Description: "Map for EHDSImagingReport"
     * code = #presentedForms
     * target[+]
       * code = #presentedForm
+      * display = "A.3 - Presented forms"
       * relationship = #related-to
   * element[+]
     * code = #imagingReportAttachments[x]
     * target[+]
       * code = #media
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
@@ -64,14 +70,17 @@ Description: "Map for EHDSImagingReport"
     * target[+]
       * code = #derivedFrom
       * comment = "Comparison studie"
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
     * target[+]
       * code = #derivedFrom
       * comment = "key images"
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
     * target[+]
       * code = #derivedFrom
       * comment = "other data"
+      * display = "A.4 - Attachment, Media"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
