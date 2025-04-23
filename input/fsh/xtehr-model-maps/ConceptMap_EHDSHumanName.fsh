@@ -20,13 +20,13 @@ Description: "Map for EHDSHumanName"
     * target[+]
       * code = #use
       * display = "C.27.1 - Use"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #text
     * target[+]
       * code = #text
       * display = "C.27.2 - Text"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #family
     * target[+]
@@ -47,18 +47,18 @@ Description: "Map for EHDSHumanName"
     * target[+]
       * code = #given
       * display = "C.27.4 - Given"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #prefix
     * target[+]
       * code = #prefix
       * display = "C.27.5 - Prefix"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #suffix
     * target[+]
       * code = #suffix
       * display = "C.27.6 - Suffix"
-      * relationship = #related-to
+      * relationship = #equivalent
 
 ////////////////////////////////////////////////////

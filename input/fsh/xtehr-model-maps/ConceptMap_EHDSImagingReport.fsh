@@ -17,10 +17,7 @@ Description: "Map for EHDSImagingReport"
   * target = $ImCompositionUrl
   * element[+]
     * code = #imagingReportHeader
-    * target[+]
-      * code = #section
-      * display = "A.1 - Imaging Report header"
-      * relationship = #related-to
+    * noMap = true
   * element[+]
     * code = #imagingReportStructuredBody
     * noMap = true
@@ -55,7 +52,7 @@ Description: "Map for EHDSImagingReport"
     * target[+]
       * code = #presentedForm
       * display = "A.3 - Presented forms"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #imagingReportAttachments[x]
     * target[+]

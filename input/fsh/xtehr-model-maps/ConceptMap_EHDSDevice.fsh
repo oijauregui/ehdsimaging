@@ -20,66 +20,66 @@ Description: "Map for EHDSDevice"
     * target[+]
       * code = #identifier
       * display = "C.12.1 - Identifier"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #manufacturer
     * target[+]
       * code = #manufacturer
       * display = "C.12.2 - Manufacturer"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #manufactureDate
     * target[+]
       * code = #manufactureDate
       * display = "C.12.3 - Manufacture date"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #expiryDate
     * target[+]
       * code = #expirationDate
       * display = "C.12.4 - Expiry date"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #lotNumber
     * target[+]
       * code = #lotNumber
       * display = "C.12.5 - Lot number"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #serialNumber
     * target[+]
       * code = #serialNumber
       * display = "C.12.6 - Serial number"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #name
     * target[+]
       * code = #name
       * display = "C.12.7 - Name"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #modelNumber
     * target[+]
       * code = #modelNumber
       * display = "C.12.8 - Model number"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #version
     * target[+]
       * code = #version
       * display = "C.12.9 - Version"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #type
     * target[+]
       * code = #type
       * display = "C.12.10 - Type"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #note
     * target[+]
       * code = #note
       * display = "C.12.11 - Note"
-      * relationship = #related-to
+      * relationship = #equivalent
 
 ////////////////////////////////////////////////////

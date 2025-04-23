@@ -86,73 +86,73 @@ Description: "Map for EHDSImagingStudy"
     * target[+]
       * code = #series
       * display = "C.32.12 - Series"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.seriesUid
     * target[+]
       * code = #series.uid
       * display = "C.32.12.1 - Series UID"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.number
     * target[+]
       * code = #series.number
       * display = "C.32.12.2 - Number"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.acquisitionModality
     * target[+]
       * code = #series.modality
       * display = "C.32.12.3 - Acquisition modality"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.description
     * target[+]
       * code = #series.description
       * display = "C.32.12.4 - Description"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.numberOfInstances
     * target[+]
       * code = #series.numberOfInstances
       * display = "C.32.12.5 - Number of instances"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.seriesEndpoint
     * target[+]
       * code = #series.endpoint
       * display = "C.32.12.6 - Series endpoint"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.bodySite
     * target[+]
       * code = #series.bodySite
       * display = "C.32.12.7 - Body site"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.laterality
     * target[+]
       * code = #series.laterality
       * display = "C.32.12.8 - Laterality"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.specimen
     * target[+]
       * code = #series.specimen
       * display = "C.32.12.9 - Specimen"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.started
     * target[+]
       * code = #series.started
       * display = "C.32.12.10 - Started"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.instancesInTheSeries
     * target[+]
       * code = #series.instance
       * display = "C.32.12.11 - Instances in the series"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.instancesInTheSeries.instanceTitle
     * target[+]
@@ -165,19 +165,19 @@ Description: "Map for EHDSImagingStudy"
     * target[+]
       * code = #series.instance.uid
       * display = "C.32.12.11.2 - Instance UID"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.instancesInTheSeries.sopClass
     * target[+]
       * code = #series.instance.sopClass
       * display = "C.32.12.11.3 - SOP class"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.instancesInTheSeries.instanceNumber
     * target[+]
       * code = #series.instance.number
       * display = "C.32.12.11.4 - Instance number"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation
     * target[+]

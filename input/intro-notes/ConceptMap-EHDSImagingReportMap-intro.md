@@ -16,7 +16,6 @@ class EHDSImagingReport {
 link EHDSImagingReport "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSImagingReport.html"
 class ImComposition{
   <<FHIR>>
-  section
   section[comparison].entry[comparedstudy]
 }
 
