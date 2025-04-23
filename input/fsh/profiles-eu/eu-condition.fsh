@@ -1,4 +1,4 @@
-Profile: ConditionEU
+Profile: ConditionEu
 Parent: Condition
 Title: "EU Condition"
 Description: "A condition profile for the EU."

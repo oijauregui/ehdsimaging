@@ -45,7 +45,7 @@ Description: "Map for EHDSCarePlan"
     * target[+]
       * code = #title.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]
       * display = "C.19.4 - Title"
-      * relationship = #related-to
+      * relationship = #source-is-broader-than-target
   * element[+]
     * code = #description
     * target[+]
@@ -56,49 +56,49 @@ Description: "Map for EHDSCarePlan"
     * target[+]
       * code = #description.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]
       * display = "C.19.5 - Description"
-      * relationship = #related-to
+      * relationship = #source-is-broader-than-target
   * element[+]
     * code = #patient
     * target[+]
       * code = #subject
       * display = "C.19.6 - Subject"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #period
     * target[+]
       * code = #period
       * display = "C.19.7 - Period"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #custodian
     * target[+]
       * code = #custodian
       * display = "C.19.8 - Custodian"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #contributor
     * target[+]
       * code = #contributor
       * display = "C.19.9 - Contributor"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #goal
     * target[+]
       * code = #goal
       * display = "C.19.11 - Goal"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #activity
     * target[+]
       * code = #activity
       * display = "C.19.12 - Activity"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #note
     * target[+]
       * code = #note
       * display = "C.19.13 - Note"
-      * relationship = #related-to
+      * relationship = #equivalent
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"
   * element[+]

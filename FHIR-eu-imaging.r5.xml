@@ -21,7 +21,7 @@
 <artifact id="StructureDefinition/BodyStructureEu" key="StructureDefinition-BodyStructureEu" name="EU BodyStructure"/>
 <artifact id="StructureDefinition/CarePlanEu" key="StructureDefinition-CarePlanEu" name="EU CarePlan"/>
 <artifact id="StructureDefinition/CompositionEu" key="StructureDefinition-CompositionEu" name="EU Composition"/>
-<artifact id="StructureDefinition/ConditionEU" key="StructureDefinition-ConditionEU" name="EU Condition"/>
+<artifact id="StructureDefinition/ConditionEu" key="StructureDefinition-ConditionEu" name="EU Condition"/>
 <artifact id="StructureDefinition/EncounterEu" key="StructureDefinition-EncounterEu" name="EU Encounter"/>
 <artifact id="StructureDefinition/EndpointEu" key="StructureDefinition-EndpointEu" name="EU Endpoint"/>
 <artifact id="StructureDefinition/LocationEu" key="StructureDefinition-LocationEu" name="EU Location"/>

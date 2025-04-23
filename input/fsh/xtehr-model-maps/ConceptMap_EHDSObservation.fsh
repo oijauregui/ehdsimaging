@@ -20,23 +20,23 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #effectiveDateTime
       * display = "C.10.1 - Observation date"
-      * relationship = #related-to
+      * relationship = #source-is-broader-than-target
     * target[+]
       * code = #effectivePeriod
       * display = "C.10.1 - Observation date"
-      * relationship = #related-to
+      * relationship = #source-is-broader-than-target
   * element[+]
     * code = #observationCode
     * target[+]
       * code = #code
       * display = "C.10.2 - Observation code"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #observationName
     * target[+]
       * code = #code.coding.display
       * display = "C.10.3 - Observation name"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #observationOriginalName
     * noMap = true
@@ -45,19 +45,19 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #method
       * display = "C.10.5 - Observation method"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #observationDevice
     * target[+]
       * code = #device
       * display = "C.10.6 - Observation device"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #order
     * target[+]
       * code = #basedOn
       * display = "C.10.7 - Order"
-      * relationship = #related-to
+      * relationship = #source-is-narrower-than-target
   * element[+]
     * code = #performer
     * target[+]
@@ -143,33 +143,33 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #valueQuantity.extension[uncertainty]
       * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #valueQuantity.extension[uncertaintyType]
       * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #valueRange.low.extension[uncertainty]
       * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #valueRange.low.extension[uncertaintyType]
       * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #valueRange.high.extension[uncertainty]
       * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #valueRange.high.extension[uncertaintyType]
       * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #observationResult.codedResult
     * target[+]
       * code = #valueCodeableConcept
       * display = "C.10.10.3 - Coded Result"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #dataAbsentReason
     * noMap = true
@@ -178,131 +178,131 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #referenceRange
       * display = "C.10.12 - Reference range"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #observationInterpretation
     * target[+]
       * code = #interpretation
       * display = "C.10.13 - Observation interpretation"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #triggeredBy[x]
     * target[+]
       * code = #triggeredBy.observation
       * display = "C.10.14 - Triggered by"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #triggeredBy.type
       * display = "C.10.14 - Triggered by"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #hasMember[x]
     * target[+]
       * code = #hasMember
       * display = "C.10.15 - Has member"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #resultDescription
     * target[+]
       * code = #note
       * display = "C.10.16 - Result description"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #anatomicLocation
     * target[+]
       * code = #bodySite
       * display = "C.10.17 - Anatomic location"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #subject
     * target[+]
       * code = #subject
       * display = "C.10.18 - Subject"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component
     * target[+]
       * code = #component
       * display = "C.10.19 - Component"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.code
     * target[+]
       * code = #code
       * display = "C.10.19.1 - Code"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.textualResult
     * target[+]
       * code = #valueString
       * display = "C.10.19.2 - Textual Result"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.numericResult
     * target[+]
       * code = #valueQuantity
       * display = "C.10.19.3 - Numeric Result"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.numericResult.numericValue[x]
     * target[+]
       * code = #component.valueQuantity
       * display = "C.10.19.3.1 - Numeric value"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange
       * display = "C.10.19.3.1 - Numeric value"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange.low
       * display = "C.10.19.3.1 - Numeric value"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange.high
       * display = "C.10.19.3.1 - Numeric value"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.numericResult.units
     * target[+]
       * code = #component.valueQuantity.system
       * display = "C.10.19.3.2 - Units"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueQuantity.code
       * display = "C.10.19.3.2 - Units"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange.low.system
       * display = "C.10.19.3.2 - Units"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange.low.code
       * display = "C.10.19.3.2 - Units"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange.high.system
       * display = "C.10.19.3.2 - Units"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueRange.high.unit
       * display = "C.10.19.3.2 - Units"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.numericResult.uncertainty
     * target[+]
       * code = #component.valueQuantity.extension[iso21090-uncertainty]
       * display = "C.10.19.3.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #component.valueQuantity.extension[iso21090-uncertaintyType]
       * display = "C.10.19.3.3 - Uncertainty"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.codedResult
     * target[+]
       * code = #component.valueCodeableConcept
       * display = "C.10.19.4 - Coded Result"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.dataAbsentReason
     * noMap = true
@@ -311,19 +311,19 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #component.referenceRange
       * display = "C.10.19.6 - Reference range"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #component.observationInterpretation
     * target[+]
       * code = #component.interpretation
       * display = "C.10.19.7 - Observation interpretation"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #status
     * target[+]
       * code = #status.value
       * display = "C.10.19.8 - Status"
-      * relationship = #related-to
+      * relationship = #equivalent
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
   * target = $EuServiceRequestUrl
@@ -332,7 +332,7 @@ Description: "Map for EHDSObservation"
     * target[+]
       * code = #requester
       * display = "C.10.7 - Order"
-      * relationship = #related-to
+      * relationship = #equivalent
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
   * element[+]

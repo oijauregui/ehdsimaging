@@ -20,53 +20,53 @@ Description: "Map for EHDSMedicationAdministration"
     * target[+]
       * code = #identifier
       * display = "C.18.1 - Identifier"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #status
     * target[+]
       * code = #status
       * display = "C.18.2 - Status"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #statusReason
     * target[+]
       * code = #statusReason
       * display = "C.18.3 - Status reason"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #medication
     * target[+]
       * code = #medication
       * display = "C.18.4 - Medication"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #occurance[x]
     * target[+]
       * code = #occurenceDateTime
       * display = "C.18.5 - Occurance"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #occurencePeriod
       * display = "C.18.5 - Occurance"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #reason
     * target[+]
       * code = #reason
       * display = "C.18.6 - Reason"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #note
     * target[+]
       * code = #note
       * display = "C.18.7 - Note"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #dosage
     * target[+]
       * code = #dosage
       * display = "C.18.8 - Dosage"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #dosage.dosageDescription
     * target[+]
@@ -78,19 +78,19 @@ Description: "Map for EHDSMedicationAdministration"
     * target[+]
       * code = #dosage.site
       * display = "C.18.8.2 - Site"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #dosage.route
     * target[+]
       * code = #dosage.route
       * display = "C.18.8.3 - Route"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #dosage.method
     * target[+]
       * code = #dosage.method
       * display = "C.18.8.4 - Method"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #dosage.dose
     * target[+]
@@ -102,16 +102,16 @@ Description: "Map for EHDSMedicationAdministration"
     * target[+]
       * code = #dosage.rateRatio
       * display = "C.18.8.6 - Rate"
-      * relationship = #related-to
+      * relationship = #equivalent
     * target[+]
       * code = #dosage.rateQuantity
       * display = "C.18.8.6 - Rate"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #sibject
     * target[+]
       * code = #subject
       * display = "C.18.9 - Patient"
-      * relationship = #related-to
+      * relationship = #equivalent
 
 ////////////////////////////////////////////////////

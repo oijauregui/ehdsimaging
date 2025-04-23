@@ -16,7 +16,7 @@ Alias: $EuAttachmentUrl      = http://hl7.org/fhir/StructureDefinition/Attachmen
 Alias: $EuBodyStructure      = BodyStructureEu
 Alias: $EuBodyStructureUrl   = http://hl7.eu/fhir/imaging/r5/StructureDefinition/BodyStructureEu
 
-Alias: $EuCondition          = ConditionEU
+Alias: $EuCondition          = ConditionEu
 Alias: $EuConditionUrl       = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ConditionEu
 
 Alias: $EuCoverage           = Coverage

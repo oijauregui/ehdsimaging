@@ -448,6 +448,7 @@ function getEquivalence(code) {
         case "EQ": return "#equivalent";
         case "SB": return "#source-is-broader-than-target";
         case "TB": return "#source-is-narrower-than-target";
+        case "RT": return "#related-to";
         default: return "#related-to";
     }
 }
