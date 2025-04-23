@@ -21,7 +21,7 @@ class EHDSMedicationAdministration {
   dosage.method
   dosage.dose
   dosage.rate[x]
-  sibject
+  subject
 }
 link EHDSMedicationAdministration "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-EHDSMedicationAdministration.html"
 class EuMedicationAdministration{
