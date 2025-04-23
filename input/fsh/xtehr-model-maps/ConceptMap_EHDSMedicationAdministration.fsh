@@ -108,7 +108,7 @@ Description: "Map for EHDSMedicationAdministration"
       * display = "C.18.8.6 - Rate"
       * relationship = #equivalent
   * element[+]
-    * code = #sibject
+    * code = #subject
     * target[+]
       * code = #subject
       * display = "C.18.9 - Patient"
