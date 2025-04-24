@@ -81,6 +81,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section.code 1..1 
 * section 
   * insert SliceElement( #value, code )
+* section.emptyReason from ImSectionEmptyReason (preferred)  
+* section obeys eu-imaging-composition-1
 * section contains 
     imagingstudy 1..1  and
     order 1..1 and
@@ -90,7 +92,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     findings 1..1  and 
     impression 1..1 and 
     recommendation 1..1  and 
-    communication 1..1 
+    communication 0..1 
 
 // ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
 * section[imagingstudy]
@@ -123,7 +125,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
   * entry[order] only Reference(ImOrder)  
   
-  
+
 // // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
@@ -198,6 +200,10 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Communications"
   * code = $loinc#18783-1 "Communication"
 
+Invariant: eu-imaging-composition-1
+Description: "When a section is empty, the emptyReason extension SHALL be present."
+Severity: #error 
+Expression: "entry.empty() and emptyReason.exists()"
 
 Extension: ImDiagnosticReportReference
 Id:   im-composition-diagnosticReportReference
@@ -210,3 +216,9 @@ Context: Composition
 * insert ExtensionContext(Composition)
 * insert SetFmmAndStatusRule ( 2, trial-use)
 * value[x] only Reference (ImDiagnosticReport)
+
+ValueSet: ImSectionEmptyReason
+Title: "Reasons a section in an imaging report is empty."
+Description: "Reasons a section in an imaging report is empty."
+* include codes from valueset http://terminology.hl7.org/CodeSystem/list-empty-reason
+* $loinc#LA4720-4 "Not applicable"
