@@ -30,6 +30,7 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1
 * category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
+* category[imaging].coding 1..1
 
 * subject only Reference(ImPatient)
 
@@ -64,9 +65,8 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 * composition only Reference(ImComposition)
 
 // code 
-* code 1..
-* code from ImagingReportTypesEuVS (preferred) // valueset to be revised. 
-  * ^short = "Type of Imaging Diagnostic Report"
-  * ^definition = "Specifies that it refers to a Imaging Report"
-  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
-
+* code
+  * coding 1..*
+    * insert SliceElement( #value, $this )
+  * coding contains imaging-report-v1-0-0 1..1
+  * coding[imaging-report-v1-0-0] = Hl7EuDocumentTypes#imaging-v1-0-0 "Imaging Report V1.0.0"
