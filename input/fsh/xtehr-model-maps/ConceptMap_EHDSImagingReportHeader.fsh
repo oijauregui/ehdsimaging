@@ -107,10 +107,6 @@ Description: "Map for EHDSImagingReportHeader"
       * code = #category[imaging]
       * display = "A.1.9.2 - Document type"
       * relationship = #related-to
-    * target[+]
-      * code = #type
-      * display = "A.1.9.2 - Document type"
-      * relationship = #related-to
   * element[+]
     * code = #documentMetadata.documentStatus
     * target[+]
@@ -167,10 +163,10 @@ Description: "Map for EHDSImagingReportHeader"
   * element[+]
     * code = #documentMetadata.documentFormat
     * target[+]
-      * code = #category[imaging]
-      * comment = "Could be extended with list of approved templates as a separate category in the future."
+      * code = #type
+      * comment = "The type represents the type of document – template."
       * display = "A.1.9.10 - Document format"
-      * relationship = #related-to
+      * relationship = #equivalent
   * element[+]
     * code = #documentMetadata.confidentiality
     * target[+]
@@ -255,6 +251,13 @@ Description: "Map for EHDSImagingReportHeader"
     * target[+]
       * code = #effectivePeriod
       * display = "A.1.9.4 - Period"
+      * relationship = #related-to
+  * element[+]
+    * code = #documentMetadata.documentFormat
+    * target[+]
+      * code = #code
+      * comment = "The type represents the type of document – template."
+      * display = "A.1.9.10 - Document format"
       * relationship = #related-to
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"

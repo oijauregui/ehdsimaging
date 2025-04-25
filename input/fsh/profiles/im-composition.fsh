@@ -47,16 +47,17 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 // type of the report. Matching DiagnosticReport.code
 // code 
-* type 1..
-* type from ImagingReportTypesEuVS (preferred) // valueset to be revised. 
-  * ^short = "Type of Imaging Diagnostic Report"
-  * ^definition = "Specifies that it refers to a Imaging Report"
-  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+* type
+  * coding 1..*
+    * insert SliceElement( #value, $this )
+  * coding contains imaging-report-v1-0-0 1..1
+  * coding[imaging-report-v1-0-0] = Hl7EuDocumentTypes#imaging-v1-0-0 "Imaging Report V1.0.0"
 
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1 
 * category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
+* category[imaging].coding 1..1
 
 * status 
 
@@ -216,9 +217,3 @@ Context: Composition
 * insert ExtensionContext(Composition)
 * insert SetFmmAndStatusRule ( 2, trial-use)
 * value[x] only Reference (ImDiagnosticReport)
-
-ValueSet: ImSectionEmptyReason
-Title: "Reasons a section in an imaging report is empty."
-Description: "Reasons a section in an imaging report is empty."
-* include codes from valueset http://terminology.hl7.org/CodeSystem/list-empty-reason
-* $loinc#LA4720-4 "Not applicable"
