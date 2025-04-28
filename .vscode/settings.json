@@ -16,5 +16,6 @@
         "MD041": false,
         "no-hard-tabs": true
     },
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.indentSize": 2,
 }

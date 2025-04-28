@@ -10,14 +10,14 @@
    </p>
    <p> The content of this implementation guide is discussed HL7 EU calls (<a href="https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings">HL7-eu imaging on Confluence</a>).
    </p>
-   <p> This initial version is based on FHIR R5. Once the model stabilizes, the FHIR R4 version will be derived from it.  
+   <p> This initial version is based on FHIR R5. Once the IG stabilizes, the FHIR R4 version will be derived from it.  
    </p>
  </blockquote>
 </div>
 
 ### Scope
 
-This implementation guide specifies imaging study data in the **European** context, as defined in {{ehnImaging}}, as a FHIR model. It defines:
+This implementation guide specifies imaging study data in the **European** context, as defined in {{ehnImaging}} and refined by {{XtEhrImaging}}, as a FHIR model. It defines:
 * The structure and contents of a FHIR imaging studies and reports.
 * Different options for publishing and searching for such studies and reports.
 * Discovery of available mechanisms to access the imaging data.
@@ -26,12 +26,12 @@ The specification is to be used in a variety of deployment models, which include
 
 Both on the national level as on cross border exchange, it has to fit into an existing ecosystem.
 
-Current approaches within Europe use two different approaches to information exchange:
+Current approaches within Europe use different approaches to information exchange:
 * **Document based exchange**, the document is represented as a FHIR Document Bundle.
 * **REST API based access to document**s, a {{Composition}} and {{DiagnosticReport}} for each document including instances of the referred resources
 * **REST API based access to resources**, documents are provided ({{Composition}} + {{DiagnosticReport}}), the resources in the documents are aligned, i.e. they all point to the same {{Patient}} resource
 
-The specification will be designed in such a way that it can be used in both deployment scenarios.
+The specification will be designed in such a way that it can be used in all of these deployment scenarios.
 
 <div xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -65,13 +65,15 @@ Besides the requirements defined in the {{ehnImagingGuidelines}}, it also uses i
 * Related specifications:
   * IHE-IDR, draft version as discussed on Jan 19 2025
     * {{iheRad}} is working on a machine readable specification for diagnostic reports of (common) radiology procedures. The draft results of this activity have been taken along in the definition of this IG.
+  * {{hl7EuBase}}
+    * Base and code profiles for European specifications.
+  * {{hl7EuExtensions}}  
+    * EU specific extensions.
   * {{hl7EuLabs}}
     * This specification has adopted many of the design patterns defined in this IG.
   * {{hl7EuHdr}}
     * This specification has adopted many of the design patterns defined in this IG.
   * {{ArgImg}}
-  * {{usCore}}
-    * Where possible this specification has been aligned with choices made in US core.
 
 ### Dependencies
 

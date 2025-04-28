@@ -1,27 +1,5 @@
-Profile: ImCompositionProvider
-Parent: ImComposition
-Id: im-composition-provider
-Title: "Imaging Composition (ImProvider)"
-Description: "Requirements for the provider of the Imaging Composition."
-* insert SetFmmAndStatusRule( 1, draft )
-* meta.security
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A1.8]], [[]] )
-* language
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
-* custodian
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
-* attester[legalAuthenticator]
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
-* attester[resultValidator]
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
-* author[author] only Reference(ImPractitionerRole)
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
-* author[authoring-device] only Reference(ImAuthoringDevice)
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[A.1.8.8]], [[]] )
-
 Profile: ImComposition
-Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Id: im-composition
+Parent: CompositionEu
 Title: "Imaging Composition"
 Description: "Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project."
 * . ^short = "Imaging Report composition"
@@ -37,60 +15,35 @@ The `text` field of each section SHALL contain a textual representation of all l
 """
 * insert SetFmmAndStatusRule( 1, draft )
 
+* identifier 1..*
 * extension contains 
-    ImDiagnosticReportReference named diagnosticreport-reference 1..1 and
-    $event-basedOn-url named basedOn 0..* and
-    $information-recipient-url named informationRecipient 0..* and
-    $artifact-version-url named artifactVersion 0..1
+    ImDiagnosticReportReference named diagnosticreport-reference 1..1  
 * extension[diagnosticreport-reference].valueReference only Reference ( ImDiagnosticReport )
-* extension[basedOn].valueReference only Reference ( ServiceRequest )
-// TODO see open issues - readdress the status of the information recipient.
-* extension[informationRecipient].valueReference only Reference ( ImInformationRecipient )
 
-* meta
-  * security 0..*
-
-* language 0..1
-
-//business identifier and relation with the DiagnosticReport resource
-* identifier
-  * ^short = "Report identifier"
-  * ^definition = "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions"
-  * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
-
-* status
-  * ^short = "Status of the Report"
-  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
-
-* subject 1..1
-* subject only Reference(ImPatient)
-
-* custodian
-* custodian only Reference(ImOrganization)
+* custodian only Reference(OrganizationEu)
   * ^short = "Organization that manages the Imaging Report"
-  
+
 * attester 0..*
-  * ^slicing.discriminator[+].type = #value
-  * ^slicing.discriminator[=].path = "$this.mode"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
+  * insert SliceElement( #value, mode )
 * attester contains legalAuthenticator 0..* and resultValidator 0..*
 * attester[legalAuthenticator]
   * mode 1..1
   * mode = #legal
-  * party only Reference(ImLegalAuthenticator)
+  * party only Reference($EuPractitionerRole)
+  * time 1..1
 * attester[resultValidator]
   * mode 1..1
   * mode = #professional
-  * party only Reference(ImResultValidator)
+  * party only Reference($EuPractitionerRole)
+  * time 1..1
 
 * author 1..*
   * insert SliceElement( #profile, $this )
 * author contains 
     author 0..* and 
-    authoring-device 0..*
-* author[author] only Reference(ImPractitionerRole)
-* author[authoring-device] only Reference(ImAuthoringDevice)
+    authoringDevice 0..*
+* author[author] only Reference($EuPractitionerRole)
+* author[authoringDevice] only Reference($EuDevice)
 
 // type of the report. Matching DiagnosticReport.code
 // code 
@@ -100,103 +53,133 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "Specifies that it refers to a Imaging Report"
   * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
 
-* date
-  * ^short = "Date the report was last changed."
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains imaging 1..1 
+* category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
 
-* section
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "code"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
-* section.entry
-* section.code 1..1  // LOINC code for the section
-* section.title
-* section.text
+* status 
+
+* event 2..*
+  * insert SliceElement( #value, detail.concept )
+* event contains 
+    imagingstudy 1..* and 
+    procedure 1..*
+* event[imagingstudy]
+  * ^short = "Modality"
+  * ^definition = "The type of imaging modality used to perform the study."
+  * detail 1..*
+  * detail from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (extensible)
+  * detail only CodeableReference ( ImImagingStudy )
+* event[procedure]
+  * ^short = "Study Type"
+  * ^definition = "The type of imaging study performed."
+  * detail 1..*
+  * detail from https://www.hl7.org/fhir/valueset-procedure-reason.html (extensible)
+  * detail only CodeableReference ( ImProcedure )
+
+* section.code 1..1 
+* section 
+  * insert SliceElement( #value, code )
 * section contains 
-    imagingstudy 1..1 and 
-    order 1..1 and 
-    history 1..1 and
+    imagingstudy 1..1  and
+    order 1..1 and
+    history 1..1 and 
     procedure 1..1 and
-    comparison 1..1 and
-    findings 1..1 and
-    impression 1..1 and
-    recommendation 1..1 and
-    communication 1..1
+    comparison 1..1 and 
+    findings 1..1  and 
+    impression 1..1 and 
+    recommendation 1..1  and 
+    communication 1..1 
 
-///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
+// ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
 * section[imagingstudy]
   * ^short = "Imaging Study"
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0
-  * entry
-    * ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-    * ^slicing.ordered = false
+  * entry 
+    * insert SliceElement( #profile, $this )
   * entry contains imagingstudy 1..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
   * entry[imagingstudy] only Reference(ImImagingStudy)  
 
-///////////////////////////////// ORDER SECTION ///////////////////////////////////////
+// ///////////////////////////////// ORDER SECTION ///////////////////////////////////////
 * section[order]
   * ^short = "Order"
   * ^definition = "This section holds information related to the order for the imaging study."
-  * code = $loinc#55115-0 "Order"
+  * code = $loinc#55115-0 "Requested imaging studies information"
+  * extension contains $note-url named note 0..1
 
   * entry
     * insert SliceElement( #profile, "$this" )
+<<<<<<< HEAD
   * entry contains order 0..*
+=======
+  * entry contains 
+      order 0..*
+>>>>>>> origin/xtehrMapping
 
   * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
+<<<<<<< HEAD
   * entry[order] only Reference(ImOrder)
 
+=======
+  * entry[order] only Reference(ImOrder)  
   
-///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
+>>>>>>> origin/xtehrMapping
+  
+// // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
   * code = $loinc#11329-0 "History"
+  * extension contains $note-url named note 0..1
 
-///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
+// // ///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
 * section[procedure]
   * ^short = "Procedure"
   * code = $loinc#55111-9 "Procedure"
-  * entry
+  * extension contains $note-url named note 0..1
+  * entry 
     * insert SliceElement( #profile, $this )
   * entry contains 
       procedure 0..*
   * entry[procedure] only Reference(ImProcedure)
 
-////////////////// COMPARISON SECTION //////////////////////////
+
+// ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "History"
   * code = $loinc#18834-2 "Comparison"
+  * extension contains $note-url named note 0..1
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
       comparedstudy 0..*
-  * entry[comparedstudy] only Reference(ImImagingStudy or ImImagingSelection)
+  * entry[comparedstudy] only Reference( ImImagingStudy or ImImagingSelection )
 
-/////////////////// FINDINGS SECTION //////////////////////////
+// /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 "Findings"
+  * extension contains $note-url named note 0..1
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
       finding 0..* and
       keyimage 0..*
   * entry[finding] only Reference(ImFinding)
-  * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImagesSelection)
+  * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImageImagingSelection)
 
-/////////////////// IMPRESSION SECTION //////////////////////////
+// /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 "Impression"
+  * extension contains $note-url named note 0..1
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -204,21 +187,22 @@ The `text` field of each section SHALL contain a textual representation of all l
       impression 0..* and
       keyimage 0..*
   * entry[finding] only Reference(ImFinding)
-  * entry[impression] only Reference(ImImpression)
-  * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImagesSelection)
+  * entry[impression] only Reference( $EuCondition )
+  * entry[keyimage] only Reference(ImKeyImageDocumentReference or ImKeyImageImagingSelection)
 
-/////////////////// RECOMMENDATION SECTION //////////////////////////
+// /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 "Recommendation"
+  * extension contains $note-url named note 0..1
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      recommendedCarePlan 0..*
-  * entry[recommendedCarePlan] only Reference(ImRecommendedCarePlan)
+      careplan 0..*
+  * entry[careplan] only Reference($EuCarePlan)
 
 
-/////////////////// COMMUNICATION SECTION //////////////////////////
+// /////////////////// COMMUNICATION SECTION //////////////////////////
 * section[communication]
   * ^short = "Communications"
   * code = $loinc#18783-1 "Communication"
@@ -230,6 +214,7 @@ Title:  "Document DiagnosticReport Reference"
 Description: """
     This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.
     """
+Context: Composition
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Composition)
 * insert SetFmmAndStatusRule ( 2, trial-use)
