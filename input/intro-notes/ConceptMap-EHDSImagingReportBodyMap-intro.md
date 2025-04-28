@@ -83,7 +83,7 @@ class ImOrder{
 
 class ImGestationalAgeObservation{
   <<FHIR>>
-  valueQuantity
+  value[x]
 }
 
 class ImPatient{
@@ -102,7 +102,7 @@ class ImImagingStudy{
 
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.valueQuantity
+  component.value[x]
   bodySite
 }
 
