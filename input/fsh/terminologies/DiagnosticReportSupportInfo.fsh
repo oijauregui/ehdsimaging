@@ -13,6 +13,5 @@ ValueSet: DiagnosticReportSupportingInfoVCodes
 Id: valueset-diagnosticreport-report-support-info
 Title: "DiagnosticReport supportInfo codes"
 Description: "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports."
-* ^experimental = false
 * include codes from system DiagnosticReportSupportingInfoCodeSystem
 

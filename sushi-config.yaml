@@ -1,5 +1,5 @@
-id: hl7.fhir.eu.imaging
-canonical: http://hl7.eu/fhir/imaging
+id: hl7.fhir.eu.imaging.r5
+canonical: http://hl7.eu/fhir/imaging/r5
 name: HL7EuImagingStudyReport
 title: HL7 Europe Imaging Study Report
 description: This guide describes how a Imaging Study Report can be represented in the European REALM.
@@ -26,8 +26,13 @@ copyright: >-
 #
 dependencies:
   hl7.fhir.uv.extensions: current
-  hl7.fhir.eu.extensions: current
+  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.eu.extensions.r5: current
   hl7.fhir.eu.base.r5: current
+  # eu.ehds.models: 0.1.0
+  eu.ehds.models: current
+  # required for medication extensions
+  ihe.pharm.mpd: current
   fhir.dicom:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom
@@ -51,32 +56,24 @@ pages:
     use-cases.md:
       title: Use Cases
     transactions.md:
-      title: Transactions
-  domain-model.md: 
-    title: Domain Model
-  ehn-guidelines.md:
-    title: eHN Imaging Studies and Reports Guidelines
+  xtehr.md:
+    title: XtEHR
+    xtehr-logical-model.md:
+      title: XtEHR Logical Model
+    xtehr-mapping.md:
+      title: Mapping to XtEHR Logical Model
+  profiles.md:
+    title: Deployment profiles
+    imaging-manifest.md:
+      title: Imaging Manifest
+    imaging-report.md:
+      title: Imaging Report
   design-considerations.md:
     title: Design Considerations
-  contributors.md:
-    title: Contributors
-  ig-artifacts.md:
+  artifacts-intro.md:
     title: Artifacts
-    ig-artifacts-structural.md:
-      title: Structural Artifacts
-    ig-artifacts-obligations.md:
-      title: Actors and Obligations
-  open-topics.md:
-    title: Open Topics
-
-
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
-#
+    artifacts-structural.md:
+      title: Structural artifacts
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -95,6 +92,8 @@ parameters:
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  # add all fsh results to _data directory
+  # produce-jekyll-data: true
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -106,27 +105,41 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home:
-    Summary: index.html
+    Introduction: index.html
     Changes: changes.html
     Dependencies: index.html#dependencies
     References: index.html#references
     Adapting Guidelines for Country use: adapting.html
-  eHN Guidelines: 
-    Summary: ehn-guidelines.html
-    Logical Model: ehn-guidelines.html#ehn-imaging-studies-and-reports-guidelines-logical-model
-    Concept Maps: ehn-guidelines.html#logical-model-mapping-onto-hl7-fhir
   Actors and Transactions:
     System Actors: system-actors.html
     Use Cases: use-cases.html
     Transactions: transactions.html
-  Domain Model: domain-model.html
-  Artifacts:
-    Overview: ig-artifacts.html
-    Structural: ig-artifacts-structural.html
-    Actors and Obligations: ig-artifacts-obligations.html
+  XtEHR model:
+    XtEHR-model: xtehr-logical-model.html
+    XtEHR-mapping: xtehr-mapping.html
+  Imaging Manifest: imaging-manifest.html
+  Imaging Report: imaging-report.html
+  Artifacts: 
     All: artifacts.html
+    Structural: artifacts-structural.html
+    Mapping: xtehr-mapping.html
   Design Considerations: design-considerations.html
-  Open Topics: open-topics.html
+  #   Changes: changes.html
+  #   Dependencies: index.html#dependencies
+  #   References: index.html#references
+  #   Adapting Guidelines for Country use: adapting.html
+  # eHN Guidelines: 
+  #   Summary: ehn-guidelines.html
+  #   Logical Model: ehn-guidelines.html#ehn-imaging-studies-and-reports-guidelines-logical-model
+  #   Concept Maps: ehn-guidelines.html#logical-model-mapping-onto-hl7-fhir
+  # Actors and Transactions:
+  #   System Actors: system-actors.html
+  #   Use Cases: use-cases.html
+  #   Transactions: transactions.html
+  # Domain Model: domain-model.html
+  # Artifacts: artifacts.html
+  # Design Considerations: design-considerations.html
+  # Open Topics: open-topics.html
   
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -195,42 +208,14 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-groups:
-  eHNGuidelines:
-    name: eHN Imaging Studies and Reports Guidelines (informative)
-    description: Logical models  representing the eHN Imaging Studies and Reports Guidelines. This is informative material.
-    resources:
-      - StructureDefinition/ehn-medical-imaging-report
-      - StructureDefinition/ehn-medical-imaging-report-header
-      - StructureDefinition/ehn-medical-imaging-report-header-patient-identification
-      - StructureDefinition/ehn-medical-imaging-report-header-patient-contact
-      - StructureDefinition/ehn-medical-imaging-report-header-health-insurance-information
-      - StructureDefinition/ehn-medical-imaging-report-header-information-recipient
-      - StructureDefinition/ehn-medical-imaging-report-header-author
-      - StructureDefinition/ehn-medical-imaging-report-header-legal-authenticator
-      - StructureDefinition/ehn-medical-imaging-report-header-result-validator
-      - StructureDefinition/ehn-medical-imaging-report-header-document-metadata
-      - StructureDefinition/ehn-medical-imaging-report-comparison-study
-      - StructureDefinition/ehn-medical-imaging-report-examreport
-      - StructureDefinition/ehn-medical-imaging-report-examreport-imaging-proc-description
-      - StructureDefinition/ehn-medical-imaging-report-examreport-medication
-      - StructureDefinition/ehn-medical-imaging-report-examreport-adverse-reaction
-      - StructureDefinition/ehn-medical-imaging-report-examreport-results
-      - StructureDefinition/ehn-medical-imaging-report-examreport-conclusion
-      - StructureDefinition/ehn-medical-imaging-report-examreport-recommendation
-      - StructureDefinition/ehn-medical-imaging-report-order
-      - StructureDefinition/ehn-medical-imaging-report-order-media
-      - StructureDefinition/ehn-medical-imaging-report-order-reason
-      - StructureDefinition/ehn-medical-imaging-report-presented-form
-      - StructureDefinition/ehn-medical-imaging-report-specimen-information
-      - StructureDefinition/ehn-imaging-study-manifest-dataset
-  dataEntryPoints:
-    name: Data Entry Points
-    description: The key resources representing the entry points for imaging study reports.
-    resources:
-      - StructureDefinition/im-diagnostic-report
-      - StructureDefinition/im-imagingstudy
-      - StructureDefinition/im-composition
+# groups:
+#   dataEntryPoints:
+#     name: Data Entry Points
+#     description: The key resources representing the entry points for imaging study reports.
+#     resources:
+#       - StructureDefinition/im-diagnostic-report
+#       - StructureDefinition/im-imagingstudy
+#       - StructureDefinition/im-composition
 
 #     name: Group A
 #     description: The Alpha Group
