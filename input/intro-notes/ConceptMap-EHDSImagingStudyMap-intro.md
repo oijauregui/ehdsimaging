@@ -80,7 +80,7 @@ class ImWadoEndpoint
 class ImImageIidViewerEndpoint
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.valueQuantity
+  component.value[x]
 }
 
 class EuPatient {

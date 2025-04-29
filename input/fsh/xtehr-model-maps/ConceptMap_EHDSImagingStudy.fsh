@@ -209,42 +209,42 @@ Description: "Map for EHDSImagingStudy"
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.kap
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "C.32.12.11.5.1 - KAP"
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.totalKerma
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "C.32.12.11.5.2 - Total Kerma"
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.endTubeKerma
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "C.32.12.11.5.3 - End tube Kerma"
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.breastThickness
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "C.32.12.11.5.4 - Breast thickness"
       * relationship = #related-to
   * element[+]
     * code = #series.instancesInTheSeries.radiationDoseInformation.abd
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "C.32.12.11.5.5 - 2ABD"
       * relationship = #related-to
   * element[+]
     * code = #phase.radiationDose
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "C.32.13.2 - Radiation dose"
       * relationship = #related-to

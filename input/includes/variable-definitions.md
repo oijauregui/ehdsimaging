@@ -18,8 +18,8 @@
 
 {% assign ArgImg            = "[Argonaut Imaging](https://github.com/sync-for-science/imaging)" %}
 
-{% assign DICOMwebWado      = "[DICOMweb-WADO](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/) %}
-{% assign DICOMpart18       = "[DICOM part18](https://dicom.nema.org/medical/dicom/current/output/html/part18.html) %}
+{% assign DICOMwebWado      = "[DICOMweb-WADO](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/)" %}
+{% assign DICOMpart18       = "[DICOM part18](https://dicom.nema.org/medical/dicom/current/output/html/part18.html)" %}
  
 {% assign usCore            = "[US core v7.0.0](https://hl7.org/fhir/us/core/STU7/)" %}
 {% assign dicomSr2fhir      = "[DICOM-SR-2-FHIR](https://build.fhir.org/ig/HL7/dicom-sr/)" %}
