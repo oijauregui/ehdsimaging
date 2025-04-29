@@ -232,7 +232,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.pregnancyStatus
     * target[+]
-      * code = #supportingInfo[pregnacy]
+      * code = #supportingInfo[pregnancy]
       * comment = "Code in supporting info, could be a observation as well"
       * display = "B.1.1.7.5 - Pregnancy status"
       * relationship = #related-to

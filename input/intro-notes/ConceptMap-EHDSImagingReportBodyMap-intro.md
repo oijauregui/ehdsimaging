@@ -78,7 +78,7 @@ class ImOrder{
   reason.concept
   supportingInfo
   reason
-  supportingInfo[pregnacy]
+  supportingInfo[pregnancy]
 }
 
 class ImGestationalAgeObservation{
