@@ -1,87 +1,61 @@
-Profile: ImOrderProvider
-Parent: ImOrder
-Id: im-order-provider
-Title: "Imaging Order (ImProvider)"
-Description: "Requirements for the provider of the imaging order."
-* insert SetFmmAndStatusRule( 1, draft )
-* meta.security
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-* language
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-* identifier[accessionNumber]
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-* insurance
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-* requester
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-* authoredOn
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-* reason
-  * insert SetObligation( #SHALL:populate-if-known, ImProvider, [[]], [[]] )
-
 Profile: ImOrder
-Parent: ServiceRequest
-Id: im-order
-Title: "Imaging Order"
+Parent: $EuServiceRequest
+Title: "IM Imaging Order"
 Description: "This profile on ServiceRequest represents the order for the Imaging Study and report."
 * insert SetFmmAndStatusRule( 1, draft )
+* insert PartOfImagingManifest
 
-* identifier 
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "type"
-  * ^slicing.rules = #open
-  * ^slicing.description = "Slice on identifier"
-  * ^slicing.ordered = false
-* identifier contains accessionNumber 0..1  
-* identifier[accessionNumber]
-  * type 1..1
-  * type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
-  * value 1..1
-  * system 1..1
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains imaging 1..1
+* category[imaging] = $SCT#363679005 "Imaging"
 
-* status 1..1
+* identifier
+  * insert SliceElement( #value, type )
+* identifier contains accessionNumber 0..1
+* identifier[accessionNumber] only ImAccessionNumberIdentifier
 
-* subject 1..1
-* subject only Reference(ImPatient)
+* supportingInfo 0..*
+  * insert SliceElement( #value, $this )
+* supportingInfo contains pregnancy 0..1
+* supportingInfo[pregnancy] from http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
 
-// TODO obligation for client?
-* intent 1..1
+// * status 1..1
 
-* insurance 0..1
-* insurance only Reference(ImCoverage)
+// * subject 1..1
+// * subject only Reference(ImPatient)
 
-* requester 0..1
-* requester only Reference(ImOrderPlacer or ImPatient)
+// // TODO obligation for client?
+// * intent 1..1
 
-* authoredOn 0..1
-  
-* reason 0..*
-  * ^short = "Clinical question/reason for the order"
-  * ^definition = "The reason for the order. Can be coded, textual or a reference to a structured element."
+// * insurance 0..1
+//   * insert SetPopulateIfKnown
+// * insurance only Reference(ImCoverage)
+
+// * requester 0..1
+//   * insert SetPopulateIfKnown
+// * requester only Reference(ImOrderPlacer or ImPatient)
+
+// * authoredOn 0..1
+//   * insert SetPopulateIfKnown
+
+// * reason 0..*
+//   * insert SetPopulateIfKnown
+//   * ^short = "Clinical question/reason for the order"
+//   * ^definition = "The reason for the order. Can be coded, textual or a reference to a structured element."
 
 
-Profile: ImAccessionNumberIdentifier
-Parent: Identifier
-Id: im-accession-number-identifier
-Title: "Imaging Accession Number Identifier"
-Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
-* insert SetFmmAndStatusRule( 1, draft )
-* system 1..1
-* value 1..1
-* type 1..1
-* type = http://terminology.hl7.org/5.1.0/CodeSystem-v2-0203.html#ACSN
 
-Profile: ImOrderReference
-Parent: Reference
-Id: im-order-reference
-Title: "Imaging Accession Number Reference"
-Description: "This profile on Reference represents a reference to an Imaging Order."
-* insert SetFmmAndStatusRule( 1, draft )
-* reference 1..1
-* identifier 0..1
-* identifier only ImAccessionNumberIdentifier
-  
-RuleSet: BasedOnImOrderReference( slicename )
-* basedOn[{slicename}] only Reference( ImOrder )
-  * identifier 0..1
-  * identifier only ImAccessionNumberIdentifier
+
+Mapping: DicomToImOrder
+Source: ImOrder
+Target: "http://nema.org/dicom"
+Id: dicom-2-im-order-mapping
+Title: "Mapping from DICOM to Imaging Order"
+Description: "Mapping from DICOM to Imaging Order."
+* identifier[accessionNumber] -> "AccessionNumber (0008,0050)"
+* subject -> "(0010/*)"
+* note -> "RequestedProcedureDescription (0040,0100)"
+* code -> "RequestedProcedureCodeSequence (0040,1001)"
+* reason.concept.text -> "ReasonForTheRequestedProcedure (0040,1002)"
+* reason.concept -> "ReasonForTheRequestedProcedure (0040,100A)"
