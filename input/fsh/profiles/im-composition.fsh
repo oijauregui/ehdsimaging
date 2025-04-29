@@ -98,6 +98,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0
+  * extension contains $note-url named note 0..*
   * entry 
     * insert SliceElement( #profile, $this )
   * entry contains imagingstudy 1..*
@@ -111,7 +112,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Order"
   * ^definition = "This section holds information related to the order for the imaging study."
   * code = $loinc#55115-0 "Requested imaging studies information"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
 
   * entry
     * insert SliceElement( #profile, "$this" )
@@ -128,13 +129,13 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[history]
   * ^short = "History"
   * code = $loinc#11329-0 "History"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
 
 // // ///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
 * section[procedure]
   * ^short = "Procedure"
   * code = $loinc#55111-9 "Procedure"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
   * entry 
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -146,7 +147,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[comparison]
   * ^short = "History"
   * code = $loinc#18834-2 "Comparison"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -157,7 +158,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 "Findings"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -170,7 +171,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 "Impression"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -185,7 +186,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 "Recommendation"
-  * extension contains $note-url named note 0..1
+  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -197,6 +198,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[communication]
   * ^short = "Communications"
   * code = $loinc#18783-1 "Communication"
+  * extension contains $note-url named note 0..*
 
 
 Extension: ImDiagnosticReportReference
