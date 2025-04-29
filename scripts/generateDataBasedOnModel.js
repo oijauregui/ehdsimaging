@@ -196,6 +196,7 @@ function generateIntroFiles(parsedData, srcResources) {
             writable.write('```mermaid\n');
             writable.write('classDiagram\n');
             writable.write('direction LR\n');
+            // XtEHR model
             writable.write(`class ${srcResource} {\n`);
             writable.write(`  <<XtEHR dataset>>\n`);
             srcFields.forEach(field => writable.write(`  ${field}\n`));

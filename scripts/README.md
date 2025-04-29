@@ -9,7 +9,6 @@ This directory contains a set of scripts used to manage the mapping to XtEHR and
 * Obligations
 * Narrative requirements in Composition.
 
-
 ## Update XtEHR source files
 
 The XtEHR source files are stored in XtEHR-models. This section explains the process to generate the input spreadsheet for mapping
