@@ -17,8 +17,8 @@ Description: "This profile on ServiceRequest represents the order for the Imagin
 
 * supportingInfo 0..*
   * insert SliceElement( #value, $this )
-* supportingInfo contains pregnacy 0..1
-* supportingInfo[pregnacy] from http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
+* supportingInfo contains pregnancy 0..1
+* supportingInfo[pregnancy] from http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
 
 // * status 1..1
 
