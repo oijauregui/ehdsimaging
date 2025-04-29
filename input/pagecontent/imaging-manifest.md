@@ -78,9 +78,9 @@ The imaging specific obligations are specified in:
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Im%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
-    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "markdown" , "source" : "Title" },
+    { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}
 
@@ -90,8 +90,8 @@ The common obligations are specified in:
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Eu%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
-    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "markdown" , "source" : "Title" },
+    { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}
