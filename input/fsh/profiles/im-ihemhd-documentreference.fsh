@@ -54,7 +54,7 @@ A DocumentReference profile for the Report DocumentReference used in MHD deploym
 * insert SetFmmAndStatusRule( 1, draft )
 * modifierExtension 0..0
 * type 1..1 
-* type from ImagingReportTypesEuVS (preferred) 
+* type from ImImagingReportTypesEuVS (preferred) 
   * ^short = "Type of Imaging Diagnostic Report"
   * ^definition = "Specifies that it refers to a Imaging Report"
   * ^comment = "Corresponds to the type of the Imaging resource."
@@ -138,6 +138,10 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1 
 * category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
+* type from ImImagingManifestTypesEuVS (preferred) 
+  * ^short = "Type of Imaging Manifest"
+  * ^definition = "Specifies that it refers to a Imaging Manifest"
+  * ^comment = "Corresponds to the type of the Imaging Manifest resource."
 * subject 1..1 
 * custodian 0..1 
 * author 
@@ -151,8 +155,8 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
     * creation 
   * profile 1..*
     * insert SliceElement( #value, valueCanonical )
-  * profile contains hl7eu-imaging-report 1..1 
-  * profile[hl7eu-imaging-report].valueCanonical = Canonical( ImImagingStudyManifest )
+  * profile contains hl7eu-imaging-manifest 1..1 
+  * profile[hl7eu-imaging-manifest].valueCanonical = Canonical( ImImagingStudyManifest )
 * bodySite 0..*
 * modality 1..* 
 

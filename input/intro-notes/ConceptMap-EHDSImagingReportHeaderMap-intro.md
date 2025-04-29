@@ -55,13 +55,13 @@ class ImComposition{
   attester[legalAuthenticator].time
   identifier
   category[imaging]
-  type
   status
   event.period
   title
   event[imagingstudy]
   event[procedure]
   custodian
+  type
   meta.security
   language
   version
