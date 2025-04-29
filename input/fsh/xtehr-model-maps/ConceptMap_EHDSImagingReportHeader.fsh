@@ -107,10 +107,6 @@ Description: "Map for EHDSImagingReportHeader"
       * code = #category[imaging]
       * display = "A.1.9.2 - Document type"
       * relationship = #related-to
-    * target[+]
-      * code = #type
-      * display = "A.1.9.2 - Document type"
-      * relationship = #related-to
   * element[+]
     * code = #documentMetadata.documentStatus
     * target[+]
@@ -167,7 +163,7 @@ Description: "Map for EHDSImagingReportHeader"
   * element[+]
     * code = #documentMetadata.documentFormat
     * target[+]
-      * code = #category[imaging]
+      * code = #type
       * comment = "Could be extended with list of approved templates as a separate category in the future."
       * display = "A.1.9.10 - Document format"
       * relationship = #related-to

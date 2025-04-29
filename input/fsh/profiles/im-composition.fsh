@@ -47,16 +47,17 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 // type of the report. Matching DiagnosticReport.code
 // code 
-* type 1..
-* type from ImagingReportTypesEuVS (preferred) // valueset to be revised. 
-  * ^short = "Type of Imaging Diagnostic Report"
-  * ^definition = "Specifies that it refers to a Imaging Report"
-  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+* type
+  * coding 1..*
+    * insert SliceElement( #value, $this )
+  * coding contains imaging-report-v1-0-0 1..1
+  * coding[imaging-report-v1-0-0] = Hl7EuDocumentTypes#imaging-report-v0-0-1 "Imaging Report V0.0.1"
 
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1 
 * category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
+* category[imaging].coding 1..1
 
 * status 
 
@@ -81,6 +82,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section.code 1..1 
 * section 
   * insert SliceElement( #value, code )
+* section.emptyReason from ImSectionEmptyReason (preferred)  
+* section obeys eu-imaging-composition-1
 * section contains 
     imagingstudy 1..1  and
     order 1..1 and
@@ -90,7 +93,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     findings 1..1  and 
     impression 1..1 and 
     recommendation 1..1  and 
-    communication 1..1 
+    communication 0..1 
 
 // ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
 * section[imagingstudy]
@@ -124,7 +127,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
   * entry[order] only Reference(ImOrder)  
   
-  
+
 // // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
@@ -200,6 +203,10 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18783-1 "Communication"
   * extension contains $note-url named note 0..*
 
+Invariant: eu-imaging-composition-1
+Description: "When a section is empty, the emptyReason extension SHALL be present."
+Severity: #error 
+Expression: "entry.empty() and emptyReason.exists()"
 
 Extension: ImDiagnosticReportReference
 Id:   im-composition-diagnosticReportReference
