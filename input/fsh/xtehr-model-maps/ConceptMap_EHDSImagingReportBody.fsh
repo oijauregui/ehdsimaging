@@ -232,7 +232,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.pregnancyStatus
     * target[+]
-      * code = #supportingInfo[pregnacy]
+      * code = #supportingInfo[pregnancy]
       * comment = "Code in supporting info, could be a observation as well"
       * display = "B.1.1.7.5 - Pregnancy status"
       * relationship = #related-to
@@ -245,7 +245,7 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.gestationalAge
     * target[+]
-      * code = #valueQuantity
+      * code = #value[x]
       * display = "B.1.1.7.6 - Gestational age"
       * relationship = #related-to
 * group[+]
@@ -301,21 +301,21 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #exposureInformation.effectiveDose
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "B.1.4.1 - Effective dose"
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "B.1.4.2 - Equivalent dose information"
       * relationship = #related-to
   * element[+]
     * code = #exposureInformation.equivalentDoseInformation.equivalentDose
     * target[+]
-      * code = #component.valueQuantity
+      * code = #component.value[x]
       * comment = "choose one of the slices"
       * display = "B.1.4.2.1 - Equivalent dose"
       * relationship = #related-to

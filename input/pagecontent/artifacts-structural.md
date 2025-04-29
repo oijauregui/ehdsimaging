@@ -7,9 +7,9 @@ This page lists the structural profiles defined in this specification
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='CodeSystem' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
-    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "markdown" , "source" : "Title" },
+    { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}
 
@@ -19,9 +19,9 @@ This page lists the structural profiles defined in this specification
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='ValueSet' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
-    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "markdown" , "source" : "Title" },
+    { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}
 
@@ -31,9 +31,9 @@ This page lists the structural profiles defined in this specification
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Im%' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
-    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "markdown" , "source" : "Title" },
+    { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}
 
@@ -43,8 +43,8 @@ This page lists the structural profiles defined in this specification
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE '%Eu' ORDER BY Name",
   "class" : "lines",
   "columns" : [
-    { "name" : "Title"      , "type" : "link"    , "source" : "Name", "target" : "Web"},
-    { "name" : "Name"       , "type" : "link"    , "source" : "Title", "target" : "Web"},
-    { "name" : "Description", "type" : "markdown", "source" : "Description"}
+    { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
+    { "name" : "Name"       , "type" : "markdown" , "source" : "Title" },
+    { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}

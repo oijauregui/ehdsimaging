@@ -79,7 +79,6 @@ class ImDiagnosticReport{
   category[imaging]
   status
   effectivePeriod
-  code
 }
 
 class ImOrder{

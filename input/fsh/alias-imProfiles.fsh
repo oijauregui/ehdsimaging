@@ -16,3 +16,4 @@ Alias: $ImAdverseEventUrl               = http://hl7.eu/fhir/imaging/r5/Structur
 Alias: $ImProcedureUrl                  = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImProcedure
 Alias: $ImWadoEndpointUrl               = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImWadoEndpoint
 Alias: $ImImageIidViewerEndpointUrl     = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImImageIidViewerEndpoint
+Alias: $ImKeyImageDocumentReferenceUrl  = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImKeyImageDocumentReference

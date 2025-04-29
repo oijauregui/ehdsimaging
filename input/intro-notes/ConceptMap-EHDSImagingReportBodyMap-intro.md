@@ -78,12 +78,12 @@ class ImOrder{
   reason.concept
   supportingInfo
   reason
-  supportingInfo[pregnacy]
+  supportingInfo[pregnancy]
 }
 
 class ImGestationalAgeObservation{
   <<FHIR>>
-  valueQuantity
+  value[x]
 }
 
 class ImPatient{
@@ -102,7 +102,7 @@ class ImImagingStudy{
 
 class ImRadiationDoseObservation{
   <<FHIR>>
-  component.valueQuantity
+  component.value[x]
   bodySite
 }
 

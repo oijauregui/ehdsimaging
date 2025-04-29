@@ -14,6 +14,7 @@
 <artifact id="StructureDefinition/EHDSDevice" key="StructureDefinition-EHDSDevice" name="Device model"/>
 <artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="Diagnostic Report Support Info Code System"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="DiagnosticReport supportInfo codes"/>
+<artifact id="StructureDefinition/ImReport" key="StructureDefinition-ImReport" name="Document Bundle for Imaging Report"/>
 <artifact id="StructureDefinition/im-composition-diagnosticReportReference" key="StructureDefinition-im-composition-diagnosticReportReference" name="Document DiagnosticReport Reference"/>
 <artifact id="StructureDefinition/DocumentReferenceEu" key="StructureDefinition-DocumentReferenceEu" name="DocumentReferenceEu"/>
 <artifact id="ValueSet/im-dose-length-units" key="ValueSet-im-dose-length-units" name="Dose Length Units"/>
@@ -69,6 +70,8 @@
 <artifact id="StructureDefinition/instance-description" key="StructureDefinition-instance-description" name="Instance Description"/>
 <artifact id="StructureDefinition/ImKeyImageImagingSelection" key="StructureDefinition-ImKeyImageImagingSelection" name="Key images represented as an ImagingSelection"/>
 <artifact id="StructureDefinition/EHDSLocation" key="StructureDefinition-EHDSLocation" name="Location model"/>
+<artifact id="StructureDefinition/ImManifestIheMhdDocumentReference" key="StructureDefinition-ImManifestIheMhdDocumentReference" name="Manifest DocumentReference for MHD deployments"/>
+<artifact id="StructureDefinition/Manifest-ImManifestDocumentReference" key="StructureDefinition-Manifest-ImManifestDocumentReference" name="Manifest Obligations for ImManifestIheMhdDocumentReference"/>
 <artifact id="StructureDefinition/Manifest-EuAddress" key="StructureDefinition-Manifest-EuAddress" name="Manifest obligations for EuAddress"/>
 <artifact id="StructureDefinition/Manifest-EuBodyStructure" key="StructureDefinition-Manifest-EuBodyStructure" name="Manifest obligations for EuBodyStructure"/>
 <artifact id="StructureDefinition/Manifest-EuContactPoint" key="StructureDefinition-Manifest-EuContactPoint" name="Manifest obligations for EuContactPoint"/>
@@ -130,11 +133,15 @@
 <artifact id="StructureDefinition/PatientAnimalEu" key="StructureDefinition-PatientAnimalEu" name="Patient: Animal"/>
 <artifact id="ValueSet/periods-of-life-value-set" key="ValueSet-periods-of-life-value-set" name="Periods of Life"/>
 <artifact id="StructureDefinition/periods-of-life-extension" key="StructureDefinition-periods-of-life-extension" name="Periods of Life Extension"/>
+<artifact id="StructureDefinition/IheMhdEntryUUIDIdentifier" key="StructureDefinition-IheMhdEntryUUIDIdentifier" name="Placeholder for IHE MHD Entry UUID Identifier in FHIR R5."/>
 <artifact id="StructureDefinition/EHDSProcedure" key="StructureDefinition-EHDSProcedure" name="Procedure model"/>
+<artifact id="StructureDefinition/ImIheMhdDocumentReference" key="StructureDefinition-ImIheMhdDocumentReference" name="R5 DocumentReference for MHD deployments"/>
 <artifact id="StructureDefinition/ImRadiationDoseObservation" key="StructureDefinition-ImRadiationDoseObservation" name="Radiation Dose Observation"/>
 <artifact id="ValueSet/ImSectionEmptyReason" key="ValueSet-ImSectionEmptyReason" name="Reasons a section in an imaging report is empty."/>
 <artifact id="StructureDefinition/EHDSRelatedPerson" key="StructureDefinition-EHDSRelatedPerson" name="Related person model"/>
 <artifact id="StructureDefinition/RelatedPersonEu" key="StructureDefinition-RelatedPersonEu" name="RelatedPerson Eu"/>
+<artifact id="StructureDefinition/ImReportIheMhdDocumentReference" key="StructureDefinition-ImReportIheMhdDocumentReference" name="Report DocumentReference for MHD deployments"/>
+<artifact id="StructureDefinition/Report-ImReportDocumentReference" key="StructureDefinition-Report-ImReportDocumentReference" name="Report Obligations for ImReportIheMhdDocumentReference"/>
 <artifact id="StructureDefinition/Report-EuAddress" key="StructureDefinition-Report-EuAddress" name="Report obligations for EuAddress"/>
 <artifact id="StructureDefinition/Report-EuAllergyIntolerance" key="StructureDefinition-Report-EuAllergyIntolerance" name="Report obligations for EuAllergyIntolerance"/>
 <artifact id="StructureDefinition/Report-EuAttachment" key="StructureDefinition-Report-EuAttachment" name="Report obligations for EuAttachment"/>
