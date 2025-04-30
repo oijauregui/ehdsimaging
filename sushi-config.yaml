@@ -32,7 +32,7 @@ dependencies:
   # eu.ehds.models: 0.1.0
   # eu.ehds.models: current
   # required for medication extensions
-  ihe.pharm.mpd: current
+  # ihe.pharm.mpd: current
   fhir.dicom:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom
