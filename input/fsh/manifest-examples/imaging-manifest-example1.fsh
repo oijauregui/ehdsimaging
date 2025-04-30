@@ -1,5 +1,7 @@
 Instance: Example1-ImagingStudyManifest
 InstanceOf: ImImagingStudyManifest
+Title: "Example ImagingStudy Manifest"
+Description: "Example ImagingStudy Manifest"
 Usage: #example
 * type = #searchset
 * timestamp = 1993-11-29T12:36:56+00:00
@@ -25,14 +27,14 @@ Usage: #inline
   * system = "urn:dicom:uid"
   * value  =  "999.999.3859744"
 * status = #available
-* modality = http://dicom.nema.org/resources/ontology/DCM#US "US"
+* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
 * subject = Reference( Example1-Patient )
 * started = 1993-11-29T12:36:56+00:00
 * referrer = Reference( Example1-referrer )
 * endpoint = Reference( Example1-WadoEndpoint )
 * series[+]
   * uid = "999.999.94827453"
-  * modality = http://dicom.nema.org/resources/ontology/DCM#US "US"
+  * modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
   * description = "SINUS VAL ANEUR"
   * instance[+]
     * uid = "999.999.133.1996.1.1800.1.6.9"
