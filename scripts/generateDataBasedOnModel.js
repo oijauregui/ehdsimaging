@@ -367,14 +367,15 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
                     .filter(row => row[indices.tgtResource] === resourceUrl )
                     .filter(row => row[indices.tgtElement] === obligation )
                 ;
-                const documentation = rows
+                let documentation = rows
                     .map(row => `${row[indices.srcResource]}.${row[indices.srcField]}`)
                     .filter(row => row.length > 0)
                     .join(', ')
                 ;
+                documentation = documentation.length > 0 ? documentation : '-';
                 writable.write(`* ${obligation}\n`);
                 if (shallHandleCorrectlyObligations.has(obligation)) {
-                    writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle-correctly\n`);
+                    writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle\n`);
                     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(Im${actor}Provider)\n`);
                     writable.write(`  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "${documentation}"\n`);
                 } else if (shallPopulateObligations.has(obligation)) {
