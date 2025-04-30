@@ -30,7 +30,7 @@ dependencies:
   hl7.fhir.eu.extensions.r5: current
   hl7.fhir.eu.base.r5: current
   # eu.ehds.models: 0.1.0
-  eu.ehds.models: current
+  # eu.ehds.models: current
   # required for medication extensions
   ihe.pharm.mpd: current
   fhir.dicom:
