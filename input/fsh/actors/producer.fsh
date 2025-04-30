@@ -3,7 +3,7 @@ InstanceOf: ActorDefinition
 Title: "Imaging Study Report Provider/Creator"
 Description: "The actor responsible for creating/providing the Imaging Report resources."
 Usage: #definition
-* name = "IM Report Provider"
+* name = "IM-Report-Provider"
 * title = "Imaging study report provider"
 * status = #draft
 * description = "Provides the Imaging study report."
@@ -14,7 +14,7 @@ InstanceOf: ActorDefinition
 Title: "Imaging Manifest Reports Provider/Creator"
 Description: "This actor is responsible for creating/providing the Imaging Manifest resources."
 Usage: #definition
-* name = "IM Manifest Provider"
+* name = "IM-Manifest-Provider"
 * title = "Imaging study manifest provider"
 * status = #draft
 * description = "Provides the Imaging study manifest."

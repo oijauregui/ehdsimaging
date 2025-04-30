@@ -1,6 +1,7 @@
 Profile: ImKeyImageImagingSelection
 Parent: ImImagingSelection
 Title: "Key images represented as an ImagingSelection"
+Description: "Key images represented as an ImagingSelection"
 * insert SetFmmAndStatusRule( 1, draft )
 
 * extension contains 
