@@ -7,7 +7,7 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
 * insert SetFmmAndStatusRule( 1, draft )
 * insert PartOfImagingManifest
 * entry 
-  * insert SliceElement( #value, fullUrl )
+  * insert SliceElement( #profile, resource )
 * entry 
     contains imagingstudy 1..1  
     and      patient 0..1

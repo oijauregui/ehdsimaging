@@ -28,9 +28,11 @@ dependencies:
   hl7.terminology.r5: 6.2.0
   hl7.fhir.uv.extensions: 5.2.0
   hl7.fhir.uv.ips: 1.1.0
+  # hl7.fhir.eu.extensions.r5: current/0.1.0-ballot
   hl7.fhir.eu.extensions.r5: current
-  hl7.fhir.eu.base.r5: current
   # hl7.fhir.eu.extensions.r5: 0.1.1-ballot
+  hl7.fhir.eu.base.r5: current
+  # hl7.fhir.eu.base.r5: current/0.1.0-ballot
   # hl7.fhir.eu.base-r5: 0.1.0-ballot
 
   # eu.ehds.models: 0.1.0
@@ -96,6 +98,8 @@ parameters:
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  # packages: ./package-cache
+  releaselabel: 0.1.0-ballot
   # add all fsh results to _data directory
   # produce-jekyll-data: true
 #
