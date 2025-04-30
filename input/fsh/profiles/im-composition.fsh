@@ -217,5 +217,5 @@ Description: """
 Context: Composition
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Composition)
-* insert SetFmmAndStatusRule ( 2, trial-use)
+* insert SetFmmAndStatusRule ( 2, draft )
 * value[x] only Reference (ImDiagnosticReport)
