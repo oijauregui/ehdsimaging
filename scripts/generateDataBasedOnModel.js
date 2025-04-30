@@ -10,6 +10,7 @@ const conceptMapIntroDir = '../input/intro-notes';
 const indices = {
     srcResource: 1,
     srcField: 2,
+    srcDesc: 4,
     srcType: 5,
     srcReq:7,
     tgtResource: 8,
@@ -20,6 +21,7 @@ const indices = {
     includeAsWell: 13,
     tgtModeling: 14,
     actors: 16,
+    section: 17,
 };
 
 const XtEHRBaseUrl = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/";
@@ -404,6 +406,129 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
     });
 }
 
+function generateSectionTablesMarkdown(parsedData) {
+    // Create a map to organize data by sections
+    const sectionMap = new Map();
+    
+    // Filter data to only include rows with section information
+    const rowsWithSections = parsedData
+        .filter(row => row[indices.section]?.trim().length > 0)
+        .filter(row => row[indices.section]?.trim() !== "Section") // Exclude the header row
+        .filter(row => row[indices.tgtResource]?.trim().length > 0)
+        .filter(row => row[indices.tgtElement]?.trim().length > 0)
+        .filter(row => row[indices.tgtRefType]?.trim().length > 0);
+        
+    console.log(`Found ${rowsWithSections.length} rows with section information`);
+    
+    // Process each row, now handling multiple sections per row
+    rowsWithSections.forEach(row => {
+        // Split the section value by comma and process each section
+        const sectionValues = row[indices.section].split(',').map(s => s.trim());
+        const tgtResource = row[indices.tgtResource].trim();
+        const tgtElement = row[indices.tgtElement].trim();
+        const srcResource = row[indices.srcResource] ? row[indices.srcResource].trim() : "";
+        const srcField = row[indices.srcField] ? row[indices.srcField].trim() : "";
+        const tgtRefType = row[indices.tgtRefType] ? row[indices.tgtRefType].trim() : "";
+        
+        console.log(`Processing resource: ${tgtResource}, element: ${tgtElement} for sections: ${sectionValues.join(', ')}`);
+        
+        // Add this row to each section it belongs to
+        sectionValues.forEach(section => {
+            if (section && section.length > 0) {
+                if (!sectionMap.has(section)) {
+                    sectionMap.set(section, []);
+                }
+                
+                // Check if this resource/element pair already exists in this section
+                const entries = sectionMap.get(section);
+                const exists = entries.some(entry => 
+                    entry.resource === tgtResource && entry.element === tgtElement
+                );
+                
+                if (!exists) {
+                    entries.push({
+                        resource: tgtResource,
+                        element: tgtElement,
+                        srcResource: srcResource,
+                        srcField: srcField,
+                        tgtRefType: tgtRefType
+                    });
+                }
+            }
+        });
+    });
+    
+    console.log(`Section map has ${sectionMap.size} sections`);
+    
+    // Generate the markdown file
+    const outputPath = '../input/intro-notes/StructureDefinition-Report-ImComposition-intro.md';
+    const writable = fs.createWriteStream(outputPath);
+    
+    // Write file header - preserve existing content from the original file
+    writable.write('{% include variable-definitions.md %}\n');
+    writable.write('For report creators, this page provides guidance on how to populate the narrative of each section, which is encoded in the `Composition.section.text` element of each section slice of this profile.\n\n');
+    writable.write('The table below suggests the data points that SHOULD be included, and the source of those data. Those data pointscan be in a first order resource, referenced directly from the Composition (e.g. ImOrder), or they can live in a second order resource (e.g. Medication). For the later, a second query or a FHIR path (resolve) expression is required to fetch them.\n\n');
+    writable.write('NOTE: Structural concerns and rationale on the ImComposition profile can be found in the [ImComposition](StructureDefinition-ImComposition.html), which is the parent type of this Report-ImComposition profile.\n\n');
+   
+    // Define custom section order
+    const sectionOrder = [
+        'Imaging Study',
+        'Order',
+        'History',
+        'Procedure',
+        'Comparison',
+        'Findings',
+        'Impression',
+        'Recommendation'
+    ];
+    
+    // Filter out sections that should be excluded (like "Section")
+    const sectionsToExclude = ['Section'];
+    
+    // Get all sections and exclude those in the exclude list
+    const availableSections = Array.from(sectionMap.keys())
+        .filter(section => !sectionsToExclude.includes(section));
+    
+    // First add sections in the specified order (if they exist)
+    const orderedSections = [];
+    sectionOrder.forEach(orderedSection => {
+        if (sectionMap.has(orderedSection)) {
+            orderedSections.push(orderedSection);
+        }
+    });
+    
+    // Then add any remaining sections that weren't in the specified order
+    availableSections.forEach(section => {
+        if (!orderedSections.includes(section)) {
+            orderedSections.push(section);
+        }
+    });
+    
+    console.log(`Ordered sections: ${orderedSections.join(', ')}`);
+    
+    // Generate tables for each section
+    if (orderedSections.length > 0) {
+        writable.write('## Elements to include in sections narratives\n\n');
+        orderedSections.forEach(section => {
+            writable.write(`### ${section}\n\n`);
+            writable.write('| First order resource | Element | Referenced resource | Logical model resource | Logical model field |\n');
+            writable.write('| -------- | ------- | -------------- | --------------------- | ------------------ |\n');
+            
+            const entries = sectionMap.get(section);
+            entries.forEach(entry => {
+                writable.write(`| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource} | ${entry.srcField} |\n`);
+            });
+            
+            writable.write('\n');
+        });
+    } else {
+        console.log('Warning: No sections found to create tables');
+    }
+    
+    writable.end();
+    console.log(`Generated section tables in ${outputPath}`);
+}
+
 function main() {
     const filePath = path.join(__dirname, 'xtehr-model-mapping.tsv');
 
@@ -439,7 +564,9 @@ function main() {
         generateIntroFiles(parsedData, srcResources);
         
         
-        generateObligationFiles(parsedData);        
+        generateObligationFiles(parsedData);
+        
+        generateSectionTablesMarkdown(parsedData);
     });
 }
 
