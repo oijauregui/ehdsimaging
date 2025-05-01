@@ -29,7 +29,7 @@ Description: "Document types (templates) as defined by HL7 EU. It identifies the
 * ^hierarchyMeaning = #is-a
 
 * #imaging-report "Imaging Reports" "HL7 EU Imaging Report"
-  * #imaging-report-v0-0-1 "Imaging Report V1.0.0" "Version 0.0.1 of the HL7 EU Imaging Report"
+  * #imaging-report-v0-0-1 "Imaging Report V0.0.1" "Version 0.0.1 of the HL7 EU Imaging Report"
 * #imaging-manifest "Imaging Manifest" "HL7 EU Imaging Manifest"
-  * #imaging-manifest-v0-0-1 "Imaging Manifest V1.0.0" "Version 0.0.1 of the HL7 EU Imaging Manifest"
+  * #imaging-manifest-v0-0-1 "Imaging Manifest V0.0.1" "Version 0.0.1 of the HL7 EU Imaging Manifest"
 // add other document types as needed
