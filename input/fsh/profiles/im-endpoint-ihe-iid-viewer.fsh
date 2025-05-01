@@ -6,7 +6,6 @@ This profile defines a placeholder for an Endpoint for a viewer that can be used
 The application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf).
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
-* insert PartOfImagingManifest
 
 * connectionType 
   * insert SliceElement( #value, coding )

@@ -31,8 +31,3 @@ RuleSet: SliceElementWithDescription( type, path, description )
 * ^slicing.description = "{description}"
 * ^slicing.ordered = false
 
-RuleSet: PartOfImagingManifest
-* ^meta.tag = #imaging-manifest
-
-RuleSet: PartOfImagingReport
-* ^meta.tag = #imaging-report
