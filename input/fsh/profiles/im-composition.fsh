@@ -56,7 +56,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1 
-* category[imaging] = $loinc#18748-4 "Diagnostic imaging equipment"
+* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * category[imaging].coding 1..1
 
 * status 
@@ -118,7 +118,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * extension contains $note-url named note 0..*
 
   * entry
-    * insert SliceElement( #profile, "$this" )
+    * insert SliceElement( #profile, $this )
   * entry contains 
       order 0..*
 
@@ -200,7 +200,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 // /////////////////// COMMUNICATION SECTION //////////////////////////
 * section[communication]
   * ^short = "Communications"
-  * code = $loinc#18783-1 "Communication"
+// a proper code is needed
+  * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
   * extension contains $note-url named note 0..*
 
 Invariant: eu-imaging-composition-1
