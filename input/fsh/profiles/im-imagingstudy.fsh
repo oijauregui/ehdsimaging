@@ -5,7 +5,6 @@ Description: """
 This profile represents an imaging study instance.
 """
 * insert SetFmmAndStatusRule( 1, draft )
-* insert PartOfImagingManifest
 * obeys im-imagingstudy-01
 
 * identifier

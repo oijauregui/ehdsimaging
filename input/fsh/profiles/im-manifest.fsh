@@ -5,7 +5,6 @@ Description: """
 This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n
 """
 * insert SetFmmAndStatusRule( 1, draft )
-* insert PartOfImagingManifest
 * entry 
   * insert SliceElement( #profile, resource )
 * entry 
