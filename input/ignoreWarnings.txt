@@ -54,3 +54,6 @@ Resource has provided narrative, but the narrative indicates that it is generate
 
 # XtEHR logical models use a different canonical
 %vs https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/%
+
+# EU profiles are beyond the scope of this IG
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode%
