@@ -467,7 +467,7 @@ function generateSectionTablesMarkdown(parsedData) {
     // Write file header - preserve existing content from the original file
     writable.write('{% include variable-definitions.md %}\n');
     writable.write('For report creators, this page provides guidance on how to populate the narrative of each section, which is encoded in the `Composition.section.text` element of each section slice of this profile.\n\n');
-    writable.write('The table below suggests the data points that SHOULD be included, and the source of those data. Those data pointscan be in a first order resource, referenced directly from the Composition (e.g. ImOrder), or they can live in a second order resource (e.g. Medication). For the later, a second query or a FHIR path (resolve) expression is required to fetch them.\n\n');
+    writable.write('The table below suggests the data points that SHOULD be included, and the source of those data. Those data points can be in a first order resource, referenced directly from the Composition (e.g. ImOrder), or they can live in a second,third order resource (e.g. Medication). For the later, a second query or a FHIR path (resolve) expression is required to fetch them.\n\n');
     writable.write('NOTE: Structural concerns and rationale on the ImComposition profile can be found in the [ImComposition](StructureDefinition-ImComposition.html), which is the parent type of this Report-ImComposition profile.\n\n');
    
     // Define custom section order
@@ -511,12 +511,14 @@ function generateSectionTablesMarkdown(parsedData) {
         writable.write('## Elements to include in sections narratives\n\n');
         orderedSections.forEach(section => {
             writable.write(`### ${section}\n\n`);
-            writable.write('| First order resource | Element | Referenced resource | Logical model resource | Logical model field |\n');
-            writable.write('| -------- | ------- | -------------- | --------------------- | ------------------ |\n');
+            writable.write(`The following table lists the elements that should be included in the narrative of the ${section} section.\n\n`);
+            writable.write(`{:.grid}\n`);
+            writable.write(`| First order resource | Element | Referenced resource | Logical model resource.field |\n`);
+            writable.write('| -------- | ------- | -------------- | --------------------- |\n');
             
             const entries = sectionMap.get(section);
             entries.forEach(entry => {
-                writable.write(`| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource} | ${entry.srcField} |\n`);
+                writable.write(`| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource}.${entry.srcField} |\n`);
             });
             
             writable.write('\n');
