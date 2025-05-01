@@ -114,7 +114,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[order]
   * ^short = "Order"
   * ^definition = "This section holds information related to the order for the imaging study."
-  * code = $loinc#55115-0 "Requested imaging studies information"
+  * code = $loinc#55115-0 "Requested imaging studies information Document"
   * extension contains $note-url named note 0..*
 
   * entry
@@ -131,13 +131,13 @@ The `text` field of each section SHALL contain a textual representation of all l
 // // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
-  * code = $loinc#11329-0 "History"
+  * code = $loinc#11329-0 "History general Narrative - Reported"
   * extension contains $note-url named note 0..*
 
 // // ///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
 * section[procedure]
   * ^short = "Procedure"
-  * code = $loinc#55111-9 "Procedure"
+  * code = $loinc#55111-9 "Current imaging procedure descriptions Document"
   * extension contains $note-url named note 0..*
   * entry 
     * insert SliceElement( #profile, $this )
@@ -149,7 +149,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 // ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "History"
-  * code = $loinc#18834-2 "Comparison"
+  * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
   * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
@@ -173,7 +173,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 // /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]
   * ^short = "Impressions"
-  * code = $loinc#19005-8 "Impression"
+  * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
   * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
@@ -188,7 +188,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 // /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
   * ^short = "Recommendations"
-  * code = $loinc#18783-1 "Recommendation"
+  * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
   * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
