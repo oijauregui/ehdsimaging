@@ -61,7 +61,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
   * value[x] only QuantityEu
   * valueQuantity from ImGraySquareUnits
 * component[fluorDoseAreaProductTotal]
-  * code = $dcm#113726 "Fluoroscopy Dose Area Product Total"
+  * code = $dcm#113726 "Fluoro Dose Area Product Total"
   * value[x] only QuantityEu
   * valueQuantity from ImGraySquareUnits
 * component[doseAreaProduct]
