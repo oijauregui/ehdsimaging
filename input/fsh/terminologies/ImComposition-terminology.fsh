@@ -13,7 +13,7 @@ Description: "HL7 EU Imaging Report Types used in Compositions and DiagnosticRep
 * Hl7EuDocumentTypes#imaging-manifest-v0-0-1 "Imaging Manifest V0.0.1" 
 
 ValueSet: ImImagingManifestTypesEuVS
-Title: "HL7 EU Imaging Report Types"
+Title: "HL7 EU Imaging Manifest Types"
 Description: "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports."
 * ^experimental = false
 * Hl7EuDocumentTypes#imaging-report-v0-0-1 "Imaging Report V0.0.1" 

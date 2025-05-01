@@ -3,7 +3,6 @@ Parent: Device
 Title: "Im Imaging Device"
 Description: """The device the made the image."""	
 * insert SetFmmAndStatusRule( 1, draft )
-* insert PartOfImagingManifest
 * status 1..1
 * category 
   * insert SliceElement( #value, $this )
