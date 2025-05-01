@@ -34,7 +34,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
   * coding
     insert SliceElement( #value, $this )
   * coding contains keyimagecode 1..1
-  * coding[keyimagecode] = $loinc#55113-5 "Imaging Key Images Document"
+  * coding[keyimagecode] = $loinc#55113-5 "Key images Document Radiology"
 
 * modality 1..1
   
@@ -49,7 +49,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * content
   * attachment 1..1
 * content 
-  * insert SliceElement( #value, [[extension.where( url = 'http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail']] )
+  * insert SliceElement( #value, [[extension.value]] )
 * content contains 
     thumbnail 0..1 and 
     content 1..1
