@@ -11,7 +11,7 @@
 {% assign iheIDR            = "[IHE-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/)" %}
 
 {% assign hl7EuBase         = "[HL7 EU Base](https://build.fhir.org/ig/hl7-eu/base-r5/)" %}
-{% assign hl7EuExtensions   = "[HL7 EU Base](https://build.fhir.org/ig/hl7-eu/extensions-r5/)" %}
+{% assign hl7EuExtensions   = "[HL7 Europe Extensions](https://build.fhir.org/ig/hl7-eu/extensions-r5/)" %}
 {% assign hl7EuLabs         = "[HL7 EU Laboratory Reports](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)" %}
 {% assign hl7EuHdr          = "[HL7 EU Hospital Discharge Reports](https://build.fhir.org/ig/hl7-eu/hdr/index.html)" %}
 {% assign hl7EuEps          = "[HL7 Europe Patient Summary](https://build.fhir.org/ig/hl7-eu/eps/)" %}

@@ -1,7 +1,7 @@
 {% include variable-definitions.md %}
-The imaging report represent a report made by a radiologist based on an ImagingStudy. The figure below presents an overview of the data that is part of the imaging-report.
+The imaging report represents a report made by a radiologist based on an ImagingStudy. The figure below presents an overview of the data that is part of the imaging-report.
 
-In order to keep the diagram readable, not all references are included 
+In order to keep the diagram readable, not all references are included.
 
 ### Overview
 
