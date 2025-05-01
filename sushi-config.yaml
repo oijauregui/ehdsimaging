@@ -92,10 +92,16 @@ pages:
 parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
-  apply-contact: true
+  apply-contact: false
+  default-contact: true
+  default-copyright: true
+  apply-copyright: false
   apply-jurisdiction: true
+  apply-license: false
+  default-license: true
   apply-publisher: true
-  apply-version: true
+  apply-version: false
+  default-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
   # packages: ./package-cache
