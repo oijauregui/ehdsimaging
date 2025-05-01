@@ -6,10 +6,12 @@ const conceptMapDir = '../input/fsh/xtehr-model-maps';
 const xtehrDir = '../input/resources';	
 const conceptMapIntroDir = '../input/intro-notes';	
 
+
 // Indices for relevant columns
 const indices = {
     srcResource: 1,
     srcField: 2,
+    srcDescription: 4,
     srcType: 5,
     srcReq:7,
     tgtResource: 8,
@@ -44,6 +46,76 @@ function extractAndCopyResources(parsedData, srcResources ) {
     );
     });
 }
+// function generateCodeSystem(parsedData, srcResources) {
+//     srcResources.forEach(srcResource => {
+
+//         const codesystemfile = `${conceptMapDir}/XtEhrCodeSystem.fsh`;
+//         console.log(codesystemfile);
+//         const writable = fs.createWriteStream(codesystemfile);
+//         writable.write(`////////////////////////////////////////////////////\n`);
+//         writable.write(`// Generated file. Do not edit.\n`);
+//         writable.write(`////////////////////////////////////////////////////\n`);
+//         writable.write(`\n`);
+//         writable.write(`Instance: XtEhrCodeSystem\n`);
+//         writable.write(`InstanceOf: CodeSystem\n`);
+//         writable.write(`Title: "XtEhrCodeSystem"\n`);
+//         writable.write(`Description: """CodeSystem with all XtEHR fields"""\n`);
+//         writable.write(`* ^experimental = true\n`);
+//         writable.write(`* ^status = #draft\n`);
+//         writable.write(`* ^caseSensitive = true\n`);
+//         writable.write(`* ^hierarchyMeaning = #is-a\n`);
+
+//         parsedData.forEach(row => {
+//             const codes = new Set();
+//             if ( row[indices.srcResource] && row[indices.srcResource].startsWith('EHDS') && row[indices.srcField].length > 0 ) {
+//                 const code = `${row[indices.srcResource]}.${row[indices.srcField].trim()}`;
+//                 const display = row[indices.srcDescription].trim();
+//                 const description = `${display}`;
+//                 codes.add( `* #${code} "${display}"  "${description}"\n`); 
+//             }
+//             codes.forEach(code => {
+//                 writable.write(code);
+//             });
+//         });
+
+//         writable.write(`\n`);
+//         writable.write(`////////////////////////////////////////////////////\n`);
+//         writable.end();
+//     });
+//     srcResources.forEach(srcResource => {
+//             const conceptMapPath = `${conceptMapDir}/ValueSet_${srcResource}.fsh`;
+//             console.log(conceptMapPath);
+//             const writable = fs.createWriteStream(conceptMapPath);
+
+//             writable.write(`////////////////////////////////////////////////////\n`);
+//             writable.write(`// Generated file. Do not edit.\n`);
+//             writable.write(`////////////////////////////////////////////////////\n`);
+//             writable.write(`\n`);
+//             writable.write(`ValueSet: ${srcResource}Vs\n`);
+//             writable.write(`Title: "VS for ${srcResource}"\n`);
+//             writable.write(`Description: "VS for ${srcResource}"\n`);
+//             writable.write(`\n`);
+//             writable.write(`* ^experimental = true\n`);
+//             writable.write(`* ^status = #draft\n`);
+
+//             codes = new Set();
+//             parsedData.forEach(row => {
+//                 if ( row[indices.srcResource] === srcResource && row[indices.srcField].length > 0 ) {
+//                     const code = `${row[indices.srcResource]}.${row[indices.srcField].trim()}`;
+//                     const display = row[indices.srcDescription].trim();
+//                     const description = `${display}`;
+//                     codes.add( `* XtEhrCodeSystem#${code} \n`);
+//                 }
+//             });
+//             codes.forEach(code => {
+//                 writable.write(code);
+//             });                
+//             writable.write(`\n`);
+//             writable.write(`////////////////////////////////////////////////////\n`);
+//             writable.end();
+//     });
+
+// }
 
 function generateConceptMapFiles(parsedData, srcResources) {
     srcResources.forEach(srcResource => {
@@ -436,11 +508,11 @@ function main() {
         
         generateConceptMapFiles(parsedData, srcResources);
         
-        
         generateIntroFiles(parsedData, srcResources);
-        
-        
+                
         generateObligationFiles(parsedData);        
+
+        // generateCodeSystem(parsedData, srcResources);
     });
 }
 
