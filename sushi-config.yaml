@@ -43,11 +43,7 @@ dependencies:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom
     version: 2025.2.20250411
-
-meta:
-  profile:
-    - http://smart.who.int/base/StructureDefinition/SGImplementationGuide
-    
+  
 pages:
   index.md:
     title: Home

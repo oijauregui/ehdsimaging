@@ -56,7 +56,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1 
-* category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
+* category[imaging] = $loinc#18748-4 "Diagnostic imaging equipment"
 * category[imaging].coding 1..1
 
 * status 

@@ -37,6 +37,7 @@ ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
 # Due to time constraints, examples could not generated for all resources
 %The Implementation Guide contains no examples for this profile%
 %The Implementation Guide contains no examples for this data type profile%
+The Implementation Guide contains no examples for this extension
 
 # Error in the extension pack, see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Sub-extension.20url.20'source'.20is.20not.20defined.20by.20Extension.20error
 %Sub-extension url 'source' is not defined by the Extension http://hl7.org/fhir/StructureDefinition/obligation|5.2.0%

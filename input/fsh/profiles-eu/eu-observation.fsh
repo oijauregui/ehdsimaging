@@ -6,9 +6,9 @@ Description: "A observation profile for the EU."
 * effective[x] 1..1
 
 * code 1..1
-//* code from $SCT (preferred)
+//* code from $sct (preferred)
 
-//* method from $SCT (preferred)
+//* method from $sct (preferred)
 
 * performer.extension contains $performer-function-url named performerFunction 0..1
 
