@@ -15,8 +15,6 @@ Canonical URL 'http://hl7.eu/fhir/imaging/r5/StructureDefinition/%
 
 # ConceptMaps in this IG refer to StructureDefinition that can not be resolved
 %is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
-
-# ConceptMaps in this IG refer to StructureDefinition that can not be resolved
 No Target Code System, so the target codes cannot be checked
 
 # Broken link in R5
@@ -30,7 +28,7 @@ This IG is version 5.0.0, while the IG 'fhir.dicom' is from version 4.0.1
 # DICOM ValueSets are not available using download
 ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
 
-# No code system for DICOM SOPclass
+# No code system exists for DICOM SOPclass
 %in the CodeSystem 'urn:ietf:rfc:3986' version 'null'
 
 # Error likely caused by missing or incorrect CodeSystem at the FHIR side
@@ -38,15 +36,20 @@ ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
 
 # Due to time constraints, examples could not generated for all resources
 %The Implementation Guide contains no examples for this profile%
-
-# Due to time constraints, examples could not generated for all resources
 %The Implementation Guide contains no examples for this data type profile%
 
 # Error in the extension pack, see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Sub-extension.20url.20'source'.20is.20not.20defined.20by.20Extension.20error
 %Sub-extension url 'source' is not defined by the Extension http://hl7.org/fhir/StructureDefinition/obligation|5.2.0%
-
-# Error in the extension pack, see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Sub-extension.20url.20'source'.20is.20not.20defined.20by.20Extension.20error
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # Comes out of the base spec - ignore
 %which is experimental, but this structure is not labeled as experimental
+
+# XtEHR comes with Narrative - this is ok
+Resource has provided narrative, but the narrative indicates that it is generated - remove the narrative or fix it up
+
+# XtEHR logical models use a different canonical
+% does not match the URL (https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDS%
+
+# XtEHR logical models use a different canonical
+%vs https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/%
