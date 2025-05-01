@@ -23,7 +23,7 @@ InstanceOf: ImImagingStudy
 Usage: #inline
 * id = "1"
 * identifier
-  * type = http://hl7.org/fhir/uv/dicom-sr/CodeSystem/dicom-identifier-type#study-instance-uid "Study Instance UID"
+  * type = MissingDicomTerminology#0020000D "Study Instance UID" 
   * system = "urn:dicom:uid"
   * value  =  "999.999.3859744"
 * status = #available
