@@ -29,7 +29,7 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1
-* category[imaging] = $LOINC#18748-4 "Diagnostic imaging equipment"
+* category[imaging] = $loinc#18748-4 "Diagnostic imaging equipment"
 * category[imaging].coding 1..1
 
 * subject only Reference(ImPatient)

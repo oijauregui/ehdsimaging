@@ -21,5 +21,5 @@ ValueSet: PeriodsOfLifeValueSet
 Id: periods-of-life-value-set
 Title: "Periods of Life"
 Description: "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en))."
-* include codes from system $SCT where concept is-a #282032007 "Periods of life (qualifier value)"
-* exclude $SCT#282032007
+* include codes from system $sct where concept is-a #282032007 "Periods of life (qualifier value)"
+* exclude $sct#282032007
