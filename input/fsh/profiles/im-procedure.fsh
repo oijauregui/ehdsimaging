@@ -14,7 +14,7 @@ Description: "This profile on Procedure represents the imaging procedure."
 * code from ImProcedureType (extensible)
 
 * performer 0..*
-  * insert SliceElementWithDescription( #value, "function", [[Different performers can be added to the procedure.]] )
+  * insert SliceElementWithDescription( #value, function, [[Different performers can be added to the procedure.]] )
   * function 1..1
 * performer contains performer 0..* and imaging-device 0..*
 * performer[performer]
