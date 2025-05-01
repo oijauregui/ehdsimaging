@@ -15,6 +15,7 @@
  </blockquote>
 </div>
 
+
 ### Scope
 
 This implementation guide specifies imaging study data in the **European** context, as defined in {{ehnImaging}} and refined by {{XtEhrImaging}}, as a FHIR model. It defines:
@@ -27,7 +28,7 @@ The specification is to be used in a variety of deployment models, which include
 Current approaches within Europe use different approaches to information exchange:
 * **Document based exchange**, the document is represented as a FHIR Document Bundle.
 * **REST API based access to documents**, a {{Composition}} and {{DiagnosticReport}} for each document including instances of the referred resources
-* **REST API based access to resources**, as the previous but the (important) resources are *harmonized*, meaning that all documents point to the same {{Patient}}, {{Organization}}, {{Practioner}}, and other resources.
+* **REST API based access to resources**, as the previous but the (important) resources are *harmonized*, meaning that all documents point to the same {{Patient}}, {{Organization}} and other resources.
 
 The specification is being designed in such a way that it can be used in all of these deployment scenarios.
 
@@ -43,10 +44,6 @@ The specification is being designed in such a way that it can be used in all of 
    </ul>
  </blockquote>
 </div>
-
-### The Radiology Domain
-
-Imaging Study Reports have been designated as a priority domain within the European Electronic Health Record Exchange Format (E-EHRxF) due to their importance in clinical care. These reports often serve as the foundation for medical decision-making, making the availability of high-quality reports and their seamless exchange essential. Imaging Study Reports play a vital role in diagnosing conditions, guiding treatment, and monitoring patient progress.
 
 ### Purpose
 
