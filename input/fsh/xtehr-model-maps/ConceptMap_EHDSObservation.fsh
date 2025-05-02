@@ -79,9 +79,15 @@ Description: "Map for EHDSObservation"
       * display = "C.10.9 - Reporter"
       * relationship = #source-is-broader-than-target
   * element[+]
+    * code = #observationResult
+    * target[+]
+      * code = #value[x]
+      * display = "C.10.10 - Observation result"
+      * relationship = #source-is-broader-than-target
+  * element[+]
     * code = #observationResult.textualResult
     * target[+]
-      * code = #text
+      * code = #valueString
       * display = "C.10.10.1 - Textual Result"
       * relationship = #source-is-narrower-than-target
   * element[+]
@@ -93,77 +99,9 @@ Description: "Map for EHDSObservation"
   * element[+]
     * code = #observationResult.numericResult.numericValue[x]
     * target[+]
-      * code = #valueQuantity
-      * display = "C.10.10.2.1 - Numeric value"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #component.valueQuantity
-      * display = "C.10.10.2.1 - Numeric value"
-      * relationship = #source-is-broader-than-target
-    * target[+]
       * code = #valueRange
       * display = "C.10.10.2.1 - Numeric value"
       * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueRange.low
-      * display = "C.10.10.2.1 - Numeric value"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueRange.high
-      * display = "C.10.10.2.1 - Numeric value"
-      * relationship = #source-is-broader-than-target
-  * element[+]
-    * code = #observationResult.numericResult.units
-    * target[+]
-      * code = #valueQuantity.system
-      * display = "C.10.10.2.2 - Units"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueQuantity.code
-      * display = "C.10.10.2.2 - Units"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueRange.low.system
-      * display = "C.10.10.2.2 - Units"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueRange.low.code
-      * display = "C.10.10.2.2 - Units"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueRange.high.system
-      * display = "C.10.10.2.2 - Units"
-      * relationship = #source-is-broader-than-target
-    * target[+]
-      * code = #valueRange.high.unit
-      * display = "C.10.10.2.2 - Units"
-      * relationship = #source-is-broader-than-target
-  * element[+]
-    * code = #observationResult.numericResult.uncertainty
-    * target[+]
-      * code = #valueQuantity.extension[uncertainty]
-      * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #equivalent
-    * target[+]
-      * code = #valueQuantity.extension[uncertaintyType]
-      * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #equivalent
-    * target[+]
-      * code = #valueRange.low.extension[uncertainty]
-      * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #equivalent
-    * target[+]
-      * code = #valueRange.low.extension[uncertaintyType]
-      * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #equivalent
-    * target[+]
-      * code = #valueRange.high.extension[uncertainty]
-      * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #equivalent
-    * target[+]
-      * code = #valueRange.high.extension[uncertaintyType]
-      * display = "C.10.10.2.3 - Uncertainty"
-      * relationship = #equivalent
   * element[+]
     * code = #observationResult.codedResult
     * target[+]
@@ -253,50 +191,6 @@ Description: "Map for EHDSObservation"
       * code = #component.valueRange
       * display = "C.10.19.3.1 - Numeric value"
       * relationship = #equivalent
-    * target[+]
-      * code = #component.valueRange.low
-      * display = "C.10.19.3.1 - Numeric value"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueRange.high
-      * display = "C.10.19.3.1 - Numeric value"
-      * relationship = #equivalent
-  * element[+]
-    * code = #component.numericResult.units
-    * target[+]
-      * code = #component.valueQuantity.system
-      * display = "C.10.19.3.2 - Units"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueQuantity.code
-      * display = "C.10.19.3.2 - Units"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueRange.low.system
-      * display = "C.10.19.3.2 - Units"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueRange.low.code
-      * display = "C.10.19.3.2 - Units"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueRange.high.system
-      * display = "C.10.19.3.2 - Units"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueRange.high.unit
-      * display = "C.10.19.3.2 - Units"
-      * relationship = #equivalent
-  * element[+]
-    * code = #component.numericResult.uncertainty
-    * target[+]
-      * code = #component.valueQuantity.extension[iso21090-uncertainty]
-      * display = "C.10.19.3.3 - Uncertainty"
-      * relationship = #equivalent
-    * target[+]
-      * code = #component.valueQuantity.extension[iso21090-uncertaintyType]
-      * display = "C.10.19.3.3 - Uncertainty"
-      * relationship = #equivalent
   * element[+]
     * code = #component.codedResult
     * target[+]
@@ -335,9 +229,129 @@ Description: "Map for EHDSObservation"
       * relationship = #equivalent
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
+  * target = $EuQuantityUrl
   * element[+]
-    * code = #observationResult
+    * code = #observationResult.numericResult.numericValue[x]
     * noMap = true
-    * display = "(C.10.10 - Observation result)"
+  * element[+]
+    * code = #observationResult.numericResult.units
+    * target[+]
+      * code = #system
+      * display = "C.10.10.2.2 - Units"
+      * relationship = #source-is-broader-than-target
+    * target[+]
+      * code = #code
+      * display = "C.10.10.2.2 - Units"
+      * relationship = #source-is-broader-than-target
+    * target[+]
+      * code = #unit
+      * display = "C.10.10.2.2 - Units"
+      * relationship = #source-is-broader-than-target
+  * element[+]
+    * code = #observationResult.numericResult.uncertainty
+    * target[+]
+      * code = #extension[uncertainty]
+      * comment = "Covered by data type"
+      * display = "C.10.10.2.3 - Uncertainty"
+      * relationship = #equivalent
+    * target[+]
+      * code = #extension[uncertaintyType]
+      * comment = "Covered by data type"
+      * display = "C.10.10.2.3 - Uncertainty"
+      * relationship = #equivalent
+  * element[+]
+    * code = #component.numericResult.units
+    * target[+]
+      * code = #system
+      * display = "C.10.19.3.2 - Units"
+      * relationship = #equivalent
+    * target[+]
+      * code = #code
+      * display = "C.10.19.3.2 - Units"
+      * relationship = #equivalent
+    * target[+]
+      * code = #unit
+      * display = "C.10.19.3.2 - Units"
+      * relationship = #equivalent
+  * element[+]
+    * code = #component.numericResult.uncertainty
+    * target[+]
+      * code = #extension[uncertainty]
+      * comment = "Covered by data type"
+      * display = "C.10.19.3.3 - Uncertainty"
+      * relationship = #equivalent
+    * target[+]
+      * code = #extension[uncertaintyType]
+      * comment = "Covered by data type"
+      * display = "C.10.19.3.3 - Uncertainty"
+      * relationship = #equivalent
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
+  * target = $EuRangeUrl
+  * element[+]
+    * code = #observationResult.numericResult.numericValue[x]
+    * target[+]
+      * code = #low
+      * display = "C.10.10.2.1 - Numeric value"
+      * relationship = #source-is-broader-than-target
+    * target[+]
+      * code = #high
+      * display = "C.10.10.2.1 - Numeric value"
+      * relationship = #source-is-broader-than-target
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"
+  * target = $EuSimpleQuantityUrl
+  * element[+]
+    * code = #observationResult.numericResult.units
+    * target[+]
+      * code = #system
+      * display = "C.10.10.2.2 - Units"
+      * relationship = #source-is-broader-than-target
+    * target[+]
+      * code = #code
+      * display = "C.10.10.2.2 - Units"
+      * relationship = #source-is-broader-than-target
+    * target[+]
+      * code = #unit
+      * display = "C.10.10.2.2 - Units"
+      * relationship = #source-is-broader-than-target
+  * element[+]
+    * code = #observationResult.numericResult.uncertainty
+    * target[+]
+      * code = #extension[uncertainty]
+      * comment = "Covered by data type"
+      * display = "C.10.10.2.3 - Uncertainty"
+      * relationship = #equivalent
+    * target[+]
+      * code = #extension[uncertaintyType]
+      * comment = "Covered by data type"
+      * display = "C.10.10.2.3 - Uncertainty"
+      * relationship = #equivalent
+  * element[+]
+    * code = #component.numericResult.units
+    * target[+]
+      * code = #system
+      * display = "C.10.19.3.2 - Units"
+      * relationship = #equivalent
+    * target[+]
+      * code = #code
+      * display = "C.10.19.3.2 - Units"
+      * relationship = #equivalent
+    * target[+]
+      * code = #unit
+      * display = "C.10.19.3.2 - Units"
+      * relationship = #equivalent
+  * element[+]
+    * code = #component.numericResult.uncertainty
+    * target[+]
+      * code = #extension[uncertainty]
+      * comment = "Covered by data type"
+      * display = "C.10.19.3.3 - Uncertainty"
+      * relationship = #equivalent
+    * target[+]
+      * code = #extension[uncertaintyType]
+      * comment = "Covered by data type"
+      * display = "C.10.19.3.3 - Uncertainty"
+      * relationship = #equivalent
 
 ////////////////////////////////////////////////////

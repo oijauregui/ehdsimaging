@@ -30,15 +30,19 @@ Description: "A quantity profile for the EU."
 * extension contains $iso21090-uncertainty-url named uncertainty 0..1
 * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
 
+Profile: SimpleQuantityEu
+Parent: SimpleQuantity
+Title: "EU Quantity"
+Description: "A quantity profile for the EU."
+* insert SetFmmAndStatusRule( 1, draft )
+* extension contains $iso21090-uncertainty-url named uncertainty 0..1
+* extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
+
 Profile: RangeEu
 Parent: Range
 Id: range-eu
 Title: "EU Range"
 Description: "A range profile for the EU."
 * insert SetFmmAndStatusRule( 1, draft )
-* low
-  * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
-* high
-  * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
+* low only SimpleQuantityEu
+* high only SimpleQuantityEu
