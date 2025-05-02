@@ -7,4 +7,5 @@ docker run \
     --name $instance_name \
     --rm -it \
     -v $(pwd):/home/publisher/ig \
+    --tmpfs /home/publisher/ig/.fhir \
     hl7fhir/ig-publisher-base
