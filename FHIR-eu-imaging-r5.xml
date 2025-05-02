@@ -37,6 +37,7 @@
 <artifact id="StructureDefinition/MedicationEu" key="StructureDefinition-MedicationEu" name="EU Medication"/>
 <artifact id="StructureDefinition/ObservationEu" key="StructureDefinition-ObservationEu" name="EU Observation"/>
 <artifact id="StructureDefinition/ProcedureEu" key="StructureDefinition-ProcedureEu" name="EU Procedure"/>
+<artifact id="StructureDefinition/SimpleQuantityEu" key="StructureDefinition-SimpleQuantityEu" name="EU Quantity"/>
 <artifact id="StructureDefinition/quantity-eu" key="StructureDefinition-quantity-eu" name="EU Quantity"/>
 <artifact id="StructureDefinition/range-eu" key="StructureDefinition-range-eu" name="EU Range"/>
 <artifact id="ValueSet/im-effective-dose-units" key="ValueSet-im-effective-dose-units" name="Effective Dose Units"/>
@@ -197,8 +198,11 @@
 <artifact id="StructureDefinition/Report-EuPractitioner" key="StructureDefinition-Report-EuPractitioner" name="Report obligations for EuPractitioner"/>
 <artifact id="StructureDefinition/Report-EuPractitionerRole" key="StructureDefinition-Report-EuPractitionerRole" name="Report obligations for EuPractitionerRole"/>
 <artifact id="StructureDefinition/Report-EuProcedure" key="StructureDefinition-Report-EuProcedure" name="Report obligations for EuProcedure"/>
+<artifact id="StructureDefinition/Report-EuQuantity" key="StructureDefinition-Report-EuQuantity" name="Report obligations for EuQuantity"/>
+<artifact id="StructureDefinition/Report-EuRange" key="StructureDefinition-Report-EuRange" name="Report obligations for EuRange"/>
 <artifact id="StructureDefinition/Report-EuRelatedPerson" key="StructureDefinition-Report-EuRelatedPerson" name="Report obligations for EuRelatedPerson"/>
 <artifact id="StructureDefinition/Report-EuServiceRequest" key="StructureDefinition-Report-EuServiceRequest" name="Report obligations for EuServiceRequest"/>
+<artifact id="StructureDefinition/Report-EuSimpleQuantity" key="StructureDefinition-Report-EuSimpleQuantity" name="Report obligations for EuSimpleQuantity"/>
 <artifact id="StructureDefinition/Report-EuSpecimen" key="StructureDefinition-Report-EuSpecimen" name="Report obligations for EuSpecimen"/>
 <artifact id="StructureDefinition/Report-EuSubstance" key="StructureDefinition-Report-EuSubstance" name="Report obligations for EuSubstance"/>
 <artifact id="StructureDefinition/Report-ImAdverseEvent" key="StructureDefinition-Report-ImAdverseEvent" name="Report obligations for ImAdverseEvent"/>
@@ -227,6 +231,7 @@
 <page key="artifacts-intro" name="Artifacts"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
+<page key="contributors" name="Contributors"/>
 <page key="profiles" name="Deployment profiles"/>
 <page key="design-considerations" name="Design Considerations"/>
 <page key="index" name="Home"/>

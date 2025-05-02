@@ -82,11 +82,20 @@ Alias: $EuPractitionerUrl    = http://hl7.eu/fhir/base/StructureDefinition/pract
 Alias: $EuProcedure          = ProcedureEu
 Alias: $EuProcedureUrl       = http://hl7.eu/fhir/imaging/r5/StructureDefinition/ProcedureEu
 
+Alias: $EuRange              = RangeEu
+Alias: $EuRangeUrl           = http://hl7.eu/fhir/imaging/r5/StructureDefinition/RangeEu
+
 Alias: $EuRelatedPerson      = RelatedPersonEu
 Alias: $EuRelatedPersonUrl   = http://hl7.org/fhir/StructureDefinition/RelatedPerson
 
 Alias: $EuServiceRequest     = ServiceRequest
 Alias: $EuServiceRequestUrl  = http://hl7.org/fhir/StructureDefinition/ServiceRequest
+
+Alias: $EuQuantity           = QuantityEu
+Alias: $EuQuantityUrl        = http://hl7.eu/fhir/imaging/r5/StructureDefinition/QuantityEu
+
+Alias: $EuSimpleQuantity     = SimpleQuantityEu
+Alias: $EuSimpleQuantityUrl  = http://hl7.eu/fhir/imaging/r5/StructureDefinition/SimpleQuantityEu
 
 Alias: $EuSpecimen           = SpecimenEu
 Alias: $EuSpecimenUrl        = http://hl7.eu/fhir/imaging/r5/StructureDefinition/SpecimenEu
