@@ -9,4 +9,4 @@ Description: "Report obligations for ImFinding"
 * derivedFrom
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(ImReportProvider)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.imagingReportAttachments[x], EHDSImagingReport.imagingReportAttachments[x], EHDSImagingReport.imagingReportAttachments[x], EHDSImagingReport.imagingReportAttachments[x], EHDSImagingReport.imagingReportAttachments[x], EHDSImagingReport.imagingReportAttachments[x]"
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.imagingReportAttachments[x]"
