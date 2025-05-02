@@ -28,12 +28,12 @@ The `text` field of each section SHALL contain a textual representation of all l
 * attester contains legalAuthenticator 0..* and resultValidator 0..*
 * attester[legalAuthenticator]
   * mode 1..1
-  * mode = #legal
+  * mode = http://hl7.org/fhir/composition-attestation-mode#legal
   * party only Reference($EuPractitionerRole)
   * time 1..1
 * attester[resultValidator]
   * mode 1..1
-  * mode = #professional
+  * mode = http://hl7.org/fhir/composition-attestation-mode#professional
   * party only Reference($EuPractitionerRole)
   * time 1..1
 
