@@ -35,9 +35,10 @@ ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
 %Error converting output stream to byte array%
 
 # Due to time constraints, examples could not generated for all resources
-%The Implementation Guide contains no examples for this profile%
-%The Implementation Guide contains no examples for this data type profile%
-The Implementation Guide contains no examples for this extension
+%The Implementation Guide contains no explicitly linked examples for this profile
+%The Implementation Guide contains no examples for this profile
+%The Implementation Guide contains no examples for this data type profile
+%The Implementation Guide contains no examples for this extension
 
 # Error in the extension pack, see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Sub-extension.20url.20'source'.20is.20not.20defined.20by.20Extension.20error
 %Sub-extension url 'source' is not defined by the Extension http://hl7.org/fhir/StructureDefinition/obligation|5.2.0%
@@ -57,3 +58,9 @@ Resource has provided narrative, but the narrative indicates that it is generate
 
 # EU profiles are beyond the scope of this IG
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode%
+
+# The IG is draft and so will have draft codesystems.
+%Reference to draft CodeSystem%
+
+# DICOM valuesets do not resolve - that is expected.
+%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/%
