@@ -25,7 +25,7 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.terminology.r5: 6.2.0
+  hl7.terminology.r5: 6.3.0
   hl7.fhir.uv.extensions: 5.2.0
   hl7.fhir.uv.ips: 1.1.0
   # hl7.fhir.eu.extensions.r5: current/0.1.0-ballot
@@ -39,10 +39,10 @@ dependencies:
   # eu.ehds.models: current
   # required for medication extensions
   # ihe.pharm.mpd: current
-  fhir.dicom:
-    id: DICOM
-    uri: http://fhir.org/packages/fhir.dicom
-    version: 2025.2.20250411
+  # fhir.dicom:
+  #   id: DICOM
+  #   uri: http://fhir.org/packages/fhir.dicom
+  #   version: 2025.2.20250411
   
 pages:
   index.md:
@@ -104,6 +104,9 @@ parameters:
   releaselabel: 0.1.0-ballot
   # add all fsh results to _data directory
   # produce-jekyll-data: true
+  # broken links are not errors, but warnings
+  rule-broken-links: warning
+  
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
