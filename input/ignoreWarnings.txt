@@ -52,8 +52,11 @@ There are multiple different potential matches for the url 'http://terminology.h
 # The IG is draft and so will have draft codesystems.
 %Reference to draft CodeSystem%
 
+# Caused by inclusion of both R5 and R5 resources. The valuesets are not mandated in this specification.
+There are multiple different potential matches for the url%
+
 # DICOM valuesets do not resolve - that is expected.
-%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/%
+%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part%
 %The link '#DCM%
 The link '??' for "Modality%
 The link '??' for "Laterality%
