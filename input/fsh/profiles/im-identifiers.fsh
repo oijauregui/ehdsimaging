@@ -7,7 +7,7 @@ Description: "This profile on Identifier represents the Accession Number for the
 * system 1..1
 * value 1..1
 * type 1..1
-* type = http://terminology.hl7.org/5.1.0/CodeSystem-v2-0203.html#ACSN
+* type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
 
 RuleSet: BasedOnImOrderReference( slicename )
 * basedOn[{slicename}] only Reference( ImOrder )

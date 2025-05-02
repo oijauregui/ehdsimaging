@@ -16,6 +16,7 @@ ValueSet: ImImagingDeviceType
 Id: im-imaging-device-type
 Title: "Imaging Device Type"
 Description: "Imaging Device Type."
+* ^experimental = false
 * include codes from system $sct where concept is-a #314789007 "Diagnostic imaging equipment"
 
 Mapping: DicomToImImagingDevice
