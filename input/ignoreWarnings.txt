@@ -6,8 +6,6 @@
 
 # ConceptMaps in this IG also refer to structure definitions
 %refers to a resource that has the wrong type. Found StructureDefinition expecting one of [CodeSystem]
-
-# ConceptMaps in this IG also refer to structure definitions
 Reference must be to a ValueSet, but found a StructureDefinition instead
 
 # ConceptMaps in this IG refer to StructureDefinition that can not be resolved
@@ -24,12 +22,6 @@ This IG is version 5.0.0, while the IG 'hl7.fhir.uv.ips' is from version 4.0.1
 
 # IG's are not available for R5, dependencies are compatible
 This IG is version 5.0.0, while the IG 'fhir.dicom' is from version 4.0.1
-
-# DICOM ValueSets are not available using download
-ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
-
-# No code system exists for DICOM SOPclass
-%in the CodeSystem 'urn:ietf:rfc:3986' version 'null'
 
 # Error likely caused by missing or incorrect CodeSystem at the FHIR side
 %Error converting output stream to byte array%
@@ -52,8 +44,6 @@ Resource has provided narrative, but the narrative indicates that it is generate
 
 # XtEHR logical models use a different canonical
 % does not match the URL (https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDS%
-
-# XtEHR logical models use a different canonical
 %vs https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/%
 
 # EU profiles are beyond the scope of this IG
@@ -65,3 +55,13 @@ There are multiple different potential matches for the url 'http://terminology.h
 # DICOM valuesets do not resolve - that is expected.
 %Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/%
 %The link '#DCM%
+The link '??' for "Modality%
+The link '??' for "Laterality%
+The link '??' for "KeyObjectSelectionDocumentTitle%
+
+# DICOM ValueSets are not available using download
+ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
+
+# No code system exists for DICOM SOPclass
+%in the CodeSystem 'urn:ietf:rfc:3986' version 'null'
+
