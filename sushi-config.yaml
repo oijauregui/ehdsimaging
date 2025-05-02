@@ -51,6 +51,8 @@ pages:
       title: Changes
     adapting.md: 
       title: Adapting Guidelines for Country use	
+    contributors.md:
+      title: Contributors
   actors-and-transactions.md:
     title: Actors and Transactions
     system-actors.md:

@@ -64,3 +64,4 @@ There are multiple different potential matches for the url 'http://terminology.h
 
 # DICOM valuesets do not resolve - that is expected.
 %Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/%
+%The link '#DCM%
