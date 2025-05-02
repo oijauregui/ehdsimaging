@@ -107,7 +107,7 @@ parameters:
   # add all fsh results to _data directory
   # produce-jekyll-data: true
   # broken links are not errors, but warnings
-  rule-broken-links: warning
+  # rule-broken-links: warning
   
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
