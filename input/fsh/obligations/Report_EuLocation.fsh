@@ -2,7 +2,7 @@
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
 Profile: Report_EuLocation
-Parent: $EuLocation
+Parent: LocationImgEu
 Id: Report-EuLocation
 Title: "Report obligations for EuLocation"
 Description: "Report obligations for EuLocation"

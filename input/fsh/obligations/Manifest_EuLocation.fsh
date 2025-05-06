@@ -2,7 +2,7 @@
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
 Profile: Manifest_EuLocation
-Parent: $EuLocation
+Parent: LocationImgEu
 Id: Manifest-EuLocation
 Title: "Manifest obligations for EuLocation"
 Description: "Manifest obligations for EuLocation"

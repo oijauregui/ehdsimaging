@@ -2,7 +2,7 @@
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
 Profile: Report_EuOrganization
-Parent: $EuOrganization
+Parent: OrganizationEu
 Id: Report-EuOrganization
 Title: "Report obligations for EuOrganization"
 Description: "Report obligations for EuOrganization"
