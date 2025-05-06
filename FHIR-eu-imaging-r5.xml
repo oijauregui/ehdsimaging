@@ -33,7 +33,7 @@
 <artifact id="StructureDefinition/ConditionEu" key="StructureDefinition-ConditionEu" name="EU Condition"/>
 <artifact id="StructureDefinition/EncounterEu" key="StructureDefinition-EncounterEu" name="EU Encounter"/>
 <artifact id="StructureDefinition/EndpointEu" key="StructureDefinition-EndpointEu" name="EU Endpoint"/>
-<artifact id="StructureDefinition/LocationEu" key="StructureDefinition-LocationEu" name="EU Location"/>
+<artifact id="StructureDefinition/LocationImgEu" key="StructureDefinition-LocationImgEu" name="EU Location"/>
 <artifact id="StructureDefinition/MedicationEu" key="StructureDefinition-MedicationEu" name="EU Medication"/>
 <artifact id="StructureDefinition/ObservationEu" key="StructureDefinition-ObservationEu" name="EU Observation"/>
 <artifact id="StructureDefinition/ProcedureEu" key="StructureDefinition-ProcedureEu" name="EU Procedure"/>
@@ -50,6 +50,7 @@
 <artifact id="StructureDefinition/EHDSGoal" key="StructureDefinition-EHDSGoal" name="Goal model"/>
 <artifact id="ValueSet/im-gray-square-units" key="ValueSet-im-gray-square-units" name="Gray Square Units"/>
 <artifact id="StructureDefinition/EHDSGroup" key="StructureDefinition-EHDSGroup" name="Group model"/>
+<artifact id="ValueSet/ImImagingDocumentTypesEuVS" key="ValueSet-ImImagingDocumentTypesEuVS" name="HL7 EU Document Types"/>
 <artifact id="CodeSystem/Hl7EuDocumentTypes" key="CodeSystem-Hl7EuDocumentTypes" name="HL7 EU Document Types"/>
 <artifact id="ValueSet/ImImagingManifestTypesEuVS" key="ValueSet-ImImagingManifestTypesEuVS" name="HL7 EU Imaging Manifest Types"/>
 <artifact id="ValueSet/ImImagingReportTypesEuVS" key="ValueSet-ImImagingReportTypesEuVS" name="HL7 EU Imaging Report Types"/>
