@@ -111,6 +111,7 @@ ValueSet: ImEffectiveDoseUnits
 Id: im-effective-dose-units
 Title: "Effective Dose Units"
 Description: "Units for Effective Dose."
+* insert UCUMCopyrightForVS
 * ^experimental = false
 * $ucum#Sv "Sv"        // Effective Dose
 * $ucum#mSv "mSv"       // Effective Dose
