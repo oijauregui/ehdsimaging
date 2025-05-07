@@ -2,7 +2,7 @@
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
 Profile: Manifest_EuOrganization
-Parent: OrganizationEu
+Parent: $EuOrganization
 Id: Manifest-EuOrganization
 Title: "Manifest obligations for EuOrganization"
 Description: "Manifest obligations for EuOrganization"
