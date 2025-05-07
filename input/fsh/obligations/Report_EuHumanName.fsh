@@ -2,7 +2,7 @@
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
 Profile: Report_EuHumanName
-Parent: HumanName
+Parent: $EuHumanName
 Id: Report-EuHumanName
 Title: "Report obligations for EuHumanName"
 Description: "Report obligations for EuHumanName"

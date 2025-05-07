@@ -9,7 +9,7 @@
 Reference must be to a ValueSet, but found a StructureDefinition instead
 
 # ConceptMaps in this IG refer to StructureDefinition that can not be resolved
-Canonical URL 'http://hl7.eu/fhir/imaging-r5/StructureDefinition/%
+Canonical URL 'http://hl7.eu/fhir/imaging/r5/StructureDefinition/%
 
 # ConceptMaps in this IG refer to StructureDefinition that can not be resolved
 %is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
