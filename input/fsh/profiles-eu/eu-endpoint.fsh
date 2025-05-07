@@ -5,4 +5,4 @@ Description: """
 The FHIR endpoint resource with EU specific references.
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
-* managingOrganization only Reference( OrganizationEu )
+* managingOrganization only Reference( $EuOrganization )

@@ -14,7 +14,7 @@ Description: "Map for EHDSLocation"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation"
-  * target = $EuImgLocationUrl
+  * target = $EuLocationUrl
   * element[+]
     * code = #identifier
     * target[+]
