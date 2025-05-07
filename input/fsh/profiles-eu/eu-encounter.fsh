@@ -9,7 +9,7 @@ Description: "A encounter profile for the EU."
 * extension contains $note-url named note 0..1 and $encounter-legal-status-url named legalStatus 0..1
 
 * partOf only Reference( $EuEncounter )
-* serviceProvider only Reference( $EuOrganization )
+* serviceProvider only Reference( OrganizationEu )
 
 * participant
   * insert SliceElement( #value, type )

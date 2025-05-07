@@ -20,6 +20,12 @@ Description: "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticR
 * ^experimental = false
 * Hl7EuDocumentTypes#imaging-report-v0-0-1 "Imaging Report V0.0.1" 
 
+ValueSet: ImImagingDocumentTypesEuVS
+Title: "HL7 EU Document Types"
+Description: "Document types (templates) as defined by HL7 EU. It identifies the type and template of the document."
+* ^experimental = false
+* codes from system Hl7EuDocumentTypes
+
 
 CodeSystem: Hl7EuDocumentTypes
 Title: "HL7 EU Document Types"

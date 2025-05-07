@@ -49,6 +49,7 @@
 <artifact id="StructureDefinition/EHDSGoal" key="StructureDefinition-EHDSGoal" name="Goal model"/>
 <artifact id="ValueSet/im-gray-square-units" key="ValueSet-im-gray-square-units" name="Gray Square Units"/>
 <artifact id="StructureDefinition/EHDSGroup" key="StructureDefinition-EHDSGroup" name="Group model"/>
+<artifact id="ValueSet/ImImagingDocumentTypesEuVS" key="ValueSet-ImImagingDocumentTypesEuVS" name="HL7 EU Document Types"/>
 <artifact id="CodeSystem/Hl7EuDocumentTypes" key="CodeSystem-Hl7EuDocumentTypes" name="HL7 EU Document Types"/>
 <artifact id="ValueSet/ImImagingManifestTypesEuVS" key="ValueSet-ImImagingManifestTypesEuVS" name="HL7 EU Imaging Manifest Types"/>
 <artifact id="ValueSet/ImImagingReportTypesEuVS" key="ValueSet-ImImagingReportTypesEuVS" name="HL7 EU Imaging Report Types"/>

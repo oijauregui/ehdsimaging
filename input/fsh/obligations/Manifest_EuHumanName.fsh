@@ -2,7 +2,7 @@
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
 Profile: Manifest_EuHumanName
-Parent: $EuHumanName
+Parent: HumanName
 Id: Manifest-EuHumanName
 Title: "Manifest obligations for EuHumanName"
 Description: "Manifest obligations for EuHumanName"

@@ -12,6 +12,6 @@ Description: "A condition profile for the EU."
     $EuPatient or
     Device or
     RelatedPerson or
-    $EuOrganization or
+    OrganizationEu or
     CareTeam
   )

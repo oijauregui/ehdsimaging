@@ -16,7 +16,7 @@ Contains the narrative containing the plan including proposals, goals, and order
     $EuPatient or
     Device or
     RelatedPerson or
-    $EuOrganization or
+    OrganizationEu or
     CareTeam
   )
 * contributor only Reference (
@@ -24,6 +24,6 @@ Contains the narrative containing the plan including proposals, goals, and order
     $EuPatient or
     Device or
     RelatedPerson or
-    $EuOrganization or
+    OrganizationEu or
     CareTeam
   )
