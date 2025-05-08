@@ -77,3 +77,16 @@ Canonical URL 'https://dicom.nema.org/medical/dicom/current/output/chtml/part16%
 
 # Remove warnings related to R5 use of R4 packages
 %based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+
+
+# Reference to deprecated ValueSet
+%Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction%
+
+# SCT edition
+The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+
+# Duplicates anchor Ids
+%The html source has duplicate anchor Ids%
+
+# 	The repeating element pattern.
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
