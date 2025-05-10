@@ -1,3 +1,5 @@
+// based on https://drive.google.com/file/d/1nSxNX8MpVmhU2JfZIPK-k4ovI0AYHJyk/view?usp=drive_link
+
 Instance: Example1-ImagingStudyManifest
 InstanceOf: ImImagingStudyManifest
 Title: "Example ImagingStudy Manifest"
