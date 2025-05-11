@@ -1,5 +1,8 @@
 // original report: https://drive.google.com/file/d/1LhscANABX6_TKrZBfq9cDq2Sqzg2MBI_/view?usp=drive_link
 
+
+
+// Document Bundle
 Instance: ImagingReport-knee-mri-example
 InstanceOf: ImReport
 Title: "Example ImagingStudy Manifest"
@@ -413,7 +416,7 @@ InstanceOf: ImFinding
 * valueString = "Complete tear of the ACL, which is torn in the mid substance"
 
 // DiagnosticReport
-// placeholder example instance
+
 Instance: DiagnosticReport-knee-mri-example
 InstanceOf: ImDiagnosticReport
 * status = #final
@@ -422,3 +425,9 @@ InstanceOf: ImDiagnosticReport
 * issued = "2021-01-01T00:00:00Z"
 * composition = Reference(Composition/1)
 * performer[author] = Reference(Practitioner/1)
+* presentedForm
+  * contentType = #application/pdf
+// !put the actual content here 
+  * data = """
+  
+  """
