@@ -10,10 +10,15 @@ Usage: #example
 * entry[+]
   * fullUrl = "DocumentReference/1"
   * resource = iheMdhDocumentReference-knee-mri-example
+  * request[+]
+    * method = #PUT
+    * url = "DocumentReference/1"
 * entry[+]
   * fullUrl = "Bundle/1"
   * resource = ImagingReport-knee-mri-example
-
+  * request[+]
+    * method = #PUT
+    * url = "ImagingReport/1"
 // DocumentReference
 
 Instance: iheMdhDocumentReference-knee-mri-example
