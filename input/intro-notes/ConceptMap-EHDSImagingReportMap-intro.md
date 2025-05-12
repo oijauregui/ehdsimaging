@@ -37,6 +37,11 @@ class ImFinding{
 }
 
 class ImImagingStudy
+class ImImagingStudyManifest{
+  <<FHIR>>
+  entry[imagingstudy]
+}
+
 class ImComposition {
   <<FHIR>>
 }
@@ -66,5 +71,6 @@ ImFinding --> ImImagingStudy : derivedFrom
 ImFinding --> ImImagingSelection : derivedFrom
 ImFinding --> EuDocumentReference : derivedFrom
 EHDSImagingReport --> ImImagingStudy
+EHDSImagingReport --> ImImagingStudyManifest
 ```
 
