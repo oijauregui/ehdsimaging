@@ -239,10 +239,7 @@
 <page key="imaging-report" name="Imaging Report"/>
 <page key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
 <page key="artifacts-structural" name="Structural artifacts"/>
-<page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>
-<page key="transactions" name="Transactions"/>
-<page key="use-cases" name="Use Cases"/>
 <page key="xtehr" name="XtEHR"/>
 <page key="xtehr-logical-model" name="XtEHR Logical Model"/>
 </specification>
