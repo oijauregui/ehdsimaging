@@ -25,6 +25,7 @@ Description: "Map for EHDSHumanName"
     * code = #text
     * target[+]
       * code = #text
+      * comment = "Concatenation of family names and given names.."
       * display = "C.27.2 - Text"
       * relationship = #equivalent
   * element[+]
