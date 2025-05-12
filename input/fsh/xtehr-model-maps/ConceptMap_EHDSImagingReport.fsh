@@ -14,6 +14,11 @@ Description: "Map for EHDSImagingReport"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
+  * target = $ImReportUrl
+  * element[+]
+    * noMap = true
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
   * target = $ImCompositionUrl
   * element[+]
     * code = #imagingReportHeader

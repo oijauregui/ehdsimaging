@@ -214,6 +214,7 @@
 <artifact id="StructureDefinition/Report-ImPatient" key="StructureDefinition-Report-ImPatient" name="Report obligations for ImPatient"/>
 <artifact id="StructureDefinition/Report-ImProcedure" key="StructureDefinition-Report-ImProcedure" name="Report obligations for ImProcedure"/>
 <artifact id="StructureDefinition/Report-ImRadiationDoseObservation" key="StructureDefinition-Report-ImRadiationDoseObservation" name="Report obligations for ImRadiationDoseObservation"/>
+<artifact id="StructureDefinition/Report-ImReport" key="StructureDefinition-Report-ImReport" name="Report obligations for ImReport"/>
 <artifact id="StructureDefinition/EHDSCommonHeader" key="StructureDefinition-EHDSCommonHeader" name="Resource header model"/>
 <artifact id="StructureDefinition/EHDSServiceRequest" key="StructureDefinition-EHDSServiceRequest" name="Service request model"/>
 <artifact id="StructureDefinition/EHDSSlot" key="StructureDefinition-EHDSSlot" name="Slot model"/>
