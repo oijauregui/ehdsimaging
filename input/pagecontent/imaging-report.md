@@ -66,7 +66,7 @@ These define obligations on FHIR resources for systems conforming to this implem
 The imaging specific obligations are specified in:
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Report_Im%' ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Report_Im%' ORDER BY CASE WHEN Name = 'Report_ImReport' THEN 1 ELSE 2 END, Name ASC",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},

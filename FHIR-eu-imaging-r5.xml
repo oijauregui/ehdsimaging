@@ -112,6 +112,7 @@
 <artifact id="StructureDefinition/Manifest-EuSpecimen" key="StructureDefinition-Manifest-EuSpecimen" name="Manifest obligations for EuSpecimen"/>
 <artifact id="StructureDefinition/Manifest-ImImageIidViewerEndpoint" key="StructureDefinition-Manifest-ImImageIidViewerEndpoint" name="Manifest obligations for ImImageIidViewerEndpoint"/>
 <artifact id="StructureDefinition/Manifest-ImImagingStudy" key="StructureDefinition-Manifest-ImImagingStudy" name="Manifest obligations for ImImagingStudy"/>
+<artifact id="StructureDefinition/Manifest-ImImagingStudyManifest" key="StructureDefinition-Manifest-ImImagingStudyManifest" name="Manifest obligations for ImImagingStudyManifest"/>
 <artifact id="StructureDefinition/Manifest-ImOrder" key="StructureDefinition-Manifest-ImOrder" name="Manifest obligations for ImOrder"/>
 <artifact id="StructureDefinition/Manifest-ImPatient" key="StructureDefinition-Manifest-ImPatient" name="Manifest obligations for ImPatient"/>
 <artifact id="StructureDefinition/Manifest-ImProcedure" key="StructureDefinition-Manifest-ImProcedure" name="Manifest obligations for ImProcedure"/>

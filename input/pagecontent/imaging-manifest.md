@@ -77,7 +77,7 @@ These profiles define constraints on FHIR resources for systems conforming to th
 The imaging specific obligations are specified in:
 
 {% sql {
-  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Im%' ORDER BY Name",
+  "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'Manifest_Im%' ORDER BY CASE WHEN Name = 'Manifest_ImImagingStudyManifest' THEN 1 ELSE 2 END, Name ASC",
   "class" : "lines",
   "columns" : [
     { "name" : "Title"      , "type" : "link"     , "source" : "Name", "target" : "Web"},
@@ -85,6 +85,7 @@ The imaging specific obligations are specified in:
     { "name" : "Description", "type" : "markdown" , "source" : "Description"}
   ]
 } %}
+
 
 The common obligations are specified in:
 
