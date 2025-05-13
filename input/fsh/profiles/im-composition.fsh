@@ -47,7 +47,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 // type of the report. Matching DiagnosticReport.code
 // code 
-* type from ImImagingReportTypesEuVS (extensible)
+* type from ImImagingReportTypesEuVS (extensible) // purposefull versionless
 * type
   * coding 1..*
     * insert SliceElement( #value, $this )
