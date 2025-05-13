@@ -492,8 +492,8 @@ function generateSectionTablesMarkdown(parsedData) {
         .filter(row => row[indices.section]?.trim().length > 0)
         .filter(row => row[indices.section]?.trim() !== "Section") // Exclude the header row
         .filter(row => row[indices.tgtResource]?.trim().length > 0)
-        .filter(row => row[indices.tgtElement]?.trim().length > 0)
-        .filter(row => row[indices.tgtRefType]?.trim().length > 0);
+        .filter(row => row[indices.tgtElement]?.trim().length > 0);
+        // .filter(row => row[indices.tgtRefType]?.trim().length > 0);
 
     console.log(`Found ${rowsWithSections.length} rows with section information`);
 
@@ -519,11 +519,11 @@ function generateSectionTablesMarkdown(parsedData) {
 
                 // Check if this resource/element pair already exists in this section
                 const entries = sectionMap.get(section);
-                const exists = entries.some(entry => 
-                    entry.resource === tgtResource && entry.element === tgtElement
-                );
+                // const exists = entries.some(entry => 
+                    // entry.resource === tgtResource && entry.element === tgtElement
+                // );
 
-                if (!exists) {
+                // if (!exists) {
                     entries.push({
                         resource: tgtResource,
                         element: tgtElement,
@@ -531,7 +531,7 @@ function generateSectionTablesMarkdown(parsedData) {
                         srcField: srcField,
                         tgtRefType: tgtRefType
                     });
-                }
+                // }
             }
         });
     });
@@ -595,9 +595,8 @@ function generateSectionTablesMarkdown(parsedData) {
             writable.write('| -------- | ------- | -------------- | --------------------- |\n');
 
             const entries = sectionMap.get(section);
-            entries.forEach(entry => {
-                writable.write(`| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource}.${entry.srcField} |\n`);
-            });
+            let strs = new Set( entries.map(entry => `| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource}.${entry.srcField} |\n`));
+            strs.forEach( str => { writable.write(str);});
 
             writable.write('\n');
         });
