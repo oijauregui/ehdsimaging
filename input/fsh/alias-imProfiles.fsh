@@ -17,5 +17,5 @@ Alias: $ImProcedureUrl                  = http://hl7.eu/fhir/imaging-r5/Structur
 Alias: $ImWadoEndpointUrl               = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint
 Alias: $ImImageIidViewerEndpointUrl     = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint
 Alias: $ImKeyImageDocumentReferenceUrl  = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImKeyImageDocumentReference
-Alias: $ImReportUrl                     = https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport
+Alias: $ImReportUrl                     = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImReport
 Alias: $ImImagingStudyManifestUrl       = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudyManifest

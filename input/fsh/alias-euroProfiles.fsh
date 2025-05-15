@@ -53,13 +53,13 @@ Alias: $EuLocation             = http://hl7.eu/fhir/base-r5/StructureDefinition/
 Alias: $EuLocationUrl          = http://hl7.eu/fhir/base-r5/StructureDefinition/location-eu
 
 Alias: $EuMedication           = MedicationEu
-Alias: $EuMedicationUrl        = http://hl7.eu/fhir/imaging-r5/ StructureDefinition/MedicationEu
+Alias: $EuMedicationUrl        = http://hl7.eu/fhir/imaging-r5/StructureDefinition/MedicationEu
 
 Alias: $EuObservation          = ObservationEu
 Alias: $EuObservationUrl       = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu
 
 Alias: $EuMedicationAdministration = MedicationAdministration
-Alias: $EuMedicationAdministrationUrl = http://hl7.eu/fhir/imaging-r5/StructureDefinition/EuMedicationAdministration
+Alias: $EuMedicationAdministrationUrl = http://hl7.org/fhir/StructureDefinition/MedicationAdministration
 
 Alias: $EuOrganization         = http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu
 Alias: $EuOrganizationUrl      = http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu
