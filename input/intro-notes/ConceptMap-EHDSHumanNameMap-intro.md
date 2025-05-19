@@ -20,8 +20,6 @@ class EuHumanName{
   use
   text
   family
-  family.extension[fathersFamily]
-  family.extension[mothersFamily]
   given
   prefix
   suffix

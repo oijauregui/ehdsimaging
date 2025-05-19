@@ -7,7 +7,7 @@ Description: """Adverse Event that occurred during an imaging procedure."""
 * subject only Reference(ImPatient or Group or $EuPractitioner or $EuRelatedPerson or ResearchSubject )
 
 * suspectEntity
-  * insert SliceElement( #profile, instanceReference )
+  * insert SliceElement( #profile, instance )
 * suspectEntity contains procedure 0..*
 * suspectEntity[procedure].instanceReference only Reference(ImProcedure)
 

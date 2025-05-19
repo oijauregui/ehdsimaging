@@ -56,24 +56,10 @@ class EuObservation{
   basedOn
   performer
   performer.extension[performerFunction]
-  text
+  value[x]
+  valueString
   valueQuantity
-  component.valueQuantity
   valueRange
-  valueRange.low
-  valueRange.high
-  valueQuantity.system
-  valueQuantity.code
-  valueRange.low.system
-  valueRange.low.code
-  valueRange.high.system
-  valueRange.high.unit
-  valueQuantity.extension[uncertainty]
-  valueQuantity.extension[uncertaintyType]
-  valueRange.low.extension[uncertainty]
-  valueRange.low.extension[uncertaintyType]
-  valueRange.high.extension[uncertainty]
-  valueRange.high.extension[uncertaintyType]
   valueCodeableConcept
   referenceRange
   interpretation
@@ -84,18 +70,8 @@ class EuObservation{
   bodySite
   subject
   component
-  valueString
+  component.valueQuantity
   component.valueRange
-  component.valueRange.low
-  component.valueRange.high
-  component.valueQuantity.system
-  component.valueQuantity.code
-  component.valueRange.low.system
-  component.valueRange.low.code
-  component.valueRange.high.system
-  component.valueRange.high.unit
-  component.valueQuantity.extension[iso21090-uncertainty]
-  component.valueQuantity.extension[iso21090-uncertaintyType]
   component.valueCodeableConcept
   component.referenceRange
   component.interpretation
@@ -105,6 +81,30 @@ class EuObservation{
 class EuServiceRequest{
   <<FHIR>>
   requester
+}
+
+class EuQuantity{
+  <<FHIR>>
+  system
+  code
+  unit
+  extension[uncertainty]
+  extension[uncertaintyType]
+}
+
+class EuRange{
+  <<FHIR>>
+  low
+  high
+}
+
+class EuSimpleQuantity{
+  <<FHIR>>
+  system
+  code
+  unit
+  extension[uncertainty]
+  extension[uncertaintyType]
 }
 
 class EuDevice {
@@ -131,5 +131,8 @@ EuObservation --> EuObervation : hasMember
 EuObservation --> Resource : subject
 EHDSObservation --> EuServiceRequest
 EuServiceRequest --> EuPractitionerRole : requester
+EHDSObservation --> EuQuantity
+EHDSObservation --> EuRange
+EHDSObservation --> EuSimpleQuantity
 ```
 

@@ -14,6 +14,11 @@ Description: "Map for EHDSImagingReport"
 * sourceScopeUri = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
 * group[+]
   * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
+  * target = $ImReportUrl
+  * element[+]
+    * noMap = true
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
   * target = $ImCompositionUrl
   * element[+]
     * code = #imagingReportHeader
@@ -85,5 +90,15 @@ Description: "Map for EHDSImagingReport"
   * element[+]
     * code = #dicomStudyMetadata
     * noMap = true
+* group[+]
+  * source = "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport"
+  * target = $ImImagingStudyManifestUrl
+  * element[+]
+    * code = #dicomStudyMetadata
+    * target[+]
+      * code = #entry[imagingstudy]
+      * comment = "Requires manifest"
+      * display = "A.5 - Imaging study"
+      * relationship = #related-to
 
 ////////////////////////////////////////////////////

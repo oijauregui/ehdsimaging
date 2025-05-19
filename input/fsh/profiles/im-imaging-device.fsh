@@ -3,12 +3,11 @@ Parent: Device
 Title: "Im Imaging Device"
 Description: """The device the made the image."""	
 * insert SetFmmAndStatusRule( 1, draft )
-* insert PartOfImagingManifest
 * status 1..1
 * category 
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1
-* category[imaging] = $SCT#314789007 "Diagnostic imaging equipment"
+* category[imaging] = $sct#314789007 "Diagnostic imaging equipment"
 
 * type from ImImagingDeviceType (extensible)
 
@@ -17,7 +16,9 @@ ValueSet: ImImagingDeviceType
 Id: im-imaging-device-type
 Title: "Imaging Device Type"
 Description: "Imaging Device Type."
-* include codes from system $SCT where concept is-a #314789007 "Diagnostic imaging equipment"
+* insert SNOMEDCopyrightForVS
+* ^experimental = false
+* include codes from system $sct where concept is-a #314789007 "Diagnostic imaging equipment"
 
 Mapping: DicomToImImagingDevice
 Source: ImImagingDevice
