@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging-r5">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/imaging-r5" url="http://hl7.eu/fhir/imaging-r5">
 <version code="current" url=""/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -120,6 +120,7 @@
 <artifact id="StructureDefinition/Manifest-EuSpecimen" key="StructureDefinition-Manifest-EuSpecimen" name="Manifest obligations for EuSpecimen"/>
 <artifact id="StructureDefinition/Manifest-ImImageIidViewerEndpoint" key="StructureDefinition-Manifest-ImImageIidViewerEndpoint" name="Manifest obligations for ImImageIidViewerEndpoint"/>
 <artifact id="StructureDefinition/Manifest-ImImagingStudy" key="StructureDefinition-Manifest-ImImagingStudy" name="Manifest obligations for ImImagingStudy"/>
+<artifact id="StructureDefinition/Manifest-ImImagingStudyManifest" key="StructureDefinition-Manifest-ImImagingStudyManifest" name="Manifest obligations for ImImagingStudyManifest"/>
 <artifact id="StructureDefinition/Manifest-ImOrder" key="StructureDefinition-Manifest-ImOrder" name="Manifest obligations for ImOrder"/>
 <artifact id="StructureDefinition/Manifest-ImPatient" key="StructureDefinition-Manifest-ImPatient" name="Manifest obligations for ImPatient"/>
 <artifact id="StructureDefinition/Manifest-ImProcedure" key="StructureDefinition-Manifest-ImProcedure" name="Manifest obligations for ImProcedure"/>
@@ -223,6 +224,7 @@
 <artifact id="StructureDefinition/Report-ImPatient" key="StructureDefinition-Report-ImPatient" name="Report obligations for ImPatient"/>
 <artifact id="StructureDefinition/Report-ImProcedure" key="StructureDefinition-Report-ImProcedure" name="Report obligations for ImProcedure"/>
 <artifact id="StructureDefinition/Report-ImRadiationDoseObservation" key="StructureDefinition-Report-ImRadiationDoseObservation" name="Report obligations for ImRadiationDoseObservation"/>
+<artifact id="StructureDefinition/Report-ImReport" key="StructureDefinition-Report-ImReport" name="Report obligations for ImReport"/>
 <artifact id="StructureDefinition/EHDSCommonHeader" key="StructureDefinition-EHDSCommonHeader" name="Resource header model"/>
 <artifact id="StructureDefinition/EHDSServiceRequest" key="StructureDefinition-EHDSServiceRequest" name="Service request model"/>
 <artifact id="ServiceRequest/ServiceRequest-knee-mri-example" key="ServiceRequest-ServiceRequest-knee-mri-example" name="ServiceRequest-knee-mri-example"/>
@@ -248,10 +250,7 @@
 <page key="imaging-report" name="Imaging Report"/>
 <page key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
 <page key="artifacts-structural" name="Structural artifacts"/>
-<page key="system-actors" name="System Actors"/>
 <page key="toc" name="Table of Contents"/>
-<page key="transactions" name="Transactions"/>
-<page key="use-cases" name="Use Cases"/>
 <page key="xtehr" name="XtEHR"/>
 <page key="xtehr-logical-model" name="XtEHR Logical Model"/>
 </specification>

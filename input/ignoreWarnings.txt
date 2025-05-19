@@ -25,9 +25,21 @@ This IG is version 5.0.0, while the IG 'fhir.dicom' is from version 4.0.1
 
 # Artifact of the R5 specification
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
+Canonical URL 'https://www.hl7.org/fhir/valueset-procedure-reason.html' does not resolve
 
 # Error likely caused by missing or incorrect CodeSystem at the FHIR side
 %Error converting output stream to byte array%
+
+# XtEHR logical model Artifact
+%The element EHDSLaboratoryObservation.observationDevice has a binding, but no bindable types are present [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]
+%The element EHDSLaboratoryObservation.observationResult has a binding, but no bindable types are present [Base]
+%The element EHDSObservation.observationDevice has a binding, but no bindable types are present [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]
+%The element EHDSObservation.observationResult has a binding, but no bindable types are present [Base]
+%The element EHDSPatientSummaryBody.socialHistory.socialHistoryObservationsRelatedToHealth.observationDevice has a binding, but no bindable types are present [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]
+%The element EHDSPatientSummaryBody.socialHistory.socialHistoryObservationsRelatedToHealth.observationResult has a binding, but no bindable types are present [Base]
+%This element has a Binding but the types [Base] do not make this kind of constraint relevant
+%This element has a Binding but the types [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice] do not make this kind of constraint relevant
+%Constraint failed: eld-20: 'The first component of the path should be UpperCamelCase. Additional components (following a '.') should be lowerCamelCase. If this syntax is not adhered to, code generation tools may be broken. Logical models may be less concerned about this implication.' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition)
 
 # Due to time constraints, examples could not generated for all resources
 %The Implementation Guide contains no explicitly linked examples for this profile

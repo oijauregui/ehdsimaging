@@ -347,18 +347,20 @@ function generateObligationFiles(parsedData) {
         }
     });
   
-  writeActorObligationFiles( parsedData, manifestObligationResources, 'Manifest');  
-  writeActorObligationFiles( parsedData, reportObligationResources, 'Report');  
+  writeActorObligationFiles( parsedData, manifestObligationResources, 'Manifest', 'M');  
+  writeActorObligationFiles( parsedData, reportObligationResources, 'Report', 'R');  
   
 }
 
-function writeActorObligationFiles( parsedData, obligationResources, actor) {
-    function getShallPopulateObligations( parsedData, resourceUrl ) {
+function writeActorObligationFiles( parsedData, obligationResources, actor, actorCode ) {
+    function getShallPopulateObligations( parsedData, resourceUrl, actorCode ) {
         const shallPopulateObligations = new Set();
   
         parsedData
             .filter(row => row[indices.tgtResource] === resourceUrl )
             .filter(row => row[indices.tgtElement])
+            .filter(row => row[indices.actors] )
+            .filter(row => row[indices.actors].includes( actorCode ) )
             .filter(row => row[indices.tgtElement].length > 0)
             .filter(row => row[indices.srcResource].length > 0)
             .forEach(row => { 
@@ -379,21 +381,23 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
         return shallPopulateObligations;
     }
 
-    function getShallHandleCorrectlyObligations( parsedData, resourceUrl ) {
+    function getShallHandleCorrectlyObligations( parsedData, resourceUrl, actorCode ) {
         const shallHandleCorrectlyObligations = new Set(parsedData
             .filter(row => row[indices.tgtResource] === resourceUrl)
             .filter(row => row[indices.tgtElement])
             .filter(row => row[indices.tgtElement].length > 0)
             .filter(row => row[indices.srcResource].length == 0)
+            .filter(r => r[indices.actors] )
+            .filter(r => r[indices.actors].includes( actorCode ) )
             .map(row => row[indices.tgtElement])
         );
         return shallHandleCorrectlyObligations;
     }
 
     obligationResources.forEach( (resourceName, resourceUrl, index) => {
-        const shallPopulateObligations = getShallPopulateObligations( parsedData, resourceUrl );
+        const shallPopulateObligations = getShallPopulateObligations( parsedData, resourceUrl, actorCode );
         
-        const shallHandleCorrectlyObligations = getShallHandleCorrectlyObligations( parsedData, resourceUrl );
+        const shallHandleCorrectlyObligations = getShallHandleCorrectlyObligations( parsedData, resourceUrl,actorCode );
 
         const onlyMentioned = parsedData
             .filter(row => row[indices.tgtResource] === resourceUrl )
@@ -407,8 +411,8 @@ function writeActorObligationFiles( parsedData, obligationResources, actor) {
         );
         
         includeAsWell.forEach( asWell => {
-            const shallHandleCorrectlyObligationsAsWell = getShallHandleCorrectlyObligations( parsedData, asWell );
-            const shallPopulateObligationsAsWell =    getShallPopulateObligations( parsedData, asWell );
+            const shallHandleCorrectlyObligationsAsWell = getShallHandleCorrectlyObligations( parsedData, asWell, actorCode );
+            const shallPopulateObligationsAsWell =    getShallPopulateObligations( parsedData, asWell, actorCode );
             
             shallHandleCorrectlyObligationsAsWell.forEach( obligation => {
                 shallHandleCorrectlyObligations.add(obligation);
@@ -488,8 +492,8 @@ function generateSectionTablesMarkdown(parsedData) {
         .filter(row => row[indices.section]?.trim().length > 0)
         .filter(row => row[indices.section]?.trim() !== "Section") // Exclude the header row
         .filter(row => row[indices.tgtResource]?.trim().length > 0)
-        .filter(row => row[indices.tgtElement]?.trim().length > 0)
-        .filter(row => row[indices.tgtRefType]?.trim().length > 0);
+        .filter(row => row[indices.tgtElement]?.trim().length > 0);
+        // .filter(row => row[indices.tgtRefType]?.trim().length > 0);
 
     console.log(`Found ${rowsWithSections.length} rows with section information`);
 
@@ -515,11 +519,11 @@ function generateSectionTablesMarkdown(parsedData) {
 
                 // Check if this resource/element pair already exists in this section
                 const entries = sectionMap.get(section);
-                const exists = entries.some(entry => 
-                    entry.resource === tgtResource && entry.element === tgtElement
-                );
+                // const exists = entries.some(entry => 
+                    // entry.resource === tgtResource && entry.element === tgtElement
+                // );
 
-                if (!exists) {
+                // if (!exists) {
                     entries.push({
                         resource: tgtResource,
                         element: tgtElement,
@@ -527,7 +531,7 @@ function generateSectionTablesMarkdown(parsedData) {
                         srcField: srcField,
                         tgtRefType: tgtRefType
                     });
-                }
+                // }
             }
         });
     });
@@ -591,9 +595,8 @@ function generateSectionTablesMarkdown(parsedData) {
             writable.write('| -------- | ------- | -------------- | --------------------- |\n');
 
             const entries = sectionMap.get(section);
-            entries.forEach(entry => {
-                writable.write(`| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource}.${entry.srcField} |\n`);
-            });
+            let strs = new Set( entries.map(entry => `| ${entry.resource} | ${entry.element} | ${entry.tgtRefType} | ${entry.srcResource}.${entry.srcField} |\n`));
+            strs.forEach( str => { writable.write(str);});
 
             writable.write('\n');
         });

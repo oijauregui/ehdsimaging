@@ -26,6 +26,7 @@ class EuPractitioner{
 
 class EuPractitionerRole{
   <<FHIR>>
+  practitioner
   code
   organization
   specialty

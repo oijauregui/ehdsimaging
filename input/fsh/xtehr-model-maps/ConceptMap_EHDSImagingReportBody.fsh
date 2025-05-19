@@ -254,15 +254,15 @@ Description: "Map for EHDSImagingReportBody"
   * element[+]
     * code = #orderInformation.supportingInformation.sexForClinicalUse
     * target[+]
-      * code = #extension[sexParameterForClinicalUse]
+      * code = #extension[sex-for-clinical-use]
       * display = "B.1.1.7.7 - Sex for clinical use"
       * relationship = #related-to
     * target[+]
-      * code = #extension[sexParameterForClinicalUse].extension[value].valueCodeableConcept
+      * code = #extension[sex-for-clinical-use].extension[value].valueCodeableConcept
       * display = "B.1.1.7.7 - Sex for clinical use"
       * relationship = #related-to
     * target[+]
-      * code = #extension[sexParameterForClinicalUse].extension[period].valuePeriod
+      * code = #extension[sex-for-clinical-use].extension[period].valuePeriod
       * display = "B.1.1.7.7 - Sex for clinical use"
       * relationship = #related-to
 * group[+]
