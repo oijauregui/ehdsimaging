@@ -5,12 +5,11 @@ Description: """
 This profile defines the WADO endpoint for accessing imaging study content.
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
-* insert PartOfImagingManifest
 
 * connectionType 
   * insert SliceElement( #value, coding )
 * connectionType contains wado 1..1 
-* connectionType[wado] = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
+* connectionType[wado].coding = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
 
 * payload 
   * insert SliceElement( #value, type )

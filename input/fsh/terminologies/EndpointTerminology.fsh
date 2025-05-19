@@ -5,6 +5,7 @@ Description: "This code system defines various codes used to define ValueSets fo
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^experimental = false
+* ^hierarchyMeaning = #is-a
 
 * #connection-type "Endpoint connection type"  "The type of connection that the endpoint supports."
   * #ihe-iid "IHE IID endpoint"   "IHE IID endpoint connection type."

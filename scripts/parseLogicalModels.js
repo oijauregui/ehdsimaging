@@ -124,35 +124,9 @@ function main( ) {
     let associations = new Set();
     let imagingReportStructure = structures.find( structure => structure.definition.name === 'EHDSImagingReport' );
     updateAssociation( imagingReportStructure, structures, classes, associations );
-
-    // structures.forEach(structure => {
-    //     let srcClass = structure.definition.name;
-    //     if ( srcClass.startsWith('EHDS') ) {
-    //         classes.add(srcClass);
-    //     }
-    //     let elements = structure.definition.snapshot && structure.definition.snapshot.element
-    //     ? structure.definition.snapshot.element : [];
-
-    // elements.forEach(element => {
-    //     let extField = element.id.substr(structure.definition.name.length+1);
-    //     let types = element.type? element.type : [];
-    //     if ( types.length === 0 ) { types.push({code: ''}) }
-    //     let binding = element.binding
-    //         ? `${element.binding.description} (${element.binding.strength})`
-    //         : '';
-        
-    //     types.forEach(type => {
-    //         const definition = `${element.definition.replace(new RegExp(";","g"),',').replace(new RegExp('\t','g'),' ')}`;
-    //         const regex = new RegExp('Laboratory|HospitalDischarge|PatientSummary');
-    //         const target = type.code.replace('https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/','');
-    //         if ( target.startsWith('EHDS') && target.indexOf(`Laboratory`) == -1  ) {
-    //             let association = `${srcClass} --> ${target}`;
-    //             associations.add(association);
-    //         }
-    //     });
-        
-    // });
-    {
+    
+    // mermaid diagram
+    {  
         let writable = fs.createWriteStream('../input/includes/xtEHR-model.md');
         writable.write('```mermaid\n');
         writable.write('classDiagram\n');
@@ -160,11 +134,21 @@ function main( ) {
         // classes.forEach( cls => { writable.write(`class ${cls} \n`); });
         associations.forEach( assoc => { writable.write(`${assoc} \n`); });
         classes.forEach( cls => { 
-            writable.write(`link ${cls} "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-${cls}.html"\n`);
+            // writable.write(`link ${cls} "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-${cls}.html"\n`);
         });
         
         writable.write('```\n');
     }
+    // plantuml
+    // {
+    //     let writable = fs.createWriteStream('../input/includes/xtEHR-model.plantuml');
+    //     writable.write('classDiagram\n');
+    //     writable.write('@startuml\n');
+    //     // classes.forEach( cls => { writable.write(`class ${cls} \n`); });
+    //     associations.forEach( assoc => { writable.write(`${assoc} \n`); });
+    //     writable.write('@enduml\n');
+    
+    // }
 }
 
 main();

@@ -1,11 +1,11 @@
-id: hl7.fhir.eu.imaging.r5
-canonical: http://hl7.eu/fhir/imaging/r5
+id: hl7.fhir.eu.imaging-r5
+canonical: http://hl7.eu/fhir/imaging-r5
 name: HL7EuImagingStudyReport
 title: HL7 Europe Imaging Study Report
 description: This guide describes how a Imaging Study Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
 experimental: false
-version: 0.1.0
+version: 0.1.0-ballot
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -25,23 +25,21 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.extensions: current
+  hl7.terminology.r5: 6.3.0
+  hl7.fhir.uv.extensions: 5.2.0
   hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.eu.extensions.r5: current
-  hl7.fhir.eu.base.r5: current
+  hl7.fhir.eu.extensions: 0.1.1-ballot
+  hl7.fhir.eu.base-r5: 0.1.0-ballot
+  
   # eu.ehds.models: 0.1.0
-  eu.ehds.models: current
+  # eu.ehds.models: current
   # required for medication extensions
-  ihe.pharm.mpd: current
-  fhir.dicom:
-    id: DICOM
-    uri: http://fhir.org/packages/fhir.dicom
-    version: 2024.2.20240331
-
-meta:
-  profile:
-    - http://smart.who.int/base/StructureDefinition/SGImplementationGuide
-    
+  # ihe.pharm.mpd: current
+  # fhir.dicom:
+  #   id: DICOM
+  #   uri: http://fhir.org/packages/fhir.dicom
+  #   version: 2025.2.20250411
+  
 pages:
   index.md:
     title: Home
@@ -49,13 +47,10 @@ pages:
       title: Changes
     adapting.md: 
       title: Adapting Guidelines for Country use	
+    contributors.md:
+      title: Contributors
   actors-and-transactions.md:
     title: Actors and Transactions
-    system-actors.md:
-      title: System Actors
-    use-cases.md:
-      title: Use Cases
-    transactions.md:
   xtehr.md:
     title: XtEHR
     xtehr-logical-model.md:
@@ -86,14 +81,27 @@ pages:
 parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
-  apply-contact: true
+  apply-contact: false
+  default-contact: true
+  default-copyright: true
+  apply-copyright: false
   apply-jurisdiction: true
+  apply-license: false
+  default-license: true
   apply-publisher: true
-  apply-version: true
+  apply-version: false
+  default-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  # packages: ./package-cache
+  releaselabel: 0.1.0-ballot
+
+  special-url-base: https://www.xt-ehr.eu/specifications/fhir
   # add all fsh results to _data directory
   # produce-jekyll-data: true
+  # broken links are not errors, but warnings
+  # rule-broken-links: warning
+  
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -110,10 +118,7 @@ menu:
     Dependencies: index.html#dependencies
     References: index.html#references
     Adapting Guidelines for Country use: adapting.html
-  Actors and Transactions:
-    System Actors: system-actors.html
-    Use Cases: use-cases.html
-    Transactions: transactions.html
+  Actors and Transactions: actors-and-transactions.html
   XtEHR model:
     XtEHR-model: xtehr-logical-model.html
     XtEHR-mapping: xtehr-mapping.html

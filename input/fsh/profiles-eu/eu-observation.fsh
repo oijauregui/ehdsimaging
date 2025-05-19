@@ -6,9 +6,9 @@ Description: "A observation profile for the EU."
 * effective[x] 1..1
 
 * code 1..1
-//* code from $SCT (preferred)
+//* code from $sct (preferred)
 
-//* method from $SCT (preferred)
+//* method from $sct (preferred)
 
 * performer.extension contains $performer-function-url named performerFunction 0..1
 
@@ -30,15 +30,19 @@ Description: "A quantity profile for the EU."
 * extension contains $iso21090-uncertainty-url named uncertainty 0..1
 * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
 
+Profile: SimpleQuantityEu
+Parent: SimpleQuantity
+Title: "EU SimpleQuantity"
+Description: "A simple quantity profile for the EU."
+* insert SetFmmAndStatusRule( 1, draft )
+* extension contains $iso21090-uncertainty-url named uncertainty 0..1
+* extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
+
 Profile: RangeEu
 Parent: Range
 Id: range-eu
 Title: "EU Range"
 Description: "A range profile for the EU."
 * insert SetFmmAndStatusRule( 1, draft )
-* low
-  * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
-* high
-  * extension contains $iso21090-uncertainty-url named uncertainty 0..1
-  * extension contains $iso21090-uncertainty-type-url named uncertaintyType 0..1
+* low only SimpleQuantityEu
+* high only SimpleQuantityEu

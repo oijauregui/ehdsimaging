@@ -88,9 +88,9 @@ class ImGestationalAgeObservation{
 
 class ImPatient{
   <<FHIR>>
-  extension[sexParameterForClinicalUse]
-  extension[sexParameterForClinicalUse].extension[value].valueCodeableConcept
-  extension[sexParameterForClinicalUse].extension[period].valuePeriod
+  extension[sex-for-clinical-use]
+  extension[sex-for-clinical-use].extension[value].valueCodeableConcept
+  extension[sex-for-clinical-use].extension[period].valuePeriod
 }
 
 class ImImagingStudy{
