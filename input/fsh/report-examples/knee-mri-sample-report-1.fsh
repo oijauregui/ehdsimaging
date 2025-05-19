@@ -12,7 +12,7 @@ Usage: #example
 * timestamp = 1993-11-29T12:36:56+00:00
 * entry[+]
   * fullUrl = "Composition/1"
-  * resource = Composition-knee-mri-exmaple
+  * resource = Composition-knee-mri-example
 * entry[+]
   * fullUrl = "ImagingStudy/1"
   * resource = ImagingStudy-knee-mri-example
@@ -57,10 +57,11 @@ Usage: #example
 // * entry[imDiagnosticReport]
 //   * resource only ImDiagnosticReport
 
-Instance: Composition-knee-mri-exmaple
+Instance: Composition-knee-mri-example
 InstanceOf: ImComposition
 Title: "Brain MRI example"
 Description: "This is an example of a EU Imaging IG Composition for a Brain MRI report."
+Usage: #inline
 * status = #final
 * language = #en
 
@@ -378,12 +379,14 @@ Usage: #inline
 // Organization
 Instance: Organization-knee-mri-example
 InstanceOf: Organization
+Usage: #inline
 * name = "City Medical Imaging Center"
 
 
 // Procedure
 Instance: ImProcedure-knee-mri-example
 InstanceOf: ImProcedure
+Usage: #inline
 * code
   * coding[0]
     * system = "http://snomed.info/sct"
@@ -396,6 +399,7 @@ InstanceOf: ImProcedure
 // placeholder example for ImOrder
 Instance: ServiceRequest-knee-mri-example
 InstanceOf: ImOrder
+Usage: #inline
 * status = #draft
 * intent = #order
 * subject = Reference(Patient/1)
@@ -403,13 +407,14 @@ InstanceOf: ImOrder
 // Impresion
 Instance: ImImpression-knee-mri-example
 InstanceOf: ConditionEu
+Usage: #inline
 * clinicalStatus = #active
 * subject = Reference(Patient/1)
 
 // Finding
 Instance: ImFinding-knee-mri-example
 InstanceOf: ImFinding
-
+Usage: #inline
 * code = $sct#363406005 "Clinical finding"
 * status = #final
 * effectiveDateTime = "1993-11-29T12:36:56+00:00"
@@ -424,6 +429,7 @@ Alias: $Hl7EuDocumentTypes = http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocum
 
 Instance: DiagnosticReport-knee-mri-example
 InstanceOf: ImDiagnosticReport
+Usage: #inline
 * status = #final
 * code = $loinc#example
 * subject = Reference(Patient/1)

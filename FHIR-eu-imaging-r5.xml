@@ -45,8 +45,10 @@
 <artifact id="StructureDefinition/EHDSEncounter" key="StructureDefinition-EHDSEncounter" name="Encounter model"/>
 <artifact id="StructureDefinition/EHDSEndpoint" key="StructureDefinition-EHDSEndpoint" name="Endpoint model"/>
 <artifact id="StructureDefinition/EHDSEpisodeOfCare" key="StructureDefinition-EHDSEpisodeOfCare" name="Episode of care model"/>
+<artifact id="Bundle/Example1-ImagingStudyManifest" key="Bundle-Example1-ImagingStudyManifest" name="Example ImagingStudy Manifest"/>
 <artifact id="Bundle/ImagingReport-knee-mri-example" key="Bundle-ImagingReport-knee-mri-example" name="Example ImagingStudy Manifest"/>
 <artifact id="Bundle/MHDTransactionBundleKneeMriExample" key="Bundle-MHDTransactionBundleKneeMriExample" name="Example MHD Knee Mri Transaction Bundle"/>
+<artifact id="Endpoint/Example1-WadoEndpoint" key="Endpoint-Example1-WadoEndpoint" name="Example1-WadoEndpoint"/>
 <artifact id="StructureDefinition/ImFinding" key="StructureDefinition-ImFinding" name="Finding"/>
 <artifact id="StructureDefinition/EHDSFunctionalStatus" key="StructureDefinition-EHDSFunctionalStatus" name="Functional status"/>
 <artifact id="StructureDefinition/ImGestationalAgeObservation" key="StructureDefinition-ImGestationalAgeObservation" name="Gestational Age Observation"/>

@@ -1,4 +1,4 @@
-Instance: Example1-WadoEndpoint
+Instance: Example-WadoEndpoint
 InstanceOf: ImWadoEndpoint
 * status = #active
 * name = "Example WADO-RS Endpoint"
