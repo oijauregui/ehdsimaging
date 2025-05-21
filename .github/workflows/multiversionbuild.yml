@@ -1,0 +1,119 @@
+# This is a simple workflow that runs the publisher and copies the output to https://<owner>.github.io/<repo>/index.html
+# Based on the idea by Carl Leitner
+# Change log:
+# 2021-06-18: (JCT): publish default branches to / , other branches branches/<branch>
+# 2021-11-26: (JCT): Reusable workflow
+# 2022-01-28: (JCT): add auto-create gh-pages if it doesn't exist
+# 2023-01-22: (JCT): use checkout action v3, and JamesIves/github-pages-deploy-action@v4
+
+
+# Make sure your repo has a branch called gh-pages
+
+name: CI
+
+# Controls when the action will run. 
+on: 
+  workflow_call: # Reusable by other workflows
+  # Triggers the workflow on push or pull request events for any branch
+  push:
+    branches-ignore:    
+      - 'gh-pages'
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get branch name
+        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: Echo branch name and check if it's the default branch
+        run: |
+          echo "Current Branch: $BRANCH_NAME"
+          DEFAULT_BRANCH=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
+          echo "Default Branch: $DEFAULT_BRANCH"
+          if [ "$BRANCH_NAME" == "$DEFAULT_BRANCH" ]; then
+            echo "This is the default branch."
+            echo "IS_DEFAULT_BRANCH=true" >> $GITHUB_ENV
+          else
+            echo "This is NOT the default branch."
+            echo "IS_DEFAULT_BRANCH=false" >> $GITHUB_ENV
+          fi
+
+      - name: Run preprocessor
+        run: |
+          chmod a+x ./_preprocessMultiVersion.sh
+          ./_preprocessMultiVersion.sh
+
+
+      - name: Run IG Publisher inside Docker for each IG folder
+        run: |
+          mkdir -p ./fhir-package-cache ./preview  # Ensure cache and preview folders exist on the host
+          for dir in igs/*/; do
+            IG_NAME=$(basename "$dir")  # Extract folder name (e.g., r4, r5)
+            echo "Processing IG in $dir (output -> preview/$IG_NAME)"
+      
+            # Create a separate output folder for each IG version
+            mkdir -p "$PWD/tmp-output/$IG_NAME"
+      
+            docker run --rm \
+              -v "$PWD/$dir:/work" \
+              -v "$PWD/fhir-package-cache:/work/fhir-package-cache" \
+              -v "$PWD/tmp-output/$IG_NAME:/work/output" \
+              -w /work hl7fhir/ig-publisher-base:latest /bin/sh -c "
+                mkdir -p /work/preview &&
+                curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o /work/preview/publisher.jar &&
+                java -Xmx6g -jar /work/preview/publisher.jar publisher -ig r4 -auto-ig-build \
+                  -repo 'https://github.com/${{ github.repository }}/tree/${{ github.ref_name }}' \
+                  -package-cache-folder /work/fhir-package-cache
+              "
+      
+            # Ensure the target folder exists in preview
+            mkdir -p "$PWD/preview/$IG_NAME"
+            
+            # Copy only the contents of the output folder into preview/<IG_NAME>
+            cp -r "$PWD/tmp-output/$IG_NAME/." "$PWD/preview/$IG_NAME"
+          done
+      
+      - name: Remove publisher.jar before deployment
+        run: rm -f ./preview/publisher.jar
+
+      - name: Upload qa.json artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-json-artifact
+          path: ./output-*/qa.json  # Adjusted path to match multiple IGs
+
+      - name: Deploy candidate
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        if: env.IS_DEFAULT_BRANCH == 'false'
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: ./preview # This is where the built IGs are stored.
+          commit-message: Deploy candidate branch
+          target-folder: branches/${{ github.ref_name }}
+          single-commit: true
+          clean: false 
+
+      - name: Deploy main
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        if: env.IS_DEFAULT_BRANCH == 'true'
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: ./preview # This is where the built IGs are stored.
+          commit-message: Deploy main branch
+          single-commit: true
+          clean-exclude: |
+            branches
+            sitepreview
