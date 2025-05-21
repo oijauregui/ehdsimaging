@@ -1,0 +1,2 @@
+Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
+Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
