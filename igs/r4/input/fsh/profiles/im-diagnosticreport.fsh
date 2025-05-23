@@ -43,15 +43,15 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 
 
 
-* extension[supportingInfo]
-  * insert SliceElement( #value, reference )
-  * type from DiagnosticReportSupportingInfoVCodes (extensible)
-* extension[supportingInfo] contains
-    procedure 0..*
-* extension[supportingInfo][procedure]
-  * type = DiagnosticReportSupportingInfoCodeSystem#imaging-procedure
-  * reference only Reference(ImProcedure)
+* extension[supportingInfo].extension[type].value[x] from DiagnosticReportSupportingInfoVCodes (extensible)
 
+* extension ^slicing.discriminator[+].type = #value
+* extension ^slicing.discriminator[=].path = "extension.value"
+
+* extension[supportingInfo] contains procedure 0..*
+
+* extension[supportingInfo][procedure].extension[type].value[x] = DiagnosticReportSupportingInfoCodeSystem#imaging-procedure
+* extension[supportingInfo][procedure].extension[reference].value[x] only Reference(ImProcedure)
 
 
 * performer 
@@ -70,9 +70,11 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 
 
 // refer to the mandatory composition
-* extension[composition] 1..1
+* extension
+  * insert AddDiscriminator ( value, value)
 * extension[composition] ^short = "Imaging Diagnostic Report"
-* extension[composition] only Reference(ImComposition)
+* extension[composition].value[x] only Reference(ImComposition)
+
 
 
 // code 
