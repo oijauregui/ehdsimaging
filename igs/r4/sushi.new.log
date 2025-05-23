@@ -3,95 +3,235 @@ info  Arguments:
 info    /home/publisher/ig
 info  No output path specified. Output to .
 info  Using configuration file: /home/publisher/ig/sushi-config.yaml
+warn  Configuration property dependencies/hl7.fhir.uv.xver-r5.r4 has a value with an unexpected type.
 info  Importing FSH text...
-error Assignment rules must include at least one space both before and after the '=' sign
-  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
-  Line: 19
-info  Preprocessed 80 documents with 159 aliases.
-info  Imported 65 definitions and 31 instances.
+info  Preprocessed 144 documents with 159 aliases.
+info  Imported 129 definitions and 31 instances.
 info  Loaded virtual package sushi-r5forR4#1.0.0 with 7 resources
 info  Resolved hl7.fhir.uv.tools.r4#latest to concrete version 0.5.0
+info  Attempting to download hl7.fhir.uv.tools.r4#0.5.0 from https://packages.fhir.org/hl7.fhir.uv.tools.r4/0.5.0
+info  Downloaded hl7.fhir.uv.tools.r4#0.5.0
+info  Cached hl7.fhir.uv.tools.r4#0.5.0 to /home/publisher/.fhir/packages/hl7.fhir.uv.tools.r4#0.5.0
 info  Loaded hl7.fhir.uv.tools.r4#0.5.0 with 88 resources
+info  Attempting to download hl7.terminology.r5#6.3.0 from https://packages.fhir.org/hl7.terminology.r5/6.3.0
+info  Downloaded hl7.terminology.r5#6.3.0
+info  Cached hl7.terminology.r5#6.3.0 to /home/publisher/.fhir/packages/hl7.terminology.r5#6.3.0
 info  Loaded hl7.terminology.r5#6.3.0 with 4374 resources
+info  Attempting to download hl7.fhir.uv.extensions#5.2.0 from https://packages.fhir.org/hl7.fhir.uv.extensions/5.2.0
+info  Downloaded hl7.fhir.uv.extensions#5.2.0
+info  Cached hl7.fhir.uv.extensions#5.2.0 to /home/publisher/.fhir/packages/hl7.fhir.uv.extensions#5.2.0
 info  Loaded hl7.fhir.uv.extensions#5.2.0 with 759 resources
+info  Attempting to download hl7.fhir.uv.ips#1.1.0 from https://packages.fhir.org/hl7.fhir.uv.ips/1.1.0
+info  Downloaded hl7.fhir.uv.ips#1.1.0
+info  Cached hl7.fhir.uv.ips#1.1.0 to /home/publisher/.fhir/packages/hl7.fhir.uv.ips#1.1.0
 info  Loaded hl7.fhir.uv.ips#1.1.0 with 104 resources
+info  Attempting to download hl7.fhir.eu.extensions#0.1.1-ballot from https://packages.fhir.org/hl7.fhir.eu.extensions/0.1.1-ballot
+info  Downloaded hl7.fhir.eu.extensions#0.1.1-ballot
+info  Cached hl7.fhir.eu.extensions#0.1.1-ballot to /home/publisher/.fhir/packages/hl7.fhir.eu.extensions#0.1.1-ballot
 info  Loaded hl7.fhir.eu.extensions#0.1.1-ballot with 7 resources
+info  Attempting to download hl7.fhir.eu.base#0.1.0-ballot from https://packages.fhir.org/hl7.fhir.eu.base/0.1.0-ballot
+info  Downloaded hl7.fhir.eu.base#0.1.0-ballot
+info  Cached hl7.fhir.eu.base#0.1.0-ballot to /home/publisher/.fhir/packages/hl7.fhir.eu.base#0.1.0-ballot
 info  Loaded hl7.fhir.eu.base#0.1.0-ballot with 23 resources
-info  Attempting to download hl7.fhir.uv.xver-r5.r4#0.1.0 from https://packages.fhir.org/hl7.fhir.uv.xver-r5.r4/0.1.0
-info  Attempting to download hl7.fhir.uv.xver-r5.r4#0.1.0 from https://packages2.fhir.org/packages/hl7.fhir.uv.xver-r5.r4/0.1.0
-error Failed to load hl7.fhir.uv.xver-r5.r4#0.1.0: Failed to download hl7.fhir.uv.xver-r5.r4#0.1.0 from the registry
+error Failed to load hl7.fhir.uv.xver-r5.r4: No version specified. To specify the version in your sushi-config.yaml, either use the simple dependency format:
+
+dependencies:
+  hl7.fhir.uv.xver-r5.r4: current
+
+or use the detailed dependency format to specify other properties as well:
+
+dependencies:
+  hl7.fhir.uv.xver-r5.r4:
+    uri: http://my-fhir-ig.org/ImplementationGuide/123
+    version: current
+info  Attempting to download hl7.fhir.r4.core#4.0.1 from https://packages.fhir.org/hl7.fhir.r4.core/4.0.1
+info  Downloaded hl7.fhir.r4.core#4.0.1
+info  Cached hl7.fhir.r4.core#4.0.1 to /home/publisher/.fhir/packages/hl7.fhir.r4.core#4.0.1
 info  Loaded hl7.fhir.r4.core#4.0.1 with 4581 resources
-info  Loaded virtual package sushi-local#LOCAL with 62 resources
+info  Loaded virtual package sushi-local#LOCAL with 63 resources
 info  Converting FSH to FHIR resources...
-error The type "Reference(ImImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/Resource)
-  File: /home/publisher/ig/input/fsh/profiles/im-composition.fsh
-  Line: 162
-error The type "Reference(ImKeyImageImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/Resource)
-  File: /home/publisher/ig/input/fsh/profiles/im-composition.fsh
-  Line: 175
-error The type "Reference(ImKeyImageImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/Resource)
-  File: /home/publisher/ig/input/fsh/profiles/im-composition.fsh
-  Line: 190
-error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo requires the following dependency to be declared in your sushi-config.yaml file:
-  hl7.fhir.extensions.r5: 4.0.1
-error Cannot create supportingInfo extension; unable to locate extension definition for: http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo.
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 9 - 14
-error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition requires the following dependency to be declared in your sushi-config.yaml file:
-  hl7.fhir.extensions.r5: 4.0.1
-error Cannot create composition extension; unable to locate extension definition for: http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition.
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 9 - 14
-error No element found at path extension[supportingInfo] for CardRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 9 - 14
-error No element found at path extension[composition] for CardRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 9 - 14
-error No element found at path extension[supportingInfo] for CaretValueRule in ImDiagnosticReport, skipping rule
+error No element found at path includedStructure.structure for CaretValueRule in Manifest_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuBodyStructure.fsh
+  Line: 10
+error No element found at path includedStructure.structure for CaretValueRule in Manifest_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuBodyStructure.fsh
+  Line: 11
+error No element found at path includedStructure.structure for CaretValueRule in Manifest_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuBodyStructure.fsh
+  Line: 12
+error No element found at path includedStructure.laterality for CaretValueRule in Manifest_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuBodyStructure.fsh
+  Line: 14
+error No element found at path includedStructure.laterality for CaretValueRule in Manifest_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuBodyStructure.fsh
+  Line: 15
+error No element found at path includedStructure.laterality for CaretValueRule in Manifest_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuBodyStructure.fsh
+  Line: 16
+error No element found at path name for CaretValueRule in Manifest_EuDevice, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuDevice.fsh
+  Line: 34
+error No element found at path name for CaretValueRule in Manifest_EuDevice, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuDevice.fsh
+  Line: 35
+error No element found at path name for CaretValueRule in Manifest_EuDevice, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuDevice.fsh
+  Line: 36
+error No element found at path payload for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 30
+error No element found at path payload for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 31
+error No element found at path payload for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 32
+error No element found at path payload.type for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 34
+error No element found at path payload.type for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 35
+error No element found at path payload.type for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 36
+error No element found at path payload.mimeType for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 38
+error No element found at path payload.mimeType for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 39
+error No element found at path payload.mimeType for CaretValueRule in Manifest_EuEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuEndpoint.fsh
+  Line: 40
+error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
   File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
   Line: 22
-  Applied in File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Applied on Line: 47
-error No element found at path extension[supportingInfo] for CaretValueRule in ImDiagnosticReport, skipping rule
+  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Applied on Line: 9
+error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
   File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
   Line: 23
-  Applied in File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Applied on Line: 47
-error No element found at path extension[supportingInfo] for CaretValueRule in ImDiagnosticReport, skipping rule
+  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Applied on Line: 9
+error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
   File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
   Line: 24
-  Applied in File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Applied on Line: 47
-error No element found at path extension[supportingInfo] for CaretValueRule in ImDiagnosticReport, skipping rule
+  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Applied on Line: 9
+error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
   File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
   Line: 25
-  Applied in File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Applied on Line: 47
-error No element found at path extension[supportingInfo].type for BindingRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Applied on Line: 9
+error No element found at path used for ContainsRule in ProcedureEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Line: 10
+error No element found at path used[device] for CardRule in ProcedureEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Line: 10
+error No element found at path used[device] for OnlyRule in ProcedureEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
+  Line: 11
+error No element found at path occurrenceDateTime for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 22
+error No element found at path occurrenceDateTime for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 23
+error No element found at path occurrenceDateTime for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 24
+error No element found at path occurrencePeriod for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 26
+error No element found at path occurrencePeriod for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 27
+error No element found at path occurrencePeriod for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 28
+error No element found at path reason for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 38
+error No element found at path reason for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 39
+error No element found at path reason for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 40
+error No element found at path complication.concept for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 46
+error No element found at path complication.concept for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 47
+error No element found at path complication.concept for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
   Line: 48
-error No element found at path extension[supportingInfo] for ContainsRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 49 - 50
-error No element found at path extension[supportingInfo][procedure] for CardRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 49 - 50
-error No element found at path extension[supportingInfo][procedure].type for AssignmentRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+error No element found at path used[device] for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 50
+error No element found at path used[device] for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
+  Line: 51
+error No element found at path used[device] for CaretValueRule in Manifest_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuProcedure.fsh
   Line: 52
-error No element found at path extension[supportingInfo][procedure].reference for OnlyRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 53
-error No element found at path extension[composition] for CardRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 73
-error No element found at path extension[composition] for CaretValueRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 74
-error No element found at path extension[composition] for OnlyRule in ImDiagnosticReport, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
-  Line: 75
+error No element found at path code.concept for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 18
+error No element found at path code.concept for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 19
+error No element found at path code.concept for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 20
+error No element found at path reason.concept for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 22
+error No element found at path reason.concept for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 23
+error No element found at path reason.concept for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 24
+error No element found at path reason.reference for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 34
+error No element found at path reason.reference for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 35
+error No element found at path reason.reference for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 36
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 66
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 67
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Manifest_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuServiceRequest.fsh
+  Line: 68
+error The type "CodeableReference(BodyStructureEu)" does not match any of the allowed types: CodeableConcept
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-specimen.fsh
+  Line: 14
+error No element found at path container.device for OnlyRule in SpecimenEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-specimen.fsh
+  Line: 18
+error No element found at path container.location for OnlyRule in SpecimenEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-specimen.fsh
+  Line: 19
+error No element found at path container.device for CaretValueRule in Manifest_EuSpecimen, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuSpecimen.fsh
+  Line: 50
+error No element found at path container.device for CaretValueRule in Manifest_EuSpecimen, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuSpecimen.fsh
+  Line: 51
+error No element found at path container.device for CaretValueRule in Manifest_EuSpecimen, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_EuSpecimen.fsh
+  Line: 52
 error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType requires the following dependency to be declared in your sushi-config.yaml file:
   hl7.fhir.extensions.r5: 4.0.1
 error Cannot create connectionType extension; unable to locate extension definition for: http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType.
@@ -129,6 +269,117 @@ error No element found at path extension.extension[connectionType][iid] for Card
 error No element found at path extension.extension[connectionType][iid] for AssignmentRule in ImImageIidViewerEndpoint, skipping rule
   File: /home/publisher/ig/input/fsh/profiles/im-endpoint-ihe-iid-viewer.fsh
   Line: 18
+error No element found at path payload for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 30
+error No element found at path payload for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 31
+error No element found at path payload for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 32
+error No element found at path payload.type for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 34
+error No element found at path payload.type for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 35
+error No element found at path payload.type for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 36
+error No element found at path payload.mimeType for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 38
+error No element found at path payload.mimeType for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 39
+error No element found at path payload.mimeType for CaretValueRule in Manifest_ImImageIidViewerEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImImageIidViewerEndpoint.fsh
+  Line: 40
+error Cannot bind value set to Reference; must be coded (code, Coding, CodeableConcept, Quantity, CodeableReference), the data types (string, uri), or a logical model with the #can-bind characteristic.
+  File: /home/publisher/ig/input/fsh/profiles/im-order.fsh
+  Line: 20
+error No element found at path code.concept for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 26
+error No element found at path code.concept for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 27
+error No element found at path code.concept for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 28
+error No element found at path reason.concept for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 30
+error No element found at path reason.concept for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 31
+error No element found at path reason.concept for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 32
+error No element found at path reason.reference for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 42
+error No element found at path reason.reference for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 43
+error No element found at path reason.reference for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 44
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 74
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 75
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Manifest_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImOrder.fsh
+  Line: 76
+error No element found at path occurrenceDateTime for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 26
+error No element found at path occurrenceDateTime for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 27
+error No element found at path occurrenceDateTime for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 28
+error No element found at path occurrencePeriod for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 30
+error No element found at path occurrencePeriod for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 31
+error No element found at path occurrencePeriod for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 32
+error No element found at path reason for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 42
+error No element found at path reason for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 43
+error No element found at path reason for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 44
+error No element found at path complication.concept for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 50
+error No element found at path complication.concept for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 51
+error No element found at path complication.concept for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 52
+error No element found at path used[device] for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 54
+error No element found at path used[device] for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 55
+error No element found at path used[device] for CaretValueRule in Manifest_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImProcedure.fsh
+  Line: 56
 error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType requires the following dependency to be declared in your sushi-config.yaml file:
   hl7.fhir.extensions.r5: 4.0.1
 error Cannot create connectionType extension; unable to locate extension definition for: http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType.
@@ -166,18 +417,731 @@ error No element found at path extension[connectionType][wado] for CardRule in I
 error No element found at path extension[connectionType][wado].coding for AssignmentRule in ImWadoEndpoint, skipping rule
   File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
   Line: 16
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error The sum of mins of slices must be <= max of sliced element, but sum of mins (2) > max (1) of Endpoint.payloadMimeType.
+  File: /home/publisher/ig/input/fsh/profiles/im-endpoint-wado.fsh
+  Line: 24 - 48
+error No element found at path payload for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 30
+error No element found at path payload for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 31
+error No element found at path payload for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 32
+error No element found at path payload.type for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 34
+error No element found at path payload.type for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 35
+error No element found at path payload.type for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 36
+error No element found at path payload.mimeType for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 38
+error No element found at path payload.mimeType for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 39
+error No element found at path payload.mimeType for CaretValueRule in Manifest_ImWadoEndpoint, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Manifest_ImWadoEndpoint.fsh
+  Line: 40
+error No element found at path height for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 42
+error No element found at path height for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 43
+error No element found at path height for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 44
+error No element found at path width for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 46
+error No element found at path width for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 47
+error No element found at path width for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 48
+error No element found at path frames for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 50
+error No element found at path frames for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 51
+error No element found at path frames for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 52
+error No element found at path duration for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 54
+error No element found at path duration for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 55
+error No element found at path duration for CaretValueRule in Report_EuAttachment, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuAttachment.fsh
+  Line: 56
+error No element found at path includedStructure.structure for CaretValueRule in Report_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuBodyStructure.fsh
+  Line: 10
+error No element found at path includedStructure.structure for CaretValueRule in Report_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuBodyStructure.fsh
+  Line: 11
+error No element found at path includedStructure.structure for CaretValueRule in Report_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuBodyStructure.fsh
+  Line: 12
+error No element found at path includedStructure.laterality for CaretValueRule in Report_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuBodyStructure.fsh
+  Line: 14
+error No element found at path includedStructure.laterality for CaretValueRule in Report_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuBodyStructure.fsh
+  Line: 15
+error No element found at path includedStructure.laterality for CaretValueRule in Report_EuBodyStructure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuBodyStructure.fsh
+  Line: 16
+error No element found at path custodian for OnlyRule in CarePlanEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-careplan.fsh
+  Line: 13 - 14
+error No element found at path custodian for CaretValueRule in Report_EuCarePlan, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCarePlan.fsh
+  Line: 46
+error No element found at path custodian for CaretValueRule in Report_EuCarePlan, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCarePlan.fsh
+  Line: 47
+error No element found at path custodian for CaretValueRule in Report_EuCarePlan, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCarePlan.fsh
+  Line: 48
+error No element found at path participant.actor for OnlyRule in ConditionEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-condition.fsh
+  Line: 9
+error No element found at path evidence.concept for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 38
+error No element found at path evidence.concept for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 39
+error No element found at path evidence.concept for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 40
+error No element found at path participant for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 66
+error No element found at path participant for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 67
+error No element found at path participant for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 68
+error No element found at path participant.function for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 70
+error No element found at path participant.function for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 71
+error No element found at path participant.function for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 72
+error No element found at path participant.actor for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 74
+error No element found at path participant.actor for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 75
+error No element found at path participant.actor for CaretValueRule in Report_EuCondition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCondition.fsh
+  Line: 76
+error No element found at path kind for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 22
+error No element found at path kind for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 23
+error No element found at path kind for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 24
+error No element found at path paymentBy.party for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 26
+error No element found at path paymentBy.party for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 27
+error No element found at path paymentBy.party for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 28
+error No element found at path insurer for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 30
+error No element found at path insurer for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 31
+error No element found at path insurer for CaretValueRule in Report_EuCoverage, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuCoverage.fsh
+  Line: 32
+error No element found at path name for CaretValueRule in Report_EuDevice, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDevice.fsh
+  Line: 34
+error No element found at path name for CaretValueRule in Report_EuDevice, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDevice.fsh
+  Line: 35
+error No element found at path name for CaretValueRule in Report_EuDevice, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDevice.fsh
+  Line: 36
+error No element found at path modality for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 18
+error No element found at path modality for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 19
+error No element found at path modality for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 20
+error No element found at path period for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 30
+error No element found at path period for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 31
+error No element found at path period for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 32
+error No element found at path bodySite.concept for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 34
+error No element found at path bodySite.concept for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 35
+error No element found at path bodySite.concept for CaretValueRule in Report_EuDocumentReference, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuDocumentReference.fsh
+  Line: 36
+error No element found at path actualPeriod for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 50
+error No element found at path actualPeriod for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 51
+error No element found at path actualPeriod for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 52
+error No element found at path plannedStartDate for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 54
+error No element found at path plannedStartDate for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 55
+error No element found at path plannedStartDate for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 56
+error No element found at path plannedEndDate for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 58
+error No element found at path plannedEndDate for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 59
+error No element found at path plannedEndDate for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 60
+error No element found at path admission for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 62
+error No element found at path admission for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 63
+error No element found at path admission for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 64
+error No element found at path participant[admitter].actor for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 66
+error No element found at path participant[admitter].actor for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 67
+error No element found at path participant[admitter].actor for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 68
+error No element found at path admission.admitSource for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 70
+error No element found at path admission.admitSource for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 71
+error No element found at path admission.admitSource for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 72
+error No element found at path participant[referrer].actor for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 74
+error No element found at path participant[referrer].actor for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 75
+error No element found at path participant[referrer].actor for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 76
+error No element found at path reason.value.reference for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 78
+error No element found at path reason.value.reference for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 79
+error No element found at path reason.value.reference for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 80
+error No element found at path reason.value.concept.text for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 82
+error No element found at path reason.value.concept.text for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 83
+error No element found at path reason.value.concept.text for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 84
+error No element found at path admission.dischargeDisposition for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 90
+error No element found at path admission.dischargeDisposition for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 91
+error No element found at path admission.dischargeDisposition for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 92
+error No element found at path admission.destination for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 94
+error No element found at path admission.destination for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 95
+error No element found at path admission.destination for CaretValueRule in Report_EuEncounter, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEncounter.fsh
+  Line: 96
+error No element found at path reason.value.concept.text for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 18
+error No element found at path reason.value.concept.text for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 19
+error No element found at path reason.value.concept.text for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 20
+error No element found at path reason.value for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 22
+error No element found at path reason.value for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 23
+error No element found at path reason.value for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 24
+error No element found at path diagnosis.condition.concept.text for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 30
+error No element found at path diagnosis.condition.concept.text for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 31
+error No element found at path diagnosis.condition.concept.text for CaretValueRule in Report_EuEpisodeOfCare, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuEpisodeOfCare.fsh
+  Line: 32
+error No element found at path ingredient.item for OnlyRule in MedicationEu, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles-eu/eu-medication.fsh
+  Line: 11
+error No element found at path medication for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 26
+error No element found at path medication for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 27
+error No element found at path medication for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 28
+error No element found at path occurenceDateTime for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 30
+error No element found at path occurenceDateTime for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 31
+error No element found at path occurenceDateTime for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 32
+error No element found at path occurencePeriod for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 34
+error No element found at path occurencePeriod for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 35
+error No element found at path occurencePeriod for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 36
+error No element found at path reason for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 38
+error No element found at path reason for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 39
+error No element found at path reason for CaretValueRule in Report_EuMedicationAdministration, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuMedicationAdministration.fsh
+  Line: 40
 error The type "Attachment" does not match any of the allowed types: Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
   File: /home/publisher/ig/input/fsh/profiles-eu/eu-observation.fsh
   Line: 16
 error The type "Attachment" does not match any of the allowed types: Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
   File: /home/publisher/ig/input/fsh/profiles-eu/eu-observation.fsh
   Line: 21
+error No element found at path triggeredBy.type for CaretValueRule in Report_EuObservation, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuObservation.fsh
+  Line: 70
+error No element found at path triggeredBy.type for CaretValueRule in Report_EuObservation, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuObservation.fsh
+  Line: 71
+error No element found at path triggeredBy.type for CaretValueRule in Report_EuObservation, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuObservation.fsh
+  Line: 72
+error No element found at path occurrenceDateTime for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 22
+error No element found at path occurrenceDateTime for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 23
+error No element found at path occurrenceDateTime for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 24
+error No element found at path occurrencePeriod for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 26
+error No element found at path occurrencePeriod for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 27
+error No element found at path occurrencePeriod for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 28
+error No element found at path reason for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 38
+error No element found at path reason for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 39
+error No element found at path reason for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 40
+error No element found at path complication.concept for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 46
+error No element found at path complication.concept for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 47
+error No element found at path complication.concept for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 48
+error No element found at path used[device] for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 50
+error No element found at path used[device] for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 51
+error No element found at path used[device] for CaretValueRule in Report_EuProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuProcedure.fsh
+  Line: 52
+error No element found at path code.concept for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 18
+error No element found at path code.concept for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 19
+error No element found at path code.concept for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 20
+error No element found at path reason.concept for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 22
+error No element found at path reason.concept for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 23
+error No element found at path reason.concept for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 24
+error No element found at path reason.reference for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 34
+error No element found at path reason.reference for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 35
+error No element found at path reason.reference for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 36
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 66
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 67
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Report_EuServiceRequest, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuServiceRequest.fsh
+  Line: 68
+error No element found at path container.device for CaretValueRule in Report_EuSpecimen, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSpecimen.fsh
+  Line: 50
+error No element found at path container.device for CaretValueRule in Report_EuSpecimen, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSpecimen.fsh
+  Line: 51
+error No element found at path container.device for CaretValueRule in Report_EuSpecimen, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSpecimen.fsh
+  Line: 52
+error No element found at path expiry for CaretValueRule in Report_EuSubstance, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSubstance.fsh
+  Line: 22
+error No element found at path expiry for CaretValueRule in Report_EuSubstance, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSubstance.fsh
+  Line: 23
+error No element found at path expiry for CaretValueRule in Report_EuSubstance, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSubstance.fsh
+  Line: 24
+error No element found at path quantity for CaretValueRule in Report_EuSubstance, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSubstance.fsh
+  Line: 26
+error No element found at path quantity for CaretValueRule in Report_EuSubstance, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSubstance.fsh
+  Line: 27
+error No element found at path quantity for CaretValueRule in Report_EuSubstance, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_EuSubstance.fsh
+  Line: 28
+error No element found at path contributingFactor[allergy] for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 14
+error No element found at path contributingFactor[allergy] for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 15
+error No element found at path contributingFactor[allergy] for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 16
+error No element found at path status for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 18
+error No element found at path status for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 19
+error No element found at path status for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 20
+error No element found at path code for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 22
+error No element found at path code for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 23
+error No element found at path code for CaretValueRule in Report_ImAdverseEvent, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImAdverseEvent.fsh
+  Line: 24
+error The type "Reference(ImImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/Resource)
+  File: /home/publisher/ig/input/fsh/profiles/im-composition.fsh
+  Line: 162
+error The type "Reference(ImKeyImageImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/Resource)
+  File: /home/publisher/ig/input/fsh/profiles/im-composition.fsh
+  Line: 175
+error The type "Reference(ImKeyImageImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/Resource)
+  File: /home/publisher/ig/input/fsh/profiles/im-composition.fsh
+  Line: 190
+error No element found at path version for CaretValueRule in Report_ImComposition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImComposition.fsh
+  Line: 166
+error No element found at path version for CaretValueRule in Report_ImComposition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImComposition.fsh
+  Line: 167
+error No element found at path version for CaretValueRule in Report_ImComposition, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImComposition.fsh
+  Line: 168
+error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition requires the following dependency to be declared in your sushi-config.yaml file:
+  hl7.fhir.extensions.r5: 4.0.1
+error Cannot create composition extension; unable to locate extension definition for: http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition.
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 9 - 14
+error No element found at path extension[composition] for CardRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 9 - 14
+error No element found at path extension[supportingInfo].type for BindingRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 48
+error No element found at path extension[supportingInfo][procedure].type for AssignmentRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 52
+error No element found at path extension[supportingInfo][procedure].reference for OnlyRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 53
+error No element found at path extension[composition] for CardRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 73
+error No element found at path extension[composition] for CaretValueRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 74
+error No element found at path extension[composition] for OnlyRule in ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 75
+warn  DiagnosticReport.extension[supportingInfo]: An element with a slice name should not define its own slicing. Instead, append additional discriminators to the original slicing on the base element.
+  File: /home/publisher/ig/input/fsh/profiles/im-diagnosticreport.fsh
+  Line: 1 - 83
+error No element found at path composition for CaretValueRule in Report_ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImDiagnosticReport.fsh
+  Line: 26
+error No element found at path composition for CaretValueRule in Report_ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImDiagnosticReport.fsh
+  Line: 27
+error No element found at path composition for CaretValueRule in Report_ImDiagnosticReport, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImDiagnosticReport.fsh
+  Line: 28
+warn  DiagnosticReport.extension[supportingInfo]: An element with a slice name should not define its own slicing. Instead, append additional discriminators to the original slicing on the base element.
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImDiagnosticReport.fsh
+  Line: 4 - 72
 error The element or path you referenced does not exist: binding.additional[0].purpose
   File: /home/publisher/ig/input/fsh/profiles/im-gestational-age-observation.fsh
   Line: 13
 error The element or path you referenced does not exist: binding.additional[0].valueSet
   File: /home/publisher/ig/input/fsh/profiles/im-gestational-age-observation.fsh
   Line: 14
+error No element found at path reason.concept.text for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 18
+error No element found at path reason.concept.text for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 19
+error No element found at path reason.concept.text for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 20
+error No element found at path reason.concept for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 22
+error No element found at path reason.concept for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 23
+error No element found at path reason.concept for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 24
+error No element found at path reason for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 30
+error No element found at path reason for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 31
+error No element found at path reason for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 32
+error No element found at path code.concept for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 50
+error No element found at path code.concept for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 51
+error No element found at path code.concept for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 52
+error No element found at path reason.reference for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 62
+error No element found at path reason.reference for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 63
+error No element found at path reason.reference for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 64
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 90
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 91
+error No element found at path patientInstruction.instructionMarkdown for CaretValueRule in Report_ImOrder, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImOrder.fsh
+  Line: 92
+error No element found at path occurrenceDateTime for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 26
+error No element found at path occurrenceDateTime for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 27
+error No element found at path occurrenceDateTime for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 28
+error No element found at path occurrencePeriod for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 30
+error No element found at path occurrencePeriod for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 31
+error No element found at path occurrencePeriod for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 32
+error No element found at path reason for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 42
+error No element found at path reason for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 43
+error No element found at path reason for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 44
+error No element found at path complication.concept for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 50
+error No element found at path complication.concept for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 51
+error No element found at path complication.concept for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 52
+error No element found at path used[device] for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 54
+error No element found at path used[device] for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 55
+error No element found at path used[device] for CaretValueRule in Report_ImProcedure, skipping rule
+  File: /home/publisher/ig/input/fsh/obligations/Report_ImProcedure.fsh
+  Line: 56
+error The type "Reference(ImSrInstanceImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/DocumentReference | http://hl7.org/fhir/StructureDefinition/ImagingStudy | http://hl7.org/fhir/StructureDefinition/Media | http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse | http://hl7.org/fhir/StructureDefinition/Observation | http://hl7.org/fhir/StructureDefinition/MolecularSequence)
+  File: /home/publisher/ig/input/fsh/profiles/im-radiationdose-observation.fsh
+  Line: 29
 error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite requires the following dependency to be declared in your sushi-config.yaml file:
   hl7.fhir.extensions.r5: 4.0.1
 error Cannot create bodySite extension; unable to locate extension definition for: http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite.
@@ -354,60 +1318,7 @@ error No element found at path modality for CardRule in ImKeyImageDocumentRefere
 error Parent ImagingSelection not found for ImImagingSelection
   File: /home/publisher/ig/input/fsh/profiles/im-imagingselection.fsh
   Line: 1 - 11
-error Cannot bind value set to Reference; must be coded (code, Coding, CodeableConcept, Quantity, CodeableReference), the data types (string, uri), or a logical model with the #can-bind characteristic.
-  File: /home/publisher/ig/input/fsh/profiles/im-order.fsh
-  Line: 20
-error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
-  Line: 22
-  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Applied on Line: 9
-error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
-  Line: 23
-  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Applied on Line: 9
-error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
-  Line: 24
-  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Applied on Line: 9
-error No element found at path used for CaretValueRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/rulesets/common_rulesets.fsh
-  Line: 25
-  Applied in File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Applied on Line: 9
-error No element found at path used for ContainsRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Line: 10
-error No element found at path used[device] for CardRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Line: 10
-error No element found at path used[device] for OnlyRule in ProcedureEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-procedure.fsh
-  Line: 11
-error The type "Reference(ImSrInstanceImagingSelection)" does not match any of the allowed types: Reference(http://hl7.org/fhir/StructureDefinition/DocumentReference | http://hl7.org/fhir/StructureDefinition/ImagingStudy | http://hl7.org/fhir/StructureDefinition/Media | http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse | http://hl7.org/fhir/StructureDefinition/Observation | http://hl7.org/fhir/StructureDefinition/MolecularSequence)
-  File: /home/publisher/ig/input/fsh/profiles/im-radiationdose-observation.fsh
-  Line: 29
-error No element found at path custodian for OnlyRule in CarePlanEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-careplan.fsh
-  Line: 13 - 14
-error No element found at path participant.actor for OnlyRule in ConditionEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-condition.fsh
-  Line: 9
-error No element found at path ingredient.item for OnlyRule in MedicationEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-medication.fsh
-  Line: 11
-error The type "CodeableReference(BodyStructureEu)" does not match any of the allowed types: CodeableConcept
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-specimen.fsh
-  Line: 14
-error No element found at path container.device for OnlyRule in SpecimenEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-specimen.fsh
-  Line: 18
-error No element found at path container.location for OnlyRule in SpecimenEu, skipping rule
-  File: /home/publisher/ig/input/fsh/profiles-eu/eu-specimen.fsh
-  Line: 19
-info  Converted 49 FHIR StructureDefinitions.
+info  Converted 113 FHIR StructureDefinitions.
 info  Converted 4 FHIR CodeSystems.
 info  Converted 12 FHIR ValueSets.
 error The element or path you referenced does not exist: sourceScopeUri
@@ -3568,8 +4479,9 @@ error No element found at path reason.concept for DicomToImOrder, skipping rule
   File: /home/publisher/ig/input/fsh/profiles/im-order.fsh
   Line: 60
 info  Exporting FHIR resources as JSON...
-info  Exported 93 FHIR resources as JSON.
+info  Exported 157 FHIR resources as JSON.
 info  Assembling Implementation Guide sources...
+error Failed to add hl7.fhir.uv.xver-r5.r4 to ImplementationGuide instance because no version was specified in your sushi-config.yaml.
 info  Generated ImplementationGuide-hl7.fhir.eu.imaging-r5.json
 info  Assembled Implementation Guide sources; ready for IG Publisher.
 
@@ -3577,7 +4489,7 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |
 | |-------------------------------------------------------------| |
-| |      42       |      4       |      0       |       0       | |
+| |      106      |      4       |      0       |       0       | |
 |  -------------------------------------------------------------  |
 |  -------------------------------------------------------------  |
 | |      ValueSets     |    CodeSystems    |     Instances      | |
@@ -3586,6 +4498,6 @@ info  Assembled Implementation Guide sources; ready for IG Publisher.
 |  -------------------------------------------------------------  |
 |                                                                 |
 ===================================================================
-| That really smelt.                    1165 Errors    0 Warnings |
+| You're up to urchin in mistakes.      1460 Errors    3 Warnings |
 ===================================================================
 

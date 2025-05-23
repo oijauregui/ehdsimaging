@@ -30,7 +30,7 @@ dependencies:
   hl7.fhir.eu.extensions: 0.1.1-ballot
 # R5  hl7.fhir.eu.base-r5: 0.1.0-ballot
   hl7.fhir.eu.base: 0.1.0-ballot
-  hl7.fhir.uv.xver-r5.r4: 0.1.0
+#  hl7.fhir.uv.xver-r5.r4:
   
   # eu.ehds.models: 0.1.0
   # eu.ehds.models: current

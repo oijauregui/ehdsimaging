@@ -1,0 +1,15 @@
+{
+  " ResourceType": "DiagnosticReport",
+  "extension": [
+    {
+      " url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo",
+      "extension": [
+        {
+          "reference": {
+            "reference": "Observation/diagnosticreport-example-observation-1"
+          }
+        }
+      ]
+    }
+  ]
+}

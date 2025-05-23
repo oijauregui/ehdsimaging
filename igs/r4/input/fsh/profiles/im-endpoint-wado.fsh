@@ -16,7 +16,7 @@ This profile defines the WADO endpoint for accessing imaging study content.
 * extension[connectionType][wado].coding = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
 
 * payloadType 1..1
-* payloadType= http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
+* payloadType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
 
 * payloadMimeType 1..1
 * payloadMimeType

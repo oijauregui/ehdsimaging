@@ -52,7 +52,6 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 
 
 
-
 * performer 
   * insert SliceElement( #profile, $this )
 * performer contains author 1..*
