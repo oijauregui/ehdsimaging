@@ -4,3 +4,4 @@ Alias: $cvEndpoint-connectionType = http://hl7.org/fhir/5.0/StructureDefinition/
 Alias: $cvDocumentReference-bodySite = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite
 Alias: $cvDocumentReference-modality = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality
 Alias: $cvDocumentReference-content = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content
+Alias: $cvDevice-category = http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category
