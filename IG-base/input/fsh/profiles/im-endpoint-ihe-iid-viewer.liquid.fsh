@@ -15,12 +15,7 @@ The application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Document
 {% endif %}
 
 {% if isR4  %}
-* extension contains
-  $cvEndpoint-connectionType named connectionType 1..*
-  * extension[connectionType] 
-    * insert SliceElement( #value, coding ) 
-  * extension[connectionType] contains iid 1..1
-  * extension[connectionType][iid] = Hl7EuImagingEndpointTerminologyCodeSystem#ihe-iid "IHE IID endpoint"
+* connectionType = Hl7EuImagingEndpointTerminologyCodeSystem#ihe-iid "IHE IID endpoint"
 {% endif %}
  
 {% if isR5 %}
