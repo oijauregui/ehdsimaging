@@ -81,8 +81,9 @@ A DocumentReference profile for the Report DocumentReference used in MHD deploym
   * profile[hl7eu-imaging-report].valueCanonical = Canonical( ImReport )
 {% endif %}
 {% if isR4 %}
-  * format 1..1
-  * format = Canonical( ImReport )
+  * extension[content-profile].value[x] = Canonical( ImReport )
+  // * format 1..1
+  // * format = Canonical( ImReport )
 {% endif %}
 {{R5}}* bodySite 0..*
 {{R5}}* modality 1..* 
@@ -171,10 +172,7 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
   * profile[hl7eu-imaging-manifest].valueCanonical = Canonical( ImImagingStudyManifest )
 {% endif %}
 {% if isR4 %}
-* extension[content]
-  * insert SliceElement( #value, value )
-  * extension[content] contains hl7eu-imaging-manifest 1..1
-  * extension[content][hl7eu-imaging-manifest].valueCanonical = Canonical( ImImagingStudyManifest )
+ * content.extension[content-profile].value[x] = Canonical( ImImagingStudyManifest )
 {% endif %}
 {{R5}}* bodySite 0..*
 {{R5}}* modality 1..* 
@@ -193,7 +191,6 @@ Description: """A placeholder for a DocumentReference profile for the IHE-MHD in
 * extension contains 
   $cvDocumentReference-bodySite named bodySite 0..*
   and $cvDocumentReference-modality named modality 0..*
-  and $cvDocumentReference-content named content 1..*
 {% endif %}
 * modifierExtension 0..0
 * identifier
@@ -202,6 +199,8 @@ Description: """A placeholder for a DocumentReference profile for the IHE-MHD in
 * identifier[entry-uuid] only IheMhdEntryUUIDIdentifier
 * status 1..1 
 * content 1..1
+  * extension contains
+  $cvDocumentReference-content-profile named [content-profile] 1..*
   * attachment 1..1
     * contentType 1..1
 
