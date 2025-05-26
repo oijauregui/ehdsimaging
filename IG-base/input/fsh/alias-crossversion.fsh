@@ -5,3 +5,4 @@ Alias: $cvDocumentReference-bodySite = http://hl7.org/fhir/5.0/StructureDefiniti
 Alias: $cvDocumentReference-modality = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality
 Alias: $cvDocumentReference-content-profile = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile
 Alias: $cvDevice-category = http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category
+Alias: $cvImagingSelection = http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection
