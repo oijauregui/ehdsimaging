@@ -1,0 +1,21 @@
+{
+  "resourceType": "Observation",
+  "id": "ImFinding-knee-mri-example",
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImFinding"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "363406005",
+        "system": "http://snomed.info/sct",
+        "display": "Clinical finding"
+      }
+    ]
+  },
+  "status": "final",
+  "effectiveDateTime": "1993-11-29T12:36:56+00:00",
+  "valueString": "Complete tear of the ACL, which is torn in the mid substance"
+}

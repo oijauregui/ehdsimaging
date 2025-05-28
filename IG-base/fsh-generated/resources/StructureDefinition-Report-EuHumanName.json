@@ -1,0 +1,157 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuHumanName",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuHumanName",
+  "name": "Report_EuHumanName",
+  "title": "Report obligations for EuHumanName",
+  "status": "draft",
+  "description": "Report obligations for EuHumanName",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "HumanName",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HumanName",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HumanName.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSHumanName.use"
+              }
+            ]
+          }
+        ],
+        "path": "HumanName.use"
+      },
+      {
+        "id": "HumanName.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSHumanName.text"
+              }
+            ]
+          }
+        ],
+        "path": "HumanName.text"
+      },
+      {
+        "id": "HumanName.family",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSHumanName.family"
+              }
+            ]
+          }
+        ],
+        "path": "HumanName.family"
+      },
+      {
+        "id": "HumanName.given",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSHumanName.given"
+              }
+            ]
+          }
+        ],
+        "path": "HumanName.given"
+      },
+      {
+        "id": "HumanName.prefix",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSHumanName.prefix"
+              }
+            ]
+          }
+        ],
+        "path": "HumanName.prefix"
+      },
+      {
+        "id": "HumanName.suffix",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSHumanName.suffix"
+              }
+            ]
+          }
+        ],
+        "path": "HumanName.suffix"
+      }
+    ]
+  }
+}

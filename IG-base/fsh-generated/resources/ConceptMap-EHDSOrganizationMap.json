@@ -1,0 +1,79 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSOrganizationMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSOrganizationMap",
+  "title": "EHDSOrganization Mapping",
+  "description": "Map for EHDSOrganization",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "C.3.1 - Identifier",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "display": "C.3.2 - Type",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "type"
+        },
+        {
+          "target": [
+            {
+              "code": "name",
+              "display": "C.3.3 - Name",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "name"
+        },
+        {
+          "target": [
+            {
+              "code": "contact.address",
+              "display": "C.3.4 - Address",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "address"
+        },
+        {
+          "target": [
+            {
+              "code": "contact.telecom",
+              "display": "C.3.5 - Telecom",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "telecom"
+        },
+        {
+          "target": [
+            {
+              "code": "partOf",
+              "display": "C.3.6 - Part of",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "partOf"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization",
+      "target": "http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSOrganizationMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"
+}

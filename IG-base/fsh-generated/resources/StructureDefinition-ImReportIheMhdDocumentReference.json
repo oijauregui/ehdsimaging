@@ -1,0 +1,155 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImReportIheMhdDocumentReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImReportIheMhdDocumentReference",
+  "name": "ImReportIheMhdDocumentReference",
+  "title": "Report DocumentReference for MHD deployments",
+  "status": "draft",
+  "description": "A DocumentReference profile for the Report DocumentReference used in MHD deployments. ",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImIheMhdDocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.modality",
+        "path": "DocumentReference.modality",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "short": "Type of Imaging Diagnostic Report",
+        "definition": "Specifies that it refers to a Imaging Report",
+        "comment": "Corresponds to the type of the Imaging resource.",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS"
+        }
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.category:imaging",
+        "path": "DocumentReference.category",
+        "sliceName": "imaging",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "18748-4",
+              "system": "http://loinc.org",
+              "display": "Diagnostic imaging study"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "short": "Organization that manages the Imaging Report",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.profile",
+        "path": "DocumentReference.content.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "value"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.content.profile:hl7eu-imaging-report",
+        "path": "DocumentReference.content.profile",
+        "sliceName": "hl7eu-imaging-report",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "DocumentReference.content.profile:hl7eu-imaging-report.value[x]",
+        "path": "DocumentReference.content.profile.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DocumentReference.content.profile:hl7eu-imaging-report.value[x]:valueCanonical",
+        "path": "DocumentReference.content.profile.value[x]",
+        "sliceName": "valueCanonical",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "canonical"
+          }
+        ],
+        "patternCanonical": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImReport"
+      }
+    ]
+  }
+}

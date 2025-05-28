@@ -1,0 +1,354 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-ImPatient",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-ImPatient",
+  "name": "Report_ImPatient",
+  "title": "Report obligations for ImPatient",
+  "status": "draft",
+  "description": "Report obligations for ImPatient",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImPatient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.extension:patient-citizenship",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.extension",
+        "sliceName": "patient-citizenship"
+      },
+      {
+        "id": "Patient.extension:patient-nationality",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.extension",
+        "sliceName": "patient-nationality"
+      },
+      {
+        "id": "Patient.extension:sexParameterForClinicalUse",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.orderInformation.supportingInformation.sexForClinicalUse"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.extension",
+        "sliceName": "sexParameterForClinicalUse"
+      },
+      {
+        "id": "Patient.extension:sexParameterForClinicalUse.extension:value",
+        "path": "Patient.extension.extension",
+        "sliceName": "value"
+      },
+      {
+        "id": "Patient.extension:sexParameterForClinicalUse.extension:value.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.orderInformation.supportingInformation.sexForClinicalUse"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.extension.extension.value[x]"
+      },
+      {
+        "id": "Patient.extension:sexParameterForClinicalUse.extension:period",
+        "path": "Patient.extension.extension",
+        "sliceName": "period"
+      },
+      {
+        "id": "Patient.extension:sexParameterForClinicalUse.extension:period.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.orderInformation.supportingInformation.sexForClinicalUse"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.extension.extension.value[x]"
+      },
+      {
+        "id": "Patient.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.identifier"
+      },
+      {
+        "id": "Patient.active",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.active"
+      },
+      {
+        "id": "Patient.name",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.name"
+      },
+      {
+        "id": "Patient.telecom",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.telecom"
+      },
+      {
+        "id": "Patient.gender",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.gender"
+      },
+      {
+        "id": "Patient.birthDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.birthDate"
+      },
+      {
+        "id": "Patient.address",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.address"
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.maritalStatus"
+      },
+      {
+        "id": "Patient.communication.language",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "-"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.communication.language"
+      }
+    ]
+  }
+}

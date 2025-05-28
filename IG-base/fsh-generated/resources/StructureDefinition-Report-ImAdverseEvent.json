@@ -1,0 +1,136 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-ImAdverseEvent",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-ImAdverseEvent",
+  "name": "Report_ImAdverseEvent",
+  "title": "Report obligations for ImAdverseEvent",
+  "status": "draft",
+  "description": "Report obligations for ImAdverseEvent",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AdverseEvent",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImAdverseEvent",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AdverseEvent.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.examinationReport.adverseReaction"
+              }
+            ]
+          }
+        ],
+        "path": "AdverseEvent.status"
+      },
+      {
+        "id": "AdverseEvent.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.examinationReport.adverseReaction"
+              }
+            ]
+          }
+        ],
+        "path": "AdverseEvent.code"
+      },
+      {
+        "id": "AdverseEvent.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.examinationReport.adverseReaction"
+              }
+            ]
+          }
+        ],
+        "path": "AdverseEvent.subject"
+      },
+      {
+        "id": "AdverseEvent.suspectEntity:procedure",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.examinationReport.adverseReaction"
+              }
+            ]
+          }
+        ],
+        "path": "AdverseEvent.suspectEntity",
+        "sliceName": "procedure"
+      },
+      {
+        "id": "AdverseEvent.contributingFactor:allergy",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.examinationReport.adverseReaction"
+              }
+            ]
+          }
+        ],
+        "path": "AdverseEvent.contributingFactor",
+        "sliceName": "allergy"
+      }
+    ]
+  }
+}

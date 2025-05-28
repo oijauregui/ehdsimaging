@@ -1,0 +1,43 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuPatientAnimal",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuPatientAnimal",
+  "name": "Report_EuPatientAnimal",
+  "title": "Report obligations for EuPatientAnimal",
+  "status": "draft",
+  "description": "Report obligations for EuPatientAnimal",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/PatientAnimalEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.extension:patient-animal",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.typeOfSpecies"
+              }
+            ]
+          }
+        ],
+        "path": "Patient.extension",
+        "sliceName": "patient-animal"
+      }
+    ]
+  }
+}

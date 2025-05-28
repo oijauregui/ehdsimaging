@@ -40,7 +40,9 @@ Description: "Imaging Selection profile for R4"
 * subject only Reference( $EuPatient )
 * extension contains
   $cvImagingSelection named imagingSelection 1..1
-  * insert AddDiscriminator ( value, extension.value )
+* extension
+  * ^slicing.discriminator[1].type = #value
+  * ^slicing.discriminator[=].path = "extension.value"
 * extension[imagingSelection] contains study 1..1
 * extension[imagingSelection][study].extension[derivedFrom].value[x] only Reference(ImImagingStudy)
 

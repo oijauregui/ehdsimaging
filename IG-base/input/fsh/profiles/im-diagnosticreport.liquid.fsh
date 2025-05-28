@@ -56,8 +56,9 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 {% if isR4 %}
 * extension[supportingInfo].extension[type].value[x] from DiagnosticReportSupportingInfoVCodes (extensible)
 
-* extension ^slicing.discriminator[+].type = #value
-* extension ^slicing.discriminator[=].path = "extension.value"
+* extension
+  * ^slicing.discriminator[1].type = #value
+  * ^slicing.discriminator[=].path = "extension.value"
 
 * extension[supportingInfo] contains procedure 0..*
 
@@ -87,7 +88,8 @@ Diagnostic Report profile for Imaging Reports. This document represents the repo
 {% if isR4 %}
 // refer to the mandatory composition
 * extension
-  * insert AddDiscriminator ( value, value)
+  * ^slicing.discriminator[+].type = #value
+  * ^slicing.discriminator[=].path = "value"
 * extension[composition] ^short = "Imaging Diagnostic Report"
 * extension[composition].value[x] only Reference(ImComposition)
 

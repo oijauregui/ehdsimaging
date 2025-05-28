@@ -1,0 +1,186 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSSpecimenMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSSpecimenMap",
+  "title": "EHDSSpecimen Mapping",
+  "description": "Map for EHDSSpecimen",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "C.9.1 - Identifier",
+              "relationship": "source-is-broader-than-target"
+            },
+            {
+              "code": "accessionIdentifier",
+              "display": "C.9.1 - Identifier",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "C.9.2 - Type of species",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "typeOfSpecies"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "display": "C.9.3 - Material",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "material"
+        },
+        {
+          "target": [
+            {
+              "code": "collection.collected[x]",
+              "display": "C.9.4 - Collection period",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "collectionPeriod"
+        },
+        {
+          "target": [
+            {
+              "code": "collection.bodySite",
+              "display": "C.9.5 - Anatomic location",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "anatomicLocation"
+        },
+        {
+          "target": [
+            {
+              "code": "collection.bodySite",
+              "display": "C.9.6 - Morphology",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "morphology"
+        },
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "C.9.7 - Source Device",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "sourceDevice"
+        },
+        {
+          "target": [
+            {
+              "code": "collection.method",
+              "display": "C.9.8 - Collection procedure method",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "collectionProcedureMethod"
+        },
+        {
+          "target": [
+            {
+              "code": "receivedTime",
+              "display": "C.9.9 - Received date",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "receivedDate"
+        },
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "C.9.10 - Subject",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "subject"
+        },
+        {
+          "target": [
+            {
+              "code": "container",
+              "display": "C.9.11 - Container",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "container"
+        },
+        {
+          "target": [
+            {
+              "code": "container.specimenQuantity",
+              "display": "C.9.11.1 - Specimen quantity",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "container.specimenQuantity"
+        },
+        {
+          "target": [
+            {
+              "code": "container.device",
+              "display": "C.9.11.2 - Container device",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "container.containerDevice"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/SpecimenEu"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "extension[http://hl7.org/fhir/StructureDefinition/patient-animal]",
+              "display": "C.9.2 - Type of species",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "typeOfSpecies"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
+      "target": "http://hl7.eu/fhir/base-r5/StructureDefinition/Patient-animal-eu"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "morphology",
+              "display": "C.9.6 - Morphology",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "morphology"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/BodyStructureEu"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSSpecimenMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"
+}

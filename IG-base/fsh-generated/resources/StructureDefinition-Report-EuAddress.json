@@ -1,0 +1,276 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuAddress",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuAddress",
+  "name": "Report_EuAddress",
+  "title": "Report obligations for EuAddress",
+  "status": "draft",
+  "description": "Report obligations for EuAddress",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Address",
+  "baseDefinition": "http://hl7.eu/fhir/base-r5/StructureDefinition/Address-eu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Address.use",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.use"
+              }
+            ]
+          }
+        ],
+        "path": "Address.use"
+      },
+      {
+        "id": "Address.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.type"
+              }
+            ]
+          }
+        ],
+        "path": "Address.type"
+      },
+      {
+        "id": "Address.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.text"
+              }
+            ]
+          }
+        ],
+        "path": "Address.text"
+      },
+      {
+        "id": "Address.line",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.street, EHDSAddress.houseNumber, EHDSAddress.pOBox"
+              }
+            ]
+          }
+        ],
+        "path": "Address.line"
+      },
+      {
+        "id": "Address.line.extension:streetName",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.street"
+              }
+            ]
+          }
+        ],
+        "path": "Address.line.extension",
+        "sliceName": "streetName"
+      },
+      {
+        "id": "Address.line.extension:houseNumber",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.houseNumber"
+              }
+            ]
+          }
+        ],
+        "path": "Address.line.extension",
+        "sliceName": "houseNumber"
+      },
+      {
+        "id": "Address.line.extension:postBox",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.pOBox"
+              }
+            ]
+          }
+        ],
+        "path": "Address.line.extension",
+        "sliceName": "postBox"
+      },
+      {
+        "id": "Address.city",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.city"
+              }
+            ]
+          }
+        ],
+        "path": "Address.city"
+      },
+      {
+        "id": "Address.postalCode",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.postalCode"
+              }
+            ]
+          }
+        ],
+        "path": "Address.postalCode"
+      },
+      {
+        "id": "Address.country",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.country"
+              }
+            ]
+          }
+        ],
+        "path": "Address.country"
+      },
+      {
+        "id": "Address.country.extension:countryCode",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSAddress.country"
+              }
+            ]
+          }
+        ],
+        "path": "Address.country.extension",
+        "sliceName": "countryCode"
+      }
+    ]
+  }
+}

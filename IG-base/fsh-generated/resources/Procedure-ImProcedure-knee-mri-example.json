@@ -1,0 +1,22 @@
+{
+  "resourceType": "Procedure",
+  "id": "ImProcedure-knee-mri-example",
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImProcedure"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "123456",
+        "display": "MRI of the knee"
+      }
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/1"
+  }
+}

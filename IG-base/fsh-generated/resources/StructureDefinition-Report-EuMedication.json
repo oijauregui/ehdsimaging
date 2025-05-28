@@ -1,0 +1,23 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuMedication",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuMedication",
+  "name": "Report_EuMedication",
+  "title": "Report obligations for EuMedication",
+  "status": "draft",
+  "description": "Report obligations for EuMedication",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/MedicationEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication",
+        "path": "Medication"
+      }
+    ]
+  }
+}

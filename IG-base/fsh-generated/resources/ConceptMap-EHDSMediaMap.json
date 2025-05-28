@@ -1,0 +1,167 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSMediaMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMediaMap",
+  "title": "EHDSMedia Mapping",
+  "description": "Map for EHDSMedia",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "C.14.1 - Identifier",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "comment": "part of the mimetype",
+              "display": "C.14.2 - Type",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "type"
+        },
+        {
+          "target": [
+            {
+              "code": "modality",
+              "display": "C.14.3 - Modality",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "modality"
+        },
+        {
+          "target": [
+            {
+              "code": "extension[view]",
+              "display": "C.14.4 - View",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "view"
+        },
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "C.14.5 - Subject",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "subject[x]"
+        },
+        {
+          "target": [
+            {
+              "code": "period",
+              "display": "C.14.6 - Created",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "created[x]"
+        },
+        {
+          "target": [
+            {
+              "code": "event",
+              "comment": "Event codes the context or the reason for the DocumentReference.",
+              "display": "C.14.7 - Reason",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "reason"
+        },
+        {
+          "target": [
+            {
+              "code": "bodySite.concept",
+              "display": "C.14.8 - BodySite",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "bodysite"
+        },
+        {
+          "target": [
+            {
+              "code": "author",
+              "display": "C.14.9 - Device name",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "deviceName"
+        },
+        {
+          "target": [
+            {
+              "code": "author",
+              "display": "C.14.10 - Device",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "device"
+        },
+        {
+          "target": [
+            {
+              "code": "content.attachment",
+              "display": "C.14.11 - Content",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "content"
+        },
+        {
+          "target": [
+            {
+              "code": "extension[note]",
+              "display": "C.14.12 - Note",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "note"
+        },
+        {
+          "target": [
+            {
+              "code": "author",
+              "display": "C.14.13 - Performer",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "performer"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
+      "target": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "name",
+              "display": "C.14.9 - Device name",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "deviceName"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
+      "target": "http://hl7.org/fhir/StructureDefinition/Device"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSMediaMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia"
+}

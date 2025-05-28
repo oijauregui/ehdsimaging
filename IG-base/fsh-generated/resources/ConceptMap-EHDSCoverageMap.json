@@ -1,0 +1,85 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSCoverageMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSCoverageMap",
+  "title": "EHDSCoverage Mapping",
+  "description": "Map for EHDSCoverage",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "C.31.1 - Identifier",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "display": "C.31.2 - Type",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "type"
+        },
+        {
+          "target": [
+            {
+              "code": "beneficiary",
+              "display": "C.31.3 - Patient",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "patient"
+        },
+        {
+          "target": [
+            {
+              "code": "kind",
+              "display": "C.31.4 - Payor",
+              "relationship": "source-is-broader-than-target"
+            },
+            {
+              "code": "paymentBy.party",
+              "comment": "When selfpay, include reference to party that will pay",
+              "display": "C.31.4 - Payor",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "payor"
+        },
+        {
+          "target": [
+            {
+              "code": "insurer",
+              "display": "C.31.4.1 - Payor entity",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "payor.payorEntity"
+        },
+        {
+          "target": [
+            {
+              "code": "subscriberId",
+              "display": "C.31.4.2 - Subscriber Id",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "payor.subscriberId"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage",
+      "target": "http://hl7.org/fhir/StructureDefinition/Coverage"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSCoverageMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"
+}

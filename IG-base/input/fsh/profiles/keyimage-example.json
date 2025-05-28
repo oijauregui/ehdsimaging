@@ -1,0 +1,43 @@
+{
+  "resourceType": "Basic",
+  "extension": [
+    {
+      "url": "$cvImagingSelection",
+      "extension": [
+        {
+          "url": "extension:performer",
+          "extension": [
+            {
+              "url": "extension:function",
+              "extension": [
+                {
+                  "valueCodeableConcept": "Practitioner"
+                }
+              ]
+            },
+            {
+              "url": "extension:actor",
+              "valueReference": {
+                "reference": "Practitioner/example"
+              }
+            },
+            {
+              "url": "extension:function",
+              "extension": [
+                {
+                  "valueCodeableConcept": "ImagingStudy"
+                }
+              ]
+            },
+            {
+              "url": "extension:actor",
+              "valueReference": {
+                "reference": "ImagingStudy/example"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

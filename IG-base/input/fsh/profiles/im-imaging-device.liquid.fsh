@@ -19,7 +19,8 @@ Description: """The device the made the image."""
   $cvDevice-category named category 0..*
 
 * extension
-  * insert AddDiscriminator( value, value )
+  * ^slicing.discriminator[1].type = #value
+  * ^slicing.discriminator[=].path = "extension.value"
   
 * extension[category] contains imaging 1..1
 * extension[category][imaging].value[x] = $sct#314789007 "Diagnostic imaging equipment"

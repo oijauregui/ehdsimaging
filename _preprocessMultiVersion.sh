@@ -27,14 +27,10 @@ for version in "${versions[@]}"; do
             dir_path=$(dirname "$relative_path")
             base_name=$(basename "$file")
 
-            echo "Processing file $file for $version"
-
             # Create directory structure if it doesn't exist
             mkdir -p "$build_dir/input/fsh/$dir_path"
-            echo "Created directory: $build_dir/input/fsh/$dir_path"
 
             output_file="$build_dir/input/fsh/$dir_path/${base_name%.liquid.fsh}.fsh"
-            echo "Will write to: $output_file"
 
             # Process liquid template and inline version tags
             content=$(npx --yes liquidjs -t @"$file" --context @"context-${context_version}.json")
@@ -73,12 +69,12 @@ for version in "${versions[@]}"; do
         cp "$file" "$build_dir/"
     done
 
-    # Copy ig-template directory to build directory if it exists
-    if [ -d "IG-base/ig-template" ]; then
-        echo "Copying ig-template directory to $build_dir..."
-        mkdir -p "$build_dir/ig-template"
-        cp -r IG-base/ig-template "$build_dir/"
-    else
-        echo "ig-template directory does not exist in IG-base, skipping..."
-    fi
+    # Copy all top-level directories (except 'input') from IG-base to build directory
+    for dir in IG-base/*/; do
+        dir_name=$(basename "$dir")
+        if [ "$dir_name" != "input" ]; then
+            echo "Copying directory $dir_name to $build_dir..."
+            cp -r "IG-base/$dir_name" "$build_dir/"
+        fi
+    done
 done

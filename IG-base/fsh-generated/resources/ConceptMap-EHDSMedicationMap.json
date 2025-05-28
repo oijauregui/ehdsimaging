@@ -1,0 +1,171 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSMedicationMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationMap",
+  "title": "EHDSMedication Mapping",
+  "description": "Map for EHDSMedication",
+  "group": [
+    {
+      "element": [
+        {
+          "noMap": true
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/MedicationEu"
+    },
+    {
+      "element": [
+        {
+          "code": "identifyingCode[x]",
+          "noMap": true,
+          "display": "(Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.)"
+        },
+        {
+          "code": "classification",
+          "noMap": true,
+          "display": "(CodeableConcept)"
+        },
+        {
+          "code": "productName",
+          "noMap": true,
+          "display": "(Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.)"
+        },
+        {
+          "code": "marketingAuthorisationHolder",
+          "noMap": true
+        },
+        {
+          "code": "marketingAuthorisationHolder.organizationName",
+          "noMap": true,
+          "display": "(Name of the organisation holding the authorisation for marketing/mahufacturing)"
+        },
+        {
+          "code": "marketingAuthorisationHolder.organizationIdentifier",
+          "noMap": true,
+          "display": "(Identifier of the organisation and/or its physical location)"
+        },
+        {
+          "code": "doseForm",
+          "noMap": true,
+          "display": "(Dose form(s) on a product level. Dose form for a single package item is defined below.)"
+        },
+        {
+          "code": "packSize",
+          "noMap": true,
+          "display": "(UCUM for units of measure. EDQM Standard Terms for units of presentation. (preferred))"
+        },
+        {
+          "code": "item",
+          "noMap": true,
+          "display": "(A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined)"
+        },
+        {
+          "code": "item.doseForm",
+          "noMap": true,
+          "display": "(Dose form)"
+        },
+        {
+          "code": "item.ingredient",
+          "noMap": true,
+          "display": "(Ingredients)"
+        },
+        {
+          "code": "item.ingredient.isActive",
+          "noMap": true,
+          "display": "(Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.)"
+        },
+        {
+          "code": "item.ingredient.substance",
+          "noMap": true,
+          "display": "(Substance)"
+        },
+        {
+          "code": "item.ingredient.strengthInfo",
+          "noMap": true,
+          "display": "(Strength of the product - amount of substance per unit)"
+        },
+        {
+          "code": "item.ingredient.strengthInfo.strength",
+          "noMap": true,
+          "display": "(Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet)"
+        },
+        {
+          "code": "item.ingredient.strengthInfo.basisOfStrengthSubstance",
+          "noMap": true,
+          "display": "(Substance that the strength refers to, in case it's different from the main substance)"
+        },
+        {
+          "code": "item.unitOfPresentation",
+          "noMap": true,
+          "display": "(Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.)"
+        },
+        {
+          "code": "item.containedQuantity",
+          "noMap": true,
+          "display": "(Manufactured item quantity for liquids (3ml / 1 vial))"
+        },
+        {
+          "code": "item.amount",
+          "noMap": true,
+          "display": "(Number of such manufactured items in this product (5 vials))"
+        },
+        {
+          "code": "item.packageType",
+          "noMap": true,
+          "display": "(Type of package of the medication item)"
+        },
+        {
+          "code": "device",
+          "noMap": true,
+          "display": "(Administration device included in the product)"
+        },
+        {
+          "code": "device.deviceQuantity",
+          "noMap": true,
+          "display": "(Number of such devices)"
+        },
+        {
+          "code": "device.device[x]",
+          "noMap": true,
+          "display": "(Device coded)"
+        },
+        {
+          "code": "characteristic",
+          "noMap": true,
+          "display": "(Other features of the product)"
+        },
+        {
+          "code": "characteristic.type",
+          "noMap": true,
+          "display": "(A code expressing the type of characteristic)"
+        },
+        {
+          "code": "characteristic.value[x]",
+          "noMap": true,
+          "display": "(Description of the characteristic)"
+        },
+        {
+          "code": "batch",
+          "noMap": true,
+          "display": "(Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.)"
+        },
+        {
+          "code": "batch.lotNumber",
+          "noMap": true,
+          "display": "(Batch identifier of the medicinal product)"
+        },
+        {
+          "code": "batch.expirationDate",
+          "noMap": true,
+          "display": "(Batch expiration date of the medicinal product.)"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSMedicationMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"
+}

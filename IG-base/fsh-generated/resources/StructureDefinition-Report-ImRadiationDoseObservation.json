@@ -1,0 +1,69 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-ImRadiationDoseObservation",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-ImRadiationDoseObservation",
+  "name": "Report_ImRadiationDoseObservation",
+  "title": "Report obligations for ImRadiationDoseObservation",
+  "status": "draft",
+  "description": "Report obligations for ImRadiationDoseObservation",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.bodySite",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.exposureInformation.equivalentDoseInformation.tissueType"
+              }
+            ]
+          }
+        ],
+        "path": "Observation.bodySite"
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component"
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.exposureInformation.effectiveDose, EHDSImagingReportBody.exposureInformation.equivalentDoseInformation, EHDSImagingReportBody.exposureInformation.equivalentDoseInformation.equivalentDose, EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.kap, EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.totalKerma, EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.endTubeKerma, EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.breastThickness, EHDSImagingStudy.series.instancesInTheSeries.radiationDoseInformation.abd, EHDSImagingStudy.phase.radiationDose"
+              }
+            ]
+          }
+        ],
+        "path": "Observation.component.value[x]"
+      }
+    ]
+  }
+}

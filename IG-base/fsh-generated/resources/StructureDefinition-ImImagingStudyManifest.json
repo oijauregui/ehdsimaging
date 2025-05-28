@@ -1,0 +1,212 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImImagingStudyManifest",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudyManifest",
+  "name": "ImImagingStudyManifest",
+  "title": "IM ImagingStudy Manifest",
+  "status": "draft",
+  "description": "This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 2
+      },
+      {
+        "id": "Bundle.entry:imagingstudy",
+        "path": "Bundle.entry",
+        "sliceName": "imagingstudy",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:imagingstudy.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:imagingstudy.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "ImagingStudy",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:patient",
+        "path": "Bundle.entry",
+        "sliceName": "patient",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:patient.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:patient.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:order",
+        "path": "Bundle.entry",
+        "sliceName": "order",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:order.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:order.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "ServiceRequest",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:endpoint",
+        "path": "Bundle.entry",
+        "sliceName": "endpoint",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:endpoint.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:endpoint.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Endpoint",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint",
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:imagingdevice",
+        "path": "Bundle.entry",
+        "sliceName": "imagingdevice",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:imagingdevice.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:imagingdevice.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Device",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:practitioner",
+        "path": "Bundle.entry",
+        "sliceName": "practitioner",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:practitioner.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:practitioner.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Practitioner",
+            "profile": [
+              "http://hl7.eu/fhir/base-r5/StructureDefinition/practitioner-eu"
+            ]
+          },
+          {
+            "code": "PractitionerRole",
+            "profile": [
+              "http://hl7.eu/fhir/base-r5/StructureDefinition/practitionerRole-eu"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

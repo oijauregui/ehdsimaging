@@ -1,0 +1,497 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSImagingReportHeaderMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingReportHeaderMap",
+  "title": "EHDSImagingReportHeader Mapping",
+  "description": "Map for EHDSImagingReportHeader",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "A.1.1 - Subject",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "subject"
+        },
+        {
+          "target": [
+            {
+              "code": "extension[basedOn]",
+              "display": "A.1.4 - Health insurance and payment information",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "healthInsuranceAndPaymentInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "extension[informationRecipient]",
+              "display": "A.1.5 - Intended recipient",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "intendedRecipient"
+        },
+        {
+          "target": [
+            {
+              "code": "author",
+              "display": "A.1.6 - Authorship",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "authorship"
+        },
+        {
+          "target": [
+            {
+              "code": "author[author]",
+              "display": "A.1.6.1 - Author",
+              "relationship": "related-to"
+            },
+            {
+              "code": "author[authoringDevice]",
+              "comment": "not an exact match",
+              "display": "A.1.6.1 - Author",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "authorship.author"
+        },
+        {
+          "target": [
+            {
+              "code": "date",
+              "display": "A.1.6.2 - DateTime",
+              "relationship": "source-is-broader-than-target"
+            }
+          ],
+          "code": "authorship.datetime"
+        },
+        {
+          "target": [
+            {
+              "code": "attester[resultValidator]",
+              "display": "A.1.7 - Attestation",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "attestation"
+        },
+        {
+          "target": [
+            {
+              "code": "attester[resultValidator].party",
+              "display": "A.1.7.1 - Attester",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "attestation.attester"
+        },
+        {
+          "target": [
+            {
+              "code": "attester[resultValidator].time",
+              "display": "A.1.7.2 - DateTime",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "attestation.datetime"
+        },
+        {
+          "target": [
+            {
+              "code": "attester[legalAuthenticator]",
+              "display": "A.1.8 - Legal authentication",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "legalAuthentication"
+        },
+        {
+          "target": [
+            {
+              "code": "attester[legalAuthenticator].party",
+              "display": "A.1.8.1 - Legal authenticator",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "legalAuthentication.legalAuthenticator"
+        },
+        {
+          "target": [
+            {
+              "code": "attester[legalAuthenticator].time",
+              "display": "A.1.8.2 - DateTime",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "legalAuthentication.datetime"
+        },
+        {
+          "code": "documentMetadata",
+          "noMap": true
+        },
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "A.1.9.1 - Document ID",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentId"
+        },
+        {
+          "target": [
+            {
+              "code": "category[imaging]",
+              "display": "A.1.9.2 - Document type",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentType"
+        },
+        {
+          "target": [
+            {
+              "code": "status",
+              "comment": "See mapping between DR status and Composition",
+              "display": "A.1.9.3 - Document status",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentStatus"
+        },
+        {
+          "target": [
+            {
+              "code": "event.period",
+              "display": "A.1.9.4 - Period",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.period"
+        },
+        {
+          "target": [
+            {
+              "code": "date",
+              "display": "A.1.9.5 - Report date and time",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.reportDateAndTime"
+        },
+        {
+          "target": [
+            {
+              "code": "title",
+              "display": "A.1.9.6 - Document title",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentTitle"
+        },
+        {
+          "target": [
+            {
+              "code": "event[imagingstudy]",
+              "comment": "modality",
+              "display": "A.1.9.7 - Event type",
+              "relationship": "related-to"
+            },
+            {
+              "code": "event[procedure]",
+              "comment": "study type",
+              "display": "A.1.9.7 - Event type",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.eventType"
+        },
+        {
+          "target": [
+            {
+              "code": "event[procedure]",
+              "display": "A.1.9.8 - Specialty",
+              "relationship": "related-to"
+            },
+            {
+              "code": "event[imagingstudy]",
+              "display": "A.1.9.8 - Specialty",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.specialty"
+        },
+        {
+          "target": [
+            {
+              "code": "custodian",
+              "display": "A.1.9.9 - Report custodian",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.reportCustodian"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "comment": "Could be extended with list of approved templates as a separate category in the future.",
+              "display": "A.1.9.10 - Document format",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentFormat"
+        },
+        {
+          "target": [
+            {
+              "code": "meta.security",
+              "display": "A.1.9.11 - Confidentiality",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.confidentiality"
+        },
+        {
+          "target": [
+            {
+              "code": "language",
+              "display": "A.1.9.12 - Language",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.language"
+        },
+        {
+          "target": [
+            {
+              "code": "version",
+              "display": "A.1.9.13 - Version",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.version"
+        },
+        {
+          "target": [
+            {
+              "code": "event[imagingstudy]",
+              "display": "A.1.9.14 - Study Instance UID",
+              "relationship": "related-to"
+            },
+            {
+              "code": "section[imagingstudy].entry[imagingstudy]",
+              "display": "A.1.9.14 - Study Instance UID",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.studyInstanceUid"
+        },
+        {
+          "target": [
+            {
+              "code": "extension[basedOn]",
+              "display": "A.1.9.15 - Accession number",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.accessionNumber"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImComposition"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "A.1.1 - Subject",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "subject"
+        },
+        {
+          "target": [
+            {
+              "code": "basedOn",
+              "display": "A.1.4 - Health insurance and payment information",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "healthInsuranceAndPaymentInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "performer[author]",
+              "display": "A.1.6.1 - Author",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "authorship.author"
+        },
+        {
+          "target": [
+            {
+              "code": "issued",
+              "display": "A.1.6.2 - DateTime",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "authorship.datetime"
+        },
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "A.1.9.1 - Document ID",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentId"
+        },
+        {
+          "target": [
+            {
+              "code": "category[imaging]",
+              "display": "A.1.9.2 - Document type",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentType"
+        },
+        {
+          "target": [
+            {
+              "code": "status",
+              "display": "A.1.9.3 - Document status",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.documentStatus"
+        },
+        {
+          "target": [
+            {
+              "code": "effectivePeriod",
+              "display": "A.1.9.4 - Period",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.period"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImDiagnosticReport"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "insurance",
+              "display": "A.1.4 - Health insurance and payment information",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "healthInsuranceAndPaymentInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "identifier[accessionNumber]",
+              "display": "A.1.9.15 - Accession number",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.accessionNumber"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImOrder"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "location",
+              "display": "A.1.9.7 - Event type",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.eventType"
+        },
+        {
+          "target": [
+            {
+              "code": "location",
+              "display": "A.1.9.8 - Specialty",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.specialty"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImProcedure"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "series.modality",
+              "display": "A.1.9.7 - Event type",
+              "relationship": "related-to"
+            },
+            {
+              "code": "modality",
+              "display": "A.1.9.7 - Event type",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.eventType"
+        },
+        {
+          "target": [
+            {
+              "code": "location",
+              "display": "A.1.9.8 - Specialty",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.specialty"
+        },
+        {
+          "target": [
+            {
+              "code": "identifier[studyInstanceUid]",
+              "display": "A.1.9.14 - Study Instance UID",
+              "relationship": "related-to"
+            }
+          ],
+          "code": "documentMetadata.studyInstanceUid"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
+      "target": "http://hl7.eu/fhir/imaging/r5/StructureDefinition/ImImagingStudy"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSImagingReportHeaderMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"
+}
