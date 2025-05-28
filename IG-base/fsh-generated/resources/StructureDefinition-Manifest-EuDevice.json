@@ -1,0 +1,272 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Manifest-EuDevice",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Manifest-EuDevice",
+  "name": "Manifest_EuDevice",
+  "title": "Manifest obligations for EuDevice",
+  "status": "draft",
+  "description": "Manifest obligations for EuDevice",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Device.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.identifier"
+              }
+            ]
+          }
+        ],
+        "path": "Device.identifier"
+      },
+      {
+        "id": "Device.manufacturer",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.manufacturer"
+              }
+            ]
+          }
+        ],
+        "path": "Device.manufacturer"
+      },
+      {
+        "id": "Device.manufactureDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.manufactureDate"
+              }
+            ]
+          }
+        ],
+        "path": "Device.manufactureDate"
+      },
+      {
+        "id": "Device.expirationDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.expiryDate"
+              }
+            ]
+          }
+        ],
+        "path": "Device.expirationDate"
+      },
+      {
+        "id": "Device.lotNumber",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.lotNumber"
+              }
+            ]
+          }
+        ],
+        "path": "Device.lotNumber"
+      },
+      {
+        "id": "Device.serialNumber",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.serialNumber"
+              }
+            ]
+          }
+        ],
+        "path": "Device.serialNumber"
+      },
+      {
+        "id": "Device.name",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.name, EHDSMedia.deviceName"
+              }
+            ]
+          }
+        ],
+        "path": "Device.name"
+      },
+      {
+        "id": "Device.modelNumber",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.modelNumber"
+              }
+            ]
+          }
+        ],
+        "path": "Device.modelNumber"
+      },
+      {
+        "id": "Device.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.type"
+              }
+            ]
+          }
+        ],
+        "path": "Device.type"
+      },
+      {
+        "id": "Device.version",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.version"
+              }
+            ]
+          }
+        ],
+        "path": "Device.version"
+      },
+      {
+        "id": "Device.note",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSDevice.note"
+              }
+            ]
+          }
+        ],
+        "path": "Device.note"
+      }
+    ]
+  }
+}

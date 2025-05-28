@@ -1,0 +1,136 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImKeyImageImagingSelection",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImKeyImageImagingSelection",
+  "name": "ImKeyImageImagingSelection",
+  "title": "Key images represented as an ImagingSelection",
+  "status": "draft",
+  "description": "Key images represented as an ImagingSelection",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImagingSelection",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingSelection",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImagingSelection.extension",
+        "path": "ImagingSelection.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ImagingSelection.extension:title",
+        "path": "ImagingSelection.extension",
+        "sliceName": "title",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-description"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingSelection.extension:description",
+        "path": "ImagingSelection.extension",
+        "sliceName": "description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-title"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingSelection.performer",
+        "path": "ImagingSelection.performer",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "actor"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "ImagingSelection.performer:performer",
+        "path": "ImagingSelection.performer",
+        "sliceName": "performer",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ImagingSelection.performer:performer.actor",
+        "path": "ImagingSelection.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base-r5/StructureDefinition/practitionerRole-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingSelection.performer:device",
+        "path": "ImagingSelection.performer",
+        "sliceName": "device",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ImagingSelection.performer:device.actor",
+        "path": "ImagingSelection.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingDevice"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

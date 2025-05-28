@@ -1,0 +1,120 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSLocationMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSLocationMap",
+  "title": "EHDSLocation Mapping",
+  "description": "Map for EHDSLocation",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "C.17.1 - Identifier",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "name",
+              "display": "C.17.2 - Name",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "name"
+        },
+        {
+          "target": [
+            {
+              "code": "description",
+              "comment": "Source is xml",
+              "display": "C.17.3 - Description",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "description"
+        },
+        {
+          "target": [
+            {
+              "code": "type",
+              "display": "C.17.4 - Type",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "type"
+        },
+        {
+          "target": [
+            {
+              "code": "address",
+              "display": "C.17.5 - Address",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "address"
+        },
+        {
+          "target": [
+            {
+              "code": "position",
+              "display": "C.17.6 - Position",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "position"
+        },
+        {
+          "target": [
+            {
+              "code": "position.longitude",
+              "display": "C.17.6.1 - Longitude",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "position.longitude"
+        },
+        {
+          "target": [
+            {
+              "code": "position.latitude",
+              "display": "C.17.6.2 - Latitude",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "position.latitude"
+        },
+        {
+          "target": [
+            {
+              "code": "managingOrganization",
+              "display": "C.17.7 - Managing organization",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "managingOrganization"
+        },
+        {
+          "target": [
+            {
+              "code": "partOf",
+              "display": "C.17.8 - Part of",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "partOf"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation",
+      "target": "http://hl7.eu/fhir/base-r5/StructureDefinition/location-eu"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSLocationMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation"
+}

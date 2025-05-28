@@ -1,0 +1,71 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuRange",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+      "valueCode": "can-bind"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuRange",
+  "name": "Report_EuRange",
+  "title": "Report obligations for EuRange",
+  "status": "draft",
+  "description": "Report obligations for EuRange",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Range",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/range-eu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Range.low",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSObservation.observationResult.numericResult.numericValue[x]"
+              }
+            ]
+          }
+        ],
+        "path": "Range.low"
+      },
+      {
+        "id": "Range.high",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSObservation.observationResult.numericResult.numericValue[x]"
+              }
+            ]
+          }
+        ],
+        "path": "Range.high"
+      }
+    ]
+  }
+}

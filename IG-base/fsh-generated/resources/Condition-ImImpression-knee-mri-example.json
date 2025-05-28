@@ -1,0 +1,19 @@
+{
+  "resourceType": "Condition",
+  "id": "ImImpression-knee-mri-example",
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ConditionEu"
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/1"
+  }
+}

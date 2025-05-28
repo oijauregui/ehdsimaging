@@ -1,0 +1,99 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSSubstanceMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSSubstanceMap",
+  "title": "EHDSSubstance Mapping",
+  "description": "Map for EHDSSubstance",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "identifier",
+              "display": "C.28.1 - Identifier",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "identifier"
+        },
+        {
+          "target": [
+            {
+              "code": "code",
+              "display": "C.28.2 - Code",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "code"
+        },
+        {
+          "target": [
+            {
+              "code": "description",
+              "display": "C.28.3 - Description",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "description"
+        },
+        {
+          "target": [
+            {
+              "code": "expiry",
+              "display": "C.28.4 - Expiry",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "expiry"
+        },
+        {
+          "target": [
+            {
+              "code": "quantity",
+              "display": "C.28.5 - Quantity",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "quantity"
+        },
+        {
+          "target": [
+            {
+              "code": "ingredient",
+              "display": "C.28.6 - Ingredients",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "ingredients"
+        },
+        {
+          "target": [
+            {
+              "code": "ingredient.quantity",
+              "display": "C.28.6.1 - Quantity",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "ingredients.quantity"
+        },
+        {
+          "target": [
+            {
+              "code": "ingredient.substanceReference",
+              "display": "C.28.6.2 - Substance",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "ingredients.substance"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance",
+      "target": "http://hl7.org/fhir/StructureDefinition/Substance"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSSubstanceMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance"
+}

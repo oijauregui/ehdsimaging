@@ -1,0 +1,117 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImFinding",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImFinding",
+  "name": "ImFinding",
+  "title": "Finding",
+  "status": "draft",
+  "description": "Finding during imaging procedure.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.identifier",
+        "path": "Observation.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Observation.identifier:observationUid",
+        "path": "Observation.identifier",
+        "sliceName": "observationUid",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.identifier:observationUid.type",
+        "path": "Observation.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "00080018",
+              "system": "http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-missing-dicom-terminology",
+              "display": "SOP Instance UID"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Observation.basedOn:imorderaccession",
+        "path": "Observation.basedOn",
+        "sliceName": "imorderaccession",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.basedOn:imorderaccession.identifier",
+        "path": "Observation.basedOn.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/im-accession-number-identifier"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

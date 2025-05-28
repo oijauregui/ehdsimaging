@@ -1,0 +1,203 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuRelatedPerson",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuRelatedPerson",
+  "name": "Report_EuRelatedPerson",
+  "title": "Report obligations for EuRelatedPerson",
+  "status": "draft",
+  "description": "Report obligations for EuRelatedPerson",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "RelatedPerson",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/RelatedPersonEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RelatedPerson.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSRelatedPerson.personalIdentifier"
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.identifier"
+      },
+      {
+        "id": "RelatedPerson.active",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "."
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.active"
+      },
+      {
+        "id": "RelatedPerson.patient",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "."
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.patient"
+      },
+      {
+        "id": "RelatedPerson.relationship",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSRelatedPerson.relationship"
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.relationship"
+      },
+      {
+        "id": "RelatedPerson.name",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSRelatedPerson.name"
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.name"
+      },
+      {
+        "id": "RelatedPerson.telecom",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSRelatedPerson.telecom"
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.telecom"
+      },
+      {
+        "id": "RelatedPerson.address",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSRelatedPerson.address"
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.address"
+      },
+      {
+        "id": "RelatedPerson.period",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:handle"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "."
+              }
+            ]
+          }
+        ],
+        "path": "RelatedPerson.period"
+      }
+    ]
+  }
+}

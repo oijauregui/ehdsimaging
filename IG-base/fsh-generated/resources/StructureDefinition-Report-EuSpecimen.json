@@ -1,0 +1,272 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuSpecimen",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuSpecimen",
+  "name": "Report_EuSpecimen",
+  "title": "Report obligations for EuSpecimen",
+  "status": "draft",
+  "description": "Report obligations for EuSpecimen",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Specimen",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/SpecimenEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Specimen.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.identifier"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.identifier"
+      },
+      {
+        "id": "Specimen.accessionIdentifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.identifier"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.accessionIdentifier"
+      },
+      {
+        "id": "Specimen.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.material"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.type"
+      },
+      {
+        "id": "Specimen.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.typeOfSpecies, EHDSSpecimen.sourceDevice, EHDSSpecimen.subject"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.subject"
+      },
+      {
+        "id": "Specimen.receivedTime",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.receivedDate"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.receivedTime"
+      },
+      {
+        "id": "Specimen.collection.collected[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.collectionPeriod"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.collection.collected[x]"
+      },
+      {
+        "id": "Specimen.collection.method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.collectionProcedureMethod"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.collection.method"
+      },
+      {
+        "id": "Specimen.collection.bodySite",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.anatomicLocation, EHDSSpecimen.morphology"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.collection.bodySite"
+      },
+      {
+        "id": "Specimen.container",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.container"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.container"
+      },
+      {
+        "id": "Specimen.container.device",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.container.containerDevice"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.container.device"
+      },
+      {
+        "id": "Specimen.container.specimenQuantity",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSpecimen.container.specimenQuantity"
+              }
+            ]
+          }
+        ],
+        "path": "Specimen.container.specimenQuantity"
+      }
+    ]
+  }
+}

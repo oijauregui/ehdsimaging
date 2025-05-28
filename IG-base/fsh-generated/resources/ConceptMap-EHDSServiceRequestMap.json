@@ -1,0 +1,165 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "EHDSServiceRequestMap",
+  "url": "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSServiceRequestMap",
+  "title": "EHDSServiceRequest Mapping",
+  "description": "Map for EHDSServiceRequest",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "text",
+              "display": "C.8.1 - Service text",
+              "relationship": "source-is-narrower-than-target"
+            }
+          ],
+          "code": "serviceText"
+        },
+        {
+          "target": [
+            {
+              "code": "code.concept",
+              "display": "C.8.2 - Service code",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "serviceCode"
+        },
+        {
+          "target": [
+            {
+              "code": "reason.concept",
+              "display": "C.8.3 - Reason code",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "reasonCode"
+        },
+        {
+          "target": [
+            {
+              "code": "quantityQuantity",
+              "display": "C.8.4 - Quantity",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "quantity"
+        },
+        {
+          "target": [
+            {
+              "code": "bodySite",
+              "display": "C.8.5 - Anatomic location",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "anatomicLocation"
+        },
+        {
+          "target": [
+            {
+              "code": "reason.reference",
+              "display": "C.8.6 - Reason reference",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "reasonReference"
+        },
+        {
+          "target": [
+            {
+              "code": "priority",
+              "display": "C.8.7 - Priority",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "priority"
+        },
+        {
+          "target": [
+            {
+              "code": "supportingInfo",
+              "comment": "Point to observations and conditions",
+              "display": "C.8.8 - Supporting information",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "supportingInformation"
+        },
+        {
+          "target": [
+            {
+              "code": "specimen",
+              "display": "C.8.9 - Specimen",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "specimen"
+        },
+        {
+          "target": [
+            {
+              "code": "subject",
+              "display": "C.8.10 - Subject",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "subject"
+        },
+        {
+          "target": [
+            {
+              "code": "encounter",
+              "display": "C.8.11 - Encounter",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "occurrenceDateTime",
+              "display": "C.8.12 - Occurance",
+              "relationship": "equivalent"
+            },
+            {
+              "code": "occurrencePeriod",
+              "display": "C.8.12 - Occurance",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "occurance[x]"
+        },
+        {
+          "target": [
+            {
+              "code": "patientInstruction.instructionMarkdown",
+              "display": "C.8.13 - Patient instructions",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "patientInstructions"
+        },
+        {
+          "target": [
+            {
+              "code": "insurance",
+              "display": "C.8.14 - Coverage",
+              "relationship": "equivalent"
+            }
+          ],
+          "code": "coverage"
+        }
+      ],
+      "source": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest",
+      "target": "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+    }
+  ],
+  "status": "draft",
+  "experimental": true,
+  "name": "EHDSServiceRequestMap",
+  "sourceScopeUri": "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"
+}

@@ -1,0 +1,80 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PatientAnimalEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/PatientAnimalEu",
+  "name": "PatientAnimalEu",
+  "title": "Patient: Animal",
+  "status": "draft",
+  "description": "This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide. This is used (among others) to identify the species when a specimen is collected from an animal.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "min": 1
+      },
+      {
+        "id": "Patient.extension:patient-animal",
+        "path": "Patient.extension",
+        "sliceName": "patient-animal",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-animal"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:recordedSexOrGender",
+        "path": "Patient.extension",
+        "sliceName": "recordedSexOrGender",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "max": "0"
+      }
+    ]
+  }
+}

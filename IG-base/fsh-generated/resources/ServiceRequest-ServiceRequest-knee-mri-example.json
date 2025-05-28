@@ -1,0 +1,25 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "ServiceRequest-knee-mri-example",
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "363679005",
+          "system": "http://snomed.info/sct",
+          "display": "Imaging"
+        }
+      ]
+    }
+  ],
+  "status": "draft",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/1"
+  }
+}

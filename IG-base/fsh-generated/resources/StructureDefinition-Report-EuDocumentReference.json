@@ -1,0 +1,274 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuDocumentReference",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuDocumentReference",
+  "name": "Report_EuDocumentReference",
+  "title": "Report obligations for EuDocumentReference",
+  "status": "draft",
+  "description": "Report obligations for EuDocumentReference",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/DocumentReferenceEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.extension:note",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.note"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.extension",
+        "sliceName": "note"
+      },
+      {
+        "id": "DocumentReference.extension:view",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.view"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.extension",
+        "sliceName": "view"
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.identifier"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.identifier"
+      },
+      {
+        "id": "DocumentReference.modality",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.modality"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.modality"
+      },
+      {
+        "id": "DocumentReference.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.type"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.type"
+      },
+      {
+        "id": "DocumentReference.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.subject[x]"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.subject"
+      },
+      {
+        "id": "DocumentReference.event",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.reason"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.event"
+      },
+      {
+        "id": "DocumentReference.bodySite.concept",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.bodysite"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.bodySite.concept"
+      },
+      {
+        "id": "DocumentReference.period",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.created[x]"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.period"
+      },
+      {
+        "id": "DocumentReference.author",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.deviceName, EHDSMedia.device, EHDSMedia.performer"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.author"
+      },
+      {
+        "id": "DocumentReference.content.attachment",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSMedia.content"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.content.attachment"
+      }
+    ]
+  }
+}

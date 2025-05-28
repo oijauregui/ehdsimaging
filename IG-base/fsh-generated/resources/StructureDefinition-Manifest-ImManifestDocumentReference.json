@@ -1,0 +1,269 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Manifest-ImManifestDocumentReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Manifest-ImManifestDocumentReference",
+  "name": "Manifest_ImManifestDocumentReference",
+  "title": "Manifest Obligations for ImManifestIheMhdDocumentReference",
+  "status": "draft",
+  "description": "Manifest Obligations for ImManifestIheMhdDocumentReference",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImManifestIheMhdDocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.identifier:entry-uuid",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.identifier",
+        "sliceName": "entry-uuid"
+      },
+      {
+        "id": "DocumentReference.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.status"
+      },
+      {
+        "id": "DocumentReference.modality",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.modality"
+      },
+      {
+        "id": "DocumentReference.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.type"
+      },
+      {
+        "id": "DocumentReference.subject",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.subject"
+      },
+      {
+        "id": "DocumentReference.bodySite",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.bodySite"
+      },
+      {
+        "id": "DocumentReference.author",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.author"
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.custodian"
+      },
+      {
+        "id": "DocumentReference.relatesTo",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.relatesTo"
+      },
+      {
+        "id": "DocumentReference.securityLabel",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.securityLabel"
+      },
+      {
+        "id": "DocumentReference.content.attachment.language",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.content.attachment.language"
+      },
+      {
+        "id": "DocumentReference.content.attachment.creation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.content.attachment.creation"
+      }
+    ]
+  }
+}

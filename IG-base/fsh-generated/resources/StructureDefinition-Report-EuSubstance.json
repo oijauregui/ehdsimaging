@@ -1,0 +1,228 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-EuSubstance",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuSubstance",
+  "name": "Report_EuSubstance",
+  "title": "Report obligations for EuSubstance",
+  "status": "draft",
+  "description": "Report obligations for EuSubstance",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Substance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Substance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Substance.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.identifier"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.identifier"
+      },
+      {
+        "id": "Substance.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.code"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.code"
+      },
+      {
+        "id": "Substance.description",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.description"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.description"
+      },
+      {
+        "id": "Substance.expiry",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.expiry"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.expiry"
+      },
+      {
+        "id": "Substance.quantity",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.quantity"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.quantity"
+      },
+      {
+        "id": "Substance.ingredient",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.ingredients"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.ingredient"
+      },
+      {
+        "id": "Substance.ingredient.quantity",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.ingredients.quantity"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.ingredient.quantity"
+      },
+      {
+        "id": "Substance.ingredient.substance[x]",
+        "path": "Substance.ingredient.substance[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Substance.ingredient.substance[x]:substanceReference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSSubstance.ingredients.substance"
+              }
+            ]
+          }
+        ],
+        "path": "Substance.ingredient.substance[x]",
+        "sliceName": "substanceReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Substance"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

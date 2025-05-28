@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Report-ImGestationalAgeObservation",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-ImGestationalAgeObservation",
+  "name": "Report_ImGestationalAgeObservation",
+  "title": "Report obligations for ImGestationalAgeObservation",
+  "status": "draft",
+  "description": "Report obligations for ImGestationalAgeObservation",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImGestationalAgeObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.value[x]",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSImagingReportBody.orderInformation.supportingInformation.gestationalAge"
+              }
+            ]
+          }
+        ],
+        "path": "Observation.value[x]"
+      }
+    ]
+  }
+}

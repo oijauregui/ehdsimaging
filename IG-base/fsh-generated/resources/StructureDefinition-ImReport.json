@@ -1,0 +1,98 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImReport",
+  "name": "ImReport",
+  "title": "Document Bundle for Imaging Report",
+  "status": "draft",
+  "description": "Document Bundle for Imaging Report",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "patternCode": "document"
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 2
+      },
+      {
+        "id": "Bundle.entry:imComposition",
+        "path": "Bundle.entry",
+        "sliceName": "imComposition",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:imComposition.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:imDiagnosticReport",
+        "path": "Bundle.entry",
+        "sliceName": "imDiagnosticReport",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:imDiagnosticReport.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "DiagnosticReport",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

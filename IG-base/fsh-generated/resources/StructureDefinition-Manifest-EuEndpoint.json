@@ -1,0 +1,249 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Manifest-EuEndpoint",
+  "url": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/Manifest-EuEndpoint",
+  "name": "Manifest_EuEndpoint",
+  "title": "Manifest obligations for EuEndpoint",
+  "status": "draft",
+  "description": "Manifest obligations for EuEndpoint",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Endpoint",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r5/StructureDefinition/EndpointEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Endpoint.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.identifier"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.identifier"
+      },
+      {
+        "id": "Endpoint.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.status"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.status"
+      },
+      {
+        "id": "Endpoint.connectionType",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.connectionType"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.connectionType"
+      },
+      {
+        "id": "Endpoint.name",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.name"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.name"
+      },
+      {
+        "id": "Endpoint.managingOrganization",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.managingOrganization"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.managingOrganization"
+      },
+      {
+        "id": "Endpoint.payload",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.payload"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.payload"
+      },
+      {
+        "id": "Endpoint.payload.type",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.payload.type"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.payload.type"
+      },
+      {
+        "id": "Endpoint.payload.mimeType",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.payload.mimeType"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.payload.mimeType"
+      },
+      {
+        "id": "Endpoint.address",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.address"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.address"
+      },
+      {
+        "id": "Endpoint.header",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/obligation",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "SHALL:populate-if-known"
+              },
+              {
+                "url": "actor",
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImManifestProvider"
+              },
+              {
+                "url": "documentation",
+                "valueMarkdown": "EHDSEndpoint.header"
+              }
+            ]
+          }
+        ],
+        "path": "Endpoint.header"
+      }
+    ]
+  }
+}
