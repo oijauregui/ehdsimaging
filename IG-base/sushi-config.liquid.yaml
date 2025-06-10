@@ -1,5 +1,7 @@
-id: hl7.fhir.eu.imaging-r5
-canonical: http://hl7.eu/fhir/imaging-r5
+{{R5-yaml}}id: hl7.fhir.eu.imaging-r5
+{{R5-yaml}}canonical: http://hl7.eu/fhir/imaging-r5
+{{R4-yaml}}id: hl7.fhir.eu.imaging-r4
+{{R4-yaml}}canonical: http://hl7.eu/fhir/imaging-r4
 name: HL7EuImagingStudyReport
 title: HL7 Europe Imaging Study Report
 description: This guide describes how a Imaging Study Report can be represented in the European REALM.
