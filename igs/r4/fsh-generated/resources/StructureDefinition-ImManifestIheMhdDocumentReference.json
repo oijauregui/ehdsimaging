@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImManifestIheMhdDocumentReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImManifestIheMhdDocumentReference",
+  "name": "ImManifestIheMhdDocumentReference",
+  "title": "Manifest DocumentReference for MHD deployments",
+  "status": "draft",
+  "description": "A DocumentReference profile for the Manifest DocumentReference used in MHD deployments. ",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImIheMhdDocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.extension",
+        "path": "DocumentReference.extension",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:modality",
+        "path": "DocumentReference.extension",
+        "sliceName": "modality",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "short": "Type of Imaging Manifest",
+        "definition": "Specifies that it refers to a Imaging Manifest",
+        "comment": "Corresponds to the type of the Imaging Manifest resource.",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "19005-8",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingManifestTypesEuVS"
+        }
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.category:imaging",
+        "path": "DocumentReference.category",
+        "sliceName": "imaging",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "18748-4",
+              "system": "http://loinc.org",
+              "display": "Diagnostic imaging study"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "short": "Organization that manages the Imaging Report",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/organization-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile",
+            "extension": [
+              {
+                "valueCanonical": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingStudyManifest"
+              }
+            ]
+          }
+        ],
+        "path": "DocumentReference.content"
+      }
+    ]
+  }
+}

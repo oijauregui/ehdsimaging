@@ -1,0 +1,370 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImImagingStudy",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingStudy",
+  "name": "ImImagingStudy",
+  "title": "IM Imaging Study",
+  "status": "draft",
+  "description": "This profile represents an imaging study instance.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImagingStudy",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImagingStudy",
+        "path": "ImagingStudy",
+        "constraint": [
+          {
+            "key": "im-imagingstudy-01",
+            "severity": "warning",
+            "human": "A DICOM instance UID must start with 'urn:oid:'",
+            "expression": "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:')",
+            "source": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingStudy"
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.identifier",
+        "path": "ImagingStudy.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "ImagingStudy.identifier:studyInstanceUid",
+        "path": "ImagingStudy.identifier",
+        "sliceName": "studyInstanceUid",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-study-instance-uid-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.subject",
+        "path": "ImagingStudy.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/patient-eu",
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.basedOn",
+        "path": "ImagingStudy.basedOn",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "ImagingStudy.basedOn:imorderaccession",
+        "path": "ImagingStudy.basedOn",
+        "sliceName": "imorderaccession",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImOrder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.basedOn:imorderaccession.identifier",
+        "path": "ImagingStudy.basedOn.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-accession-number-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.endpoint",
+        "path": "ImagingStudy.endpoint",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "ImagingStudy.endpoint:wado",
+        "path": "ImagingStudy.endpoint",
+        "sliceName": "wado",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImWadoEndpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.endpoint:iid",
+        "path": "ImagingStudy.endpoint",
+        "sliceName": "iid",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImageIidViewerEndpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.series.endpoint",
+        "path": "ImagingStudy.series.endpoint",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "ImagingStudy.series.endpoint:wado",
+        "path": "ImagingStudy.series.endpoint",
+        "sliceName": "wado",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImWadoEndpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.series.endpoint:iid",
+        "path": "ImagingStudy.series.endpoint",
+        "sliceName": "iid",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImageIidViewerEndpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.series.performer",
+        "path": "ImagingStudy.series.performer",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "actor"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "ImagingStudy.series.performer.function",
+        "path": "ImagingStudy.series.performer.function",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-study-performer-type"
+        }
+      },
+      {
+        "id": "ImagingStudy.series.performer:performer",
+        "path": "ImagingStudy.series.performer",
+        "sliceName": "performer",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ImagingStudy.series.performer:performer.function",
+        "path": "ImagingStudy.series.performer.function",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PRF",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ImagingStudy.series.performer:performer.actor",
+        "path": "ImagingStudy.series.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.series.performer:device",
+        "path": "ImagingStudy.series.performer",
+        "sliceName": "device",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ImagingStudy.series.performer:device.function",
+        "path": "ImagingStudy.series.performer.function",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "DEV",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ImagingStudy.series.performer:device.actor",
+        "path": "ImagingStudy.series.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.series.performer:custodian",
+        "path": "ImagingStudy.series.performer",
+        "sliceName": "custodian",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ImagingStudy.series.performer:custodian.function",
+        "path": "ImagingStudy.series.performer.function",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CST",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ImagingStudy.series.performer:custodian.actor",
+        "path": "ImagingStudy.series.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/organization-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ImagingStudy.series.instance.extension",
+        "path": "ImagingStudy.series.instance.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ImagingStudy.series.instance.extension:instance-description",
+        "path": "ImagingStudy.series.instance.extension",
+        "sliceName": "instance-description",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/instance-description"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

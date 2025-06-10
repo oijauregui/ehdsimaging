@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MedicationEu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/MedicationEu",
+  "name": "MedicationEu",
+  "title": "EU Medication",
+  "status": "draft",
+  "description": "A medication profile for the EU.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication",
+        "path": "Medication"
+      }
+    ]
+  }
+}

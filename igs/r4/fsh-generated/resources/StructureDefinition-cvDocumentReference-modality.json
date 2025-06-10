@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cvDocumentReference-modality",
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/cvDocumentReference-modality",
+  "name": "CvDocumentReferenceModality",
+  "title": "DoocuemntReference.modality extension for R4",
+  "status": "draft",
+  "description": "Extension to backport DocumentReference.modality in R4.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "DocumentReference"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "DoocuemntReference.modality extension for R4",
+        "definition": "Extension to backport DocumentReference.modality in R4."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/cvDocumentReference-modality"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "resourceType": "ActorDefinition",
+  "id": "ImManifestProvider",
+  "url": "http://hl7.eu/fhir/imaging-r4/ActorDefinition/ImManifestProvider",
+  "title": "Imaging study manifest provider",
+  "description": "Provides the Imaging study manifest.",
+  "name": "ImManifestProvider",
+  "status": "draft",
+  "type": "system"
+}

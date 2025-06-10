@@ -1,0 +1,214 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImWadoEndpoint",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImWadoEndpoint",
+  "name": "ImWadoEndpoint",
+  "title": "IM WADO Endpoint",
+  "status": "draft",
+  "description": "This profile defines the WADO endpoint for accessing imaging study content.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Endpoint",
+  "baseDefinition": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/EndpointEu",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Endpoint.connectionType",
+        "path": "Endpoint.connectionType",
+        "patternCoding": {
+          "code": "dicom-wado-rs",
+          "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+          "display": "DICOM WADO-RS"
+        }
+      },
+      {
+        "id": "Endpoint.payloadType",
+        "path": "Endpoint.payloadType",
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "dicom-wado-rs",
+              "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+              "display": "DICOM WADO-RS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Endpoint.payloadMimeType",
+        "path": "Endpoint.payloadMimeType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 17
+      },
+      {
+        "id": "Endpoint.payloadMimeType:dicom",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "dicom",
+        "min": 1,
+        "max": "1",
+        "patternCode": "application/dicom"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:dicom-octet",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "dicom-octet",
+        "min": 1,
+        "max": "1",
+        "patternCode": "application/octet-stream"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:dicom-xml",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "dicom-xml",
+        "min": 1,
+        "max": "1",
+        "patternCode": "application/dicom+xml"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:dicom-json",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "dicom-json",
+        "min": 1,
+        "max": "1",
+        "patternCode": "application/json"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:image-jpg",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "image-jpg",
+        "min": 1,
+        "max": "1",
+        "patternCode": "image/jpg"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:image-gif",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "image-gif",
+        "min": 1,
+        "max": "1",
+        "patternCode": "image/gif"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:image-jp2",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "image-jp2",
+        "min": 1,
+        "max": "1",
+        "patternCode": "image/jp2"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:image-jph",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "image-jph",
+        "min": 1,
+        "max": "1",
+        "patternCode": "image/jph"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:image-jxl",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "image-jxl",
+        "min": 1,
+        "max": "1",
+        "patternCode": "image/jxl"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:video-mpeg",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "video-mpeg",
+        "min": 1,
+        "max": "1",
+        "patternCode": "video/mpeg"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:video-mp4",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "video-mp4",
+        "min": 1,
+        "max": "1",
+        "patternCode": "video/mp4"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:video-H265",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "video-H265",
+        "min": 1,
+        "max": "1",
+        "patternCode": "video/H265"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:text-html",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "text-html",
+        "min": 1,
+        "max": "1",
+        "patternCode": "text/html"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:text-plain",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "text-plain",
+        "min": 1,
+        "max": "1",
+        "patternCode": "text/plain"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:text-xml",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "text-xml",
+        "min": 1,
+        "max": "1",
+        "patternCode": "text/xml"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:text-rtf",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "text-rtf",
+        "min": 1,
+        "max": "1",
+        "patternCode": "text/rtf"
+      },
+      {
+        "id": "Endpoint.payloadMimeType:application-pdf",
+        "path": "Endpoint.payloadMimeType",
+        "sliceName": "application-pdf",
+        "min": 1,
+        "max": "1",
+        "patternCode": "application/pdf"
+      }
+    ]
+  }
+}

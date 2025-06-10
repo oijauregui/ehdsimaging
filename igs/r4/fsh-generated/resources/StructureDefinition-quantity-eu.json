@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "quantity-eu",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/quantity-eu",
+  "name": "QuantityEu",
+  "title": "EU Quantity",
+  "status": "draft",
+  "description": "A quantity profile for the EU.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Quantity",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Quantity",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Quantity.extension:uncertainty",
+        "path": "Quantity.extension",
+        "sliceName": "uncertainty",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Quantity.extension:uncertaintyType",
+        "path": "Quantity.extension",
+        "sliceName": "uncertaintyType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cvServiceRequest-reason",
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/cvServiceRequest-reason",
+  "name": "CvServiceRequestReason",
+  "title": "ServiceRequest.reason extension for R4",
+  "status": "draft",
+  "description": "Extension to backport ServiceRequest.reason in R4.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ServiceRequest"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "ServiceRequest.reason extension for R4",
+        "definition": "Extension to backport ServiceRequest.reason in R4."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/cvServiceRequest-reason"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}
