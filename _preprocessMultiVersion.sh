@@ -78,3 +78,7 @@ for version in "${versions[@]}"; do
         fi
     done
 done
+
+# Remove old folders (moved from GitHub Actions workflow)
+rm -rf ./igs/r4/input/fsh/obligations ./igs/r4/input/fsh/xtehr-model-maps
+echo "Removed obligations and xtehr-model-maps folders from r4 input/fsh directory"
