@@ -55,6 +55,10 @@ jobs:
           chmod a+x ./_preprocessMultiVersion.sh
           ./_preprocessMultiVersion.sh
 
+# TBD: remove this lines after the obligations and xtehr-model-maps are functioning in R4
+      - name: Remove old folders
+        run: |
+          rm -rf ./igs/r4/input/fsh/obligations ./igs/r4/input/fsh/xtehr-model-maps
 
       - name: Run IG Publisher inside Docker for each IG folder
         run: |
