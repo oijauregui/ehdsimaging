@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CrossVersionMediaViewExtension",
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/CrossVersionMediaViewExtension",
+  "name": "CrossVersionMediaViewExtension",
+  "title": "Media.view extension",
+  "status": "draft",
+  "description": "This cross version extension includes the FHIR R4 version of the Media.view field which has at this point in time (April 18, 2025), not yet been included in the extension pack.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "DocumentReference",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Media.view extension",
+        "definition": "This cross version extension includes the FHIR R4 version of the Media.view field which has at this point in time (April 18, 2025), not yet been included in the extension pack."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/CrossVersionMediaViewExtension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.eu/fhir/imaging-r4/ValueSet/media-view"
+        }
+      }
+    ]
+  }
+}

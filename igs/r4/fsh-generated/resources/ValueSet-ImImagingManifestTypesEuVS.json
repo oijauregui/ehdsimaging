@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ImImagingManifestTypesEuVS",
+  "id": "ImImagingManifestTypesEuVS",
+  "title": "HL7 EU Imaging Manifest Types",
+  "description": "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+  "url": "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingManifestTypesEuVS",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes",
+        "concept": [
+          {
+            "code": "imaging-manifest-v0-0-1",
+            "display": "Imaging Report V0.0.1"
+          }
+        ]
+      }
+    ]
+  }
+}

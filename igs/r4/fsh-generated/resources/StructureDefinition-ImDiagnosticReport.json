@@ -1,0 +1,407 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImDiagnosticReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImDiagnosticReport",
+  "name": "ImDiagnosticReport",
+  "title": "Imaging Diagnostic Report",
+  "status": "draft",
+  "description": "Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the `Composition` resource that contains the narrative text of the report.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.extension",
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            },
+            {
+              "type": "value",
+              "path": "extension.value"
+            },
+            {
+              "type": "value",
+              "path": "value"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.extension:artifactVersion",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "artifactVersion",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "supportingInfo",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo.extension:type",
+        "path": "DiagnosticReport.extension.extension",
+        "sliceName": "type"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo.extension:type.extension",
+        "path": "DiagnosticReport.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo.extension:type.value[x]",
+        "path": "DiagnosticReport.extension.extension.value[x]",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.eu/fhir/imaging-r4/ValueSet/valueset-diagnosticreport-report-support-info"
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "supportingInfo/procedure",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.extension:type",
+        "path": "DiagnosticReport.extension.extension",
+        "sliceName": "type"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.extension:type.extension",
+        "path": "DiagnosticReport.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.extension:type.value[x]",
+        "path": "DiagnosticReport.extension.extension.value[x]",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "imaging-procedure",
+              "system": "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.extension:reference",
+        "path": "DiagnosticReport.extension.extension",
+        "sliceName": "reference"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.extension:reference.extension",
+        "path": "DiagnosticReport.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.extension:reference.value[x]",
+        "path": "DiagnosticReport.extension.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImProcedure"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:supportingInfo/procedure.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:composition",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "composition",
+        "short": "Imaging Diagnostic Report",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:composition.extension",
+        "path": "DiagnosticReport.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.extension:composition.value[x]",
+        "path": "DiagnosticReport.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImComposition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.identifier",
+        "path": "DiagnosticReport.identifier",
+        "short": "Report identifier",
+        "definition": "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions",
+        "comment": "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
+      },
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DiagnosticReport.basedOn:imorderaccession",
+        "path": "DiagnosticReport.basedOn",
+        "sliceName": "imorderaccession",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImOrder"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.basedOn:imorderaccession.identifier",
+        "path": "DiagnosticReport.basedOn.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-accession-number-identifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "short": "Status of the Report",
+        "comment": "DiagnosticReport.status and Composition.status shall be aligned"
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.category:imaging",
+        "path": "DiagnosticReport.category",
+        "sliceName": "imaging",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "18748-4",
+              "system": "http://loinc.org",
+              "display": "Diagnostic imaging study"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.category:imaging.coding",
+        "path": "DiagnosticReport.category.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.code.coding:eu-template",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "eu-template",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "imaging-report-v0-0-1",
+          "system": "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes",
+          "display": "Imaging Report V0.0.1"
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImPatient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.performer:author",
+        "path": "DiagnosticReport.performer",
+        "sliceName": "author",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter:author",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "sliceName": "author",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.imagingStudy",
+        "path": "DiagnosticReport.imagingStudy",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingStudy"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1322 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.eu.imaging-r4",
+  "url": "http://hl7.eu/fhir/imaging-r4/ImplementationGuide/hl7.fhir.eu.imaging-r4",
+  "version": "0.1.0-ballot",
+  "name": "HL7EuImagingStudyReport",
+  "title": "HL7 Europe Imaging Study Report",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7 Europe",
+  "contact": [
+    {
+      "name": "HL7 Europe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.eu"
+        }
+      ]
+    }
+  ],
+  "description": "This guide describes how a Imaging Study Report can be represented in the European REALM.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "150",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "copyright": "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "packageId": "hl7.fhir.eu.imaging-r4",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.terminology.r5",
+      "version": "6.3.0",
+      "uri": "http://terminology.hl7.org",
+      "id": "hl7_terminology_r5"
+    },
+    {
+      "packageId": "hl7.fhir.uv.extensions",
+      "version": "5.2.0",
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "id": "hl7_fhir_uv_extensions"
+    },
+    {
+      "packageId": "hl7.fhir.uv.ips",
+      "version": "1.1.0",
+      "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+      "id": "hl7_fhir_uv_ips"
+    },
+    {
+      "packageId": "hl7.fhir.eu.extensions",
+      "version": "0.1.1-ballot",
+      "uri": "http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions",
+      "id": "hl7_fhir_eu_extensions"
+    },
+    {
+      "packageId": "hl7.fhir.eu.base",
+      "version": "0.1.0-ballot",
+      "uri": "http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base",
+      "id": "hl7_fhir_eu_base"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSAddress"
+        },
+        "description": "C.5 - EHDS refined base model for Address structure",
+        "exampleBoolean": false,
+        "name": "Address model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSAlertFlag"
+        },
+        "description": "C.22 - EHDS refined base model for Alert flag",
+        "exampleBoolean": false,
+        "name": "Alert flag model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSAllergyIntolerance"
+        },
+        "description": "C.21 - EHDS refined base model for Allergy Intolerance",
+        "exampleBoolean": false,
+        "name": "Allergy intolerance model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSAppointment"
+        },
+        "description": "C.20 - EHDS refined base model for Appointment",
+        "exampleBoolean": false,
+        "name": "Appointment model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSAttachment"
+        },
+        "description": "C.7 - EHDS refined base model for This type is for containing or referencing attachments - additional data content defined in other formats. The most common use of this type is to include images or reports in some report format such as PDF. However, it can be used for any data that has a MIME type.",
+        "exampleBoolean": false,
+        "name": "Attachment model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSAttachments"
+        },
+        "description": "D.1 - EHDS refined base model for Document attachments",
+        "exampleBoolean": false,
+        "name": "Attachments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSCarePlan"
+        },
+        "description": "C.19 - EHDS refined base model for Care plan",
+        "exampleBoolean": false,
+        "name": "Care plan model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSClinicalImpression"
+        },
+        "description": "C.34 - EHDS refined base model for Clinical impression",
+        "exampleBoolean": false,
+        "name": "Clinical impression model"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/codesystem-endpoint-terminology"
+        },
+        "name": "CodeSystem for terminology used in Endpoint resources in the EU Imaging IG.",
+        "description": "This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSCondition"
+        },
+        "description": "C.15 - EHDS refined base model for A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.",
+        "exampleBoolean": false,
+        "name": "Condition model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSCoverage"
+        },
+        "description": "C.31 - EHDS refined base model for Coverage",
+        "exampleBoolean": false,
+        "name": "Coverage model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ext-R5-Device.category"
+        },
+        "description": "This cross-version extension represents Device.category from http://hl7.org/fhir/StructureDefinition/Device|5.0.0 for use in FHIR R4.",
+        "exampleBoolean": false,
+        "name": "Cross-version Extension for R5.Device.category for use in FHIR R4"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ext-R5-DiagnosticReport.composition"
+        },
+        "description": "This cross-version extension represents DiagnosticReport.composition from http://hl7.org/fhir/StructureDefinition/DiagnosticReport|5.0.0 for use in FHIR R4.",
+        "exampleBoolean": false,
+        "name": "Cross-version Extension for R5.DiagnosticReport.composition for use in FHIR R4"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ext-R5-DiagnosticReport.supportingInfo"
+        },
+        "description": "This cross-version extension represents DiagnosticReport.supportingInfo from http://hl7.org/fhir/StructureDefinition/DiagnosticReport|5.0.0 for use in FHIR R4.",
+        "exampleBoolean": false,
+        "name": "Cross-version Extension for R5.DiagnosticReport.supportingInfo for use in FHIR R4"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ext-R5-DocumentReference.basedOn"
+        },
+        "description": "This cross-version extension represents DocumentReference.basedOn from http://hl7.org/fhir/StructureDefinition/DocumentReference|5.0.0 for use in FHIR R4.",
+        "exampleBoolean": false,
+        "name": "Cross-version Extension for R5.DocumentReference.basedOn for use in FHIR R4"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ext-R5-DocumentReference.co.profile"
+        },
+        "description": "This cross-version extension represents DocumentReference.content.profile from http://hl7.org/fhir/StructureDefinition/DocumentReference|5.0.0 for use in FHIR R4.",
+        "exampleBoolean": false,
+        "name": "Cross-version Extension for R5.DocumentReference.content.profile for use in FHIR R4"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ext-R5-ImagingSelection"
+        },
+        "description": "This cross-version extension represents ImagingSelection from http://hl7.org/fhir/StructureDefinition/ImagingSelection|5.0.0 for use in FHIR R4.",
+        "exampleBoolean": false,
+        "name": "Cross-version Extension for R5.ImagingSelection for use in FHIR R4"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSDevice"
+        },
+        "description": "C.12 - EHDS refined base model for Device information",
+        "exampleBoolean": false,
+        "name": "Device model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSDeviceUse"
+        },
+        "description": "C.25 - EHDS refined base model for Device Use",
+        "exampleBoolean": false,
+        "name": "Device use model"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/codesystem-diagnostic-report-support-info"
+        },
+        "name": "Diagnostic Report Support Info Code System",
+        "description": "Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/valueset-diagnosticreport-report-support-info"
+        },
+        "name": "DiagnosticReport supportInfo codes",
+        "description": "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSDispenseDecline"
+        },
+        "description": "Explicit statement about declining the dispense request (prescription), usually recorded in order to communicate the issue back to the prescriber. Reasons for declining a dispense may vary, but typically this statement is only sent when a following action is expected on the prescriber’s side (cancelling or changing the problematic prescription or the whole treatment).",
+        "exampleBoolean": false,
+        "name": "Dispense decline"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImReport"
+        },
+        "name": "Document Bundle for Imaging Report",
+        "description": "Document Bundle for Imaging Report",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-composition-diagnosticReportReference"
+        },
+        "name": "Document DiagnosticReport Reference",
+        "description": "This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSDocumentHeader"
+        },
+        "description": "EHDS refined base model for document header data elements, including the common header for all resources. Data relevant to document type and its content for administrative and searching purposes.",
+        "exampleBoolean": false,
+        "name": "Document header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/cvDocumentReference-bodySite"
+        },
+        "name": "DocumentReference.bodySite extension for R4",
+        "description": "Extension to backport DocumentReference.bodySite in R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DocumentReferenceEu"
+        },
+        "name": "DocumentReferenceEu",
+        "description": "A DocumentReference profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/cvDocumentReference-modality"
+        },
+        "name": "DoocuemntReference.modality extension for R4",
+        "description": "Extension to backport DocumentReference.modality in R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSDosaging"
+        },
+        "description": "Logical model for usage instructions for administring the requested product. Based on FHIR Dosage complex data type. When implemented, this model may be reduced significantly according to the specific use case.",
+        "exampleBoolean": false,
+        "name": "Dosaging model"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-dose-length-units"
+        },
+        "name": "Dose Length Units",
+        "description": "Units for Dose Length.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-effective-dose-units"
+        },
+        "name": "Effective Dose Units",
+        "description": "Units for Effective Dose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSEncounter"
+        },
+        "description": "C.30 - EHDS refined base model for Encounter",
+        "exampleBoolean": false,
+        "name": "Encounter model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSEndpoint"
+        },
+        "description": "C.33 - EHDS refined base model for Endpoint",
+        "exampleBoolean": false,
+        "name": "Endpoint model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSEpisodeOfCare"
+        },
+        "description": "C.29 - EHDS refined base model for Episode of care",
+        "exampleBoolean": false,
+        "name": "Episode of care model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AllergyIntoleranceEu"
+        },
+        "name": "EU AllergyIntolerance",
+        "description": "A allergyintolerance profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BodyStructureEu"
+        },
+        "name": "EU BodyStructure",
+        "description": "BodyStructure profile for the EU",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CarePlanEu"
+        },
+        "name": "EU CarePlan",
+        "description": "Care plan for the patient. \nContains the narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that the care plan could be provided in a structured and coded format.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CompositionEu"
+        },
+        "name": "EU Composition",
+        "description": "Clinical document used to represent a report for the scope of the HL7 Europe project.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConditionEu"
+        },
+        "name": "EU Condition",
+        "description": "A condition profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EncounterEu"
+        },
+        "name": "EU Encounter",
+        "description": "A encounter profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EndpointEu"
+        },
+        "name": "EU Endpoint",
+        "description": "The FHIR endpoint resource with EU specific references.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationEu"
+        },
+        "name": "EU Medication",
+        "description": "A medication profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservationEu"
+        },
+        "name": "EU Observation",
+        "description": "A observation profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ProcedureEu"
+        },
+        "name": "EU Procedure",
+        "description": "A procedure profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/quantity-eu"
+        },
+        "name": "EU Quantity",
+        "description": "A quantity profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/range-eu"
+        },
+        "name": "EU Range",
+        "description": "A range profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SimpleQuantityEu"
+        },
+        "name": "EU SimpleQuantity",
+        "description": "A simple quantity profile for the EU.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImFinding"
+        },
+        "name": "Finding",
+        "description": "Finding during imaging procedure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSFunctionalStatus"
+        },
+        "description": "C.25 - EHDS refined base model for Functional status",
+        "exampleBoolean": false,
+        "name": "Functional status"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImGestationalAgeObservation"
+        },
+        "name": "Gestational Age Observation",
+        "description": "Gestational Age Observation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSGoal"
+        },
+        "description": "C.XX - EHDS refined base model for Goal",
+        "exampleBoolean": false,
+        "name": "Goal model"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-gray-square-units"
+        },
+        "name": "Gray Square Units",
+        "description": "Units for Gray Square.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSGroup"
+        },
+        "description": "C. - EHDS refined base model for Group",
+        "exampleBoolean": false,
+        "name": "Group model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSHealthProfessional"
+        },
+        "description": "C.2 - EHDS refined base model for Health professional (HP) ",
+        "exampleBoolean": false,
+        "name": "Health professional model"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/Hl7EuDocumentTypes"
+        },
+        "name": "HL7 EU Document Types",
+        "description": "Document types (templates) as defined by HL7 EU. It identifies the type and template of the document.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ImImagingManifestTypesEuVS"
+        },
+        "name": "HL7 EU Imaging Manifest Types",
+        "description": "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ImImagingReportTypesEuVS"
+        },
+        "name": "HL7 EU Imaging Report Types",
+        "description": "HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSHospitalDischargeReport"
+        },
+        "description": "A - EHDS refined base model for Hospital Discharge Report",
+        "exampleBoolean": false,
+        "name": "Hospital Discharge Report"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSHospitalDischargeReportHeader"
+        },
+        "description": "A.1 - EHDS refined base model for Hospital Discharge Report header data elements",
+        "exampleBoolean": false,
+        "name": "Hospital Discharge Report header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSHumanName"
+        },
+        "description": "C.27 - EHDS refined base model for Human name",
+        "exampleBoolean": false,
+        "name": "Human name model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImageIidViewerEndpoint"
+        },
+        "name": "IM Image Viewer Endpoint",
+        "description": "This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.\nThe application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingDevice"
+        },
+        "name": "Im Imaging Device",
+        "description": "The device the made the image.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImOrder"
+        },
+        "name": "IM Imaging Order",
+        "description": "This profile on ServiceRequest represents the order for the Imaging Study and report.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImPatient"
+        },
+        "name": "IM Imaging Patient",
+        "description": "This profile on Patient represents the Imaging Patient.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImProcedure"
+        },
+        "name": "IM Imaging Procedure",
+        "description": "This profile on Procedure represents the imaging procedure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingStudy"
+        },
+        "name": "IM Imaging Study",
+        "description": "This profile represents an imaging study instance.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingStudyManifest"
+        },
+        "name": "IM ImagingStudy Manifest",
+        "description": "This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImWadoEndpoint"
+        },
+        "name": "IM WADO Endpoint",
+        "description": "This profile defines the WADO endpoint for accessing imaging study content.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-accession-number-identifier"
+        },
+        "name": "Imaging Accession Number Identifier",
+        "description": "This profile on Identifier represents the Accession Number for the Imaging Order.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImAdverseEvent"
+        },
+        "name": "Imaging Adverse Event",
+        "description": "Adverse Event that occurred during an imaging procedure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImComposition"
+        },
+        "name": "Imaging Composition",
+        "description": "Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-imaging-device-type"
+        },
+        "name": "Imaging Device Type",
+        "description": "Imaging Device Type.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImDiagnosticReport"
+        },
+        "name": "Imaging Diagnostic Report",
+        "description": "Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the `Composition` resource that contains the narrative text of the report.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImKeyImageDocumentReference"
+        },
+        "name": "Imaging Key Image Document Reference",
+        "description": "A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.\n\nWhen the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ImManifestProvider"
+        },
+        "name": "Imaging Manifest Reports Provider/Creator",
+        "description": "This actor is responsible for creating/providing the Imaging Manifest resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-procedure-type"
+        },
+        "name": "Imaging Procedure Type",
+        "description": "This value set includes all imaging procedure types.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSImagingReportBody"
+        },
+        "description": "B.1 - EHDS refined base model for Imaging report body",
+        "exampleBoolean": false,
+        "name": "Imaging report body model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSImagingReportHeader"
+        },
+        "description": "A.1 - EHDS refined base model for Imaging Report header data elements",
+        "exampleBoolean": false,
+        "name": "Imaging report header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSImagingReport"
+        },
+        "description": "A - EHDS refined base model for Imaging Result Report",
+        "exampleBoolean": false,
+        "name": "Imaging report model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingSelection"
+        },
+        "name": "Imaging Selection profile for R4",
+        "description": "Imaging Selection profile for R4",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImSrInstanceImagingSelection"
+        },
+        "name": "Imaging Selection referring to a DICOM SR instance for R4",
+        "description": "Imaging Selection referring to a DICOM SR instance for R4",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-sop-instance-uid-identifier"
+        },
+        "name": "Imaging SOP Class UID Identifier",
+        "description": "This profile on Identifier represents the SOP Class UID (0008,0018) for the Imaging Order.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSImagingStudy"
+        },
+        "description": "C.32 - EHDS refined base model for Imaging study",
+        "exampleBoolean": false,
+        "name": "Imaging study model"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-imaging-study-performer-type"
+        },
+        "name": "Imaging Study Performer Type Value Set",
+        "description": "Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ImReportProvider"
+        },
+        "name": "Imaging Study Report Provider/Creator",
+        "description": "The actor responsible for creating/providing the Imaging Report resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSImmunization"
+        },
+        "description": "C.24 - EHDS refined base model for Immunization",
+        "exampleBoolean": false,
+        "name": "Immunization model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSInpatientEncounter"
+        },
+        "description": "C.23 - EHDS refined base model for Inpatient encounter",
+        "exampleBoolean": false,
+        "name": "Inpatient encounter model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/instance-description"
+        },
+        "name": "Instance Description",
+        "description": "A description of the instance in an ImagingStudy.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImKeyImageImagingSelection"
+        },
+        "name": "Key images represented as an ImagingSelection for R4",
+        "description": "Key images represented as an ImagingSelection for R4",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryObservation"
+        },
+        "description": "C.11 - EHDS refined base model for Observation performed by laboratory",
+        "exampleBoolean": false,
+        "name": "Laboratory observation model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryOrder"
+        },
+        "description": "A - EHDS refined base model for Laboratory order",
+        "exampleBoolean": false,
+        "name": "Laboratory order"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryOrderBody"
+        },
+        "description": "B.1 - EHDS refined base model for Laboratory order body",
+        "exampleBoolean": false,
+        "name": "Laboratory order body model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryOrderHeader"
+        },
+        "description": "A.1 - EHDS refined base model for Laboratory order header data elements",
+        "exampleBoolean": false,
+        "name": "Laboratory order header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryReportBody"
+        },
+        "description": "B.1 - EEHRxF refined base model for Laboratory result report body",
+        "exampleBoolean": false,
+        "name": "Laboratory report body model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryReportHeader"
+        },
+        "description": "A.1 - EHDS refined base model for laboratory report header data elements",
+        "exampleBoolean": false,
+        "name": "Laboratory report header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLaboratoryReport"
+        },
+        "description": "A - EHDS refined base model for Laboratory result report",
+        "exampleBoolean": false,
+        "name": "Laboratory report model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSLocation"
+        },
+        "description": "C.17 - EHDS refined base model for Details and position information for a place where services are provided and resources and participants may be stored, found, contained, or accommodated.",
+        "exampleBoolean": false,
+        "name": "Location model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImManifestIheMhdDocumentReference"
+        },
+        "name": "Manifest DocumentReference for MHD deployments",
+        "description": "A DocumentReference profile for the Manifest DocumentReference used in MHD deployments. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedia"
+        },
+        "description": "C.14 - EHDS refined base model for A photo, video, or audio recording acquired or used in healthcare.",
+        "exampleBoolean": false,
+        "name": "Media model"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/media-view"
+        },
+        "name": "Media View types - placeholder for cross-version extension",
+        "description": "Codes defined in SNOMED CT that can be used to record Media Recording views.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CrossVersionMediaViewExtension"
+        },
+        "name": "Media.view extension",
+        "description": "This cross version extension includes the FHIR R4 version of the Media.view field which has at this point in time (April 18, 2025), not yet been included in the extension pack.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedicationAdministration"
+        },
+        "description": "C.18 - EHDS refined base model for Medication administration",
+        "exampleBoolean": false,
+        "name": "Medication administration model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedicationDispense"
+        },
+        "description": "Logical model for medication dispensation (based on request or independently)",
+        "exampleBoolean": false,
+        "name": "Medication dispensation model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedicationDispenseHeader"
+        },
+        "description": "Metadata elements for a header of medication dispense or dispense decline.",
+        "exampleBoolean": false,
+        "name": "Medication dispense header"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedicationPrescriptionHeader"
+        },
+        "description": "Logical model for medication prescription header.",
+        "exampleBoolean": false,
+        "name": "Medication prescription header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedicationPrescription"
+        },
+        "description": "Logical model for medication prescription body. A prescription contains one or more prescription items.",
+        "exampleBoolean": false,
+        "name": "Medication prescription model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSMedication"
+        },
+        "description": "Logical model for prescribed/dispensed medication. The model is shared by statements, requests, dispensations, and treatment lines. Each of those may have different restrictions in FHIR profile.",
+        "exampleBoolean": false,
+        "name": "Medicinal product model"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/codesystem-missing-dicom-terminology"
+        },
+        "name": "Missing DICOM Terminology",
+        "description": "Code system for codes that are defined in DICOM but for which no matching code system is available in FHIR.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSObservation"
+        },
+        "description": "C.10 - EHDS refined base model for Observation information",
+        "exampleBoolean": false,
+        "name": "Observation model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSOrganization"
+        },
+        "description": "C.3 - EHDS refined base model for Health provider or any other type of organization",
+        "exampleBoolean": false,
+        "name": "Organization model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSPatient"
+        },
+        "description": "C.1 - EHDS refined base model for Patient/subject information",
+        "exampleBoolean": false,
+        "name": "Patient model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSPatientSummaryBody"
+        },
+        "description": "B.1 - EHDS refined base model for Patient Summary body data elements",
+        "exampleBoolean": false,
+        "name": "Patient summary body model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSPatientSummaryHeader"
+        },
+        "description": "A.1 - EHDS refined base model for Patient Summary header data elements",
+        "exampleBoolean": false,
+        "name": "Patient summary header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSPatientSummary"
+        },
+        "description": "A - EHDS refined base model for Patient Summary Report",
+        "exampleBoolean": false,
+        "name": "Patient summary model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PatientAnimalEu"
+        },
+        "name": "Patient: Animal",
+        "description": "This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide. This is used (among others) to identify the species when a specimen is collected from an animal.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/periods-of-life-value-set"
+        },
+        "name": "Periods of Life",
+        "description": "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/periods-of-life-extension"
+        },
+        "name": "Periods of Life Extension",
+        "description": "Allows to indicate a time period in a person's life as a reference to a coded value for that life period.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IheMhdEntryUUIDIdentifier"
+        },
+        "name": "Placeholder for IHE MHD Entry UUID Identifier in FHIR R5.",
+        "description": "entryUUID Identifier holding a UUID, based on [IHE-MHD R4](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSProcedure"
+        },
+        "description": "C.16 - EHDS refined base model for An action that is or was performed on or for a patient",
+        "exampleBoolean": false,
+        "name": "Procedure model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImIheMhdDocumentReference"
+        },
+        "name": "r4 DocumentReference for MHD deployments",
+        "description": "A placeholder for a DocumentReference profile for the IHE-MHD in r4. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImRadiationDoseObservation"
+        },
+        "name": "Radiation Dose Observation",
+        "description": "A record for the radiation dose the subject has been exposed to during an imaging procedure.\nE.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html and https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/index.html",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ImSectionEmptyReason"
+        },
+        "name": "Reasons a section in an imaging report is empty.",
+        "description": "Reasons a section in an imaging report is empty.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSRelatedPerson"
+        },
+        "description": "C.13 - EHDS refined base model for Patient/subject guardian and other related person information",
+        "exampleBoolean": false,
+        "name": "Related person model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/RelatedPersonEu"
+        },
+        "name": "RelatedPerson Eu",
+        "description": "EU Related Person.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImReportIheMhdDocumentReference"
+        },
+        "name": "Report DocumentReference for MHD deployments",
+        "description": "A DocumentReference profile for the Report DocumentReference used in MHD deployments. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSReportHeader"
+        },
+        "description": "EHDS refined base model for Report header data elements. Common for hospital discharge, laboratory and medical imaging reports.",
+        "exampleBoolean": false,
+        "name": "Report header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSCommonHeader"
+        },
+        "description": "Common header elements for all documents and their independently functioning parts, e.g FHIR resources.",
+        "exampleBoolean": false,
+        "name": "Resource header model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSServiceRequest"
+        },
+        "description": "C.8 - EHDS refined base model for Specification of requested service or services",
+        "exampleBoolean": false,
+        "name": "Service request model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/cvServiceRequest-reason"
+        },
+        "name": "ServiceRequest.reason extension for R4",
+        "description": "Extension to backport ServiceRequest.reason in R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSSlot"
+        },
+        "description": "C.XX - EHDS refined base model for Slot",
+        "exampleBoolean": false,
+        "name": "Slot model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSSpecimen"
+        },
+        "description": "C.9 - EHDS refined base model for Specimen information",
+        "exampleBoolean": false,
+        "name": "Specimen model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SpecimenEu"
+        },
+        "name": "Specimen: Laboratory",
+        "description": "This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-study-instance-uid-identifier"
+        },
+        "name": "Study Instance UID Identifier",
+        "description": "This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSSubstance"
+        },
+        "description": "C.28 - EHDS refined base model for Substance",
+        "exampleBoolean": false,
+        "name": "Substance model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CvServiceRequestSupportingInfoCodeableConcept"
+        },
+        "name": "SupportingInfo CodeableConcept extension for R4",
+        "description": "SupportingInfo CodeableConcept extension for R4.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSTask"
+        },
+        "description": "C.20 - EHDS refined base model for Task",
+        "exampleBoolean": false,
+        "name": "Task model"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EHDSTelecom"
+        },
+        "description": "C.6 - EHDS refined base model for Telecommunication contact information structure",
+        "exampleBoolean": false,
+        "name": "Telecom model"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "changes.html",
+              "title": "Changes",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "adapting.html",
+              "title": "Adapting Guidelines for Country use",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "contributors.html",
+              "title": "Contributors",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "actors-and-transactions.html",
+          "title": "Actors and Transactions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "xtehr.html",
+          "title": "XtEHR",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "xtehr-logical-model.html",
+              "title": "XtEHR Logical Model",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "xtehr-mapping.html",
+              "title": "Mapping to XtEHR Logical Model",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Deployment profiles",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "imaging-manifest.html",
+              "title": "Imaging Manifest",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "imaging-report.html",
+              "title": "Imaging Report",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "design-considerations.html",
+          "title": "Design Considerations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "artifacts-intro.html",
+          "title": "Artifacts",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "artifacts-structural.html",
+              "title": "Structural artifacts",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "apply-contact",
+        "value": "false"
+      },
+      {
+        "code": "default-contact",
+        "value": "true"
+      },
+      {
+        "code": "default-copyright",
+        "value": "true"
+      },
+      {
+        "code": "apply-copyright",
+        "value": "false"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-license",
+        "value": "false"
+      },
+      {
+        "code": "default-license",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      },
+      {
+        "code": "default-version",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "usage-stats-opt-out",
+        "value": "true"
+      },
+      {
+        "code": "releaselabel",
+        "value": "0.1.0-ballot"
+      },
+      {
+        "code": "special-url-base",
+        "value": "https://www.xt-ehr.eu/specifications/fhir"
+      }
+    ]
+  }
+}
