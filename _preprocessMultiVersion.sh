@@ -20,6 +20,12 @@ for version in "${versions[@]}"; do
     cp sushi-config.yaml "$build_dir/sushi-config.yaml"
     rm sushi-config.yaml
 
+    # Process ig.liquid.ini
+    echo "Processing ig.liquid.ini for version $version"
+    npx --yes liquidjs -t @"IG-base/ig.liquid.ini" --context @"context-${context_version}.json" > "ig.ini"
+    cp ig.ini "$build_dir/ig.ini"
+    rm ig.ini
+
     # Process all liquid FSH files
     find IG-base/input/fsh -type f -name "*.liquid.fsh" | while read file; do
         if [ -f "$file" ]; then
