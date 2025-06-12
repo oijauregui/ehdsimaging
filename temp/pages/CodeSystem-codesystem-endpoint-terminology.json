@@ -1,0 +1,46 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "codesystem-endpoint-terminology",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem codesystem-endpoint-terminology</b></p><a name=\"codesystem-endpoint-terminology\"> </a><a name=\"hccodesystem-endpoint-terminology\"> </a><a name=\"codesystem-endpoint-terminology-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-endpoint-terminology</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">connection-type<a name=\"codesystem-endpoint-terminology-connection-type\"> </a></td><td>Endpoint connection type</td><td>The type of connection that the endpoint supports.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0ihe-iid<a name=\"codesystem-endpoint-terminology-ihe-iid\"> </a></td><td>IHE IID endpoint</td><td>IHE IID endpoint connection type.</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-endpoint-terminology",
+  "version" : "0.1.0-ballot",
+  "name" : "Hl7EuImagingEndpointTerminologyCodeSystem",
+  "title" : "CodeSystem for terminology used in Endpoint resources in the EU Imaging IG.",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-06-12T11:22:03+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "connection-type",
+    "display" : "Endpoint connection type",
+    "definition" : "The type of connection that the endpoint supports.",
+    "concept" : [{
+      "code" : "ihe-iid",
+      "display" : "IHE IID endpoint",
+      "definition" : "IHE IID endpoint connection type."
+    }]
+  }]
+}

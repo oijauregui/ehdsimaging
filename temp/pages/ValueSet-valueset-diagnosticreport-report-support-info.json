@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "valueset-diagnosticreport-report-support-info",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet valueset-diagnosticreport-report-support-info</b></p><a name=\"valueset-diagnosticreport-report-support-info\"> </a><a name=\"hcvalueset-diagnosticreport-report-support-info\"> </a><a name=\"valueset-diagnosticreport-report-support-info-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-codesystem-diagnostic-report-support-info.html\"><code>http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info</code></a></li></ul></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/valueset-diagnosticreport-report-support-info",
+  "version" : "0.1.0-ballot",
+  "name" : "DiagnosticReportSupportingInfoVCodes",
+  "title" : "DiagnosticReport supportInfo codes",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-06-12T11:22:03+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info"
+    }]
+  }
+}

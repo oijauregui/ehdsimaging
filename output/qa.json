@@ -1,0 +1,15 @@
+{
+  "url" : "http://hl7.eu/fhir/imaging-r4/ImplementationGuide/hl7.fhir.eu.imaging-r4",
+  "name" : "HL7EuImagingStudyReport",
+  "title" : "HL7 Europe Imaging Study Report",
+  "description" : "This guide describes how a Imaging Study Report can be represented in the European REALM.",
+  "status" : "draft",
+  "package-id" : "hl7.fhir.eu.imaging-r4",
+  "ig-ver" : "0.1.0-ballot",
+  "date" : "Thu, 12 Jun, 2025 11:24:32 +0000",
+  "dateISO8601" : "2025-06-12T11:24:32+00:00",
+  "exception" : "javax.xml.transform.TransformerFactoryConfigurationError: Provider for class javax.xml.transform.TransformerFactory cannot be created",
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1368665024
+}

@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-missing-dicom-terminology> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "codesystem-missing-dicom-terminology"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem codesystem-missing-dicom-terminology</b></p><a name=\"codesystem-missing-dicom-terminology\"> </a><a name=\"hccodesystem-missing-dicom-terminology\"> </a><a name=\"codesystem-missing-dicom-terminology-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-missing-dicom-terminology</code> provides <b>a fragment</b> that includes following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">elements<a name=\"codesystem-missing-dicom-terminology-elements\"> </a></td><td>DICOM Elements</td><td>DICOM Element definitions</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00080016<a name=\"codesystem-missing-dicom-terminology-00080016\"> </a></td><td>SOP Class UID</td><td>Uniquely identifies the SOP Class.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00080018<a name=\"codesystem-missing-dicom-terminology-00080018\"> </a></td><td>SOP Instance UID</td><td>Uniquely identifies the SOP Instance.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00080060<a name=\"codesystem-missing-dicom-terminology-00080060\"> </a></td><td>Modality</td><td>Type of device, process or method that originally acquired or produced the data used to create the Instances in this Series.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00083010<a name=\"codesystem-missing-dicom-terminology-00083010\"> </a></td><td>Irradiation Event UID</td><td>Irradiation Event UID</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00181000<a name=\"codesystem-missing-dicom-terminology-00181000\"> </a></td><td>Device Serial Number</td><td>Device Serial Number</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00181002<a name=\"codesystem-missing-dicom-terminology-00181002\"> </a></td><td>Device UID</td><td>Unique identifier of the equipment.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00181008<a name=\"codesystem-missing-dicom-terminology-00181008\"> </a></td><td>Manufacturer Device Class UID</td><td>Manufacturer Device Class UID</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0020000D<a name=\"codesystem-missing-dicom-terminology-0020000D\"> </a></td><td>Study Instance UID</td><td>Unique identifier for the Study.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0020000E<a name=\"codesystem-missing-dicom-terminology-0020000E\"> </a></td><td>Series Instance UID</td><td>Unique identifier of the Series.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00080050<a name=\"codesystem-missing-dicom-terminology-00080050\"> </a></td><td>Accession Number</td><td>A departmental Information System generated number that identifies the Imaging Service Request.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0040A171<a name=\"codesystem-missing-dicom-terminology-0040A171\"> </a></td><td>Observation UID</td><td>Unique identifier for the observation Content Item (and its subsidiary Content Items, if any). The UID represents the semantic content of the observation; an encoding of the same observation with the same context into another representation (e.g., a CDA Entry) may use the same UID.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00400554<a name=\"codesystem-missing-dicom-terminology-00400554\"> </a></td><td>Specimen UID</td><td>Unique identifier for the Specimen.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  00620021<a name=\"codesystem-missing-dicom-terminology-00620021\"> </a></td><td>Tracking UID</td><td>A unique identifier used for tracking a finding or feature, potentially across multiple reporting objects, over time.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-missing-dicom-terminology"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "MissingDicomTerminology"] ; # 
+  fhir:title [ fhir:v "Missing DICOM Terminology"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-06-12T11:22:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code system for codes that are defined in DICOM but for which no matching code system is available in FHIR."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "fragment"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "elements" ] ;
+     fhir:display [ fhir:v "DICOM Elements" ] ;
+     fhir:definition [ fhir:v "DICOM Element definitions" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "00080016" ] ;
+       fhir:display [ fhir:v "SOP Class UID" ] ;
+       fhir:definition [ fhir:v "Uniquely identifies the SOP Class." ]
+     ] [
+       fhir:code [ fhir:v "00080018" ] ;
+       fhir:display [ fhir:v "SOP Instance UID" ] ;
+       fhir:definition [ fhir:v "Uniquely identifies the SOP Instance." ]
+     ] [
+       fhir:code [ fhir:v "00080060" ] ;
+       fhir:display [ fhir:v "Modality" ] ;
+       fhir:definition [ fhir:v "Type of device, process or method that originally acquired or produced the data used to create the Instances in this Series." ]
+     ] [
+       fhir:code [ fhir:v "00083010" ] ;
+       fhir:display [ fhir:v "Irradiation Event UID" ] ;
+       fhir:definition [ fhir:v "Irradiation Event UID" ]
+     ] [
+       fhir:code [ fhir:v "00181000" ] ;
+       fhir:display [ fhir:v "Device Serial Number" ] ;
+       fhir:definition [ fhir:v "Device Serial Number" ]
+     ] [
+       fhir:code [ fhir:v "00181002" ] ;
+       fhir:display [ fhir:v "Device UID" ] ;
+       fhir:definition [ fhir:v "Unique identifier of the equipment." ]
+     ] [
+       fhir:code [ fhir:v "00181008" ] ;
+       fhir:display [ fhir:v "Manufacturer Device Class UID" ] ;
+       fhir:definition [ fhir:v "Manufacturer Device Class UID" ]
+     ] [
+       fhir:code [ fhir:v "0020000D" ] ;
+       fhir:display [ fhir:v "Study Instance UID" ] ;
+       fhir:definition [ fhir:v "Unique identifier for the Study." ]
+     ] [
+       fhir:code [ fhir:v "0020000E" ] ;
+       fhir:display [ fhir:v "Series Instance UID" ] ;
+       fhir:definition [ fhir:v "Unique identifier of the Series." ]
+     ] [
+       fhir:code [ fhir:v "00080050" ] ;
+       fhir:display [ fhir:v "Accession Number" ] ;
+       fhir:definition [ fhir:v "A departmental Information System generated number that identifies the Imaging Service Request." ]
+     ] [
+       fhir:code [ fhir:v "0040A171" ] ;
+       fhir:display [ fhir:v "Observation UID" ] ;
+       fhir:definition [ fhir:v "Unique identifier for the observation Content Item (and its subsidiary Content Items, if any). The UID represents the semantic content of the observation; an encoding of the same observation with the same context into another representation (e.g., a CDA Entry) may use the same UID." ]
+     ] [
+       fhir:code [ fhir:v "00400554" ] ;
+       fhir:display [ fhir:v "Specimen UID" ] ;
+       fhir:definition [ fhir:v "Unique identifier for the Specimen." ]
+     ] [
+       fhir:code [ fhir:v "00620021" ] ;
+       fhir:display [ fhir:v "Tracking UID" ] ;
+       fhir:definition [ fhir:v "A unique identifier used for tracking a finding or feature, potentially across multiple reporting objects, over time." ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
