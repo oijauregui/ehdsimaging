@@ -1,0 +1,10 @@
+{
+  "https://hl7.org/fhir/R5/valueset-body-site.html" : null,
+  "http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1" : null,
+  "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4" : null,
+  "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html" : null,
+  "http://www.rsna.org/RadLex_Playbook.aspx" : null,
+  "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4" : null,
+  "http://hl7.org/fhir/ValueSet/device-category" : null,
+  "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4" : null
+}

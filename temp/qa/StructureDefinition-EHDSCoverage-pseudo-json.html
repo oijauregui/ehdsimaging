@@ -1,0 +1,20 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-EHDSCoverage-pseudo-json</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ // <span style="color: navy; opacity: 0.8">Coverage model</span>
+ {
+// from Element: <a href="http://hl7.org/fhir/R4/extensibility.html">extension</a>
+    "<a href="StructureDefinition-EHDSCoverage.html#EHDSCoverage.identifier" title="Business Identifier for the coverage" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.31.1 - Identifier</span>
+    "<a href="StructureDefinition-EHDSCoverage.html#EHDSCoverage.type" title="The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization" class="dict"><span style="text-decoration: underline">type</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.31.2 - Type</span>
+    "<a href="StructureDefinition-EHDSCoverage.html#EHDSCoverage.patient" title="Patient who benefits from the insurance coverage when products and/or services are provided" class="dict"><span style="text-decoration: underline">patient</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient]])}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">C.31.3 - Patient</span>
+    "<a href="StructureDefinition-EHDSCoverage.html#EHDSCoverage.payor" title="Payor including both insurance and non-insurance agreements, such as patient-pay agreements" class="dict"><span style="text-decoration: underline">payor</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">C.31.4 - Payor</span>
+      "<a href="StructureDefinition-EHDSCoverage.html#EHDSCoverage.payor.payorEntity" title="Payor entity" class="dict"><span style="text-decoration: underline">payorEntity</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization], CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient]])}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">C.31.4.1 - Payor entity</span>
+      "<a href="StructureDefinition-EHDSCoverage.html#EHDSCoverage.payor.subscriberId" title="Number or code under which the insured person is registered at the insurance provider" class="dict"><span style="text-decoration: underline">subscriberId</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></span>} <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.31.4.2 - Subscriber Id</span>
+    }]
+  }
+</body>
+</html>

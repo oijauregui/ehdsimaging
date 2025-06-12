@@ -1,0 +1,66 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>sql-4-fragment</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="lines"><tr><td style="background-color: #eeeeee">Name</td><td style="background-color: #eeeeee">Title</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="StructureDefinition-im-accession-number-identifier.html">ImAccessionNumberIdentifier</a></td><td><div><p>Imaging Accession Number Identifier</p>
+</div></td><td><div><p>This profile on Identifier represents the Accession Number for the Imaging Order.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImAdverseEvent.html">ImAdverseEvent</a></td><td><div><p>Imaging Adverse Event</p>
+</div></td><td><div><p>Adverse Event that occurred during an imaging procedure.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImComposition.html">ImComposition</a></td><td><div><p>Imaging Composition</p>
+</div></td><td><div><p>Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImDiagnosticReport.html">ImDiagnosticReport</a></td><td><div><p>Imaging Diagnostic Report</p>
+</div></td><td><div><p>Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the <code>Composition</code> resource that contains the narrative text of the report.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-im-composition-diagnosticReportReference.html">ImDiagnosticReportReference</a></td><td><div><p>Document DiagnosticReport Reference</p>
+</div></td><td><div><p>This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImFinding.html">ImFinding</a></td><td><div><p>Finding</p>
+</div></td><td><div><p>Finding during imaging procedure.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImGestationalAgeObservation.html">ImGestationalAgeObservation</a></td><td><div><p>Gestational Age Observation</p>
+</div></td><td><div><p>Gestational Age Observation</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImIheMhdDocumentReference.html">ImIheMhdDocumentReference</a></td><td><div><p>r4 DocumentReference for MHD deployments</p>
+</div></td><td><div><p>A placeholder for a DocumentReference profile for the IHE-MHD in r4.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImageIidViewerEndpoint.html">ImImageIidViewerEndpoint</a></td><td><div><p>IM Image Viewer Endpoint</p>
+</div></td><td><div><p>This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.
+The application is based on <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf">IHE-IID</a>.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingDevice.html">ImImagingDevice</a></td><td><div><p>Im Imaging Device</p>
+</div></td><td><div><p>The device the made the image.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingSelection.html">ImImagingSelection</a></td><td><div><p>Imaging Selection profile for R4</p>
+</div></td><td><div><p>Imaging Selection profile for R4</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingStudy.html">ImImagingStudy</a></td><td><div><p>IM Imaging Study</p>
+</div></td><td><div><p>This profile represents an imaging study instance.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-instance-description.html">ImImagingStudyInstanceDescription</a></td><td><div><p>Instance Description</p>
+</div></td><td><div><p>A description of the instance in an ImagingStudy.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingStudyManifest.html">ImImagingStudyManifest</a></td><td><div><p>IM ImagingStudy Manifest</p>
+</div></td><td><div><p>This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImKeyImageDocumentReference.html">ImKeyImageDocumentReference</a></td><td><div><p>Imaging Key Image Document Reference</p>
+</div></td><td><div><p>A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.</p>
+<p>When the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImKeyImageImagingSelection.html">ImKeyImageImagingSelection</a></td><td><div><p>Key images represented as an ImagingSelection for R4</p>
+</div></td><td><div><p>Key images represented as an ImagingSelection for R4</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImManifestIheMhdDocumentReference.html">ImManifestIheMhdDocumentReference</a></td><td><div><p>Manifest DocumentReference for MHD deployments</p>
+</div></td><td><div><p>A DocumentReference profile for the Manifest DocumentReference used in MHD deployments.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImOrder.html">ImOrder</a></td><td><div><p>IM Imaging Order</p>
+</div></td><td><div><p>This profile on ServiceRequest represents the order for the Imaging Study and report.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImPatient.html">ImPatient</a></td><td><div><p>IM Imaging Patient</p>
+</div></td><td><div><p>This profile on Patient represents the Imaging Patient.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImProcedure.html">ImProcedure</a></td><td><div><p>IM Imaging Procedure</p>
+</div></td><td><div><p>This profile on Procedure represents the imaging procedure.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImRadiationDoseObservation.html">ImRadiationDoseObservation</a></td><td><div><p>Radiation Dose Observation</p>
+</div></td><td><div><p>A record for the radiation dose the subject has been exposed to during an imaging procedure.
+E.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html and https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/index.html</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImReport.html">ImReport</a></td><td><div><p>Document Bundle for Imaging Report</p>
+</div></td><td><div><p>Document Bundle for Imaging Report</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImReportIheMhdDocumentReference.html">ImReportIheMhdDocumentReference</a></td><td><div><p>Report DocumentReference for MHD deployments</p>
+</div></td><td><div><p>A DocumentReference profile for the Report DocumentReference used in MHD deployments.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-im-sop-instance-uid-identifier.html">ImSopInstanceUidIdentifier</a></td><td><div><p>Imaging SOP Class UID Identifier</p>
+</div></td><td><div><p>This profile on Identifier represents the SOP Class UID (0008,0018) for the Imaging Order.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImSrInstanceImagingSelection.html">ImSrInstanceImagingSelection</a></td><td><div><p>Imaging Selection referring to a DICOM SR instance for R4</p>
+</div></td><td><div><p>Imaging Selection referring to a DICOM SR instance for R4</p>
+</div></td></tr><tr><td><a href="StructureDefinition-im-study-instance-uid-identifier.html">ImStudyInstanceUidIdentifier</a></td><td><div><p>Study Instance UID Identifier</p>
+</div></td><td><div><p>This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImWadoEndpoint.html">ImWadoEndpoint</a></td><td><div><p>IM WADO Endpoint</p>
+</div></td><td><div><p>This profile defines the WADO endpoint for accessing imaging study content.</p>
+</div></td></tr></table></body>
+</html>

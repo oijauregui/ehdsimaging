@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-ImKeyImageDocumentReference-header</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<p class="profile-url-label">
+The official URL for this profile is:
+</p>
+<pre class="profile-url">http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImKeyImageDocumentReference</pre>
+<div class="profile-description">
+<p>A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.</p>
+<p>When the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element.</p>
+</div>
+<p class="profile-derivation">
+This profile builds on <a href="StructureDefinition-DocumentReferenceEu.html">DocumentReferenceEu</a>.</p>
+<p class="profile-publication">
+This profile was published on 2025-06-12 09:48:56+0000 as a draft by HL7 Europe
+</p>
+</body>
+</html>

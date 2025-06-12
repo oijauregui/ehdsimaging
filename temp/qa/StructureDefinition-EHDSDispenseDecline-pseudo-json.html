@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-EHDSDispenseDecline-pseudo-json</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ // <span style="color: navy; opacity: 0.8">Dispense decline</span>
+ {
+// from Element: <a href="http://hl7.org/fhir/R4/extensibility.html">extension</a>
+    "<a href="StructureDefinition-EHDSDispenseDecline.html#EHDSDispenseDecline.header" title="Header level metadata about the dispense decline" class="dict"><span style="text-decoration: underline">header</span></a>" : {<span style="color: darkgreen"><a href="StructureDefinition-EHDSMedicationDispenseHeader.html#https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationDispenseHeader">https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationDispenseHeader</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Header level metadata about the dispense decline.</span>
+    "<a href="StructureDefinition-EHDSDispenseDecline.html#EHDSDispenseDecline.relatedRequest" title="TODO Prescription when oneliner, item when multiple" class="dict"><span style="text-decoration: underline">relatedRequest</span></a>" : [{<span style="color: darkgreen"><a href="StructureDefinition-EHDSMedicationPrescription.html#https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescription">https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescription</a></span>}], <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">The single-line prescription or prescription line item that was declined by the dispenser</span>
+<span style="color: Gray">// reason[x]: <span style="color: navy; opacity: 0.8">Reason for not performing the dispensation.</span>. One of these 2:</span>
+    "<a href="StructureDefinition-EHDSDispenseDecline.html#EHDSDispenseDecline.reasonCodeableConcept" title="Reason for not performing the dispensation" class="dict"><span style="text-decoration: underline">reasonCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Reason for not performing the dispensation.</span>
+    "<a href="StructureDefinition-EHDSDispenseDecline.html#EHDSDispenseDecline.reasonString" title="Reason for not performing the dispensation" class="dict"><span style="text-decoration: underline">reasonString</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Reason for not performing the dispensation.</span>
+    "<a href="StructureDefinition-EHDSDispenseDecline.html#EHDSDispenseDecline.comment" title="Additional information about why the dispensation was declined" class="dict"><span style="text-decoration: underline">comment</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Additional information about why the dispensation was declined.</span>
+  }
+</body>
+</html>

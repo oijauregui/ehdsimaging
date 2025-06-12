@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-ext-R5-DiagnosticReport.composition-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>invalid</td><td>StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition')</td><td>Conformance resource /home/publisher/ig/input/resources/StructureDefinition-ext-R5-DiagnosticReport.composition.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DiagnosticReport.composition) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition)</td><td></td></tr>
+<tr><td>error</td><td>invariant</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.snapshot</td><td>Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'</td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.snapshot.element[5]</td><td>Duplicate id value 'Extension.url'</td><td></td></tr>
+<tr><td>error</td><td>structure</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.differential.element[1].base</td><td>ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)</td><td></td></tr>
+<tr><td>error</td><td>structure</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.differential.element[1].base</td><td>ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)</td><td></td></tr>
+<tr><td>error</td><td>invariant</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition</td><td>Constraint failed: sdf-16: 'All element definitions must have unique ids (snapshot)' (ids: Extension,Extension.id,Extension.extension,Extension.url,Extension.value[x],Extension.url) (log:  (ids: Extension,Extension.id,Extension.extension,Extension.url,Extension.value[x],Extension.url))</td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition</td><td>When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension</td><td></td></tr>
+<tr><td>error</td><td>exception</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.snapshot.element[5]</td><td>The element Extension.url has no assigned types, and no content reference</td><td></td></tr>
+<tr><td>warning</td><td>invariant</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition</td><td>Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'</td><td></td></tr>
+<tr><td>warning</td><td>business-rule</td><td>StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition')</td><td>The Implementation Guide contains no examples for this extension</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1</td><td></td></tr>
+</table>
+</body>
+</html>

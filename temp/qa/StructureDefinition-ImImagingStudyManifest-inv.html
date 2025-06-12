@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-ImImagingStudyManifest-inv</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>bdl-1</td><td>error</td><td>Bundle</td><td>total only when a search or history<br/>: total.empty() or (type = 'searchset') or (type = 'history')</td><td></td></tr>
+<tr><td>bdl-2</td><td>error</td><td>Bundle</td><td>entry.search only when a search<br/>: entry.search.empty() or (type = 'searchset')</td><td></td></tr>
+<tr><td>bdl-3</td><td>error</td><td>Bundle</td><td>entry.request mandatory for batch/transaction/history, otherwise prohibited<br/>: entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))</td><td></td></tr>
+<tr><td>bdl-4</td><td>error</td><td>Bundle</td><td>entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited<br/>: entry.all(response.exists() = (%resource.type = 'batch-response' or %resource.type = 'transaction-response' or %resource.type = 'history'))</td><td></td></tr>
+<tr><td>bdl-5</td><td>error</td><td>Bundle.entry, Bundle.entry:imagingstudy, Bundle.entry:patient, Bundle.entry:order, Bundle.entry:endpoint, Bundle.entry:imagingdevice, Bundle.entry:practitioner</td><td>must be a resource unless there's a request or response<br/>: resource.exists() or request.exists() or response.exists()</td><td></td></tr>
+<tr><td>bdl-7</td><td>error</td><td>Bundle</td><td>FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles)<br/>: (type = 'history') or entry.where(fullUrl.exists()).select(fullUrl&amp;resource.meta.versionId).isDistinct()</td><td></td></tr>
+<tr><td>bdl-8</td><td>error</td><td>Bundle.entry, Bundle.entry:imagingstudy, Bundle.entry:patient, Bundle.entry:order, Bundle.entry:endpoint, Bundle.entry:imagingdevice, Bundle.entry:practitioner</td><td>fullUrl cannot be a version specific reference<br/>: fullUrl.contains('/_history/').not()</td><td></td></tr>
+<tr><td>bdl-9</td><td>error</td><td>Bundle</td><td>A document must have an identifier with a system and a value<br/>: type = 'document' implies (identifier.system.exists() and identifier.value.exists())</td><td></td></tr>
+<tr><td>bdl-10</td><td>error</td><td>Bundle</td><td>A document must have a date<br/>: type = 'document' implies (timestamp.hasValue())</td><td></td></tr>
+<tr><td>bdl-11</td><td>error</td><td>Bundle</td><td>A document must have a Composition as the first resource<br/>: type = 'document' implies entry.first().resource.is(Composition)</td><td></td></tr>
+<tr><td>bdl-12</td><td>error</td><td>Bundle</td><td>A message must have a MessageHeader as the first resource<br/>: type = 'message' implies entry.first().resource.is(MessageHeader)</td><td></td></tr>
+<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+</table>
+</body>
+</html>

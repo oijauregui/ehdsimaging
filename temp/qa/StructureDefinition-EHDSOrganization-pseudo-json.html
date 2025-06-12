@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-EHDSOrganization-pseudo-json</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ // <span style="color: navy; opacity: 0.8">Organization model</span>
+ {
+// from Element: <a href="http://hl7.org/fhir/R4/extensibility.html">extension</a>
+    "<a href="StructureDefinition-EHDSOrganization.html#EHDSOrganization.identifier" title="Health provider organisation identifier" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.3.1 - Identifier</span>
+    "<a href="StructureDefinition-EHDSOrganization.html#EHDSOrganization.type" title="Kind of organization" class="dict"><span style="text-decoration: underline">type</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.3.2 - Type</span>
+    "<a href="StructureDefinition-EHDSOrganization.html#EHDSOrganization.name" title="Health provider organisation name" class="dict"><span style="text-decoration: underline">name</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.3.3 - Name</span>
+    "<a href="StructureDefinition-EHDSOrganization.html#EHDSOrganization.address" title="Mailing and home or office addresses. The addresses are always sequences of address parts (e.g. street address line, country, postcode, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose" class="dict"><span style="text-decoration: underline">address</span></a>" : [{<span style="color: darkgreen"><a href="StructureDefinition-EHDSAddress.html#https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress">https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.3.4 - Address</span>
+    "<a href="StructureDefinition-EHDSOrganization.html#EHDSOrganization.telecom" title="Telecommunication contact information (addresses) associated with a person, such as phone number, email, or messaging service. Multiple telecommunication addresses might be provided" class="dict"><span style="text-decoration: underline">telecom</span></a>" : [{<span style="color: darkgreen"><a href="StructureDefinition-EHDSTelecom.html#https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom">https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.3.5 - Telecom</span>
+    "<a href="StructureDefinition-EHDSOrganization.html#EHDSOrganization.partOf" title="The organization of which this organization forms a part" class="dict"><span style="text-decoration: underline">partOf</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization]])} <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.3.6 - Part of</span>
+  }
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-EHDSSubstance-pseudo-json</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ // <span style="color: navy; opacity: 0.8">Substance model</span>
+ {
+// from Element: <a href="http://hl7.org/fhir/R4/extensibility.html">extension</a>
+    "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.identifier" title="Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly)" class="dict"><span style="text-decoration: underline">identifier</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.1 - Identifier</span>
+    "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.code" title="A code (or set of codes) that identify this substance" class="dict"><span style="text-decoration: underline">code</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.2 - Code</span>
+    "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.description" title="A description of the substance - its appearance, handling requirements, and other usage notes" class="dict"><span style="text-decoration: underline">description</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.3 - Description</span>
+    "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.expiry" title="When the substance is no longer valid to use" class="dict"><span style="text-decoration: underline">expiry</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.4 - Expiry</span>
+    "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.quantity" title="The amount of the substance" class="dict"><span style="text-decoration: underline">quantity</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.5 - Quantity</span>
+    "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.ingredients" title="Composition information about the substance" class="dict"><span style="text-decoration: underline">ingredients</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.6 - Ingredients</span>
+      "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.ingredients.quantity" title="The amount of the ingredient in the substance - a concentration ratio" class="dict"><span style="text-decoration: underline">quantity</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">C.28.6.1 - Quantity</span>
+      "<a href="StructureDefinition-EHDSSubstance.html#EHDSSubstance.ingredients.substance" title="Another substance that is a component of this substance" class="dict"><span style="text-decoration: underline">substance</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance]])} <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">C.28.6.2 - Substance</span>
+    }]
+  }
+</body>
+</html>

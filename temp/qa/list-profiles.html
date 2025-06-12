@@ -1,0 +1,85 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>list-profiles</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ <li><a href="StructureDefinition-ImReport.html">Document Bundle for Imaging Report</a> <p>Document Bundle for Imaging Report</p>
+</li>
+ <li><a href="StructureDefinition-DocumentReferenceEu.html">DocumentReferenceEu</a> <p>A DocumentReference profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-AllergyIntoleranceEu.html">EU AllergyIntolerance</a> <p>A allergyintolerance profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-BodyStructureEu.html">EU BodyStructure</a> <p>BodyStructure profile for the EU</p>
+</li>
+ <li><a href="StructureDefinition-CarePlanEu.html">EU CarePlan</a> <p>Care plan for the patient.
+Contains the narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that the care plan could be provided in a structured and coded format.</p>
+</li>
+ <li><a href="StructureDefinition-CompositionEu.html">EU Composition</a> <p>Clinical document used to represent a report for the scope of the HL7 Europe project.</p>
+</li>
+ <li><a href="StructureDefinition-ConditionEu.html">EU Condition</a> <p>A condition profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-EncounterEu.html">EU Encounter</a> <p>A encounter profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-EndpointEu.html">EU Endpoint</a> <p>The FHIR endpoint resource with EU specific references.</p>
+</li>
+ <li><a href="StructureDefinition-MedicationEu.html">EU Medication</a> <p>A medication profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-ObservationEu.html">EU Observation</a> <p>A observation profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-ProcedureEu.html">EU Procedure</a> <p>A procedure profile for the EU.</p>
+</li>
+ <li><a href="StructureDefinition-ImFinding.html">Finding</a> <p>Finding during imaging procedure.</p>
+</li>
+ <li><a href="StructureDefinition-ImGestationalAgeObservation.html">Gestational Age Observation</a> <p>Gestational Age Observation</p>
+</li>
+ <li><a href="StructureDefinition-ImImageIidViewerEndpoint.html">IM Image Viewer Endpoint</a> <p>This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.
+The application is based on <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf">IHE-IID</a>.</p>
+</li>
+ <li><a href="StructureDefinition-ImOrder.html">IM Imaging Order</a> <p>This profile on ServiceRequest represents the order for the Imaging Study and report.</p>
+</li>
+ <li><a href="StructureDefinition-ImPatient.html">IM Imaging Patient</a> <p>This profile on Patient represents the Imaging Patient.</p>
+</li>
+ <li><a href="StructureDefinition-ImProcedure.html">IM Imaging Procedure</a> <p>This profile on Procedure represents the imaging procedure.</p>
+</li>
+ <li><a href="StructureDefinition-ImImagingStudy.html">IM Imaging Study</a> <p>This profile represents an imaging study instance.</p>
+</li>
+ <li><a href="StructureDefinition-ImImagingStudyManifest.html">IM ImagingStudy Manifest</a> <p>This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.</p>
+</li>
+ <li><a href="StructureDefinition-ImWadoEndpoint.html">IM WADO Endpoint</a> <p>This profile defines the WADO endpoint for accessing imaging study content.</p>
+</li>
+ <li><a href="StructureDefinition-ImImagingDevice.html">Im Imaging Device</a> <p>The device the made the image.</p>
+</li>
+ <li><a href="StructureDefinition-ImAdverseEvent.html">Imaging Adverse Event</a> <p>Adverse Event that occurred during an imaging procedure.</p>
+</li>
+ <li><a href="StructureDefinition-ImComposition.html">Imaging Composition</a> <p>Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project.</p>
+</li>
+ <li><a href="StructureDefinition-ImDiagnosticReport.html">Imaging Diagnostic Report</a> <p>Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the <code>Composition</code> resource that contains the narrative text of the report.</p>
+</li>
+ <li><a href="StructureDefinition-ImKeyImageDocumentReference.html">Imaging Key Image Document Reference</a> <p>A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.</p>
+<p>When the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element.</p>
+</li>
+ <li><a href="StructureDefinition-ImImagingSelection.html">Imaging Selection profile for R4</a> <p>Imaging Selection profile for R4</p>
+</li>
+ <li><a href="StructureDefinition-ImSrInstanceImagingSelection.html">Imaging Selection referring to a DICOM SR instance for R4</a> <p>Imaging Selection referring to a DICOM SR instance for R4</p>
+</li>
+ <li><a href="StructureDefinition-ImKeyImageImagingSelection.html">Key images represented as an ImagingSelection for R4</a> <p>Key images represented as an ImagingSelection for R4</p>
+</li>
+ <li><a href="StructureDefinition-ImManifestIheMhdDocumentReference.html">Manifest DocumentReference for MHD deployments</a> <p>A DocumentReference profile for the Manifest DocumentReference used in MHD deployments.</p>
+</li>
+ <li><a href="StructureDefinition-PatientAnimalEu.html">Patient: Animal</a> <p>This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide. This is used (among others) to identify the species when a specimen is collected from an animal.</p>
+</li>
+ <li><a href="StructureDefinition-ImRadiationDoseObservation.html">Radiation Dose Observation</a> <p>A record for the radiation dose the subject has been exposed to during an imaging procedure.
+E.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html and https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/index.html</p>
+</li>
+ <li><a href="StructureDefinition-RelatedPersonEu.html">RelatedPerson Eu</a> <p>EU Related Person.</p>
+</li>
+ <li><a href="StructureDefinition-ImReportIheMhdDocumentReference.html">Report DocumentReference for MHD deployments</a> <p>A DocumentReference profile for the Report DocumentReference used in MHD deployments.</p>
+</li>
+ <li><a href="StructureDefinition-SpecimenEu.html">Specimen: Laboratory</a> <p>This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide.</p>
+</li>
+ <li><a href="StructureDefinition-ImIheMhdDocumentReference.html">r4 DocumentReference for MHD deployments</a> <p>A placeholder for a DocumentReference profile for the IHE-MHD in r4.</p>
+</li>
+</body>
+</html>

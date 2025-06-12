@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>StructureDefinition-CarePlanEu-tx</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
+<tr><td>CarePlan.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages"></button></div><div>From the FHIR Standard</div><table class="grid">
+  <tr>
+    <td style="font-size: 11px">
+      <b>Additional Bindings</b>
+    </td>
+    <td style="font-size: 11px">Purpose</td>
+  </tr>
+  <tr>
+    <td style="font-size: 11px">
+      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    </td>
+    <td style="font-size: 11px">
+      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    </td>
+  </tr>
+</table>
+</td></tr>
+<tr><td>CarePlan.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-request-status.html">RequestStatus</a><div><code>http://hl7.org/fhir/ValueSet/request-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/request-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.intent</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes indicating the degree of authority/intentionality associated with a care plan."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-care-plan-intent.html">CarePlanIntent</a><div><code>http://hl7.org/fhir/ValueSet/care-plan-intent|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/care-plan-intent|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Identifies what &quot;kind&quot; of plan this is to support differentiation between multiple co-existing plans; e.g. &quot;Home health&quot;, &quot;psychiatric&quot;, &quot;asthma&quot;, &quot;disease management&quot;, etc."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-care-plan-category.html">CarePlanCategory</a><div><code>http://hl7.org/fhir/ValueSet/care-plan-category</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/care-plan-category"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.activity.outcomeCodeableConcept</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Identifies the results of the activity."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html">CarePlanActivityOutcome</a><div><code>http://hl7.org/fhir/ValueSet/care-plan-activity-outcome</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/care-plan-activity-outcome"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.activity.detail.kind</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Resource types defined as part of FHIR that can be represented as in-line definitions of a care plan activity."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html">CarePlanActivityKind</a><div><code>http://hl7.org/fhir/ValueSet/care-plan-activity-kind|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/care-plan-activity-kind|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.activity.detail.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Detailed description of the type of activity; e.g. What lab test, what procedure, what kind of encounter."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-procedure-code.html">ProcedureCodes(SNOMEDCT)</a><div><code>http://hl7.org/fhir/ValueSet/procedure-code</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/procedure-code"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.activity.detail.reasonCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Identifies why a care plan activity is needed.  Can include any health condition codes as well as such concepts as &quot;general wellness&quot;, prophylaxis, surgical preparation, etc."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMEDCTClinicalFindings</a><div><code>http://hl7.org/fhir/ValueSet/clinical-findings</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/clinical-findings"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.activity.detail.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes that reflect the current state of a care plan activity within its overall life cycle."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-care-plan-activity-status.html">CarePlanActivityStatus</a><div><code>http://hl7.org/fhir/ValueSet/care-plan-activity-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/care-plan-activity-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<tr><td>CarePlan.activity.detail.product[x]</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A product supplied or administered as part of a care plan activity."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-medication-codes.html">SNOMEDCTMedicationCodes</a><div><code>http://hl7.org/fhir/ValueSet/medication-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-codes"></button></div><div>From the FHIR Standard</div></td></tr>
+</table>
+</body>
+</html>
