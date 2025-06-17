@@ -35,7 +35,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 
 {% if isR4 %}
 * extension contains
-  $cvDocumentReference-basedOn named basedOn 0..1
+  CvDocumentReferenceBasedOn named basedOn 0..1
   and CvDocumentReferenceModality named modality 1..1
 * extension
   * ^slicing.discriminator[1].type = #value
@@ -82,4 +82,21 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
   * extension[thumbnail].valueBoolean = false
   * attachment 1..1
     * url 1..1
+
+{% if isR4 %}
+
+Extension: CvDocumentReferenceBasedOn
+Id: ext-R5-DocumentReference.basedOn
+Title: "Cross-version Extension for R5.DocumentReference.basedOn for use in FHIR R4"
+Description: "This cross-version extension represents DocumentReference.basedOn from http://hl7.org/fhir/StructureDefinition/DocumentReference|5.0.0 for use in FHIR R4."
+Context: DocumentReference, Media.basedOn
+* . 0..*
+  * ^short = "Procedure that caused this media to be created"
+  * ^definition = "A procedure that is fulfilled in whole or in part by the creation of this media."
+  * ^comment = "`Media.basedOn` maps to R4 `Media.basedOn`. So is mapped as Equivalent."
+  * ^isModifier = false
+* value[x] only Reference(Appointment or AppointmentResponse or CarePlan or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription)
+* url 1..1
+
+{% endif %}
       
