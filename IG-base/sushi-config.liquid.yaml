@@ -132,6 +132,8 @@ menu:
     Structural: artifacts-structural.html
     Mapping: xtehr-mapping.html
   Design Considerations: design-considerations.html
+{{R5-yaml}}  R4: https://oijauregui.github.io/ehdsimaging/r4/
+{{R4-yaml}}  R5: https://oijauregui.github.io/ehdsimaging/r5/
   #   Changes: changes.html
   #   Dependencies: index.html#dependencies
   #   References: index.html#references
