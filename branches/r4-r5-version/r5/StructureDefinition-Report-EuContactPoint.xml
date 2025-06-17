@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Report-EuContactPoint"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition Report-EuContactPoint</b></p><a name="Report-EuContactPoint"> </a><a name="hcReport-EuContactPoint"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Report-EuContactPoint-definitions.html#ContactPoint">ContactPoint</a><a name="ContactPoint"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Details of a Technology mediated contact point (phone, fax, email, etc.)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Report-EuContactPoint-definitions.html#ContactPoint.system">system</a><a name="ContactPoint.system"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">phone | fax | email | pager | url | sms | other</span><table class="obligation grid"><tr><td style="font-size: 11px"><b>Obligations</b></td><td style="font-size: 11px"><b>Actor</b></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-populate-if-known" title="Obligation Codes: populate if known">populate-if-known</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="ActorDefinition-ImReportProvider.html">Imaging study report provider</a></td></tr></table></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Report-EuContactPoint-definitions.html#ContactPoint.value">value</a><a name="ContactPoint.value"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">The actual contact point details</span><table class="obligation grid"><tr><td style="font-size: 11px"><b>Obligations</b></td><td style="font-size: 11px"><b>Actor</b></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-populate-if-known" title="Obligation Codes: populate if known">populate-if-known</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="ActorDefinition-ImReportProvider.html">Imaging study report provider</a></td></tr></table></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Report-EuContactPoint-definitions.html#ContactPoint.use">use</a><a name="ContactPoint.use"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element has obligations">O</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R5/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">home | work | temp | old | mobile - purpose of this contact point</span><table class="obligation grid"><tr><td style="font-size: 11px"><b>Obligations</b></td><td style="font-size: 11px"><b>Actor</b></td></tr><tr><td style="font-size: 11px"><b>SHALL</b>:<a href="http://hl7.org/fhir/extensions/5.2.0/CodeSystem-obligation.html#obligation-populate-if-known" title="Obligation Codes: populate if known">populate-if-known</a></td><td style="font-size: 11px; opacity: 0.5;"><a href="ActorDefinition-ImReportProvider.html">Imaging study report provider</a></td></tr></table></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuContactPoint"/>
+  <version value="0.1.0-ballot"/>
+  <name value="Report_EuContactPoint"/>
+  <title value="Report obligations for EuContactPoint"/>
+  <status value="draft"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Report obligations for EuContactPoint"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 V2 Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="servd"/>
+    <uri value="http://www.omg.org/spec/ServD/1.0/"/>
+    <name value="ServD"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <type value="ContactPoint"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
+  <derivation value="constraint"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="5.0.0"/>
+    </extension>
+    <element id="ContactPoint">
+      <path value="ContactPoint"/>
+      <short value="Details of a Technology mediated contact point (phone, fax, email, etc.)"/>
+      <definition value="Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="ContactPoint"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="cpt-2"/>
+        <severity value="error"/>
+        <human value="A system is required if a value is provided."/>
+        <expression value="value.empty() or system.exists()"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ContactPoint"/>
+      </constraint>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a,TEL"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="ContactPoint"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.id">
+      <path value="ContactPoint.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="id"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <condition value="ele-1"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.extension">
+      <path value="ContactPoint.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.system">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+        </extension>
+        <extension url="documentation">
+          <valueMarkdown value="EHDSTelecom.type"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
+          <valueUri value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuContactPoint|0.1.0-ballot"/>
+        </extension>
+      </extension>
+      <path value="ContactPoint.system"/>
+      <short value="phone | fax | email | pager | url | sms | other"/>
+      <definition value="Telecommunications form for contact point - what communications system is required to make use of the contact."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ContactPoint.system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <condition value="cpt-2"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ContactPointSystem"/>
+        </extension>
+        <strength value="required"/>
+        <description value="Telecommunications form for contact point."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-system|5.0.0"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./scheme"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./ContactPointType"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+        </extension>
+        <extension url="documentation">
+          <valueMarkdown value="EHDSTelecom.value"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
+          <valueUri value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuContactPoint|0.1.0-ballot"/>
+        </extension>
+      </extension>
+      <path value="ContactPoint.value"/>
+      <short value="The actual contact point details"/>
+      <definition value="The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address)."/>
+      <comment value="Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value."/>
+      <requirements value="Need to support legacy numbers that are not in a tightly controlled format."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ContactPoint.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <condition value="cpt-2"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN.1 (or XTN.12)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./url"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+        </extension>
+        <extension url="documentation">
+          <valueMarkdown value="EHDSTelecom.use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
+          <valueUri value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/Report-EuContactPoint|0.1.0-ballot"/>
+        </extension>
+      </extension>
+      <path value="ContactPoint.use"/>
+      <short value="home | work | temp | old | mobile - purpose of this contact point"/>
+      <definition value="Identifies the purpose for the contact point."/>
+      <comment value="Applications can assume that a contact is current unless it explicitly says that it is temporary or old."/>
+      <requirements value="Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ContactPoint.use"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old contact etc.for a current/permanent one"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ContactPointUse"/>
+        </extension>
+        <strength value="required"/>
+        <description value="Use of contact point."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/contact-point-use|5.0.0"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XTN.2 - but often indicated by field"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./use)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./ContactPointPurpose"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.rank">
+      <path value="ContactPoint.rank"/>
+      <short value="Specify preferred order of use (1 = highest)"/>
+      <definition value="Specifies a preferred order in which to use a set of contacts. ContactPoints with lower rank values are more preferred than those with higher rank values."/>
+      <comment value="Note that rank does not necessarily follow the order in which the contacts are represented in the instance.&#xA;&#xA;Ranks need not be unique.  E.g. it's possible to have multiple contacts with rank=1.  If the ranks have different systems or uses, this would be interpreted to mean &quot;X is my most preferred phone number, Y is my most preferred email address&quot; or &quot;X is my preferred home email and Y is my preferred work email&quot;.  If the system and use for equally-ranked contacts are the same, then the level of preference is equivalent for both repetitions. &#xA;&#xA;Ranks need not be sequential and not all repetitions must have a rank.  For example, it's possible to have 4 contacts with ranks of 2, 5 and two with no rank specified.  That would be interpreted to mean the first is preferred over the second and no preference stated for the remaining contacts."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ContactPoint.rank"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="positiveInt"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="ContactPoint.period">
+      <path value="ContactPoint.period"/>
+      <short value="Time period when the contact point was/is in use"/>
+      <definition value="Time period when the contact point was/is in use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ContactPoint.period"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Period"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./usablePeriod[type=&quot;IVL&lt;TS&gt;&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="ContactPoint">
+      <path value="ContactPoint"/>
+    </element>
+    <element id="ContactPoint.system">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+        </extension>
+        <extension url="documentation">
+          <valueMarkdown value="EHDSTelecom.type"/>
+        </extension>
+      </extension>
+      <path value="ContactPoint.system"/>
+    </element>
+    <element id="ContactPoint.value">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+        </extension>
+        <extension url="documentation">
+          <valueMarkdown value="EHDSTelecom.value"/>
+        </extension>
+      </extension>
+      <path value="ContactPoint.value"/>
+    </element>
+    <element id="ContactPoint.use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+        </extension>
+        <extension url="documentation">
+          <valueMarkdown value="EHDSTelecom.use"/>
+        </extension>
+      </extension>
+      <path value="ContactPoint.use"/>
+    </element>
+  </differential>
+</StructureDefinition>

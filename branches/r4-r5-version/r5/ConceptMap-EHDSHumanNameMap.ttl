@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSHumanNameMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSHumanNameMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSHumanNameMap</b></p><a name=\"EHDSHumanNameMap\"> </a><a name=\"hcEHDSHumanNameMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSHumanName.html\">Human name model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSHumanName.html\">Human name model</a> to <a href=\"http://hl7.org/fhir/R5/datatypes.html#HumanName\">HumanName</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>use</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>use (C.27.1 - Use)</td><td/></tr><tr><td>text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>text (C.27.2 - Text)</td><td>Concatenation of family names and given names..</td></tr><tr><td>family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td>family (C.27.3 - Family)</td><td>Concatenation of family names.</td></tr><tr><td>given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>given (C.27.4 - Given)</td><td/></tr><tr><td>prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>prefix (C.27.5 - Prefix)</td><td/></tr><tr><td>suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>suffix (C.27.6 - Suffix)</td><td/></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSHumanNameMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSHumanNameMap"] ; # 
+  fhir:title [ fhir:v "EHDSHumanName Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSHumanName"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/HumanName"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/HumanName>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "use" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "use" ] ;
+         fhir:display [ fhir:v "C.27.1 - Use" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "text" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "text" ] ;
+         fhir:display [ fhir:v "C.27.2 - Text" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Concatenation of family names and given names.." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "family" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "family" ] ;
+         fhir:display [ fhir:v "C.27.3 - Family" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Concatenation of family names." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "given" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "given" ] ;
+         fhir:display [ fhir:v "C.27.4 - Given" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "prefix" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "prefix" ] ;
+         fhir:display [ fhir:v "C.27.5 - Prefix" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "suffix" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "suffix" ] ;
+         fhir:display [ fhir:v "C.27.6 - Suffix" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

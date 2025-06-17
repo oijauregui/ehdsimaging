@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes,0.1.0-ballot,draft,,Hl7EuDocumentTypes,HL7 EU Document Types,"Document types (templates) as defined by HL7 EU. It identifies the type and template of the document.",
+http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info,0.1.0-ballot,draft,,DiagnosticReportSupportingInfoCodeSystem,Diagnostic Report Support Info Code System,"Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-endpoint-terminology,0.1.0-ballot,draft,,Hl7EuImagingEndpointTerminologyCodeSystem,CodeSystem for terminology used in Endpoint resources in the EU Imaging IG.,"This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG.",
+http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-missing-dicom-terminology,0.1.0-ballot,draft,,MissingDicomTerminology,Missing DICOM Terminology,"Code system for codes that are defined in DICOM but for which no matching code system is available in FHIR.",

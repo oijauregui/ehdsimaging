@@ -1,0 +1,91 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSCoverageMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSCoverageMap</b></p><a name=\"EHDSCoverageMap\"> </a><a name=\"hcEHDSCoverageMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSCoverage.html\">Coverage model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSCoverage.html\">Coverage model</a> to <a href=\"http://hl7.org/fhir/R5/coverage.html\">Coverage</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/Coverage</td><td/></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.31.1 - Identifier</td><td/></tr><tr><td style=\"border-right-width: 0px\">type</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">type</td><td style=\"border-left-width: 0px\">C.31.2 - Type</td><td/></tr><tr><td style=\"border-right-width: 0px\">patient</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">beneficiary</td><td style=\"border-left-width: 0px\">C.31.3 - Patient</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">payor</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">kind</td><td style=\"border-left-width: 0px\">C.31.4 - Payor</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">paymentBy.party</td><td style=\"border-left-width: 0px\">C.31.4 - Payor</td><td>When selfpay, include reference to party that will pay</td></tr><tr><td style=\"border-right-width: 0px\">payor.payorEntity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">insurer</td><td style=\"border-left-width: 0px\">C.31.4.1 - Payor entity</td><td/></tr><tr><td style=\"border-right-width: 0px\">payor.subscriberId</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">subscriberId</td><td style=\"border-left-width: 0px\">C.31.4.2 - Subscriber Id</td><td/></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSCoverageMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSCoverageMap",
+  "title" : "EHDSCoverage Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSCoverage",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Coverage",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.31.1 - Identifier",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    },
+    {
+      "code" : "type",
+      "target" : [{
+        "code" : "type",
+        "display" : "C.31.2 - Type",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    },
+    {
+      "code" : "patient",
+      "target" : [{
+        "code" : "beneficiary",
+        "display" : "C.31.3 - Patient",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    },
+    {
+      "code" : "payor",
+      "target" : [{
+        "code" : "kind",
+        "display" : "C.31.4 - Payor",
+        "relationship" : "source-is-broader-than-target"
+      },
+      {
+        "code" : "paymentBy.party",
+        "display" : "C.31.4 - Payor",
+        "relationship" : "source-is-broader-than-target",
+        "comment" : "When selfpay, include reference to party that will pay"
+      }]
+    },
+    {
+      "code" : "payor.payorEntity",
+      "target" : [{
+        "code" : "insurer",
+        "display" : "C.31.4.1 - Payor entity",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    },
+    {
+      "code" : "payor.subscriberId",
+      "target" : [{
+        "code" : "subscriberId",
+        "display" : "C.31.4.2 - Subscriber Id",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    }]
+  }]
+}

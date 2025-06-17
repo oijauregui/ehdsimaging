@@ -1,0 +1,239 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSEncounterMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSEncounterMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSEncounterMap</b></p><a name=\"EHDSEncounterMap\"> </a><a name=\"hcEHDSEncounterMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSEncounter.html\">Encounter model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSEncounter.html\">Encounter model</a> to <a href=\"StructureDefinition-EncounterEu.html\">EU Encounter</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier (C.30.1 - Identifier)</td></tr><tr><td>priority</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>priority (C.30.3 - Priority)</td></tr><tr><td>encounterType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>type (C.30.2 - Encounter type)</td></tr><tr><td>encounterNote</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension[note] (C.30.4 - Encounter note)</td></tr><tr><td>patient</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>subject (C.30.5 - Patient)</td></tr><tr><td>episodeOfCare</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>episodeOfCare (C.30.6 - Episode of care)</td></tr><tr><td>basedOn</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>basedOn (C.30.7 - Based on)</td></tr><tr><td>partOf</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>partOf (C.30.8 - Part of)</td></tr><tr><td>serviceProvider</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>serviceProvider (C.30.9 - Service provider)</td></tr><tr><td>appointment</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>appointment (C.30.10 - Appointment)</td></tr><tr><td>actualPeriod</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>actualPeriod (C.30.11 - Actual period)</td></tr><tr><td>plannedStartDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>plannedStartDate (C.30.12 - Planned start date)</td></tr><tr><td>plannedEndDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>plannedEndDate (C.30.13 - Planned end date)</td></tr><tr><td>admission</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>admission (C.30.14 - Admission)</td></tr><tr><td>admission.admitter</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant[admitter].actor (C.30.14.1 - Admitter)</td></tr><tr><td>admission.admitSource</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>admission.admitSource (C.30.14.2 - Admit Source)</td></tr><tr><td>admission.referringProfessional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant[referrer].actor (C.30.14.3 - Referring professional)</td></tr><tr><td>admission.admissionReason</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>reason.value.reference (C.30.14.4 - Admission reason)</td></tr><tr><td>admission.admissionReasonComment</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>reason.value.concept.text (C.30.14.5 - Admission reason comment)</td></tr><tr><td>admission.admissionLegalStatus</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension[legalStatus] (C.30.14.6 - Admission legal status)</td></tr><tr><td>discharge</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>admission.dischargeDisposition (C.30.15 - Discharge)</td></tr><tr><td>discharge.destinationType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>admission.dischargeDisposition (C.30.15.1 - Destination type)</td></tr><tr><td>discharge.destinationLocation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>admission.destination (C.30.15.2 - Destination location)</td></tr><tr><td>location</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>location (C.30.16 - Location)</td></tr><tr><td>location.period</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>location.period (C.30.16.1 - Period)</td></tr><tr><td>location.organizationPart</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>location.location (C.30.16.2 - Organization part)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSEncounterMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSEncounterMap"] ; # 
+  fhir:title [ fhir:v "EHDSEncounter Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSEncounter"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/EncounterEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/EncounterEu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "C.30.1 - Identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "priority" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "priority" ] ;
+         fhir:display [ fhir:v "C.30.3 - Priority" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "encounterType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "type" ] ;
+         fhir:display [ fhir:v "C.30.2 - Encounter type" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "encounterNote" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[note]" ] ;
+         fhir:display [ fhir:v "C.30.4 - Encounter note" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "patient" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "C.30.5 - Patient" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "episodeOfCare" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "episodeOfCare" ] ;
+         fhir:display [ fhir:v "C.30.6 - Episode of care" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "basedOn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "basedOn" ] ;
+         fhir:display [ fhir:v "C.30.7 - Based on" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "partOf" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "partOf" ] ;
+         fhir:display [ fhir:v "C.30.8 - Part of" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "serviceProvider" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "serviceProvider" ] ;
+         fhir:display [ fhir:v "C.30.9 - Service provider" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "appointment" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "appointment" ] ;
+         fhir:display [ fhir:v "C.30.10 - Appointment" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "actualPeriod" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "actualPeriod" ] ;
+         fhir:display [ fhir:v "C.30.11 - Actual period" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "plannedStartDate" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "plannedStartDate" ] ;
+         fhir:display [ fhir:v "C.30.12 - Planned start date" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "plannedEndDate" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "plannedEndDate" ] ;
+         fhir:display [ fhir:v "C.30.13 - Planned end date" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "admission" ] ;
+         fhir:display [ fhir:v "C.30.14 - Admission" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission.admitter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "participant[admitter].actor" ] ;
+         fhir:display [ fhir:v "C.30.14.1 - Admitter" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission.admitSource" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "admission.admitSource" ] ;
+         fhir:display [ fhir:v "C.30.14.2 - Admit Source" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission.referringProfessional" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "participant[referrer].actor" ] ;
+         fhir:display [ fhir:v "C.30.14.3 - Referring professional" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission.admissionReason" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.value.reference" ] ;
+         fhir:display [ fhir:v "C.30.14.4 - Admission reason" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission.admissionReasonComment" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.value.concept.text" ] ;
+         fhir:display [ fhir:v "C.30.14.5 - Admission reason comment" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "admission.admissionLegalStatus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[legalStatus]" ] ;
+         fhir:display [ fhir:v "C.30.14.6 - Admission legal status" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "discharge" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "admission.dischargeDisposition" ] ;
+         fhir:display [ fhir:v "C.30.15 - Discharge" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "discharge.destinationType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "admission.dischargeDisposition" ] ;
+         fhir:display [ fhir:v "C.30.15.1 - Destination type" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "discharge.destinationLocation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "admission.destination" ] ;
+         fhir:display [ fhir:v "C.30.15.2 - Destination location" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "location" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "location" ] ;
+         fhir:display [ fhir:v "C.30.16 - Location" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "location.period" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "location.period" ] ;
+         fhir:display [ fhir:v "C.30.16.1 - Period" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "location.organizationPart" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "location.location" ] ;
+         fhir:display [ fhir:v "C.30.16.2 - Organization part" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

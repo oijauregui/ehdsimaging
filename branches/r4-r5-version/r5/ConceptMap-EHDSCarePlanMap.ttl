@@ -1,0 +1,163 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSCarePlanMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSCarePlanMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSCarePlanMap</b></p><a name=\"EHDSCarePlanMap\"> </a><a name=\"hcEHDSCarePlanMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSCarePlan.html\">Care plan model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSCarePlan.html\">Care plan model</a> to <a href=\"StructureDefinition-CarePlanEu.html\">EU CarePlan</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu</td><td/></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.19.1 - Identifier</td><td/></tr><tr><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\">C.19.2 - Status</td><td>Source binding is preferred, target required.</td></tr><tr><td style=\"border-right-width: 0px\">intent</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">intent</td><td style=\"border-left-width: 0px\">C.19.3 - Intent</td><td>Source binding is preferred, target required.</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">title</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">title</td><td style=\"border-left-width: 0px\">C.19.4 - Title</td><td>Source is modelled as Narrative (html), target as string</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">title.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]</td><td style=\"border-left-width: 0px\">C.19.4 - Title</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">description</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">description</td><td style=\"border-left-width: 0px\">C.19.5 - Description</td><td>Source is modelled as Narrative (html), target as string</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">description.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]</td><td style=\"border-left-width: 0px\">C.19.5 - Description</td><td/></tr><tr><td style=\"border-right-width: 0px\">patient</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.19.6 - Subject</td><td/></tr><tr><td style=\"border-right-width: 0px\">period</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">period</td><td style=\"border-left-width: 0px\">C.19.7 - Period</td><td/></tr><tr><td style=\"border-right-width: 0px\">custodian</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">custodian</td><td style=\"border-left-width: 0px\">C.19.8 - Custodian</td><td/></tr><tr><td style=\"border-right-width: 0px\">contributor</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">contributor</td><td style=\"border-left-width: 0px\">C.19.9 - Contributor</td><td/></tr><tr><td style=\"border-right-width: 0px\">goal</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">goal</td><td style=\"border-left-width: 0px\">C.19.11 - Goal</td><td/></tr><tr><td style=\"border-right-width: 0px\">activity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">activity</td><td style=\"border-left-width: 0px\">C.19.12 - Activity</td><td/></tr><tr><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\">C.19.13 - Note</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSCarePlan.html\">Care plan model</a> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>addresses ((C.19.10 - Addresses))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSCarePlanMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSCarePlanMap"] ; # 
+  fhir:title [ fhir:v "EHDSCarePlan Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSCarePlan"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "C.19.1 - Identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "status" ] ;
+         fhir:display [ fhir:v "C.19.2 - Status" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Source binding is preferred, target required." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "intent" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "intent" ] ;
+         fhir:display [ fhir:v "C.19.3 - Intent" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Source binding is preferred, target required." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "title" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "title" ] ;
+         fhir:display [ fhir:v "C.19.4 - Title" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Source is modelled as Narrative (html), target as string" ]
+       ] [
+         fhir:code [ fhir:v "title.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]" ] ;
+         fhir:display [ fhir:v "C.19.4 - Title" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "description" ] ;
+         fhir:display [ fhir:v "C.19.5 - Description" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ] ;
+         fhir:comment [ fhir:v "Source is modelled as Narrative (html), target as string" ]
+       ] [
+         fhir:code [ fhir:v "description.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]" ] ;
+         fhir:display [ fhir:v "C.19.5 - Description" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "patient" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "C.19.6 - Subject" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "period" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "period" ] ;
+         fhir:display [ fhir:v "C.19.7 - Period" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "custodian" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "custodian" ] ;
+         fhir:display [ fhir:v "C.19.8 - Custodian" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "contributor" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "contributor" ] ;
+         fhir:display [ fhir:v "C.19.9 - Contributor" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "goal" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "goal" ] ;
+         fhir:display [ fhir:v "C.19.11 - Goal" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "activity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "activity" ] ;
+         fhir:display [ fhir:v "C.19.12 - Activity" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "note" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "note" ] ;
+         fhir:display [ fhir:v "C.19.13 - Note" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "addresses" ] ;
+       fhir:display [ fhir:v "(C.19.10 - Addresses)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

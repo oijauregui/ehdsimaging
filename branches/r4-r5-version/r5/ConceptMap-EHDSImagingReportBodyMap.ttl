@@ -1,0 +1,592 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingReportBodyMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSImagingReportBodyMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSImagingReportBodyMap</b></p><a name=\"EHDSImagingReportBodyMap\"> </a><a name=\"hcEHDSImagingReportBodyMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImComposition.html\">Imaging Composition</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[order]</td><td style=\"border-left-width: 0px\">B.1.1 - Order information</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">orderInformation.orderId</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">B.1.1.1 - Order Id</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[order].entry[order]</td><td style=\"border-left-width: 0px\">B.1.1.1 - Order Id</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.orderReasonText</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[order].extension[note]</td><td style=\"border-left-width: 0px\">B.1.1.4 - Order reason text</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7 - Supporting information</td><td>elements from patient history relevant for the report.</td></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.observation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.1 - Observation</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.condition</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.2 - Condition</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.medicationAdministration</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.3 - Medication Administration</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.devices</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.4 - Devices</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.pregnancyStatus</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.5 - Pregnancy status</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.gestationalAge</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.6 - Gestational age</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.sexForClinicalUse</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">B.1.1.7.7 - Sex for clinical use</td><td/></tr><tr><td style=\"border-right-width: 0px\">orderInformation.supportingInformation.otherSupportingInformation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[history].entry</td><td style=\"border-left-width: 0px\">B.1.1.7.8 - Other supporting information</td><td/></tr><tr><td style=\"border-right-width: 0px\">serviceRequest</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[order].entry[order]</td><td style=\"border-left-width: 0px\">B.1.3 - Service request</td><td/></tr><tr><td style=\"border-right-width: 0px\">examinationReport.imagingProcedures</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[procedure].entry[procedure]</td><td style=\"border-left-width: 0px\">B.1.5.3 - Imaging procedures</td><td/></tr><tr><td style=\"border-right-width: 0px\">examinationReport.medication</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[procedure].entry[procedure]</td><td style=\"border-left-width: 0px\">B.1.5.4 - Medication</td><td/></tr><tr><td style=\"border-right-width: 0px\">examinationReport.resultData</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[findings]</td><td style=\"border-left-width: 0px\">B.1.5.6 - Result data</td><td/></tr><tr><td style=\"border-right-width: 0px\">examinationReport.resultData.resultText</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[findings].extension[note]</td><td style=\"border-left-width: 0px\">B.1.5.6.1 - Result text</td><td/></tr><tr><td style=\"border-right-width: 0px\">examinationReport.resultData.observationResults</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[findings].entry[ImFinding]</td><td style=\"border-left-width: 0px\">B.1.5.6.2 - Observation results</td><td/></tr><tr><td style=\"border-right-width: 0px\">examinationReport.conclusion</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[impression]</td><td style=\"border-left-width: 0px\">B.1.5.7 - Conclusion</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">examinationReport.conclusion.conditionOrFinding[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[impression].entry[ImFinding]</td><td style=\"border-left-width: 0px\">B.1.5.7.2 - Condition or finding</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[impression].entry[impression]</td><td style=\"border-left-width: 0px\">B.1.5.7.2 - Condition or finding</td><td/></tr><tr><td style=\"border-right-width: 0px\">recommendation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[recommendation]</td><td style=\"border-left-width: 0px\">B.1.6 - Recommendation</td><td/></tr><tr><td style=\"border-right-width: 0px\">recommendation.carePlan</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[recommendation].entry[careplan]</td><td style=\"border-left-width: 0px\">B.1.6.2 - Care plan</td><td/></tr><tr><td style=\"border-right-width: 0px\">comparisonStudy</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[comparison].entry[comparedstudy]</td><td style=\"border-left-width: 0px\">B.1.7 - Comparison Study</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImOrder.html\">IM Imaging Order</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>orderInformation.orderDateAndTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>authoredOn (B.1.1.2 - Order date and time)</td><td/></tr><tr><td>orderInformation.orderPlacer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>requester (B.1.1.3 - Order placer)</td><td/></tr><tr><td>orderInformation.orderReasonText</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>reason.concept.text (B.1.1.4 - Order reason text)</td><td/></tr><tr><td>orderInformation.orderReason</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>reason.concept (B.1.1.5 - Order reason)</td><td/></tr><tr><td>orderInformation.clinicalQuestion</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>reason.concept (B.1.1.6 - Clinical question)</td><td/></tr><tr><td>orderInformation.supportingInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>supportingInfo (B.1.1.7 - Supporting information)</td><td>Point to observations and conditions</td></tr><tr><td>orderInformation.supportingInformation.observation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>supportingInfo (B.1.1.7.1 - Observation)</td><td>Refer to observations</td></tr><tr><td>orderInformation.supportingInformation.condition</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>supportingInfo (B.1.1.7.2 - Condition)</td><td>Refer to conditions</td></tr><tr><td>orderInformation.supportingInformation.medicationAdministration</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>reason (B.1.1.7.3 - Medication Administration)</td><td/></tr><tr><td>orderInformation.supportingInformation.devices</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>supportingInfo (B.1.1.7.4 - Devices)</td><td>Refer to device, might be replaced by a more constraint reference.</td></tr><tr><td>orderInformation.supportingInformation.pregnancyStatus</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>supportingInfo[pregnancy] (B.1.1.7.5 - Pregnancy status)</td><td>Code in supporting info, could be a observation as well</td></tr><tr><td>serviceRequest</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImGestationalAgeObservation.html\">Gestational Age Observation</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>orderInformation.supportingInformation.gestationalAge</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>value[x] (B.1.1.7.6 - Gestational age)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImPatient.html\">IM Imaging Patient</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImPatient</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">orderInformation.supportingInformation.sexForClinicalUse</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">extension[sex-for-clinical-use]</td><td style=\"border-left-width: 0px\">B.1.1.7.7 - Sex for clinical use</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">extension[sex-for-clinical-use].extension[value].valueCodeableConcept</td><td style=\"border-left-width: 0px\">B.1.1.7.7 - Sex for clinical use</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">extension[sex-for-clinical-use].extension[period].valuePeriod</td><td style=\"border-left-width: 0px\">B.1.1.7.7 - Sex for clinical use</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImImagingStudy.html\">IM Imaging Study</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>specimen</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>series.specimen (B.1.2 - Specimen)</td></tr><tr><td>examinationReport.modality</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>series.modality (B.1.5.1 - Modality)</td></tr><tr><td>examinationReport.bodyPart.bodyLocation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>series.bodySite (B.1.5.2.1 - Body location)</td></tr><tr><td>examinationReport.bodyPart.laterality</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>series.bodySite (B.1.5.2.2 - Laterality)</td></tr></table><hr/><p><b>Group 6 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImRadiationDoseObservation.html\">Radiation Dose Observation</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>exposureInformation</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>exposureInformation.effectiveDose</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (B.1.4.1 - Effective dose)</td><td>choose one of the slices</td></tr><tr><td>exposureInformation.equivalentDoseInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (B.1.4.2 - Equivalent dose information)</td><td>choose one of the slices</td></tr><tr><td>exposureInformation.equivalentDoseInformation.equivalentDose</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (B.1.4.2.1 - Equivalent dose)</td><td>choose one of the slices</td></tr><tr><td>exposureInformation.equivalentDoseInformation.tissueType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>bodySite (B.1.4.2.2 - Tissue type)</td><td/></tr></table><hr/><p><b>Group 7 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-BodyStructureEu.html\">EU BodyStructure</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/BodyStructureEu</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">examinationReport.bodyPart.bodyLocation</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">morphology</td><td style=\"border-left-width: 0px\">B.1.5.2.1 - Body location</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">includedStructure.structure</td><td style=\"border-left-width: 0px\">B.1.5.2.1 - Body location</td></tr><tr><td style=\"border-right-width: 0px\">examinationReport.bodyPart.laterality</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">includedStructure.laterality</td><td style=\"border-left-width: 0px\">B.1.5.2.2 - Laterality</td></tr></table><hr/><p><b>Group 8 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"http://hl7.org/fhir/R5/medicationadministration.html\">MedicationAdministration</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>examinationReport.medication</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>partOf (B.1.5.4 - Medication)</td></tr></table><hr/><p><b>Group 9 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImAdverseEvent.html\">Imaging Adverse Event</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImAdverseEvent</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">examinationReport.adverseReaction</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">suspectEntity[procedure]</td><td style=\"border-left-width: 0px\">B.1.5.5 - Adverse reaction</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">contributingFactor[allergy]</td><td style=\"border-left-width: 0px\">B.1.5.5 - Adverse reaction</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\">B.1.5.5 - Adverse reaction</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">code</td><td style=\"border-left-width: 0px\">B.1.5.5 - Adverse reaction</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">B.1.5.5 - Adverse reaction</td></tr></table><hr/><p><b>Group 10 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-AllergyIntoleranceEu.html\">EU AllergyIntolerance</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>examinationReport.adverseReaction</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 11 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-ImDiagnosticReport.html\">Imaging Diagnostic Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>examinationReport.resultData.observationResults</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>result (B.1.5.6.2 - Observation results)</td></tr><tr><td>examinationReport.conclusion.impression</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>conclusion (B.1.5.7.1 - Impression)</td></tr></table><hr/><p><b>Group 12 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <a href=\"StructureDefinition-CarePlanEu.html\">EU CarePlan</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>recommendation.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>description (B.1.6.1 - Description)</td></tr></table><hr/><p><b>Group 13 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportBody.html\">Imaging report body model</a> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>examinationReport ((B.1.5 - Examination Report))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>examinationReport.bodyPart ((B.1.5.2 - Body part))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingReportBodyMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSImagingReportBodyMap"] ; # 
+  fhir:title [ fhir:v "EHDSImagingReportBody Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSImagingReportBody"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "orderInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[order]" ] ;
+         fhir:display [ fhir:v "B.1.1 - Order information" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.orderId" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "B.1.1.1 - Order Id" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "section[order].entry[order]" ] ;
+         fhir:display [ fhir:v "B.1.1.1 - Order Id" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.orderReasonText" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[order].extension[note]" ] ;
+         fhir:display [ fhir:v "B.1.1.4 - Order reason text" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7 - Supporting information" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ] ;
+         fhir:comment [ fhir:v "elements from patient history relevant for the report." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.observation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.1 - Observation" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.condition" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.2 - Condition" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.medicationAdministration" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.3 - Medication Administration" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.devices" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.4 - Devices" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.pregnancyStatus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.5 - Pregnancy status" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.gestationalAge" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.6 - Gestational age" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.sexForClinicalUse" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "B.1.1.7.7 - Sex for clinical use" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.otherSupportingInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[history].entry" ] ;
+         fhir:display [ fhir:v "B.1.1.7.8 - Other supporting information" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "serviceRequest" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[order].entry[order]" ] ;
+         fhir:display [ fhir:v "B.1.3 - Service request" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.imagingProcedures" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[procedure].entry[procedure]" ] ;
+         fhir:display [ fhir:v "B.1.5.3 - Imaging procedures" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.medication" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[procedure].entry[procedure]" ] ;
+         fhir:display [ fhir:v "B.1.5.4 - Medication" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.resultData" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[findings]" ] ;
+         fhir:display [ fhir:v "B.1.5.6 - Result data" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.resultData.resultText" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[findings].extension[note]" ] ;
+         fhir:display [ fhir:v "B.1.5.6.1 - Result text" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.resultData.observationResults" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[findings].entry[ImFinding]" ] ;
+         fhir:display [ fhir:v "B.1.5.6.2 - Observation results" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.conclusion" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[impression]" ] ;
+         fhir:display [ fhir:v "B.1.5.7 - Conclusion" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.conclusion.conditionOrFinding[x]" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[impression].entry[ImFinding]" ] ;
+         fhir:display [ fhir:v "B.1.5.7.2 - Condition or finding" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "section[impression].entry[impression]" ] ;
+         fhir:display [ fhir:v "B.1.5.7.2 - Condition or finding" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "recommendation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[recommendation]" ] ;
+         fhir:display [ fhir:v "B.1.6 - Recommendation" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "recommendation.carePlan" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[recommendation].entry[careplan]" ] ;
+         fhir:display [ fhir:v "B.1.6.2 - Care plan" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "comparisonStudy" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "section[comparison].entry[comparedstudy]" ] ;
+         fhir:display [ fhir:v "B.1.7 - Comparison Study" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "orderInformation.orderDateAndTime" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "authoredOn" ] ;
+         fhir:display [ fhir:v "B.1.1.2 - Order date and time" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.orderPlacer" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "requester" ] ;
+         fhir:display [ fhir:v "B.1.1.3 - Order placer" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.orderReasonText" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.concept.text" ] ;
+         fhir:display [ fhir:v "B.1.1.4 - Order reason text" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.orderReason" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.concept" ] ;
+         fhir:display [ fhir:v "B.1.1.5 - Order reason" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.clinicalQuestion" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.concept" ] ;
+         fhir:display [ fhir:v "B.1.1.6 - Clinical question" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "supportingInfo" ] ;
+         fhir:display [ fhir:v "B.1.1.7 - Supporting information" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Point to observations and conditions" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.observation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "supportingInfo" ] ;
+         fhir:display [ fhir:v "B.1.1.7.1 - Observation" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Refer to observations" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.condition" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "supportingInfo" ] ;
+         fhir:display [ fhir:v "B.1.1.7.2 - Condition" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Refer to conditions" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.medicationAdministration" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason" ] ;
+         fhir:display [ fhir:v "B.1.1.7.3 - Medication Administration" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.devices" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "supportingInfo" ] ;
+         fhir:display [ fhir:v "B.1.1.7.4 - Devices" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Refer to device, might be replaced by a more constraint reference." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.pregnancyStatus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "supportingInfo[pregnancy]" ] ;
+         fhir:display [ fhir:v "B.1.1.7.5 - Pregnancy status" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Code in supporting info, could be a observation as well" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "serviceRequest" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImGestationalAgeObservation"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImGestationalAgeObservation>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.gestationalAge" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "value[x]" ] ;
+         fhir:display [ fhir:v "B.1.1.7.6 - Gestational age" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImPatient"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImPatient>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "orderInformation.supportingInformation.sexForClinicalUse" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[sex-for-clinical-use]" ] ;
+         fhir:display [ fhir:v "B.1.1.7.7 - Sex for clinical use" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "extension[sex-for-clinical-use].extension[value].valueCodeableConcept" ] ;
+         fhir:display [ fhir:v "B.1.1.7.7 - Sex for clinical use" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "extension[sex-for-clinical-use].extension[period].valuePeriod" ] ;
+         fhir:display [ fhir:v "B.1.1.7.7 - Sex for clinical use" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "specimen" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.specimen" ] ;
+         fhir:display [ fhir:v "B.1.2 - Specimen" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.modality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.modality" ] ;
+         fhir:display [ fhir:v "B.1.5.1 - Modality" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.bodyPart.bodyLocation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.bodySite" ] ;
+         fhir:display [ fhir:v "B.1.5.2.1 - Body location" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.bodyPart.laterality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.bodySite" ] ;
+         fhir:display [ fhir:v "B.1.5.2.2 - Laterality" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "exposureInformation" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "exposureInformation.effectiveDose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "B.1.4.1 - Effective dose" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "exposureInformation.equivalentDoseInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "B.1.4.2 - Equivalent dose information" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "exposureInformation.equivalentDoseInformation.equivalentDose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "B.1.4.2.1 - Equivalent dose" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "exposureInformation.equivalentDoseInformation.tissueType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "bodySite" ] ;
+         fhir:display [ fhir:v "B.1.4.2.2 - Tissue type" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/BodyStructureEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/BodyStructureEu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "examinationReport.bodyPart.bodyLocation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "morphology" ] ;
+         fhir:display [ fhir:v "B.1.5.2.1 - Body location" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "includedStructure.structure" ] ;
+         fhir:display [ fhir:v "B.1.5.2.1 - Body location" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.bodyPart.laterality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "includedStructure.laterality" ] ;
+         fhir:display [ fhir:v "B.1.5.2.2 - Laterality" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "examinationReport.medication" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "partOf" ] ;
+         fhir:display [ fhir:v "B.1.5.4 - Medication" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImAdverseEvent"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImAdverseEvent>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "examinationReport.adverseReaction" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "suspectEntity[procedure]" ] ;
+         fhir:display [ fhir:v "B.1.5.5 - Adverse reaction" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "contributingFactor[allergy]" ] ;
+         fhir:display [ fhir:v "B.1.5.5 - Adverse reaction" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "status" ] ;
+         fhir:display [ fhir:v "B.1.5.5 - Adverse reaction" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "code" ] ;
+         fhir:display [ fhir:v "B.1.5.5 - Adverse reaction" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "B.1.5.5 - Adverse reaction" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "examinationReport.adverseReaction" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "examinationReport.resultData.observationResults" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "result" ] ;
+         fhir:display [ fhir:v "B.1.5.6.2 - Observation results" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "examinationReport.conclusion.impression" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "conclusion" ] ;
+         fhir:display [ fhir:v "B.1.5.7.1 - Impression" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "recommendation.description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "description" ] ;
+         fhir:display [ fhir:v "B.1.6.1 - Description" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "examinationReport" ] ;
+       fhir:display [ fhir:v "(B.1.5 - Examination Report)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "examinationReport.bodyPart" ] ;
+       fhir:display [ fhir:v "(B.1.5.2 - Body part)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

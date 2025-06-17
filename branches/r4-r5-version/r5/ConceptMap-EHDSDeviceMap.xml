@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSDeviceMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSDeviceMap</b></p><a name="EHDSDeviceMap"> </a><a name="hcEHDSDeviceMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSDevice.html">Device model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSDevice.html">Device model</a> to <a href="http://hl7.org/fhir/R5/device.html">Device</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.12.1 - Identifier)</td></tr><tr><td>manufacturer</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>manufacturer (C.12.2 - Manufacturer)</td></tr><tr><td>manufactureDate</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>manufactureDate (C.12.3 - Manufacture date)</td></tr><tr><td>expiryDate</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>expirationDate (C.12.4 - Expiry date)</td></tr><tr><td>lotNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>lotNumber (C.12.5 - Lot number)</td></tr><tr><td>serialNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>serialNumber (C.12.6 - Serial number)</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>name (C.12.7 - Name)</td></tr><tr><td>modelNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>modelNumber (C.12.8 - Model number)</td></tr><tr><td>version</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>version (C.12.9 - Version)</td></tr><tr><td>type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>type (C.12.10 - Type)</td></tr><tr><td>note</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>note (C.12.11 - Note)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSDeviceMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSDeviceMap"/>
+  <title value="EHDSDevice Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSDevice"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/Device"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.12.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="manufacturer"/>
+      <target>
+        <code value="manufacturer"/>
+        <display value="C.12.2 - Manufacturer"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="manufactureDate"/>
+      <target>
+        <code value="manufactureDate"/>
+        <display value="C.12.3 - Manufacture date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="expiryDate"/>
+      <target>
+        <code value="expirationDate"/>
+        <display value="C.12.4 - Expiry date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="lotNumber"/>
+      <target>
+        <code value="lotNumber"/>
+        <display value="C.12.5 - Lot number"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="serialNumber"/>
+      <target>
+        <code value="serialNumber"/>
+        <display value="C.12.6 - Serial number"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="name"/>
+      <target>
+        <code value="name"/>
+        <display value="C.12.7 - Name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="modelNumber"/>
+      <target>
+        <code value="modelNumber"/>
+        <display value="C.12.8 - Model number"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="version"/>
+      <target>
+        <code value="version"/>
+        <display value="C.12.9 - Version"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="type"/>
+      <target>
+        <code value="type"/>
+        <display value="C.12.10 - Type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="note"/>
+      <target>
+        <code value="note"/>
+        <display value="C.12.11 - Note"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

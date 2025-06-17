@@ -1,0 +1,200 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSConditionMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSConditionMap</b></p><a name=\"EHDSConditionMap\"> </a><a name=\"hcEHDSConditionMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSCondition.html\">Condition model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSCondition.html\">Condition model</a> to <a href=\"StructureDefinition-ConditionEu.html\">EU Condition</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ConditionEu</td><td/></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.15.1 - Identifier</td><td/></tr><tr><td style=\"border-right-width: 0px\">description</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\">C.15.2 - Description</td><td/></tr><tr><td style=\"border-right-width: 0px\">code</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">code</td><td style=\"border-left-width: 0px\">C.15.3 - Code</td><td/></tr><tr><td style=\"border-right-width: 0px\">onsetDate</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">onset[x]</td><td style=\"border-left-width: 0px\">C.15.4 - Onset date</td><td/></tr><tr><td style=\"border-right-width: 0px\">endDate</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">abatement[x]</td><td style=\"border-left-width: 0px\">C.15.5 - End date</td><td/></tr><tr><td style=\"border-right-width: 0px\">category</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">category</td><td style=\"border-left-width: 0px\">C.15.6 - Category</td><td/></tr><tr><td style=\"border-right-width: 0px\">clinicalStatus</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">clinicalStatus</td><td style=\"border-left-width: 0px\">C.15.7 - Clinical status</td><td>Target binding is required</td></tr><tr><td style=\"border-right-width: 0px\">resolutionCircumstances</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">evidence.concept</td><td style=\"border-left-width: 0px\">C.15.8 - Resolution circumstances</td><td>When condition is inactive, the evidence for this should be listed here.</td></tr><tr><td style=\"border-right-width: 0px\">severity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">severity</td><td style=\"border-left-width: 0px\">C.15.9 - Severity</td><td/></tr><tr><td style=\"border-right-width: 0px\">anatomicLocation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">bodySite</td><td style=\"border-left-width: 0px\">C.15.10 - Anatomic location</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">stage</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">stage</td><td style=\"border-left-width: 0px\">C.15.11 - Stage</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">stage.summary</td><td style=\"border-left-width: 0px\">C.15.11 - Stage</td><td>stage code</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">stage.type</td><td style=\"border-left-width: 0px\">C.15.11 - Stage</td><td>stage type</td></tr><tr><td style=\"border-right-width: 0px\">patient</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.15.12 - Subject</td><td/></tr><tr><td style=\"border-right-width: 0px\">participant</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">participant</td><td style=\"border-left-width: 0px\">C.15.13 - Participant</td><td/></tr><tr><td style=\"border-right-width: 0px\">participant.function</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">participant.function</td><td style=\"border-left-width: 0px\">C.15.13.1 - Function</td><td/></tr><tr><td style=\"border-right-width: 0px\">participant.actor</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">participant.actor</td><td style=\"border-left-width: 0px\">C.15.13.2 - Actor</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">externalResourceRelatedWith</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">stage.assessment</td><td style=\"border-left-width: 0px\">C.15.14 - External Resourcerelated with</td><td>Evidence for the condition stage</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">extension[relatedArtifact]</td><td style=\"border-left-width: 0px\">C.15.14 - External Resourcerelated with</td><td>Refer to external sources.</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">evidence</td><td style=\"border-left-width: 0px\">C.15.14 - External Resourcerelated with</td><td>Evidence for the condidation</td></tr><tr><td style=\"border-right-width: 0px\">diagnosisAssertionStatus</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">verificationStatus</td><td style=\"border-left-width: 0px\">C.15.15 - Diagnosis assertion status</td><td/></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSConditionMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSConditionMap",
+  "title" : "EHDSCondition Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSCondition",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ConditionEu",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.15.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "description",
+      "target" : [{
+        "code" : "note",
+        "display" : "C.15.2 - Description",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "code",
+      "target" : [{
+        "code" : "code",
+        "display" : "C.15.3 - Code",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "onsetDate",
+      "target" : [{
+        "code" : "onset[x]",
+        "display" : "C.15.4 - Onset date",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "endDate",
+      "target" : [{
+        "code" : "abatement[x]",
+        "display" : "C.15.5 - End date",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "category",
+      "target" : [{
+        "code" : "category",
+        "display" : "C.15.6 - Category",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "clinicalStatus",
+      "target" : [{
+        "code" : "clinicalStatus",
+        "display" : "C.15.7 - Clinical status",
+        "relationship" : "source-is-broader-than-target",
+        "comment" : "Target binding is required"
+      }]
+    },
+    {
+      "code" : "resolutionCircumstances",
+      "target" : [{
+        "code" : "evidence.concept",
+        "display" : "C.15.8 - Resolution circumstances",
+        "relationship" : "equivalent",
+        "comment" : "When condition is inactive, the evidence for this should be listed here."
+      }]
+    },
+    {
+      "code" : "severity",
+      "target" : [{
+        "code" : "severity",
+        "display" : "C.15.9 - Severity",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "anatomicLocation",
+      "target" : [{
+        "code" : "bodySite",
+        "display" : "C.15.10 - Anatomic location",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "stage",
+      "target" : [{
+        "code" : "stage",
+        "display" : "C.15.11 - Stage",
+        "relationship" : "equivalent"
+      },
+      {
+        "code" : "stage.summary",
+        "display" : "C.15.11 - Stage",
+        "relationship" : "equivalent",
+        "comment" : "stage code"
+      },
+      {
+        "code" : "stage.type",
+        "display" : "C.15.11 - Stage",
+        "relationship" : "equivalent",
+        "comment" : "stage type"
+      }]
+    },
+    {
+      "code" : "patient",
+      "target" : [{
+        "code" : "subject",
+        "display" : "C.15.12 - Subject",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant",
+      "target" : [{
+        "code" : "participant",
+        "display" : "C.15.13 - Participant",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.function",
+      "target" : [{
+        "code" : "participant.function",
+        "display" : "C.15.13.1 - Function",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.actor",
+      "target" : [{
+        "code" : "participant.actor",
+        "display" : "C.15.13.2 - Actor",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "externalResourceRelatedWith",
+      "target" : [{
+        "code" : "stage.assessment",
+        "display" : "C.15.14 - External Resourcerelated with",
+        "relationship" : "source-is-broader-than-target",
+        "comment" : "Evidence for the condition stage"
+      },
+      {
+        "code" : "extension[relatedArtifact]",
+        "display" : "C.15.14 - External Resourcerelated with",
+        "relationship" : "source-is-broader-than-target",
+        "comment" : "Refer to external sources."
+      },
+      {
+        "code" : "evidence",
+        "display" : "C.15.14 - External Resourcerelated with",
+        "relationship" : "source-is-broader-than-target",
+        "comment" : "Evidence for the condidation"
+      }]
+    },
+    {
+      "code" : "diagnosisAssertionStatus",
+      "target" : [{
+        "code" : "verificationStatus",
+        "display" : "C.15.15 - Diagnosis assertion status",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

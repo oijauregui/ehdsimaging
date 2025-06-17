@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Hl7EuDocumentTypes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem Hl7EuDocumentTypes</b></p><a name=\"Hl7EuDocumentTypes\"> </a><a name=\"hcHl7EuDocumentTypes\"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">imaging-report<a name=\"Hl7EuDocumentTypes-imaging-report\"> </a></td><td>Imaging Reports</td><td>HL7 EU Imaging Report</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  imaging-report-v0-0-1<a name=\"Hl7EuDocumentTypes-imaging-report-v0-0-1\"> </a></td><td>Imaging Report V0.0.1</td><td>Version 0.0.1 of the HL7 EU Imaging Report</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">imaging-manifest<a name=\"Hl7EuDocumentTypes-imaging-manifest\"> </a></td><td>Imaging Manifest</td><td>HL7 EU Imaging Manifest</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  imaging-manifest-v0-0-1<a name=\"Hl7EuDocumentTypes-imaging-manifest-v0-0-1\"> </a></td><td>Imaging Manifest V0.0.1</td><td>Version 0.0.1 of the HL7 EU Imaging Manifest</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "Hl7EuDocumentTypes"] ; # 
+  fhir:title [ fhir:v "HL7 EU Document Types"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:32:42+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Document types (templates) as defined by HL7 EU. It identifies the type and template of the document."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "imaging-report" ] ;
+     fhir:display [ fhir:v "Imaging Reports" ] ;
+     fhir:definition [ fhir:v "HL7 EU Imaging Report" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "imaging-report-v0-0-1" ] ;
+       fhir:display [ fhir:v "Imaging Report V0.0.1" ] ;
+       fhir:definition [ fhir:v "Version 0.0.1 of the HL7 EU Imaging Report" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "imaging-manifest" ] ;
+     fhir:display [ fhir:v "Imaging Manifest" ] ;
+     fhir:definition [ fhir:v "HL7 EU Imaging Manifest" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "imaging-manifest-v0-0-1" ] ;
+       fhir:display [ fhir:v "Imaging Manifest V0.0.1" ] ;
+       fhir:definition [ fhir:v "Version 0.0.1 of the HL7 EU Imaging Manifest" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

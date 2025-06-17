@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSPatientMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSPatientMap</b></p><a name="EHDSPatientMap"> </a><a name="hcEHDSPatientMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSPatient.html">Patient model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSPatient.html">Patient model</a> to <a href="http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-patient-eu.html">Patient (EU base)</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu</td></tr><tr><td style="border-right-width: 0px">personalIdentifier</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">identifier</td><td style="border-left-width: 0px">C.1.1 - Personal identifier</td></tr><tr><td style="border-right-width: 0px">name</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">name</td><td style="border-left-width: 0px">C.1.2 - Name</td></tr><tr><td style="border-right-width: 0px">dateOfBirth</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">birthDate</td><td style="border-left-width: 0px">C.1.3 - Date of birth</td></tr><tr><td style="border-right-width: 0px">administrativeGender</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">gender</td><td style="border-left-width: 0px">C.1.4 - Administrative gender</td></tr><tr><td style="border-right-width: 0px">address</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">address</td><td style="border-left-width: 0px">C.1.5 - Address</td></tr><tr><td style="border-right-width: 0px">telecom</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">telecom</td><td style="border-left-width: 0px">C.1.6 - Telecom</td></tr><tr><td style="border-right-width: 0px">maritalStatus</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">maritalStatus</td><td style="border-left-width: 0px">C.1.7 - Marital status</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">citizenship</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[patient-citizenship]</td><td style="border-left-width: 0px">C.1.8 - Citizenship (nationality)</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[patient-nationality]</td><td style="border-left-width: 0px">C.1.8 - Citizenship (nationality)</td></tr><tr><td style="border-right-width: 0px">communicationLanguage</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">communication.language</td><td style="border-left-width: 0px">C.1.9 - Communcation language</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSPatientMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSPatientMap"/>
+  <title value="EHDSPatient Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSPatient"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"/>
+    <target value="http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu"/>
+    <element>
+      <code value="personalIdentifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.1.1 - Personal identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="name"/>
+      <target>
+        <code value="name"/>
+        <display value="C.1.2 - Name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="dateOfBirth"/>
+      <target>
+        <code value="birthDate"/>
+        <display value="C.1.3 - Date of birth"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="administrativeGender"/>
+      <target>
+        <code value="gender"/>
+        <display value="C.1.4 - Administrative gender"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="address"/>
+      <target>
+        <code value="address"/>
+        <display value="C.1.5 - Address"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="telecom"/>
+      <target>
+        <code value="telecom"/>
+        <display value="C.1.6 - Telecom"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="maritalStatus"/>
+      <target>
+        <code value="maritalStatus"/>
+        <display value="C.1.7 - Marital status"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="citizenship"/>
+      <target>
+        <code value="extension[patient-citizenship]"/>
+        <display value="C.1.8 - Citizenship (nationality)"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="extension[patient-nationality]"/>
+        <display value="C.1.8 - Citizenship (nationality)"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="communicationLanguage"/>
+      <target>
+        <code value="communication.language"/>
+        <display value="C.1.9 - Communcation language"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

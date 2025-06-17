@@ -1,0 +1,155 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSServiceRequestMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSServiceRequestMap</b></p><a name=\"EHDSServiceRequestMap\"> </a><a name=\"hcEHDSServiceRequestMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSServiceRequest.html\">Service request model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSServiceRequest.html\">Service request model</a> to <a href=\"http://hl7.org/fhir/R5/servicerequest.html\">ServiceRequest</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/ServiceRequest</td><td/></tr><tr><td style=\"border-right-width: 0px\">serviceText</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">text</td><td style=\"border-left-width: 0px\">C.8.1 - Service text</td><td/></tr><tr><td style=\"border-right-width: 0px\">serviceCode</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">code.concept</td><td style=\"border-left-width: 0px\">C.8.2 - Service code</td><td/></tr><tr><td style=\"border-right-width: 0px\">reasonCode</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason.concept</td><td style=\"border-left-width: 0px\">C.8.3 - Reason code</td><td/></tr><tr><td style=\"border-right-width: 0px\">quantity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">quantityQuantity</td><td style=\"border-left-width: 0px\">C.8.4 - Quantity</td><td/></tr><tr><td style=\"border-right-width: 0px\">anatomicLocation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">bodySite</td><td style=\"border-left-width: 0px\">C.8.5 - Anatomic location</td><td/></tr><tr><td style=\"border-right-width: 0px\">reasonReference</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason.reference</td><td style=\"border-left-width: 0px\">C.8.6 - Reason reference</td><td/></tr><tr><td style=\"border-right-width: 0px\">priority</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">priority</td><td style=\"border-left-width: 0px\">C.8.7 - Priority</td><td/></tr><tr><td style=\"border-right-width: 0px\">supportingInformation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">supportingInfo</td><td style=\"border-left-width: 0px\">C.8.8 - Supporting information</td><td>Point to observations and conditions</td></tr><tr><td style=\"border-right-width: 0px\">specimen</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">specimen</td><td style=\"border-left-width: 0px\">C.8.9 - Specimen</td><td/></tr><tr><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.8.10 - Subject</td><td/></tr><tr><td style=\"border-right-width: 0px\">encounter</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">encounter</td><td style=\"border-left-width: 0px\">C.8.11 - Encounter</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">occurance[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurrenceDateTime</td><td style=\"border-left-width: 0px\">C.8.12 - Occurance</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurrencePeriod</td><td style=\"border-left-width: 0px\">C.8.12 - Occurance</td><td/></tr><tr><td style=\"border-right-width: 0px\">patientInstructions</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">patientInstruction.instructionMarkdown</td><td style=\"border-left-width: 0px\">C.8.13 - Patient instructions</td><td/></tr><tr><td style=\"border-right-width: 0px\">coverage</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">insurance</td><td style=\"border-left-width: 0px\">C.8.14 - Coverage</td><td/></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSServiceRequestMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSServiceRequestMap",
+  "title" : "EHDSServiceRequest Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSServiceRequest",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest",
+    "target" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+    "element" : [{
+      "code" : "serviceText",
+      "target" : [{
+        "code" : "text",
+        "display" : "C.8.1 - Service text",
+        "relationship" : "source-is-narrower-than-target"
+      }]
+    },
+    {
+      "code" : "serviceCode",
+      "target" : [{
+        "code" : "code.concept",
+        "display" : "C.8.2 - Service code",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "reasonCode",
+      "target" : [{
+        "code" : "reason.concept",
+        "display" : "C.8.3 - Reason code",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "quantity",
+      "target" : [{
+        "code" : "quantityQuantity",
+        "display" : "C.8.4 - Quantity",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "anatomicLocation",
+      "target" : [{
+        "code" : "bodySite",
+        "display" : "C.8.5 - Anatomic location",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "reasonReference",
+      "target" : [{
+        "code" : "reason.reference",
+        "display" : "C.8.6 - Reason reference",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "priority",
+      "target" : [{
+        "code" : "priority",
+        "display" : "C.8.7 - Priority",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "supportingInformation",
+      "target" : [{
+        "code" : "supportingInfo",
+        "display" : "C.8.8 - Supporting information",
+        "relationship" : "equivalent",
+        "comment" : "Point to observations and conditions"
+      }]
+    },
+    {
+      "code" : "specimen",
+      "target" : [{
+        "code" : "specimen",
+        "display" : "C.8.9 - Specimen",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "subject",
+      "target" : [{
+        "code" : "subject",
+        "display" : "C.8.10 - Subject",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "encounter",
+      "target" : [{
+        "code" : "encounter",
+        "display" : "C.8.11 - Encounter",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "occurance[x]",
+      "target" : [{
+        "code" : "occurrenceDateTime",
+        "display" : "C.8.12 - Occurance",
+        "relationship" : "equivalent"
+      },
+      {
+        "code" : "occurrencePeriod",
+        "display" : "C.8.12 - Occurance",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "patientInstructions",
+      "target" : [{
+        "code" : "patientInstruction.instructionMarkdown",
+        "display" : "C.8.13 - Patient instructions",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "coverage",
+      "target" : [{
+        "code" : "insurance",
+        "display" : "C.8.14 - Coverage",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

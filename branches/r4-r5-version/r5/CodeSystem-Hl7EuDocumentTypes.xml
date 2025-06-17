@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="Hl7EuDocumentTypes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem Hl7EuDocumentTypes</b></p><a name="Hl7EuDocumentTypes"> </a><a name="hcHl7EuDocumentTypes"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style="white-space:nowrap">imaging-report<a name="Hl7EuDocumentTypes-imaging-report"> </a></td><td>Imaging Reports</td><td>HL7 EU Imaging Report</td></tr><tr><td>2</td><td style="white-space:nowrap">  imaging-report-v0-0-1<a name="Hl7EuDocumentTypes-imaging-report-v0-0-1"> </a></td><td>Imaging Report V0.0.1</td><td>Version 0.0.1 of the HL7 EU Imaging Report</td></tr><tr><td>1</td><td style="white-space:nowrap">imaging-manifest<a name="Hl7EuDocumentTypes-imaging-manifest"> </a></td><td>Imaging Manifest</td><td>HL7 EU Imaging Manifest</td></tr><tr><td>2</td><td style="white-space:nowrap">  imaging-manifest-v0-0-1<a name="Hl7EuDocumentTypes-imaging-manifest-v0-0-1"> </a></td><td>Imaging Manifest V0.0.1</td><td>Version 0.0.1 of the HL7 EU Imaging Manifest</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes"/>
+  <version value="0.1.0-ballot"/>
+  <name value="Hl7EuDocumentTypes"/>
+  <title value="HL7 EU Document Types"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Document types (templates) as defined by HL7 EU. It identifies the type and template of the document."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="imaging-report"/>
+    <display value="Imaging Reports"/>
+    <definition value="HL7 EU Imaging Report"/>
+    <concept>
+      <code value="imaging-report-v0-0-1"/>
+      <display value="Imaging Report V0.0.1"/>
+      <definition value="Version 0.0.1 of the HL7 EU Imaging Report"/>
+    </concept>
+  </concept>
+  <concept>
+    <code value="imaging-manifest"/>
+    <display value="Imaging Manifest"/>
+    <definition value="HL7 EU Imaging Manifest"/>
+    <concept>
+      <code value="imaging-manifest-v0-0-1"/>
+      <display value="Imaging Manifest V0.0.1"/>
+      <definition value="Version 0.0.1 of the HL7 EU Imaging Manifest"/>
+    </concept>
+  </concept>
+</CodeSystem>

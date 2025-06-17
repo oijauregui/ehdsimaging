@@ -1,0 +1,419 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingReportHeaderMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSImagingReportHeaderMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSImagingReportHeaderMap</b></p><a name=\"EHDSImagingReportHeaderMap\"> </a><a name=\"hcEHDSImagingReportHeaderMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSImagingReportHeader.html\">Imaging report header model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportHeader.html\">Imaging report header model</a> to <a href=\"StructureDefinition-ImComposition.html\">Imaging Composition</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition</td><td/></tr><tr><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">A.1.1 - Subject</td><td/></tr><tr><td style=\"border-right-width: 0px\">healthInsuranceAndPaymentInformation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">extension[basedOn]</td><td style=\"border-left-width: 0px\">A.1.4 - Health insurance and payment information</td><td/></tr><tr><td style=\"border-right-width: 0px\">intendedRecipient</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">extension[informationRecipient]</td><td style=\"border-left-width: 0px\">A.1.5 - Intended recipient</td><td/></tr><tr><td style=\"border-right-width: 0px\">authorship</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">author</td><td style=\"border-left-width: 0px\">A.1.6 - Authorship</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">authorship.author</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">author[author]</td><td style=\"border-left-width: 0px\">A.1.6.1 - Author</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">author[authoringDevice]</td><td style=\"border-left-width: 0px\">A.1.6.1 - Author</td><td>not an exact match</td></tr><tr><td style=\"border-right-width: 0px\">authorship.datetime</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">date</td><td style=\"border-left-width: 0px\">A.1.6.2 - DateTime</td><td/></tr><tr><td style=\"border-right-width: 0px\">attestation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">attester[resultValidator]</td><td style=\"border-left-width: 0px\">A.1.7 - Attestation</td><td/></tr><tr><td style=\"border-right-width: 0px\">attestation.attester</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">attester[resultValidator].party</td><td style=\"border-left-width: 0px\">A.1.7.1 - Attester</td><td/></tr><tr><td style=\"border-right-width: 0px\">attestation.datetime</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">attester[resultValidator].time</td><td style=\"border-left-width: 0px\">A.1.7.2 - DateTime</td><td/></tr><tr><td style=\"border-right-width: 0px\">legalAuthentication</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">attester[legalAuthenticator]</td><td style=\"border-left-width: 0px\">A.1.8 - Legal authentication</td><td/></tr><tr><td style=\"border-right-width: 0px\">legalAuthentication.legalAuthenticator</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">attester[legalAuthenticator].party</td><td style=\"border-left-width: 0px\">A.1.8.1 - Legal authenticator</td><td/></tr><tr><td style=\"border-right-width: 0px\">legalAuthentication.datetime</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">attester[legalAuthenticator].time</td><td style=\"border-left-width: 0px\">A.1.8.2 - DateTime</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">documentMetadata</td><td style=\"border-left-width: 0px\"/><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.documentId</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">A.1.9.1 - Document ID</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.documentType</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">category[imaging]</td><td style=\"border-left-width: 0px\">A.1.9.2 - Document type</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.documentStatus</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\">A.1.9.3 - Document status</td><td>See mapping between DR status and Composition</td></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.period</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">event.period</td><td style=\"border-left-width: 0px\">A.1.9.4 - Period</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.reportDateAndTime</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">date</td><td style=\"border-left-width: 0px\">A.1.9.5 - Report date and time</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.documentTitle</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">title</td><td style=\"border-left-width: 0px\">A.1.9.6 - Document title</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">documentMetadata.eventType</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">event[imagingstudy]</td><td style=\"border-left-width: 0px\">A.1.9.7 - Event type</td><td>modality</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">event[procedure]</td><td style=\"border-left-width: 0px\">A.1.9.7 - Event type</td><td>study type</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">documentMetadata.specialty</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">event[procedure]</td><td style=\"border-left-width: 0px\">A.1.9.8 - Specialty</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">event[imagingstudy]</td><td style=\"border-left-width: 0px\">A.1.9.8 - Specialty</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.reportCustodian</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">custodian</td><td style=\"border-left-width: 0px\">A.1.9.9 - Report custodian</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.documentFormat</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">type</td><td style=\"border-left-width: 0px\">A.1.9.10 - Document format</td><td>Could be extended with list of approved templates as a separate category in the future.</td></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.confidentiality</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">meta.security</td><td style=\"border-left-width: 0px\">A.1.9.11 - Confidentiality</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.language</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">language</td><td style=\"border-left-width: 0px\">A.1.9.12 - Language</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.version</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">version</td><td style=\"border-left-width: 0px\">A.1.9.13 - Version</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">documentMetadata.studyInstanceUid</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">event[imagingstudy]</td><td style=\"border-left-width: 0px\">A.1.9.14 - Study Instance UID</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[imagingstudy].entry[imagingstudy]</td><td style=\"border-left-width: 0px\">A.1.9.14 - Study Instance UID</td><td/></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.accessionNumber</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">extension[basedOn]</td><td style=\"border-left-width: 0px\">A.1.9.15 - Accession number</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportHeader.html\">Imaging report header model</a> to <a href=\"StructureDefinition-ImDiagnosticReport.html\">Imaging Diagnostic Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>subject</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>subject (A.1.1 - Subject)</td></tr><tr><td>healthInsuranceAndPaymentInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>basedOn (A.1.4 - Health insurance and payment information)</td></tr><tr><td>authorship.author</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>performer[author] (A.1.6.1 - Author)</td></tr><tr><td>authorship.datetime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>issued (A.1.6.2 - DateTime)</td></tr><tr><td>documentMetadata.documentId</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>identifier (A.1.9.1 - Document ID)</td></tr><tr><td>documentMetadata.documentType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>category[imaging] (A.1.9.2 - Document type)</td></tr><tr><td>documentMetadata.documentStatus</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>status (A.1.9.3 - Document status)</td></tr><tr><td>documentMetadata.period</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>effectivePeriod (A.1.9.4 - Period)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportHeader.html\">Imaging report header model</a> to <a href=\"StructureDefinition-ImOrder.html\">IM Imaging Order</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>healthInsuranceAndPaymentInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>insurance (A.1.4 - Health insurance and payment information)</td></tr><tr><td>documentMetadata.accessionNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>identifier[accessionNumber] (A.1.9.15 - Accession number)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportHeader.html\">Imaging report header model</a> to <a href=\"StructureDefinition-ImProcedure.html\">IM Imaging Procedure</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>documentMetadata.eventType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>location (A.1.9.7 - Event type)</td></tr><tr><td>documentMetadata.specialty</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>location (A.1.9.8 - Specialty)</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReportHeader.html\">Imaging report header model</a> to <a href=\"StructureDefinition-ImImagingStudy.html\">IM Imaging Study</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">documentMetadata.eventType</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">series.modality</td><td style=\"border-left-width: 0px\">A.1.9.7 - Event type</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">modality</td><td style=\"border-left-width: 0px\">A.1.9.7 - Event type</td></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.specialty</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">location</td><td style=\"border-left-width: 0px\">A.1.9.8 - Specialty</td></tr><tr><td style=\"border-right-width: 0px\">documentMetadata.studyInstanceUid</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">identifier[studyInstanceUid]</td><td style=\"border-left-width: 0px\">A.1.9.14 - Study Instance UID</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingReportHeaderMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSImagingReportHeaderMap"] ; # 
+  fhir:title [ fhir:v "EHDSImagingReportHeader Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSImagingReportHeader"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "A.1.1 - Subject" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "healthInsuranceAndPaymentInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[basedOn]" ] ;
+         fhir:display [ fhir:v "A.1.4 - Health insurance and payment information" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "intendedRecipient" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[informationRecipient]" ] ;
+         fhir:display [ fhir:v "A.1.5 - Intended recipient" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "authorship" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "author" ] ;
+         fhir:display [ fhir:v "A.1.6 - Authorship" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "authorship.author" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "author[author]" ] ;
+         fhir:display [ fhir:v "A.1.6.1 - Author" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "author[authoringDevice]" ] ;
+         fhir:display [ fhir:v "A.1.6.1 - Author" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "not an exact match" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "authorship.datetime" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "date" ] ;
+         fhir:display [ fhir:v "A.1.6.2 - DateTime" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "attestation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "attester[resultValidator]" ] ;
+         fhir:display [ fhir:v "A.1.7 - Attestation" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "attestation.attester" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "attester[resultValidator].party" ] ;
+         fhir:display [ fhir:v "A.1.7.1 - Attester" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "attestation.datetime" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "attester[resultValidator].time" ] ;
+         fhir:display [ fhir:v "A.1.7.2 - DateTime" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "legalAuthentication" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "attester[legalAuthenticator]" ] ;
+         fhir:display [ fhir:v "A.1.8 - Legal authentication" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "legalAuthentication.legalAuthenticator" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "attester[legalAuthenticator].party" ] ;
+         fhir:display [ fhir:v "A.1.8.1 - Legal authenticator" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "legalAuthentication.datetime" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "attester[legalAuthenticator].time" ] ;
+         fhir:display [ fhir:v "A.1.8.2 - DateTime" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentId" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "A.1.9.1 - Document ID" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "category[imaging]" ] ;
+         fhir:display [ fhir:v "A.1.9.2 - Document type" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentStatus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "status" ] ;
+         fhir:display [ fhir:v "A.1.9.3 - Document status" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "See mapping between DR status and Composition" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.period" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "event.period" ] ;
+         fhir:display [ fhir:v "A.1.9.4 - Period" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.reportDateAndTime" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "date" ] ;
+         fhir:display [ fhir:v "A.1.9.5 - Report date and time" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentTitle" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "title" ] ;
+         fhir:display [ fhir:v "A.1.9.6 - Document title" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.eventType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "event[imagingstudy]" ] ;
+         fhir:display [ fhir:v "A.1.9.7 - Event type" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "modality" ]
+       ] [
+         fhir:code [ fhir:v "event[procedure]" ] ;
+         fhir:display [ fhir:v "A.1.9.7 - Event type" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "study type" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.specialty" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "event[procedure]" ] ;
+         fhir:display [ fhir:v "A.1.9.8 - Specialty" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "event[imagingstudy]" ] ;
+         fhir:display [ fhir:v "A.1.9.8 - Specialty" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.reportCustodian" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "custodian" ] ;
+         fhir:display [ fhir:v "A.1.9.9 - Report custodian" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentFormat" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "type" ] ;
+         fhir:display [ fhir:v "A.1.9.10 - Document format" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Could be extended with list of approved templates as a separate category in the future." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.confidentiality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "meta.security" ] ;
+         fhir:display [ fhir:v "A.1.9.11 - Confidentiality" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.language" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "language" ] ;
+         fhir:display [ fhir:v "A.1.9.12 - Language" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.version" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "version" ] ;
+         fhir:display [ fhir:v "A.1.9.13 - Version" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.studyInstanceUid" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "event[imagingstudy]" ] ;
+         fhir:display [ fhir:v "A.1.9.14 - Study Instance UID" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "section[imagingstudy].entry[imagingstudy]" ] ;
+         fhir:display [ fhir:v "A.1.9.14 - Study Instance UID" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.accessionNumber" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[basedOn]" ] ;
+         fhir:display [ fhir:v "A.1.9.15 - Accession number" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "A.1.1 - Subject" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "healthInsuranceAndPaymentInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "basedOn" ] ;
+         fhir:display [ fhir:v "A.1.4 - Health insurance and payment information" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "authorship.author" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "performer[author]" ] ;
+         fhir:display [ fhir:v "A.1.6.1 - Author" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "authorship.datetime" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "issued" ] ;
+         fhir:display [ fhir:v "A.1.6.2 - DateTime" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentId" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "A.1.9.1 - Document ID" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "category[imaging]" ] ;
+         fhir:display [ fhir:v "A.1.9.2 - Document type" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.documentStatus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "status" ] ;
+         fhir:display [ fhir:v "A.1.9.3 - Document status" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.period" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "effectivePeriod" ] ;
+         fhir:display [ fhir:v "A.1.9.4 - Period" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImOrder>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "healthInsuranceAndPaymentInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "insurance" ] ;
+         fhir:display [ fhir:v "A.1.4 - Health insurance and payment information" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.accessionNumber" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier[accessionNumber]" ] ;
+         fhir:display [ fhir:v "A.1.9.15 - Accession number" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImProcedure"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImProcedure>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "documentMetadata.eventType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "location" ] ;
+         fhir:display [ fhir:v "A.1.9.7 - Event type" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.specialty" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "location" ] ;
+         fhir:display [ fhir:v "A.1.9.8 - Specialty" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "documentMetadata.eventType" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.modality" ] ;
+         fhir:display [ fhir:v "A.1.9.7 - Event type" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] [
+         fhir:code [ fhir:v "modality" ] ;
+         fhir:display [ fhir:v "A.1.9.7 - Event type" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.specialty" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "location" ] ;
+         fhir:display [ fhir:v "A.1.9.8 - Specialty" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "documentMetadata.studyInstanceUid" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier[studyInstanceUid]" ] ;
+         fhir:display [ fhir:v "A.1.9.14 - Study Instance UID" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSAttachmentMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSAttachmentMap</b></p><a name="EHDSAttachmentMap"> </a><a name="hcEHDSAttachmentMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSAttachment.html">Attachment model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSAttachment.html">Attachment model</a> to <a href="http://hl7.org/fhir/R5/datatypes.html#Attachment">Attachment</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>contentType</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td>contentType (C.7.1 - Content Type)</td><td>FHIR requires binding.</td></tr><tr><td>language</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>language (C.7.2 - Language)</td><td/></tr><tr><td>data</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>data (C.7.3 - Data)</td><td/></tr><tr><td>url</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>url (C.7.4 - URL)</td><td/></tr><tr><td>size</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>size (C.7.5 - Size)</td><td/></tr><tr><td>hash</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>hash (C.7.6 - Hash)</td><td/></tr><tr><td>title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>title (C.7.7 - Title)</td><td/></tr><tr><td>creationDate</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>creation (C.7.8 - Creation date)</td><td/></tr><tr><td>height</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>height (C.7.9 - Height)</td><td/></tr><tr><td>width</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>width (C.7.10 - Width)</td><td/></tr><tr><td>frames</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>frames (C.7.11 - Frames)</td><td/></tr><tr><td>duration</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>duration (C.7.12 - Duration)</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAttachmentMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSAttachmentMap"/>
+  <title value="EHDSAttachment Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSAttachment"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/Attachment"/>
+    <element>
+      <code value="contentType"/>
+      <target>
+        <code value="contentType"/>
+        <display value="C.7.1 - Content Type"/>
+        <relationship value="source-is-broader-than-target"/>
+        <comment value="FHIR requires binding."/>
+      </target>
+    </element>
+    <element>
+      <code value="language"/>
+      <target>
+        <code value="language"/>
+        <display value="C.7.2 - Language"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="data"/>
+      <target>
+        <code value="data"/>
+        <display value="C.7.3 - Data"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="url"/>
+      <target>
+        <code value="url"/>
+        <display value="C.7.4 - URL"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="size"/>
+      <target>
+        <code value="size"/>
+        <display value="C.7.5 - Size"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="hash"/>
+      <target>
+        <code value="hash"/>
+        <display value="C.7.6 - Hash"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="title"/>
+      <target>
+        <code value="title"/>
+        <display value="C.7.7 - Title"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="creationDate"/>
+      <target>
+        <code value="creation"/>
+        <display value="C.7.8 - Creation date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="height"/>
+      <target>
+        <code value="height"/>
+        <display value="C.7.9 - Height"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="width"/>
+      <target>
+        <code value="width"/>
+        <display value="C.7.10 - Width"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="frames"/>
+      <target>
+        <code value="frames"/>
+        <display value="C.7.11 - Frames"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="duration"/>
+      <target>
+        <code value="duration"/>
+        <display value="C.7.12 - Duration"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

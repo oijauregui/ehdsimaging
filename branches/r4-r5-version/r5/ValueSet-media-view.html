@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Media View types - placeholder for cross-version extension - HL7 Europe Imaging Study Report v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.192"}
+    h3,h4,h5,h6{--heading-prefix:"7.192"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Imaging Study Report</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="index.html#dependencies">Dependencies</a>
+      </li>
+      <li>
+        <a href="index.html#references">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="actors-and-transactions.html">Actors and Transactions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">All</a>
+      </li>
+      <li>
+        <a href="artifacts-structural.html">Structural</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="design-considerations.html">Design Considerations</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Media View types - placeholder for cross-version extension</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Imaging Study Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version'>https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version</a> and changes regularly. See the <a href='http://hl7.eu/fhir/imaging-r5/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-media-view.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-media-view.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-media-view.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Media View types - placeholder for cross-version extension
+
+  </h2>
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.eu/fhir/imaging-r5/ValueSet/media-view<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.eu/fhir/imaging-r5/ValueSet/media-view"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">4.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.eu/fhir/imaging-r5/ValueSet/media-view|4.0.1"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2025-06-16
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">CrossVersionMediaView</span></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p>
+</td>
+    </tr>
+
+  </table>
+
+<p>
+<p>Codes defined in SNOMED CT that can be used to record Media Recording views.</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-CrossVersionMediaViewExtension.html">Media.view extension</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"></p><a name="media-view"> </a><a name="hcmedia-view"> </a>
+<ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 260419006 (Projection)</li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025</p><p>This value set expansion contains 277 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display (en-US)</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260419006"> </a>  <a href="http://snomed.info/id/260419006">260419006</a></td><td>http://snomed.info/sct</td><td>Projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260421001"> </a>  <a href="http://snomed.info/id/260421001">260421001</a></td><td>http://snomed.info/sct</td><td>Left lateral oblique</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260422008"> </a>  <a href="http://snomed.info/id/260422008">260422008</a></td><td>http://snomed.info/sct</td><td>C1-C2 left oblique</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260424009"> </a>  <a href="http://snomed.info/id/260424009">260424009</a></td><td>http://snomed.info/sct</td><td>Right lateral oblique</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260425005"> </a>  <a href="http://snomed.info/id/260425005">260425005</a></td><td>http://snomed.info/sct</td><td>C1-C2 right oblique</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260426006"> </a>  <a href="http://snomed.info/id/260426006">260426006</a></td><td>http://snomed.info/sct</td><td>Medial oblique</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260427002"> </a>  <a href="http://snomed.info/id/260427002">260427002</a></td><td>http://snomed.info/sct</td><td>Oblique lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260428007"> </a>  <a href="http://snomed.info/id/260428007">260428007</a></td><td>http://snomed.info/sct</td><td>Mandible X-ray - lateral oblique</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260430009"> </a>  <a href="http://snomed.info/id/260430009">260430009</a></td><td>http://snomed.info/sct</td><td>Anteroposterior left lateral decubitus</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260431008"> </a>  <a href="http://snomed.info/id/260431008">260431008</a></td><td>http://snomed.info/sct</td><td>C1-C2 left lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260432001"> </a>  <a href="http://snomed.info/id/260432001">260432001</a></td><td>http://snomed.info/sct</td><td>Left true lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260434000"> </a>  <a href="http://snomed.info/id/260434000">260434000</a></td><td>http://snomed.info/sct</td><td>Anteroposterior right lateral decubitus</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260435004"> </a>  <a href="http://snomed.info/id/260435004">260435004</a></td><td>http://snomed.info/sct</td><td>C1-C2 right lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260436003"> </a>  <a href="http://snomed.info/id/260436003">260436003</a></td><td>http://snomed.info/sct</td><td>Right true lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260437007"> </a>  <a href="http://snomed.info/id/260437007">260437007</a></td><td>http://snomed.info/sct</td><td>Lateral vertical beam</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260438002"> </a>  <a href="http://snomed.info/id/260438002">260438002</a></td><td>http://snomed.info/sct</td><td>Lateral horizontal beam</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260439005"> </a>  <a href="http://snomed.info/id/260439005">260439005</a></td><td>http://snomed.info/sct</td><td>Lateral inverted</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260440007"> </a>  <a href="http://snomed.info/id/260440007">260440007</a></td><td>http://snomed.info/sct</td><td>True lateral of mandible</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260441006"> </a>  <a href="http://snomed.info/id/260441006">260441006</a></td><td>http://snomed.info/sct</td><td>Frog lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260442004"> </a>  <a href="http://snomed.info/id/260442004">260442004</a></td><td>http://snomed.info/sct</td><td>Erect lateral</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260443009"> </a>  <a href="http://snomed.info/id/260443009">260443009</a></td><td>http://snomed.info/sct</td><td>Anteroposterior inverted</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260444003"> </a>  <a href="http://snomed.info/id/260444003">260444003</a></td><td>http://snomed.info/sct</td><td>PA - Rotated posteroanterior</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260445002"> </a>  <a href="http://snomed.info/id/260445002">260445002</a></td><td>http://snomed.info/sct</td><td>Posteroanterior 20 degree</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260446001"> </a>  <a href="http://snomed.info/id/260446001">260446001</a></td><td>http://snomed.info/sct</td><td>Posteroanterior in ulnar deviation</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260447005"> </a>  <a href="http://snomed.info/id/260447005">260447005</a></td><td>http://snomed.info/sct</td><td>Penetrated posteroanterior</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260450008"> </a>  <a href="http://snomed.info/id/260450008">260450008</a></td><td>http://snomed.info/sct</td><td>Lordotic projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260451007"> </a>  <a href="http://snomed.info/id/260451007">260451007</a></td><td>http://snomed.info/sct</td><td>Supine decubitus</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260452000"> </a>  <a href="http://snomed.info/id/260452000">260452000</a></td><td>http://snomed.info/sct</td><td>Decubitus</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260453005"> </a>  <a href="http://snomed.info/id/260453005">260453005</a></td><td>http://snomed.info/sct</td><td>Internal/external rotation</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260454004"> </a>  <a href="http://snomed.info/id/260454004">260454004</a></td><td>http://snomed.info/sct</td><td>45 degree projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260455003"> </a>  <a href="http://snomed.info/id/260455003">260455003</a></td><td>http://snomed.info/sct</td><td>Head and neck projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260458001"> </a>  <a href="http://snomed.info/id/260458001">260458001</a></td><td>http://snomed.info/sct</td><td>Slit anteroposterior</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260459009"> </a>  <a href="http://snomed.info/id/260459009">260459009</a></td><td>http://snomed.info/sct</td><td>Reverse Towne's</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260460004"> </a>  <a href="http://snomed.info/id/260460004">260460004</a></td><td>http://snomed.info/sct</td><td>Slit 35 degree fronto-occipital</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260461000"> </a>  <a href="http://snomed.info/id/260461000">260461000</a></td><td>http://snomed.info/sct</td><td>Vertex projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260463002"> </a>  <a href="http://snomed.info/id/260463002">260463002</a></td><td>http://snomed.info/sct</td><td>Left Stenver's</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260464008"> </a>  <a href="http://snomed.info/id/260464008">260464008</a></td><td>http://snomed.info/sct</td><td>Right Stenver's</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260465009"> </a>  <a href="http://snomed.info/id/260465009">260465009</a></td><td>http://snomed.info/sct</td><td>Occipitofrontal projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260466005"> </a>  <a href="http://snomed.info/id/260466005">260466005</a></td><td>http://snomed.info/sct</td><td>Occipitomental projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260467001"> </a>  <a href="http://snomed.info/id/260467001">260467001</a></td><td>http://snomed.info/sct</td><td>Occipitomental - erect</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260468006"> </a>  <a href="http://snomed.info/id/260468006">260468006</a></td><td>http://snomed.info/sct</td><td>Occipitomental - tilted</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260469003"> </a>  <a href="http://snomed.info/id/260469003">260469003</a></td><td>http://snomed.info/sct</td><td>Occipitomental - prone</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260470002"> </a>  <a href="http://snomed.info/id/260470002">260470002</a></td><td>http://snomed.info/sct</td><td>Occipitomental - 15 degree</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260471003"> </a>  <a href="http://snomed.info/id/260471003">260471003</a></td><td>http://snomed.info/sct</td><td>Occipitomental - 30 degree</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260472005"> </a>  <a href="http://snomed.info/id/260472005">260472005</a></td><td>http://snomed.info/sct</td><td>Occipitomental - 45 degree</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260473000"> </a>  <a href="http://snomed.info/id/260473000">260473000</a></td><td>http://snomed.info/sct</td><td>Waters - 35 degree tilt to radiographic baseline</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260475007"> </a>  <a href="http://snomed.info/id/260475007">260475007</a></td><td>http://snomed.info/sct</td><td>Submentovertical reduced exposure for zygomatic arches</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260476008"> </a>  <a href="http://snomed.info/id/260476008">260476008</a></td><td>http://snomed.info/sct</td><td>Slit SMV</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260477004"> </a>  <a href="http://snomed.info/id/260477004">260477004</a></td><td>http://snomed.info/sct</td><td>Dental/oral projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260478009"> </a>  <a href="http://snomed.info/id/260478009">260478009</a></td><td>http://snomed.info/sct</td><td>Body - molar</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260479001"> </a>  <a href="http://snomed.info/id/260479001">260479001</a></td><td>http://snomed.info/sct</td><td>Body - premolar</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260481004"> </a>  <a href="http://snomed.info/id/260481004">260481004</a></td><td>http://snomed.info/sct</td><td>Ramus projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260482006"> </a>  <a href="http://snomed.info/id/260482006">260482006</a></td><td>http://snomed.info/sct</td><td>Bimolar projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260483001"> </a>  <a href="http://snomed.info/id/260483001">260483001</a></td><td>http://snomed.info/sct</td><td>Toller projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260484007"> </a>  <a href="http://snomed.info/id/260484007">260484007</a></td><td>http://snomed.info/sct</td><td>Transmaxillary projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260485008"> </a>  <a href="http://snomed.info/id/260485008">260485008</a></td><td>http://snomed.info/sct</td><td>Temporomandibular joint setting</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260486009"> </a>  <a href="http://snomed.info/id/260486009">260486009</a></td><td>http://snomed.info/sct</td><td>Maxillary sinus setting</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260487000"> </a>  <a href="http://snomed.info/id/260487000">260487000</a></td><td>http://snomed.info/sct</td><td>Dental panoramic</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260489002"> </a>  <a href="http://snomed.info/id/260489002">260489002</a></td><td>http://snomed.info/sct</td><td>Implant setting projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260490006"> </a>  <a href="http://snomed.info/id/260490006">260490006</a></td><td>http://snomed.info/sct</td><td>Segmental setting</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260491005"> </a>  <a href="http://snomed.info/id/260491005">260491005</a></td><td>http://snomed.info/sct</td><td>Axial view for sesamoid bones</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260492003"> </a>  <a href="http://snomed.info/id/260492003">260492003</a></td><td>http://snomed.info/sct</td><td>Brewerton's projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260493008"> </a>  <a href="http://snomed.info/id/260493008">260493008</a></td><td>http://snomed.info/sct</td><td>Harris Beath axial projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260494002"> </a>  <a href="http://snomed.info/id/260494002">260494002</a></td><td>http://snomed.info/sct</td><td>Tunnel projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260496000"> </a>  <a href="http://snomed.info/id/260496000">260496000</a></td><td>http://snomed.info/sct</td><td>Judet projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260497009"> </a>  <a href="http://snomed.info/id/260497009">260497009</a></td><td>http://snomed.info/sct</td><td>Mortice projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260499007"> </a>  <a href="http://snomed.info/id/260499007">260499007</a></td><td>http://snomed.info/sct</td><td>Occlusal projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260500003"> </a>  <a href="http://snomed.info/id/260500003">260500003</a></td><td>http://snomed.info/sct</td><td>Projected oblique occlusal</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260501004"> </a>  <a href="http://snomed.info/id/260501004">260501004</a></td><td>http://snomed.info/sct</td><td>Lower true occlusal</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260502006"> </a>  <a href="http://snomed.info/id/260502006">260502006</a></td><td>http://snomed.info/sct</td><td>Power grip series</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260503001"> </a>  <a href="http://snomed.info/id/260503001">260503001</a></td><td>http://snomed.info/sct</td><td>Radial head projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260504007"> </a>  <a href="http://snomed.info/id/260504007">260504007</a></td><td>http://snomed.info/sct</td><td>Skyline projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-260506009"> </a>  <a href="http://snomed.info/id/260506009">260506009</a></td><td>http://snomed.info/sct</td><td>Van Rosen projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272455005"> </a>  <a href="http://snomed.info/id/272455005">272455005</a></td><td>http://snomed.info/sct</td><td>Inferosuperior projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272456006"> </a>  <a href="http://snomed.info/id/272456006">272456006</a></td><td>http://snomed.info/sct</td><td>Apical projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272457002"> </a>  <a href="http://snomed.info/id/272457002">272457002</a></td><td>http://snomed.info/sct</td><td>Vertical projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272458007"> </a>  <a href="http://snomed.info/id/272458007">272458007</a></td><td>http://snomed.info/sct</td><td>Prone projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272459004"> </a>  <a href="http://snomed.info/id/272459004">272459004</a></td><td>http://snomed.info/sct</td><td>Supine projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272460009"> </a>  <a href="http://snomed.info/id/272460009">272460009</a></td><td>http://snomed.info/sct</td><td>Anterior projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272461008"> </a>  <a href="http://snomed.info/id/272461008">272461008</a></td><td>http://snomed.info/sct</td><td>Right posterior projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272462001"> </a>  <a href="http://snomed.info/id/272462001">272462001</a></td><td>http://snomed.info/sct</td><td>Left posterior projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272464000"> </a>  <a href="http://snomed.info/id/272464000">272464000</a></td><td>http://snomed.info/sct</td><td>Perorbital projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272465004"> </a>  <a href="http://snomed.info/id/272465004">272465004</a></td><td>http://snomed.info/sct</td><td>Temporomandibular joint projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272466003"> </a>  <a href="http://snomed.info/id/272466003">272466003</a></td><td>http://snomed.info/sct</td><td>Optic foramen projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272467007"> </a>  <a href="http://snomed.info/id/272467007">272467007</a></td><td>http://snomed.info/sct</td><td>Lateral facial skeleton projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272468002"> </a>  <a href="http://snomed.info/id/272468002">272468002</a></td><td>http://snomed.info/sct</td><td>Ear projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272469005"> </a>  <a href="http://snomed.info/id/272469005">272469005</a></td><td>http://snomed.info/sct</td><td>Mid face projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272470006"> </a>  <a href="http://snomed.info/id/272470006">272470006</a></td><td>http://snomed.info/sct</td><td>Cervical spine projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272472003"> </a>  <a href="http://snomed.info/id/272472003">272472003</a></td><td>http://snomed.info/sct</td><td>Macro projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272473008"> </a>  <a href="http://snomed.info/id/272473008">272473008</a></td><td>http://snomed.info/sct</td><td>Outlet projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272474002"> </a>  <a href="http://snomed.info/id/272474002">272474002</a></td><td>http://snomed.info/sct</td><td>Swimmer's projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272475001"> </a>  <a href="http://snomed.info/id/272475001">272475001</a></td><td>http://snomed.info/sct</td><td>Tibial tuberosity projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272476000"> </a>  <a href="http://snomed.info/id/272476000">272476000</a></td><td>http://snomed.info/sct</td><td>Transthoracic projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272478004"> </a>  <a href="http://snomed.info/id/272478004">272478004</a></td><td>http://snomed.info/sct</td><td>Transcranial projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272479007"> </a>  <a href="http://snomed.info/id/272479007">272479007</a></td><td>http://snomed.info/sct</td><td>Posteroanterior projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272480005"> </a>  <a href="http://snomed.info/id/272480005">272480005</a></td><td>http://snomed.info/sct</td><td>Horizontal projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272481009"> </a>  <a href="http://snomed.info/id/272481009">272481009</a></td><td>http://snomed.info/sct</td><td>Erect projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272482002"> </a>  <a href="http://snomed.info/id/272482002">272482002</a></td><td>http://snomed.info/sct</td><td>Adduction projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272483007"> </a>  <a href="http://snomed.info/id/272483007">272483007</a></td><td>http://snomed.info/sct</td><td>True projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-272484001"> </a>  <a href="http://snomed.info/id/272484001">272484001</a></td><td>http://snomed.info/sct</td><td>Contralateral projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-278255003"> </a>  <a href="http://snomed.info/id/278255003">278255003</a></td><td>http://snomed.info/sct</td><td>Posterior projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-278267001"> </a>  <a href="http://snomed.info/id/278267001">278267001</a></td><td>http://snomed.info/sct</td><td>Abduction projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-278318001"> </a>  <a href="http://snomed.info/id/278318001">278318001</a></td><td>http://snomed.info/sct</td><td>Zimmer projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-398996004"> </a>  <a href="http://snomed.info/id/398996004">398996004</a></td><td>http://snomed.info/sct</td><td>Leonard-George projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399000008"> </a>  <a href="http://snomed.info/id/399000008">399000008</a></td><td>http://snomed.info/sct</td><td>Mayer projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399001007"> </a>  <a href="http://snomed.info/id/399001007">399001007</a></td><td>http://snomed.info/sct</td><td>Posterior emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399002000"> </a>  <a href="http://snomed.info/id/399002000">399002000</a></td><td>http://snomed.info/sct</td><td>Nolke projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399003005"> </a>  <a href="http://snomed.info/id/399003005">399003005</a></td><td>http://snomed.info/sct</td><td>Hughston projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399004004"> </a>  <a href="http://snomed.info/id/399004004">399004004</a></td><td>http://snomed.info/sct</td><td>Oblique axial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399005003"> </a>  <a href="http://snomed.info/id/399005003">399005003</a></td><td>http://snomed.info/sct</td><td>Miller projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399006002"> </a>  <a href="http://snomed.info/id/399006002">399006002</a></td><td>http://snomed.info/sct</td><td>Left posterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399011000"> </a>  <a href="http://snomed.info/id/399011000">399011000</a></td><td>http://snomed.info/sct</td><td>Axillary tail mammography view (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399012007"> </a>  <a href="http://snomed.info/id/399012007">399012007</a></td><td>http://snomed.info/sct</td><td>Medial-lateral emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399013002"> </a>  <a href="http://snomed.info/id/399013002">399013002</a></td><td>http://snomed.info/sct</td><td>Chassard-Lapin projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399022001"> </a>  <a href="http://snomed.info/id/399022001">399022001</a></td><td>http://snomed.info/sct</td><td>Pirie projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399024000"> </a>  <a href="http://snomed.info/id/399024000">399024000</a></td><td>http://snomed.info/sct</td><td>May projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399025004"> </a>  <a href="http://snomed.info/id/399025004">399025004</a></td><td>http://snomed.info/sct</td><td>Ischerwood projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399026003"> </a>  <a href="http://snomed.info/id/399026003">399026003</a></td><td>http://snomed.info/sct</td><td>Zanelli projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399028002"> </a>  <a href="http://snomed.info/id/399028002">399028002</a></td><td>http://snomed.info/sct</td><td>Clements projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399033003"> </a>  <a href="http://snomed.info/id/399033003">399033003</a></td><td>http://snomed.info/sct</td><td>Frontal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399037002"> </a>  <a href="http://snomed.info/id/399037002">399037002</a></td><td>http://snomed.info/sct</td><td>Lewis projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399038007"> </a>  <a href="http://snomed.info/id/399038007">399038007</a></td><td>http://snomed.info/sct</td><td>Right posterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399059000"> </a>  <a href="http://snomed.info/id/399059000">399059000</a></td><td>http://snomed.info/sct</td><td>Postero-anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399061009"> </a>  <a href="http://snomed.info/id/399061009">399061009</a></td><td>http://snomed.info/sct</td><td>Axial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399065000"> </a>  <a href="http://snomed.info/id/399065000">399065000</a></td><td>http://snomed.info/sct</td><td>Causton projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399067008"> </a>  <a href="http://snomed.info/id/399067008">399067008</a></td><td>http://snomed.info/sct</td><td>Lateral projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399071006"> </a>  <a href="http://snomed.info/id/399071006">399071006</a></td><td>http://snomed.info/sct</td><td>Plantodorsal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399073009"> </a>  <a href="http://snomed.info/id/399073009">399073009</a></td><td>http://snomed.info/sct</td><td>Fuchs projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399074003"> </a>  <a href="http://snomed.info/id/399074003">399074003</a></td><td>http://snomed.info/sct</td><td>Left anterior oblique emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399075002"> </a>  <a href="http://snomed.info/id/399075002">399075002</a></td><td>http://snomed.info/sct</td><td>Right posterior oblique emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399080006"> </a>  <a href="http://snomed.info/id/399080006">399080006</a></td><td>http://snomed.info/sct</td><td>Kuchendorf projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399082003"> </a>  <a href="http://snomed.info/id/399082003">399082003</a></td><td>http://snomed.info/sct</td><td>Gaynor-Hart projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399083008"> </a>  <a href="http://snomed.info/id/399083008">399083008</a></td><td>http://snomed.info/sct</td><td>Hsieh projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399089007"> </a>  <a href="http://snomed.info/id/399089007">399089007</a></td><td>http://snomed.info/sct</td><td>Oblique axial emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399098005"> </a>  <a href="http://snomed.info/id/399098005">399098005</a></td><td>http://snomed.info/sct</td><td>Staunig projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399099002"> </a>  <a href="http://snomed.info/id/399099002">399099002</a></td><td>http://snomed.info/sct</td><td>Latero-medial oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399101009"> </a>  <a href="http://snomed.info/id/399101009">399101009</a></td><td>http://snomed.info/sct</td><td>Cranio-caudal projection exaggerated medially (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399103007"> </a>  <a href="http://snomed.info/id/399103007">399103007</a></td><td>http://snomed.info/sct</td><td>Friedman projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399108003"> </a>  <a href="http://snomed.info/id/399108003">399108003</a></td><td>http://snomed.info/sct</td><td>Right anterior oblique emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399110001"> </a>  <a href="http://snomed.info/id/399110001">399110001</a></td><td>http://snomed.info/sct</td><td>Tangential projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399113004"> </a>  <a href="http://snomed.info/id/399113004">399113004</a></td><td>http://snomed.info/sct</td><td>Eponymous projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399118008"> </a>  <a href="http://snomed.info/id/399118008">399118008</a></td><td>http://snomed.info/sct</td><td>Left lateral emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399125001"> </a>  <a href="http://snomed.info/id/399125001">399125001</a></td><td>http://snomed.info/sct</td><td>Twining projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399127009"> </a>  <a href="http://snomed.info/id/399127009">399127009</a></td><td>http://snomed.info/sct</td><td>Teufel projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399129007"> </a>  <a href="http://snomed.info/id/399129007">399129007</a></td><td>http://snomed.info/sct</td><td>Holly projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399130002"> </a>  <a href="http://snomed.info/id/399130002">399130002</a></td><td>http://snomed.info/sct</td><td>West Point projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399132005"> </a>  <a href="http://snomed.info/id/399132005">399132005</a></td><td>http://snomed.info/sct</td><td>Frontal-oblique axial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399135007"> </a>  <a href="http://snomed.info/id/399135007">399135007</a></td><td>http://snomed.info/sct</td><td>Left anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399136008"> </a>  <a href="http://snomed.info/id/399136008">399136008</a></td><td>http://snomed.info/sct</td><td>Left posterior oblique emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399138009"> </a>  <a href="http://snomed.info/id/399138009">399138009</a></td><td>http://snomed.info/sct</td><td>Penner projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399142007"> </a>  <a href="http://snomed.info/id/399142007">399142007</a></td><td>http://snomed.info/sct</td><td>Albers-Schönberg projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399146005"> </a>  <a href="http://snomed.info/id/399146005">399146005</a></td><td>http://snomed.info/sct</td><td>Grashey projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399148006"> </a>  <a href="http://snomed.info/id/399148006">399148006</a></td><td>http://snomed.info/sct</td><td>Chamberlain projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399152006"> </a>  <a href="http://snomed.info/id/399152006">399152006</a></td><td>http://snomed.info/sct</td><td>Kandel projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399156009"> </a>  <a href="http://snomed.info/id/399156009">399156009</a></td><td>http://snomed.info/sct</td><td>Laquerriere-Pierquin projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399157000"> </a>  <a href="http://snomed.info/id/399157000">399157000</a></td><td>http://snomed.info/sct</td><td>Norgaard's projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399159002"> </a>  <a href="http://snomed.info/id/399159002">399159002</a></td><td>http://snomed.info/sct</td><td>Latero-medial oblique emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399160007"> </a>  <a href="http://snomed.info/id/399160007">399160007</a></td><td>http://snomed.info/sct</td><td>Frontal oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399161006"> </a>  <a href="http://snomed.info/id/399161006">399161006</a></td><td>http://snomed.info/sct</td><td>Cleavage mammography view (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399162004"> </a>  <a href="http://snomed.info/id/399162004">399162004</a></td><td>http://snomed.info/sct</td><td>Cranio-caudal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399163009"> </a>  <a href="http://snomed.info/id/399163009">399163009</a></td><td>http://snomed.info/sct</td><td>Magnified projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399168000"> </a>  <a href="http://snomed.info/id/399168000">399168000</a></td><td>http://snomed.info/sct</td><td>Hough projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399169008"> </a>  <a href="http://snomed.info/id/399169008">399169008</a></td><td>http://snomed.info/sct</td><td>Lauenstein projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399171008"> </a>  <a href="http://snomed.info/id/399171008">399171008</a></td><td>http://snomed.info/sct</td><td>Ottonello projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399173006"> </a>  <a href="http://snomed.info/id/399173006">399173006</a></td><td>http://snomed.info/sct</td><td>Left lateral projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399179005"> </a>  <a href="http://snomed.info/id/399179005">399179005</a></td><td>http://snomed.info/sct</td><td>Lawrence projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399181007"> </a>  <a href="http://snomed.info/id/399181007">399181007</a></td><td>http://snomed.info/sct</td><td>Pawlow projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399182000"> </a>  <a href="http://snomed.info/id/399182000">399182000</a></td><td>http://snomed.info/sct</td><td>Oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399184004"> </a>  <a href="http://snomed.info/id/399184004">399184004</a></td><td>http://snomed.info/sct</td><td>Left oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399188001"> </a>  <a href="http://snomed.info/id/399188001">399188001</a></td><td>http://snomed.info/sct</td><td>Superolateral to inferomedial oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399192008"> </a>  <a href="http://snomed.info/id/399192008">399192008</a></td><td>http://snomed.info/sct</td><td>Cranio-caudal projection exaggerated laterally (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399196006"> </a>  <a href="http://snomed.info/id/399196006">399196006</a></td><td>http://snomed.info/sct</td><td>Caudo-cranial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399198007"> </a>  <a href="http://snomed.info/id/399198007">399198007</a></td><td>http://snomed.info/sct</td><td>Right lateral projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399199004"> </a>  <a href="http://snomed.info/id/399199004">399199004</a></td><td>http://snomed.info/sct</td><td>Henschen projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399201002"> </a>  <a href="http://snomed.info/id/399201002">399201002</a></td><td>http://snomed.info/sct</td><td>Judd projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399206007"> </a>  <a href="http://snomed.info/id/399206007">399206007</a></td><td>http://snomed.info/sct</td><td>Law projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399212002"> </a>  <a href="http://snomed.info/id/399212002">399212002</a></td><td>http://snomed.info/sct</td><td>Camp-Coventry projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399215000"> </a>  <a href="http://snomed.info/id/399215000">399215000</a></td><td>http://snomed.info/sct</td><td>Wigby-Taylor projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399218003"> </a>  <a href="http://snomed.info/id/399218003">399218003</a></td><td>http://snomed.info/sct</td><td>Arcelin projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399225005"> </a>  <a href="http://snomed.info/id/399225005">399225005</a></td><td>http://snomed.info/sct</td><td>Oblique caudo-cranial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399227002"> </a>  <a href="http://snomed.info/id/399227002">399227002</a></td><td>http://snomed.info/sct</td><td>Kemp Harper projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399234000"> </a>  <a href="http://snomed.info/id/399234000">399234000</a></td><td>http://snomed.info/sct</td><td>Rhese projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399236003"> </a>  <a href="http://snomed.info/id/399236003">399236003</a></td><td>http://snomed.info/sct</td><td>Right oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399237007"> </a>  <a href="http://snomed.info/id/399237007">399237007</a></td><td>http://snomed.info/sct</td><td>Alexander projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399241006"> </a>  <a href="http://snomed.info/id/399241006">399241006</a></td><td>http://snomed.info/sct</td><td>Titterington projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399242004"> </a>  <a href="http://snomed.info/id/399242004">399242004</a></td><td>http://snomed.info/sct</td><td>Acanthioparietal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399243009"> </a>  <a href="http://snomed.info/id/399243009">399243009</a></td><td>http://snomed.info/sct</td><td>Settegast projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399245002"> </a>  <a href="http://snomed.info/id/399245002">399245002</a></td><td>http://snomed.info/sct</td><td>Cleaves projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399246001"> </a>  <a href="http://snomed.info/id/399246001">399246001</a></td><td>http://snomed.info/sct</td><td>Blackett-Healy projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399247005"> </a>  <a href="http://snomed.info/id/399247005">399247005</a></td><td>http://snomed.info/sct</td><td>Tarrant projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399251007"> </a>  <a href="http://snomed.info/id/399251007">399251007</a></td><td>http://snomed.info/sct</td><td>Lorenz projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399255003"> </a>  <a href="http://snomed.info/id/399255003">399255003</a></td><td>http://snomed.info/sct</td><td>Submentovertical projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399260004"> </a>  <a href="http://snomed.info/id/399260004">399260004</a></td><td>http://snomed.info/sct</td><td>Medial-lateral projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399263002"> </a>  <a href="http://snomed.info/id/399263002">399263002</a></td><td>http://snomed.info/sct</td><td>Beclere projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399265009"> </a>  <a href="http://snomed.info/id/399265009">399265009</a></td><td>http://snomed.info/sct</td><td>Exaggerated cranio-caudal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399268006"> </a>  <a href="http://snomed.info/id/399268006">399268006</a></td><td>http://snomed.info/sct</td><td>Medio-lateral oblique emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399270002"> </a>  <a href="http://snomed.info/id/399270002">399270002</a></td><td>http://snomed.info/sct</td><td>Towne's projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399272005"> </a>  <a href="http://snomed.info/id/399272005">399272005</a></td><td>http://snomed.info/sct</td><td>Parietoacanthial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399273000"> </a>  <a href="http://snomed.info/id/399273000">399273000</a></td><td>http://snomed.info/sct</td><td>Sagittal-oblique axial emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399277004"> </a>  <a href="http://snomed.info/id/399277004">399277004</a></td><td>http://snomed.info/sct</td><td>Hickey projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399278009"> </a>  <a href="http://snomed.info/id/399278009">399278009</a></td><td>http://snomed.info/sct</td><td>Cahoon projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399280003"> </a>  <a href="http://snomed.info/id/399280003">399280003</a></td><td>http://snomed.info/sct</td><td>Kasabach projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399281004"> </a>  <a href="http://snomed.info/id/399281004">399281004</a></td><td>http://snomed.info/sct</td><td>Fleischner projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399284007"> </a>  <a href="http://snomed.info/id/399284007">399284007</a></td><td>http://snomed.info/sct</td><td>Merchant projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399285008"> </a>  <a href="http://snomed.info/id/399285008">399285008</a></td><td>http://snomed.info/sct</td><td>Holmblad projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399288005"> </a>  <a href="http://snomed.info/id/399288005">399288005</a></td><td>http://snomed.info/sct</td><td>Oblique cranio-caudal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399290006"> </a>  <a href="http://snomed.info/id/399290006">399290006</a></td><td>http://snomed.info/sct</td><td>Schuller projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399292003"> </a>  <a href="http://snomed.info/id/399292003">399292003</a></td><td>http://snomed.info/sct</td><td>Stecher projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399296000"> </a>  <a href="http://snomed.info/id/399296000">399296000</a></td><td>http://snomed.info/sct</td><td>Taylor projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399297009"> </a>  <a href="http://snomed.info/id/399297009">399297009</a></td><td>http://snomed.info/sct</td><td>Right lateral emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399300004"> </a>  <a href="http://snomed.info/id/399300004">399300004</a></td><td>http://snomed.info/sct</td><td>Lateral-medial emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399303002"> </a>  <a href="http://snomed.info/id/399303002">399303002</a></td><td>http://snomed.info/sct</td><td>Dunlap projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399308006"> </a>  <a href="http://snomed.info/id/399308006">399308006</a></td><td>http://snomed.info/sct</td><td>Lindblom projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399311007"> </a>  <a href="http://snomed.info/id/399311007">399311007</a></td><td>http://snomed.info/sct</td><td>Grandy projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399312000"> </a>  <a href="http://snomed.info/id/399312000">399312000</a></td><td>http://snomed.info/sct</td><td>Antero-posterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399313005"> </a>  <a href="http://snomed.info/id/399313005">399313005</a></td><td>http://snomed.info/sct</td><td>Swanson projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399316002"> </a>  <a href="http://snomed.info/id/399316002">399316002</a></td><td>http://snomed.info/sct</td><td>Parieto-orbital projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399318001"> </a>  <a href="http://snomed.info/id/399318001">399318001</a></td><td>http://snomed.info/sct</td><td>Kovacs projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399320003"> </a>  <a href="http://snomed.info/id/399320003">399320003</a></td><td>http://snomed.info/sct</td><td>Clements-Nakayama projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399321004"> </a>  <a href="http://snomed.info/id/399321004">399321004</a></td><td>http://snomed.info/sct</td><td>Anterior emissive projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399325008"> </a>  <a href="http://snomed.info/id/399325008">399325008</a></td><td>http://snomed.info/sct</td><td>Sagittal-oblique axial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399327000"> </a>  <a href="http://snomed.info/id/399327000">399327000</a></td><td>http://snomed.info/sct</td><td>Low-Beer projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399330007"> </a>  <a href="http://snomed.info/id/399330007">399330007</a></td><td>http://snomed.info/sct</td><td>Valdini projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399332004"> </a>  <a href="http://snomed.info/id/399332004">399332004</a></td><td>http://snomed.info/sct</td><td>Kurzbauer projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399335002"> </a>  <a href="http://snomed.info/id/399335002">399335002</a></td><td>http://snomed.info/sct</td><td>Dorsoplantar projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399341009"> </a>  <a href="http://snomed.info/id/399341009">399341009</a></td><td>http://snomed.info/sct</td><td>Haas projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399342002"> </a>  <a href="http://snomed.info/id/399342002">399342002</a></td><td>http://snomed.info/sct</td><td>Lilienfeld projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399344001"> </a>  <a href="http://snomed.info/id/399344001">399344001</a></td><td>http://snomed.info/sct</td><td>Broden projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399348003"> </a>  <a href="http://snomed.info/id/399348003">399348003</a></td><td>http://snomed.info/sct</td><td>Antero-posterior projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399349006"> </a>  <a href="http://snomed.info/id/399349006">399349006</a></td><td>http://snomed.info/sct</td><td>Stenver's projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399351005"> </a>  <a href="http://snomed.info/id/399351005">399351005</a></td><td>http://snomed.info/sct</td><td>Orbito-parietal projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399352003"> </a>  <a href="http://snomed.info/id/399352003">399352003</a></td><td>http://snomed.info/sct</td><td>Lateral-medial projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399355001"> </a>  <a href="http://snomed.info/id/399355001">399355001</a></td><td>http://snomed.info/sct</td><td>Chausse projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399356000"> </a>  <a href="http://snomed.info/id/399356000">399356000</a></td><td>http://snomed.info/sct</td><td>Right anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399358004"> </a>  <a href="http://snomed.info/id/399358004">399358004</a></td><td>http://snomed.info/sct</td><td>Caldwell projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399360002"> </a>  <a href="http://snomed.info/id/399360002">399360002</a></td><td>http://snomed.info/sct</td><td>Verticosubmental projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399361003"> </a>  <a href="http://snomed.info/id/399361003">399361003</a></td><td>http://snomed.info/sct</td><td>Nuclear medicine projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399362005"> </a>  <a href="http://snomed.info/id/399362005">399362005</a></td><td>http://snomed.info/sct</td><td>Bertel projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399365007"> </a>  <a href="http://snomed.info/id/399365007">399365007</a></td><td>http://snomed.info/sct</td><td>Pearson projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399368009"> </a>  <a href="http://snomed.info/id/399368009">399368009</a></td><td>http://snomed.info/sct</td><td>Medio-lateral oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399370000"> </a>  <a href="http://snomed.info/id/399370000">399370000</a></td><td>http://snomed.info/sct</td><td>Lysholm projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-399372008"> </a>  <a href="http://snomed.info/id/399372008">399372008</a></td><td>http://snomed.info/sct</td><td>Ferguson projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-408723005"> </a>  <a href="http://snomed.info/id/408723005">408723005</a></td><td>http://snomed.info/sct</td><td>Cranial left anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-408724004"> </a>  <a href="http://snomed.info/id/408724004">408724004</a></td><td>http://snomed.info/sct</td><td>Caudal left anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-408725003"> </a>  <a href="http://snomed.info/id/408725003">408725003</a></td><td>http://snomed.info/sct</td><td>Cranial right anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-408726002"> </a>  <a href="http://snomed.info/id/408726002">408726002</a></td><td>http://snomed.info/sct</td><td>Caudal right anterior oblique projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422534007"> </a>  <a href="http://snomed.info/id/422534007">422534007</a></td><td>http://snomed.info/sct</td><td>Rafert-Long projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422568001"> </a>  <a href="http://snomed.info/id/422568001">422568001</a></td><td>http://snomed.info/sct</td><td>Moore projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422670003"> </a>  <a href="http://snomed.info/id/422670003">422670003</a></td><td>http://snomed.info/sct</td><td>Apple projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422795009"> </a>  <a href="http://snomed.info/id/422795009">422795009</a></td><td>http://snomed.info/sct</td><td>Neer projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422861003"> </a>  <a href="http://snomed.info/id/422861003">422861003</a></td><td>http://snomed.info/sct</td><td>Burman projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422954003"> </a>  <a href="http://snomed.info/id/422954003">422954003</a></td><td>http://snomed.info/sct</td><td>Stryker projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-422996004"> </a>  <a href="http://snomed.info/id/422996004">422996004</a></td><td>http://snomed.info/sct</td><td>Wolf projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-423091003"> </a>  <a href="http://snomed.info/id/423091003">423091003</a></td><td>http://snomed.info/sct</td><td>Colcher-Sussman projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-423720000"> </a>  <a href="http://snomed.info/id/423720000">423720000</a></td><td>http://snomed.info/sct</td><td>Rafer projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-424086005"> </a>  <a href="http://snomed.info/id/424086005">424086005</a></td><td>http://snomed.info/sct</td><td>Hirtz Modification projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-424655003"> </a>  <a href="http://snomed.info/id/424655003">424655003</a></td><td>http://snomed.info/sct</td><td>Eraso Modification projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-424811006"> </a>  <a href="http://snomed.info/id/424811006">424811006</a></td><td>http://snomed.info/sct</td><td>Danelius-Miller projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-424962005"> </a>  <a href="http://snomed.info/id/424962005">424962005</a></td><td>http://snomed.info/sct</td><td>Fisk projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-425030002"> </a>  <a href="http://snomed.info/id/425030002">425030002</a></td><td>http://snomed.info/sct</td><td>Kite projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-425035007"> </a>  <a href="http://snomed.info/id/425035007">425035007</a></td><td>http://snomed.info/sct</td><td>Robert projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-425042007"> </a>  <a href="http://snomed.info/id/425042007">425042007</a></td><td>http://snomed.info/sct</td><td>Rosenberg projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-425157002"> </a>  <a href="http://snomed.info/id/425157002">425157002</a></td><td>http://snomed.info/sct</td><td>Folio projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-425188003"> </a>  <a href="http://snomed.info/id/425188003">425188003</a></td><td>http://snomed.info/sct</td><td>Garth projection (qualifier value)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-441505008"> </a>  <a href="http://snomed.info/id/441505008">441505008</a></td><td>http://snomed.info/sct</td><td>Dorsopalmar projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-441555000"> </a>  <a href="http://snomed.info/id/441555000">441555000</a></td><td>http://snomed.info/sct</td><td>Inferomedial to superolateral oblique view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-441672003"> </a>  <a href="http://snomed.info/id/441672003">441672003</a></td><td>http://snomed.info/sct</td><td>Dorso-ventral projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-441753009"> </a>  <a href="http://snomed.info/id/441753009">441753009</a></td><td>http://snomed.info/sct</td><td>Mammography view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442361004"> </a>  <a href="http://snomed.info/id/442361004">442361004</a></td><td>http://snomed.info/sct</td><td>Stereoscopic view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442441009"> </a>  <a href="http://snomed.info/id/442441009">442441009</a></td><td>http://snomed.info/sct</td><td>Ventro-dorsal projection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442580003"> </a>  <a href="http://snomed.info/id/442580003">442580003</a></td><td>http://snomed.info/sct</td><td>Axillary tissue mammography view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442581004"> </a>  <a href="http://snomed.info/id/442581004">442581004</a></td><td>http://snomed.info/sct</td><td>Nipple in profile mammography view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442593008"> </a>  <a href="http://snomed.info/id/442593008">442593008</a></td><td>http://snomed.info/sct</td><td>Infra-mammary fold mammography view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442594002"> </a>  <a href="http://snomed.info/id/442594002">442594002</a></td><td>http://snomed.info/sct</td><td>Right stereoscopic view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442640004"> </a>  <a href="http://snomed.info/id/442640004">442640004</a></td><td>http://snomed.info/sct</td><td>Left stereoscopic view</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442653001"> </a>  <a href="http://snomed.info/id/442653001">442653001</a></td><td>http://snomed.info/sct</td><td>Stereoscopic view incremented from baseline</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442667005"> </a>  <a href="http://snomed.info/id/442667005">442667005</a></td><td>http://snomed.info/sct</td><td>Stereoscopic view decremented from baseline</td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R5/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.imaging-r5#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jun 16, 2025 13:39+0000">2025-06-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/imaging-r5/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R5/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

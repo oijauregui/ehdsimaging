@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSAllergyIntoleranceMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSAllergyIntoleranceMap</b></p><a name="EHDSAllergyIntoleranceMap"> </a><a name="hcEHDSAllergyIntoleranceMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSAllergyIntolerance.html">Allergy intolerance model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSAllergyIntolerance.html">Allergy intolerance model</a> to <a href="StructureDefinition-AllergyIntoleranceEu.html">EU AllergyIntolerance</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu</td><td/></tr><tr><td style="border-right-width: 0px">identifier</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">identifier</td><td style="border-left-width: 0px">C.21.1 - Identifier</td><td/></tr><tr><td style="border-right-width: 0px">allergyDescription</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">text</td><td style="border-left-width: 0px">C.21.2 - Allergy description</td><td/></tr><tr><td style="border-right-width: 0px">typeOfPropensity</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">type</td><td style="border-left-width: 0px">C.21.3 - Type of propensity</td><td/></tr><tr><td style="border-right-width: 0px">allergyManifestation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reaction</td><td style="border-left-width: 0px">C.21.4 - Allergy manifestation</td><td/></tr><tr><td style="border-right-width: 0px">allergyManifestation.date</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reaction.onset</td><td style="border-left-width: 0px">C.21.4.1 - Date</td><td/></tr><tr><td style="border-right-width: 0px">allergyManifestation.severity</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reaction.severity</td><td style="border-left-width: 0px">C.21.4.2 - Severity</td><td/></tr><tr><td style="border-right-width: 0px">allergyManifestation.description</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reaction.description</td><td style="border-left-width: 0px">C.21.4.3 - Description</td><td/></tr><tr><td style="border-right-width: 0px">allergyManifestation.manifestation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reaction.manifestation</td><td style="border-left-width: 0px">C.21.4.4 - Manifestation</td><td/></tr><tr><td style="border-right-width: 0px">criticality</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">criticality</td><td style="border-left-width: 0px">C.21.5 - Criticality</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">onsetDate</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">onsetPeriod</td><td style="border-left-width: 0px">C.21.6 - Onset date</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">onsetDateTime</td><td style="border-left-width: 0px">C.21.6 - Onset date</td><td/></tr><tr><td style="border-right-width: 0px">onsetLifePeriod</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">onsetString.extension[periodsOfLife]</td><td style="border-left-width: 0px">C.21.7 - Onset life period</td><td>mapping on onset[x] not possible. Choose string as carrier as specifying a period should be possible. If not possible, add data-absense-extension.</td></tr><tr><td style="border-right-width: 0px">endDate</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[abatement].valueDateTime</td><td style="border-left-width: 0px">C.21.8 - End date</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">endDateLifePeriod</td><td style="border-left-width: 0px"/><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">status</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">clinicalStatus</td><td style="border-left-width: 0px">C.21.10 - Status</td><td/></tr><tr><td style="border-right-width: 0px">certainty</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">verificationStatus</td><td style="border-left-width: 0px">C.21.11 - Certainty</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">agentOrAllergen</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.21.12 - Agent or Allergen</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reaction.substance</td><td style="border-left-width: 0px">C.21.12 - Agent or Allergen</td><td/></tr><tr><td style="border-right-width: 0px">patient</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">patient</td><td style="border-left-width: 0px">C.21.13 - Subject</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAllergyIntoleranceMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSAllergyIntoleranceMap"/>
+  <title value="EHDSAllergyIntolerance Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSAllergyIntolerance"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.21.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="allergyDescription"/>
+      <target>
+        <code value="text"/>
+        <display value="C.21.2 - Allergy description"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="typeOfPropensity"/>
+      <target>
+        <code value="type"/>
+        <display value="C.21.3 - Type of propensity"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="allergyManifestation"/>
+      <target>
+        <code value="reaction"/>
+        <display value="C.21.4 - Allergy manifestation"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="allergyManifestation.date"/>
+      <target>
+        <code value="reaction.onset"/>
+        <display value="C.21.4.1 - Date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="allergyManifestation.severity"/>
+      <target>
+        <code value="reaction.severity"/>
+        <display value="C.21.4.2 - Severity"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="allergyManifestation.description"/>
+      <target>
+        <code value="reaction.description"/>
+        <display value="C.21.4.3 - Description"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="allergyManifestation.manifestation"/>
+      <target>
+        <code value="reaction.manifestation"/>
+        <display value="C.21.4.4 - Manifestation"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="criticality"/>
+      <target>
+        <code value="criticality"/>
+        <display value="C.21.5 - Criticality"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="onsetDate"/>
+      <target>
+        <code value="onsetPeriod"/>
+        <display value="C.21.6 - Onset date"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="onsetDateTime"/>
+        <display value="C.21.6 - Onset date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="onsetLifePeriod"/>
+      <target>
+        <code value="onsetString.extension[periodsOfLife]"/>
+        <display value="C.21.7 - Onset life period"/>
+        <relationship value="equivalent"/>
+        <comment value="mapping on onset[x] not possible. Choose string as carrier as specifying a period should be possible. If not possible, add data-absense-extension."/>
+      </target>
+    </element>
+    <element>
+      <code value="endDate"/>
+      <target>
+        <code value="extension[abatement].valueDateTime"/>
+        <display value="C.21.8 - End date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="endDateLifePeriod"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="status"/>
+      <target>
+        <code value="clinicalStatus"/>
+        <display value="C.21.10 - Status"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="certainty"/>
+      <target>
+        <code value="verificationStatus"/>
+        <display value="C.21.11 - Certainty"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="agentOrAllergen"/>
+      <target>
+        <code value="code"/>
+        <display value="C.21.12 - Agent or Allergen"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="reaction.substance"/>
+        <display value="C.21.12 - Agent or Allergen"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="patient"/>
+      <target>
+        <code value="patient"/>
+        <display value="C.21.13 - Subject"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,19 @@
+{
+  "url" : "http://hl7.eu/fhir/imaging-r5/ImplementationGuide/hl7.fhir.eu.imaging-r5",
+  "name" : "HL7EuImagingStudyReport",
+  "title" : "HL7 Europe Imaging Study Report",
+  "description" : "This guide describes how a Imaging Study Report can be represented in the European REALM.",
+  "status" : "draft",
+  "package-id" : "hl7.fhir.eu.imaging-r5",
+  "ig-ver" : "0.1.0-ballot",
+  "date" : "Tue, 17 Jun, 2025 13:43:15 +0000",
+  "dateISO8601" : "2025-06-17T13:43:15+00:00",
+  "errs" : 270,
+  "warnings" : 32,
+  "hints" : 1,
+  "suppressed-hints" : 1293,
+  "suppressed-warnings" : 336,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 3337293520
+}

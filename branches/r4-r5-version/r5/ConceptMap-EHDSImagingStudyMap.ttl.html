@@ -1,0 +1,614 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Map for EHDSImagingStudy - TTL Representation - HL7 Europe Imaging Study Report v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.214"}
+    h3,h4,h5,h6{--heading-prefix:"7.214"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Imaging Study Report</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="index.html#dependencies">Dependencies</a>
+      </li>
+      <li>
+        <a href="index.html#references">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="actors-and-transactions.html">Actors and Transactions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">All</a>
+      </li>
+      <li>
+        <a href="artifacts-structural.html">Structural</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="design-considerations.html">Design Considerations</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Map for EHDSImagingStudy</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">HL7 Europe Imaging Study Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version'>https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version</a> and changes regularly. See the <a href='http://hl7.eu/fhir/imaging-r5/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-EHDSImagingStudyMap.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-EHDSImagingStudyMap.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-EHDSImagingStudyMap.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Map for EHDSImagingStudy - TTL Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2025-06-16
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-EHDSImagingStudyMap.ttl" no-download="true">Raw ttl</a> | <a href="ConceptMap-EHDSImagingStudyMap.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" style="white-space: pre; overflow: hidden">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:ConceptMap ;
+  <a href="http://hl7.org/fhir/R5/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#id">fhir:v</a> &quot;EHDSImagingStudyMap&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap EHDSImagingStudyMap&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;EHDSImagingStudyMap\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcEHDSImagingStudyMap\&quot;&gt; &lt;/a&gt;&lt;p&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSImagingStudy.html\&quot;&gt;Imaging study model&lt;/a&gt; to (not specified)&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSImagingStudy.html\&quot;&gt;Imaging study model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-ImImagingStudy.html\&quot;&gt;IM Imaging Study&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;identifier&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;identifier[studyInstanceUid] (C.32.1 - Identifier)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;modality&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;modality (C.32.2 - Modality)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;subject&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;subject (C.32.3 - Subject)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;encounter&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;encounter (C.32.4 - Encounter)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;started&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;started (C.32.5 - Started)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;basedOn&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;basedOn (C.32.6 - Based on)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;numberOfSeries&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;numberOfSeries (C.32.7 - Number of series)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;numberOfInstances&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;numberOfInstances (C.32.8 - Number of instances)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;description&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;description (C.32.9 - Description)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;studyCustodian&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.performer[custodian] (C.32.10 - Study custodian)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;studyEndpoint&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;endpoint (C.32.11 - Study endpoint)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series (C.32.12 - Series)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.seriesUid&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.uid (C.32.12.1 - Series UID)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.number&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.number (C.32.12.2 - Number)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.acquisitionModality&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.modality (C.32.12.3 - Acquisition modality)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.description&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.description (C.32.12.4 - Description)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.numberOfInstances&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.numberOfInstances (C.32.12.5 - Number of instances)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.seriesEndpoint&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.endpoint (C.32.12.6 - Series endpoint)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.bodySite&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.bodySite (C.32.12.7 - Body site)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.laterality&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.laterality (C.32.12.8 - Laterality)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.specimen&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.specimen (C.32.12.9 - Specimen)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.started&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.started (C.32.12.10 - Started)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.instance (C.32.12.11 - Instances in the series)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.instanceTitle&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.instance.extension[instance-description] (C.32.12.11.1 - Instance title)&lt;/td&gt;&lt;td&gt;Not regular&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.instanceUid&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.instance.uid (C.32.12.11.2 - Instance UID)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.sopClass&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.instance.sopClass (C.32.12.11.3 - SOP class)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.instanceNumber&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.instance.number (C.32.12.11.4 - Instance number)&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.radiationDoseInformation&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\&quot; title=\&quot;source-is-narrower-than-target\&quot;&gt;is narrower than&lt;/a&gt;&lt;/td&gt;&lt;td&gt;series.instance (C.32.12.11.5 - Radiation dose information)&lt;/td&gt;&lt;td&gt;Present in referred DICOM SR document&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSImagingStudy.html\&quot;&gt;Imaging study model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-ImWadoEndpoint.html\&quot;&gt;IM WADO Endpoint&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;studyEndpoint&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.seriesEndpoint&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 3 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSImagingStudy.html\&quot;&gt;Imaging study model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-ImImageIidViewerEndpoint.html\&quot;&gt;IM Image Viewer Endpoint&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;studyEndpoint&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.seriesEndpoint&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 4 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSImagingStudy.html\&quot;&gt;Imaging study model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-ImRadiationDoseObservation.html\&quot;&gt;Radiation Dose Observation&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.radiationDoseInformation.kap&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\&quot; title=\&quot;related-to\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;component.value[x] (C.32.12.11.5.1 - KAP)&lt;/td&gt;&lt;td&gt;choose one of the slices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.radiationDoseInformation.totalKerma&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\&quot; title=\&quot;related-to\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;component.value[x] (C.32.12.11.5.2 - Total Kerma)&lt;/td&gt;&lt;td&gt;choose one of the slices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.radiationDoseInformation.endTubeKerma&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\&quot; title=\&quot;related-to\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;component.value[x] (C.32.12.11.5.3 - End tube Kerma)&lt;/td&gt;&lt;td&gt;choose one of the slices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.radiationDoseInformation.breastThickness&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\&quot; title=\&quot;related-to\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;component.value[x] (C.32.12.11.5.4 - Breast thickness)&lt;/td&gt;&lt;td&gt;choose one of the slices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;series.instancesInTheSeries.radiationDoseInformation.abd&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\&quot; title=\&quot;related-to\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;component.value[x] (C.32.12.11.5.5 - 2ABD)&lt;/td&gt;&lt;td&gt;choose one of the slices&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;phase.radiationDose&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\&quot; title=\&quot;related-to\&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;component.value[x] (C.32.13.2 - Radiation dose)&lt;/td&gt;&lt;td&gt;choose one of the slices&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 5 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSImagingStudy.html\&quot;&gt;Imaging study model&lt;/a&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;phase ((C.32.13 - Phase))&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;phase.phaseCode ((C.32.13.1 - Phase code))&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
+  ] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:v</a> &quot;http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingStudyMap&quot;^^xsd:anyURI] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;0.1.0-ballot&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;EHDSImagingStudyMap&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;EHDSImagingStudy Mapping&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">fhir:v</a> &quot;2025-06-16T13:38:01+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;HL7 Europe&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.contact">fhir:contact</a> ( [
+<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;HL7 Europe&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
+<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;http://hl7.eu&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Map for EHDSImagingStudy&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.jurisdiction">fhir:jurisdiction</a> ( [
+    ( <a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:v</a> &quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;150&quot; ] ;
+<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Europe&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.copyright">fhir:copyright</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#markdown">fhir:v</a> &quot;Used by permission of HL7 Europe, all rights reserved Creative Commons License&quot;] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.sourceScope[x]">fhir:sourceScope</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#uri">a</a> fhir:uri ;
+<a href="http://hl7.org/fhir/R5/datatypes.html#uri">fhir:v</a> &quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&quot;^^xsd:anyURI
+  ] ; # 
+  <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group">fhir:group</a> ( [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">fhir:source</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&gt;     ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;identifier&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;identifier[studyInstanceUid]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.1 - Identifier&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;modality&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;modality&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.2 - Modality&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;subject&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;subject&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.3 - Subject&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;encounter&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;encounter&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.4 - Encounter&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;started&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;started&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.5 - Started&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;basedOn&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;basedOn&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.6 - Based on&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;numberOfSeries&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;numberOfSeries&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.7 - Number of series&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;numberOfInstances&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;numberOfInstances&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.8 - Number of instances&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;description&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;description&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.9 - Description&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;studyCustodian&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.performer[custodian]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.10 - Study custodian&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;studyEndpoint&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;endpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.11 - Study endpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12 - Series&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.seriesUid&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.uid&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.1 - Series UID&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.number&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.number&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.2 - Number&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.acquisitionModality&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.modality&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.3 - Acquisition modality&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.description&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.description&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.4 - Description&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.numberOfInstances&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.numberOfInstances&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.5 - Number of instances&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.seriesEndpoint&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.endpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.6 - Series endpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.bodySite&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.bodySite&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.7 - Body site&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.laterality&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.laterality&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.8 - Laterality&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.specimen&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.specimen&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.9 - Specimen&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.started&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.started&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.10 - Started&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instance&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11 - Instances in the series&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.instanceTitle&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instance.extension[instance-description]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.1 - Instance title&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Not regular&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.instanceUid&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instance.uid&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.2 - Instance UID&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.sopClass&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instance.sopClass&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.3 - SOP class&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.instanceNumber&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instance.number&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.4 - Instance number&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;equivalent&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.radiationDoseInformation&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instance&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.5 - Radiation dose information&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;source-is-narrower-than-target&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;Present in referred DICOM SR document&quot; ]       ] )     ] )
+  ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">fhir:source</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&gt;     ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;studyEndpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">fhir:noMap</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ]     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.seriesEndpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">fhir:noMap</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ]     ] )
+  ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">fhir:source</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&gt;     ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;studyEndpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">fhir:noMap</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ]     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.seriesEndpoint&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">fhir:noMap</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ]     ] )
+  ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">fhir:source</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&gt;     ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.radiationDoseInformation.kap&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;component.value[x]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.5.1 - KAP&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;related-to&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;choose one of the slices&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.radiationDoseInformation.totalKerma&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;component.value[x]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.5.2 - Total Kerma&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;related-to&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;choose one of the slices&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.radiationDoseInformation.endTubeKerma&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;component.value[x]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.5.3 - End tube Kerma&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;related-to&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;choose one of the slices&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.radiationDoseInformation.breastThickness&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;component.value[x]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.5.4 - Breast thickness&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;related-to&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;choose one of the slices&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;series.instancesInTheSeries.radiationDoseInformation.abd&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;component.value[x]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.12.11.5.5 - 2ABD&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;related-to&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;choose one of the slices&quot; ]       ] )     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;phase.radiationDose&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">fhir:target</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;component.value[x]&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;C.32.13.2 - Radiation dose&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">fhir:relationship</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;related-to&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">fhir:comment</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;choose one of the slices&quot; ]       ] )     ] )
+  ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">fhir:source</a> [
+<a href="http://hl7.org/fhir/R5/datatypes.html#canonical">fhir:v</a> &quot;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R5/rdf.html#reference">fhir:link</a> &lt;https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">fhir:element</a> [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;phase&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;(C.32.13 - Phase)&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">fhir:noMap</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ]     ] [
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#code">fhir:v</a> &quot;phase.phaseCode&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#string">fhir:v</a> &quot;(C.32.13.1 - Phase code)&quot; ] ;
+<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">fhir:noMap</a> [ <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">fhir:v</a> true ]     ] )
+  ] ) . # 
+
+</pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.imaging-r5#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jun 16, 2025 13:39+0000">2025-06-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/imaging-r5/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R5/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

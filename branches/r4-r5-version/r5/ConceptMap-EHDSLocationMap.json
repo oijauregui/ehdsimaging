@@ -1,0 +1,118 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSLocationMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSLocationMap</b></p><a name=\"EHDSLocationMap\"> </a><a name=\"hcEHDSLocationMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSLocation.html\">Location model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSLocation.html\">Location model</a> to <a href=\"http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-location-eu.html\">Location (EU base)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier (C.17.1 - Identifier)</td><td/></tr><tr><td>name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>name (C.17.2 - Name)</td><td/></tr><tr><td>description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>description (C.17.3 - Description)</td><td>Source is xml</td></tr><tr><td>type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>type (C.17.4 - Type)</td><td/></tr><tr><td>address</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>address (C.17.5 - Address)</td><td/></tr><tr><td>position</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>position (C.17.6 - Position)</td><td/></tr><tr><td>position.longitude</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>position.longitude (C.17.6.1 - Longitude)</td><td/></tr><tr><td>position.latitude</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>position.latitude (C.17.6.2 - Latitude)</td><td/></tr><tr><td>managingOrganization</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>managingOrganization (C.17.7 - Managing organization)</td><td/></tr><tr><td>partOf</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>partOf (C.17.8 - Part of)</td><td/></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSLocationMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSLocationMap",
+  "title" : "EHDSLocation Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSLocation",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation",
+    "target" : "http://hl7.eu/fhir/base-r5/StructureDefinition/location-eu",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.17.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "name",
+      "target" : [{
+        "code" : "name",
+        "display" : "C.17.2 - Name",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "description",
+      "target" : [{
+        "code" : "description",
+        "display" : "C.17.3 - Description",
+        "relationship" : "equivalent",
+        "comment" : "Source is xml"
+      }]
+    },
+    {
+      "code" : "type",
+      "target" : [{
+        "code" : "type",
+        "display" : "C.17.4 - Type",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "address",
+      "target" : [{
+        "code" : "address",
+        "display" : "C.17.5 - Address",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "position",
+      "target" : [{
+        "code" : "position",
+        "display" : "C.17.6 - Position",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "position.longitude",
+      "target" : [{
+        "code" : "position.longitude",
+        "display" : "C.17.6.1 - Longitude",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "position.latitude",
+      "target" : [{
+        "code" : "position.latitude",
+        "display" : "C.17.6.2 - Latitude",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "managingOrganization",
+      "target" : [{
+        "code" : "managingOrganization",
+        "display" : "C.17.7 - Managing organization",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "partOf",
+      "target" : [{
+        "code" : "partOf",
+        "display" : "C.17.8 - Part of",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

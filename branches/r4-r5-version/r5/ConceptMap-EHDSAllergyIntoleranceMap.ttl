@@ -1,0 +1,181 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAllergyIntoleranceMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSAllergyIntoleranceMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSAllergyIntoleranceMap</b></p><a name=\"EHDSAllergyIntoleranceMap\"> </a><a name=\"hcEHDSAllergyIntoleranceMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSAllergyIntolerance.html\">Allergy intolerance model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSAllergyIntolerance.html\">Allergy intolerance model</a> to <a href=\"StructureDefinition-AllergyIntoleranceEu.html\">EU AllergyIntolerance</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu</td><td/></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.21.1 - Identifier</td><td/></tr><tr><td style=\"border-right-width: 0px\">allergyDescription</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">text</td><td style=\"border-left-width: 0px\">C.21.2 - Allergy description</td><td/></tr><tr><td style=\"border-right-width: 0px\">typeOfPropensity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">type</td><td style=\"border-left-width: 0px\">C.21.3 - Type of propensity</td><td/></tr><tr><td style=\"border-right-width: 0px\">allergyManifestation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reaction</td><td style=\"border-left-width: 0px\">C.21.4 - Allergy manifestation</td><td/></tr><tr><td style=\"border-right-width: 0px\">allergyManifestation.date</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reaction.onset</td><td style=\"border-left-width: 0px\">C.21.4.1 - Date</td><td/></tr><tr><td style=\"border-right-width: 0px\">allergyManifestation.severity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reaction.severity</td><td style=\"border-left-width: 0px\">C.21.4.2 - Severity</td><td/></tr><tr><td style=\"border-right-width: 0px\">allergyManifestation.description</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reaction.description</td><td style=\"border-left-width: 0px\">C.21.4.3 - Description</td><td/></tr><tr><td style=\"border-right-width: 0px\">allergyManifestation.manifestation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reaction.manifestation</td><td style=\"border-left-width: 0px\">C.21.4.4 - Manifestation</td><td/></tr><tr><td style=\"border-right-width: 0px\">criticality</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">criticality</td><td style=\"border-left-width: 0px\">C.21.5 - Criticality</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">onsetDate</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">onsetPeriod</td><td style=\"border-left-width: 0px\">C.21.6 - Onset date</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">onsetDateTime</td><td style=\"border-left-width: 0px\">C.21.6 - Onset date</td><td/></tr><tr><td style=\"border-right-width: 0px\">onsetLifePeriod</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">onsetString.extension[periodsOfLife]</td><td style=\"border-left-width: 0px\">C.21.7 - Onset life period</td><td>mapping on onset[x] not possible. Choose string as carrier as specifying a period should be possible. If not possible, add data-absense-extension.</td></tr><tr><td style=\"border-right-width: 0px\">endDate</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">extension[abatement].valueDateTime</td><td style=\"border-left-width: 0px\">C.21.8 - End date</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">endDateLifePeriod</td><td style=\"border-left-width: 0px\"/><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">clinicalStatus</td><td style=\"border-left-width: 0px\">C.21.10 - Status</td><td/></tr><tr><td style=\"border-right-width: 0px\">certainty</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">verificationStatus</td><td style=\"border-left-width: 0px\">C.21.11 - Certainty</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">agentOrAllergen</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">code</td><td style=\"border-left-width: 0px\">C.21.12 - Agent or Allergen</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reaction.substance</td><td style=\"border-left-width: 0px\">C.21.12 - Agent or Allergen</td><td/></tr><tr><td style=\"border-right-width: 0px\">patient</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">patient</td><td style=\"border-left-width: 0px\">C.21.13 - Subject</td><td/></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAllergyIntoleranceMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSAllergyIntoleranceMap"] ; # 
+  fhir:title [ fhir:v "EHDSAllergyIntolerance Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSAllergyIntolerance"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/AllergyIntoleranceEu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "C.21.1 - Identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "allergyDescription" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "text" ] ;
+         fhir:display [ fhir:v "C.21.2 - Allergy description" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "typeOfPropensity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "type" ] ;
+         fhir:display [ fhir:v "C.21.3 - Type of propensity" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "allergyManifestation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reaction" ] ;
+         fhir:display [ fhir:v "C.21.4 - Allergy manifestation" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "allergyManifestation.date" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reaction.onset" ] ;
+         fhir:display [ fhir:v "C.21.4.1 - Date" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "allergyManifestation.severity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reaction.severity" ] ;
+         fhir:display [ fhir:v "C.21.4.2 - Severity" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "allergyManifestation.description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reaction.description" ] ;
+         fhir:display [ fhir:v "C.21.4.3 - Description" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "allergyManifestation.manifestation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reaction.manifestation" ] ;
+         fhir:display [ fhir:v "C.21.4.4 - Manifestation" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "criticality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "criticality" ] ;
+         fhir:display [ fhir:v "C.21.5 - Criticality" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "onsetDate" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "onsetPeriod" ] ;
+         fhir:display [ fhir:v "C.21.6 - Onset date" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "onsetDateTime" ] ;
+         fhir:display [ fhir:v "C.21.6 - Onset date" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "onsetLifePeriod" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "onsetString.extension[periodsOfLife]" ] ;
+         fhir:display [ fhir:v "C.21.7 - Onset life period" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "mapping on onset[x] not possible. Choose string as carrier as specifying a period should be possible. If not possible, add data-absense-extension." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "endDate" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[abatement].valueDateTime" ] ;
+         fhir:display [ fhir:v "C.21.8 - End date" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "endDateLifePeriod" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "clinicalStatus" ] ;
+         fhir:display [ fhir:v "C.21.10 - Status" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "certainty" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "verificationStatus" ] ;
+         fhir:display [ fhir:v "C.21.11 - Certainty" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "agentOrAllergen" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "code" ] ;
+         fhir:display [ fhir:v "C.21.12 - Agent or Allergen" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "reaction.substance" ] ;
+         fhir:display [ fhir:v "C.21.12 - Agent or Allergen" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "patient" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "patient" ] ;
+         fhir:display [ fhir:v "C.21.13 - Subject" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

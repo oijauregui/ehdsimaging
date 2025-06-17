@@ -1,0 +1,77 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSRelatedPersonMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSRelatedPersonMap</b></p><a name=\"EHDSRelatedPersonMap\"> </a><a name=\"hcEHDSRelatedPersonMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSRelatedPerson.html\">Related person model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSRelatedPerson.html\">Related person model</a> to <a href=\"http://hl7.org/fhir/R5/relatedperson.html\">RelatedPerson</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>personalIdentifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier (C.13.1 - Personal identifier)</td></tr><tr><td>name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>name (C.13.2 - Name)</td></tr><tr><td>relationship</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>relationship (C.13.3 - Relationship)</td></tr><tr><td>address</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>address (C.13.4 - Address)</td></tr><tr><td>telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>telecom (C.13.5 - Telecom)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSRelatedPersonMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSRelatedPersonMap",
+  "title" : "EHDSRelatedPerson Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSRelatedPerson",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson",
+    "target" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+    "element" : [{
+      "code" : "personalIdentifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.13.1 - Personal identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "name",
+      "target" : [{
+        "code" : "name",
+        "display" : "C.13.2 - Name",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "relationship",
+      "target" : [{
+        "code" : "relationship",
+        "display" : "C.13.3 - Relationship",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "address",
+      "target" : [{
+        "code" : "address",
+        "display" : "C.13.4 - Address",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "telecom",
+      "target" : [{
+        "code" : "telecom",
+        "display" : "C.13.5 - Telecom",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActorDefinition xmlns="http://hl7.org/fhir">
+  <id value="ImReportProvider"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ActorDefinition ImReportProvider</b></p><a name="ImReportProvider"> </a><a name="hcImReportProvider"> </a><table class="grid"><tr><td><b>Actor: ImReportProvider </b></td><td>Imaging study report provider</td><td>Type: system </td></tr><tr><td colspan="3"/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ActorDefinition/ImReportProvider"/>
+  <version value="0.1.0-ballot"/>
+  <name value="ImReportProvider"/>
+  <title value="Imaging study report provider"/>
+  <status value="draft"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Provides the Imaging study report."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <type value="system"/>
+</ActorDefinition>
