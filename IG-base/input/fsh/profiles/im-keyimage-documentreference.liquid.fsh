@@ -86,7 +86,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 {% if isR4 %}
 
 Extension: CvDocumentReferenceBasedOn
-Id: ext-R5-DocumentReference.basedOn
+Id: cvDocumentReference-basedOn
 Title: "Cross-version Extension for R5.DocumentReference.basedOn for use in FHIR R4"
 Description: "This cross-version extension represents DocumentReference.basedOn from http://hl7.org/fhir/StructureDefinition/DocumentReference|5.0.0 for use in FHIR R4."
 Context: DocumentReference, Media.basedOn
@@ -99,4 +99,3 @@ Context: DocumentReference, Media.basedOn
 * url 1..1
 
 {% endif %}
-      
