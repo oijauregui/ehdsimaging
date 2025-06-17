@@ -12,5 +12,5 @@ publisher.jar
 .test/
 .fhir/
 IG-base/fsh-generated/**
-/igs/r5
+/igs/
 output-stable
