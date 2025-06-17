@@ -192,8 +192,8 @@ Description: """A placeholder for a DocumentReference profile for the IHE-MHD in
 
 {% if isR4 %}
 * extension contains 
-  CvDocumentReferenceBodySite named bodySite 0..*
-  and CvDocumentReferenceModality named modality 0..*
+  $cvDocumentReferenceBodySite named bodySite 0..*
+  and $cvDocumentReferenceModality named modality 0..*
 {% endif %}
 
 * modifierExtension 0..0
@@ -207,7 +207,6 @@ Description: """A placeholder for a DocumentReference profile for the IHE-MHD in
     * contentType 1..1
 
 
-
 Profile: IheMhdEntryUUIDIdentifier
 Parent: Identifier
 Title: "Placeholder for IHE MHD Entry UUID Identifier in FHIR R5."
@@ -219,25 +218,25 @@ Description: """entryUUID Identifier holding a UUID, based on [IHE-MHD R4](https
 * system 1..1
 * system = "urn:ietf:rfc:3986"
 
-{% if isR4 %}
-Extension: CvDocumentReferenceModality
-Id: cvDocumentReference-modality
-Title: "DoocuemntReference.modality extension for R4"
-Description: "Extension to backport DocumentReference.modality in R4."
-* ^context.type = #element
-* ^context.expression = "DocumentReference"
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (extensible)
+// {% if isR4 %}
+// Extension: CvDocumentReferenceModality
+// Id: cvDocumentReference-modality
+// Title: "DoocuemntReference.modality extension for R4"
+// Description: "Extension to backport DocumentReference.modality in R4."
+// * ^context.type = #element
+// * ^context.expression = "DocumentReference"
+// * value[x] only CodeableConcept
+// * valueCodeableConcept 1..1
+// * valueCodeableConcept from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (extensible)
 
-Extension: CvDocumentReferenceBodySite
-Id: cvDocumentReference-bodySite
-Title: "DocumentReference.bodySite extension for R4"
-Description: "Extension to backport DocumentReference.bodySite in R4."
-* ^context.type = #element
-* ^context.expression = "DocumentReference"
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from https://hl7.org/fhir/R5/valueset-body-site.html (example)
-{% endif %}
+// Extension: CvDocumentReferenceBodySite
+// Id: cvDocumentReference-bodySite
+// Title: "DocumentReference.bodySite extension for R4"
+// Description: "Extension to backport DocumentReference.bodySite in R4."
+// * ^context.type = #element
+// * ^context.expression = "DocumentReference"
+// * value[x] only CodeableConcept
+// * valueCodeableConcept 1..1
+// * valueCodeableConcept from https://hl7.org/fhir/R5/valueset-body-site.html (example)
+// {% endif %}
 

@@ -36,7 +36,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 {% if isR4 %}
 * extension contains
   CvDocumentReferenceBasedOn named basedOn 0..1
-  and CvDocumentReferenceModality named modality 1..1
+  and $cvDocumentReferenceModality named modality 1..1
 * extension
   * ^slicing.discriminator[1].type = #value
   * ^slicing.discriminator[=].path = "value"
