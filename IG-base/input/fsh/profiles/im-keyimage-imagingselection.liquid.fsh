@@ -18,13 +18,15 @@ Description: "Key images represented as an ImagingSelection for R4"
   * actor only Reference( ImImagingDevice )
 {% endif %}
 
-// {% if isR4 %}
-// * extension
-// * insert AddDiscriminator ( value, extension.extension.value )
+{% if isR4 %}
 
-// * extension[imagingSelection].extension[performer] contains practitioner 0..1 and device 0..1
+* extension[imagingSelection].extension ^slicing.discriminator[1].type = #type
+* extension[imagingSelection].extension ^slicing.discriminator[=].path = "extension.value"
 
+* extension[imagingSelection].extension[performer] contains practitioner 0..1 and device 0..1
 
+// TBD
+// Sushi cannot handle cv extrensions, topic followed here https://chat.fhir.org/#narrow/channel/179166-implementers/topic/Re-slicing.20complex.20extension/with/524849550
 // * extension[imagingSelection].extension[performer][practitioner].extension[actor].value[x] only Reference( EuPractitionerRole )
-// * extension[imagingSelection].extension[performer][practitioner].extension[device].value[x] only Reference( ImImagingDevice )
-// {% endif %}
+// * extension[imagingSelection].extension[performer][device].extension[function].value[x] only Reference( ImImagingDevice )
+{% endif %}
