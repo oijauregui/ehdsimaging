@@ -10,7 +10,7 @@
    </p>
    <p> The content of this implementation guide is discussed HL7 EU calls (<a href="https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings">HL7-eu imaging on Confluence</a>).
    </p>
-   <p> This version is based on FHIR R5. A FHIR R4 version will be derived from this ballot version and is expected to be published in the near future.  
+   <p> This version is based on FHIR R5. A FHIR R4 version will be derived from this ballot version and is expected to be published in the near future.
    </p>
  </blockquote>
 </div>
