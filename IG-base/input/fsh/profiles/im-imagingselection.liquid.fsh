@@ -43,12 +43,13 @@ Description: "Imaging Selection profile for R4"
 * code = 	http://hl7.org/fhir/fhir-types#ImagingSelection "ImagingSelection"
 
 // TBD  
-// this lines fail in the validator because closed slicing rules in the snapshot  
-* extension[imagingSelection].extension[derivedFrom] contains study 1..1
-* extension[imagingSelection].extension[derivedFrom][study].value[x] only Reference(ImImagingStudy)
+// this lines fail in publisher, trying to find the solution here https://chat.fhir.org/#narrow/channel/179166-implementers/topic/Publisher.20slicing.20warning/with/526360062
+// * extension[imagingSelection].extension[derivedFrom] contains study 1..1
+// * extension[imagingSelection].extension[derivedFrom][study].value[x] only Reference(ImImagingStudy)
 
-// the following line is the workaround for the above, but the [study] slice is missing
-// * extension[imagingSelection].extension[derivedFrom].value[x] only Reference(ImImagingStudy)
+// in the meantime, adding the study binding without a slice
+* extension[imagingSelection].extension[derivedFrom].value[x] only Reference(ImImagingStudy)
+
 
 Profile: ImSrInstanceImagingSelection
 Parent: ImImagingSelection
