@@ -16,7 +16,7 @@ Description: """The device the made the image."""
 
 {% if isR4 %}
 * extension contains
-  $cvDevice-category named category 0..*
+  $cvDevice-category named category 1..*
 
 * extension
   * ^slicing.discriminator[1].type = #value
