@@ -6,6 +6,7 @@ Description: """Adverse Event that occurred during an imaging procedure."""
 
 {{R5}}* subject only Reference(ImPatient or Group or $EuPractitioner or $EuRelatedPerson or ResearchSubject )
 {{R4}}* subject only Reference(ImPatient or Group or $EuPractitioner or $EuRelatedPerson  )
+{{R4}}* subject.extension contains ImAdverseEventSubjectReseachSubject named subjectReseachSubject 0..1
 
 * suspectEntity
   * insert SliceElement( #profile, instance )
@@ -28,3 +29,11 @@ Description: """Adverse Event that occurred during an imaging procedure."""
 * contributingFactor[allergy]
   * itemReference only Reference($EuAllergyIntolerance)
 {% endif %}
+
+Extension: ImAdverseEventSubjectReseachSubject
+Description: "Extension to capture the relationship of the subject to the ReseachSubject."
+Title: "Imaging Adverse Event Subject Research Subject"
+* ^context[+].type = #element
+* ^context[=].expression = "AdverseEvent.subject"
+* insert SetFmmAndStatusRule( 1, draft )
+* valueReference only Reference(ResearchSubject)
