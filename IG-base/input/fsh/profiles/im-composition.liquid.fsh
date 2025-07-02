@@ -16,7 +16,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * insert SetFmmAndStatusRule( 1, draft )
 
 {{R5}}* identifier 1..*
-{{R4}}* identifier 1..1
+{{R4}}* identifier.extension contains $cvCompositionIdentifier named identifier 1..*
 * extension contains 
     ImDiagnosticReportReference named diagnosticreport-reference 1..1  
 * extension[diagnosticreport-reference].valueReference only Reference ( ImDiagnosticReport )
@@ -68,20 +68,24 @@ The `text` field of each section SHALL contain a textual representation of all l
 * event contains 
     imagingstudy 1..* and 
     procedure 1..*
+{{R4}}  * detail.extension contains $cvCompositionEventDetail named detailext 0..*
 * event[imagingstudy]
   * ^short = "Modality"
   * ^definition = "The type of imaging modality used to perform the study."
   * detail 1..*
 {{R5}}  * detail from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (extensible)
 {{R5}}  * detail only CodeableReference ( ImImagingStudy )
-{{R4}}  * detail only Reference ( ImImagingStudy )
+
+{{R4}}  * detail.extension[detailext].extension[concept].value[x] from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (extensible)
+{{R4}}  * detail.extension[detailext].extension[reference].value[x] only Reference ( ImImagingStudy )
 * event[procedure]
   * ^short = "Study Type"
   * ^definition = "The type of imaging study performed."
   * detail 1..*
 {{R5}}  * detail from https://www.hl7.org/fhir/valueset-procedure-reason.html (extensible)
 {{R5}}  * detail only CodeableReference ( ImProcedure )
-{{R4}}  * detail only Reference ( ImProcedure )
+{{R4}}  * detail.extension[detailext].extension[concept].value[x] from https://www.hl7.org/fhir/valueset-procedure-reason.html (extensible)
+{{R4}}  * detail.extension[detailext].extension[reference].value[x] only Reference ( ImProcedure )
 
 * section.code 1..1 
 * section 
