@@ -9,3 +9,7 @@ Alias: $cvDevice-category = http://hl7.org/fhir/5.0/StructureDefinition/extensio
 Alias: $cvImagingSelection = http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection
 Alias: $cvDocumentReferenceModality = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality
 Alias: $cvDocumentReferenceBodySite = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite
+Alias: $cvCompositionIdentifier = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier
+Alias: $cvCompositionEventDetail = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.event.detail
+Alias: $cvEndpoint-connectionType = http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType
+Alias: $cvEndpoint-payload = http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.payload
