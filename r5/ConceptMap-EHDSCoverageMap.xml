@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSCoverageMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSCoverageMap</b></p><a name="EHDSCoverageMap"> </a><a name="hcEHDSCoverageMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSCoverage.html">Coverage model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSCoverage.html">Coverage model</a> to <a href="http://hl7.org/fhir/R5/coverage.html">Coverage</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage</td><td/><td colspan="2"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/Coverage</td><td/></tr><tr><td style="border-right-width: 0px">identifier</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">identifier</td><td style="border-left-width: 0px">C.31.1 - Identifier</td><td/></tr><tr><td style="border-right-width: 0px">type</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">type</td><td style="border-left-width: 0px">C.31.2 - Type</td><td/></tr><tr><td style="border-right-width: 0px">patient</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">beneficiary</td><td style="border-left-width: 0px">C.31.3 - Patient</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">payor</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">kind</td><td style="border-left-width: 0px">C.31.4 - Payor</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">paymentBy.party</td><td style="border-left-width: 0px">C.31.4 - Payor</td><td>When selfpay, include reference to party that will pay</td></tr><tr><td style="border-right-width: 0px">payor.payorEntity</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">insurer</td><td style="border-left-width: 0px">C.31.4.1 - Payor entity</td><td/></tr><tr><td style="border-right-width: 0px">payor.subscriberId</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">subscriberId</td><td style="border-left-width: 0px">C.31.4.2 - Subscriber Id</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSCoverageMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSCoverageMap"/>
+  <title value="EHDSCoverage Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSCoverage"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.31.1 - Identifier"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="type"/>
+      <target>
+        <code value="type"/>
+        <display value="C.31.2 - Type"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="patient"/>
+      <target>
+        <code value="beneficiary"/>
+        <display value="C.31.3 - Patient"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="payor"/>
+      <target>
+        <code value="kind"/>
+        <display value="C.31.4 - Payor"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="paymentBy.party"/>
+        <display value="C.31.4 - Payor"/>
+        <relationship value="source-is-broader-than-target"/>
+        <comment value="When selfpay, include reference to party that will pay"/>
+      </target>
+    </element>
+    <element>
+      <code value="payor.payorEntity"/>
+      <target>
+        <code value="insurer"/>
+        <display value="C.31.4.1 - Payor entity"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="payor.subscriberId"/>
+      <target>
+        <code value="subscriberId"/>
+        <display value="C.31.4.2 - Subscriber Id"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

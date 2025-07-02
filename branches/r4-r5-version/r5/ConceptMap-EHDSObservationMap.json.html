@@ -1,0 +1,916 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Map for EHDSObservation - JSON Representation - HL7 Europe Imaging Study Report v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.219"}
+    h3,h4,h5,h6{--heading-prefix:"7.219"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Imaging Study Report</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="index.html#dependencies">Dependencies</a>
+      </li>
+      <li>
+        <a href="index.html#references">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="actors-and-transactions.html">Actors and Transactions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">All</a>
+      </li>
+      <li>
+        <a href="artifacts-structural.html">Structural</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="design-considerations.html">Design Considerations</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Map for EHDSObservation</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">HL7 Europe Imaging Study Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version'>https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version</a> and changes regularly. See the <a href='http://hl7.eu/fhir/imaging-r5/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-EHDSObservationMap.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-EHDSObservationMap.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-EHDSObservationMap.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Map for EHDSObservation - JSON Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2025-06-16
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-EHDSObservationMap.json" no-download="true">Raw json</a> | <a href="ConceptMap-EHDSObservationMap.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.id">id</a>" : "EHDSObservationMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap EHDSObservationMap&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;EHDSObservationMap\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcEHDSObservationMap\&quot;&gt; &lt;/a&gt;&lt;p&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSObservation.html\&quot;&gt;Observation model&lt;/a&gt; to (not specified)&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSObservation.html\&quot;&gt;Observation model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-ObservationEu.html\&quot;&gt;EU Observation&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation&lt;/td&gt;&lt;td/&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationDate[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;effectiveDateTime&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.1 - Observation date&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;effectivePeriod&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.1 - Observation date&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationCode&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.2 - Observation code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationName&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code.coding.display&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.3 - Observation name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationOriginalName&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td colspan=\&quot;4\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationMethod&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;method&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.5 - Observation method&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationDevice&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;device&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.6 - Observation device&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;order&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\&quot; title=\&quot;source-is-narrower-than-target\&quot;&gt;is narrower than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;basedOn&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.7 - Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;performer&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\&quot; title=\&quot;source-is-narrower-than-target\&quot;&gt;is narrower than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;performer&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.8 - Performer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;performer.extension[performerFunction]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.8 - Performer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;reporter&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\&quot; title=\&quot;source-is-narrower-than-target\&quot;&gt;is narrower than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;performer&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.9 - Reporter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;performer.extension[performerFunction]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.9 - Reporter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;value[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10 - Observation result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationResult.textualResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\&quot; title=\&quot;source-is-narrower-than-target\&quot;&gt;is narrower than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;valueString&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.1 - Textual Result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationResult.numericResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\&quot; title=\&quot;source-is-narrower-than-target\&quot;&gt;is narrower than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;valueQuantity&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2 - Numeric Result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationResult.numericResult.numericValue[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;valueRange&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.1 - Numeric value&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationResult.codedResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;valueCodeableConcept&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.3 - Coded Result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;dataAbsentReason&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td colspan=\&quot;4\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;referenceRange&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;referenceRange&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.12 - Reference range&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;observationInterpretation&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;interpretation&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.13 - Observation interpretation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;triggeredBy[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;triggeredBy.observation&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.14 - Triggered by&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;triggeredBy.type&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.14 - Triggered by&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;hasMember[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;hasMember&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.15 - Has member&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;resultDescription&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;note&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.16 - Result description&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;anatomicLocation&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;bodySite&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.17 - Anatomic location&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;subject&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;subject&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.18 - Subject&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19 - Component&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.1 - Code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.textualResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;valueString&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.2 - Textual Result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.numericResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;valueQuantity&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3 - Numeric Result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;component.numericResult.numericValue[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.valueQuantity&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.1 - Numeric value&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.valueRange&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.1 - Numeric value&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.codedResult&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.valueCodeableConcept&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.4 - Coded Result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;component.dataAbsentReason&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td colspan=\&quot;4\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.referenceRange&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.referenceRange&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.6 - Reference range&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.observationInterpretation&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;component.interpretation&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.7 - Observation interpretation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;status&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;status.value&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.8 - Status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSObservation.html\&quot;&gt;Observation model&lt;/a&gt; to &lt;a href=\&quot;http://hl7.org/fhir/R5/servicerequest.html\&quot;&gt;ServiceRequest&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;order&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;requester (C.10.7 - Order)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 3 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSObservation.html\&quot;&gt;Observation model&lt;/a&gt; to &lt;code&gt;http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation&lt;/td&gt;&lt;td/&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationResult.numericResult.numericValue[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td colspan=\&quot;4\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationResult.numericResult.units&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;system&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td style=\&quot;border-left-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;unit&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationResult.numericResult.uncertainty&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertainty]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertaintyType]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;component.numericResult.units&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;system&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td style=\&quot;border-left-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;unit&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;component.numericResult.uncertainty&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertainty]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertaintyType]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 4 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSObservation.html\&quot;&gt;Observation model&lt;/a&gt; to &lt;code&gt;http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation&lt;/td&gt;&lt;td/&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationResult.numericResult.numericValue[x]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;low&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.1 - Numeric value&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;high&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.1 - Numeric value&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 5 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSObservation.html\&quot;&gt;Observation model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-SimpleQuantityEu.html\&quot;&gt;EU SimpleQuantity&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation&lt;/td&gt;&lt;td/&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from http://hl7.eu/fhir/imaging-r5/StructureDefinition/SimpleQuantityEu&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationResult.numericResult.units&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;system&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td style=\&quot;border-left-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;unit&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;observationResult.numericResult.uncertainty&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertainty]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertaintyType]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.10.2.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;component.numericResult.units&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;system&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td style=\&quot;border-left-width: 0px; border-top-style: none; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;code&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;unit&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.2 - Units&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;component.numericResult.uncertainty&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertainty]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;extension[uncertaintyType]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.10.19.3.3 - Uncertainty&lt;/td&gt;&lt;td&gt;Covered by data type&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.url">url</a>" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSObservationMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.version">version</a>" : "0.1.0-ballot",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.name">name</a>" : "EHDSObservationMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.title">title</a>" : "EHDSObservation Mapping",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.experimental">experimental</a>" : true,
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.date">date</a>" : "2025-06-16T13:38:01+00:00",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.publisher">publisher</a>" : "HL7 Europe",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 Europe",
+      "<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7.eu"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.description">description</a>" : "Map for EHDSObservation",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Europe"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.copyright">copyright</a>" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.sourceScope[x]">sourceScopeUri</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">target</a>" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationDate[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "effectiveDateTime",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.1 - Observation date",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "effectivePeriod",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.1 - Observation date",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationCode",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.2 - Observation code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationName",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code.coding.display",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.3 - Observation name",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationOriginalName",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">noMap</a>" : true
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationMethod",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "method",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.5 - Observation method",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationDevice",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "device",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.6 - Observation device",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "order",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "basedOn",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.7 - Order",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-narrower-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "performer",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "performer",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.8 - Performer",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-narrower-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "performer.extension[performerFunction]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.8 - Performer",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "reporter",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "performer",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.9 - Reporter",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-narrower-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "performer.extension[performerFunction]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.9 - Reporter",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "value[x]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10 - Observation result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.textualResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "valueString",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.1 - Textual Result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-narrower-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "valueQuantity",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2 - Numeric Result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-narrower-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.numericValue[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "valueRange",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.1 - Numeric value",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.codedResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "valueCodeableConcept",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.3 - Coded Result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "dataAbsentReason",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">noMap</a>" : true
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "referenceRange",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "referenceRange",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.12 - Reference range",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationInterpretation",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "interpretation",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.13 - Observation interpretation",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "triggeredBy[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "triggeredBy.observation",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.14 - Triggered by",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "triggeredBy.type",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.14 - Triggered by",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "hasMember[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "hasMember",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.15 - Has member",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "resultDescription",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "note",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.16 - Result description",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "anatomicLocation",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "bodySite",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.17 - Anatomic location",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "subject",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.18 - Subject",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "component",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19 - Component",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.code",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.1 - Code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.textualResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "valueString",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.2 - Textual Result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.numericResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "valueQuantity",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3 - Numeric Result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.numericResult.numericValue[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "component.valueQuantity",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.1 - Numeric value",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "component.valueRange",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.1 - Numeric value",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.codedResult",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "component.valueCodeableConcept",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.4 - Coded Result",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.dataAbsentReason",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">noMap</a>" : true
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.referenceRange",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "component.referenceRange",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.6 - Reference range",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.observationInterpretation",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "component.interpretation",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.7 - Observation interpretation",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "status",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "status.value",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.8 - Status",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">target</a>" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "order",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "requester",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.7 - Order",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">target</a>" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.numericValue[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">noMap</a>" : true
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.units",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "system",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "unit",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.uncertainty",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertainty]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertaintyType]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.numericResult.units",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "system",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "unit",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.numericResult.uncertainty",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertainty]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertaintyType]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">target</a>" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.numericValue[x]",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "low",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.1 - Numeric value",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "high",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.1 - Numeric value",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">target</a>" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/SimpleQuantityEu",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.units",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "system",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "unit",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "observationResult.numericResult.uncertainty",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertainty]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertaintyType]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.10.2.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.numericResult.units",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "system",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "code",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "unit",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.2 - Units",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "component.numericResult.uncertainty",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertainty]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "extension[uncertaintyType]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.10.19.3.3 - Uncertainty",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Covered by data type"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.imaging-r5#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jun 16, 2025 13:39+0000">2025-06-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/imaging-r5/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R5/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

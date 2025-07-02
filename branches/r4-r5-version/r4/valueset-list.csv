@@ -1,0 +1,13 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingManifestTypesEuVS,0.1.0-ballot,draft,,ImImagingManifestTypesEuVS,HL7 EU Imaging Manifest Types,"HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",,"Internal"
+http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingReportTypesEuVS,0.1.0-ballot,draft,,ImImagingReportTypesEuVS,HL7 EU Imaging Report Types,"HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.",,"Internal"
+http://hl7.eu/fhir/imaging-r4/ValueSet/ImSectionEmptyReason,0.1.0-ballot,draft,,ImSectionEmptyReason,Reasons a section in an imaging report is empty.,"Reasons a section in an imaging report is empty.",,"LOINC,THO"
+http://hl7.eu/fhir/imaging-r4/ValueSet/im-dose-length-units,0.1.0-ballot,draft,,ImDoseLengthUnits,Dose Length Units,"Units for Dose Length.",,"UCUM"
+http://hl7.eu/fhir/imaging-r4/ValueSet/im-effective-dose-units,0.1.0-ballot,draft,,ImEffectiveDoseUnits,Effective Dose Units,"Units for Effective Dose.",,"UCUM"
+http://hl7.eu/fhir/imaging-r4/ValueSet/im-gray-square-units,0.1.0-ballot,draft,,ImGraySquareUnits,Gray Square Units,"Units for Gray Square.",,"UCUM"
+http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-device-type,0.1.0-ballot,draft,,ImImagingDeviceType,Imaging Device Type,"Imaging Device Type.",,"SCT"
+http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-study-performer-type,0.1.0-ballot,draft,,ImImagingStudyPerformerTypeVS,Imaging Study Performer Type Value Set,"Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",,"THO (V3)"
+http://hl7.eu/fhir/imaging-r4/ValueSet/im-procedure-type,0.1.0-ballot,draft,,ImProcedureType,Imaging Procedure Type,"This value set includes all imaging procedure types.",,"SCT"
+http://hl7.eu/fhir/imaging-r4/ValueSet/media-view,4.0.1,draft,,CrossVersionMediaView,Media View types - placeholder for cross-version extension,"Codes defined in SNOMED CT that can be used to record Media Recording views.",,"SCT"
+http://hl7.eu/fhir/imaging-r4/ValueSet/periods-of-life-value-set,0.1.0-ballot,draft,,PeriodsOfLifeValueSet,Periods of Life,"A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",,"SCT"
+http://hl7.eu/fhir/imaging-r4/ValueSet/valueset-diagnosticreport-report-support-info,0.1.0-ballot,draft,,DiagnosticReportSupportingInfoVCodes,DiagnosticReport supportInfo codes,"Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",,"Internal"

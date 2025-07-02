@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-diagnosticreport-report-support-info"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet valueset-diagnosticreport-report-support-info</b></p><a name="valueset-diagnosticreport-report-support-info"> </a><a name="hcvalueset-diagnosticreport-report-support-info"> </a><ul><li>Include all codes defined in <a href="CodeSystem-codesystem-diagnostic-report-support-info.html"><code>http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ValueSet/valueset-diagnosticreport-report-support-info"/>
+  <version value="0.1.0-ballot"/>
+  <name value="DiagnosticReportSupportingInfoVCodes"/>
+  <title value="DiagnosticReport supportInfo codes"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Codes to be used in `DiagnosticReport.supportInfo` for imaging reports."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <system value="http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info"/>
+    </include>
+  </compose>
+</ValueSet>

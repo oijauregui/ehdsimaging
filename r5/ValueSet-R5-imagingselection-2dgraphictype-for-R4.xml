@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="R5-imagingselection-2dgraphictype-for-R4"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet R5-imagingselection-2dgraphictype-for-R4</b></p><a name="R5-imagingselection-2dgraphictype-for-R4"> </a><a name="hcR5-imagingselection-2dgraphictype-for-R4"> </a><p>This value set expansion contains 5 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-point"> </a>  <a href="http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-point">point</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>POINT</td><td>A single location denoted by a single (x,y) pair.</td></tr><tr><td style="white-space:nowrap"><a name="R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-polyline"> </a>  <a href="http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-polyline">polyline</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>POLYLINE</td><td>A series of connected line segments with ordered vertices denoted by (x,y) triplets; the points need not be coplanar.</td></tr><tr><td style="white-space:nowrap"><a name="R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-interpolated"> </a>  <a href="http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-interpolated">interpolated</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>INTERPOLATED</td><td>An n-tuple list of (x,y) pair end points between which some form of implementation dependent curved lines are to be drawn. The rendered line shall pass through all the specified points.</td></tr><tr><td style="white-space:nowrap"><a name="R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-circle"> </a>  <a href="http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-circle">circle</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>CIRCLE</td><td>Two points shall be present; the first point is to be interpreted as the center and the second point as a point on the circumference of a circle, some form of implementation dependent representation of which is to be drawn.</td></tr><tr><td style="white-space:nowrap"><a name="R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-ellipse"> </a>  <a href="http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-ellipse">ellipse</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>ELLIPSE</td><td>An ellipse defined by four (x,y) pairs, the first two pairs specifying the endpoints of the major axis and the second two pairs specifying the endpoints of the minor axis.</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4"/>
+  <version value="0.0.1-snapshot-1"/>
+  <name value="R5-imagingselection-2dgraphictype-for-R4"/>
+  <title value="Cross-version VS for R5.ImagingSelection2DGraphicType for use in FHIR R4"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-06-03T03:14:45.7140378+02:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-2dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/imagingselection-2dgraphictype"/>
+      <version value="5.0.0"/>
+      <concept>
+        <code value="point"/>
+        <display value="POINT"/>
+      </concept>
+      <concept>
+        <code value="polyline"/>
+        <display value="POLYLINE"/>
+      </concept>
+      <concept>
+        <code value="interpolated"/>
+        <display value="INTERPOLATED"/>
+      </concept>
+      <concept>
+        <code value="circle"/>
+        <display value="CIRCLE"/>
+      </concept>
+      <concept>
+        <code value="ellipse"/>
+        <display value="ELLIPSE"/>
+      </concept>
+    </include>
+  </compose>
+  <expansion>
+    <contains>
+      <system value="http://hl7.org/fhir/imagingselection-2dgraphictype"/>
+      <version value="5.0.0"/>
+      <code value="point"/>
+      <display value="POINT"/>
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/imagingselection-2dgraphictype"/>
+      <version value="5.0.0"/>
+      <code value="polyline"/>
+      <display value="POLYLINE"/>
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/imagingselection-2dgraphictype"/>
+      <version value="5.0.0"/>
+      <code value="interpolated"/>
+      <display value="INTERPOLATED"/>
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/imagingselection-2dgraphictype"/>
+      <version value="5.0.0"/>
+      <code value="circle"/>
+      <display value="CIRCLE"/>
+    </contains>
+    <contains>
+      <system value="http://hl7.org/fhir/imagingselection-2dgraphictype"/>
+      <version value="5.0.0"/>
+      <code value="ellipse"/>
+      <display value="ELLIPSE"/>
+    </contains>
+  </expansion>
+</ValueSet>

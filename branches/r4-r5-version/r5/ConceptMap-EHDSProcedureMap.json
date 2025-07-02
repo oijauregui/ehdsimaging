@@ -1,0 +1,180 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSProcedureMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSProcedureMap</b></p><a name=\"EHDSProcedureMap\"> </a><a name=\"hcEHDSProcedureMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSProcedure.html\">Procedure model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSProcedure.html\">Procedure model</a> to <a href=\"StructureDefinition-ProcedureEu.html\">EU Procedure</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ProcedureEu</td><td/></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.16.1 - Identifier</td><td/></tr><tr><td style=\"border-right-width: 0px\">description</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">text</td><td style=\"border-left-width: 0px\">C.16.2 - Description</td><td/></tr><tr><td style=\"border-right-width: 0px\">code</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">code</td><td style=\"border-left-width: 0px\">C.16.3 - Code</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">date[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurrenceDateTime</td><td style=\"border-left-width: 0px\">C.16.4 - Date</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurrencePeriod</td><td style=\"border-left-width: 0px\">C.16.4 - Date</td><td/></tr><tr><td style=\"border-right-width: 0px\">performer</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">performer.actor</td><td style=\"border-left-width: 0px\">C.16.5 - Performer</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">anatomicLocation</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">bodySite</td><td style=\"border-left-width: 0px\">C.16.6 - Anatomic location</td><td>bodysite</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">bodySite.extension[bodyStructure]</td><td style=\"border-left-width: 0px\">C.16.6 - Anatomic location</td><td>bodysite</td></tr><tr><td style=\"border-right-width: 0px\">reason</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason</td><td style=\"border-left-width: 0px\">C.16.7 - Reason</td><td/></tr><tr><td style=\"border-right-width: 0px\">outcome</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">outcome</td><td style=\"border-left-width: 0px\">C.16.8 - Outcome</td><td/></tr><tr><td style=\"border-right-width: 0px\">complication</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">complication.concept</td><td style=\"border-left-width: 0px\">C.16.9 - Complication</td><td/></tr><tr><td style=\"border-right-width: 0px\">deviceUsed</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">used[device]</td><td style=\"border-left-width: 0px\">C.16.10 - Device used</td><td/></tr><tr><td style=\"border-right-width: 0px\">focalDevice</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">focalDevice.manipulated</td><td style=\"border-left-width: 0px\">C.16.11 - Focal device</td><td/></tr><tr><td style=\"border-right-width: 0px\">location</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">location</td><td style=\"border-left-width: 0px\">C.16.12 - Location</td><td/></tr><tr><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\">C.16.13 - Note</td><td/></tr><tr><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.16.14 - Patient</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSProcedure.html\">Procedure model</a> to <a href=\"StructureDefinition-BodyStructureEu.html\">EU BodyStructure</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/BodyStructureEu</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">anatomicLocation</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">includedStructure.laterality</td><td style=\"border-left-width: 0px\">C.16.6 - Anatomic location</td><td>laterality</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">includedStructure.</td><td style=\"border-left-width: 0px\">C.16.6 - Anatomic location</td><td>bodysite</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSProcedureMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSProcedureMap",
+  "title" : "EHDSProcedure Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSProcedure",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ProcedureEu",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.16.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "description",
+      "target" : [{
+        "code" : "text",
+        "display" : "C.16.2 - Description",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "code",
+      "target" : [{
+        "code" : "code",
+        "display" : "C.16.3 - Code",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "date[x]",
+      "target" : [{
+        "code" : "occurrenceDateTime",
+        "display" : "C.16.4 - Date",
+        "relationship" : "equivalent"
+      },
+      {
+        "code" : "occurrencePeriod",
+        "display" : "C.16.4 - Date",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "performer",
+      "target" : [{
+        "code" : "performer.actor",
+        "display" : "C.16.5 - Performer",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "anatomicLocation",
+      "target" : [{
+        "code" : "bodySite",
+        "display" : "C.16.6 - Anatomic location",
+        "relationship" : "equivalent",
+        "comment" : "bodysite"
+      },
+      {
+        "code" : "bodySite.extension[bodyStructure]",
+        "display" : "C.16.6 - Anatomic location",
+        "relationship" : "equivalent",
+        "comment" : "bodysite"
+      }]
+    },
+    {
+      "code" : "reason",
+      "target" : [{
+        "code" : "reason",
+        "display" : "C.16.7 - Reason",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "outcome",
+      "target" : [{
+        "code" : "outcome",
+        "display" : "C.16.8 - Outcome",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "complication",
+      "target" : [{
+        "code" : "complication.concept",
+        "display" : "C.16.9 - Complication",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "deviceUsed",
+      "target" : [{
+        "code" : "used[device]",
+        "display" : "C.16.10 - Device used",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "focalDevice",
+      "target" : [{
+        "code" : "focalDevice.manipulated",
+        "display" : "C.16.11 - Focal device",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "location",
+      "target" : [{
+        "code" : "location",
+        "display" : "C.16.12 - Location",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "note",
+      "target" : [{
+        "code" : "note",
+        "display" : "C.16.13 - Note",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "subject",
+      "target" : [{
+        "code" : "subject",
+        "display" : "C.16.14 - Patient",
+        "relationship" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/BodyStructureEu",
+    "element" : [{
+      "code" : "anatomicLocation",
+      "target" : [{
+        "code" : "includedStructure.laterality",
+        "display" : "C.16.6 - Anatomic location",
+        "relationship" : "equivalent",
+        "comment" : "laterality"
+      },
+      {
+        "code" : "includedStructure.",
+        "display" : "C.16.6 - Anatomic location",
+        "relationship" : "equivalent",
+        "comment" : "bodysite"
+      }]
+    }]
+  }]
+}

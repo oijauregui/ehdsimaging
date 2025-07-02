@@ -1,0 +1,170 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationAdministrationMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSMedicationAdministrationMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSMedicationAdministrationMap</b></p><a name=\"EHDSMedicationAdministrationMap\"> </a><a name=\"hcEHDSMedicationAdministrationMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSMedicationAdministration.html\">Medication administration model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSMedicationAdministration.html\">Medication administration model</a> to <a href=\"http://hl7.org/fhir/R5/medicationadministration.html\">MedicationAdministration</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/MedicationAdministration</td></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.18.1 - Identifier</td></tr><tr><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\">C.18.2 - Status</td></tr><tr><td style=\"border-right-width: 0px\">statusReason</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">statusReason</td><td style=\"border-left-width: 0px\">C.18.3 - Status reason</td></tr><tr><td style=\"border-right-width: 0px\">medication</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">medication</td><td style=\"border-left-width: 0px\">C.18.4 - Medication</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">occurance[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurenceDateTime</td><td style=\"border-left-width: 0px\">C.18.5 - Occurance</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurencePeriod</td><td style=\"border-left-width: 0px\">C.18.5 - Occurance</td></tr><tr><td style=\"border-right-width: 0px\">reason</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason</td><td style=\"border-left-width: 0px\">C.18.6 - Reason</td></tr><tr><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\">C.18.7 - Note</td></tr><tr><td style=\"border-right-width: 0px\">dosage</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage</td><td style=\"border-left-width: 0px\">C.18.8 - Dosage</td></tr><tr><td style=\"border-right-width: 0px\">dosage.dosageDescription</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">dosage.text</td><td style=\"border-left-width: 0px\">C.18.8.1 - Dosage description</td></tr><tr><td style=\"border-right-width: 0px\">dosage.site</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.site</td><td style=\"border-left-width: 0px\">C.18.8.2 - Site</td></tr><tr><td style=\"border-right-width: 0px\">dosage.route</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.route</td><td style=\"border-left-width: 0px\">C.18.8.3 - Route</td></tr><tr><td style=\"border-right-width: 0px\">dosage.method</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.method</td><td style=\"border-left-width: 0px\">C.18.8.4 - Method</td></tr><tr><td style=\"border-right-width: 0px\">dosage.dose</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">dosage.dose</td><td style=\"border-left-width: 0px\">C.18.8.5 - Dose</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">dosage.rate[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.rateRatio</td><td style=\"border-left-width: 0px\">C.18.8.6 - Rate</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.rateQuantity</td><td style=\"border-left-width: 0px\">C.18.8.6 - Rate</td></tr><tr><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.18.9 - Patient</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationAdministrationMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSMedicationAdministrationMap"] ; # 
+  fhir:title [ fhir:v "EHDSMedicationAdministration Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-07-02T12:58:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSMedicationAdministration"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/MedicationAdministration>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "C.18.1 - Identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "status" ] ;
+         fhir:display [ fhir:v "C.18.2 - Status" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "statusReason" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "statusReason" ] ;
+         fhir:display [ fhir:v "C.18.3 - Status reason" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "medication" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "medication" ] ;
+         fhir:display [ fhir:v "C.18.4 - Medication" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "occurance[x]" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "occurenceDateTime" ] ;
+         fhir:display [ fhir:v "C.18.5 - Occurance" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "occurencePeriod" ] ;
+         fhir:display [ fhir:v "C.18.5 - Occurance" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "reason" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason" ] ;
+         fhir:display [ fhir:v "C.18.6 - Reason" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "note" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "note" ] ;
+         fhir:display [ fhir:v "C.18.7 - Note" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage" ] ;
+         fhir:display [ fhir:v "C.18.8 - Dosage" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage.dosageDescription" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage.text" ] ;
+         fhir:display [ fhir:v "C.18.8.1 - Dosage description" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage.site" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage.site" ] ;
+         fhir:display [ fhir:v "C.18.8.2 - Site" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage.route" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage.route" ] ;
+         fhir:display [ fhir:v "C.18.8.3 - Route" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage.method" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage.method" ] ;
+         fhir:display [ fhir:v "C.18.8.4 - Method" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage.dose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage.dose" ] ;
+         fhir:display [ fhir:v "C.18.8.5 - Dose" ] ;
+         fhir:relationship [ fhir:v "source-is-broader-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dosage.rate[x]" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "dosage.rateRatio" ] ;
+         fhir:display [ fhir:v "C.18.8.6 - Rate" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "dosage.rateQuantity" ] ;
+         fhir:display [ fhir:v "C.18.8.6 - Rate" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "C.18.9 - Patient" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

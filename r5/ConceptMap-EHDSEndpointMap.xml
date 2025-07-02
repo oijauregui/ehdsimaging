@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSEndpointMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSEndpointMap</b></p><a name="EHDSEndpointMap"> </a><a name="hcEHDSEndpointMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSEndpoint.html">Endpoint model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSEndpoint.html">Endpoint model</a> to <a href="StructureDefinition-EndpointEu.html">EU Endpoint</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.33.1 - Identifier)</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>status (C.33.2 - Status)</td></tr><tr><td>connectionType</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>connectionType (C.33.3 - Connection type)</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>name (C.33.4 - Name)</td></tr><tr><td>managingOrganization</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>managingOrganization (C.33.5 - Managing organization)</td></tr><tr><td>payload</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>payload (C.33.6 - Payload)</td></tr><tr><td>payload.type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>payload.type (C.33.6.1 - Type)</td></tr><tr><td>payload.mimeType</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>payload.mimeType (C.33.6.2 - Mime type)</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>address (C.33.7 - Address)</td></tr><tr><td>header</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>header (C.33.8 - Header)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-EHDSEndpoint.html">Endpoint model</a> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>payload.profileCanonical (lt refers to resources and logical models retrieved by an endpoint url. This is not the typical use of an Endpoint resource but more typically associated with Attachements. (C.33.6.3 - Profile Canonical))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>payload.profileUri (lt refers to resources and logical models retrieved by an endpoint url. This is not the typical use of an Endpoint resource but more typically associated with Attachements. (C.33.6.4 - Profile uri))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSEndpointMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSEndpointMap"/>
+  <title value="EHDSEndpoint Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSEndpoint"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/EndpointEu"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.33.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="status"/>
+      <target>
+        <code value="status"/>
+        <display value="C.33.2 - Status"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="connectionType"/>
+      <target>
+        <code value="connectionType"/>
+        <display value="C.33.3 - Connection type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="name"/>
+      <target>
+        <code value="name"/>
+        <display value="C.33.4 - Name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="managingOrganization"/>
+      <target>
+        <code value="managingOrganization"/>
+        <display value="C.33.5 - Managing organization"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="payload"/>
+      <target>
+        <code value="payload"/>
+        <display value="C.33.6 - Payload"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="payload.type"/>
+      <target>
+        <code value="payload.type"/>
+        <display value="C.33.6.1 - Type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="payload.mimeType"/>
+      <target>
+        <code value="payload.mimeType"/>
+        <display value="C.33.6.2 - Mime type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="address"/>
+      <target>
+        <code value="address"/>
+        <display value="C.33.7 - Address"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="header"/>
+      <target>
+        <code value="header"/>
+        <display value="C.33.8 - Header"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint"/>
+    <element>
+      <code value="payload.profileCanonical"/>
+      <display value="lt refers to resources and logical models retrieved by an endpoint url. This is not the typical use of an Endpoint resource but more typically associated with Attachements. (C.33.6.3 - Profile Canonical)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="payload.profileUri"/>
+      <display value="lt refers to resources and logical models retrieved by an endpoint url. This is not the typical use of an Endpoint resource but more typically associated with Attachements. (C.33.6.4 - Profile uri)"/>
+      <noMap value="true"/>
+    </element>
+  </group>
+</ConceptMap>

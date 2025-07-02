@@ -1,0 +1,61 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSTelecomMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSTelecomMap</b></p><a name=\"EHDSTelecomMap\"> </a><a name=\"hcEHDSTelecomMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSTelecom.html\">Telecom model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSTelecom.html\">Telecom model</a> to <a href=\"http://hl7.org/fhir/R5/datatypes.html#ContactPoint\">ContactPoint</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>use</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>use (C.6.1 - Use)</td></tr><tr><td>type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>system (C.6.2 - Type)</td></tr><tr><td>value</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>value (C.6.3 - Value)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSTelecomMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSTelecomMap",
+  "title" : "EHDSTelecom Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSTelecom",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom",
+    "target" : "http://hl7.org/fhir/StructureDefinition/ContactPoint",
+    "element" : [{
+      "code" : "use",
+      "target" : [{
+        "code" : "use",
+        "display" : "C.6.1 - Use",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "type",
+      "target" : [{
+        "code" : "system",
+        "display" : "C.6.2 - Type",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "value",
+      "target" : [{
+        "code" : "value",
+        "display" : "C.6.3 - Value",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

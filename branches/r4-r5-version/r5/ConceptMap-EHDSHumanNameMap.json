@@ -1,0 +1,87 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSHumanNameMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSHumanNameMap</b></p><a name=\"EHDSHumanNameMap\"> </a><a name=\"hcEHDSHumanNameMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSHumanName.html\">Human name model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSHumanName.html\">Human name model</a> to <a href=\"http://hl7.org/fhir/R5/datatypes.html#HumanName\">HumanName</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>use</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>use (C.27.1 - Use)</td><td/></tr><tr><td>text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>text (C.27.2 - Text)</td><td>Concatenation of family names and given names..</td></tr><tr><td>family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td>family (C.27.3 - Family)</td><td>Concatenation of family names.</td></tr><tr><td>given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>given (C.27.4 - Given)</td><td/></tr><tr><td>prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>prefix (C.27.5 - Prefix)</td><td/></tr><tr><td>suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>suffix (C.27.6 - Suffix)</td><td/></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSHumanNameMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSHumanNameMap",
+  "title" : "EHDSHumanName Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSHumanName",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName",
+    "target" : "http://hl7.org/fhir/StructureDefinition/HumanName",
+    "element" : [{
+      "code" : "use",
+      "target" : [{
+        "code" : "use",
+        "display" : "C.27.1 - Use",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "text",
+      "target" : [{
+        "code" : "text",
+        "display" : "C.27.2 - Text",
+        "relationship" : "equivalent",
+        "comment" : "Concatenation of family names and given names.."
+      }]
+    },
+    {
+      "code" : "family",
+      "target" : [{
+        "code" : "family",
+        "display" : "C.27.3 - Family",
+        "relationship" : "source-is-broader-than-target",
+        "comment" : "Concatenation of family names."
+      }]
+    },
+    {
+      "code" : "given",
+      "target" : [{
+        "code" : "given",
+        "display" : "C.27.4 - Given",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "prefix",
+      "target" : [{
+        "code" : "prefix",
+        "display" : "C.27.5 - Prefix",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "suffix",
+      "target" : [{
+        "code" : "suffix",
+        "display" : "C.27.6 - Suffix",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

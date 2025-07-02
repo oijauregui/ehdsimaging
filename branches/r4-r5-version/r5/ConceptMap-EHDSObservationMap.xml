@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSObservationMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSObservationMap</b></p><a name="EHDSObservationMap"> </a><a name="hcEHDSObservationMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSObservation.html">Observation model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSObservation.html">Observation model</a> to <a href="StructureDefinition-ObservationEu.html">EU Observation</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationDate[x]</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">effectiveDateTime</td><td style="border-left-width: 0px">C.10.1 - Observation date</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">effectivePeriod</td><td style="border-left-width: 0px">C.10.1 - Observation date</td></tr><tr><td style="border-right-width: 0px">observationCode</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.10.2 - Observation code</td></tr><tr><td style="border-right-width: 0px">observationName</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code.coding.display</td><td style="border-left-width: 0px">C.10.3 - Observation name</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationOriginalName</td><td style="border-left-width: 0px"/><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">observationMethod</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">method</td><td style="border-left-width: 0px">C.10.5 - Observation method</td></tr><tr><td style="border-right-width: 0px">observationDevice</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">device</td><td style="border-left-width: 0px">C.10.6 - Observation device</td></tr><tr><td style="border-right-width: 0px">order</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">basedOn</td><td style="border-left-width: 0px">C.10.7 - Order</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">performer</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">performer</td><td style="border-left-width: 0px">C.10.8 - Performer</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">performer.extension[performerFunction]</td><td style="border-left-width: 0px">C.10.8 - Performer</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">reporter</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">performer</td><td style="border-left-width: 0px">C.10.9 - Reporter</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">performer.extension[performerFunction]</td><td style="border-left-width: 0px">C.10.9 - Reporter</td></tr><tr><td style="border-right-width: 0px">observationResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">value[x]</td><td style="border-left-width: 0px">C.10.10 - Observation result</td></tr><tr><td style="border-right-width: 0px">observationResult.textualResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">valueString</td><td style="border-left-width: 0px">C.10.10.1 - Textual Result</td></tr><tr><td style="border-right-width: 0px">observationResult.numericResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">valueQuantity</td><td style="border-left-width: 0px">C.10.10.2 - Numeric Result</td></tr><tr><td style="border-right-width: 0px">observationResult.numericResult.numericValue[x]</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">valueRange</td><td style="border-left-width: 0px">C.10.10.2.1 - Numeric value</td></tr><tr><td style="border-right-width: 0px">observationResult.codedResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">valueCodeableConcept</td><td style="border-left-width: 0px">C.10.10.3 - Coded Result</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">dataAbsentReason</td><td style="border-left-width: 0px"/><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">referenceRange</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">referenceRange</td><td style="border-left-width: 0px">C.10.12 - Reference range</td></tr><tr><td style="border-right-width: 0px">observationInterpretation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">interpretation</td><td style="border-left-width: 0px">C.10.13 - Observation interpretation</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">triggeredBy[x]</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">triggeredBy.observation</td><td style="border-left-width: 0px">C.10.14 - Triggered by</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">triggeredBy.type</td><td style="border-left-width: 0px">C.10.14 - Triggered by</td></tr><tr><td style="border-right-width: 0px">hasMember[x]</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">hasMember</td><td style="border-left-width: 0px">C.10.15 - Has member</td></tr><tr><td style="border-right-width: 0px">resultDescription</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">note</td><td style="border-left-width: 0px">C.10.16 - Result description</td></tr><tr><td style="border-right-width: 0px">anatomicLocation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">bodySite</td><td style="border-left-width: 0px">C.10.17 - Anatomic location</td></tr><tr><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px">C.10.18 - Subject</td></tr><tr><td style="border-right-width: 0px">component</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">component</td><td style="border-left-width: 0px">C.10.19 - Component</td></tr><tr><td style="border-right-width: 0px">component.code</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.10.19.1 - Code</td></tr><tr><td style="border-right-width: 0px">component.textualResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">valueString</td><td style="border-left-width: 0px">C.10.19.2 - Textual Result</td></tr><tr><td style="border-right-width: 0px">component.numericResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">valueQuantity</td><td style="border-left-width: 0px">C.10.19.3 - Numeric Result</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">component.numericResult.numericValue[x]</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">component.valueQuantity</td><td style="border-left-width: 0px">C.10.19.3.1 - Numeric value</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">component.valueRange</td><td style="border-left-width: 0px">C.10.19.3.1 - Numeric value</td></tr><tr><td style="border-right-width: 0px">component.codedResult</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">component.valueCodeableConcept</td><td style="border-left-width: 0px">C.10.19.4 - Coded Result</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">component.dataAbsentReason</td><td style="border-left-width: 0px"/><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px">component.referenceRange</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">component.referenceRange</td><td style="border-left-width: 0px">C.10.19.6 - Reference range</td></tr><tr><td style="border-right-width: 0px">component.observationInterpretation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">component.interpretation</td><td style="border-left-width: 0px">C.10.19.7 - Observation interpretation</td></tr><tr><td style="border-right-width: 0px">status</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">status.value</td><td style="border-left-width: 0px">C.10.19.8 - Status</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-EHDSObservation.html">Observation model</a> to <a href="http://hl7.org/fhir/R5/servicerequest.html">ServiceRequest</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>order</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>requester (C.10.7 - Order)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href="StructureDefinition-EHDSObservation.html">Observation model</a> to <code>http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationResult.numericResult.numericValue[x]</td><td style="border-left-width: 0px"/><td colspan="4" style="background-color: #efefef">(not mapped)</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationResult.numericResult.units</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">system</td><td style="border-left-width: 0px">C.10.10.2.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none; border-bottom-style: none"/><td style="border-left-width: 0px; border-top-style: none; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.10.10.2.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">unit</td><td style="border-left-width: 0px">C.10.10.2.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationResult.numericResult.uncertainty</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertainty]</td><td style="border-left-width: 0px">C.10.10.2.3 - Uncertainty</td><td>Covered by data type</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertaintyType]</td><td style="border-left-width: 0px">C.10.10.2.3 - Uncertainty</td><td>Covered by data type</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">component.numericResult.units</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">system</td><td style="border-left-width: 0px">C.10.19.3.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none; border-bottom-style: none"/><td style="border-left-width: 0px; border-top-style: none; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.10.19.3.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">unit</td><td style="border-left-width: 0px">C.10.19.3.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">component.numericResult.uncertainty</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertainty]</td><td style="border-left-width: 0px">C.10.19.3.3 - Uncertainty</td><td>Covered by data type</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertaintyType]</td><td style="border-left-width: 0px">C.10.19.3.3 - Uncertainty</td><td>Covered by data type</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href="StructureDefinition-EHDSObservation.html">Observation model</a> to <code>http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu</code></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationResult.numericResult.numericValue[x]</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">low</td><td style="border-left-width: 0px">C.10.10.2.1 - Numeric value</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">high</td><td style="border-left-width: 0px">C.10.10.2.1 - Numeric value</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href="StructureDefinition-EHDSObservation.html">Observation model</a> to <a href="StructureDefinition-SimpleQuantityEu.html">EU SimpleQuantity</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/SimpleQuantityEu</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationResult.numericResult.units</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">system</td><td style="border-left-width: 0px">C.10.10.2.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none; border-bottom-style: none"/><td style="border-left-width: 0px; border-top-style: none; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.10.10.2.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">unit</td><td style="border-left-width: 0px">C.10.10.2.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">observationResult.numericResult.uncertainty</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertainty]</td><td style="border-left-width: 0px">C.10.10.2.3 - Uncertainty</td><td>Covered by data type</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertaintyType]</td><td style="border-left-width: 0px">C.10.10.2.3 - Uncertainty</td><td>Covered by data type</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">component.numericResult.units</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">system</td><td style="border-left-width: 0px">C.10.19.3.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none; border-bottom-style: none"/><td style="border-left-width: 0px; border-top-style: none; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code</td><td style="border-left-width: 0px">C.10.19.3.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">unit</td><td style="border-left-width: 0px">C.10.19.3.2 - Units</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">component.numericResult.uncertainty</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertainty]</td><td style="border-left-width: 0px">C.10.19.3.3 - Uncertainty</td><td>Covered by data type</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">extension[uncertaintyType]</td><td style="border-left-width: 0px">C.10.19.3.3 - Uncertainty</td><td>Covered by data type</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSObservationMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSObservationMap"/>
+  <title value="EHDSObservation Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSObservation"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu"/>
+    <element>
+      <code value="observationDate[x]"/>
+      <target>
+        <code value="effectiveDateTime"/>
+        <display value="C.10.1 - Observation date"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="effectivePeriod"/>
+        <display value="C.10.1 - Observation date"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationCode"/>
+      <target>
+        <code value="code"/>
+        <display value="C.10.2 - Observation code"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationName"/>
+      <target>
+        <code value="code.coding.display"/>
+        <display value="C.10.3 - Observation name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationOriginalName"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="observationMethod"/>
+      <target>
+        <code value="method"/>
+        <display value="C.10.5 - Observation method"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationDevice"/>
+      <target>
+        <code value="device"/>
+        <display value="C.10.6 - Observation device"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="order"/>
+      <target>
+        <code value="basedOn"/>
+        <display value="C.10.7 - Order"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="performer"/>
+      <target>
+        <code value="performer"/>
+        <display value="C.10.8 - Performer"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+      <target>
+        <code value="performer.extension[performerFunction]"/>
+        <display value="C.10.8 - Performer"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="reporter"/>
+      <target>
+        <code value="performer"/>
+        <display value="C.10.9 - Reporter"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+      <target>
+        <code value="performer.extension[performerFunction]"/>
+        <display value="C.10.9 - Reporter"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult"/>
+      <target>
+        <code value="value[x]"/>
+        <display value="C.10.10 - Observation result"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult.textualResult"/>
+      <target>
+        <code value="valueString"/>
+        <display value="C.10.10.1 - Textual Result"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult.numericResult"/>
+      <target>
+        <code value="valueQuantity"/>
+        <display value="C.10.10.2 - Numeric Result"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult.numericResult.numericValue[x]"/>
+      <target>
+        <code value="valueRange"/>
+        <display value="C.10.10.2.1 - Numeric value"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult.codedResult"/>
+      <target>
+        <code value="valueCodeableConcept"/>
+        <display value="C.10.10.3 - Coded Result"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="dataAbsentReason"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="referenceRange"/>
+      <target>
+        <code value="referenceRange"/>
+        <display value="C.10.12 - Reference range"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationInterpretation"/>
+      <target>
+        <code value="interpretation"/>
+        <display value="C.10.13 - Observation interpretation"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="triggeredBy[x]"/>
+      <target>
+        <code value="triggeredBy.observation"/>
+        <display value="C.10.14 - Triggered by"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="triggeredBy.type"/>
+        <display value="C.10.14 - Triggered by"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="hasMember[x]"/>
+      <target>
+        <code value="hasMember"/>
+        <display value="C.10.15 - Has member"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="resultDescription"/>
+      <target>
+        <code value="note"/>
+        <display value="C.10.16 - Result description"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="anatomicLocation"/>
+      <target>
+        <code value="bodySite"/>
+        <display value="C.10.17 - Anatomic location"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="subject"/>
+      <target>
+        <code value="subject"/>
+        <display value="C.10.18 - Subject"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component"/>
+      <target>
+        <code value="component"/>
+        <display value="C.10.19 - Component"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.code"/>
+      <target>
+        <code value="code"/>
+        <display value="C.10.19.1 - Code"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.textualResult"/>
+      <target>
+        <code value="valueString"/>
+        <display value="C.10.19.2 - Textual Result"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.numericResult"/>
+      <target>
+        <code value="valueQuantity"/>
+        <display value="C.10.19.3 - Numeric Result"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.numericResult.numericValue[x]"/>
+      <target>
+        <code value="component.valueQuantity"/>
+        <display value="C.10.19.3.1 - Numeric value"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="component.valueRange"/>
+        <display value="C.10.19.3.1 - Numeric value"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.codedResult"/>
+      <target>
+        <code value="component.valueCodeableConcept"/>
+        <display value="C.10.19.4 - Coded Result"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.dataAbsentReason"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="component.referenceRange"/>
+      <target>
+        <code value="component.referenceRange"/>
+        <display value="C.10.19.6 - Reference range"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.observationInterpretation"/>
+      <target>
+        <code value="component.interpretation"/>
+        <display value="C.10.19.7 - Observation interpretation"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="status"/>
+      <target>
+        <code value="status.value"/>
+        <display value="C.10.19.8 - Status"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <element>
+      <code value="order"/>
+      <target>
+        <code value="requester"/>
+        <display value="C.10.7 - Order"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu"/>
+    <element>
+      <code value="observationResult.numericResult.numericValue[x]"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="observationResult.numericResult.units"/>
+      <target>
+        <code value="system"/>
+        <display value="C.10.10.2.2 - Units"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="code"/>
+        <display value="C.10.10.2.2 - Units"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="unit"/>
+        <display value="C.10.10.2.2 - Units"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult.numericResult.uncertainty"/>
+      <target>
+        <code value="extension[uncertainty]"/>
+        <display value="C.10.10.2.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+      <target>
+        <code value="extension[uncertaintyType]"/>
+        <display value="C.10.10.2.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.numericResult.units"/>
+      <target>
+        <code value="system"/>
+        <display value="C.10.19.3.2 - Units"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="code"/>
+        <display value="C.10.19.3.2 - Units"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="unit"/>
+        <display value="C.10.19.3.2 - Units"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.numericResult.uncertainty"/>
+      <target>
+        <code value="extension[uncertainty]"/>
+        <display value="C.10.19.3.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+      <target>
+        <code value="extension[uncertaintyType]"/>
+        <display value="C.10.19.3.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu"/>
+    <element>
+      <code value="observationResult.numericResult.numericValue[x]"/>
+      <target>
+        <code value="low"/>
+        <display value="C.10.10.2.1 - Numeric value"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="high"/>
+        <display value="C.10.10.2.1 - Numeric value"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/SimpleQuantityEu"/>
+    <element>
+      <code value="observationResult.numericResult.units"/>
+      <target>
+        <code value="system"/>
+        <display value="C.10.10.2.2 - Units"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="code"/>
+        <display value="C.10.10.2.2 - Units"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="unit"/>
+        <display value="C.10.10.2.2 - Units"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="observationResult.numericResult.uncertainty"/>
+      <target>
+        <code value="extension[uncertainty]"/>
+        <display value="C.10.10.2.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+      <target>
+        <code value="extension[uncertaintyType]"/>
+        <display value="C.10.10.2.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.numericResult.units"/>
+      <target>
+        <code value="system"/>
+        <display value="C.10.19.3.2 - Units"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="code"/>
+        <display value="C.10.19.3.2 - Units"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="unit"/>
+        <display value="C.10.19.3.2 - Units"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="component.numericResult.uncertainty"/>
+      <target>
+        <code value="extension[uncertainty]"/>
+        <display value="C.10.19.3.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+      <target>
+        <code value="extension[uncertaintyType]"/>
+        <display value="C.10.19.3.3 - Uncertainty"/>
+        <relationship value="equivalent"/>
+        <comment value="Covered by data type"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

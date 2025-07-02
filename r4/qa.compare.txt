@@ -1,0 +1,677 @@
+HL7EuImagingStudyReport : Validation Results
+=========================================
+
+err = 254, warn = 59, info = 13
+$--
+Generated $--. FHIR version $-- for hl7.fhir.eu.imaging-r4#$-- (canonical = http://hl7.eu/fhir/imaging-r4)
+ Build Errors : 55 / 1 / 0
+ /work/fsh-generated/resources/ActorDefinition-ImManifestProvider : 0 / 0 / 2
+ /work/fsh-generated/resources/ActorDefinition-ImReportProvider : 0 / 0 / 2
+ /work/fsh-generated/resources/CodeSystem-Hl7EuDocumentTypes : 0 / 0 / 1
+ /work/fsh-generated/resources/CodeSystem-codesystem-diagnostic-report-support-info : 0 / 0 / 1
+ /work/fsh-generated/resources/CodeSystem-codesystem-endpoint-terminology : 0 / 0 / 1
+ /work/fsh-generated/resources/CodeSystem-codesystem-missing-dicom-terminology : 0 / 0 / 1
+ /work/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.imaging-r4 : 2 / 2 / 1
+ /work/fsh-generated/resources/StructureDefinition-AllergyIntoleranceEu : 0 / 1 / 2
+ /work/fsh-generated/resources/StructureDefinition-BodyStructureEu : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-CarePlanEu : 0 / 5 / 2
+ /work/fsh-generated/resources/StructureDefinition-CompositionEu : 0 / 3 / 2
+ /work/fsh-generated/resources/StructureDefinition-ConditionEu : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-CrossVersionMediaViewExtension : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-CvServiceRequestSupportingInfoCodeableConcept : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-DocumentReferenceEu : 0 / 2 / 1
+ /work/fsh-generated/resources/StructureDefinition-EncounterEu : 0 / 7 / 1
+ /work/fsh-generated/resources/StructureDefinition-EndpointEu : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-IheMhdEntryUUIDIdentifier : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImAdverseEvent : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImAdverseEventSubjectReseachSubject : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImComposition : 1 / 9 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImDiagnosticReport : 6 / 2 / 5
+ /work/fsh-generated/resources/StructureDefinition-ImFinding : 0 / 3 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImGestationalAgeObservation : 0 / 3 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImIheMhdDocumentReference : 0 / 2 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImImageIidViewerEndpoint : 0 / 1 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImImagingDevice : 1 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImImagingSelection : 3 / 6 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImImagingStudy : 0 / 3 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImImagingStudyManifest : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImKeyImageDocumentReference : 0 / 2 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImKeyImageImagingSelection : 3 / 5 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImManifestIheMhdDocumentReference : 10 / 2 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImOrder : 0 / 2 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImPatient : 0 / 7 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImProcedure : 0 / 2 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImRadiationDoseObservation : 0 / 3 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImReport : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImReportIheMhdDocumentReference : 10 / 2 / 3
+ /work/fsh-generated/resources/StructureDefinition-ImSrInstanceImagingSelection : 3 / 5 / 1
+ /work/fsh-generated/resources/StructureDefinition-ImWadoEndpoint : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-MedicationEu : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-ObservationEu : 0 / 5 / 1
+ /work/fsh-generated/resources/StructureDefinition-PatientAnimalEu : 0 / 7 / 1
+ /work/fsh-generated/resources/StructureDefinition-ProcedureEu : 0 / 3 / 1
+ /work/fsh-generated/resources/StructureDefinition-RelatedPersonEu : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-SimpleQuantityEu : 0 / 5 / 1
+ /work/fsh-generated/resources/StructureDefinition-SpecimenEu : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-cvDocumentReference-basedOn : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-cvServiceRequest-reason : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-im-accession-number-identifier : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-im-composition-diagnosticReportReference : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-im-sop-instance-uid-identifier : 0 / 1 / 3
+ /work/fsh-generated/resources/StructureDefinition-im-study-instance-uid-identifier : 0 / 1 / 3
+ /work/fsh-generated/resources/StructureDefinition-instance-description : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-periods-of-life-extension : 0 / 1 / 1
+ /work/fsh-generated/resources/StructureDefinition-quantity-eu : 0 / 5 / 1
+ /work/fsh-generated/resources/StructureDefinition-range-eu : 0 / 1 / 1
+ /work/fsh-generated/resources/ValueSet-ImImagingManifestTypesEuVS : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-ImImagingReportTypesEuVS : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-ImSectionEmptyReason : 0 / 1 / 1
+ /work/fsh-generated/resources/ValueSet-im-dose-length-units : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-im-effective-dose-units : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-im-gray-square-units : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-im-imaging-device-type : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-im-imaging-study-performer-type : 0 / 1 / 1
+ /work/fsh-generated/resources/ValueSet-im-procedure-type : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-media-view : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-periods-of-life-value-set : 0 / 0 / 1
+ /work/fsh-generated/resources/ValueSet-valueset-diagnosticreport-report-support-info : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSAddress : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSAlertFlag : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSAllergyIntolerance : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSAppointment : 2 / 2 / 1
+ /work/input/resources/StructureDefinition-EHDSAttachment : 0 / 2 / 1
+ /work/input/resources/StructureDefinition-EHDSAttachments : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSCarePlan : 0 / 1 / 1
+ /work/input/resources/StructureDefinition-EHDSClinicalImpression : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSCommonHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSCondition : 2 / 2 / 1
+ /work/input/resources/StructureDefinition-EHDSCoverage : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSDevice : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSDeviceUse : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSDispenseDecline : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSDocumentHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSDosaging : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSEncounter : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSEndpoint : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSEpisodeOfCare : 4 / 4 / 1
+ /work/input/resources/StructureDefinition-EHDSFunctionalStatus : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSGoal : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSGroup : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSHealthProfessional : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSHospitalDischargeReport : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSHospitalDischargeReportHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSHumanName : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSImagingReport : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSImagingReportBody : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSImagingReportHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSImagingStudy : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSImmunization : 0 / 2 / 1
+ /work/input/resources/StructureDefinition-EHDSInpatientEncounter : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryObservation : 4 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryOrder : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryOrderBody : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryOrderHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryReport : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryReportBody : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLaboratoryReportHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSLocation : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedia : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedication : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedicationAdministration : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedicationDispense : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedicationDispenseHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedicationPrescription : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSMedicationPrescriptionHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSObservation : 6 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSOrganization : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSPatient : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSPatientSummary : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSPatientSummaryBody : 4 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSPatientSummaryHeader : 0 / 6 / 1
+ /work/input/resources/StructureDefinition-EHDSProcedure : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSRelatedPerson : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSReportHeader : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSServiceRequest : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSSlot : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSSpecimen : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSSubstance : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSTask : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-EHDSTelecom : 0 / 0 / 1
+ /work/input/resources/StructureDefinition-ext-R5-Composition.ev.detail : 9 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-Composition.identifier : 3 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-Device.category : 5 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-DiagnosticReport.composition : 9 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-DiagnosticReport.supportingInfo : 10 / 4 / 1
+ /work/input/resources/StructureDefinition-ext-R5-DocumentReference.basedOn : 9 / 4 / 1
+ /work/input/resources/StructureDefinition-ext-R5-DocumentReference.bodySite : 9 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-DocumentReference.co.profile : 5 / 3 / 2
+ /work/input/resources/StructureDefinition-ext-R5-DocumentReference.modality : 9 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-Endpoint.connectionType : 6 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-Endpoint.payload : 9 / 2 / 1
+ /work/input/resources/StructureDefinition-ext-R5-ImagingSelection : 54 / 8 / 1
+ /work/input/resources/ValueSet-R5-Device-category-for-R4 : 4 / 3 / 2
+ /work/input/resources/ValueSet-R5-imagingselection-2dgraphictype-for-R4 : 15 / 1 / 2
+ /work/input/resources/ValueSet-R5-imagingselection-3dgraphictype-for-R4 : 17 / 1 / 2
+ /work/input/resources/ValueSet-R5-imagingselection-status-for-R4 : 11 / 1 / 2
+</table>
+== n/a ==
+WARNING: ImplementationGuide.dependency[0].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+ERROR: ImplementationGuide/hl7.fhir.eu.imaging-r4: This IG is version 4.0.1, while the IG 'hl7.terminology.r5' is from version 5.0.0
+ERROR: ImplementationGuide/hl7.fhir.eu.imaging-r4: This IG is version 4.0.1, while the IG 'hl7.fhir.uv.extensions' is from version 5.0.0
+ERROR: ImplementationGuide/hl7.fhir.eu.imaging-r4: This IG is version 4.0.1, while the IG 'hl7.fhir.eu.extensions' is from version 5.0.0
+ERROR: http://hl7.org/fhir/R4/: The reference Citation could not be resolved
+ERROR: http://hl7.org/fhir/R4/: The reference RequestOrchestration could not be resolved
+ERROR: http://hl7.org/fhir/R4/: The reference ImagingSelection could not be resolved
+ERROR: There is no jira specification file defined with the expected name of FHIR-eu-imaging-r4 in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
+ERROR: StructureDefinition-EHDSAppointment.html: The reference CodeableReference could not be resolved
+ERROR: StructureDefinition-EHDSAttachment.html: The reference integer64 could not be resolved
+ERROR: StructureDefinition-EHDSAppointment-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 336, column 113: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSAppointment-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 414, column 113: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSAppointment-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 492, column 113: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSAttachment-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 326, column 323: The link 'integer64.html' for "integer64" cannot be resolved
+ERROR: StructureDefinition-EHDSAttachment-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 371, column 323: The link 'integer64.html' for "integer64" cannot be resolved
+ERROR: StructureDefinition-EHDSAttachment-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 416, column 323: The link 'integer64.html' for "integer64" cannot be resolved
+ERROR: StructureDefinition-EHDSCondition-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 335, column 344: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSCondition-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 400, column 344: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSCondition-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 465, column 344: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSEpisodeOfCare-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 321, column 326: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSEpisodeOfCare-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 330, column 331: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSEpisodeOfCare-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 352, column 326: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSEpisodeOfCare-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 361, column 331: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSEpisodeOfCare-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 383, column 326: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSEpisodeOfCare-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 392, column 331: The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+ERROR: StructureDefinition-EHDSImmunization-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 329, column 362: The link 'integer64.html' for "integer64" cannot be resolved
+ERROR: StructureDefinition-EHDSImmunization-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 378, column 362: The link 'integer64.html' for "integer64" cannot be resolved
+ERROR: StructureDefinition-EHDSImmunization-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/a at Line 427, column 362: The link 'integer64.html' for "integer64" cannot be resolved
+ERROR: StructureDefinition-ImDiagnosticReport.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 1200, column 439: The link 'Citation.html' for "Citation" cannot be resolved
+ERROR: StructureDefinition-ImDiagnosticReport.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 2730, column 439: The link 'Citation.html' for "Citation" cannot be resolved
+ERROR: StructureDefinition-ImImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/a at Line 1972, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ImImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/table/tr/td/a at Line 4837, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ImImagingStudy.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 1383, column 195: The link '??' for "AcquisitionModality (missing link)" cannot be resolved
+ERROR: StructureDefinition-ImImagingStudy.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 1387, column 202: The link '??' for "AcquisitionModality (missing link)" cannot be resolved
+ERROR: StructureDefinition-ImImagingStudy.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 2610, column 195: The link '??' for "AcquisitionModality (missing link)" cannot be resolved
+ERROR: StructureDefinition-ImImagingStudy.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 2614, column 202: The link '??' for "AcquisitionModality (missing link)" cannot be resolved
+ERROR: StructureDefinition-ImKeyImageImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/a at Line 895, column 164: The link 'null' for "Extension" cannot be resolved
+ERROR: StructureDefinition-ImKeyImageImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/a at Line 1951, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ImKeyImageImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/table/tr/td/a at Line 3762, column 164: The link 'null' for "Extension" cannot be resolved
+ERROR: StructureDefinition-ImKeyImageImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/table/tr/td/a at Line 4817, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ImSrInstanceImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/a at Line 838, column 164: The link 'null' for "Extension" cannot be resolved
+ERROR: StructureDefinition-ImSrInstanceImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/a at Line 1964, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ImSrInstanceImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/table/tr/td/a at Line 2782, column 164: The link 'null' for "Extension" cannot be resolved
+ERROR: StructureDefinition-ImSrInstanceImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/div/table/tr/td/span/div/div/table/tr/td/a at Line 3907, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 416, column 439: The link 'Citation.html' for "Citation" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 502, column 437: The link 'Citation.html' for "Citation" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 926, column 439: The link 'Citation.html' for "Citation" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 1012, column 437: The link 'Citation.html' for "Citation" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DocumentReference.basedOn.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 405, column 1147: The link 'RequestOrchestration.html' for "RequestOrchestration" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DocumentReference.basedOn.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 446, column 1147: The link 'RequestOrchestration.html' for "RequestOrchestration" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DocumentReference.basedOn.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 537, column 1147: The link 'RequestOrchestration.html' for "RequestOrchestration" cannot be resolved
+ERROR: StructureDefinition-ext-R5-DocumentReference.basedOn.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 578, column 1147: The link 'RequestOrchestration.html' for "RequestOrchestration" cannot be resolved
+ERROR: StructureDefinition-ext-R5-ImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 576, column 229: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ext-R5-ImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 1685, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ext-R5-ImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 3505, column 229: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+ERROR: StructureDefinition-ext-R5-ImagingSelection.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 4614, column 227: The link 'ImagingSelection.html' for "ImagingSelection" cannot be resolved
+== fsh-generated/resources/ActorDefinition-ImManifestProvider.json ==
+INFORMATION: ActorDefinition/ImManifestProvider: ActorDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/ActorDefinition-ImReportProvider.json ==
+INFORMATION: ActorDefinition/ImReportProvider: ActorDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/CodeSystem-Hl7EuDocumentTypes.json ==
+== fsh-generated/resources/CodeSystem-codesystem-diagnostic-report-support-info.json ==
+== fsh-generated/resources/CodeSystem-codesystem-endpoint-terminology.json ==
+== fsh-generated/resources/CodeSystem-codesystem-missing-dicom-terminology.json ==
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.imaging-r4.json ==
+ERROR: ImplementationGuide/hl7.fhir.eu.imaging-r4: ImplementationGuide.dependsOn[0]: The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+WARNING: ImplementationGuide/hl7.fhir.eu.imaging-r4: ImplementationGuide.dependsOn[0]: The canonical URL http://terminology.hl7.org doesn't point to an actual ImplementationGuide resource
+ERROR: ImplementationGuide/hl7.fhir.eu.imaging-r4: ImplementationGuide.dependsOn[1]: The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.uv.extensions#5.2.0 is based on FHIR version 5.0.0. Use the package hl7.fhir.uv.extensions.r4 instead
+WARNING: ImplementationGuide/hl7.fhir.eu.imaging-r4: ImplementationGuide.dependsOn[3]: The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.eu.extensions#0.1.1-ballot is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+== fsh-generated/resources/StructureDefinition-AllergyIntoleranceEu.json ==
+INFORMATION: StructureDefinition/AllergyIntoleranceEu: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+== fsh-generated/resources/StructureDefinition-BodyStructureEu.json ==
+== fsh-generated/resources/StructureDefinition-CarePlanEu.json ==
+== fsh-generated/resources/StructureDefinition-CompositionEu.json ==
+INFORMATION: StructureDefinition/CompositionEu: Composition.extension: The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.2.0 is deprecated
+== fsh-generated/resources/StructureDefinition-ConditionEu.json ==
+== fsh-generated/resources/StructureDefinition-CrossVersionMediaViewExtension.json ==
+== fsh-generated/resources/StructureDefinition-CvServiceRequestSupportingInfoCodeableConcept.json ==
+== fsh-generated/resources/StructureDefinition-DocumentReferenceEu.json ==
+== fsh-generated/resources/StructureDefinition-EncounterEu.json ==
+== fsh-generated/resources/StructureDefinition-EndpointEu.json ==
+== fsh-generated/resources/StructureDefinition-IheMhdEntryUUIDIdentifier.json ==
+== fsh-generated/resources/StructureDefinition-ImAdverseEvent.json ==
+== fsh-generated/resources/StructureDefinition-ImAdverseEventSubjectReseachSubject.json ==
+== fsh-generated/resources/StructureDefinition-ImComposition.json ==
+WARNING: StructureDefinition/ImComposition: StructureDefinition.snapshot.element[107].binding.valueSet: A definition could not be found for Canonical URL 'https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html'
+WARNING: StructureDefinition/ImComposition: StructureDefinition.snapshot.element[140].binding.valueSet: A definition could not be found for Canonical URL 'https://www.hl7.org/fhir/valueset-procedure-reason.html'
+WARNING: StructureDefinition/ImComposition: StructureDefinition.differential.element[30].binding.valueSet: A definition could not be found for Canonical URL 'https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html'
+WARNING: StructureDefinition/ImComposition: StructureDefinition.differential.element[40].binding.valueSet: A definition could not be found for Canonical URL 'https://www.hl7.org/fhir/valueset-procedure-reason.html'
+ERROR: StructureDefinition/ImComposition: StructureDefinition.snapshot.element[72].slicing.discriminator[0]: The discriminator path 'detail.concept' does not appear to be valid for the element that is being sliced 'Composition.event': Error evaluating FHIRPath expression: The name 'concept' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/Reference] (@char 8)
+== fsh-generated/resources/StructureDefinition-ImDiagnosticReport.json ==
+ERROR: http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImDiagnosticReport.DiagnosticReport.extension:composition.url: Same id 'DiagnosticReport.extension:composition.url' on multiple elements DiagnosticReport.extension.url/DiagnosticReport.extension.url in http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImDiagnosticReport
+ERROR: StructureDefinition/ImDiagnosticReport: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
+ERROR: StructureDefinition/ImDiagnosticReport: StructureDefinition.snapshot.element[21].type[0].targetProfile[3]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/Citation'
+ERROR: StructureDefinition/ImDiagnosticReport: StructureDefinition.snapshot.element[44]: Duplicate id value 'DiagnosticReport.extension:composition.url'
+ERROR: StructureDefinition/ImDiagnosticReport: StructureDefinition: Constraint failed: sdf-16: 'All element definitions must have unique ids (snapshot)' (ids: DiagnosticReport,DiagnosticReport.id,DiagnosticReport.meta,DiagnosticReport.implicitRules,DiagnosticReport.language,DiagnosticReport.text,DiagnosticReport.contained,DiagnosticReport.extension,DiagnosticReport.extension:artifactVersion,DiagnosticReport.extension:supportingInfo,DiagnosticReport.extension:supportingInfo.id,DiagnosticReport.extension:supportingInfo.extension,DiagnosticReport.extension:supportingInfo.extension:type,DiagnosticReport.extension:supportingInfo.extension:type.id,DiagnosticReport.extension:supportingInfo.extension:type.extension,DiagnosticReport.extension:supportingInfo.extension:type.url,DiagnosticReport.extension:supportingInfo.extension:type.value[x],DiagnosticReport.extension:supportingInfo.extension:reference,DiagnosticReport.extension:supportingInfo.extension:reference.id,DiagnosticReport.extension:supportingInfo.extension:reference.extension,DiagnosticReport.extension:supportingInfo.extension:reference.url,DiagnosticReport.extension:supportingInfo.extension:reference.value[x],DiagnosticReport.extension:supportingInfo.url,DiagnosticReport.extension:supportingInfo.value[x],DiagnosticReport.extension:supportingInfo/procedure,DiagnosticReport.extension:supportingInfo/procedure.id,DiagnosticReport.extension:supportingInfo/procedure.extension,DiagnosticReport.extension:supportingInfo/procedure.extension:type,DiagnosticReport.extension:supportingInfo/procedure.extension:type.id,DiagnosticReport.extension:supportingInfo/procedure.extension:type.extension,DiagnosticReport.extension:supportingInfo/procedure.extension:type.url,DiagnosticReport.extension:supportingInfo/procedure.extension:type.value[x],DiagnosticReport.extension:supportingInfo/procedure.extension:reference,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.id,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.extension,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.url,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.value[x],DiagnosticReport.extension:supportingInfo/procedure.url,DiagnosticReport.extension:supportingInfo/procedure.value[x],DiagnosticReport.extension:composition,DiagnosticReport.extension:composition.id,DiagnosticReport.extension:composition.extension,DiagnosticReport.extension:composition.url,DiagnosticReport.extension:composition.value[x],DiagnosticReport.extension:composition.url,DiagnosticReport.modifierExtension,DiagnosticReport.identifier,DiagnosticReport.basedOn,DiagnosticReport.basedOn:imorderaccession,DiagnosticReport.basedOn:imorderaccession.id,DiagnosticReport.basedOn:imorderaccession.extension,DiagnosticReport.basedOn:imorderaccession.reference,DiagnosticReport.basedOn:imorderaccession.type,DiagnosticReport.basedOn:imorderaccession.identifier,DiagnosticReport.basedOn:imorderaccession.display,DiagnosticReport.status,DiagnosticReport.category,DiagnosticReport.category:imaging,DiagnosticReport.category:imaging.id,DiagnosticReport.category:imaging.extension,DiagnosticReport.category:imaging.coding,DiagnosticReport.category:imaging.text,DiagnosticReport.code,DiagnosticReport.code.id,DiagnosticReport.code.extension,DiagnosticReport.code.coding,DiagnosticReport.code.coding:eu-template,DiagnosticReport.code.text,DiagnosticReport.subject,DiagnosticReport.encounter,DiagnosticReport.effective[x],DiagnosticReport.issued,DiagnosticReport.performer,DiagnosticReport.performer:author,DiagnosticReport.resultsInterpreter,DiagnosticReport.resultsInterpreter:author,DiagnosticReport.specimen,DiagnosticReport.result,DiagnosticReport.imagingStudy,DiagnosticReport.media,DiagnosticReport.media.id,DiagnosticReport.media.extension,DiagnosticReport.media.modifierExtension,DiagnosticReport.media.comment,DiagnosticReport.media.link,DiagnosticReport.conclusion,DiagnosticReport.conclusionCode,DiagnosticReport.presentedForm) (log:  (ids: DiagnosticReport,DiagnosticReport.id,DiagnosticReport.meta,DiagnosticReport.implicitRules,DiagnosticReport.language,DiagnosticReport.text,DiagnosticReport.contained,DiagnosticReport.extension,DiagnosticReport.extension:artifactVersion,DiagnosticReport.extension:supportingInfo,DiagnosticReport.extension:supportingInfo.id,DiagnosticReport.extension:supportingInfo.extension,DiagnosticReport.extension:supportingInfo.extension:type,DiagnosticReport.extension:supportingInfo.extension:type.id,DiagnosticReport.extension:supportingInfo.extension:type.extension,DiagnosticReport.extension:supportingInfo.extension:type.url,DiagnosticReport.extension:supportingInfo.extension:type.value[x],DiagnosticReport.extension:supportingInfo.extension:reference,DiagnosticReport.extension:supportingInfo.extension:reference.id,DiagnosticReport.extension:supportingInfo.extension:reference.extension,DiagnosticReport.extension:supportingInfo.extension:reference.url,DiagnosticReport.extension:supportingInfo.extension:reference.value[x],DiagnosticReport.extension:supportingInfo.url,DiagnosticReport.extension:supportingInfo.value[x],DiagnosticReport.extension:supportingInfo/procedure,DiagnosticReport.extension:supportingInfo/procedure.id,DiagnosticReport.extension:supportingInfo/procedure.extension,DiagnosticReport.extension:supportingInfo/procedure.extension:type,DiagnosticReport.extension:supportingInfo/procedure.extension:type.id,DiagnosticReport.extension:supportingInfo/procedure.extension:type.extension,DiagnosticReport.extension:supportingInfo/procedure.extension:type.url,DiagnosticReport.extension:supportingInfo/procedure.extension:type.value[x],DiagnosticReport.extension:supportingInfo/procedure.extension:reference,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.id,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.extension,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.url,DiagnosticReport.extension:supportingInfo/procedure.extension:reference.value[x],DiagnosticReport.extension:supportingInfo/procedure.url,DiagnosticReport.extension:supportingInfo/procedure.value[x],DiagnosticReport.extension:composition,DiagnosticReport.extension:composition.id,DiagnosticReport.extension:composition.extension,DiagnosticReport.extension:composition.url,DiagnosticReport.extension:composition.value[x],DiagnosticReport.extension:composition.url,DiagnosticReport.modifierExtension,DiagnosticReport.identifier,DiagnosticReport.basedOn,DiagnosticReport.basedOn:imorderaccession,DiagnosticReport.basedOn:imorderaccession.id,DiagnosticReport.basedOn:imorderaccession.extension,DiagnosticReport.basedOn:imorderaccession.reference,DiagnosticReport.basedOn:imorderaccession.type,DiagnosticReport.basedOn:imorderaccession.identifier,DiagnosticReport.basedOn:imorderaccession.display,DiagnosticReport.status,DiagnosticReport.category,DiagnosticReport.category:imaging,DiagnosticReport.category:imaging.id,DiagnosticReport.category:imaging.extension,DiagnosticReport.category:imaging.coding,DiagnosticReport.category:imaging.text,DiagnosticReport.code,DiagnosticReport.code.id,DiagnosticReport.code.extension,DiagnosticReport.code.coding,DiagnosticReport.code.coding:eu-template,DiagnosticReport.code.text,DiagnosticReport.subject,DiagnosticReport.encounter,DiagnosticReport.effective[x],DiagnosticReport.issued,DiagnosticReport.performer,DiagnosticReport.performer:author,DiagnosticReport.resultsInterpreter,DiagnosticReport.resultsInterpreter:author,DiagnosticReport.specimen,DiagnosticReport.result,DiagnosticReport.imagingStudy,DiagnosticReport.media,DiagnosticReport.media.id,DiagnosticReport.media.extension,DiagnosticReport.media.modifierExtension,DiagnosticReport.media.comment,DiagnosticReport.media.link,DiagnosticReport.conclusion,DiagnosticReport.conclusionCode,DiagnosticReport.presentedForm))
+WARNING: StructureDefinition/ImDiagnosticReport: StructureDefinition.snapshot.element[21].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/Citation
+ERROR: StructureDefinition/ImDiagnosticReport: StructureDefinition.snapshot.element[44]: The element DiagnosticReport.extension:composition.url has no assigned types, and no content reference
+== fsh-generated/resources/StructureDefinition-ImFinding.json ==
+== fsh-generated/resources/StructureDefinition-ImGestationalAgeObservation.json ==
+== fsh-generated/resources/StructureDefinition-ImIheMhdDocumentReference.json ==
+== fsh-generated/resources/StructureDefinition-ImImageIidViewerEndpoint.json ==
+== fsh-generated/resources/StructureDefinition-ImImagingDevice.json ==
+ERROR: StructureDefinition.snapshot.element[7]: The slice definition for Device.extension has a minimum of 1 but the slices add up to a minimum of 2
+== fsh-generated/resources/StructureDefinition-ImImagingSelection.json ==
+ERROR: StructureDefinition/ImImagingSelection: StructureDefinition.snapshot.element[100].type[0].targetProfile[0]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/ImagingSelection'
+WARNING: StructureDefinition/ImImagingSelection: StructureDefinition.snapshot.element[160].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/ImImagingSelection: StructureDefinition.snapshot.element[160].pattern.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://hl7.org/fhir/fhir-types'
+WARNING: StructureDefinition/ImImagingSelection: StructureDefinition.differential.element[6].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/ImImagingSelection: StructureDefinition.differential.element[6].pattern.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://hl7.org/fhir/fhir-types'
+WARNING: StructureDefinition/ImImagingSelection: StructureDefinition.snapshot.element[100].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/ImagingSelection
+== fsh-generated/resources/StructureDefinition-ImImagingStudy.json ==
+WARNING: StructureDefinition/ImImagingStudy: StructureDefinition.snapshot.element[32].binding.valueSet: A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
+== fsh-generated/resources/StructureDefinition-ImImagingStudyManifest.json ==
+== fsh-generated/resources/StructureDefinition-ImKeyImageDocumentReference.json ==
+== fsh-generated/resources/StructureDefinition-ImKeyImageImagingSelection.json ==
+ERROR: StructureDefinition/ImKeyImageImagingSelection: StructureDefinition.snapshot.element[100].type[0].targetProfile[0]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/ImagingSelection'
+WARNING: StructureDefinition/ImKeyImageImagingSelection: StructureDefinition.snapshot.element[164].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/ImKeyImageImagingSelection: StructureDefinition.snapshot.element[164].pattern.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://hl7.org/fhir/fhir-types'
+WARNING: StructureDefinition/ImKeyImageImagingSelection: StructureDefinition.snapshot.element[100].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/ImagingSelection
+ERROR: StructureDefinition.text.div: Hyperlink 'null' at 'div/table/tr/td/a' for 'Extension' does not resolve
+== fsh-generated/resources/StructureDefinition-ImManifestIheMhdDocumentReference.json ==
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.snapshot.element[32]: The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile is not allowed to be used at this point (allowed = e:DocumentReference.content, e:Media.content; this element is [ElementDefinition, StructureDefinition.snapshot.element])
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0]: The Extension 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile' definition is for a simple extension, so it must contain a value, not extensions
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0].extension[0]: Slicing cannot be evaluated: Could not match discriminator (url) for slice Extension.extension:value[x] in profile http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0 - the discriminator [url] does not have fixed value, binding or existence assertions
+INFORMATION: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0]: Extension.extension:value[x]: Found 0 matches, but unable to check minimum required (Extension.extension) due to lack of slicing validation (from http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0)
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0].extension[0]: Extension.url is required in order to identify, use and validate the extension
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0].extension[0]: Extension.url: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Extension|4.0.1)
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.differential.element[8]: The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile is not allowed to be used at this point (allowed = e:DocumentReference.content, e:Media.content; this element is [ElementDefinition, StructureDefinition.differential.element])
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0]: The Extension 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile' definition is for a simple extension, so it must contain a value, not extensions
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0].extension[0]: Slicing cannot be evaluated: Could not match discriminator (url) for slice Extension.extension:value[x] in profile http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0 - the discriminator [url] does not have fixed value, binding or existence assertions
+INFORMATION: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0]: Extension.extension:value[x]: Found 0 matches, but unable to check minimum required (Extension.extension) due to lack of slicing validation (from http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0)
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0].extension[0]: Extension.url is required in order to identify, use and validate the extension
+ERROR: StructureDefinition/ImManifestIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0].extension[0]: Extension.url: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Extension|4.0.1)
+== fsh-generated/resources/StructureDefinition-ImOrder.json ==
+== fsh-generated/resources/StructureDefinition-ImPatient.json ==
+== fsh-generated/resources/StructureDefinition-ImProcedure.json ==
+== fsh-generated/resources/StructureDefinition-ImRadiationDoseObservation.json ==
+== fsh-generated/resources/StructureDefinition-ImReport.json ==
+== fsh-generated/resources/StructureDefinition-ImReportIheMhdDocumentReference.json ==
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.snapshot.element[32]: The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile is not allowed to be used at this point (allowed = e:DocumentReference.content, e:Media.content; this element is [ElementDefinition, StructureDefinition.snapshot.element])
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0]: The Extension 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile' definition is for a simple extension, so it must contain a value, not extensions
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0].extension[0]: Slicing cannot be evaluated: Could not match discriminator (url) for slice Extension.extension:value[x] in profile http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0 - the discriminator [url] does not have fixed value, binding or existence assertions
+INFORMATION: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0]: Extension.extension:value[x]: Found 0 matches, but unable to check minimum required (Extension.extension) due to lack of slicing validation (from http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0)
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0].extension[0]: Extension.url is required in order to identify, use and validate the extension
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.snapshot.element[32].extension[0].extension[0]: Extension.url: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Extension|4.0.1)
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.differential.element[8]: The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile is not allowed to be used at this point (allowed = e:DocumentReference.content, e:Media.content; this element is [ElementDefinition, StructureDefinition.differential.element])
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0]: The Extension 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile' definition is for a simple extension, so it must contain a value, not extensions
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0].extension[0]: Slicing cannot be evaluated: Could not match discriminator (url) for slice Extension.extension:value[x] in profile http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0 - the discriminator [url] does not have fixed value, binding or existence assertions
+INFORMATION: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0]: Extension.extension:value[x]: Found 0 matches, but unable to check minimum required (Extension.extension) due to lack of slicing validation (from http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile|0.0.1-snapshot-0)
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0].extension[0]: Extension.url is required in order to identify, use and validate the extension
+ERROR: StructureDefinition/ImReportIheMhdDocumentReference: StructureDefinition.differential.element[8].extension[0].extension[0]: Extension.url: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/Extension|4.0.1)
+== fsh-generated/resources/StructureDefinition-ImSrInstanceImagingSelection.json ==
+ERROR: StructureDefinition/ImSrInstanceImagingSelection: StructureDefinition.snapshot.element[100].type[0].targetProfile[0]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/ImagingSelection'
+WARNING: StructureDefinition/ImSrInstanceImagingSelection: StructureDefinition.snapshot.element[161].pattern.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated
+ERROR: StructureDefinition/ImSrInstanceImagingSelection: StructureDefinition.snapshot.element[161].pattern.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://hl7.org/fhir/fhir-types'
+WARNING: StructureDefinition/ImSrInstanceImagingSelection: StructureDefinition.snapshot.element[100].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/ImagingSelection
+ERROR: StructureDefinition.text.div: Hyperlink 'null' at 'div/table/tr/td/a' for 'Extension' does not resolve
+== fsh-generated/resources/StructureDefinition-ImWadoEndpoint.json ==
+== fsh-generated/resources/StructureDefinition-MedicationEu.json ==
+== fsh-generated/resources/StructureDefinition-ObservationEu.json ==
+== fsh-generated/resources/StructureDefinition-PatientAnimalEu.json ==
+== fsh-generated/resources/StructureDefinition-ProcedureEu.json ==
+== fsh-generated/resources/StructureDefinition-RelatedPersonEu.json ==
+== fsh-generated/resources/StructureDefinition-SimpleQuantityEu.json ==
+== fsh-generated/resources/StructureDefinition-SpecimenEu.json ==
+== fsh-generated/resources/StructureDefinition-cvDocumentReference-basedOn.json ==
+== fsh-generated/resources/StructureDefinition-cvServiceRequest-reason.json ==
+== fsh-generated/resources/StructureDefinition-im-accession-number-identifier.json ==
+== fsh-generated/resources/StructureDefinition-im-composition-diagnosticReportReference.json ==
+== fsh-generated/resources/StructureDefinition-im-sop-instance-uid-identifier.json ==
+== fsh-generated/resources/StructureDefinition-im-study-instance-uid-identifier.json ==
+== fsh-generated/resources/StructureDefinition-instance-description.json ==
+== fsh-generated/resources/StructureDefinition-periods-of-life-extension.json ==
+== fsh-generated/resources/StructureDefinition-quantity-eu.json ==
+== fsh-generated/resources/StructureDefinition-range-eu.json ==
+== fsh-generated/resources/ValueSet-ImImagingManifestTypesEuVS.json ==
+== fsh-generated/resources/ValueSet-ImImagingReportTypesEuVS.json ==
+== fsh-generated/resources/ValueSet-ImSectionEmptyReason.json ==
+== fsh-generated/resources/ValueSet-im-dose-length-units.json ==
+== fsh-generated/resources/ValueSet-im-effective-dose-units.json ==
+== fsh-generated/resources/ValueSet-im-gray-square-units.json ==
+== fsh-generated/resources/ValueSet-im-imaging-device-type.json ==
+== fsh-generated/resources/ValueSet-im-imaging-study-performer-type.json ==
+== fsh-generated/resources/ValueSet-im-procedure-type.json ==
+== fsh-generated/resources/ValueSet-media-view.json ==
+== fsh-generated/resources/ValueSet-periods-of-life-value-set.json ==
+== fsh-generated/resources/ValueSet-valueset-diagnosticreport-report-support-info.json ==
+== input/resources/StructureDefinition-EHDSAddress.json ==
+== input/resources/StructureDefinition-EHDSAlertFlag.json ==
+== input/resources/StructureDefinition-EHDSAllergyIntolerance.json ==
+== input/resources/StructureDefinition-EHDSAppointment.json ==
+ERROR: StructureDefinition/EHDSAppointment: StructureDefinition.snapshot.element[7].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSAppointment: StructureDefinition.snapshot.element[7].type[0].code: No definition could be found for URL value 'CodeableReference'
+ERROR: StructureDefinition/EHDSAppointment: StructureDefinition.differential.element[7].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSAppointment: StructureDefinition.differential.element[7].type[0].code: No definition could be found for URL value 'CodeableReference'
+== input/resources/StructureDefinition-EHDSAttachment.json ==
+WARNING: StructureDefinition/EHDSAttachment: StructureDefinition.snapshot.element[5].type[0].code: No definition could be found for URL value 'integer64'
+WARNING: StructureDefinition/EHDSAttachment: StructureDefinition.differential.element[5].type[0].code: No definition could be found for URL value 'integer64'
+== input/resources/StructureDefinition-EHDSAttachments.json ==
+== input/resources/StructureDefinition-EHDSCarePlan.json ==
+WARNING: StructureDefinition/EHDSCarePlan: StructureDefinition.differential.element[3].binding.description: value should not start or finish with whitespace 'HL7 Care Plan Intent '
+== input/resources/StructureDefinition-EHDSClinicalImpression.json ==
+== input/resources/StructureDefinition-EHDSCommonHeader.json ==
+== input/resources/StructureDefinition-EHDSCondition.json ==
+ERROR: StructureDefinition/EHDSCondition: StructureDefinition.snapshot.element[8].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSCondition: StructureDefinition.snapshot.element[8].type[0].code: No definition could be found for URL value 'CodeableReference'
+ERROR: StructureDefinition/EHDSCondition: StructureDefinition.differential.element[8].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSCondition: StructureDefinition.differential.element[8].type[0].code: No definition could be found for URL value 'CodeableReference'
+== input/resources/StructureDefinition-EHDSCoverage.json ==
+== input/resources/StructureDefinition-EHDSDevice.json ==
+== input/resources/StructureDefinition-EHDSDeviceUse.json ==
+== input/resources/StructureDefinition-EHDSDispenseDecline.json ==
+== input/resources/StructureDefinition-EHDSDocumentHeader.json ==
+== input/resources/StructureDefinition-EHDSDosaging.json ==
+== input/resources/StructureDefinition-EHDSEncounter.json ==
+== input/resources/StructureDefinition-EHDSEndpoint.json ==
+== input/resources/StructureDefinition-EHDSEpisodeOfCare.json ==
+ERROR: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.snapshot.element[4].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.snapshot.element[4].type[0].code: No definition could be found for URL value 'CodeableReference'
+ERROR: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.snapshot.element[7].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.snapshot.element[7].type[0].code: No definition could be found for URL value 'CodeableReference'
+ERROR: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.differential.element[4].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.differential.element[4].type[0].code: No definition could be found for URL value 'CodeableReference'
+ERROR: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.differential.element[7].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical'
+WARNING: StructureDefinition/EHDSEpisodeOfCare: StructureDefinition.differential.element[7].type[0].code: No definition could be found for URL value 'CodeableReference'
+== input/resources/StructureDefinition-EHDSFunctionalStatus.json ==
+== input/resources/StructureDefinition-EHDSGoal.json ==
+== input/resources/StructureDefinition-EHDSGroup.json ==
+== input/resources/StructureDefinition-EHDSHealthProfessional.json ==
+== input/resources/StructureDefinition-EHDSHospitalDischargeReport.json ==
+== input/resources/StructureDefinition-EHDSHospitalDischargeReportHeader.json ==
+== input/resources/StructureDefinition-EHDSHumanName.json ==
+== input/resources/StructureDefinition-EHDSImagingReport.json ==
+== input/resources/StructureDefinition-EHDSImagingReportBody.json ==
+== input/resources/StructureDefinition-EHDSImagingReportHeader.json ==
+== input/resources/StructureDefinition-EHDSImagingStudy.json ==
+== input/resources/StructureDefinition-EHDSImmunization.json ==
+WARNING: StructureDefinition/EHDSImmunization: StructureDefinition.snapshot.element[6].type[0].code: No definition could be found for URL value 'integer64'
+WARNING: StructureDefinition/EHDSImmunization: StructureDefinition.differential.element[6].type[0].code: No definition could be found for URL value 'integer64'
+== input/resources/StructureDefinition-EHDSInpatientEncounter.json ==
+== input/resources/StructureDefinition-EHDSLaboratoryObservation.json ==
+ERROR: StructureDefinition/EHDSLaboratoryObservation: StructureDefinition.snapshot.element[6]: This element has a Binding but the types [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSLaboratoryObservation: StructureDefinition.snapshot.element[6].binding: The element EHDSLaboratoryObservation.observationDevice has a binding, but no bindable types are present [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]
+ERROR: StructureDefinition/EHDSLaboratoryObservation: StructureDefinition.snapshot.element[10]: This element has a Binding but the types [Base] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSLaboratoryObservation: StructureDefinition.snapshot.element[10].binding: The element EHDSLaboratoryObservation.observationResult has a binding, but no bindable types are present [Base]
+== input/resources/StructureDefinition-EHDSLaboratoryOrder.json ==
+== input/resources/StructureDefinition-EHDSLaboratoryOrderBody.json ==
+== input/resources/StructureDefinition-EHDSLaboratoryOrderHeader.json ==
+== input/resources/StructureDefinition-EHDSLaboratoryReport.json ==
+== input/resources/StructureDefinition-EHDSLaboratoryReportBody.json ==
+== input/resources/StructureDefinition-EHDSLaboratoryReportHeader.json ==
+== input/resources/StructureDefinition-EHDSLocation.json ==
+== input/resources/StructureDefinition-EHDSMedia.json ==
+== input/resources/StructureDefinition-EHDSMedication.json ==
+== input/resources/StructureDefinition-EHDSMedicationAdministration.json ==
+== input/resources/StructureDefinition-EHDSMedicationDispense.json ==
+== input/resources/StructureDefinition-EHDSMedicationDispenseHeader.json ==
+== input/resources/StructureDefinition-EHDSMedicationPrescription.json ==
+== input/resources/StructureDefinition-EHDSMedicationPrescriptionHeader.json ==
+== input/resources/StructureDefinition-EHDSObservation.json ==
+ERROR: StructureDefinition/EHDSObservation: StructureDefinition.differential.element[6]: This element has a Binding but the types [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSObservation: StructureDefinition.differential.element[10]: This element has a Binding but the types [Base] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSObservation: StructureDefinition.snapshot.element[6]: This element has a Binding but the types [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSObservation: StructureDefinition.snapshot.element[6].binding: The element EHDSObservation.observationDevice has a binding, but no bindable types are present [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]
+ERROR: StructureDefinition/EHDSObservation: StructureDefinition.snapshot.element[10]: This element has a Binding but the types [Base] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSObservation: StructureDefinition.snapshot.element[10].binding: The element EHDSObservation.observationResult has a binding, but no bindable types are present [Base]
+== input/resources/StructureDefinition-EHDSOrganization.json ==
+== input/resources/StructureDefinition-EHDSPatient.json ==
+== input/resources/StructureDefinition-EHDSPatientSummary.json ==
+== input/resources/StructureDefinition-EHDSPatientSummaryBody.json ==
+ERROR: StructureDefinition/EHDSPatientSummaryBody: StructureDefinition.snapshot.element[40]: This element has a Binding but the types [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSPatientSummaryBody: StructureDefinition.snapshot.element[40].binding: The element EHDSPatientSummaryBody.socialHistory.socialHistoryObservationsRelatedToHealth.observationDevice has a binding, but no bindable types are present [https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice]
+ERROR: StructureDefinition/EHDSPatientSummaryBody: StructureDefinition.snapshot.element[44]: This element has a Binding but the types [Base] do not make this kind of constraint relevant
+ERROR: StructureDefinition/EHDSPatientSummaryBody: StructureDefinition.snapshot.element[44].binding: The element EHDSPatientSummaryBody.socialHistory.socialHistoryObservationsRelatedToHealth.observationResult has a binding, but no bindable types are present [Base]
+== input/resources/StructureDefinition-EHDSPatientSummaryHeader.json ==
+WARNING: StructureDefinition/EHDSPatientSummaryHeader: StructureDefinition.snapshot.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/EHDSPatientSummaryHeader: StructureDefinition.snapshot.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/EHDSPatientSummaryHeader: StructureDefinition.snapshot.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/EHDSPatientSummaryHeader: StructureDefinition.differential.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/EHDSPatientSummaryHeader: StructureDefinition.differential.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/EHDSPatientSummaryHeader: StructureDefinition.differential.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+== input/resources/StructureDefinition-EHDSProcedure.json ==
+== input/resources/StructureDefinition-EHDSRelatedPerson.json ==
+== input/resources/StructureDefinition-EHDSReportHeader.json ==
+== input/resources/StructureDefinition-EHDSServiceRequest.json ==
+== input/resources/StructureDefinition-EHDSSlot.json ==
+== input/resources/StructureDefinition-EHDSSpecimen.json ==
+== input/resources/StructureDefinition-EHDSSubstance.json ==
+== input/resources/StructureDefinition-EHDSTask.json ==
+== input/resources/StructureDefinition-EHDSTelecom.json ==
+== input/resources/StructureDefinition-ext-R5-Composition.ev.detail.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.event.detail'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-Composition.ev.detail.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Composition.ev.detail) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.event.detail)
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition.differential.element[2].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition.differential.element[2].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition.differential.element[4].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition.differential.element[4].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition.differential.element[6].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition.differential.element[6].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-Composition.ev.detail: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /work/input/resources/StructureDefinition-ext-R5-Composition.ev.detail: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Composition.ev.detail vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.event.detail
+== input/resources/StructureDefinition-ext-R5-Composition.identifier.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-Composition.identifier.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Composition.identifier) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier)
+WARNING: StructureDefinition/ext-R5-Composition.identifier: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-Composition.identifier: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /work/input/resources/StructureDefinition-ext-R5-Composition.identifier: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Composition.identifier vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier
+== input/resources/StructureDefinition-ext-R5-Device.category.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-Device.category.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Device.category) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category)
+ERROR: StructureDefinition/ext-R5-Device.category: StructureDefinition.differential.element[1].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Device.category: StructureDefinition.differential.element[1].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-Device.category: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-Device.category: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /work/input/resources/StructureDefinition-ext-R5-Device.category: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Device.category vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category
+== input/resources/StructureDefinition-ext-R5-DiagnosticReport.composition.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-DiagnosticReport.composition.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DiagnosticReport.composition) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.snapshot.element[5]: Duplicate id value 'Extension.url'
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.differential.element[1].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.differential.element[1].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition: Constraint failed: sdf-16: 'All element definitions must have unique ids (snapshot)' (ids: Extension,Extension.id,Extension.extension,Extension.url,Extension.value[x],Extension.url) (log:  (ids: Extension,Extension.id,Extension.extension,Extension.url,Extension.value[x],Extension.url))
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.composition: StructureDefinition.snapshot.element[5]: The element Extension.url has no assigned types, and no content reference
+ERROR: /work/input/resources/StructureDefinition-ext-R5-DiagnosticReport.composition: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DiagnosticReport.composition vs http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+== input/resources/StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DiagnosticReport.supportingInfo) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.snapshot.element[12].type[0].targetProfile[3]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/Citation'
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.differential.element[3].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.differential.element[3].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.differential.element[5].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.differential.element[5].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.differential.element[5].type[0].targetProfile[3]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/Citation'
+WARNING: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+WARNING: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.differential.element[5].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/Citation
+WARNING: StructureDefinition/ext-R5-DiagnosticReport.supportingInfo: StructureDefinition.snapshot.element[12].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/Citation
+ERROR: /work/input/resources/StructureDefinition-ext-R5-DiagnosticReport.supportingInfo: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DiagnosticReport.supportingInfo vs http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
+ERROR: StructureDefinition.text.div: Hyperlink 'Citation.html' at 'div/table/tr/td/a' for 'Citation' does not resolve
+== input/resources/StructureDefinition-ext-R5-DocumentReference.basedOn.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-DocumentReference.basedOn.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.basedOn) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn)
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn'): The element Extension.value[x] @diff[1] is out of order (and maybe others after it)
+ERROR: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition.snapshot.element[4].type[0].targetProfile[12]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/RequestOrchestration'
+ERROR: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition.differential.element[2].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition.differential.element[2].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition.differential.element[2].type[0].targetProfile[12]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/RequestOrchestration'
+WARNING: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+WARNING: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition.differential.element[2].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/RequestOrchestration
+WARNING: StructureDefinition/ext-R5-DocumentReference.basedOn: StructureDefinition.snapshot.element[4].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/RequestOrchestration
+ERROR: /work/input/resources/StructureDefinition-ext-R5-DocumentReference.basedOn: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.basedOn vs http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
+ERROR: StructureDefinition.text.div: Hyperlink 'RequestOrchestration.html' at 'div/table/tr/td/a' for 'RequestOrchestration' does not resolve
+== input/resources/StructureDefinition-ext-R5-DocumentReference.bodySite.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-DocumentReference.bodySite.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.bodySite) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite)
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition.differential.element[2].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition.differential.element[2].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition.differential.element[4].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition.differential.element[4].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition.differential.element[6].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition.differential.element[6].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-DocumentReference.bodySite: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /work/input/resources/StructureDefinition-ext-R5-DocumentReference.bodySite: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.bodySite vs http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite
+== input/resources/StructureDefinition-ext-R5-DocumentReference.co.profile.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-DocumentReference.co.profile.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.co.profile) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile)
+ERROR: StructureDefinition/ext-R5-DocumentReference.co.profile: StructureDefinition.differential.element[3].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.co.profile: StructureDefinition.differential.element[3].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-DocumentReference.co.profile: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-DocumentReference.co.profile: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: StructureDefinition/ext-R5-DocumentReference.co.profile: StructureDefinition.differential.element[3].binding: The element Extension.extension.value[x] has a binding, and has multiple types subject to bindings ([Coding, canonical, uri]). The binding will apply to all the types
+ERROR: /work/input/resources/StructureDefinition-ext-R5-DocumentReference.co.profile: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.co.profile vs http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile
+== input/resources/StructureDefinition-ext-R5-DocumentReference.modality.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-DocumentReference.modality.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.modality) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality)
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition.snapshot.element[5]: Duplicate id value 'Extension.url'
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition.differential.element[1].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition.differential.element[1].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition: Constraint failed: sdf-16: 'All element definitions must have unique ids (snapshot)' (ids: Extension,Extension.id,Extension.extension,Extension.url,Extension.value[x],Extension.url) (log:  (ids: Extension,Extension.id,Extension.extension,Extension.url,Extension.value[x],Extension.url))
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: StructureDefinition/ext-R5-DocumentReference.modality: StructureDefinition.snapshot.element[5]: The element Extension.url has no assigned types, and no content reference
+ERROR: /work/input/resources/StructureDefinition-ext-R5-DocumentReference.modality: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-DocumentReference.modality vs http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality
+== input/resources/StructureDefinition-ext-R5-Endpoint.connectionType.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-Endpoint.connectionType.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Endpoint.connectionType) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType)
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType'): The element Extension.value[x] @diff[1] is out of order (and maybe others after it)
+ERROR: StructureDefinition/ext-R5-Endpoint.connectionType: StructureDefinition.differential.element[2].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Endpoint.connectionType: StructureDefinition.differential.element[2].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-Endpoint.connectionType: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-Endpoint.connectionType: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /work/input/resources/StructureDefinition-ext-R5-Endpoint.connectionType: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Endpoint.connectionType vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType
+== input/resources/StructureDefinition-ext-R5-Endpoint.payload.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.payload'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-Endpoint.payload.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Endpoint.payload) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.payload)
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition.snapshot.element[12].binding.valueSet: A definition could not be found for Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|5.0.0'
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition.differential.element[3].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition.differential.element[3].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition.differential.element[5].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition.differential.element[5].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition.differential.element[5].binding.valueSet: A definition could not be found for Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|5.0.0'
+WARNING: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-Endpoint.payload: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /work/input/resources/StructureDefinition-ext-R5-Endpoint.payload: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-Endpoint.payload vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.payload
+== input/resources/StructureDefinition-ext-R5-ImagingSelection.json ==
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection'): Conformance resource /work/input/resources/StructureDefinition-ext-R5-ImagingSelection.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-ImagingSelection) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.snapshot.element[92].type[0].targetProfile[0]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/ImagingSelection'
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[3].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[3].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[5].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[5].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[9].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[9].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[11].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[11].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[13].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[13].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[15].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[15].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[17].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[17].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[19].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[19].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[21].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[21].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[23].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[23].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[25].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[25].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[27].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[27].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[30].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[30].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[32].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[32].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[34].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[34].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[36].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[36].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[36].type[0].targetProfile[0]: A definition could not be found for Canonical URL 'http://hl7.org/fhir/StructureDefinition/ImagingSelection'
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[40].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[40].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[42].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[42].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[44].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[44].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[46].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[46].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[50].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[50].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[52].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[52].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[56].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[56].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[58].base: ElementDefinition.base.min: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[58].base: ElementDefinition.base.max: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition|4.0.1)
+WARNING: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition: Constraint failed: sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+WARNING: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.differential.element[36].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/ImagingSelection
+WARNING: StructureDefinition/ext-R5-ImagingSelection: StructureDefinition.snapshot.element[92].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/StructureDefinition/ImagingSelection
+ERROR: /work/input/resources/StructureDefinition-ext-R5-ImagingSelection: URL Mismatch http://hl7.eu/fhir/imaging-r4/StructureDefinition/ext-R5-ImagingSelection vs http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection
+ERROR: StructureDefinition.text.div: Hyperlink 'ImagingSelection.html' at 'div/table/tr/td/a' for 'ImagingSelection' does not resolve
+== input/resources/ValueSet-R5-Device-category-for-R4.json ==
+ERROR: ValueSet.where(url = 'http://hl7.org/fhir/ValueSet/device-category'): Conformance resource /work/input/resources/ValueSet-R5-Device-category-for-R4.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/ValueSet/device-category) does not match the URL (http://hl7.org/fhir/ValueSet/device-category)
+ERROR: ValueSet/device-category: ValueSet.compose.include[0].system: No definition could be found for URL value 'http://hl7.org/fhir/device-category'
+INFORMATION: ValueSet/device-category: ValueSet: The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+WARNING: ValueSet/device-category: ValueSet: The nominated WG 'oo' means that the publisher should be 'HL7 International / Orders and Observations' but 'HL7 Europe' was found
+WARNING: ValueSet/device-category: ValueSet: The nominated WG 'oo' means that the contact url should be 'http://www.hl7.org/Special/committees/orders' but it was not found
+WARNING: ValueSet.where(id = 'device-category'): Error from https://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/device-category
+ERROR: /work/input/resources/ValueSet-R5-Device-category-for-R4: URL Mismatch http://hl7.eu/fhir/imaging-r4/ValueSet/device-category vs http://hl7.org/fhir/ValueSet/device-category
+ERROR: ValueSet.text.div: Hyperlink 'codesystem-device-category.html' at 'div/ul/li/a' for 'http://hl7.org/fhir/device-category' does not resolve
+== input/resources/ValueSet-R5-imagingselection-2dgraphictype-for-R4.json ==
+ERROR: ValueSet.where(url = 'http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4'): Conformance resource /work/input/resources/ValueSet-R5-imagingselection-2dgraphictype-for-R4.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/ValueSet/R5-imagingselection-2dgraphictype-for-R4) does not match the URL (http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4)
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-2dgraphictype'
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.expansion: ValueSet.expansion.timestamp: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1)
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.expansion.contains[0].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-2dgraphictype'
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.expansion.contains[1].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-2dgraphictype'
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.expansion.contains[2].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-2dgraphictype'
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.expansion.contains[3].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-2dgraphictype'
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.expansion.contains[4].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-2dgraphictype'
+WARNING: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet: Constraint failed: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].concept[0]: The code 'point' is not valid in the system http://hl7.org/fhir/imagingselection-2dgraphictype version 5.0.0 (point)
+INFORMATION: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].concept[0]: A definition for CodeSystem 'http://hl7.org/fhir/imagingselection-2dgraphictype' version '5.0.0' could not be found, so the code cannot be validated. Valid versions: []
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].concept[1]: The code 'polyline' is not valid in the system http://hl7.org/fhir/imagingselection-2dgraphictype version 5.0.0 (polyline)
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].concept[2]: The code 'interpolated' is not valid in the system http://hl7.org/fhir/imagingselection-2dgraphictype version 5.0.0 (interpolated)
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].concept[3]: The code 'circle' is not valid in the system http://hl7.org/fhir/imagingselection-2dgraphictype version 5.0.0 (circle)
+ERROR: ValueSet/R5-imagingselection-2dgraphictype-for-R4: ValueSet.compose.include[0].concept[4]: The code 'ellipse' is not valid in the system http://hl7.org/fhir/imagingselection-2dgraphictype version 5.0.0 (ellipse)
+ERROR: /work/input/resources/ValueSet-R5-imagingselection-2dgraphictype-for-R4: URL Mismatch http://hl7.eu/fhir/imaging-r4/ValueSet/R5-imagingselection-2dgraphictype-for-R4 vs http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4
+== input/resources/ValueSet-R5-imagingselection-3dgraphictype-for-R4.json ==
+ERROR: ValueSet.where(url = 'http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4'): Conformance resource /work/input/resources/ValueSet-R5-imagingselection-3dgraphictype-for-R4.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/ValueSet/R5-imagingselection-3dgraphictype-for-R4) does not match the URL (http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4)
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion: ValueSet.expansion.timestamp: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1)
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion.contains[0].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion.contains[1].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion.contains[2].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion.contains[3].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion.contains[4].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.expansion.contains[5].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-3dgraphictype'
+WARNING: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet: Constraint failed: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[0]: The code 'point' is not valid in the system http://hl7.org/fhir/imagingselection-3dgraphictype version 5.0.0 (point)
+INFORMATION: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[0]: A definition for CodeSystem 'http://hl7.org/fhir/imagingselection-3dgraphictype' version '5.0.0' could not be found, so the code cannot be validated. Valid versions: []
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[1]: The code 'multipoint' is not valid in the system http://hl7.org/fhir/imagingselection-3dgraphictype version 5.0.0 (multipoint)
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[2]: The code 'polyline' is not valid in the system http://hl7.org/fhir/imagingselection-3dgraphictype version 5.0.0 (polyline)
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[3]: The code 'polygon' is not valid in the system http://hl7.org/fhir/imagingselection-3dgraphictype version 5.0.0 (polygon)
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[4]: The code 'ellipse' is not valid in the system http://hl7.org/fhir/imagingselection-3dgraphictype version 5.0.0 (ellipse)
+ERROR: ValueSet/R5-imagingselection-3dgraphictype-for-R4: ValueSet.compose.include[0].concept[5]: The code 'ellipsoid' is not valid in the system http://hl7.org/fhir/imagingselection-3dgraphictype version 5.0.0 (ellipsoid)
+ERROR: /work/input/resources/ValueSet-R5-imagingselection-3dgraphictype-for-R4: URL Mismatch http://hl7.eu/fhir/imaging-r4/ValueSet/R5-imagingselection-3dgraphictype-for-R4 vs http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4
+== input/resources/ValueSet-R5-imagingselection-status-for-R4.json ==
+ERROR: ValueSet.where(url = 'http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4'): Conformance resource /work/input/resources/ValueSet-R5-imagingselection-status-for-R4.json - the canonical URL (http://hl7.eu/fhir/imaging-r4/ValueSet/R5-imagingselection-status-for-R4) does not match the URL (http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4)
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.compose.include[0].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-status'
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.expansion: ValueSet.expansion.timestamp: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1)
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.expansion.contains[0].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-status'
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.expansion.contains[1].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-status'
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.expansion.contains[2].system: No definition could be found for URL value 'http://hl7.org/fhir/imagingselection-status'
+WARNING: ValueSet/R5-imagingselection-status-for-R4: ValueSet: Constraint failed: vsd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation'
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.compose.include[0].concept[0]: The code 'available' is not valid in the system http://hl7.org/fhir/imagingselection-status version 5.0.0 (available)
+INFORMATION: ValueSet/R5-imagingselection-status-for-R4: ValueSet.compose.include[0].concept[0]: A definition for CodeSystem 'http://hl7.org/fhir/imagingselection-status' version '5.0.0' could not be found, so the code cannot be validated. Valid versions: []
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.compose.include[0].concept[1]: The code 'entered-in-error' is not valid in the system http://hl7.org/fhir/imagingselection-status version 5.0.0 (entered-in-error)
+ERROR: ValueSet/R5-imagingselection-status-for-R4: ValueSet.compose.include[0].concept[2]: The code 'unknown' is not valid in the system http://hl7.org/fhir/imagingselection-status version 5.0.0 (unknown)
+ERROR: /work/input/resources/ValueSet-R5-imagingselection-status-for-R4: URL Mismatch http://hl7.eu/fhir/imaging-r4/ValueSet/R5-imagingselection-status-for-R4 vs http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4

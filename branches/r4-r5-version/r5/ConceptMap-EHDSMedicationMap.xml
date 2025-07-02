@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSMedicationMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSMedicationMap</b></p><a name="EHDSMedicationMap"> </a><a name="hcEHDSMedicationMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSMedication.html">Medicinal product model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSMedication.html">Medicinal product model</a> to <a href="StructureDefinition-MedicationEu.html">EU Medication</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td/><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-EHDSMedication.html">Medicinal product model</a> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifyingCode[x] ((Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>classification ((CodeableConcept))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>productName ((Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>marketingAuthorisationHolder</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>marketingAuthorisationHolder.organizationName ((Name of the organisation holding the authorisation for marketing/mahufacturing))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>marketingAuthorisationHolder.organizationIdentifier ((Identifier of the organisation and/or its physical location))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>doseForm ((Dose form(s) on a product level. Dose form for a single package item is defined below.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>packSize ((UCUM for units of measure. EDQM Standard Terms for units of presentation. (preferred)))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item ((A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.doseForm ((Dose form))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.ingredient ((Ingredients))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.ingredient.isActive ((Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.ingredient.substance ((Substance))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.ingredient.strengthInfo ((Strength of the product - amount of substance per unit))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.ingredient.strengthInfo.strength ((Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.ingredient.strengthInfo.basisOfStrengthSubstance ((Substance that the strength refers to, in case it's different from the main substance))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.unitOfPresentation ((Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.containedQuantity ((Manufactured item quantity for liquids (3ml / 1 vial)))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.amount ((Number of such manufactured items in this product (5 vials)))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>item.packageType ((Type of package of the medication item))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>device ((Administration device included in the product))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>device.deviceQuantity ((Number of such devices))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>device.device[x] ((Device coded))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>characteristic ((Other features of the product))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>characteristic.type ((A code expressing the type of characteristic))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>characteristic.value[x] ((Description of the characteristic))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>batch ((Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>batch.lotNumber ((Batch identifier of the medicinal product))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>batch.expirationDate ((Batch expiration date of the medicinal product.))</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSMedicationMap"/>
+  <title value="EHDSMedication Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSMedication"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/MedicationEu"/>
+    <element>
+      <noMap value="true"/>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"/>
+    <element>
+      <code value="identifyingCode[x]"/>
+      <display value="(Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="classification"/>
+      <display value="(CodeableConcept)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="productName"/>
+      <display value="(Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="marketingAuthorisationHolder"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="marketingAuthorisationHolder.organizationName"/>
+      <display value="(Name of the organisation holding the authorisation for marketing/mahufacturing)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="marketingAuthorisationHolder.organizationIdentifier"/>
+      <display value="(Identifier of the organisation and/or its physical location)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="doseForm"/>
+      <display value="(Dose form(s) on a product level. Dose form for a single package item is defined below.)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="packSize"/>
+      <display value="(UCUM for units of measure. EDQM Standard Terms for units of presentation. (preferred))"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item"/>
+      <display value="(A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.doseForm"/>
+      <display value="(Dose form)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.ingredient"/>
+      <display value="(Ingredients)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.ingredient.isActive"/>
+      <display value="(Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.ingredient.substance"/>
+      <display value="(Substance)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.ingredient.strengthInfo"/>
+      <display value="(Strength of the product - amount of substance per unit)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.ingredient.strengthInfo.strength"/>
+      <display value="(Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.ingredient.strengthInfo.basisOfStrengthSubstance"/>
+      <display value="(Substance that the strength refers to, in case it's different from the main substance)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.unitOfPresentation"/>
+      <display value="(Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.containedQuantity"/>
+      <display value="(Manufactured item quantity for liquids (3ml / 1 vial))"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.amount"/>
+      <display value="(Number of such manufactured items in this product (5 vials))"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="item.packageType"/>
+      <display value="(Type of package of the medication item)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="device"/>
+      <display value="(Administration device included in the product)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="device.deviceQuantity"/>
+      <display value="(Number of such devices)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="device.device[x]"/>
+      <display value="(Device coded)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="characteristic"/>
+      <display value="(Other features of the product)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="characteristic.type"/>
+      <display value="(A code expressing the type of characteristic)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="characteristic.value[x]"/>
+      <display value="(Description of the characteristic)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="batch"/>
+      <display value="(Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="batch.lotNumber"/>
+      <display value="(Batch identifier of the medicinal product)"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="batch.expirationDate"/>
+      <display value="(Batch expiration date of the medicinal product.)"/>
+      <noMap value="true"/>
+    </element>
+  </group>
+</ConceptMap>

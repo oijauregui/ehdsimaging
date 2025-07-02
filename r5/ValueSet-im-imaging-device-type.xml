@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="im-imaging-device-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet im-imaging-device-type</b></p><a name="im-imaging-device-type"> </a><a name="hcim-imaging-device-type"> </a><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 314789007 (Diagnostic imaging equipment)</li></ul></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type"/>
+  <version value="0.1.0-ballot"/>
+  <name value="ImImagingDeviceType"/>
+  <title value="Imaging Device Type"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Imaging Device Type."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="314789007"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

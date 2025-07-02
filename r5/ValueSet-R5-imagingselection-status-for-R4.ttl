@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ValueSet/R5-imagingselection-status-for-R4> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "R5-imagingselection-status-for-R4"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet R5-imagingselection-status-for-R4</b></p><a name=\"R5-imagingselection-status-for-R4\"> </a><a name=\"hcR5-imagingselection-status-for-R4\"> </a><p>This value set expansion contains 3 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-status-for-R4-http://hl7.org/fhir/imagingselection-status-available\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-status.html#imagingselection-status-available\">available</a></td><td>http://hl7.org/fhir/imagingselection-status</td><td>Available</td><td>The selected resources are available..</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-status-for-R4-http://hl7.org/fhir/imagingselection-status-entered-in-error\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-status.html#imagingselection-status-entered-in-error\">entered-in-error</a></td><td>http://hl7.org/fhir/imagingselection-status</td><td>Entered in Error</td><td>The imaging selection has been withdrawn following a release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be \"cancelled\" rather than \"entered-in-error\".).</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-status-for-R4-http://hl7.org/fhir/imagingselection-status-unknown\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-status.html#imagingselection-status-unknown\">unknown</a></td><td>http://hl7.org/fhir/imagingselection-status</td><td>Unknown</td><td>The system does not know which of the status values currently applies for this request. Note: This concept is not to be used for \"other\" - one of the listed statuses is presumed to apply, it's just not known which one.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.0.1-snapshot-1"] ; # 
+  fhir:name [ fhir:v "R5-imagingselection-status-for-R4"] ; # 
+  fhir:title [ fhir:v "Cross-version VS for R5.ImagingSelectionStatus for use in FHIR R4"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-06-03T03:14:45.7147364+02:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-status|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-status"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "available" ] ;
+         fhir:display [ fhir:v "Available" ]
+       ] [
+         fhir:code [ fhir:v "entered-in-error" ] ;
+         fhir:display [ fhir:v "Entered in Error" ]
+       ] [
+         fhir:code [ fhir:v "unknown" ] ;
+         fhir:display [ fhir:v "Unknown" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:expansion [
+     fhir:contains ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-status"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "available" ] ;
+       fhir:display [ fhir:v "Available" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-status"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "entered-in-error" ] ;
+       fhir:display [ fhir:v "Entered in Error" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-status"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "unknown" ] ;
+       fhir:display [ fhir:v "Unknown" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

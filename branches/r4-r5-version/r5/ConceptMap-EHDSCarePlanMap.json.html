@@ -1,0 +1,532 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Map for EHDSCarePlan - JSON Representation - HL7 Europe Imaging Study Report v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.202"}
+    h3,h4,h5,h6{--heading-prefix:"7.202"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Imaging Study Report</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="index.html#dependencies">Dependencies</a>
+      </li>
+      <li>
+        <a href="index.html#references">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="actors-and-transactions.html">Actors and Transactions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">All</a>
+      </li>
+      <li>
+        <a href="artifacts-structural.html">Structural</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="design-considerations.html">Design Considerations</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Map for EHDSCarePlan</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">HL7 Europe Imaging Study Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version'>https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version</a> and changes regularly. See the <a href='http://hl7.eu/fhir/imaging-r5/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ConceptMap-EHDSCarePlanMap.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ConceptMap-EHDSCarePlanMap.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ConceptMap-EHDSCarePlanMap.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Map for EHDSCarePlan - JSON Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2025-06-16
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ConceptMap-EHDSCarePlanMap.json" no-download="true">Raw json</a> | <a href="ConceptMap-EHDSCarePlanMap.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap">resourceType</a>" : "ConceptMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.id">id</a>" : "EHDSCarePlanMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ConceptMap EHDSCarePlanMap&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;EHDSCarePlanMap\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcEHDSCarePlanMap\&quot;&gt; &lt;/a&gt;&lt;p&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSCarePlan.html\&quot;&gt;Care plan model&lt;/a&gt; to (not specified)&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Group 1 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSCarePlan.html\&quot;&gt;Care plan model&lt;/a&gt; to &lt;a href=\&quot;StructureDefinition-CarePlanEu.html\&quot;&gt;EU CarePlan&lt;/a&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Source Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Target Concept Details&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Comment&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan&lt;/td&gt;&lt;td/&gt;&lt;td colspan=\&quot;2\&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; from http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;identifier&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;identifier&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.1 - Identifier&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;status&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;status&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.2 - Status&lt;/td&gt;&lt;td&gt;Source binding is preferred, target required.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;intent&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;intent&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.3 - Intent&lt;/td&gt;&lt;td&gt;Source binding is preferred, target required.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;title&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;title&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.4 - Title&lt;/td&gt;&lt;td&gt;Source is modelled as Narrative (html), target as string&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;title.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.4 - Title&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-bottom-style: none\&quot;&gt;description&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px; border-bottom-style: none\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;description&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.5 - Description&lt;/td&gt;&lt;td&gt;Source is modelled as Narrative (html), target as string&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px; border-top-style: none\&quot;/&gt;&lt;td style=\&quot;border-top-style: none; border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\&quot; title=\&quot;source-is-broader-than-target\&quot;&gt;is broader than&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;description.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.5 - Description&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;patient&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;subject&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.6 - Subject&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;period&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;period&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.7 - Period&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;custodian&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;custodian&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.8 - Custodian&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;contributor&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;contributor&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.9 - Contributor&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;goal&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;goal&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.11 - Goal&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;activity&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;activity&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.12 - Activity&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;note&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;/&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\&quot; title=\&quot;equivalent\&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;border-right-width: 0px\&quot;&gt;note&lt;/td&gt;&lt;td style=\&quot;border-left-width: 0px\&quot;&gt;C.19.13 - Note&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Group 2 &lt;/b&gt;Mapping from &lt;a href=\&quot;StructureDefinition-EHDSCarePlan.html\&quot;&gt;Care plan model&lt;/a&gt; to &lt;code&gt;unspecified code system&lt;/code&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Source Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;addresses ((C.19.10 - Addresses))&lt;/td&gt;&lt;td colspan=\&quot;2\&quot; style=\&quot;background-color: #efefef\&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.url">url</a>" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSCarePlanMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.version">version</a>" : "0.1.0-ballot",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.name">name</a>" : "EHDSCarePlanMap",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.title">title</a>" : "EHDSCarePlan Mapping",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.experimental">experimental</a>" : true,
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.date">date</a>" : "2025-06-16T13:38:01+00:00",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.publisher">publisher</a>" : "HL7 Europe",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 Europe",
+      "<a href="http://hl7.org/fhir/R5/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7.eu"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.description">description</a>" : "Map for EHDSCarePlan",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "150",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Europe"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.copyright">copyright</a>" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.sourceScope[x]">sourceScopeUri</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan",
+  "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group">group</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.target">target</a>" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/CarePlanEu",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "identifier",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "identifier",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.1 - Identifier",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "status",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "status",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.2 - Status",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Source binding is preferred, target required."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "intent",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "intent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.3 - Intent",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Source binding is preferred, target required."
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "title",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "title",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.4 - Title",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Source is modelled as Narrative (html), target as string"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "title.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.4 - Title",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "description",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "description",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.5 - Description",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>" : "Source is modelled as Narrative (html), target as string"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "description.extension[http://hl7.org/fhir/StructureDefinition/rendering-xhtml]",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.5 - Description",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "source-is-broader-than-target"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "patient",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "subject",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.6 - Subject",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "period",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "period",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.7 - Period",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "custodian",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "custodian",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.8 - Custodian",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "contributor",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "contributor",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.9 - Contributor",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "goal",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "goal",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.11 - Goal",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "activity",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "activity",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.12 - Activity",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "note",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target">target</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.code">code</a>" : "note",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.display">display</a>" : "C.19.13 - Note",
+              "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.target.relationship">relationship</a>" : "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.source">source</a>" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan",
+      "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element">element</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.code">code</a>" : "addresses",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.display">display</a>" : "(C.19.10 - Addresses)",
+          "<a href="http://hl7.org/fhir/R5/conceptmap.html#ConceptMap.group.element.noMap">noMap</a>" : true
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.imaging-r5#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Jun 16, 2025 13:39+0000">2025-06-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/imaging-r5/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R5/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

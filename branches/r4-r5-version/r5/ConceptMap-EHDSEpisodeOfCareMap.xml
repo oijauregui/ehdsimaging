@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSEpisodeOfCareMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSEpisodeOfCareMap</b></p><a name="EHDSEpisodeOfCareMap"> </a><a name="hcEHDSEpisodeOfCareMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSEpisodeOfCare.html">Episode of care model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSEpisodeOfCare.html">Episode of care model</a> to <a href="http://hl7.org/fhir/R5/episodeofcare.html">EpisodeOfCare</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.30.1 - Identifier)</td></tr><tr><td>type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>type (C.30.2 - Type)</td></tr><tr><td>reasonText</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>reason.value.concept.text (C.30.3 - Reason text)</td></tr><tr><td>reason</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>reason.value (C.30.4 - Reason)</td></tr><tr><td>diagnosis</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>diagnosis (C.30.5 - Diagnosis)</td></tr><tr><td>diagnosis.description</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>diagnosis.condition.concept.text (C.30.5.1 - Description)</td></tr><tr><td>diagnosis.condition</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>diagnosis.condition (C.30.5.2 - Condition)</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>patient (C.30.6 - Patient)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSEpisodeOfCareMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSEpisodeOfCareMap"/>
+  <title value="EHDSEpisodeOfCare Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSEpisodeOfCare"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.30.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="type"/>
+      <target>
+        <code value="type"/>
+        <display value="C.30.2 - Type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="reasonText"/>
+      <target>
+        <code value="reason.value.concept.text"/>
+        <display value="C.30.3 - Reason text"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="reason"/>
+      <target>
+        <code value="reason.value"/>
+        <display value="C.30.4 - Reason"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="diagnosis"/>
+      <target>
+        <code value="diagnosis"/>
+        <display value="C.30.5 - Diagnosis"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="diagnosis.description"/>
+      <target>
+        <code value="diagnosis.condition.concept.text"/>
+        <display value="C.30.5.1 - Description"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="diagnosis.condition"/>
+      <target>
+        <code value="diagnosis.condition"/>
+        <display value="C.30.5.2 - Condition"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="patient"/>
+      <target>
+        <code value="patient"/>
+        <display value="C.30.6 - Patient"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

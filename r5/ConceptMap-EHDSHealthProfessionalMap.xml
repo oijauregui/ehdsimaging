@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSHealthProfessionalMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSHealthProfessionalMap</b></p><a name="EHDSHealthProfessionalMap"> </a><a name="hcEHDSHealthProfessionalMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSHealthProfessional.html">Health professional model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSHealthProfessional.html">Health professional model</a> to <a href="http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-practitioner-eu.html">Practitioner (EU base)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.2.1 - Identifier)</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>name (C.2.2 - Name)</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>address (C.2.3 - Address)</td></tr><tr><td>telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>telecom (C.2.4 - Telecom)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-EHDSHealthProfessional.html">Health professional model</a> to <a href="http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-practitionerRole-eu.html">PractitionerRole (EU base)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>role</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>code (C.2.5 - Role)</td></tr><tr><td>organization</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>organization (C.2.6 - Organization)</td></tr><tr><td>specialty</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>specialty (C.2.7 - Specialty)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSHealthProfessionalMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSHealthProfessionalMap"/>
+  <title value="EHDSHealthProfessional Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSHealthProfessional"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"/>
+    <target value="http://hl7.eu/fhir/base-r5/StructureDefinition/practitioner-eu"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.2.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="name"/>
+      <target>
+        <code value="name"/>
+        <display value="C.2.2 - Name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="address"/>
+      <target>
+        <code value="address"/>
+        <display value="C.2.3 - Address"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="telecom"/>
+      <target>
+        <code value="telecom"/>
+        <display value="C.2.4 - Telecom"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional"/>
+    <target value="http://hl7.eu/fhir/base-r5/StructureDefinition/practitionerRole-eu"/>
+    <element>
+      <code value="role"/>
+      <target>
+        <code value="code"/>
+        <display value="C.2.5 - Role"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="organization"/>
+      <target>
+        <code value="organization"/>
+        <display value="C.2.6 - Organization"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="specialty"/>
+      <target>
+        <code value="specialty"/>
+        <display value="C.2.7 - Specialty"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

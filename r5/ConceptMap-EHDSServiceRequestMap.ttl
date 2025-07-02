@@ -1,0 +1,160 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSServiceRequestMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSServiceRequestMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSServiceRequestMap</b></p><a name=\"EHDSServiceRequestMap\"> </a><a name=\"hcEHDSServiceRequestMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSServiceRequest.html\">Service request model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSServiceRequest.html\">Service request model</a> to <a href=\"http://hl7.org/fhir/R5/servicerequest.html\">ServiceRequest</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/ServiceRequest</td><td/></tr><tr><td style=\"border-right-width: 0px\">serviceText</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">text</td><td style=\"border-left-width: 0px\">C.8.1 - Service text</td><td/></tr><tr><td style=\"border-right-width: 0px\">serviceCode</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">code.concept</td><td style=\"border-left-width: 0px\">C.8.2 - Service code</td><td/></tr><tr><td style=\"border-right-width: 0px\">reasonCode</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason.concept</td><td style=\"border-left-width: 0px\">C.8.3 - Reason code</td><td/></tr><tr><td style=\"border-right-width: 0px\">quantity</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">quantityQuantity</td><td style=\"border-left-width: 0px\">C.8.4 - Quantity</td><td/></tr><tr><td style=\"border-right-width: 0px\">anatomicLocation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">bodySite</td><td style=\"border-left-width: 0px\">C.8.5 - Anatomic location</td><td/></tr><tr><td style=\"border-right-width: 0px\">reasonReference</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason.reference</td><td style=\"border-left-width: 0px\">C.8.6 - Reason reference</td><td/></tr><tr><td style=\"border-right-width: 0px\">priority</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">priority</td><td style=\"border-left-width: 0px\">C.8.7 - Priority</td><td/></tr><tr><td style=\"border-right-width: 0px\">supportingInformation</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">supportingInfo</td><td style=\"border-left-width: 0px\">C.8.8 - Supporting information</td><td>Point to observations and conditions</td></tr><tr><td style=\"border-right-width: 0px\">specimen</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">specimen</td><td style=\"border-left-width: 0px\">C.8.9 - Specimen</td><td/></tr><tr><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.8.10 - Subject</td><td/></tr><tr><td style=\"border-right-width: 0px\">encounter</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">encounter</td><td style=\"border-left-width: 0px\">C.8.11 - Encounter</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">occurance[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurrenceDateTime</td><td style=\"border-left-width: 0px\">C.8.12 - Occurance</td><td/></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurrencePeriod</td><td style=\"border-left-width: 0px\">C.8.12 - Occurance</td><td/></tr><tr><td style=\"border-right-width: 0px\">patientInstructions</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">patientInstruction.instructionMarkdown</td><td style=\"border-left-width: 0px\">C.8.13 - Patient instructions</td><td/></tr><tr><td style=\"border-right-width: 0px\">coverage</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">insurance</td><td style=\"border-left-width: 0px\">C.8.14 - Coverage</td><td/></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSServiceRequestMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSServiceRequestMap"] ; # 
+  fhir:title [ fhir:v "EHDSServiceRequest Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-07-02T12:58:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSServiceRequest"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/ServiceRequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/ServiceRequest>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "serviceText" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "text" ] ;
+         fhir:display [ fhir:v "C.8.1 - Service text" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "serviceCode" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "code.concept" ] ;
+         fhir:display [ fhir:v "C.8.2 - Service code" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "reasonCode" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.concept" ] ;
+         fhir:display [ fhir:v "C.8.3 - Reason code" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "quantity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "quantityQuantity" ] ;
+         fhir:display [ fhir:v "C.8.4 - Quantity" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "anatomicLocation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "bodySite" ] ;
+         fhir:display [ fhir:v "C.8.5 - Anatomic location" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "reasonReference" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "reason.reference" ] ;
+         fhir:display [ fhir:v "C.8.6 - Reason reference" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "priority" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "priority" ] ;
+         fhir:display [ fhir:v "C.8.7 - Priority" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "supportingInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "supportingInfo" ] ;
+         fhir:display [ fhir:v "C.8.8 - Supporting information" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Point to observations and conditions" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "specimen" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "specimen" ] ;
+         fhir:display [ fhir:v "C.8.9 - Specimen" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "C.8.10 - Subject" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "encounter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "encounter" ] ;
+         fhir:display [ fhir:v "C.8.11 - Encounter" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "occurance[x]" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "occurrenceDateTime" ] ;
+         fhir:display [ fhir:v "C.8.12 - Occurance" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "occurrencePeriod" ] ;
+         fhir:display [ fhir:v "C.8.12 - Occurance" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "patientInstructions" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "patientInstruction.instructionMarkdown" ] ;
+         fhir:display [ fhir:v "C.8.13 - Patient instructions" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "coverage" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "insurance" ] ;
+         fhir:display [ fhir:v "C.8.14 - Coverage" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

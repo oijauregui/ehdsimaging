@@ -1,0 +1,155 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://dicom.nema.org/resources/ontology/DCM",
+      "version" : "2022.4.20221006",
+      "status" : "active",
+      "name" : "DICOMTerminologyDefinitions",
+      "title" : "DICOM Controlled Terminology Definitions",
+      "description" : "DICOM Code Definitions (Coding Scheme Designator \"DCM\" Coding Scheme Version 2022.4.20221006",
+      "oids" : ["1.2.840.10008.2.16.4"],
+      "uses" : {
+      }
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "Hl7EuDocumentTypes",
+      "title" : "HL7 EU Document Types",
+      "description" : "Document types (templates) as defined by HL7 EU. It identifies the type and template of the document.",
+      "uses" : {
+      },
+      "ValueSet-ImImagingManifestTypesEuVS.html" : "HL7 EU Imaging Manifest Types",
+      "ValueSet-ImImagingReportTypesEuVS.html" : "HL7 EU Imaging Report Types"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "DiagnosticReportSupportingInfoCodeSystem",
+      "title" : "Diagnostic Report Support Info Code System",
+      "description" : "Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+      "uses" : {
+      },
+      "ValueSet-valueset-diagnosticreport-report-support-info.html" : "DiagnosticReport supportInfo codes"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/STU1.1/ValueSet-pregnancy-status-uv-ips.html" : "Pregnancy Status - IPS",
+      "ValueSet-ImSectionEmptyReason.html" : "Reasons a section in an imaging report is empty."
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "ValueSet-periods-of-life-value-set.html" : "Periods of Life",
+      "ValueSet-media-view.html" : "Media View types - placeholder for cross-version extension",
+      "ValueSet-im-imaging-device-type.html" : "Imaging Device Type",
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "ValueSet-im-procedure-type.html" : "Imaging Procedure Type"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ListEmptyReasons",
+      "title" : "List Empty Reasons",
+      "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
+      "oids" : ["2.16.840.1.113883.4.642.1.1106"],
+      "uses" : {
+      },
+      "ValueSet-ImSectionEmptyReason.html" : "Reasons a section in an imaging report is empty."
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0936",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "ObservationType",
+      "title" : "observationType",
+      "description" : "HL7-defined code system of concepts specifying types of observations to enable systems to distinguish between observations sent along with an order, versus observations sent as the result to an order. Used in HL7 Version 2.x messaging in the OBX segment.",
+      "oids" : ["2.16.840.1.113883.18.439"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.2.0/ValueSet-v2-0936.html" : "hl7VS-VS-observationType"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "9.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "oids" : ["2.16.840.1.113883.5.4"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.2.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActPriority",
+      "title" : "ActPriority",
+      "description" : "A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.",
+      "oids" : ["2.16.840.1.113883.5.7"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.2.0/ValueSet-v3-xEncounterAdmissionUrgency.html" : "x_EncounterAdmissionUrgency"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+      "version" : "4.1.0",
+      "status" : "active",
+      "name" : "HL7DocumentFormatCodes",
+      "title" : "HL7 Document Format Codes",
+      "description" : "This codeSystem contains codes which specify the technical format of a document. Each code provides sufficient information to allow any potential document consumer to know if it will be able to process the document. The codes are sufficiently specific to ensure processing/display by identifying a document encoding, structure and template. For example, formatCodes can be used in the FHIR DocumentReference resource to characterize the document being referenced.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1407"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.2.0/ValueSet-v3-HL7FormatCodes.html" : "HL7 ValueSet of Format Codes for use with Document Sharing"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "ParticipationType",
+      "title" : "ParticipationType",
+      "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation.",
+      "oids" : ["2.16.840.1.113883.5.90"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-series-performer-function.html" : "ImagingStudy series performer function",
+      "ValueSet-im-imaging-study-performer-type.html" : "Imaging Study Performer Type Value Set"
+    },
+    {
+      "url" : "http://unitsofmeasure.org",
+      "version" : "3.0.1",
+      "status" : "active",
+      "name" : "UCUM",
+      "title" : "Unified Code for Units of Measure (UCUM)",
+      "description" : "The Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business. The purpose is to facilitate unambiguous electronic communication of quantities together with their units. The focus is on electronic communication, as opposed to communication between humans. A typical application of The Unified Code for Units of Measure are electronic data interchange (EDI) protocols, but there is nothing that prevents it from being used in other types of machine communication.",
+      "oids" : ["2.16.840.1.113883.6.8"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-age-units.html" : "Common UCUM Codes for Age",
+      "ValueSet-im-effective-dose-units.html" : "Effective Dose Units",
+      "ValueSet-im-dose-length-units.html" : "Dose Length Units",
+      "ValueSet-im-gray-square-units.html" : "Gray Square Units"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "R5-imagingselection-3dgraphictype-for-R4",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet R5-imagingselection-3dgraphictype-for-R4</b></p><a name=\"R5-imagingselection-3dgraphictype-for-R4\"> </a><a name=\"hcR5-imagingselection-3dgraphictype-for-R4\"> </a><p>This value set expansion contains 6 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-3dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-3dgraphictype-point\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-3dgraphictype.html#imagingselection-3dgraphictype-point\">point</a></td><td>http://hl7.org/fhir/imagingselection-3dgraphictype</td><td>POINT</td><td>A single location denoted by a single (x,y,z) triplet.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-3dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-3dgraphictype-multipoint\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-3dgraphictype.html#imagingselection-3dgraphictype-multipoint\">multipoint</a></td><td>http://hl7.org/fhir/imagingselection-3dgraphictype</td><td>MULTIPOINT</td><td>multiple locations each denoted by an (x,y,z) triplet; the points need not be coplanar.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-3dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-3dgraphictype-polyline\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-3dgraphictype.html#imagingselection-3dgraphictype-polyline\">polyline</a></td><td>http://hl7.org/fhir/imagingselection-3dgraphictype</td><td>POLYLINE</td><td>a series of connected line segments with ordered vertices denoted by (x,y,z) triplets; the points need not be coplanar.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-3dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-3dgraphictype-polygon\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-3dgraphictype.html#imagingselection-3dgraphictype-polygon\">polygon</a></td><td>http://hl7.org/fhir/imagingselection-3dgraphictype</td><td>POLYGON</td><td>a series of connected line segments with ordered vertices denoted by (x,y,z) triplets, where the first and last vertices shall be the same forming a polygon; the points shall be coplanar.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-3dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-3dgraphictype-ellipse\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-3dgraphictype.html#imagingselection-3dgraphictype-ellipse\">ellipse</a></td><td>http://hl7.org/fhir/imagingselection-3dgraphictype</td><td>ELLIPSE</td><td>an ellipse defined by four (x,y,z) triplets, the first two triplets specifying the endpoints of the major axis and the second two triplets specifying the endpoints of the minor axis.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-3dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-3dgraphictype-ellipsoid\"> </a>\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-3dgraphictype.html#imagingselection-3dgraphictype-ellipsoid\">ellipsoid</a></td><td>http://hl7.org/fhir/imagingselection-3dgraphictype</td><td>ELLIPSOID</td><td>a three-dimensional geometric surface whose plane sections are either ellipses or circles and contains three intersecting orthogonal axes, &quot;a&quot;, &quot;b&quot;, and &quot;c&quot;; the ellipsoid is defined by six (x,y,z) triplets, the first and second triplets specifying the endpoints of axis &quot;a&quot;, the third and fourth triplets specifying the endpoints of axis &quot;b&quot;, and the fifth and sixth triplets specifying the endpoints of axis &quot;c&quot;.</td></tr></table></div>"
+  },
+  "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4",
+  "version" : "0.0.1-snapshot-1",
+  "name" : "R5-imagingselection-3dgraphictype-for-R4",
+  "title" : "Cross-version VS for R5.ImagingSelection3DGraphicType for use in FHIR R4",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-06-03T03:14:45.7144137+02:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-3dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "concept" : [{
+        "code" : "point",
+        "display" : "POINT"
+      },
+      {
+        "code" : "multipoint",
+        "display" : "MULTIPOINT"
+      },
+      {
+        "code" : "polyline",
+        "display" : "POLYLINE"
+      },
+      {
+        "code" : "polygon",
+        "display" : "POLYGON"
+      },
+      {
+        "code" : "ellipse",
+        "display" : "ELLIPSE"
+      },
+      {
+        "code" : "ellipsoid",
+        "display" : "ELLIPSOID"
+      }]
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "code" : "point",
+      "display" : "POINT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "code" : "multipoint",
+      "display" : "MULTIPOINT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "code" : "polyline",
+      "display" : "POLYLINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "code" : "polygon",
+      "display" : "POLYGON"
+    },
+    {
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "code" : "ellipse",
+      "display" : "ELLIPSE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/imagingselection-3dgraphictype",
+      "version" : "5.0.0",
+      "code" : "ellipsoid",
+      "display" : "ELLIPSOID"
+    }]
+  }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="codesystem-diagnostic-report-support-info"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem codesystem-diagnostic-report-support-info</b></p><a name="codesystem-diagnostic-report-support-info"> </a><a name="hccodesystem-diagnostic-report-support-info"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info</code> defines the following code in a Is-A hierarchy:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">imaging-procedure<a name="codesystem-diagnostic-report-support-info-imaging-procedure"> </a></td><td>Imaging Procedure</td><td>The procedure in which the imaging study was performed supportInfo codesCodes to be used in `DiagnosticReport.supportInfo` for imaging reports.</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info"/>
+  <version value="0.1.0-ballot"/>
+  <name value="DiagnosticReportSupportingInfoCodeSystem"/>
+  <title value="Diagnostic Report Support Info Code System"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="imaging-procedure"/>
+    <display value="Imaging Procedure"/>
+    <definition value="The procedure in which the imaging study was performed supportInfo codesCodes to be used in `DiagnosticReport.supportInfo` for imaging reports."/>
+  </concept>
+</CodeSystem>

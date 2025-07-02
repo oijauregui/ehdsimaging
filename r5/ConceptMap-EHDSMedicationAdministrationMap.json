@@ -1,0 +1,167 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSMedicationAdministrationMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSMedicationAdministrationMap</b></p><a name=\"EHDSMedicationAdministrationMap\"> </a><a name=\"hcEHDSMedicationAdministrationMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSMedicationAdministration.html\">Medication administration model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSMedicationAdministration.html\">Medication administration model</a> to <a href=\"http://hl7.org/fhir/R5/medicationadministration.html\">MedicationAdministration</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/MedicationAdministration</td></tr><tr><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.18.1 - Identifier</td></tr><tr><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">status</td><td style=\"border-left-width: 0px\">C.18.2 - Status</td></tr><tr><td style=\"border-right-width: 0px\">statusReason</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">statusReason</td><td style=\"border-left-width: 0px\">C.18.3 - Status reason</td></tr><tr><td style=\"border-right-width: 0px\">medication</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">medication</td><td style=\"border-left-width: 0px\">C.18.4 - Medication</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">occurance[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurenceDateTime</td><td style=\"border-left-width: 0px\">C.18.5 - Occurance</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">occurencePeriod</td><td style=\"border-left-width: 0px\">C.18.5 - Occurance</td></tr><tr><td style=\"border-right-width: 0px\">reason</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">reason</td><td style=\"border-left-width: 0px\">C.18.6 - Reason</td></tr><tr><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">note</td><td style=\"border-left-width: 0px\">C.18.7 - Note</td></tr><tr><td style=\"border-right-width: 0px\">dosage</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage</td><td style=\"border-left-width: 0px\">C.18.8 - Dosage</td></tr><tr><td style=\"border-right-width: 0px\">dosage.dosageDescription</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">dosage.text</td><td style=\"border-left-width: 0px\">C.18.8.1 - Dosage description</td></tr><tr><td style=\"border-right-width: 0px\">dosage.site</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.site</td><td style=\"border-left-width: 0px\">C.18.8.2 - Site</td></tr><tr><td style=\"border-right-width: 0px\">dosage.route</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.route</td><td style=\"border-left-width: 0px\">C.18.8.3 - Route</td></tr><tr><td style=\"border-right-width: 0px\">dosage.method</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.method</td><td style=\"border-left-width: 0px\">C.18.8.4 - Method</td></tr><tr><td style=\"border-right-width: 0px\">dosage.dose</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target\" title=\"source-is-broader-than-target\">is broader than</a></td><td style=\"border-right-width: 0px\">dosage.dose</td><td style=\"border-left-width: 0px\">C.18.8.5 - Dose</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">dosage.rate[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.rateRatio</td><td style=\"border-left-width: 0px\">C.18.8.6 - Rate</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">dosage.rateQuantity</td><td style=\"border-left-width: 0px\">C.18.8.6 - Rate</td></tr><tr><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">subject</td><td style=\"border-left-width: 0px\">C.18.9 - Patient</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationAdministrationMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSMedicationAdministrationMap",
+  "title" : "EHDSMedicationAdministration Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-07-02T12:58:33+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSMedicationAdministration",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration",
+    "target" : "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.18.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "status",
+      "target" : [{
+        "code" : "status",
+        "display" : "C.18.2 - Status",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "statusReason",
+      "target" : [{
+        "code" : "statusReason",
+        "display" : "C.18.3 - Status reason",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "medication",
+      "target" : [{
+        "code" : "medication",
+        "display" : "C.18.4 - Medication",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "occurance[x]",
+      "target" : [{
+        "code" : "occurenceDateTime",
+        "display" : "C.18.5 - Occurance",
+        "relationship" : "equivalent"
+      },
+      {
+        "code" : "occurencePeriod",
+        "display" : "C.18.5 - Occurance",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "reason",
+      "target" : [{
+        "code" : "reason",
+        "display" : "C.18.6 - Reason",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "note",
+      "target" : [{
+        "code" : "note",
+        "display" : "C.18.7 - Note",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dosage",
+      "target" : [{
+        "code" : "dosage",
+        "display" : "C.18.8 - Dosage",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dosage.dosageDescription",
+      "target" : [{
+        "code" : "dosage.text",
+        "display" : "C.18.8.1 - Dosage description",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    },
+    {
+      "code" : "dosage.site",
+      "target" : [{
+        "code" : "dosage.site",
+        "display" : "C.18.8.2 - Site",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dosage.route",
+      "target" : [{
+        "code" : "dosage.route",
+        "display" : "C.18.8.3 - Route",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dosage.method",
+      "target" : [{
+        "code" : "dosage.method",
+        "display" : "C.18.8.4 - Method",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dosage.dose",
+      "target" : [{
+        "code" : "dosage.dose",
+        "display" : "C.18.8.5 - Dose",
+        "relationship" : "source-is-broader-than-target"
+      }]
+    },
+    {
+      "code" : "dosage.rate[x]",
+      "target" : [{
+        "code" : "dosage.rateRatio",
+        "display" : "C.18.8.6 - Rate",
+        "relationship" : "equivalent"
+      },
+      {
+        "code" : "dosage.rateQuantity",
+        "display" : "C.18.8.6 - Rate",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "subject",
+      "target" : [{
+        "code" : "subject",
+        "display" : "C.18.9 - Patient",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

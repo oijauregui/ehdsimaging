@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSEncounterMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSEncounterMap</b></p><a name="EHDSEncounterMap"> </a><a name="hcEHDSEncounterMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSEncounter.html">Encounter model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSEncounter.html">Encounter model</a> to <a href="StructureDefinition-EncounterEu.html">EU Encounter</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.30.1 - Identifier)</td></tr><tr><td>priority</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>priority (C.30.3 - Priority)</td></tr><tr><td>encounterType</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>type (C.30.2 - Encounter type)</td></tr><tr><td>encounterNote</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension[note] (C.30.4 - Encounter note)</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>subject (C.30.5 - Patient)</td></tr><tr><td>episodeOfCare</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>episodeOfCare (C.30.6 - Episode of care)</td></tr><tr><td>basedOn</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>basedOn (C.30.7 - Based on)</td></tr><tr><td>partOf</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>partOf (C.30.8 - Part of)</td></tr><tr><td>serviceProvider</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>serviceProvider (C.30.9 - Service provider)</td></tr><tr><td>appointment</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>appointment (C.30.10 - Appointment)</td></tr><tr><td>actualPeriod</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>actualPeriod (C.30.11 - Actual period)</td></tr><tr><td>plannedStartDate</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>plannedStartDate (C.30.12 - Planned start date)</td></tr><tr><td>plannedEndDate</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>plannedEndDate (C.30.13 - Planned end date)</td></tr><tr><td>admission</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>admission (C.30.14 - Admission)</td></tr><tr><td>admission.admitter</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant[admitter].actor (C.30.14.1 - Admitter)</td></tr><tr><td>admission.admitSource</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>admission.admitSource (C.30.14.2 - Admit Source)</td></tr><tr><td>admission.referringProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant[referrer].actor (C.30.14.3 - Referring professional)</td></tr><tr><td>admission.admissionReason</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>reason.value.reference (C.30.14.4 - Admission reason)</td></tr><tr><td>admission.admissionReasonComment</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>reason.value.concept.text (C.30.14.5 - Admission reason comment)</td></tr><tr><td>admission.admissionLegalStatus</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension[legalStatus] (C.30.14.6 - Admission legal status)</td></tr><tr><td>discharge</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>admission.dischargeDisposition (C.30.15 - Discharge)</td></tr><tr><td>discharge.destinationType</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>admission.dischargeDisposition (C.30.15.1 - Destination type)</td></tr><tr><td>discharge.destinationLocation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>admission.destination (C.30.15.2 - Destination location)</td></tr><tr><td>location</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>location (C.30.16 - Location)</td></tr><tr><td>location.period</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>location.period (C.30.16.1 - Period)</td></tr><tr><td>location.organizationPart</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>location.location (C.30.16.2 - Organization part)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSEncounterMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSEncounterMap"/>
+  <title value="EHDSEncounter Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSEncounter"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/EncounterEu"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.30.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="priority"/>
+      <target>
+        <code value="priority"/>
+        <display value="C.30.3 - Priority"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="encounterType"/>
+      <target>
+        <code value="type"/>
+        <display value="C.30.2 - Encounter type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="encounterNote"/>
+      <target>
+        <code value="extension[note]"/>
+        <display value="C.30.4 - Encounter note"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="patient"/>
+      <target>
+        <code value="subject"/>
+        <display value="C.30.5 - Patient"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="episodeOfCare"/>
+      <target>
+        <code value="episodeOfCare"/>
+        <display value="C.30.6 - Episode of care"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="basedOn"/>
+      <target>
+        <code value="basedOn"/>
+        <display value="C.30.7 - Based on"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="partOf"/>
+      <target>
+        <code value="partOf"/>
+        <display value="C.30.8 - Part of"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="serviceProvider"/>
+      <target>
+        <code value="serviceProvider"/>
+        <display value="C.30.9 - Service provider"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="appointment"/>
+      <target>
+        <code value="appointment"/>
+        <display value="C.30.10 - Appointment"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="actualPeriod"/>
+      <target>
+        <code value="actualPeriod"/>
+        <display value="C.30.11 - Actual period"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="plannedStartDate"/>
+      <target>
+        <code value="plannedStartDate"/>
+        <display value="C.30.12 - Planned start date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="plannedEndDate"/>
+      <target>
+        <code value="plannedEndDate"/>
+        <display value="C.30.13 - Planned end date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission"/>
+      <target>
+        <code value="admission"/>
+        <display value="C.30.14 - Admission"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission.admitter"/>
+      <target>
+        <code value="participant[admitter].actor"/>
+        <display value="C.30.14.1 - Admitter"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission.admitSource"/>
+      <target>
+        <code value="admission.admitSource"/>
+        <display value="C.30.14.2 - Admit Source"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission.referringProfessional"/>
+      <target>
+        <code value="participant[referrer].actor"/>
+        <display value="C.30.14.3 - Referring professional"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission.admissionReason"/>
+      <target>
+        <code value="reason.value.reference"/>
+        <display value="C.30.14.4 - Admission reason"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission.admissionReasonComment"/>
+      <target>
+        <code value="reason.value.concept.text"/>
+        <display value="C.30.14.5 - Admission reason comment"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="admission.admissionLegalStatus"/>
+      <target>
+        <code value="extension[legalStatus]"/>
+        <display value="C.30.14.6 - Admission legal status"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="discharge"/>
+      <target>
+        <code value="admission.dischargeDisposition"/>
+        <display value="C.30.15 - Discharge"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="discharge.destinationType"/>
+      <target>
+        <code value="admission.dischargeDisposition"/>
+        <display value="C.30.15.1 - Destination type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="discharge.destinationLocation"/>
+      <target>
+        <code value="admission.destination"/>
+        <display value="C.30.15.2 - Destination location"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="location"/>
+      <target>
+        <code value="location"/>
+        <display value="C.30.16 - Location"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="location.period"/>
+      <target>
+        <code value="location.period"/>
+        <display value="C.30.16.1 - Period"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="location.organizationPart"/>
+      <target>
+        <code value="location.location"/>
+        <display value="C.30.16.2 - Organization part"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

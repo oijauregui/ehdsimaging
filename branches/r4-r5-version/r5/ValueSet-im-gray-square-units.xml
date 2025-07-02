@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="im-gray-square-units"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet im-gray-square-units</b></p><a name="im-gray-square-units"> </a><a name="hcim-gray-square-units"> </a><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>Gy.m2</td><td>Gy.m2</td></tr><tr><td>mGy.cm2</td><td>mGy.cm2</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ValueSet/im-gray-square-units"/>
+  <version value="0.1.0-ballot"/>
+  <name value="ImGraySquareUnits"/>
+  <title value="Gray Square Units"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Units for Gray Square."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="Gy.m2"/>
+        <display value="Gy.m2"/>
+      </concept>
+      <concept>
+        <code value="mGy.cm2"/>
+        <display value="mGy.cm2"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

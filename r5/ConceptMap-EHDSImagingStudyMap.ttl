@@ -1,0 +1,359 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingStudyMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSImagingStudyMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSImagingStudyMap</b></p><a name=\"EHDSImagingStudyMap\"> </a><a name=\"hcEHDSImagingStudyMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSImagingStudy.html\">Imaging study model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingStudy.html\">Imaging study model</a> to <a href=\"StructureDefinition-ImImagingStudy.html\">IM Imaging Study</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier[studyInstanceUid] (C.32.1 - Identifier)</td><td/></tr><tr><td>modality</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>modality (C.32.2 - Modality)</td><td/></tr><tr><td>subject</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>subject (C.32.3 - Subject)</td><td/></tr><tr><td>encounter</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>encounter (C.32.4 - Encounter)</td><td/></tr><tr><td>started</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>started (C.32.5 - Started)</td><td/></tr><tr><td>basedOn</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>basedOn (C.32.6 - Based on)</td><td/></tr><tr><td>numberOfSeries</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>numberOfSeries (C.32.7 - Number of series)</td><td/></tr><tr><td>numberOfInstances</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>numberOfInstances (C.32.8 - Number of instances)</td><td/></tr><tr><td>description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>description (C.32.9 - Description)</td><td/></tr><tr><td>studyCustodian</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.performer[custodian] (C.32.10 - Study custodian)</td><td/></tr><tr><td>studyEndpoint</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>endpoint (C.32.11 - Study endpoint)</td><td/></tr><tr><td>series</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series (C.32.12 - Series)</td><td/></tr><tr><td>series.seriesUid</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.uid (C.32.12.1 - Series UID)</td><td/></tr><tr><td>series.number</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.number (C.32.12.2 - Number)</td><td/></tr><tr><td>series.acquisitionModality</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.modality (C.32.12.3 - Acquisition modality)</td><td/></tr><tr><td>series.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.description (C.32.12.4 - Description)</td><td/></tr><tr><td>series.numberOfInstances</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.numberOfInstances (C.32.12.5 - Number of instances)</td><td/></tr><tr><td>series.seriesEndpoint</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.endpoint (C.32.12.6 - Series endpoint)</td><td/></tr><tr><td>series.bodySite</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.bodySite (C.32.12.7 - Body site)</td><td/></tr><tr><td>series.laterality</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.laterality (C.32.12.8 - Laterality)</td><td/></tr><tr><td>series.specimen</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.specimen (C.32.12.9 - Specimen)</td><td/></tr><tr><td>series.started</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.started (C.32.12.10 - Started)</td><td/></tr><tr><td>series.instancesInTheSeries</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.instance (C.32.12.11 - Instances in the series)</td><td/></tr><tr><td>series.instancesInTheSeries.instanceTitle</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.instance.extension[instance-description] (C.32.12.11.1 - Instance title)</td><td>Not regular</td></tr><tr><td>series.instancesInTheSeries.instanceUid</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.instance.uid (C.32.12.11.2 - Instance UID)</td><td/></tr><tr><td>series.instancesInTheSeries.sopClass</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.instance.sopClass (C.32.12.11.3 - SOP class)</td><td/></tr><tr><td>series.instancesInTheSeries.instanceNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>series.instance.number (C.32.12.11.4 - Instance number)</td><td/></tr><tr><td>series.instancesInTheSeries.radiationDoseInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td>series.instance (C.32.12.11.5 - Radiation dose information)</td><td>Present in referred DICOM SR document</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingStudy.html\">Imaging study model</a> to <a href=\"StructureDefinition-ImWadoEndpoint.html\">IM WADO Endpoint</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>studyEndpoint</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>series.seriesEndpoint</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingStudy.html\">Imaging study model</a> to <a href=\"StructureDefinition-ImImageIidViewerEndpoint.html\">IM Image Viewer Endpoint</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>studyEndpoint</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>series.seriesEndpoint</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingStudy.html\">Imaging study model</a> to <a href=\"StructureDefinition-ImRadiationDoseObservation.html\">Radiation Dose Observation</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>series.instancesInTheSeries.radiationDoseInformation.kap</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (C.32.12.11.5.1 - KAP)</td><td>choose one of the slices</td></tr><tr><td>series.instancesInTheSeries.radiationDoseInformation.totalKerma</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (C.32.12.11.5.2 - Total Kerma)</td><td>choose one of the slices</td></tr><tr><td>series.instancesInTheSeries.radiationDoseInformation.endTubeKerma</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (C.32.12.11.5.3 - End tube Kerma)</td><td>choose one of the slices</td></tr><tr><td>series.instancesInTheSeries.radiationDoseInformation.breastThickness</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (C.32.12.11.5.4 - Breast thickness)</td><td>choose one of the slices</td></tr><tr><td>series.instancesInTheSeries.radiationDoseInformation.abd</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (C.32.12.11.5.5 - 2ABD)</td><td>choose one of the slices</td></tr><tr><td>phase.radiationDose</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>component.value[x] (C.32.13.2 - Radiation dose)</td><td>choose one of the slices</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingStudy.html\">Imaging study model</a> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>phase ((C.32.13 - Phase))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>phase.phaseCode ((C.32.13.1 - Phase code))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingStudyMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSImagingStudyMap"] ; # 
+  fhir:title [ fhir:v "EHDSImagingStudy Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-07-02T12:58:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSImagingStudy"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier[studyInstanceUid]" ] ;
+         fhir:display [ fhir:v "C.32.1 - Identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "modality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "modality" ] ;
+         fhir:display [ fhir:v "C.32.2 - Modality" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "subject" ] ;
+         fhir:display [ fhir:v "C.32.3 - Subject" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "encounter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "encounter" ] ;
+         fhir:display [ fhir:v "C.32.4 - Encounter" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "started" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "started" ] ;
+         fhir:display [ fhir:v "C.32.5 - Started" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "basedOn" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "basedOn" ] ;
+         fhir:display [ fhir:v "C.32.6 - Based on" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "numberOfSeries" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "numberOfSeries" ] ;
+         fhir:display [ fhir:v "C.32.7 - Number of series" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "numberOfInstances" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "numberOfInstances" ] ;
+         fhir:display [ fhir:v "C.32.8 - Number of instances" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "description" ] ;
+         fhir:display [ fhir:v "C.32.9 - Description" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "studyCustodian" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.performer[custodian]" ] ;
+         fhir:display [ fhir:v "C.32.10 - Study custodian" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "studyEndpoint" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "endpoint" ] ;
+         fhir:display [ fhir:v "C.32.11 - Study endpoint" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series" ] ;
+         fhir:display [ fhir:v "C.32.12 - Series" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.seriesUid" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.uid" ] ;
+         fhir:display [ fhir:v "C.32.12.1 - Series UID" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.number" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.number" ] ;
+         fhir:display [ fhir:v "C.32.12.2 - Number" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.acquisitionModality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.modality" ] ;
+         fhir:display [ fhir:v "C.32.12.3 - Acquisition modality" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.description" ] ;
+         fhir:display [ fhir:v "C.32.12.4 - Description" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.numberOfInstances" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.numberOfInstances" ] ;
+         fhir:display [ fhir:v "C.32.12.5 - Number of instances" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.seriesEndpoint" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.endpoint" ] ;
+         fhir:display [ fhir:v "C.32.12.6 - Series endpoint" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.bodySite" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.bodySite" ] ;
+         fhir:display [ fhir:v "C.32.12.7 - Body site" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.laterality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.laterality" ] ;
+         fhir:display [ fhir:v "C.32.12.8 - Laterality" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.specimen" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.specimen" ] ;
+         fhir:display [ fhir:v "C.32.12.9 - Specimen" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.started" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.started" ] ;
+         fhir:display [ fhir:v "C.32.12.10 - Started" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.instance" ] ;
+         fhir:display [ fhir:v "C.32.12.11 - Instances in the series" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.instanceTitle" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.instance.extension[instance-description]" ] ;
+         fhir:display [ fhir:v "C.32.12.11.1 - Instance title" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Not regular" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.instanceUid" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.instance.uid" ] ;
+         fhir:display [ fhir:v "C.32.12.11.2 - Instance UID" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.sopClass" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.instance.sopClass" ] ;
+         fhir:display [ fhir:v "C.32.12.11.3 - SOP class" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.instanceNumber" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.instance.number" ] ;
+         fhir:display [ fhir:v "C.32.12.11.4 - Instance number" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.radiationDoseInformation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "series.instance" ] ;
+         fhir:display [ fhir:v "C.32.12.11.5 - Radiation dose information" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ] ;
+         fhir:comment [ fhir:v "Present in referred DICOM SR document" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImWadoEndpoint>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "studyEndpoint" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "series.seriesEndpoint" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImageIidViewerEndpoint>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "studyEndpoint" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "series.seriesEndpoint" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImRadiationDoseObservation>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "series.instancesInTheSeries.radiationDoseInformation.kap" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "C.32.12.11.5.1 - KAP" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.radiationDoseInformation.totalKerma" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "C.32.12.11.5.2 - Total Kerma" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.radiationDoseInformation.endTubeKerma" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "C.32.12.11.5.3 - End tube Kerma" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.radiationDoseInformation.breastThickness" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "C.32.12.11.5.4 - Breast thickness" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "series.instancesInTheSeries.radiationDoseInformation.abd" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "C.32.12.11.5.5 - 2ABD" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "phase.radiationDose" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "component.value[x]" ] ;
+         fhir:display [ fhir:v "C.32.13.2 - Radiation dose" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "choose one of the slices" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "phase" ] ;
+       fhir:display [ fhir:v "(C.32.13 - Phase)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "phase.phaseCode" ] ;
+       fhir:display [ fhir:v "(C.32.13.1 - Phase code)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ImImagingManifestTypesEuVS"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ImImagingManifestTypesEuVS</b></p><a name="ImImagingManifestTypesEuVS"> </a><a name="hcImImagingManifestTypesEuVS"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-Hl7EuDocumentTypes.html"><code>http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-Hl7EuDocumentTypes.html#Hl7EuDocumentTypes-imaging-manifest-v0-0-1">imaging-manifest-v0-0-1</a></td><td>Imaging Report V0.0.1</td><td>Version 0.0.1 of the HL7 EU Imaging Manifest</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingManifestTypesEuVS"/>
+  <version value="0.1.0-ballot"/>
+  <name value="ImImagingManifestTypesEuVS"/>
+  <title value="HL7 EU Imaging Manifest Types"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <system value="http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes"/>
+      <concept>
+        <code value="imaging-manifest-v0-0-1"/>
+        <display value="Imaging Report V0.0.1"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "codesystem-diagnostic-report-support-info"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem codesystem-diagnostic-report-support-info</b></p><a name=\"codesystem-diagnostic-report-support-info\"> </a><a name=\"hccodesystem-diagnostic-report-support-info\"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info</code> defines the following code in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">imaging-procedure<a name=\"codesystem-diagnostic-report-support-info-imaging-procedure\"> </a></td><td>Imaging Procedure</td><td>The procedure in which the imaging study was performed supportInfo codesCodes to be used in `DiagnosticReport.supportInfo` for imaging reports.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "DiagnosticReportSupportingInfoCodeSystem"] ; # 
+  fhir:title [ fhir:v "Diagnostic Report Support Info Code System"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-06-16T13:38:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "imaging-procedure" ] ;
+     fhir:display [ fhir:v "Imaging Procedure" ] ;
+     fhir:definition [ fhir:v "The procedure in which the imaging study was performed supportInfo codesCodes to be used in `DiagnosticReport.supportInfo` for imaging reports." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

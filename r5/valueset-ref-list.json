@@ -1,0 +1,432 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html",
+      "version" : "2022.4.20221006",
+      "status" : "active",
+      "name" : "Modality",
+      "title" : null,
+      "description" : "Transitive closure of CID 33 Modality",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.840.10008.6.1.1283"],
+      "sources" : ["1.2.840.10008.6.1.1283"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-DocumentReference.modality.html" : "Cross-version Extension for R5.DocumentReference.modality for use in FHIR R4"
+    },
+    {
+      "url" : "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html",
+      "version" : "2022.4.20221006",
+      "status" : "active",
+      "name" : "KeyObjectSelectionDocumentTitle",
+      "title" : null,
+      "description" : "Transitive closure of CID 7010 KeyObjectSelectionDocumentTitle",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.840.10008.6.1.490"],
+      "sources" : ["1.2.840.10008.6.1.490"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingManifestTypesEuVS",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingManifestTypesEuVS",
+      "title" : "HL7 EU Imaging Manifest Types",
+      "description" : "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingReportTypesEuVS",
+      "title" : "HL7 EU Imaging Report Types",
+      "description" : "HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImComposition.html" : "Imaging Composition",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/ImSectionEmptyReason",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImSectionEmptyReason",
+      "title" : "Reasons a section in an imaging report is empty.",
+      "description" : "Reasons a section in an imaging report is empty.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/list-empty-reason"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-dose-length-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImDoseLengthUnits",
+      "title" : "Dose Length Units",
+      "description" : "Units for Dose Length.",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-effective-dose-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImEffectiveDoseUnits",
+      "title" : "Effective Dose Units",
+      "description" : "Units for Effective Dose.",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-gray-square-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImGraySquareUnits",
+      "title" : "Gray Square Units",
+      "description" : "Units for Gray Square.",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingDeviceType",
+      "title" : "Imaging Device Type",
+      "description" : "Imaging Device Type.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-study-performer-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingStudyPerformerTypeVS",
+      "title" : "Imaging Study Performer Type Value Set",
+      "description" : "Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-procedure-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImProcedureType",
+      "title" : "Imaging Procedure Type",
+      "description" : "This value set includes all imaging procedure types.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/media-view",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CrossVersionMediaView",
+      "title" : "Media View types - placeholder for cross-version extension",
+      "description" : "Codes defined in SNOMED CT that can be used to record Media Recording views.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-CrossVersionMediaViewExtension.html" : "Media.view extension"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/periods-of-life-value-set",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "PeriodsOfLifeValueSet",
+      "title" : "Periods of Life",
+      "description" : "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-periods-of-life-extension.html" : "Periods of Life Extension"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/valueset-diagnosticreport-report-support-info",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "DiagnosticReportSupportingInfoVCodes",
+      "title" : "DiagnosticReport supportInfo codes",
+      "description" : "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/age-units",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "CommonUCUMCodesForAge",
+      "title" : "Common UCUM Codes for Age",
+      "description" : "Unified Code for Units of Measure (UCUM). This value set includes all common UCUM codes used for Age - that it is, all commonly used units which have the same canonical unit as 'a' (year)",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.19"],
+      "sources" : ["2.16.840.1.113883.4.642.3.19"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/all-time-units",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "AllUCUMExpressionForTime",
+      "title" : "All UCUM Expression for Time",
+      "description" : "Unified Code for Units of Measure (UCUM). This value set includes all possible UCUM codes used for time measures (Age, Duration etc.) - that it is, all units which have the same canonical unit as 'a' (year)",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3304"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3304"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.653",
+        "2.16.840.1.113883.4.642.2.78",
+        "2.16.840.1.113883.4.642.3.141"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.653",
+        "2.16.840.1.113883.4.642.2.78",
+        "2.16.840.1.113883.4.642.3.141"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-category",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "FHIRDeviceCategory",
+      "title" : "FHIR Device Category",
+      "description" : "The association state of the device.",
+      "systems" : ["http://hl7.org/fhir/device-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3307"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3307"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-Device.category.html" : "Cross-version Extension for R5.Device.category for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/endpoint-connection-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EndpointConnectionType",
+      "title" : "Endpoint Connection Type",
+      "description" : "This is an example value set defined by the FHIR project, that could be used to represent possible connection type profile values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/endpoint-connection-type"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.498",
+        "2.16.840.1.113883.4.642.3.491"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.498",
+        "2.16.840.1.113883.4.642.3.491"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-Endpoint.connectionType.html" : "Cross-version Extension for R5.Endpoint.connectionType for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/endpoint-payload-type",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "EndpointPayloadType",
+      "title" : "Endpoint Payload Type",
+      "description" : "This is an example value set defined by the FHIR project, that could be used to represent possible payload document types.",
+      "systems" : [
+        "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+        "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+        "http://terminology.hl7.org/CodeSystem/endpoint-payload-type"
+      ],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.496",
+        "2.16.840.1.113883.4.642.3.489"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.496",
+        "2.16.840.1.113883.4.642.3.489"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-Endpoint.payload.html" : "Cross-version Extension for R5.Endpoint.payload for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "MimeTypes",
+      "title" : "Mime Types",
+      "description" : "This value set includes all possible codes from BCP-13 (see http://tools.ietf.org/html/bcp13)",
+      "systems" : ["urn:ietf:bcp:13"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-Endpoint.payload.html" : "Cross-version Extension for R5.Endpoint.payload for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/series-performer-function",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ImagingStudySeriesPerformerFunction",
+      "title" : "ImagingStudy series performer function",
+      "description" : "Performer function of an agent in an imaging study series",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.4.642.3.989"],
+      "sources" : ["2.16.840.1.113883.4.642.3.989"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4",
+      "ValueSet-im-imaging-study-performer-type.html" : "Imaging Study Performer Type Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "PregnancyStatusUvIps",
+      "title" : "Pregnancy Status - IPS",
+      "description" : "IPS Pregnancy Status",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4",
+      "version" : "0.0.1-snapshot-1",
+      "status" : "draft",
+      "name" : "R5-imagingselection-2dgraphictype-for-R4",
+      "title" : "Cross-version VS for R5.ImagingSelection2DGraphicType for use in FHIR R4",
+      "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-2dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+      "systems" : ["http://hl7.org/fhir/imagingselection-2dgraphictype"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4",
+      "version" : "0.0.1-snapshot-1",
+      "status" : "draft",
+      "name" : "R5-imagingselection-3dgraphictype-for-R4",
+      "title" : "Cross-version VS for R5.ImagingSelection3DGraphicType for use in FHIR R4",
+      "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-3dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+      "systems" : ["http://hl7.org/fhir/imagingselection-3dgraphictype"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4",
+      "version" : "0.0.1-snapshot-1",
+      "status" : "draft",
+      "name" : "R5-imagingselection-status-for-R4",
+      "title" : "Cross-version VS for R5.ImagingSelectionStatus for use in FHIR R4",
+      "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-status|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+      "systems" : ["http://hl7.org/fhir/imagingselection-status"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0936",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSVSObservationType",
+      "title" : "hl7VS-VS-observationType",
+      "description" : "Value Set of codes that specify types of observations to enable systems to distinguish between observations sent along with an order, versus observations sent as the result to an order.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0936"],
+      "oids" : ["2.16.840.1.113883.21.460"],
+      "sources" : ["2.16.840.1.113883.21.460"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.html" : "Cross-version Extension for R5.DiagnosticReport.supportingInfo for use in FHIR R4"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActEncounterCode",
+      "title" : "ActEncounterCode",
+      "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.13955"],
+      "sources" : ["2.16.840.1.113883.1.11.13955"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "HL7FormatCodes",
+      "title" : "HL7 ValueSet of Format Codes for use with Document Sharing",
+      "description" : "The HL7-FormatCodes value set is defined to be the set of FormatCode(s) defined by implementation guides published by HL7 and other SDOs. The use of a formatCode from the FormatCodes value set specifies the technical format that a document conforms to. The formatCode is a further specialization more detailed than the mime-type. The formatCode provides sufficient information to allow any potential document content consumer to know if it can process and/or display the content of the document based on the document encoding, structure and template conformance indicated by the formatCode. The set of formatCodes is intended to be extensible. The Content Logical Description is defined intentionally to permit formatCodes defined by other Standards Development Organizations to be added by inclusion of additional formatCode Code Systems.",
+      "systems" : [
+        "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+        "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"
+      ],
+      "oids" : ["2.16.840.1.113883.11.19752"],
+      "sources" : ["2.16.840.1.113883.11.19752"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-DocumentReference.co.profile.html" : "Cross-version Extension for R5.DocumentReference.content.profile for use in FHIR R4"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-xEncounterAdmissionUrgency",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "XEncounterAdmissionUrgency",
+      "title" : "x_EncounterAdmissionUrgency",
+      "description" : "The urgency for starting a patient encounter.\r\n\r\n*Example:*Routine, urgent, emergency, and elective.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+      "oids" : ["2.16.840.1.113883.1.11.19457"],
+      "sources" : ["2.16.840.1.113883.1.11.19457"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    }
+  ]
+}

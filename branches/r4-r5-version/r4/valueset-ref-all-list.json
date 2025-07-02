@@ -1,0 +1,2342 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html",
+      "version" : "2022.4.20221006",
+      "status" : "active",
+      "name" : "AcquisitionModality",
+      "title" : null,
+      "description" : "Transitive closure of CID 29 AcquisitionModality",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.840.10008.6.1.19"],
+      "sources" : ["1.2.840.10008.6.1.19"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study"
+    },
+    {
+      "url" : "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html",
+      "version" : "2022.4.20221006",
+      "status" : "active",
+      "name" : "KeyObjectSelectionDocumentTitle",
+      "title" : null,
+      "description" : "Transitive closure of CID 7010 KeyObjectSelectionDocumentTitle",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.840.10008.6.1.490"],
+      "sources" : ["1.2.840.10008.6.1.490"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4",
+      "StructureDefinition-ImKeyImageImagingSelection.html" : "Key images represented as an ImagingSelection for R4",
+      "StructureDefinition-ImImagingSelection.html" : "Imaging Selection profile for R4",
+      "StructureDefinition-ImSrInstanceImagingSelection.html" : "Imaging Selection referring to a DICOM SR instance for R4"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingManifestTypesEuVS",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingManifestTypesEuVS",
+      "title" : "HL7 EU Imaging Manifest Types",
+      "description" : "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingReportTypesEuVS",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingReportTypesEuVS",
+      "title" : "HL7 EU Imaging Report Types",
+      "description" : "HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImSectionEmptyReason",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImSectionEmptyReason",
+      "title" : "Reasons a section in an imaging report is empty.",
+      "description" : "Reasons a section in an imaging report is empty.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/list-empty-reason"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-dose-length-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImDoseLengthUnits",
+      "title" : "Dose Length Units",
+      "description" : "Units for Dose Length.",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-effective-dose-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImEffectiveDoseUnits",
+      "title" : "Effective Dose Units",
+      "description" : "Units for Effective Dose.",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-gray-square-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImGraySquareUnits",
+      "title" : "Gray Square Units",
+      "description" : "Units for Gray Square.",
+      "systems" : ["http://unitsofmeasure.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-device-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingDeviceType",
+      "title" : "Imaging Device Type",
+      "description" : "Imaging Device Type.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-study-performer-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingStudyPerformerTypeVS",
+      "title" : "Imaging Study Performer Type Value Set",
+      "description" : "Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-procedure-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImProcedureType",
+      "title" : "Imaging Procedure Type",
+      "description" : "This value set includes all imaging procedure types.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/media-view",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CrossVersionMediaView",
+      "title" : "Media View types - placeholder for cross-version extension",
+      "description" : "Codes defined in SNOMED CT that can be used to record Media Recording views.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-CrossVersionMediaViewExtension.html" : "Media.view extension"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/periods-of-life-value-set",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "PeriodsOfLifeValueSet",
+      "title" : "Periods of Life",
+      "description" : "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-periods-of-life-extension.html" : "Periods of Life Extension"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/valueset-diagnosticreport-report-support-info",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "DiagnosticReportSupportingInfoVCodes",
+      "title" : "DiagnosticReport supportInfo codes",
+      "description" : "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "StructureDefinition-RelatedPersonEu.html" : "RelatedPerson Eu",
+      "StructureDefinition-PatientAnimalEu.html" : "Patient: Animal",
+      "StructureDefinition-ImPatient.html" : "IM Imaging Patient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-actuality",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventActuality",
+      "title" : "AdverseEventActuality",
+      "description" : "Overall nature of the adverse event, e.g. real or potential.",
+      "systems" : ["http://hl7.org/fhir/adverse-event-actuality"],
+      "oids" : ["2.16.840.1.113883.4.642.3.831"],
+      "sources" : ["2.16.840.1.113883.4.642.3.831"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventCategory",
+      "title" : "AdverseEventCategory",
+      "description" : "Overall categorization of the event, e.g. product-related or situational.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.833"],
+      "sources" : ["2.16.840.1.113883.4.642.3.833"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-causality-assess",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventCausalityAssessment",
+      "title" : "AdverseEventCausalityAssessment",
+      "description" : "Codes for the assessment of whether the entity caused the event.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-causality-assess"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.840"],
+      "sources" : ["2.16.840.1.113883.4.642.3.840"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-causality-method",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventCausalityMethod",
+      "title" : "AdverseEventCausalityMethod",
+      "description" : "TODO.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-causality-method"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.842"],
+      "sources" : ["2.16.840.1.113883.4.642.3.842"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventOutcome",
+      "title" : "AdverseEventOutcome",
+      "description" : "TODO (and should this be required?).",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.836"],
+      "sources" : ["2.16.840.1.113883.4.642.3.836"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-seriousness",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventSeriousness",
+      "title" : "AdverseEventSeriousness",
+      "description" : "Overall seriousness of this event for the patient.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.838"],
+      "sources" : ["2.16.840.1.113883.4.642.3.838"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-severity",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventSeverity",
+      "title" : "AdverseEventSeverity",
+      "description" : "The severity of the adverse event itself, in direct relation to the subject.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-severity"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.844"],
+      "sources" : ["2.16.840.1.113883.4.642.3.844"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all SNOMED CT Clinical Findings.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.835"],
+      "sources" : ["2.16.840.1.113883.4.642.3.835"],
+      "uses" : {
+      },
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/age-units",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonUCUMCodesForAge",
+      "title" : "Common UCUM Codes for Age",
+      "description" : "Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.19"],
+      "sources" : ["2.16.840.1.113883.4.642.3.19"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceCategory",
+      "title" : "AllergyIntoleranceCategory",
+      "description" : "Category of an identified substance associated with allergies or intolerances.",
+      "systems" : ["http://hl7.org/fhir/allergy-intolerance-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.133"],
+      "sources" : ["2.16.840.1.113883.4.642.3.133"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceCriticality",
+      "title" : "AllergyIntoleranceCriticality",
+      "description" : "Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.",
+      "systems" : ["http://hl7.org/fhir/allergy-intolerance-criticality"],
+      "oids" : ["2.16.840.1.113883.4.642.3.129"],
+      "sources" : ["2.16.840.1.113883.4.642.3.129"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceType",
+      "title" : "AllergyIntoleranceType",
+      "description" : "Identification of the underlying physiological mechanism for a Reaction Risk.",
+      "systems" : ["http://hl7.org/fhir/allergy-intolerance-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.131"],
+      "sources" : ["2.16.840.1.113883.4.642.3.131"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceClinicalStatusCodes",
+      "title" : "AllergyIntolerance Clinical Status Codes",
+      "description" : "Preferred value set for AllergyIntolerance Clinical Status.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1372"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1372"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceSubstance/Product,ConditionAndNegationCodes",
+      "title" : "AllergyIntolerance Substance/Product, Condition and Negation Codes",
+      "description" : "This value set includes concept codes for specific substances/pharmaceutical products, allergy or intolerance conditions, and negation/exclusion codes to specify the absence of specific types of allergies or intolerances.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.137"],
+      "sources" : ["2.16.840.1.113883.4.642.3.137"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-verification",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceVerificationStatusCodes",
+      "title" : "AllergyIntolerance Verification Status Codes",
+      "description" : "Preferred value set for AllergyIntolerance Verification Status.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1370"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1370"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/basic-resource-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "BasicResourceTypes",
+      "title" : "Basic Resource Types",
+      "description" : "This value set defines codes for resources not yet supported by (or which will never be supported by) FHIR.  Many of the codes listed here will eventually be turned into official resources.  However, there is no guarantee that any particular resource will be created nor that the scope will be exactly as defined by the codes presented here.  Codes in this set will be deprecated if/when formal resources are defined that encompass these concepts.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/basic-resource-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.138"],
+      "sources" : ["2.16.840.1.113883.4.642.3.138"],
+      "uses" : {
+      },
+      "StructureDefinition-ImKeyImageImagingSelection.html" : "Key images represented as an ImagingSelection for R4",
+      "StructureDefinition-ImImagingSelection.html" : "Imaging Selection profile for R4",
+      "StructureDefinition-ImSrInstanceImagingSelection.html" : "Imaging Selection referring to a DICOM SR instance for R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.141"],
+      "sources" : ["2.16.840.1.113883.4.642.3.141"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition",
+      "StructureDefinition-BodyStructureEu.html" : "EU BodyStructure",
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory",
+      "StructureDefinition-ImFinding.html" : "Finding",
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bodysite-laterality",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Laterality",
+      "title" : "Laterality",
+      "description" : "Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.287"],
+      "sources" : ["2.16.840.1.113883.4.642.3.287"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bodystructure-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMorphologicAbnormalities",
+      "title" : "SNOMED CT Morphologic Abnormalities",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.142"],
+      "sources" : ["2.16.840.1.113883.4.642.3.142"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructureEu.html" : "EU BodyStructure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bodystructure-relative-location",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "BodystructureLocationQualifier",
+      "title" : "Bodystructure Location Qualifier",
+      "description" : "SNOMED-CT concepts modifying the anatomic location",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.140"],
+      "sources" : ["2.16.840.1.113883.4.642.3.140"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructureEu.html" : "EU BodyStructure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "BundleType",
+      "title" : "BundleType",
+      "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+      "systems" : ["http://hl7.org/fhir/bundle-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.620"],
+      "sources" : ["2.16.840.1.113883.4.642.3.620"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudyManifest.html" : "IM ImagingStudy Manifest",
+      "StructureDefinition-ImReport.html" : "Document Bundle for Imaging Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-doc-typecodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentTypeValueSet",
+      "title" : "Document Type Value Set",
+      "description" : "This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.47"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.47"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "FacilityTypeCodeValueSet",
+      "title" : "Facility Type Code Value Set",
+      "description" : "This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.67"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.67"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PracticeSettingCodeValueSet",
+      "title" : "Practice Setting Code Value Set",
+      "description" : "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.72"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-kind",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityKind",
+      "title" : "Care Plan Activity Kind",
+      "description" : "Resource types defined as part of FHIR that can be represented as in-line definitions of a care plan activity.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.145"],
+      "sources" : ["2.16.840.1.113883.4.642.3.145"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityOutcome",
+      "title" : "Care Plan Activity Outcome",
+      "description" : "Example codes indicating the outcome of a care plan activity. Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.149"],
+      "sources" : ["2.16.840.1.113883.4.642.3.149"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityStatus",
+      "title" : "CarePlanActivityStatus",
+      "description" : "Codes that reflect the current state of a care plan activity within its overall life cycle.",
+      "systems" : ["http://hl7.org/fhir/care-plan-activity-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.146"],
+      "sources" : ["2.16.840.1.113883.4.642.3.146"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanCategory",
+      "title" : "Care Plan Category",
+      "description" : "Example codes indicating the category a care plan falls within.  Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.148"],
+      "sources" : ["2.16.840.1.113883.4.642.3.148"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanIntent",
+      "title" : "Care Plan Intent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a care plan.",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.150"],
+      "sources" : ["2.16.840.1.113883.4.642.3.150"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.232"],
+      "sources" : ["2.16.840.1.113883.4.642.3.232"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan",
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report",
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionAttestationMode",
+      "title" : "CompositionAttestationMode",
+      "description" : "The way in which a person authenticated a composition.",
+      "systems" : ["http://hl7.org/fhir/composition-attestation-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.238"],
+      "sources" : ["2.16.840.1.113883.4.642.3.238"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "systems" : ["http://hl7.org/fhir/composition-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.241"],
+      "sources" : ["2.16.840.1.113883.4.642.3.241"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionCategoryCodes",
+      "title" : "Condition Category Codes",
+      "description" : "Preferred value set for Condition Categories.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.162"],
+      "sources" : ["2.16.840.1.113883.4.642.3.162"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionClinicalStatusCodes",
+      "title" : "Condition Clinical Status Codes",
+      "description" : "Preferred value set for Condition Clinical Status.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+      "oids" : ["2.16.840.1.113883.4.642.3.164"],
+      "sources" : ["2.16.840.1.113883.4.642.3.164"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/Problem/DiagnosisCodes",
+      "title" : "Condition/Problem/Diagnosis Codes",
+      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.161"],
+      "sources" : ["2.16.840.1.113883.4.642.3.161"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition",
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/DiagnosisSeverity",
+      "title" : "Condition/Diagnosis Severity",
+      "description" : "Preferred value set for Condition/Diagnosis severity grading.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.168"],
+      "sources" : ["2.16.840.1.113883.4.642.3.168"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionStage",
+      "title" : "Condition Stage",
+      "description" : "Example value set for stages of cancer and other conditions.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.170"],
+      "sources" : ["2.16.840.1.113883.4.642.3.170"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionStageType",
+      "title" : "Condition Stage Type",
+      "description" : "Example value set for the type of stages of cancer and other conditions",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.171"],
+      "sources" : ["2.16.840.1.113883.4.642.3.171"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionVerificationStatus",
+      "title" : "ConditionVerificationStatus",
+      "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.166"],
+      "sources" : ["2.16.840.1.113883.4.642.3.166"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.5"],
+      "sources" : ["2.16.840.1.113883.4.642.3.5"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-action",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureDeviceActionCodes",
+      "title" : "Procedure Device Action Codes",
+      "description" : "Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.425"],
+      "sources" : ["2.16.840.1.113883.4.642.3.425"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-kind",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceTypes",
+      "title" : "FHIR Device Types",
+      "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.208"],
+      "sources" : ["2.16.840.1.113883.4.642.3.208"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-nametype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DeviceNameType",
+      "title" : "DeviceNameType",
+      "description" : "The type of name the device is referred by.",
+      "systems" : ["http://hl7.org/fhir/device-nametype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1083"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1083"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceStatus",
+      "title" : "FHIRDeviceStatus",
+      "description" : "The availability status of the device.",
+      "systems" : ["http://hl7.org/fhir/device-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.209"],
+      "sources" : ["2.16.840.1.113883.4.642.3.209"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-status-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDeviceStatusReason",
+      "title" : "FHIRDeviceStatusReason",
+      "description" : "The availability status reason of the device.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/device-status-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1081"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1081"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DeviceType",
+      "title" : "Device Type",
+      "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1376"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1376"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosisRole",
+      "title" : "DiagnosisRole",
+      "description" : "This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/diagnosis-role"],
+      "oids" : ["2.16.840.1.113883.4.642.3.49"],
+      "sources" : ["2.16.840.1.113883.4.642.3.49"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticReportStatus",
+      "title" : "DiagnosticReportStatus",
+      "description" : "The status of the diagnostic report.",
+      "systems" : ["http://hl7.org/fhir/diagnostic-report-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.235"],
+      "sources" : ["2.16.840.1.113883.4.642.3.235"],
+      "uses" : {
+      },
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticServiceSectionCodes",
+      "title" : "Diagnostic Service Section Codes",
+      "description" : "This value set includes all the codes in HL7 V2 table 0074.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+      "oids" : ["2.16.840.1.113883.4.642.3.234"],
+      "sources" : ["2.16.840.1.113883.4.642.3.234"],
+      "uses" : {
+      },
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/doc-section-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentSectionCodes",
+      "title" : "Document Section Codes",
+      "description" : "Document section codes (LOINC codes used in CCDA sections).",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.237"],
+      "sources" : ["2.16.840.1.113883.4.642.3.237"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDocumentTypeCodes",
+      "title" : "FHIR Document Type Codes",
+      "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.240"],
+      "sources" : ["2.16.840.1.113883.4.642.3.240"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentClassValueSet",
+      "title" : "Document Class Value Set",
+      "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentReferenceStatus",
+      "title" : "DocumentReferenceStatus",
+      "description" : "The status of the document reference.",
+      "systems" : ["http://hl7.org/fhir/document-reference-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.7"],
+      "sources" : ["2.16.840.1.113883.4.642.3.7"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentRelationshipType",
+      "title" : "DocumentRelationshipType",
+      "description" : "The type of relationship between documents.",
+      "systems" : ["http://hl7.org/fhir/document-relationship-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.244"],
+      "sources" : ["2.16.840.1.113883.4.642.3.244"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-admit-source",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdmitSource",
+      "title" : "Admit source",
+      "description" : "This value set defines a set of codes that can be used to indicate from where the patient came in.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/admit-source"],
+      "oids" : ["2.16.840.1.113883.4.642.3.257"],
+      "sources" : ["2.16.840.1.113883.4.642.3.257"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-diet",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Diet",
+      "title" : "Diet",
+      "description" : "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/diet"],
+      "oids" : ["2.16.840.1.113883.4.642.3.255"],
+      "sources" : ["2.16.840.1.113883.4.642.3.255"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-discharge-disposition",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DischargeDisposition",
+      "title" : "Discharge disposition",
+      "description" : "This value set defines a set of codes that can be used to where the patient left the hospital.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/discharge-disposition"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.259"],
+      "sources" : ["2.16.840.1.113883.4.642.3.259"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-location-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterLocationStatus",
+      "title" : "EncounterLocationStatus",
+      "description" : "The status of the location.",
+      "systems" : ["http://hl7.org/fhir/encounter-location-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.262"],
+      "sources" : ["2.16.840.1.113883.4.642.3.262"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantType",
+      "title" : "Participant type",
+      "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/participant-type",
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.250"],
+      "sources" : ["2.16.840.1.113883.4.642.3.250"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterReasonCodes",
+      "title" : "Encounter Reason Codes",
+      "description" : "This examples value set defines the set of codes that can be used to indicate reasons for an encounter.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.261"],
+      "sources" : ["2.16.840.1.113883.4.642.3.261"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecialArrangements",
+      "title" : "Special arrangements",
+      "description" : "This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.253"],
+      "sources" : ["2.16.840.1.113883.4.642.3.253"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-special-courtesy",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecialCourtesy",
+      "title" : "Special courtesy",
+      "description" : "This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.252"],
+      "sources" : ["2.16.840.1.113883.4.642.3.252"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/encounter-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EncounterStatus",
+      "title" : "EncounterStatus",
+      "description" : "Current state of the encounter.",
+      "systems" : ["http://hl7.org/fhir/encounter-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.246"],
+      "sources" : ["2.16.840.1.113883.4.642.3.246"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/endpoint-connection-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EndpointConnectionType",
+      "title" : "Endpoint Connection Type",
+      "description" : "This is an example value set defined by the FHIR project, that could be used to represent possible connection type profile values.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/endpoint-connection-type"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.498"],
+      "sources" : ["2.16.840.1.113883.4.642.3.498"],
+      "uses" : {
+      },
+      "StructureDefinition-EndpointEu.html" : "EU Endpoint",
+      "StructureDefinition-ImImageIidViewerEndpoint.html" : "IM Image Viewer Endpoint",
+      "StructureDefinition-ImWadoEndpoint.html" : "IM WADO Endpoint"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/endpoint-payload-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EndpointPayloadType",
+      "title" : "Endpoint Payload Type",
+      "description" : "This is an example value set defined by the FHIR project, that could be used to represent possible payload document types.",
+      "systems" : [
+        "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+        "http://terminology.hl7.org/CodeSystem/endpoint-payload-type"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.496"],
+      "sources" : ["2.16.840.1.113883.4.642.3.496"],
+      "uses" : {
+      },
+      "StructureDefinition-EndpointEu.html" : "EU Endpoint",
+      "StructureDefinition-ImImageIidViewerEndpoint.html" : "IM Image Viewer Endpoint",
+      "StructureDefinition-ImWadoEndpoint.html" : "IM WADO Endpoint"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/endpoint-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EndpointStatus",
+      "title" : "EndpointStatus",
+      "description" : "The status of the endpoint.",
+      "systems" : ["http://hl7.org/fhir/endpoint-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.494"],
+      "sources" : ["2.16.840.1.113883.4.642.3.494"],
+      "uses" : {
+      },
+      "StructureDefinition-EndpointEu.html" : "EU Endpoint",
+      "StructureDefinition-ImImageIidViewerEndpoint.html" : "IM Image Viewer Endpoint",
+      "StructureDefinition-ImWadoEndpoint.html" : "IM WADO Endpoint"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/event-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "EventStatus",
+      "title" : "EventStatus",
+      "description" : "Codes identifying the lifecycle stage of an event.",
+      "systems" : ["http://hl7.org/fhir/event-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.109"],
+      "sources" : ["2.16.840.1.113883.4.642.3.109"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/formatcodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentReferenceFormatCodeSet",
+      "title" : "DocumentReference Format Code Set",
+      "description" : "The value set is defined to be the set of format codes defined by the IHE Technical Framework, and also including additional format codes defined by the    HL7. The value set is listed in HITSP C80 Table 2-153 Format Code Value Set Definition,    with additions published later by IHE as published    at http://wiki.ihe.net/index.php?title=IHE_Format_Codes   and with additions published later by HL7 as published at https://confluence.hl7.org/display/SD/Format+Codes+for+IHE+XDS.   This is the code specifying the technical format of the document. Along with the typeCode,    it should provide sufficient information to allow any potential document consumer to know    if it will be able to process the document. The code shall be sufficiently specific to    ensure processing/display by identifying a document encoding, structure and template. The actual list of codes here is incomplete",
+      "systems" : ["http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"],
+      "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/http-verb",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "HTTPVerb",
+      "title" : "HTTPVerb",
+      "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+      "systems" : ["http://hl7.org/fhir/http-verb"],
+      "oids" : ["2.16.840.1.113883.4.642.3.624"],
+      "sources" : ["2.16.840.1.113883.4.642.3.624"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudyManifest.html" : "IM ImagingStudy Manifest",
+      "StructureDefinition-ImReport.html" : "Document Bundle for Imaging Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Identifier Type Codes",
+      "title" : "IdentifierType",
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+      "oids" : ["2.16.840.1.113883.4.642.3.45"],
+      "sources" : ["2.16.840.1.113883.4.642.3.45"],
+      "uses" : {
+      },
+      "StructureDefinition-im-sop-instance-uid-identifier.html" : "Imaging SOP Class UID Identifier",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-IheMhdEntryUUIDIdentifier.html" : "Placeholder for IHE MHD Entry UUID Identifier in FHIR R5.",
+      "StructureDefinition-im-study-instance-uid-identifier.html" : "Study Instance UID Identifier",
+      "StructureDefinition-ImFinding.html" : "Finding",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference",
+      "StructureDefinition-im-accession-number-identifier.html" : "Imaging Accession Number Identifier"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IdentifierUse",
+      "title" : "IdentifierUse",
+      "description" : "Identifies the purpose for this identifier, if known .",
+      "systems" : ["http://hl7.org/fhir/identifier-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.57"],
+      "sources" : ["2.16.840.1.113883.4.642.3.57"],
+      "uses" : {
+      },
+      "StructureDefinition-im-sop-instance-uid-identifier.html" : "Imaging SOP Class UID Identifier",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-IheMhdEntryUUIDIdentifier.html" : "Placeholder for IHE MHD Entry UUID Identifier in FHIR R5.",
+      "StructureDefinition-im-study-instance-uid-identifier.html" : "Study Instance UID Identifier",
+      "StructureDefinition-ImFinding.html" : "Finding",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference",
+      "StructureDefinition-im-accession-number-identifier.html" : "Imaging Accession Number Identifier"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/imagingstudy-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImagingStudyStatus",
+      "title" : "ImagingStudyStatus",
+      "description" : "The status of the ImagingStudy.",
+      "systems" : ["http://hl7.org/fhir/imagingstudy-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.990"],
+      "sources" : ["2.16.840.1.113883.4.642.3.990"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition",
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan",
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study",
+      "StructureDefinition-ImReport.html" : "Document Bundle for Imaging Report",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-MedicationEu.html" : "EU Medication",
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImSrInstanceImagingSelection.html" : "Imaging Selection referring to a DICOM SR instance for R4",
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-EndpointEu.html" : "EU Endpoint",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImImageIidViewerEndpoint.html" : "IM Image Viewer Endpoint",
+      "StructureDefinition-ImImagingSelection.html" : "Imaging Selection profile for R4",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-EncounterEu.html" : "EU Encounter",
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory",
+      "StructureDefinition-ImImagingStudyManifest.html" : "IM ImagingStudy Manifest",
+      "StructureDefinition-ImKeyImageImagingSelection.html" : "Key images represented as an ImagingSelection for R4",
+      "StructureDefinition-ImAdverseEvent.html" : "Imaging Adverse Event",
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance",
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order",
+      "StructureDefinition-ImPatient.html" : "IM Imaging Patient",
+      "StructureDefinition-BodyStructureEu.html" : "EU BodyStructure",
+      "StructureDefinition-RelatedPersonEu.html" : "RelatedPerson Eu",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-PatientAnimalEu.html" : "Patient: Animal",
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report",
+      "StructureDefinition-ImFinding.html" : "Finding",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference",
+      "StructureDefinition-ImWadoEndpoint.html" : "IM WADO Endpoint"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/link-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "LinkType",
+      "title" : "LinkType",
+      "description" : "The type of link between this patient resource and another patient resource.",
+      "systems" : ["http://hl7.org/fhir/link-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.423"],
+      "sources" : ["2.16.840.1.113883.4.642.3.423"],
+      "uses" : {
+      },
+      "StructureDefinition-PatientAnimalEu.html" : "Patient: Animal",
+      "StructureDefinition-ImPatient.html" : "IM Imaging Patient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListEmptyReasons",
+      "title" : "List Empty Reasons",
+      "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/list-empty-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.322"],
+      "sources" : ["2.16.840.1.113883.4.642.3.322"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListMode",
+      "title" : "ListMode",
+      "description" : "The processing mode that applies to this list.",
+      "systems" : ["http://hl7.org/fhir/list-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.318"],
+      "sources" : ["2.16.840.1.113883.4.642.3.318"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-order",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListOrderCodes",
+      "title" : "List Order Codes",
+      "description" : "Base values for the order of the items in a list resource.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/list-order"],
+      "oids" : ["2.16.840.1.113883.4.642.3.324"],
+      "sources" : ["2.16.840.1.113883.4.642.3.324"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/location-physical-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LocationType",
+      "title" : "Location type",
+      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/location-physical-type"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.328"],
+      "sources" : ["2.16.840.1.113883.4.642.3.328"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ManifestationAndSymptomCodes",
+      "title" : "Manifestation and Symptom Codes",
+      "description" : "Example value set for Manifestation and Symptom codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.169"],
+      "sources" : ["2.16.840.1.113883.4.642.3.169"],
+      "uses" : {
+      },
+      "StructureDefinition-ConditionEu.html" : "EU Condition"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Marital Status Codes",
+      "title" : "MaritalStatus",
+      "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.29"],
+      "sources" : ["2.16.840.1.113883.4.642.3.29"],
+      "uses" : {
+      },
+      "StructureDefinition-PatientAnimalEu.html" : "Patient: Animal",
+      "StructureDefinition-ImPatient.html" : "IM Imaging Patient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationAsNeededReasonCodes",
+      "title" : "SNOMED CT Medication As Needed Reason Codes",
+      "description" : "This value set includes all clinical findings from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.96"],
+      "sources" : ["2.16.840.1.113883.4.642.3.96"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.375"],
+      "sources" : ["2.16.840.1.113883.4.642.3.375"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan",
+      "StructureDefinition-MedicationEu.html" : "EU Medication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTFormCodes",
+      "title" : "SNOMED CT Form Codes",
+      "description" : "This value set includes all dose form codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.374"],
+      "sources" : ["2.16.840.1.113883.4.642.3.374"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationEu.html" : "EU Medication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Medication Status Codes",
+      "title" : "Medication  status  codes",
+      "description" : "Medication Status Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medication-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.376"],
+      "sources" : ["2.16.840.1.113883.4.642.3.376"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationEu.html" : "EU Medication"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Mime Types",
+      "title" : "MimeType",
+      "description" : "This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)",
+      "systems" : ["urn:ietf:bcp:13"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-EndpointEu.html" : "EU Endpoint",
+      "StructureDefinition-ImImageIidViewerEndpoint.html" : "IM Image Viewer Endpoint",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference",
+      "StructureDefinition-ImWadoEndpoint.html" : "IM WADO Endpoint"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/name-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "NameUse",
+      "title" : "NameUse",
+      "description" : "The use of a human name.",
+      "systems" : ["http://hl7.org/fhir/name-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.65"],
+      "sources" : ["2.16.840.1.113883.4.642.3.65"],
+      "uses" : {
+      },
+      "StructureDefinition-PatientAnimalEu.html" : "Patient: Animal",
+      "StructureDefinition-ImPatient.html" : "IM Imaging Patient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.403"],
+      "sources" : ["2.16.840.1.113883.4.642.3.403"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCCodes",
+      "title" : "LOINC Codes",
+      "description" : "This value set includes all LOINC codes",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.396"],
+      "sources" : ["2.16.840.1.113883.4.642.3.396"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationInterpretationCodes",
+      "title" : "Observation Interpretation Codes",
+      "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.399"],
+      "sources" : ["2.16.840.1.113883.4.642.3.399"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationMethods",
+      "title" : "Observation Methods",
+      "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.395"],
+      "sources" : ["2.16.840.1.113883.4.642.3.395"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "systems" : ["http://hl7.org/fhir/observation-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.400"],
+      "sources" : ["2.16.840.1.113883.4.642.3.400"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/participant-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantRoles",
+      "title" : "Participant Roles",
+      "description" : "Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.152"],
+      "sources" : ["2.16.840.1.113883.4.642.3.152"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PatientContactRelationship",
+      "title" : "Patient Contact Relationship ",
+      "description" : "The nature of the relationship between the patient and the contact person.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+      "uses" : {
+      },
+      "StructureDefinition-PatientAnimalEu.html" : "Patient: Animal",
+      "StructureDefinition-ImPatient.html" : "IM Imaging Patient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedurePerformerRoleCodes",
+      "title" : "Procedure Performer Role Codes",
+      "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.433"],
+      "sources" : ["2.16.840.1.113883.4.642.3.433"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureCategoryCodes(SNOMEDCT)",
+      "title" : "Procedure Category Codes (SNOMED CT)",
+      "description" : "Procedure Category code: A selection of relevant SNOMED CT codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.430"],
+      "sources" : ["2.16.840.1.113883.4.642.3.430"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureCodes(SNOMEDCT)",
+      "title" : "Procedure Codes (SNOMED CT)",
+      "description" : "Procedure Code: All SNOMED CT procedure codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.427"],
+      "sources" : ["2.16.840.1.113883.4.642.3.427"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan",
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureFollowUpCodes(SNOMEDCT)",
+      "title" : "Procedure Follow up Codes (SNOMED CT)",
+      "description" : "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.429"],
+      "sources" : ["2.16.840.1.113883.4.642.3.429"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ProcedureNotPerformedReason(SNOMED-CT)",
+      "title" : "Procedure Not Performed Reason (SNOMED-CT)",
+      "description" : "Situation codes describing the reason that a procedure, which might otherwise be expected, was not performed, or a procedure that was started and was not completed. Consists of SNOMED CT codes, children of procedure contraindicated (183932001), procedure discontinued (416406003), procedure not done (416237000), procedure not indicated (428119001), procedure not offered (416064006), procedure not wanted (416432009), procedure refused (183944003), and procedure stopped (394908001).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.431"],
+      "sources" : ["2.16.840.1.113883.4.642.3.431"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureOutcomeCodes(SNOMEDCT)",
+      "title" : "Procedure Outcome Codes (SNOMED CT)",
+      "description" : "Procedure Outcome code: A selection of relevant SNOMED CT codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.428"],
+      "sources" : ["2.16.840.1.113883.4.642.3.428"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureReasonCodes",
+      "title" : "Procedure Reason Codes",
+      "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.432"],
+      "sources" : ["2.16.840.1.113883.4.642.3.432"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study",
+      "StructureDefinition-ProcedureEu.html" : "EU Procedure",
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order",
+      "StructureDefinition-ImProcedure.html" : "IM Imaging Procedure"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-SimpleQuantityEu.html" : "EU SimpleQuantity",
+      "StructureDefinition-quantity-eu.html" : "EU Quantity"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/reaction-event-severity",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceSeverity",
+      "title" : "AllergyIntoleranceSeverity",
+      "description" : "Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.",
+      "systems" : ["http://hl7.org/fhir/reaction-event-severity"],
+      "oids" : ["2.16.840.1.113883.4.642.3.135"],
+      "sources" : ["2.16.840.1.113883.4.642.3.135"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeAppliesToCodes",
+      "title" : "Observation Reference Range Applies To Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-Race",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.407"],
+      "sources" : ["2.16.840.1.113883.4.642.3.407"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeMeaningCodes",
+      "title" : "Observation Reference Range Meaning Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.397"],
+      "sources" : ["2.16.840.1.113883.4.642.3.397"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "PatientRelationshipType",
+      "title" : "Patient relationship type",
+      "description" : "A set of codes that can be used to indicate the relationship between a Patient and a Related Person.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "http://terminology.hl7.org/CodeSystem/v2-0131"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.449"],
+      "sources" : ["2.16.840.1.113883.4.642.3.449"],
+      "uses" : {
+      },
+      "StructureDefinition-RelatedPersonEu.html" : "RelatedPerson Eu"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/report-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCDiagnosticReportCodes",
+      "title" : "LOINC Diagnostic Report Codes",
+      "description" : "This value set includes LOINC codes that relate to Diagnostic Observations.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.233"],
+      "sources" : ["2.16.840.1.113883.4.642.3.233"],
+      "uses" : {
+      },
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestIntent",
+      "title" : "RequestIntent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.113"],
+      "sources" : ["2.16.840.1.113883.4.642.3.113"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "Request priority",
+      "description" : "The clinical priority of a diagnostic order.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.111"],
+      "sources" : ["2.16.840.1.113883.4.642.3.111"],
+      "uses" : {
+      },
+      "StructureDefinition-CarePlanEu.html" : "EU CarePlan",
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.27"],
+      "sources" : ["2.16.840.1.113883.4.642.3.27"],
+      "uses" : {
+      },
+      "StructureDefinition-ImGestationalAgeObservation.html" : "Gestational Age Observation",
+      "StructureDefinition-ObservationEu.html" : "EU Observation",
+      "StructureDefinition-ImImagingStudy.html" : "IM Imaging Study",
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report",
+      "StructureDefinition-ImRadiationDoseObservation.html" : "Radiation Dose Observation",
+      "StructureDefinition-ImFinding.html" : "Finding",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference",
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/route-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTRouteCodes",
+      "title" : "SNOMED CT Route Codes",
+      "description" : "This value set includes all Route codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.98"],
+      "sources" : ["2.16.840.1.113883.4.642.3.98"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "SearchEntryMode",
+      "title" : "SearchEntryMode",
+      "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+      "systems" : ["http://hl7.org/fhir/search-entry-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.622"],
+      "sources" : ["2.16.840.1.113883.4.642.3.622"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingStudyManifest.html" : "IM ImagingStudy Manifest",
+      "StructureDefinition-ImReport.html" : "Document Bundle for Imaging Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "All Security Labels",
+      "title" : "SecurityLabels",
+      "description" : "A single value set for all security labels defined by FHIR.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.47"],
+      "sources" : ["2.16.840.1.113883.4.642.3.47"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/series-performer-function",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImagingStudySeriesPerformerFunction",
+      "title" : "ImagingStudy series performer function",
+      "description" : "Performer function of an agent in an imaging study series",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.4.642.3.989"],
+      "sources" : ["2.16.840.1.113883.4.642.3.989"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-ImagingSelection.html" : "Cross-version Extension for R5.ImagingSelection for use in FHIR R4",
+      "StructureDefinition-ImKeyImageImagingSelection.html" : "Key images represented as an ImagingSelection for R4",
+      "ValueSet-im-imaging-study-performer-type.html" : "Imaging Study Performer Type Value Set",
+      "StructureDefinition-ImImagingSelection.html" : "Imaging Selection profile for R4",
+      "StructureDefinition-ImSrInstanceImagingSelection.html" : "Imaging Selection referring to a DICOM SR instance for R4"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/service-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceType",
+      "title" : "Service type",
+      "description" : "This value set defines an example set of codes of service-types.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/service-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.518"],
+      "sources" : ["2.16.840.1.113883.4.642.3.518"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/servicerequest-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceRequestCategoryCodes",
+      "title" : "Service Request Category Codes",
+      "description" : "An example value set of SNOMED CT concepts that can classify a requested service",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.434"],
+      "sources" : ["2.16.840.1.113883.4.642.3.434"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/servicerequest-orderdetail",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ServiceRequestOrderDetailsCodes",
+      "title" : "Service Request Order Details Codes",
+      "description" : "An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.435"],
+      "sources" : ["2.16.840.1.113883.4.642.3.435"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-collection-method",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRSpecimenCollectionMethod",
+      "title" : "FHIR Specimen Collection Method",
+      "description" : " This example value set defines a set of codes that can be used to indicate the method by which a specimen was collected.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.468"],
+      "sources" : ["2.16.840.1.113883.4.642.3.468"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-container-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenContainerType",
+      "title" : "Specimen Container Type",
+      "description" : "Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 706041008 |Device for body fluid and tissue collection/transfer/processing (physical object)|",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.470"],
+      "sources" : ["2.16.840.1.113883.4.642.3.470"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-processing-procedure",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenProcessingProcedure",
+      "title" : "Specimen processing procedure",
+      "description" : "The technique that is used to perform the process or preserve the specimen.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0373"],
+      "oids" : ["2.16.840.1.113883.4.642.3.469"],
+      "sources" : ["2.16.840.1.113883.4.642.3.469"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenStatus",
+      "title" : "SpecimenStatus",
+      "description" : "Codes providing the status/availability of a specimen.",
+      "systems" : ["http://hl7.org/fhir/specimen-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.471"],
+      "sources" : ["2.16.840.1.113883.4.642.3.471"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubstanceCode",
+      "title" : "Substance Code",
+      "description" : "This value set contains concept codes for specific substances. It includes codes from [SNOMED](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical / biologic product (product))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.473"],
+      "sources" : ["2.16.840.1.113883.4.642.3.473"],
+      "uses" : {
+      },
+      "StructureDefinition-AllergyIntoleranceEu.html" : "EU AllergyIntolerance"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/udi-entry-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "UDIEntryType",
+      "title" : "UDIEntryType",
+      "description" : "Codes to identify how UDI data was entered.",
+      "systems" : ["http://hl7.org/fhir/udi-entry-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.211"],
+      "sources" : ["2.16.840.1.113883.4.642.3.211"],
+      "uses" : {
+      },
+      "StructureDefinition-ImImagingDevice.html" : "Im Imaging Device"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips",
+      "version" : "1.1.0",
+      "status" : "active",
+      "name" : "PregnancyStatusUvIps",
+      "title" : "Pregnancy Status - IPS",
+      "description" : "IPS Pregnancy Status",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSReAdmissionIndicator",
+      "title" : "hl7VS-re-admissionIndicator",
+      "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
+      "oids" : ["2.16.840.1.113883.21.40"],
+      "sources" : ["2.16.840.1.113883.21.40"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0371",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdditivePreservative",
+      "title" : "hl7VS-additivePreservative",
+      "description" : "Concepts specifying any additive introduced to the specimen before or at the time of collection.  These additives may be introduced in order to preserve, maintain or enhance the particular nature or component of the specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0371"],
+      "oids" : ["2.16.840.1.113883.21.245"],
+      "sources" : ["2.16.840.1.113883.21.245"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0487",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSSpecimenType",
+      "title" : "hl7VS-specimenType",
+      "description" : "Concepts that describe the precise nature of an entity that may be used as the source material for an observation.  This is one of two code systems that are used instead of table 0070 (code system xxxx) which conflated specimen types and specimen collection methods.   Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0487"],
+      "oids" : ["2.16.840.1.113883.21.327"],
+      "sources" : ["2.16.840.1.113883.21.327"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0493",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSSpecimenCondition",
+      "title" : "hl7VS-specimenCondition",
+      "description" : "Concepts of modes or states of being that describe the nature of a specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0493"],
+      "oids" : ["2.16.840.1.113883.21.333"],
+      "sources" : ["2.16.840.1.113883.21.333"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0916",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSRelevantClincialInformation",
+      "title" : "hl7VS-relevantClincialInformation",
+      "description" : "Value Set of codes that specify additional clinical information about the patient or specimen to report the supporting and/or suspected diagnosis and clinical findings on requests for interpreted diagnostic studies.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0916"],
+      "oids" : ["2.16.840.1.113883.21.440"],
+      "sources" : ["2.16.840.1.113883.21.440"],
+      "uses" : {
+      },
+      "StructureDefinition-SpecimenEu.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0936",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSVSObservationType",
+      "title" : "hl7VS-VS-observationType",
+      "description" : "Value Set of codes that specify types of observations to enable systems to distinguish between observations sent along with an order, versus observations sent as the result to an order.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0936"],
+      "oids" : ["2.16.840.1.113883.21.460"],
+      "sources" : ["2.16.840.1.113883.21.460"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-DiagnosticReport.supportingInfo.html" : "Cross-version Extension for R5.DiagnosticReport.supportingInfo for use in FHIR R4",
+      "StructureDefinition-ImDiagnosticReport.html" : "Imaging Diagnostic Report"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "v3 Code System ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-ImIheMhdDocumentReference.html" : "r4 DocumentReference for MHD deployments",
+      "StructureDefinition-ImReportIheMhdDocumentReference.html" : "Report DocumentReference for MHD deployments",
+      "StructureDefinition-DocumentReferenceEu.html" : "DocumentReferenceEu",
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition",
+      "StructureDefinition-ImManifestIheMhdDocumentReference.html" : "Manifest DocumentReference for MHD deployments",
+      "StructureDefinition-ImKeyImageDocumentReference.html" : "Imaging Key Image Document Reference"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActEncounterCode",
+      "title" : "ActEncounterCode",
+      "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "oids" : ["2.16.840.1.113883.1.11.13955"],
+      "sources" : ["2.16.840.1.113883.1.11.13955"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
+      "version" : "2014-03-26",
+      "status" : "active",
+      "name" : "v3.ConfidentialityClassification",
+      "title" : "V3 Value SetConfidentialityClassification",
+      "description" : " Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+      "oids" : ["2.16.840.1.113883.1.11.10228"],
+      "sources" : ["2.16.840.1.113883.1.11.10228"],
+      "uses" : {
+      },
+      "StructureDefinition-CompositionEu.html" : "EU Composition",
+      "StructureDefinition-ImComposition.html" : "Imaging Composition"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "HL7FormatCodes",
+      "title" : "HL7 ValueSet of Format Codes for use with Document Sharing",
+      "description" : "The HL7-FormatCodes value set is defined to be the set of FormatCode(s) defined by implementation guides published by HL7 and other SDOs. The use of a formatCode from the FormatCodes value set specifies the technical format that a document conforms to. The formatCode is a further specialization more detailed than the mime-type. The formatCode provides sufficient information to allow any potential document content consumer to know if it can process and/or display the content of the document based on the document encoding, structure and template conformance indicated by the formatCode. The set of formatCodes is intended to be extensible. The Content Logical Description is defined intentionally to permit formatCodes defined by other Standards Development Organizations to be added by inclusion of additional formatCode Code Systems.",
+      "systems" : [
+        "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+        "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes"
+      ],
+      "oids" : ["2.16.840.1.113883.11.19752"],
+      "sources" : ["2.16.840.1.113883.11.19752"],
+      "uses" : {
+      },
+      "StructureDefinition-ext-R5-DocumentReference.co.profile.html" : "Cross-version Extension for R5.DocumentReference.content.profile for use in FHIR R4"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ServiceDeliveryLocationRoleType",
+      "title" : "ServiceDeliveryLocationRoleType",
+      "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+      "oids" : ["2.16.840.1.113883.1.11.17660"],
+      "sources" : ["2.16.840.1.113883.1.11.17660"],
+      "uses" : {
+      },
+      "StructureDefinition-ImOrder.html" : "IM Imaging Order"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-xEncounterAdmissionUrgency",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "XEncounterAdmissionUrgency",
+      "title" : "x_EncounterAdmissionUrgency",
+      "description" : "The urgency for starting a patient encounter.\r\n\r\n*Example:*Routine, urgent, emergency, and elective.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+      "oids" : ["2.16.840.1.113883.1.11.19457"],
+      "sources" : ["2.16.840.1.113883.1.11.19457"],
+      "uses" : {
+      },
+      "StructureDefinition-EncounterEu.html" : "EU Encounter"
+    }
+  ]
+}

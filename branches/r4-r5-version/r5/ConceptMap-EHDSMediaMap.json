@@ -1,0 +1,155 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSMediaMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSMediaMap</b></p><a name=\"EHDSMediaMap\"> </a><a name=\"hcEHDSMediaMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSMedia.html\">Media model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSMedia.html\">Media model</a> to <a href=\"http://hl7.org/fhir/R5/documentreference.html\">DocumentReference</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier (C.14.1 - Identifier)</td><td/></tr><tr><td>type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>type (C.14.2 - Type)</td><td>part of the mimetype</td></tr><tr><td>modality</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>modality (C.14.3 - Modality)</td><td/></tr><tr><td>view</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension[view] (C.14.4 - View)</td><td/></tr><tr><td>subject[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>subject (C.14.5 - Subject)</td><td/></tr><tr><td>created[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td>period (C.14.6 - Created)</td><td/></tr><tr><td>reason</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td>event (C.14.7 - Reason)</td><td>Event codes the context or the reason for the DocumentReference.</td></tr><tr><td>bodysite</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>bodySite.concept (C.14.8 - BodySite)</td><td/></tr><tr><td>deviceName</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author (C.14.9 - Device name)</td><td/></tr><tr><td>device</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author (C.14.10 - Device)</td><td/></tr><tr><td>content</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>content.attachment (C.14.11 - Content)</td><td/></tr><tr><td>note</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension[note] (C.14.12 - Note)</td><td/></tr><tr><td>performer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author (C.14.13 - Performer)</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSMedia.html\">Media model</a> to <a href=\"http://hl7.org/fhir/R5/device.html\">Device</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>deviceName</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>name (C.14.9 - Device name)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMediaMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSMediaMap",
+  "title" : "EHDSMedia Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSMedia",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
+    "target" : "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.14.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "type",
+      "target" : [{
+        "code" : "type",
+        "display" : "C.14.2 - Type",
+        "relationship" : "equivalent",
+        "comment" : "part of the mimetype"
+      }]
+    },
+    {
+      "code" : "modality",
+      "target" : [{
+        "code" : "modality",
+        "display" : "C.14.3 - Modality",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "view",
+      "target" : [{
+        "code" : "extension[view]",
+        "display" : "C.14.4 - View",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "subject[x]",
+      "target" : [{
+        "code" : "subject",
+        "display" : "C.14.5 - Subject",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "created[x]",
+      "target" : [{
+        "code" : "period",
+        "display" : "C.14.6 - Created",
+        "relationship" : "source-is-narrower-than-target"
+      }]
+    },
+    {
+      "code" : "reason",
+      "target" : [{
+        "code" : "event",
+        "display" : "C.14.7 - Reason",
+        "relationship" : "source-is-narrower-than-target",
+        "comment" : "Event codes the context or the reason for the DocumentReference."
+      }]
+    },
+    {
+      "code" : "bodysite",
+      "target" : [{
+        "code" : "bodySite.concept",
+        "display" : "C.14.8 - BodySite",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "deviceName",
+      "target" : [{
+        "code" : "author",
+        "display" : "C.14.9 - Device name",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "device",
+      "target" : [{
+        "code" : "author",
+        "display" : "C.14.10 - Device",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "content",
+      "target" : [{
+        "code" : "content.attachment",
+        "display" : "C.14.11 - Content",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "note",
+      "target" : [{
+        "code" : "extension[note]",
+        "display" : "C.14.12 - Note",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "performer",
+      "target" : [{
+        "code" : "author",
+        "display" : "C.14.13 - Performer",
+        "relationship" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Device",
+    "element" : [{
+      "code" : "deviceName",
+      "target" : [{
+        "code" : "name",
+        "display" : "C.14.9 - Device name",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

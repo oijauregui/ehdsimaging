@@ -1,0 +1,136 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAddressMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSAddressMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSAddressMap</b></p><a name=\"EHDSAddressMap\"> </a><a name=\"hcEHDSAddressMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSAddress.html\">Address model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSAddress.html\">Address model</a> to <a href=\"http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-Address-eu.html\">Address (EU)</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/base-r5/StructureDefinition/Address-eu</td></tr><tr><td style=\"border-right-width: 0px\">use</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">use</td><td style=\"border-left-width: 0px\">C.5.1 - Use</td></tr><tr><td style=\"border-right-width: 0px\">type</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">type</td><td style=\"border-left-width: 0px\">C.5.2 - Type</td></tr><tr><td style=\"border-right-width: 0px\">text</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">text</td><td style=\"border-left-width: 0px\">C.5.3 - Text</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">street</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">line</td><td style=\"border-left-width: 0px\">C.5.4 - Street</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">line.extension[streetName]</td><td style=\"border-left-width: 0px\">C.5.4 - Street</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">houseNumber</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">line</td><td style=\"border-left-width: 0px\">C.5.5 - House number</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">line.extension[houseNumber]</td><td style=\"border-left-width: 0px\">C.5.5 - House number</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">pOBox</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target\" title=\"source-is-narrower-than-target\">is narrower than</a></td><td style=\"border-right-width: 0px\">line</td><td style=\"border-left-width: 0px\">C.5.6 - P.O. Box</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">line.extension[postBox]</td><td style=\"border-left-width: 0px\">C.5.6 - P.O. Box</td></tr><tr><td style=\"border-right-width: 0px\">city</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">city</td><td style=\"border-left-width: 0px\">C.5.7 - City</td></tr><tr><td style=\"border-right-width: 0px\">postalCode</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">postalCode</td><td style=\"border-left-width: 0px\">C.5.8 - Postal code</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">country</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">country</td><td style=\"border-left-width: 0px\">C.5.9 - Country</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">country.extension[countryCode]</td><td style=\"border-left-width: 0px\">C.5.9 - Country</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAddressMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSAddressMap"] ; # 
+  fhir:title [ fhir:v "EHDSAddress Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-07-02T12:58:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSAddress"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/base-r5/StructureDefinition/Address-eu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/base-r5/StructureDefinition/Address-eu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "use" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "use" ] ;
+         fhir:display [ fhir:v "C.5.1 - Use" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "type" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "type" ] ;
+         fhir:display [ fhir:v "C.5.2 - Type" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "text" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "text" ] ;
+         fhir:display [ fhir:v "C.5.3 - Text" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "street" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "line" ] ;
+         fhir:display [ fhir:v "C.5.4 - Street" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ]
+       ] [
+         fhir:code [ fhir:v "line.extension[streetName]" ] ;
+         fhir:display [ fhir:v "C.5.4 - Street" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "houseNumber" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "line" ] ;
+         fhir:display [ fhir:v "C.5.5 - House number" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ]
+       ] [
+         fhir:code [ fhir:v "line.extension[houseNumber]" ] ;
+         fhir:display [ fhir:v "C.5.5 - House number" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "pOBox" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "line" ] ;
+         fhir:display [ fhir:v "C.5.6 - P.O. Box" ] ;
+         fhir:relationship [ fhir:v "source-is-narrower-than-target" ]
+       ] [
+         fhir:code [ fhir:v "line.extension[postBox]" ] ;
+         fhir:display [ fhir:v "C.5.6 - P.O. Box" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "city" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "city" ] ;
+         fhir:display [ fhir:v "C.5.7 - City" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "postalCode" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "postalCode" ] ;
+         fhir:display [ fhir:v "C.5.8 - Postal code" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "country" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "country" ] ;
+         fhir:display [ fhir:v "C.5.9 - Country" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "country.extension[countryCode]" ] ;
+         fhir:display [ fhir:v "C.5.9 - Country" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

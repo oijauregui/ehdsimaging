@@ -1,0 +1,147 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSImagingReportMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSImagingReportMap</b></p><a name=\"EHDSImagingReportMap\"> </a><a name=\"hcEHDSImagingReportMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to <a href=\"StructureDefinition-ImReport.html\">Document Bundle for Imaging Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td/><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to <a href=\"StructureDefinition-ImComposition.html\">Imaging Composition</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">imagingReportHeader</td><td style=\"border-left-width: 0px\"/><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">imagingReportStructuredBody</td><td style=\"border-left-width: 0px\"/><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">imagingReportAttachments[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[comparison].entry[comparedstudy]</td><td style=\"border-left-width: 0px\">A.4 - Attachment, Media</td><td>Comparison studie</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[comparison].entry[comparedstudy]</td><td style=\"border-left-width: 0px\">A.4 - Attachment, Media</td><td>key images</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">section[comparison].entry[comparedstudy]</td><td style=\"border-left-width: 0px\">A.4 - Attachment, Media</td><td>other data</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to <a href=\"StructureDefinition-ImDiagnosticReport.html\">Imaging Diagnostic Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>imagingReportHeader</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>imagingReportStructuredBody</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>presentedForms</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>presentedForm (A.3 - Presented forms)</td></tr><tr><td>imagingReportAttachments[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>media (A.4 - Attachment, Media)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to <a href=\"StructureDefinition-ImFinding.html\">Finding</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImFinding</td><td/></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">imagingReportAttachments[x]</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">derivedFrom</td><td style=\"border-left-width: 0px\">A.4 - Attachment, Media</td><td>Comparison studie</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none; border-bottom-style: none\"/><td style=\"border-left-width: 0px; border-top-style: none; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">derivedFrom</td><td style=\"border-left-width: 0px\">A.4 - Attachment, Media</td><td>key images</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td style=\"border-right-width: 0px\">derivedFrom</td><td style=\"border-left-width: 0px\">A.4 - Attachment, Media</td><td>other data</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to <a href=\"StructureDefinition-ImImagingStudy.html\">IM Imaging Study</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>dicomStudyMetadata</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 6 </b>Mapping from <a href=\"StructureDefinition-EHDSImagingReport.html\">Imaging report model</a> to <a href=\"StructureDefinition-ImImagingStudyManifest.html\">IM ImagingStudy Manifest</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>dicomStudyMetadata</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>entry[imagingstudy] (A.5 - Imaging study)</td><td>Requires manifest</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSImagingReportMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSImagingReportMap",
+  "title" : "EHDSImagingReport Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-07-02T12:58:33+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSImagingReport",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImReport",
+    "element" : [{
+      "noMap" : true
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImComposition",
+    "element" : [{
+      "code" : "imagingReportHeader",
+      "noMap" : true
+    },
+    {
+      "code" : "imagingReportStructuredBody",
+      "noMap" : true
+    },
+    {
+      "code" : "imagingReportAttachments[x]",
+      "target" : [{
+        "code" : "section[comparison].entry[comparedstudy]",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to",
+        "comment" : "Comparison studie"
+      },
+      {
+        "code" : "section[comparison].entry[comparedstudy]",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to",
+        "comment" : "key images"
+      },
+      {
+        "code" : "section[comparison].entry[comparedstudy]",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to",
+        "comment" : "other data"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImDiagnosticReport",
+    "element" : [{
+      "code" : "imagingReportHeader",
+      "noMap" : true
+    },
+    {
+      "code" : "imagingReportStructuredBody",
+      "noMap" : true
+    },
+    {
+      "code" : "presentedForms",
+      "target" : [{
+        "code" : "presentedForm",
+        "display" : "A.3 - Presented forms",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "imagingReportAttachments[x]",
+      "target" : [{
+        "code" : "media",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImFinding",
+    "element" : [{
+      "code" : "imagingReportAttachments[x]",
+      "target" : [{
+        "code" : "derivedFrom",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to",
+        "comment" : "Comparison studie"
+      },
+      {
+        "code" : "derivedFrom",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to",
+        "comment" : "key images"
+      },
+      {
+        "code" : "derivedFrom",
+        "display" : "A.4 - Attachment, Media",
+        "relationship" : "related-to",
+        "comment" : "other data"
+      }]
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudy",
+    "element" : [{
+      "code" : "dicomStudyMetadata",
+      "noMap" : true
+    }]
+  },
+  {
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "target" : "http://hl7.eu/fhir/imaging-r5/StructureDefinition/ImImagingStudyManifest",
+    "element" : [{
+      "code" : "dicomStudyMetadata",
+      "target" : [{
+        "code" : "entry[imagingstudy]",
+        "display" : "A.5 - Imaging study",
+        "relationship" : "related-to",
+        "comment" : "Requires manifest"
+      }]
+    }]
+  }]
+}

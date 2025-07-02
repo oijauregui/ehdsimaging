@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSSpecimenMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSSpecimenMap</b></p><a name="EHDSSpecimenMap"> </a><a name="hcEHDSSpecimenMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSSpecimen.html">Specimen model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSSpecimen.html">Specimen model</a> to <a href="StructureDefinition-SpecimenEu.html">Specimen: Laboratory</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/imaging-r5/StructureDefinition/SpecimenEu</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">identifier</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">identifier</td><td style="border-left-width: 0px">C.9.1 - Identifier</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td style="border-right-width: 0px">accessionIdentifier</td><td style="border-left-width: 0px">C.9.1 - Identifier</td></tr><tr><td style="border-right-width: 0px">typeOfSpecies</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px">C.9.2 - Type of species</td></tr><tr><td style="border-right-width: 0px">material</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">type</td><td style="border-left-width: 0px">C.9.3 - Material</td></tr><tr><td style="border-right-width: 0px">collectionPeriod</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">collection.collected[x]</td><td style="border-left-width: 0px">C.9.4 - Collection period</td></tr><tr><td style="border-right-width: 0px">anatomicLocation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">collection.bodySite</td><td style="border-left-width: 0px">C.9.5 - Anatomic location</td></tr><tr><td style="border-right-width: 0px">morphology</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">collection.bodySite</td><td style="border-left-width: 0px">C.9.6 - Morphology</td></tr><tr><td style="border-right-width: 0px">sourceDevice</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px">C.9.7 - Source Device</td></tr><tr><td style="border-right-width: 0px">collectionProcedureMethod</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">collection.method</td><td style="border-left-width: 0px">C.9.8 - Collection procedure method</td></tr><tr><td style="border-right-width: 0px">receivedDate</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">receivedTime</td><td style="border-left-width: 0px">C.9.9 - Received date</td></tr><tr><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px">C.9.10 - Subject</td></tr><tr><td style="border-right-width: 0px">container</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">container</td><td style="border-left-width: 0px">C.9.11 - Container</td></tr><tr><td style="border-right-width: 0px">container.specimenQuantity</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">container.specimenQuantity</td><td style="border-left-width: 0px">C.9.11.1 - Specimen quantity</td></tr><tr><td style="border-right-width: 0px">container.containerDevice</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td style="border-right-width: 0px">container.device</td><td style="border-left-width: 0px">C.9.11.2 - Container device</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-EHDSSpecimen.html">Specimen model</a> to <a href="http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-Patient-animal-eu.html">Patient: Animal</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>typeOfSpecies</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension[http://hl7.org/fhir/StructureDefinition/patient-animal] (C.9.2 - Type of species)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href="StructureDefinition-EHDSSpecimen.html">Specimen model</a> to <a href="StructureDefinition-BodyStructureEu.html">EU BodyStructure</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>morphology</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>morphology (C.9.6 - Morphology)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSSpecimenMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSSpecimenMap"/>
+  <title value="EHDSSpecimen Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSSpecimen"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/SpecimenEu"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.9.1 - Identifier"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+      <target>
+        <code value="accessionIdentifier"/>
+        <display value="C.9.1 - Identifier"/>
+        <relationship value="source-is-broader-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="typeOfSpecies"/>
+      <target>
+        <code value="subject"/>
+        <display value="C.9.2 - Type of species"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="material"/>
+      <target>
+        <code value="type"/>
+        <display value="C.9.3 - Material"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="collectionPeriod"/>
+      <target>
+        <code value="collection.collected[x]"/>
+        <display value="C.9.4 - Collection period"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="anatomicLocation"/>
+      <target>
+        <code value="collection.bodySite"/>
+        <display value="C.9.5 - Anatomic location"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="morphology"/>
+      <target>
+        <code value="collection.bodySite"/>
+        <display value="C.9.6 - Morphology"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="sourceDevice"/>
+      <target>
+        <code value="subject"/>
+        <display value="C.9.7 - Source Device"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="collectionProcedureMethod"/>
+      <target>
+        <code value="collection.method"/>
+        <display value="C.9.8 - Collection procedure method"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="receivedDate"/>
+      <target>
+        <code value="receivedTime"/>
+        <display value="C.9.9 - Received date"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="subject"/>
+      <target>
+        <code value="subject"/>
+        <display value="C.9.10 - Subject"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="container"/>
+      <target>
+        <code value="container"/>
+        <display value="C.9.11 - Container"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="container.specimenQuantity"/>
+      <target>
+        <code value="container.specimenQuantity"/>
+        <display value="C.9.11.1 - Specimen quantity"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="container.containerDevice"/>
+      <target>
+        <code value="container.device"/>
+        <display value="C.9.11.2 - Container device"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"/>
+    <target value="http://hl7.eu/fhir/base-r5/StructureDefinition/Patient-animal-eu"/>
+    <element>
+      <code value="typeOfSpecies"/>
+      <target>
+        <code value="extension[http://hl7.org/fhir/StructureDefinition/patient-animal]"/>
+        <display value="C.9.2 - Type of species"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen"/>
+    <target value="http://hl7.eu/fhir/imaging-r5/StructureDefinition/BodyStructureEu"/>
+    <element>
+      <code value="morphology"/>
+      <target>
+        <code value="morphology"/>
+        <display value="C.9.6 - Morphology"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSAddressMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSAddressMap</b></p><a name="EHDSAddressMap"> </a><a name="hcEHDSAddressMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSAddress.html">Address model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSAddress.html">Address model</a> to <a href="http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-Address-eu.html">Address (EU)</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress</td><td/><td colspan="2"><b>Codes</b> from http://hl7.eu/fhir/base-r5/StructureDefinition/Address-eu</td></tr><tr><td style="border-right-width: 0px">use</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">use</td><td style="border-left-width: 0px">C.5.1 - Use</td></tr><tr><td style="border-right-width: 0px">type</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">type</td><td style="border-left-width: 0px">C.5.2 - Type</td></tr><tr><td style="border-right-width: 0px">text</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">text</td><td style="border-left-width: 0px">C.5.3 - Text</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">street</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">line</td><td style="border-left-width: 0px">C.5.4 - Street</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">line.extension[streetName]</td><td style="border-left-width: 0px">C.5.4 - Street</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">houseNumber</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">line</td><td style="border-left-width: 0px">C.5.5 - House number</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">line.extension[houseNumber]</td><td style="border-left-width: 0px">C.5.5 - House number</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">pOBox</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">line</td><td style="border-left-width: 0px">C.5.6 - P.O. Box</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">line.extension[postBox]</td><td style="border-left-width: 0px">C.5.6 - P.O. Box</td></tr><tr><td style="border-right-width: 0px">city</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">city</td><td style="border-left-width: 0px">C.5.7 - City</td></tr><tr><td style="border-right-width: 0px">postalCode</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">postalCode</td><td style="border-left-width: 0px">C.5.8 - Postal code</td></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">country</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">country</td><td style="border-left-width: 0px">C.5.9 - Country</td></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">country.extension[countryCode]</td><td style="border-left-width: 0px">C.5.9 - Country</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSAddressMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSAddressMap"/>
+  <title value="EHDSAddress Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSAddress"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress"/>
+    <target value="http://hl7.eu/fhir/base-r5/StructureDefinition/Address-eu"/>
+    <element>
+      <code value="use"/>
+      <target>
+        <code value="use"/>
+        <display value="C.5.1 - Use"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="type"/>
+      <target>
+        <code value="type"/>
+        <display value="C.5.2 - Type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="text"/>
+      <target>
+        <code value="text"/>
+        <display value="C.5.3 - Text"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="street"/>
+      <target>
+        <code value="line"/>
+        <display value="C.5.4 - Street"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+      <target>
+        <code value="line.extension[streetName]"/>
+        <display value="C.5.4 - Street"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="houseNumber"/>
+      <target>
+        <code value="line"/>
+        <display value="C.5.5 - House number"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+      <target>
+        <code value="line.extension[houseNumber]"/>
+        <display value="C.5.5 - House number"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="pOBox"/>
+      <target>
+        <code value="line"/>
+        <display value="C.5.6 - P.O. Box"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+      <target>
+        <code value="line.extension[postBox]"/>
+        <display value="C.5.6 - P.O. Box"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="city"/>
+      <target>
+        <code value="city"/>
+        <display value="C.5.7 - City"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="postalCode"/>
+      <target>
+        <code value="postalCode"/>
+        <display value="C.5.8 - Postal code"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="country"/>
+      <target>
+        <code value="country"/>
+        <display value="C.5.9 - Country"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="country.extension[countryCode]"/>
+        <display value="C.5.9 - Country"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

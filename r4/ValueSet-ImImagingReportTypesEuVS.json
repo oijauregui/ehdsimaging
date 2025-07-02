@@ -1,0 +1,41 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ImImagingReportTypesEuVS",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ImImagingReportTypesEuVS</b></p><a name=\"ImImagingReportTypesEuVS\"> </a><a name=\"hcImImagingReportTypesEuVS\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-Hl7EuDocumentTypes.html\"><code>http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-Hl7EuDocumentTypes.html#Hl7EuDocumentTypes-imaging-report-v0-0-1\">imaging-report-v0-0-1</a></td><td>Imaging Manifest V0.0.1</td><td>Version 0.0.1 of the HL7 EU Imaging Report</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingReportTypesEuVS",
+  "version" : "0.1.0-ballot",
+  "name" : "ImImagingReportTypesEuVS",
+  "title" : "HL7 EU Imaging Report Types",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-07-02T12:53:04+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes",
+      "concept" : [{
+        "code" : "imaging-report-v0-0-1",
+        "display" : "Imaging Manifest V0.0.1"
+      }]
+    }]
+  }
+}

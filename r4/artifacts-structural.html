@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Structural artifacts - HL7 Europe Imaging Study Report v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.1"}
+    h3,h4,h5,h6{--heading-prefix:"6.1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Imaging Study Report</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="index.html#dependencies">Dependencies</a>
+      </li>
+      <li>
+        <a href="index.html#references">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="actors-and-transactions.html">Actors and Transactions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">All</a>
+      </li>
+      <li>
+        <a href="artifacts-structural.html">Structural</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="design-considerations.html">Design Considerations</a>
+  </li>
+  <li>
+    <a href="https://oijauregui.github.io/ehdsimaging/r5/">R5</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts-intro.html'><b>Artifacts</b></a></li><li><b>Structural artifacts</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Imaging Study Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/oijauregui/ehdsimaging/tree/master'>https://github.com/oijauregui/ehdsimaging/tree/master</a> and changes regularly. See the <a href='http://hl7.eu/fhir/imaging-r4/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Structural artifacts</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#code-systems" id="markdown-toc-code-systems">Code systems</a></li>
+  <li><a href="#value-sets" id="markdown-toc-value-sets">Value Sets</a></li>
+  <li><a href="#resource-profiles-specific-for-this-ig" id="markdown-toc-resource-profiles-specific-for-this-ig">Resource profiles specific for this IG</a></li>
+  <li><a href="#resource-profiles-that-might-be-more-generic" id="markdown-toc-resource-profiles-that-might-be-more-generic">Resource profiles that might be more generic</a></li>
+</ul>
+
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- // Resources -->
+
+<p>This page lists the structural profiles defined in this specification</p>
+
+<h3 id="code-systems">Code systems</h3>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Name</td><td style="background-color: #eeeeee">Title</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="CodeSystem-codesystem-diagnostic-report-support-info.html">DiagnosticReportSupportingInfoCodeSystem</a></td><td><div><p>Diagnostic Report Support Info Code System</p>
+</div></td><td><div><p>Code system for codes to be used in <code>DiagnosticReport.supportInfo</code> for imaging reports.</p>
+</div></td></tr><tr><td><a href="CodeSystem-Hl7EuDocumentTypes.html">Hl7EuDocumentTypes</a></td><td><div><p>HL7 EU Document Types</p>
+</div></td><td><div><p>Document types (templates) as defined by HL7 EU. It identifies the type and template of the document.</p>
+</div></td></tr><tr><td><a href="CodeSystem-codesystem-endpoint-terminology.html">Hl7EuImagingEndpointTerminologyCodeSystem</a></td><td><div><p>CodeSystem for terminology used in Endpoint resources in the EU Imaging IG.</p>
+</div></td><td><div><p>This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG.</p>
+</div></td></tr><tr><td><a href="CodeSystem-codesystem-missing-dicom-terminology.html">MissingDicomTerminology</a></td><td><div><p>Missing DICOM Terminology</p>
+</div></td><td><div><p>Code system for codes that are defined in DICOM but for which no matching code system is available in FHIR.</p>
+</div></td></tr></table>
+
+<h3 id="value-sets">Value Sets</h3>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Name</td><td style="background-color: #eeeeee">Title</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="ValueSet-media-view.html">CrossVersionMediaView</a></td><td><div><p>Media View types - placeholder for cross-version extension</p>
+</div></td><td><div><p>Codes defined in SNOMED CT that can be used to record Media Recording views.</p>
+</div></td></tr><tr><td><a href="ValueSet-valueset-diagnosticreport-report-support-info.html">DiagnosticReportSupportingInfoVCodes</a></td><td><div><p>DiagnosticReport supportInfo codes</p>
+</div></td><td><div><p>Codes to be used in <code>DiagnosticReport.supportInfo</code> for imaging reports.</p>
+</div></td></tr><tr><td><a href="ValueSet-device-category.html">FHIRDeviceCategory</a></td><td><div><p>FHIR Device Category</p>
+</div></td><td><div><p>The association state of the device.</p>
+</div></td></tr><tr><td><a href="ValueSet-im-dose-length-units.html">ImDoseLengthUnits</a></td><td><div><p>Dose Length Units</p>
+</div></td><td><div><p>Units for Dose Length.</p>
+</div></td></tr><tr><td><a href="ValueSet-im-effective-dose-units.html">ImEffectiveDoseUnits</a></td><td><div><p>Effective Dose Units</p>
+</div></td><td><div><p>Units for Effective Dose.</p>
+</div></td></tr><tr><td><a href="ValueSet-im-gray-square-units.html">ImGraySquareUnits</a></td><td><div><p>Gray Square Units</p>
+</div></td><td><div><p>Units for Gray Square.</p>
+</div></td></tr><tr><td><a href="ValueSet-im-imaging-device-type.html">ImImagingDeviceType</a></td><td><div><p>Imaging Device Type</p>
+</div></td><td><div><p>Imaging Device Type.</p>
+</div></td></tr><tr><td><a href="ValueSet-ImImagingManifestTypesEuVS.html">ImImagingManifestTypesEuVS</a></td><td><div><p>HL7 EU Imaging Manifest Types</p>
+</div></td><td><div><p>HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.</p>
+</div></td></tr><tr><td><a href="ValueSet-ImImagingReportTypesEuVS.html">ImImagingReportTypesEuVS</a></td><td><div><p>HL7 EU Imaging Report Types</p>
+</div></td><td><div><p>HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.</p>
+</div></td></tr><tr><td><a href="ValueSet-im-imaging-study-performer-type.html">ImImagingStudyPerformerTypeVS</a></td><td><div><p>Imaging Study Performer Type Value Set</p>
+</div></td><td><div><p>Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.</p>
+</div></td></tr><tr><td><a href="ValueSet-im-procedure-type.html">ImProcedureType</a></td><td><div><p>Imaging Procedure Type</p>
+</div></td><td><div><p>This value set includes all imaging procedure types.</p>
+</div></td></tr><tr><td><a href="ValueSet-ImSectionEmptyReason.html">ImSectionEmptyReason</a></td><td><div><p>Reasons a section in an imaging report is empty.</p>
+</div></td><td><div><p>Reasons a section in an imaging report is empty.</p>
+</div></td></tr><tr><td><a href="ValueSet-periods-of-life-value-set.html">PeriodsOfLifeValueSet</a></td><td><div><p>Periods of Life</p>
+</div></td><td><div><p>A value set of periods of life extension (<a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=767023003&amp;edition=MAIN/2025-04-01&amp;release=&amp;languages=en">SNOMED tree</a>).</p>
+</div></td></tr><tr><td><a href="ValueSet-R5-imagingselection-2dgraphictype-for-R4.html">R5-imagingselection-2dgraphictype-for-R4</a></td><td><div><p>Cross-version VS for R5.ImagingSelection2DGraphicType for use in FHIR R4</p>
+</div></td><td><div><p>This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-2dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct <code>equivalent</code> mappings crossing all versions from R5 to R4.</p>
+</div></td></tr><tr><td><a href="ValueSet-R5-imagingselection-3dgraphictype-for-R4.html">R5-imagingselection-3dgraphictype-for-R4</a></td><td><div><p>Cross-version VS for R5.ImagingSelection3DGraphicType for use in FHIR R4</p>
+</div></td><td><div><p>This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-3dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct <code>equivalent</code> mappings crossing all versions from R5 to R4.</p>
+</div></td></tr><tr><td><a href="ValueSet-R5-imagingselection-status-for-R4.html">R5-imagingselection-status-for-R4</a></td><td><div><p>Cross-version VS for R5.ImagingSelectionStatus for use in FHIR R4</p>
+</div></td><td><div><p>This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-status|5.0.0 for use in FHIR R4. Concepts not present here have direct <code>equivalent</code> mappings crossing all versions from R5 to R4.</p>
+</div></td></tr></table>
+
+<h3 id="resource-profiles-specific-for-this-ig">Resource profiles specific for this IG</h3>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Name</td><td style="background-color: #eeeeee">Title</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="StructureDefinition-im-accession-number-identifier.html">ImAccessionNumberIdentifier</a></td><td><div><p>Imaging Accession Number Identifier</p>
+</div></td><td><div><p>This profile on Identifier represents the Accession Number for the Imaging Order.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImAdverseEvent.html">ImAdverseEvent</a></td><td><div><p>Imaging Adverse Event</p>
+</div></td><td><div><p>Adverse Event that occurred during an imaging procedure.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImAdverseEventSubjectReseachSubject.html">ImAdverseEventSubjectReseachSubject</a></td><td><div><p>Imaging Adverse Event Subject Research Subject</p>
+</div></td><td><div><p>Extension to capture the relationship of the subject to the ReseachSubject.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImComposition.html">ImComposition</a></td><td><div><p>Imaging Composition</p>
+</div></td><td><div><p>Clinical document used to represent a Imaging Study Report for the scope of the HL7 Europe project.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImDiagnosticReport.html">ImDiagnosticReport</a></td><td><div><p>Imaging Diagnostic Report</p>
+</div></td><td><div><p>Diagnostic Report profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the <code>Composition</code> resource that contains the narrative text of the report.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-im-composition-diagnosticReportReference.html">ImDiagnosticReportReference</a></td><td><div><p>Document DiagnosticReport Reference</p>
+</div></td><td><div><p>This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImFinding.html">ImFinding</a></td><td><div><p>Finding</p>
+</div></td><td><div><p>Finding during imaging procedure.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImGestationalAgeObservation.html">ImGestationalAgeObservation</a></td><td><div><p>Gestational Age Observation</p>
+</div></td><td><div><p>Gestational Age Observation</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImIheMhdDocumentReference.html">ImIheMhdDocumentReference</a></td><td><div><p>r4 DocumentReference for MHD deployments</p>
+</div></td><td><div><p>A placeholder for a DocumentReference profile for the IHE-MHD in r4.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImageIidViewerEndpoint.html">ImImageIidViewerEndpoint</a></td><td><div><p>IM Image Viewer Endpoint</p>
+</div></td><td><div><p>This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.
+The application is based on <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf">IHE-IID</a>.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingDevice.html">ImImagingDevice</a></td><td><div><p>Im Imaging Device</p>
+</div></td><td><div><p>The device the made the image.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingSelection.html">ImImagingSelection</a></td><td><div><p>Imaging Selection profile for R4</p>
+</div></td><td><div><p>Imaging Selection profile for R4</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingStudy.html">ImImagingStudy</a></td><td><div><p>IM Imaging Study</p>
+</div></td><td><div><p>This profile represents an imaging study instance.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-instance-description.html">ImImagingStudyInstanceDescription</a></td><td><div><p>Instance Description</p>
+</div></td><td><div><p>A description of the instance in an ImagingStudy.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImImagingStudyManifest.html">ImImagingStudyManifest</a></td><td><div><p>IM ImagingStudy Manifest</p>
+</div></td><td><div><p>This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImKeyImageDocumentReference.html">ImKeyImageDocumentReference</a></td><td><div><p>Imaging Key Image Document Reference</p>
+</div></td><td><div><p>A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.</p>
+<p>When the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImKeyImageImagingSelection.html">ImKeyImageImagingSelection</a></td><td><div><p>Key images represented as an ImagingSelection for R4</p>
+</div></td><td><div><p>Key images represented as an ImagingSelection for R4</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImManifestIheMhdDocumentReference.html">ImManifestIheMhdDocumentReference</a></td><td><div><p>Manifest DocumentReference for MHD deployments</p>
+</div></td><td><div><p>A DocumentReference profile for the Manifest DocumentReference used in MHD deployments.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImOrder.html">ImOrder</a></td><td><div><p>IM Imaging Order</p>
+</div></td><td><div><p>This profile on ServiceRequest represents the order for the Imaging Study and report.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImPatient.html">ImPatient</a></td><td><div><p>IM Imaging Patient</p>
+</div></td><td><div><p>This profile on Patient represents the Imaging Patient.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImProcedure.html">ImProcedure</a></td><td><div><p>IM Imaging Procedure</p>
+</div></td><td><div><p>This profile on Procedure represents the imaging procedure.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImRadiationDoseObservation.html">ImRadiationDoseObservation</a></td><td><div><p>Radiation Dose Observation</p>
+</div></td><td><div><p>A record for the radiation dose the subject has been exposed to during an imaging procedure.
+E.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html and https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/index.html</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImReport.html">ImReport</a></td><td><div><p>Document Bundle for Imaging Report</p>
+</div></td><td><div><p>Document Bundle for Imaging Report</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImReportIheMhdDocumentReference.html">ImReportIheMhdDocumentReference</a></td><td><div><p>Report DocumentReference for MHD deployments</p>
+</div></td><td><div><p>A DocumentReference profile for the Report DocumentReference used in MHD deployments.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-im-sop-instance-uid-identifier.html">ImSopInstanceUidIdentifier</a></td><td><div><p>Imaging SOP Class UID Identifier</p>
+</div></td><td><div><p>This profile on Identifier represents the SOP Class UID (0008,0018) for the Imaging Order.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImSrInstanceImagingSelection.html">ImSrInstanceImagingSelection</a></td><td><div><p>Imaging Selection referring to a DICOM SR instance for R4</p>
+</div></td><td><div><p>Imaging Selection referring to a DICOM SR instance for R4</p>
+</div></td></tr><tr><td><a href="StructureDefinition-im-study-instance-uid-identifier.html">ImStudyInstanceUidIdentifier</a></td><td><div><p>Study Instance UID Identifier</p>
+</div></td><td><div><p>This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ImWadoEndpoint.html">ImWadoEndpoint</a></td><td><div><p>IM WADO Endpoint</p>
+</div></td><td><div><p>This profile defines the WADO endpoint for accessing imaging study content.</p>
+</div></td></tr></table>
+
+<h3 id="resource-profiles-that-might-be-more-generic">Resource profiles that might be more generic</h3>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Name</td><td style="background-color: #eeeeee">Title</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="StructureDefinition-AllergyIntoleranceEu.html">AllergyIntoleranceEu</a></td><td><div><p>EU AllergyIntolerance</p>
+</div></td><td><div><p>A allergyintolerance profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-BodyStructureEu.html">BodyStructureEu</a></td><td><div><p>EU BodyStructure</p>
+</div></td><td><div><p>BodyStructure profile for the EU</p>
+</div></td></tr><tr><td><a href="StructureDefinition-CarePlanEu.html">CarePlanEu</a></td><td><div><p>EU CarePlan</p>
+</div></td><td><div><p>Care plan for the patient.
+Contains the narrative containing the plan including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient. In the future it is expected that the care plan could be provided in a structured and coded format.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-CompositionEu.html">CompositionEu</a></td><td><div><p>EU Composition</p>
+</div></td><td><div><p>Clinical document used to represent a report for the scope of the HL7 Europe project.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ConditionEu.html">ConditionEu</a></td><td><div><p>EU Condition</p>
+</div></td><td><div><p>A condition profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-DocumentReferenceEu.html">DocumentReferenceEu</a></td><td /><td><div><p>A DocumentReference profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-EncounterEu.html">EncounterEu</a></td><td><div><p>EU Encounter</p>
+</div></td><td><div><p>A encounter profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-EndpointEu.html">EndpointEu</a></td><td><div><p>EU Endpoint</p>
+</div></td><td><div><p>The FHIR endpoint resource with EU specific references.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-MedicationEu.html">MedicationEu</a></td><td><div><p>EU Medication</p>
+</div></td><td><div><p>A medication profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ObservationEu.html">ObservationEu</a></td><td><div><p>EU Observation</p>
+</div></td><td><div><p>A observation profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-PatientAnimalEu.html">PatientAnimalEu</a></td><td><div><p>Patient: Animal</p>
+</div></td><td><div><p>This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide. This is used (among others) to identify the species when a specimen is collected from an animal.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-ProcedureEu.html">ProcedureEu</a></td><td><div><p>EU Procedure</p>
+</div></td><td><div><p>A procedure profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-quantity-eu.html">QuantityEu</a></td><td><div><p>EU Quantity</p>
+</div></td><td><div><p>A quantity profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-range-eu.html">RangeEu</a></td><td><div><p>EU Range</p>
+</div></td><td><div><p>A range profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-RelatedPersonEu.html">RelatedPersonEu</a></td><td><div><p>RelatedPerson Eu</p>
+</div></td><td><div><p>EU Related Person.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-SimpleQuantityEu.html">SimpleQuantityEu</a></td><td><div><p>EU SimpleQuantity</p>
+</div></td><td><div><p>A simple quantity profile for the EU.</p>
+</div></td></tr><tr><td><a href="StructureDefinition-SpecimenEu.html">SpecimenEu</a></td><td><div><p>Specimen: Laboratory</p>
+</div></td><td><div><p>This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide.</p>
+</div></td></tr></table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.imaging-r4#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 2, 2025 12:54+0000">2025-07-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/imaging-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

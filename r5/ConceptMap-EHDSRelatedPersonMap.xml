@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSRelatedPersonMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSRelatedPersonMap</b></p><a name="EHDSRelatedPersonMap"> </a><a name="hcEHDSRelatedPersonMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSRelatedPerson.html">Related person model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSRelatedPerson.html">Related person model</a> to <a href="http://hl7.org/fhir/R5/relatedperson.html">RelatedPerson</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>personalIdentifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.13.1 - Personal identifier)</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>name (C.13.2 - Name)</td></tr><tr><td>relationship</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>relationship (C.13.3 - Relationship)</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>address (C.13.4 - Address)</td></tr><tr><td>telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>telecom (C.13.5 - Telecom)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSRelatedPersonMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSRelatedPersonMap"/>
+  <title value="EHDSRelatedPerson Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSRelatedPerson"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+    <element>
+      <code value="personalIdentifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.13.1 - Personal identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="name"/>
+      <target>
+        <code value="name"/>
+        <display value="C.13.2 - Name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="relationship"/>
+      <target>
+        <code value="relationship"/>
+        <display value="C.13.3 - Relationship"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="address"/>
+      <target>
+        <code value="address"/>
+        <display value="C.13.4 - Address"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="telecom"/>
+      <target>
+        <code value="telecom"/>
+        <display value="C.13.5 - Telecom"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

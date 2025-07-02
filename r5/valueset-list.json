@@ -1,0 +1,159 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingManifestTypesEuVS",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingManifestTypesEuVS",
+      "title" : "HL7 EU Imaging Manifest Types",
+      "description" : "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes"
+      ]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingReportTypesEuVS",
+      "title" : "HL7 EU Imaging Report Types",
+      "description" : "HL7 EU Imaging Report Types used in Compositions and DiagnosticReports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r5/CodeSystem/Hl7EuDocumentTypes"
+      ]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/ImSectionEmptyReason",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImSectionEmptyReason",
+      "title" : "Reasons a section in an imaging report is empty.",
+      "description" : "Reasons a section in an imaging report is empty.",
+      "systems" : [
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/list-empty-reason"
+      ]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-dose-length-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImDoseLengthUnits",
+      "title" : "Dose Length Units",
+      "description" : "Units for Dose Length.",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-effective-dose-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImEffectiveDoseUnits",
+      "title" : "Effective Dose Units",
+      "description" : "Units for Effective Dose.",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-gray-square-units",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImGraySquareUnits",
+      "title" : "Gray Square Units",
+      "description" : "Units for Gray Square.",
+      "systems" : ["http://unitsofmeasure.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-device-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingDeviceType",
+      "title" : "Imaging Device Type",
+      "description" : "Imaging Device Type.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-imaging-study-performer-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImImagingStudyPerformerTypeVS",
+      "title" : "Imaging Study Performer Type Value Set",
+      "description" : "Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-procedure-type",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "ImProcedureType",
+      "title" : "Imaging Procedure Type",
+      "description" : "This value set includes all imaging procedure types.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/media-view",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CrossVersionMediaView",
+      "title" : "Media View types - placeholder for cross-version extension",
+      "description" : "Codes defined in SNOMED CT that can be used to record Media Recording views.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/periods-of-life-value-set",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "PeriodsOfLifeValueSet",
+      "title" : "Periods of Life",
+      "description" : "A value set of periods of life extension ([SNOMED tree](https://browser.ihtsdotools.org/?perspective=full&conceptId1=767023003&edition=MAIN/2025-04-01&release=&languages=en)).",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/imaging-r5/ValueSet/valueset-diagnosticreport-report-support-info",
+      "version" : "0.1.0-ballot",
+      "status" : "draft",
+      "name" : "DiagnosticReportSupportingInfoVCodes",
+      "title" : "DiagnosticReport supportInfo codes",
+      "description" : "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+      "systems" : [
+        "http://hl7.eu/fhir/imaging-r5/CodeSystem/codesystem-diagnostic-report-support-info"
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/device-category",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "FHIRDeviceCategory",
+      "title" : "FHIR Device Category",
+      "description" : "The association state of the device.",
+      "systems" : ["http://hl7.org/fhir/device-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3307"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3307"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4",
+      "version" : "0.0.1-snapshot-1",
+      "status" : "draft",
+      "name" : "R5-imagingselection-2dgraphictype-for-R4",
+      "title" : "Cross-version VS for R5.ImagingSelection2DGraphicType for use in FHIR R4",
+      "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-2dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+      "systems" : ["http://hl7.org/fhir/imagingselection-2dgraphictype"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4",
+      "version" : "0.0.1-snapshot-1",
+      "status" : "draft",
+      "name" : "R5-imagingselection-3dgraphictype-for-R4",
+      "title" : "Cross-version VS for R5.ImagingSelection3DGraphicType for use in FHIR R4",
+      "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-3dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+      "systems" : ["http://hl7.org/fhir/imagingselection-3dgraphictype"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4",
+      "version" : "0.0.1-snapshot-1",
+      "status" : "draft",
+      "name" : "R5-imagingselection-status-for-R4",
+      "title" : "Cross-version VS for R5.ImagingSelectionStatus for use in FHIR R4",
+      "description" : "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-status|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4.",
+      "systems" : ["http://hl7.org/fhir/imagingselection-status"]
+    }
+  ]
+}

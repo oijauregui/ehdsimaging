@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Design Considerations - HL7 Europe Imaging Study Report v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Imaging Study Report</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
+        <a href="changes.html">Changes</a>
+      </li>
+      <li>
+        <a href="index.html#dependencies">Dependencies</a>
+      </li>
+      <li>
+        <a href="index.html#references">References</a>
+      </li>
+      <li>
+        <a href="adapting.html">Adapting Guidelines for Country use</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="actors-and-transactions.html">Actors and Transactions</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">XtEHR model
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="xtehr-logical-model.html">XtEHR-model</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">XtEHR-mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="imaging-manifest.html">Imaging Manifest</a>
+  </li>
+  <li>
+    <a href="imaging-report.html">Imaging Report</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">All</a>
+      </li>
+      <li>
+        <a href="artifacts-structural.html">Structural</a>
+      </li>
+      <li>
+        <a href="xtehr-mapping.html">Mapping</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="design-considerations.html">Design Considerations</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Design Considerations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Imaging Study Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version'>https://github.com/oijauregui/ehdsimaging/tree/r4-r5-version</a> and changes regularly. See the <a href='http://hl7.eu/fhir/imaging-r4/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Design Considerations</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#fhir-representation-of-the-report" id="markdown-toc-fhir-representation-of-the-report">FHIR representation of the report</a></li>
+  <li><a href="#data-entrypoints" id="markdown-toc-data-entrypoints">Data entrypoints</a></li>
+  <li><a href="#representing-healthcare-proffessionals" id="markdown-toc-representing-healthcare-proffessionals">Representing Healthcare Proffessionals</a></li>
+  <li><a href="#actor-requirements-and-obligations" id="markdown-toc-actor-requirements-and-obligations">Actor requirements and obligations</a></li>
+  <li><a href="#report-and-manifest" id="markdown-toc-report-and-manifest">Report and Manifest</a></li>
+  <li><a href="#composition-structure" id="markdown-toc-composition-structure">Composition structure</a></li>
+  <li><a href="#linking-to-body-sites" id="markdown-toc-linking-to-body-sites">Linking to body-sites</a></li>
+  <li><a href="#radiation-dose-summary" id="markdown-toc-radiation-dose-summary">Radiation Dose Summary</a></li>
+  <li><a href="#procedure-phases" id="markdown-toc-procedure-phases">Procedure Phases</a></li>
+  <li><a href="#adverse-reaction-adverse-reactions-manifested-during-imaging-investigation" id="markdown-toc-adverse-reaction-adverse-reactions-manifested-during-imaging-investigation">Adverse reaction (Adverse reactions manifested during imaging investigation.)</a></li>
+  <li><a href="#rationale-and-other-choices-for-modeling" id="markdown-toc-rationale-and-other-choices-for-modeling">Rationale and other choices for modeling</a></li>
+  <li><a href="#representation-of-key-images" id="markdown-toc-representation-of-key-images">Representation of Key Images</a></li>
+  <li><a href="#image-data-access-and-endpoints" id="markdown-toc-image-data-access-and-endpoints">Image data access and endpoints</a></li>
+</ul>
+
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- // Resources -->
+
+<p>The sections in this chapter elaborate on the design considerations and decisions that drove important parts of the modelling in this guide.</p>
+
+<h3 id="fhir-representation-of-the-report">FHIR representation of the report</h3>
+
+<p>This guide is part of the HL7 EU suite of report related implementation guides that also includes <a href="https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html">HL7 EU Laboratory Reports</a>, <a href="https://build.fhir.org/ig/hl7-eu/hdr/index.html">HL7 EU Hospital Discharge Reports</a> and <a href="https://build.fhir.org/ig/hl7-eu/eps/">HL7 Europe Patient Summary</a>.</p>
+
+<p>This implementation guide follows the approach taken by those specifications in that a Imaging Study Report is:</p>
+<ul>
+  <li>represented by one <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> and and <code class="language-plaintext highlighter-rouge">Composition</code> resource.</li>
+  <li>the <code class="language-plaintext highlighter-rouge">DiagnosticReport</code> will always point to a  <code class="language-plaintext highlighter-rouge">Composition</code>.</li>
+  <li>the referred Composition:
+    <ul>
+      <li>defines the report structure, often just a single section;</li>
+      <li>provides a mean for assembling the report as a document (i.e. as a Bundle of type 'document')</li>
+    </ul>
+  </li>
+  <li>the document Bundle represents the legally signable report and it includes all the data defining the report.</li>
+</ul>
+
+<p>Related to document bundles, the following guidelines are taken over:</p>
+<ul>
+  <li>the document bundle SHALL include any resources that are part of the graph of resources that reference or are referenced from the composition set, either directly or indirectly (e.g. recursively in a chain)</li>
+</ul>
+
+<pre><code class="language-mermaid">classDiagram
+    class ImDiagnosticReport
+    class ImComposition
+    ImDiagnosticReport --&gt; ImComposition: composition
+    ImComposition --&gt; ImDiagnosticReport: extension[diagnosticReport-reference]
+</code></pre>
+
+<h3 id="data-entrypoints">Data entrypoints</h3>
+
+<p>This IG describes a large set of different resources. Using FHIR search operations, there are many different ways to search for specific information.</p>
+
+<p>The goal of this IG is to provide information on Imaging Reports and Imaging Studies. Although it will allow for other ways to access information, the main "data entrypoints" are the resources that represent these resources.</p>
+
+<p>Each imaging study is represented by a <em>single</em> <a href="https://www.hl7.org/fhir/R5/ImagingStudy.html"><code class="language-plaintext highlighter-rouge">ImagingStudy</code></a> resource.<br />
+Each imaging report is represented by a <a href="https://www.hl7.org/fhir/R5/DiagnosticReport.html"><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></a> resource. There might be more than one instance of the <a href="https://www.hl7.org/fhir/R5/DiagnosticReport.html"><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></a>, when the status of the report changes. All of these will have the same <code class="language-plaintext highlighter-rouge">identifier</code>. The <a href="https://www.hl7.org/fhir/R5/DiagnosticReport.html"><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></a> points a <a href="https://www.hl7.org/fhir/R5/Composition.html"><code class="language-plaintext highlighter-rouge">Composition</code></a> resource that holds a structured representation of the contents of the report.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  class ImImagingStudy{ 
+    &lt;&lt;ImagingStudy&gt;&gt; 
+    identifier: studyInstanceUid
+  }
+  class ImDiagnosticReport{ 
+    &lt;&lt;DiagnosticReport&gt;&gt; 
+    identifier
+  }
+  class ImComposition{ &lt;&lt;Composition&gt;&gt;}
+  
+  ImDiagnosticReport --&gt; ImImagingStudy: study
+  ImDiagnosticReport --&gt; ImComposition: composition
+  ImComposition --&gt; ImDiagnosticReport: extension[diagnosticReport-reference]
+
+  note for ImDiagnosticReport "entry point for report"
+  note for ImImagingStudy "entry point for study"
+</code></pre>
+
+<p>When modelling the IG, it is assumed that information related to the report will be gathered by starting at the <a href="https://www.hl7.org/fhir/R5/DiagnosticReport.html"><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></a> and information related to the imaging study from the <a href="https://www.hl7.org/fhir/R5/ImagingStudy.html"><code class="language-plaintext highlighter-rouge">ImagingStudy</code></a>.</p>
+
+<p>All information related to the report will referred to from the <a href="https://www.hl7.org/fhir/R5/Composition.html"><code class="language-plaintext highlighter-rouge">Composition</code></a>. All important structured information used for searching will be referred to from the <a href="https://www.hl7.org/fhir/R5/DiagnosticReport.html"><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></a>. The structure of the <a href="https://www.hl7.org/fhir/R5/Composition.html"><code class="language-plaintext highlighter-rouge">Composition</code></a> is subject to change and less formal on the meaning on referred to resources. When possible, such references will be made from the <a href="https://www.hl7.org/fhir/R5/DiagnosticReport.html"><code class="language-plaintext highlighter-rouge">DiagnosticReport</code></a>.</p>
+
+<h3 id="representing-healthcare-proffessionals">Representing Healthcare Proffessionals</h3>
+
+<p>When referring to healthcare professionals, the <a href="https://health.ec.europa.eu/publications/ehn-guidelines-medical-imaging-studies-and-reports_en">eHN Imaging Studies and Reports</a> guidelines include information on the professional as well as on the organization the professional is associated with (e.g. information recipient, author, resultValidator, etc.). In FHIR a healthcare professional is represented as a <code class="language-plaintext highlighter-rouge">Practitioner</code>. As a healthcare professional can be employed by multiple organizations, a different resource,<code class="language-plaintext highlighter-rouge">PractitionerRole</code> models the relationship between the healthcare professional and an organization.</p>
+
+<pre><code class="language-mermaid">classDiagram
+    class SrcResource
+    class ImPractitioner { 
+        &lt;&lt;Practitioner&gt;&gt;
+        identifier MS
+        name MS
+        telecom MS
+        address MS
+    }
+    class ImPractitionerRole{ 
+        &lt;&lt;PractitionerRole&gt;&gt;
+        organization MS
+        practitioner MS
+        period MS
+    }
+    class ImOrganization {
+        &lt;&lt;Organization&gt;&gt;
+        active MS
+        name MS
+    }
+
+    SrcResource --&gt; ImPractitionerRole
+    ImPractitionerRole --&gt; ImOrganization: organization
+    ImPractitionerRole --&gt; ImPractitioner: practitioner
+</code></pre>
+
+<p>The source resource (SrcResource) will always point to <code class="language-plaintext highlighter-rouge">ImPractitionerRole</code> when referring to a healthcare professional. The <code class="language-plaintext highlighter-rouge">ImPractitionerRole</code> requires support for the <code class="language-plaintext highlighter-rouge">organization</code> and <code class="language-plaintext highlighter-rouge">practitioner</code> fields.</p>
+
+<p>On <code class="language-plaintext highlighter-rouge">ImPractitioner</code> and <code class="language-plaintext highlighter-rouge">ImOrganization</code> the fields present to identify the healthcare professional are labeled as must support.</p>
+
+<p><strong>OPEN ISSUE:</strong> Are there requirements related to ImOrganization.period?</p>
+
+<h3 id="actor-requirements-and-obligations">Actor requirements and obligations</h3>
+
+<p>This section describes the approach taken in the specification related to obligations placed on the different actors.</p>
+
+<p>The specification recognizes the following actors:</p>
+
+<ul>
+  <li>ImManifestProvider - provides the imaging studies manifest.</li>
+  <li>ImReportProvider - provides the imaging studies report.</li>
+</ul>
+
+<h4 id="provider-obligations">Provider obligations</h4>
+<p>The ImProvider provides the information. In this case this means that it has to provide the information defined in the eHN Guidelines that are further refined by Xt-EHR in the Xt-EHR logical model.</p>
+
+<p>All data elements in the Xt-EHR model are mapped onto one or more FHIR elements (see the mapping section in the spec). In order to ensure that the provider populates these data elements, a requirement/obligation is placed on each FHIR element referred to in the mapping.</p>
+
+<p>The obligation used has the following fields:
+| code	| SHALL:populate-if-known |
+| actor |	ImManifestProvider or ImReportProvider |
+| documentation | list of XtEHR paths that map on this obligation |</p>
+
+<p>This means that the provider SHALL populate these fields it has the information.</p>
+
+<h4 id="using-obligations-in-resources">Using obligations in resources</h4>
+<p>The obligation extensions will be placed in the profiles. In order to make the profiles clear and concise, for each profile with obligations, sub-profiles will be created.</p>
+
+<p>The main profile will have the structural constraints. The actor specific sub-profile will only hold the obligations placed on the actors.</p>
+
+<p>For ImProvider based profiles, the obligations will in the 'documentation' field, indicate the source Xt-EHR requirement the obligation was derived from.</p>
+
+<h3 id="report-and-manifest">Report and Manifest</h3>
+
+<p>The imaging specification has to provide access to both imaging study information and reports.</p>
+
+<h4 id="information-from-the-ihe-cross-border-working-group">Information from the IHE cross-border-working group</h4>
+
+<p><strong>Challenges associated with having a distinct manifest versus embedding manifest information in a report.</strong></p>
+
+<p>Background: Today in MCWG Recommendations, the approach to imaging study and report linkages is</p>
+<ul>
+  <li>to use a linkage  with metadata attributes such as Study UID, Accession Numbers (with registration ID), etc</li>
+  <li>The Manifest Metadata includes: One Study UID, one or more Accession # and one or more Order Placer #.  Report contains One or more Study UID, one or more Accession # and one or more Order Placer #.</li>
+  <li>As a result of this approach, one may:</li>
+  <li>Query/Search by Study UID returns all reports associated to a given Study.</li>
+  <li>Query/Search by Accession # returns all reports and studies associated to an given (RIS) imaging request.</li>
+  <li>Query/Search by Order Placer # returns all reports and studies associated to a given order.</li>
+</ul>
+
+<p>Proposed Resolution of Issue: the information about the images being reported included in the report makes <strong>clinical traceability sense</strong>.  However, we should not confuse <strong>identification</strong> of these images (Study UID/Series UID/Instance UID) and the <strong>referencing by location</strong>.</p>
+
+<p>So far MCWG has tried to avoid inclusion of a Manifest (with locations) in a report.  Why ?</p>
+
+<h4 id="analysis">Analysis:</h4>
+
+<p>Given that the Study manifest (that includes location of image data) <strong>always exists and is distinct from report</strong>, should we in addition allow the manifest content (especially the location information) to be copied within the report:</p>
+
+<p><strong>Pros</strong>  (for only a separate Manifest document and no location information within the imaging report) :</p>
+
+<ol>
+  <li>A Study may exist without a related report (creating an “empty report is not a clean approach”).  So having a manifest only in that case makes sense.</li>
+  <li>A report may interpret one or more imaging studies (in some countries it may not be allowed).  Multiple Reports on the same imaging study.  It could be accommodated but adds to the complexity in case of location updates.</li>
+  <li>The imaging study may evolve in some cases, so updates are simpler to update only the manifest (otherwise report signature becomes challenging)</li>
+  <li>One shall include in the report the ability to reference image instances (without location) so that there is traceability and if “policies” allow for shared image deletion, the imaging report may include references to image instance(s) that are no longer accessible with the updated manifest.
+<em>Note: the use of an “IOCM object” to virtually delete the pointed image objects should be possible, but is not explicitly required.  See plazn to create a CP on this)</em></li>
+  <li>The production of the imaging study (Modality/PACS) involves different technology/systems than the production of the imaging report (RIS).</li>
+</ol>
+
+<p><strong>Cons</strong> (for only a separate Manifest document and no location information within the imaging report):</p>
+
+<ol>
+  <li>In the case a report and a study are shared, accessing the report (that includes the manifest) support access in a single step.  If location is only in Manifest it would require a second step to access the manifest (only if the goal is to retrieve the DICOM Instances, otherwise a server-side URL would give a single step for viewing the images).</li>
+  <li>It would require some alignment in term of access rights between the report and the manifest (It seems that some countries have aligned this for policy reasons and clinical use cases).</li>
+</ol>
+
+<p><strong>The Pros clearly outweigh the Cons.</strong></p>
+
+<h4 id="additional-considerations">Additional considerations</h4>
+
+<p>The study information is represented in an imaging-manifest. It represents the information that is stored in a PACS. The report is typically stored in the RIS and/or EHR. Separating the two concepts allows both systems to appropriately represent the data they have without being forced to include information they typically do not have access to.</p>
+
+<p>In order to access the data, the URL's of the WADO/viewer endpoints are needed that provide access to the content, These URL's might change depending on the scope in which the data is accessed (within the healthcare provider, from outside the healthcare provider or cross border). During the life-cycle of an imaging study, it typically moves between different system. Starting in the main PACS and moving in and out of long term storage depending on the need. If we include the data access URL's in the report, each change might break the report signature. Placing these in the manifest prevents this and also allows for the situation where the same study data can be accessed from multiple locations.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p><strong>Decision:</strong> There will be a imaging-manifest documenting the information typically stored in a PACS that holds the Endpoint resources with the URL's that allow access to the content.</p>
+
+<p><strong>Decision:</strong> There will be a imaging report documenting the radiology report which is not required to include the URL's to access the content.</p>
+
+<h3 id="composition-structure">Composition structure</h3>
+
+<p>One of the choices made in the IG is the structure of the Composition resource. Multiple approaches to defining the structure exists. The ones considered are:</p>
+
+<ul>
+  <li>Leave it open for users of the implementation guide.</li>
+  <li>Follow the structure of the presented form (rendered document).</li>
+  <li>Follow the structure of the <a href="https://health.ec.europa.eu/publications/ehn-guidelines-medical-imaging-studies-and-reports_en">eHN Imaging Studies and Reports</a> guidelines.</li>
+  <li>Adopt the structure defined in IHE-IDR.</li>
+</ul>
+
+<p>Linking the structure of the composition of the presented form will cause difficulties as it requires importers of such documents to understand and properly represent such structure which might place undue burden on such import process.</p>
+
+<p>Consistency in rendering of radiology reports will make it easier for healthcare professionals to locate and understand the important sections. Based on that rationale, this specification will define a required structure.</p>
+
+<p>Regarding the structure to support, this implementation guide taps into earlier work on that topic, i.e. IHE-IDR, and will adopt the suggested section division defined in the preliminary specification.</p>
+
+<h3 id="linking-to-body-sites">Linking to body-sites</h3>
+
+<p>THe <a href="https://health.ec.europa.eu/publications/ehn-guidelines-medical-imaging-studies-and-reports_en">eHN Imaging Studies and Reports</a> guidelines requires that information is added that defines the body site of the imaging procedure (section A.5.1.6). This information consists of a set of different data elements:</p>
+
+<ul>
+  <li>body location</li>
+  <li>laterality</li>
+</ul>
+
+<p>In FHIR body locations can be represented in two ways: as a coded value or as a reference to a <code class="language-plaintext highlighter-rouge">BodyStructure</code> resource. The coded value is used when a code is sufficient. The <code class="language-plaintext highlighter-rouge">BodyStructure</code> is used when more information is needed such as laterality or to indicate morphology. Additionally, as is specified in <a href="https://build.fhir.org/ig/HL7/dicom-sr/">DICOM-SR-2-FHIR</a> the information such as the DICOM tracking id (see <a href="https://hl7.org/fhir/uv/dicom-sr/2024Sep/StructureDefinition-dicom-sr-tracking-identifiers.html">DICOM-SR-2-FHIR body structure</a>). The DICOM tracking id is used to track similar features across DICOM studies and reports.</p>
+
+<p>References to a body site are used in <code class="language-plaintext highlighter-rouge">ImOrder</code> (what part of the body is to be studied), <code class="language-plaintext highlighter-rouge">ImProcedure</code> (the body site the procedure is performed on) and <code class="language-plaintext highlighter-rouge">ImagingStudy.series</code> (the body site the series is imaging). In FHIR R5 both <code class="language-plaintext highlighter-rouge">ImOrder</code> and <code class="language-plaintext highlighter-rouge">ImagingStudy</code> allow references to <code class="language-plaintext highlighter-rouge">BodyStructure</code>. <code class="language-plaintext highlighter-rouge">Procedure</code> only supports a coded value.</p>
+
+<p>In the specification there are different approaches that can be taken towards representing body sites:</p>
+
+<ol>
+  <li>Use code when code is sufficient, <code class="language-plaintext highlighter-rouge">BodyStructure</code> when additional information is required,</li>
+  <li>Prefer <code class="language-plaintext highlighter-rouge">BodyStructure</code> over body site.</li>
+  <li>Always include both, if allowed</li>
+</ol>
+
+<p>The first option might cause issues with searching as in some situations, the code resides on the source resource and when a reference to BodyStructure is used, on BodyStructure. These are covered by two search parameters and would require more complex search operations.</p>
+
+<p>The second option is not feasible in all cases as both options are not supported on all resources.</p>
+
+<p>The third option is allows for searched but does allow to specify further information if needed. But does require definition of resources that are not providing additional information.</p>
+
+<p><strong>CHOICE:</strong>: when referring to a body site on a resource that allows both a reference as a coded value, always populate the coded value.</p>
+
+<p><strong>CHOICE:</strong>: when referring to a body site and more information is available (such as tracking id or laterality), include both a code as well as reference.</p>
+
+<h3 id="radiation-dose-summary">Radiation Dose Summary</h3>
+
+<p>Background information:</p>
+<ul>
+  <li>Background - Radiation Dose Summary for Diagnostic Procedures on FHIR v0.1.0</li>
+</ul>
+
+<p>DICOM - templates (from https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/background.html#minimal-radiation-information)</p>
+<ul>
+  <li>TID 2008 Radiation Exposure and Protection Information</li>
+  <li>Radiopharmaceutical Radiation Dose SR IOD Templates</li>
+  <li>X-Ray Radiation Dose SR IOD Templates</li>
+  <li>Radiopharmaceutical Radiation Dose SR IOD Templates</li>
+</ul>
+
+<p>The radiation dose IG uses two observations, one (Radiation Summary Report - Radiation Dose Summary for Diagnostic Procedures on FHIR v0.1.0) stating a summary of the radiation, the other Indication Observation - Radiation Dose Summary for Diagnostic Procedures on FHIR v0.1.0 holds information on the indication for the radiation. Based on the requirements from XtEHR, only the first is required.</p>
+
+<p>As this Radiation Dose IG is still draft, based on an earlier FHIR specification, and is unlikely to be published in the near future, it cannot be referred to. This mitigated by copying the relevant parts of the IG to this implementation guide.</p>
+
+<p>In this process, also some changes where made in line with FHIR R5, these include:</p>
+<ul>
+  <li>The observation identifier referred to the SOPInstanceUID, this is replaced with a reference to ImagingSelection.</li>
+  <li>Adding slices on Observation.component for the different numeric values.</li>
+</ul>
+
+<h3 id="procedure-phases">Procedure Phases</h3>
+
+<p>Dataset A5.1.9 relates to the inclusion of additional procedure details. The description states: <em>"Additional information pertaining imaging procedure, such as imaging phase. e.g., without contrast, arterial phase, venous phase, delayed phase. Only some types of studies have phases."</em></p>
+
+<p>The imaging phase relates to certain studies such and radiation therapy and nuclear medicine. These procedures go through different phases, typically a phase represents a time frame after a tracer has been provided to the patient (e.g. <a href="https://litfl.com/abdominal-ct-urogram/">Abdominal CT: Urogram</a>).</p>
+
+<p>Just stating that the procedure included these phases does not seam to add a lot of value. The added value is linking results from the procedure to each stage.</p>
+
+<p>These results include imaging series and instances and possibly findings.</p>
+
+<h4 id="leave-it-in-dicom">Leave it in DICOM</h4>
+
+<p>Do not include this information in FHIR and the healthcare professional has to look at the DICOM image in order to detect the phase.</p>
+
+<p>Findings (<code class="language-plaintext highlighter-rouge">Observations</code>) are linked to an <code class="language-plaintext highlighter-rouge">ImagingSelection</code> the phase is derived from the code.</p>
+
+<h4 id="use-child-procedures">Use child procedures</h4>
+
+<p>One way of modelling such a procedure would be to use child procedures.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  direction DT
+
+  class Finding { &lt;&lt;Observation&gt;&gt;}
+  MainProcedure &lt;-- ProcedurePhase1: partOf
+  MainProcedure &lt;-- ProcedurePhase2: partOf
+  MainProcedure &lt;-- ProcedurePhase3: partOf
+  
+  ProcedurePhase2 &lt;-- ImagingSelection: extension[procedure]
+  ProcedurePhase2 &lt;-- Finding: partOf
+</code></pre>
+
+<p>Each phase is represented by a separate Procedure. The results of each phase will be point to the sub-procedure.</p>
+
+<p>This will work for findings (<code class="language-plaintext highlighter-rouge">Observations</code>), it is slightly more cumbersome for DICOM series and instances as these are hosted in the ImagingStudy resource and not as a separate resource. One way of referring to each serie or instance is to use <code class="language-plaintext highlighter-rouge">ImagingSelection</code>. In that approach, an <code class="language-plaintext highlighter-rouge">Extension</code> on <code class="language-plaintext highlighter-rouge">ImagingSelection</code> will point to the corresponding sub-procedure.</p>
+
+<p>Findings point to the sub-procedure representing the phase. This model introduces a large set of additional resource and references,including requirements on timing, not sure whether this is justified for this information.</p>
+
+<h4 id="observations-mark-results-of-a-phase">Observations mark results of a phase</h4>
+
+<p>The phase is represented as an Observation.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  direction TD
+  class Phase{
+    &lt;&lt;Observation&gt;&gt;
+    code: phase
+    valueCodeableConcept: identifies phase
+  }
+  class Finding{ &lt;&lt;Observation&gt;&gt; }
+  Procedure &lt;-- Phase: partOf
+  Phase --&gt; ImagingStudy: derivedFrom
+  Phase --&gt; ImagingSelection: derivedFrom
+  ImagingSelection --&gt; ImagingStudy: derivedFrom
+  ImagingSelection &lt;-- Finding: derivedFrom
+</code></pre>
+
+<p>An observation is created for each phase, the <code class="language-plaintext highlighter-rouge">code</code> states it represents a phase, the <code class="language-plaintext highlighter-rouge">partOf</code> field points to <code class="language-plaintext highlighter-rouge">Procedure</code>, and <code class="language-plaintext highlighter-rouge">derivedFrom</code> to <code class="language-plaintext highlighter-rouge">ImagingStudy</code> and <code class="language-plaintext highlighter-rouge">ImagingSelection</code>, the <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> identifier what phase it is.</p>
+
+<p>Findings point to the <code class="language-plaintext highlighter-rouge">ImagingSelection</code> representing the part of the study they relate to. The phase can be deducted through the link from the Phase Observation. Alternatively, it could be encoded in the <code class="language-plaintext highlighter-rouge">Finding.code</code> as well.</p>
+
+<p>This will work from but using Observation to observe a phase in an procedure is somewhat awkward.</p>
+
+<h4 id="represent-a-phase-as-a-task">Represent a phase as a Task</h4>
+
+<p>The procedure phase could also be represented as a <code class="language-plaintext highlighter-rouge">Task</code>, documenting that results of the phase.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  direction TD
+  class Task{
+    code: identifies phase
+  }
+  class Finding{ &lt;&lt;Observation&gt;&gt;}
+  ServiceRequest &lt;-- Task
+  ServiceRequest &lt;-- Procedure
+  Task --&gt; ImagingSelection: output
+  Task --&gt; ImagingStudy: output
+  ImagingSelection --&gt; ImagingStudy: derivedFrom
+  Task --&gt; Finding: output
+  ImagingSelection &lt;-- Finding: derivedFrom
+</code></pre>
+
+<p>The task is modelled as part of the execution of a <code class="language-plaintext highlighter-rouge">ServiceRequest</code>. The <code class="language-plaintext highlighter-rouge">output</code> field in the <code class="language-plaintext highlighter-rouge">Task</code> points to the <code class="language-plaintext highlighter-rouge">ImagingSelection</code> that represents the instance or serie that is the result of the phase.</p>
+
+<p>Findings link to the phase <code class="language-plaintext highlighter-rouge">Task</code> and <code class="language-plaintext highlighter-rouge">ImagingSelection</code>.</p>
+
+<p>This approach does not link the phase to the <code class="language-plaintext highlighter-rouge">Procedure</code> but the <code class="language-plaintext highlighter-rouge">ServiceRequest</code> (order).</p>
+
+<h4 id="add-an-extension-on-imagingselection">Add an extension on ImagingSelection</h4>
+
+<p>Another way encode such information would be to add an extension to <code class="language-plaintext highlighter-rouge">ImagingStudy</code>, <code class="language-plaintext highlighter-rouge">ImagingStudy.serie</code> and <code class="language-plaintext highlighter-rouge">ImagingStudy.serie.instance</code> that states the phase this part of the study was retrieved in as a coded value.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  direction TD
+  class ImagingStudy{
+    serie.extension[phase].valueCodeableConcept
+    serie.instance.extension[phase].valueCodeableConcept
+  }
+  class ImagingSelection
+  class Finding{ &lt;&lt;Observation&gt;&gt; }
+  
+  Procedure &lt;-- ImagingStudy : partOf
+  Procedure --&gt; Finding: partOf
+  ImagingSelection --&gt; Finding: derivedFrom
+  ImagingStudy &lt;-- ImagingSelection: derivedFrom
+</code></pre>
+
+<h4 id="using-imagingselection-to-represent-a-phase">Using ImagingSelection to represent a Phase</h4>
+
+<p>An <code class="language-plaintext highlighter-rouge">ImagingSelection</code> resource is used to represent the results of the study from a phase. <code class="language-plaintext highlighter-rouge">ImagingSelection.category</code> will be used to mark it as a phase. The <code class="language-plaintext highlighter-rouge">ImagingSelection.code</code> will mark the phase it represents.</p>
+
+<pre><code class="language-mermaid">classDiagram
+  direction TD
+  class Finding { &lt;&lt;Observation&gt;&gt; }
+  class ImagingSelection{
+    category = #phase
+    code = code for the phase
+  }
+  ImagingStudy &lt;-- ImagingSelection
+  ImagingSelection &lt;-- Finding: derivedFrom
+</code></pre>
+
+<p>Findings will point to the <code class="language-plaintext highlighter-rouge">ImagingSelection</code> as normal.</p>
+
+<h4 id="evaluation">Evaluation</h4>
+
+<p>Although the different options all make sense in some way. The last option has the smallest impact on the model and does not require additional extensions.</p>
+
+<p><strong>CHOICE:</strong> Procedure phases will be represented as <code class="language-plaintext highlighter-rouge">ImagingSelections</code>.</p>
+
+<h3 id="adverse-reaction-adverse-reactions-manifested-during-imaging-investigation">Adverse reaction (Adverse reactions manifested during imaging investigation.)</h3>
+
+<p>Dataset A5.3 relates to the register of adverse events that occurred during or due to imaging procedures. This includes both allergy-caused reactions as well as non-allergic ones.</p>
+
+<p>Three resource types can be used to encode the required data: <code class="language-plaintext highlighter-rouge">AdverseEvent</code>, <code class="language-plaintext highlighter-rouge">AllergyIntolerance</code>, and <code class="language-plaintext highlighter-rouge">Condition</code>.
+In this IG, adverse reactions are recorded using the <code class="language-plaintext highlighter-rouge">AdverseEvent</code> resource. If the reaction is due to an allergy, it is also recorded using the <code class="language-plaintext highlighter-rouge">AllergyIntolerance</code> resource. Consumer systems will likely use this resource type to populate the allergy flags.</p>
+
+<ul>
+  <li>Model</li>
+</ul>
+
+<pre><code class="language-mermaid">classDiagram
+  class ImAdverseReaction {
+    &lt;&lt;AdverseEvent&gt;&gt;
+    code MS
+    category MS
+    resultingEffect MS
+    seriousness MS
+    occurence MS
+    suspectEntity.causality.entityRelatedness MS
+    suspectedEntity.instance MS
+    contributingFactor.item MS
+    note MS
+    extension.ImAdverseEventCriticality MS
+  }
+
+  class AllergicReaction{
+    verificationStatus MS
+    criticality MS
+    reaction.extension.allergyCertainty MS
+    reaction.substance MS
+    reaction.manifestation MS
+    reaction.severity  MS
+    reaction.onset MS
+    type MS
+    note MS
+  }
+
+  class ImProcedure{
+    &lt;&lt;Procedure&gt;&gt;
+  }
+
+  ImAdverseReaction --&gt; ImProcedure: suspectEntity.instance
+  ImAdverseReaction --&gt; AllergicReaction: contributingFactor.item
+</code></pre>
+
+<h3 id="rationale-and-other-choices-for-modeling">Rationale and other choices for modeling</h3>
+
+<h4 id="adverseevent-resource">AdverseEvent resource</h4>
+
+<p>The decided modeling choice in this IG to represent an adverse reaction.</p>
+
+<ul>
+  <li>Pros:
+    <ul>
+      <li>it can point to a Procedure. It represents widely both types of reactions (allergic and non-allergic).</li>
+      <li>It can point to an AllergyIntolerance resource, for the cases in which that pathogenic mechanisms is suspected or confirmed.</li>
+    </ul>
+  </li>
+  <li>Cons:
+    <ul>
+      <li>it lacks some of the allergy-specific elements required (i.e. <code class="language-plaintext highlighter-rouge">criticality</code>, <code class="language-plaintext highlighter-rouge">verification status</code>).</li>
+      <li>The resource focuses mainly is on the registration and monitoring of adverse events.</li>
+      <li>The link to the rest of the model is done through AdverseEvent.SuspectedEntity.ImProcedure, which is probably not the best way of referencing it, as it needs a reverse include to query adverse events happened in a given procedure.</li>
+      <li>A custom extension is required to encode the <code class="language-plaintext highlighter-rouge">criticality</code> data point.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="allergyintolerance-resource">AllergyIntolerance resource</h4>
+
+<p>The decided modeling choice in this IG to represent an allergic condition.</p>
+
+<ul>
+  <li>Pros:
+    <ul>
+      <li>This resource provides off-the-shelf data elements to convey <code class="language-plaintext highlighter-rouge">severity</code>, <code class="language-plaintext highlighter-rouge">criticality</code>, <code class="language-plaintext highlighter-rouge">propensity</code> and a <a href="http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty">standard extension</a> is available for the <code class="language-plaintext highlighter-rouge">certainty</code> element.</li>
+    </ul>
+  </li>
+  <li>Cons:
+    <ul>
+      <li>Although it has a <code class="language-plaintext highlighter-rouge">.reaction</code> element, the focus of the resource is on establishing allergic states, not on capturing events.</li>
+      <li>There is not a straightforward way to reference to or from a <code class="language-plaintext highlighter-rouge">Procedure</code> resource, so it can be linked to the main model. It could be achieved through <code class="language-plaintext highlighter-rouge">.encounter</code>, but that resource might not be exchanged in the Bundle, thus the reference would be lost.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="condition-resource">Condition resource</h4>
+
+<ul>
+  <li>Pros:
+    <ul>
+      <li>It can be linked directly to a Procedure resource through <code class="language-plaintext highlighter-rouge">Procedure.complication</code>.</li>
+    </ul>
+  </li>
+  <li>Cons:
+    <ul>
+      <li>It encompasses all types of conditions, thus it defines too broadly the kind of event that this use case requires.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="representation-of-key-images">Representation of Key Images</h3>
+
+<p>Key images can be represented in two ways:</p>
+
+<ul>
+  <li>ImagingSelection</li>
+  <li>DocumentReference</li>
+</ul>
+
+<p>ImagingSelection if more DICOM oriented and only relates to DICOM identifiers. DocumentReference is more image oriented and also contains information on the size, duration, etc. aspects of the image.</p>
+
+<p>The <a href="https://health.ec.europa.eu/publications/ehn-guidelines-medical-imaging-studies-and-reports_en">eHN Imaging Studies and Reports</a> guidelines requires information on the size, format, duration etc., data elements that are provided on the <code class="language-plaintext highlighter-rouge">Attachment</code> field on <code class="language-plaintext highlighter-rouge">DocumentReference</code>. If these fields are critical, DocumentReference fits more closely. In US Core the R4 <code class="language-plaintext highlighter-rouge">Media</code> resource is used to represent key images. This resource later merged into the FHIR R5 <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</p>
+
+<p>As this IG has an FHIR R5 and R4 representation, <code class="language-plaintext highlighter-rouge">DocumentReference</code> is an easy fit but in other sections of this specification, ImagingSelection is used (e.g. to state that an image can from a Procedure Phase).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">ImagingSelection</code> resource points to a DICOM data. The DICOM instance data also holds the data required by the <a href="https://health.ec.europa.eu/publications/ehn-guidelines-medical-imaging-studies-and-reports_en">eHN Imaging Studies and Reports</a>. So the client can retrieve the information from the DICOM source data.</p>
+
+<p>The <a href="https://health.ec.europa.eu/publications/ehn-guidelines-medical-imaging-studies-and-reports_en">eHN Imaging Studies and Reports</a> guidelines also requires access to the imaging data. It refers to access the data directly or using an web based image viewer. A scenario that can be supported based on ImagingSelection as such mechanism require access to the DICOM identifiers and a WADO endpoint. Although not discussed yet, it is anticipated that a web based endpoint can operate based on similar data fields.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DocumentReferences</code> refer to the data source directly (included in the Attachment or referred to it). It does not carry the DICOM identifiers, although these can be added to <code class="language-plaintext highlighter-rouge">DocumentReference</code> resources (identifier or extensions).</p>
+
+<p>Another aspect, although unlikely, is that the report mey refer to key images (charts, pdf's, …) not stored in a DICOM PACS, <code class="language-plaintext highlighter-rouge">DocumentReferences</code> would allow this.</p>
+
+<p>There is a point to be made for both resource types.</p>
+
+<p><strong>CHOICE:</strong> Key images can be represented by <code class="language-plaintext highlighter-rouge">ImagingSelection</code> or <code class="language-plaintext highlighter-rouge">DocumentReference</code> resources.</p>
+
+<p><strong>CHOICE:</strong> When using <code class="language-plaintext highlighter-rouge">DocumentReference</code> to represent a DICOM data element, it will carry an identifier corresponding the serie or instance it represents.</p>
+
+<p>That leaves the question in what way are these resources linked into the overall infrastructure.</p>
+
+<pre><code class="language-mermaid">classDiagram
+    direction TD
+    class ImKeyImagingSelection{ 
+        &lt;&lt;ImagingSelection&gt;&gt;
+        studyUid
+    }
+    class ImKeyImagingInstanceSelection{ 
+        &lt;&lt;ImagingSelection&gt;&gt;
+        studyUid
+    }
+    class ImKeyImagingSerieSelection{ 
+        &lt;&lt;ImagingSelection&gt;&gt;
+        studyUid
+        instance.uid
+        instance.sopClass
+    }
+    class ImKeyImageDocumentReference{ 
+        &lt;&lt;DocumentReference&gt;&gt; 
+        modality
+    }
+    class ImKeyImageInstanceDocumentReference{ 
+        &lt;&lt;DocumentReference&gt;&gt;
+        identifier: SOP Instance UID
+    }
+    class ImKeyImageInstanceSerieDocumentReference{ 
+        &lt;&lt;DocumentReference&gt;&gt;
+        identifier: SerieInstanceUID
+    }
+    class ImComposition{ 
+        &lt;&lt;Composition&gt;&gt;
+        section[keyimages]
+    }
+    ImComposition --&gt; ImKeyImageDocumentReference: section[keyimages].entry
+    ImComposition --&gt; ImKeyImagingSelection: section[keyimages].entry
+
+    ImKeyImageDocumentReference --&gt; ImageData: content.attachment.url
+    ImKeyImageDocumentReference &lt;|-- ImKeyImageInstanceSerieDocumentReference
+    ImKeyImageDocumentReference &lt;|-- ImKeyImageInstanceDocumentReference
+    ImKeyImagingSelection &lt;|-- ImKeyImagingSerieSelection
+    ImKeyImagingSelection &lt;|-- ImKeyImagingInstanceSelection
+    
+</code></pre>
+
+<h3 id="image-data-access-and-endpoints">Image data access and endpoints</h3>
+
+<p>Besides access to the imaging report, the eHN Guidelines also requires access to the imaging data.</p>
+
+<p>Existing (non-FHIR) systems use a variety of mechanisms to support searching for imaging studies. Examples include DICOM DIMSE, DICOMweb QIDO, querying for KOS objects andst the imaging study manifest. Typically they allow for a range of query options such as querying on codes and SOPclass.</p>
+
+<p>The IG will focus on a FHIR based approach to searching for imaging studies.</p>
+
+<p>The specification will not dictate the mechanism to access the imaging data but will focus on describing the available mechanisms and endpoints to retrieve (part of a) study. This will be done by defining profiles for <a href="https://www.hl7.org/fhir/R5/Endpoint.html"><code class="language-plaintext highlighter-rouge">Endpoint</code></a> resources.</p>
+
+<p><a href="https://www.hl7.org/fhir/R5/Endpoint.html"><code class="language-plaintext highlighter-rouge">Endpoint</code></a> profiles will be defined for at least the following image access mechanisms:</p>
+<ul>
+  <li>DICOMweb WADO</li>
+  <li>DIMSE</li>
+  <li>Launch a DICOM viewer</li>
+</ul>
+
+<p>The specification assumes that search is done on <a href="https://www.hl7.org/fhir/R5/ImagingStudy.html"><code class="language-plaintext highlighter-rouge">ImagingStudy</code></a> and related resources.</p>
+
+<div style="border-left-style: solid; background-color:#fff2ff;border-left-color: #ffa0ff;">
+  <table>
+      <tbody>
+        <tr>
+          <td>
+            <img src="PinClipart.com_work-in-progress-sign_1945030.png" width="30" height="30" />
+          </td>
+          <td style="vertical-align:middle">Further discussion is needed on this topic.</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.imaging-r4#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 16, 2025 13:33+0000">2025-06-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/imaging-r4/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

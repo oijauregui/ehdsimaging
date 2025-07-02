@@ -1,0 +1,1039 @@
+[
+  {
+    "id" : "ImManifestProvider",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ActorDefinition/ImManifestProvider",
+    "version" : "0.1.0-ballot",
+    "name" : "ImManifestProvider"
+  },
+  {
+    "id" : "ImReportProvider",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ActorDefinition/ImReportProvider",
+    "version" : "0.1.0-ballot",
+    "name" : "ImReportProvider"
+  },
+  {
+    "id" : "Hl7EuDocumentTypes",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/Hl7EuDocumentTypes",
+    "version" : "0.1.0-ballot",
+    "name" : "Hl7EuDocumentTypes"
+  },
+  {
+    "id" : "codesystem-diagnostic-report-support-info",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-diagnostic-report-support-info",
+    "version" : "0.1.0-ballot",
+    "name" : "DiagnosticReportSupportingInfoCodeSystem"
+  },
+  {
+    "id" : "codesystem-endpoint-terminology",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-endpoint-terminology",
+    "version" : "0.1.0-ballot",
+    "name" : "Hl7EuImagingEndpointTerminologyCodeSystem"
+  },
+  {
+    "id" : "codesystem-missing-dicom-terminology",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-missing-dicom-terminology",
+    "version" : "0.1.0-ballot",
+    "name" : "MissingDicomTerminology"
+  },
+  {
+    "id" : "hl7.fhir.eu.imaging-r4",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ImplementationGuide/hl7.fhir.eu.imaging-r4",
+    "version" : "0.1.0-ballot",
+    "name" : "HL7EuImagingStudyReport"
+  },
+  {
+    "id" : "AllergyIntoleranceEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/AllergyIntoleranceEu",
+    "version" : "0.1.0-ballot",
+    "name" : "AllergyIntoleranceEu"
+  },
+  {
+    "id" : "BodyStructureEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/BodyStructureEu",
+    "version" : "0.1.0-ballot",
+    "name" : "BodyStructureEu"
+  },
+  {
+    "id" : "CarePlanEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/CarePlanEu",
+    "version" : "0.1.0-ballot",
+    "name" : "CarePlanEu"
+  },
+  {
+    "id" : "CompositionEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/CompositionEu",
+    "version" : "0.1.0-ballot",
+    "name" : "CompositionEu"
+  },
+  {
+    "id" : "ConditionEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ConditionEu",
+    "version" : "0.1.0-ballot",
+    "name" : "ConditionEu"
+  },
+  {
+    "id" : "CrossVersionMediaViewExtension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/CrossVersionMediaViewExtension",
+    "version" : "0.1.0-ballot",
+    "name" : "CrossVersionMediaViewExtension"
+  },
+  {
+    "id" : "CvServiceRequestSupportingInfoCodeableConcept",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/CvServiceRequestSupportingInfoCodeableConcept",
+    "version" : "0.1.0-ballot",
+    "name" : "CvServiceRequestSupportingInfoCodeableConcept"
+  },
+  {
+    "id" : "DocumentReferenceEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/DocumentReferenceEu",
+    "version" : "0.1.0-ballot",
+    "name" : "DocumentReferenceEu"
+  },
+  {
+    "id" : "EncounterEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/EncounterEu",
+    "version" : "0.1.0-ballot",
+    "name" : "EncounterEu"
+  },
+  {
+    "id" : "EndpointEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/EndpointEu",
+    "version" : "0.1.0-ballot",
+    "name" : "EndpointEu"
+  },
+  {
+    "id" : "IheMhdEntryUUIDIdentifier",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/IheMhdEntryUUIDIdentifier",
+    "version" : "0.1.0-ballot",
+    "name" : "IheMhdEntryUUIDIdentifier"
+  },
+  {
+    "id" : "ImAdverseEvent",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImAdverseEvent",
+    "version" : "0.1.0-ballot",
+    "name" : "ImAdverseEvent"
+  },
+  {
+    "id" : "ImAdverseEventSubjectReseachSubject",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImAdverseEventSubjectReseachSubject",
+    "version" : "0.1.0-ballot",
+    "name" : "ImAdverseEventSubjectReseachSubject"
+  },
+  {
+    "id" : "ImComposition",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImComposition",
+    "version" : "0.1.0-ballot",
+    "name" : "ImComposition"
+  },
+  {
+    "id" : "ImDiagnosticReport",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImDiagnosticReport",
+    "version" : "0.1.0-ballot",
+    "name" : "ImDiagnosticReport"
+  },
+  {
+    "id" : "ImFinding",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImFinding",
+    "version" : "0.1.0-ballot",
+    "name" : "ImFinding"
+  },
+  {
+    "id" : "ImGestationalAgeObservation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImGestationalAgeObservation",
+    "version" : "0.1.0-ballot",
+    "name" : "ImGestationalAgeObservation"
+  },
+  {
+    "id" : "ImIheMhdDocumentReference",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImIheMhdDocumentReference",
+    "version" : "0.1.0-ballot",
+    "name" : "ImIheMhdDocumentReference"
+  },
+  {
+    "id" : "ImImageIidViewerEndpoint",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImageIidViewerEndpoint",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImageIidViewerEndpoint"
+  },
+  {
+    "id" : "ImImagingDevice",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingDevice",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingDevice"
+  },
+  {
+    "id" : "ImImagingSelection",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingSelection",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingSelection"
+  },
+  {
+    "id" : "ImImagingStudy",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingStudy",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingStudy"
+  },
+  {
+    "id" : "ImImagingStudyManifest",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImImagingStudyManifest",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingStudyManifest"
+  },
+  {
+    "id" : "ImKeyImageDocumentReference",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImKeyImageDocumentReference",
+    "version" : "0.1.0-ballot",
+    "name" : "ImKeyImageDocumentReference"
+  },
+  {
+    "id" : "ImKeyImageImagingSelection",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImKeyImageImagingSelection",
+    "version" : "0.1.0-ballot",
+    "name" : "ImKeyImageImagingSelection"
+  },
+  {
+    "id" : "ImManifestIheMhdDocumentReference",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImManifestIheMhdDocumentReference",
+    "version" : "0.1.0-ballot",
+    "name" : "ImManifestIheMhdDocumentReference"
+  },
+  {
+    "id" : "ImOrder",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImOrder",
+    "version" : "0.1.0-ballot",
+    "name" : "ImOrder"
+  },
+  {
+    "id" : "ImPatient",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImPatient",
+    "version" : "0.1.0-ballot",
+    "name" : "ImPatient"
+  },
+  {
+    "id" : "ImProcedure",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImProcedure",
+    "version" : "0.1.0-ballot",
+    "name" : "ImProcedure"
+  },
+  {
+    "id" : "ImRadiationDoseObservation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImRadiationDoseObservation",
+    "version" : "0.1.0-ballot",
+    "name" : "ImRadiationDoseObservation"
+  },
+  {
+    "id" : "ImReport",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImReport",
+    "version" : "0.1.0-ballot",
+    "name" : "ImReport"
+  },
+  {
+    "id" : "ImReportIheMhdDocumentReference",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImReportIheMhdDocumentReference",
+    "version" : "0.1.0-ballot",
+    "name" : "ImReportIheMhdDocumentReference"
+  },
+  {
+    "id" : "ImSrInstanceImagingSelection",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImSrInstanceImagingSelection",
+    "version" : "0.1.0-ballot",
+    "name" : "ImSrInstanceImagingSelection"
+  },
+  {
+    "id" : "ImWadoEndpoint",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImWadoEndpoint",
+    "version" : "0.1.0-ballot",
+    "name" : "ImWadoEndpoint"
+  },
+  {
+    "id" : "MedicationEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/MedicationEu",
+    "version" : "0.1.0-ballot",
+    "name" : "MedicationEu"
+  },
+  {
+    "id" : "ObservationEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ObservationEu",
+    "version" : "0.1.0-ballot",
+    "name" : "ObservationEu"
+  },
+  {
+    "id" : "PatientAnimalEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/PatientAnimalEu",
+    "version" : "0.1.0-ballot",
+    "name" : "PatientAnimalEu"
+  },
+  {
+    "id" : "ProcedureEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/ProcedureEu",
+    "version" : "0.1.0-ballot",
+    "name" : "ProcedureEu"
+  },
+  {
+    "id" : "RelatedPersonEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/RelatedPersonEu",
+    "version" : "0.1.0-ballot",
+    "name" : "RelatedPersonEu"
+  },
+  {
+    "id" : "SimpleQuantityEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/SimpleQuantityEu",
+    "version" : "0.1.0-ballot",
+    "name" : "SimpleQuantityEu"
+  },
+  {
+    "id" : "SpecimenEu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/SpecimenEu",
+    "version" : "0.1.0-ballot",
+    "name" : "SpecimenEu"
+  },
+  {
+    "id" : "cvDocumentReference-basedOn",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/cvDocumentReference-basedOn",
+    "version" : "0.1.0-ballot",
+    "name" : "CvDocumentReferenceBasedOn"
+  },
+  {
+    "id" : "cvServiceRequest-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/cvServiceRequest-reason",
+    "version" : "0.1.0-ballot",
+    "name" : "CvServiceRequestReason"
+  },
+  {
+    "id" : "im-accession-number-identifier",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-accession-number-identifier",
+    "version" : "0.1.0-ballot",
+    "name" : "ImAccessionNumberIdentifier"
+  },
+  {
+    "id" : "im-composition-diagnosticReportReference",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-composition-diagnosticReportReference",
+    "version" : "0.1.0-ballot",
+    "name" : "ImDiagnosticReportReference"
+  },
+  {
+    "id" : "im-sop-instance-uid-identifier",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-sop-instance-uid-identifier",
+    "version" : "0.1.0-ballot",
+    "name" : "ImSopInstanceUidIdentifier"
+  },
+  {
+    "id" : "im-study-instance-uid-identifier",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/im-study-instance-uid-identifier",
+    "version" : "0.1.0-ballot",
+    "name" : "ImStudyInstanceUidIdentifier"
+  },
+  {
+    "id" : "instance-description",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/instance-description",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingStudyInstanceDescription"
+  },
+  {
+    "id" : "periods-of-life-extension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/periods-of-life-extension",
+    "version" : "0.1.0-ballot",
+    "name" : "PeriodsOfLifeExtension"
+  },
+  {
+    "id" : "quantity-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/quantity-eu",
+    "version" : "0.1.0-ballot",
+    "name" : "QuantityEu"
+  },
+  {
+    "id" : "range-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/imaging-r4/StructureDefinition/range-eu",
+    "version" : "0.1.0-ballot",
+    "name" : "RangeEu"
+  },
+  {
+    "id" : "ImImagingManifestTypesEuVS",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingManifestTypesEuVS",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingManifestTypesEuVS"
+  },
+  {
+    "id" : "ImImagingReportTypesEuVS",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImImagingReportTypesEuVS",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingReportTypesEuVS"
+  },
+  {
+    "id" : "ImSectionEmptyReason",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/ImSectionEmptyReason",
+    "version" : "0.1.0-ballot",
+    "name" : "ImSectionEmptyReason"
+  },
+  {
+    "id" : "im-dose-length-units",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-dose-length-units",
+    "version" : "0.1.0-ballot",
+    "name" : "ImDoseLengthUnits"
+  },
+  {
+    "id" : "im-effective-dose-units",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-effective-dose-units",
+    "version" : "0.1.0-ballot",
+    "name" : "ImEffectiveDoseUnits"
+  },
+  {
+    "id" : "im-gray-square-units",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-gray-square-units",
+    "version" : "0.1.0-ballot",
+    "name" : "ImGraySquareUnits"
+  },
+  {
+    "id" : "im-imaging-device-type",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-device-type",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingDeviceType"
+  },
+  {
+    "id" : "im-imaging-study-performer-type",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-imaging-study-performer-type",
+    "version" : "0.1.0-ballot",
+    "name" : "ImImagingStudyPerformerTypeVS"
+  },
+  {
+    "id" : "im-procedure-type",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/im-procedure-type",
+    "version" : "0.1.0-ballot",
+    "name" : "ImProcedureType"
+  },
+  {
+    "id" : "media-view",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/media-view",
+    "version" : "4.0.1",
+    "name" : "CrossVersionMediaView"
+  },
+  {
+    "id" : "periods-of-life-value-set",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/periods-of-life-value-set",
+    "version" : "0.1.0-ballot",
+    "name" : "PeriodsOfLifeValueSet"
+  },
+  {
+    "id" : "valueset-diagnosticreport-report-support-info",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/imaging-r4/ValueSet/valueset-diagnosticreport-report-support-info",
+    "version" : "0.1.0-ballot",
+    "name" : "DiagnosticReportSupportingInfoVCodes"
+  },
+  {
+    "id" : "ext-R5-Composition.ev.detail",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.event.detail",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_Composition_ev_detail"
+  },
+  {
+    "id" : "ext-R5-Composition.identifier",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.identifier",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_Composition_identifier"
+  },
+  {
+    "id" : "ext-R5-Device.category",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Device.category",
+    "version" : "0.0.1-snapshot-0",
+    "name" : "ext_R5_Device_category"
+  },
+  {
+    "id" : "ext-R5-DiagnosticReport.composition",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+    "version" : "0.0.1-snapshot-0",
+    "name" : "ext_R5_DiagnosticReport_composition"
+  },
+  {
+    "id" : "ext-R5-DiagnosticReport.supportingInfo",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo",
+    "version" : "0.0.1-snapshot-0",
+    "name" : "ext_R5_DiagnosticReport_supportingInfo"
+  },
+  {
+    "id" : "ext-R5-DocumentReference.basedOn",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn",
+    "version" : "0.0.1-snapshot-0",
+    "name" : "ext_R5_DocumentReference_basedOn"
+  },
+  {
+    "id" : "ext-R5-DocumentReference.bodySite",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_DocumentReference_bodySite"
+  },
+  {
+    "id" : "ext-R5-DocumentReference.co.profile",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile",
+    "version" : "0.0.1-snapshot-0",
+    "name" : "ext_R5_DocumentReference_co_profile"
+  },
+  {
+    "id" : "ext-R5-DocumentReference.modality",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_DocumentReference_modality"
+  },
+  {
+    "id" : "ext-R5-Endpoint.connectionType",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.connectionType",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_Endpoint_connectionType"
+  },
+  {
+    "id" : "ext-R5-Endpoint.payload",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Endpoint.payload",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_Endpoint_payload"
+  },
+  {
+    "id" : "ext-R5-ImagingSelection",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "ext_R5_ImagingSelection"
+  },
+  {
+    "id" : "device-category",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/ValueSet/device-category",
+    "version" : "5.0.0",
+    "name" : "FHIRDeviceCategory",
+    "oids" : ["2.16.840.1.113883.4.642.3.3307"]
+  },
+  {
+    "id" : "R5-imagingselection-2dgraphictype-for-R4",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "R5-imagingselection-2dgraphictype-for-R4"
+  },
+  {
+    "id" : "R5-imagingselection-3dgraphictype-for-R4",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-3dgraphictype-for-R4",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "R5-imagingselection-3dgraphictype-for-R4"
+  },
+  {
+    "id" : "R5-imagingselection-status-for-R4",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-status-for-R4",
+    "version" : "0.0.1-snapshot-1",
+    "name" : "R5-imagingselection-status-for-R4"
+  },
+  {
+    "id" : "EHDSAddress",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAddress",
+    "version" : "0.1.0",
+    "name" : "EHDSAddress"
+  },
+  {
+    "id" : "EHDSAlertFlag",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAlertFlag",
+    "version" : "0.1.0",
+    "name" : "EHDSAlertFlag"
+  },
+  {
+    "id" : "EHDSAllergyIntolerance",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAllergyIntolerance",
+    "version" : "0.1.0",
+    "name" : "EHDSAllergyIntolerance"
+  },
+  {
+    "id" : "EHDSAppointment",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAppointment",
+    "version" : "0.1.0",
+    "name" : "EHDSAppointment"
+  },
+  {
+    "id" : "EHDSAttachment",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachment",
+    "version" : "0.1.0",
+    "name" : "EHDSAttachment"
+  },
+  {
+    "id" : "EHDSAttachments",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSAttachments",
+    "version" : "0.1.0",
+    "name" : "EHDSAttachments"
+  },
+  {
+    "id" : "EHDSCarePlan",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCarePlan",
+    "version" : "0.1.0",
+    "name" : "EHDSCarePlan"
+  },
+  {
+    "id" : "EHDSClinicalImpression",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSClinicalImpression",
+    "version" : "0.1.0",
+    "name" : "EHDSClinicalImpression"
+  },
+  {
+    "id" : "EHDSCommonHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCommonHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSCommonHeader"
+  },
+  {
+    "id" : "EHDSCondition",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCondition",
+    "version" : "0.1.0",
+    "name" : "EHDSCondition"
+  },
+  {
+    "id" : "EHDSCoverage",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSCoverage",
+    "version" : "0.1.0",
+    "name" : "EHDSCoverage"
+  },
+  {
+    "id" : "EHDSDevice",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice",
+    "version" : "0.1.0",
+    "name" : "EHDSDevice"
+  },
+  {
+    "id" : "EHDSDeviceUse",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDeviceUse",
+    "version" : "0.1.0",
+    "name" : "EHDSDeviceUse"
+  },
+  {
+    "id" : "EHDSDispenseDecline",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDispenseDecline",
+    "version" : "0.1.0",
+    "name" : "EHDSDispenseDecline"
+  },
+  {
+    "id" : "EHDSDocumentHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDocumentHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSDocumentHeader"
+  },
+  {
+    "id" : "EHDSDosaging",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDosaging",
+    "version" : "0.1.0",
+    "name" : "EHDSDosaging"
+  },
+  {
+    "id" : "EHDSEncounter",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEncounter",
+    "version" : "0.1.0",
+    "name" : "EHDSEncounter"
+  },
+  {
+    "id" : "EHDSEndpoint",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEndpoint",
+    "version" : "0.1.0",
+    "name" : "EHDSEndpoint"
+  },
+  {
+    "id" : "EHDSEpisodeOfCare",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSEpisodeOfCare",
+    "version" : "0.1.0",
+    "name" : "EHDSEpisodeOfCare"
+  },
+  {
+    "id" : "EHDSFunctionalStatus",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSFunctionalStatus",
+    "version" : "0.1.0",
+    "name" : "EHDSFunctionalStatus"
+  },
+  {
+    "id" : "EHDSGoal",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSGoal",
+    "version" : "0.1.0",
+    "name" : "EHDSGoal"
+  },
+  {
+    "id" : "EHDSGroup",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSGroup",
+    "version" : "0.1.0",
+    "name" : "EHDSGroup"
+  },
+  {
+    "id" : "EHDSHealthProfessional",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHealthProfessional",
+    "version" : "0.1.0",
+    "name" : "EHDSHealthProfessional"
+  },
+  {
+    "id" : "EHDSHospitalDischargeReport",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHospitalDischargeReport",
+    "version" : "0.1.0",
+    "name" : "EHDSHospitalDischargeReport"
+  },
+  {
+    "id" : "EHDSHospitalDischargeReportHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHospitalDischargeReportHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSHospitalDischargeReportHeader"
+  },
+  {
+    "id" : "EHDSHumanName",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName",
+    "version" : "0.1.0",
+    "name" : "EHDSHumanName"
+  },
+  {
+    "id" : "EHDSImagingReport",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReport",
+    "version" : "0.1.0",
+    "name" : "EHDSImagingReport"
+  },
+  {
+    "id" : "EHDSImagingReportBody",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportBody",
+    "version" : "0.1.0",
+    "name" : "EHDSImagingReportBody"
+  },
+  {
+    "id" : "EHDSImagingReportHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingReportHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSImagingReportHeader"
+  },
+  {
+    "id" : "EHDSImagingStudy",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImagingStudy",
+    "version" : "0.1.0",
+    "name" : "EHDSImagingStudy"
+  },
+  {
+    "id" : "EHDSImmunization",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSImmunization",
+    "version" : "0.1.0",
+    "name" : "EHDSImmunization"
+  },
+  {
+    "id" : "EHDSInpatientEncounter",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSInpatientEncounter",
+    "version" : "0.1.0",
+    "name" : "EHDSInpatientEncounter"
+  },
+  {
+    "id" : "EHDSLaboratoryObservation",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryObservation",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryObservation"
+  },
+  {
+    "id" : "EHDSLaboratoryOrder",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryOrder",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryOrder"
+  },
+  {
+    "id" : "EHDSLaboratoryOrderBody",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryOrderBody",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryOrderBody"
+  },
+  {
+    "id" : "EHDSLaboratoryOrderHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryOrderHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryOrderHeader"
+  },
+  {
+    "id" : "EHDSLaboratoryReport",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReport",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryReport"
+  },
+  {
+    "id" : "EHDSLaboratoryReportBody",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportBody",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryReportBody"
+  },
+  {
+    "id" : "EHDSLaboratoryReportHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLaboratoryReportHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSLaboratoryReportHeader"
+  },
+  {
+    "id" : "EHDSLocation",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSLocation",
+    "version" : "0.1.0",
+    "name" : "EHDSLocation"
+  },
+  {
+    "id" : "EHDSMedia",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedia",
+    "version" : "0.1.0",
+    "name" : "EHDSMedia"
+  },
+  {
+    "id" : "EHDSMedication",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication",
+    "version" : "0.1.0",
+    "name" : "EHDSMedication"
+  },
+  {
+    "id" : "EHDSMedicationAdministration",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationAdministration",
+    "version" : "0.1.0",
+    "name" : "EHDSMedicationAdministration"
+  },
+  {
+    "id" : "EHDSMedicationDispense",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationDispense",
+    "version" : "0.1.0",
+    "name" : "EHDSMedicationDispense"
+  },
+  {
+    "id" : "EHDSMedicationDispenseHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationDispenseHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSMedicationDispenseHeader"
+  },
+  {
+    "id" : "EHDSMedicationPrescription",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescription",
+    "version" : "0.1.0",
+    "name" : "EHDSMedicationPrescription"
+  },
+  {
+    "id" : "EHDSMedicationPrescriptionHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedicationPrescriptionHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSMedicationPrescriptionHeader"
+  },
+  {
+    "id" : "EHDSObservation",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSObservation",
+    "version" : "0.1.0",
+    "name" : "EHDSObservation"
+  },
+  {
+    "id" : "EHDSOrganization",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization",
+    "version" : "0.1.0",
+    "name" : "EHDSOrganization"
+  },
+  {
+    "id" : "EHDSPatient",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient",
+    "version" : "0.1.0",
+    "name" : "EHDSPatient"
+  },
+  {
+    "id" : "EHDSPatientSummary",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatientSummary",
+    "version" : "0.1.0",
+    "name" : "EHDSPatientSummary"
+  },
+  {
+    "id" : "EHDSPatientSummaryBody",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatientSummaryBody",
+    "version" : "0.1.0",
+    "name" : "EHDSPatientSummaryBody"
+  },
+  {
+    "id" : "EHDSPatientSummaryHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatientSummaryHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSPatientSummaryHeader"
+  },
+  {
+    "id" : "EHDSProcedure",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSProcedure",
+    "version" : "0.1.0",
+    "name" : "EHDSProcedure"
+  },
+  {
+    "id" : "EHDSRelatedPerson",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSRelatedPerson",
+    "version" : "0.1.0",
+    "name" : "EHDSRelatedPerson"
+  },
+  {
+    "id" : "EHDSReportHeader",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSReportHeader",
+    "version" : "0.1.0",
+    "name" : "EHDSReportHeader"
+  },
+  {
+    "id" : "EHDSServiceRequest",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest",
+    "version" : "0.1.0",
+    "name" : "EHDSServiceRequest"
+  },
+  {
+    "id" : "EHDSSlot",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSlot",
+    "version" : "0.1.0",
+    "name" : "EHDSSlot"
+  },
+  {
+    "id" : "EHDSSpecimen",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSpecimen",
+    "version" : "0.1.0",
+    "name" : "EHDSSpecimen"
+  },
+  {
+    "id" : "EHDSSubstance",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance",
+    "version" : "0.1.0",
+    "name" : "EHDSSubstance"
+  },
+  {
+    "id" : "EHDSTask",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTask",
+    "version" : "0.1.0",
+    "name" : "EHDSTask"
+  },
+  {
+    "id" : "EHDSTelecom",
+    "type" : "StructureDefinition",
+    "url" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSTelecom",
+    "version" : "0.1.0",
+    "name" : "EHDSTelecom"
+  }
+]

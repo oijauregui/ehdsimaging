@@ -1,0 +1,125 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSDeviceMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSDeviceMap</b></p><a name=\"EHDSDeviceMap\"> </a><a name=\"hcEHDSDeviceMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSDevice.html\">Device model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSDevice.html\">Device model</a> to <a href=\"http://hl7.org/fhir/R5/device.html\">Device</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier (C.12.1 - Identifier)</td></tr><tr><td>manufacturer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>manufacturer (C.12.2 - Manufacturer)</td></tr><tr><td>manufactureDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>manufactureDate (C.12.3 - Manufacture date)</td></tr><tr><td>expiryDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>expirationDate (C.12.4 - Expiry date)</td></tr><tr><td>lotNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>lotNumber (C.12.5 - Lot number)</td></tr><tr><td>serialNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>serialNumber (C.12.6 - Serial number)</td></tr><tr><td>name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>name (C.12.7 - Name)</td></tr><tr><td>modelNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>modelNumber (C.12.8 - Model number)</td></tr><tr><td>version</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>version (C.12.9 - Version)</td></tr><tr><td>type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>type (C.12.10 - Type)</td></tr><tr><td>note</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>note (C.12.11 - Note)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSDeviceMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSDeviceMap",
+  "title" : "EHDSDevice Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-16T13:38:01+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSDevice",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSDevice",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Device",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.12.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "manufacturer",
+      "target" : [{
+        "code" : "manufacturer",
+        "display" : "C.12.2 - Manufacturer",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "manufactureDate",
+      "target" : [{
+        "code" : "manufactureDate",
+        "display" : "C.12.3 - Manufacture date",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "expiryDate",
+      "target" : [{
+        "code" : "expirationDate",
+        "display" : "C.12.4 - Expiry date",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "lotNumber",
+      "target" : [{
+        "code" : "lotNumber",
+        "display" : "C.12.5 - Lot number",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "serialNumber",
+      "target" : [{
+        "code" : "serialNumber",
+        "display" : "C.12.6 - Serial number",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "name",
+      "target" : [{
+        "code" : "name",
+        "display" : "C.12.7 - Name",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "modelNumber",
+      "target" : [{
+        "code" : "modelNumber",
+        "display" : "C.12.8 - Model number",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "version",
+      "target" : [{
+        "code" : "version",
+        "display" : "C.12.9 - Version",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "type",
+      "target" : [{
+        "code" : "type",
+        "display" : "C.12.10 - Type",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "note",
+      "target" : [{
+        "code" : "note",
+        "display" : "C.12.11 - Note",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}

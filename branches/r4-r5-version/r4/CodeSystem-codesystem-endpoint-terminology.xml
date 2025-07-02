@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="codesystem-endpoint-terminology"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem codesystem-endpoint-terminology</b></p><a name="codesystem-endpoint-terminology"> </a><a name="hccodesystem-endpoint-terminology"> </a><p>This case-sensitive code system <code>http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-endpoint-terminology</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style="white-space:nowrap">connection-type<a name="codesystem-endpoint-terminology-connection-type"> </a></td><td>Endpoint connection type</td><td>The type of connection that the endpoint supports.</td></tr><tr><td>2</td><td style="white-space:nowrap">  ihe-iid<a name="codesystem-endpoint-terminology-ihe-iid"> </a></td><td>IHE IID endpoint</td><td>IHE IID endpoint connection type.</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r4/CodeSystem/codesystem-endpoint-terminology"/>
+  <version value="0.1.0-ballot"/>
+  <name value="Hl7EuImagingEndpointTerminologyCodeSystem"/>
+  <title value="CodeSystem for terminology used in Endpoint resources in the EU Imaging IG."/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-06-16T13:32:42+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="connection-type"/>
+    <display value="Endpoint connection type"/>
+    <definition value="The type of connection that the endpoint supports."/>
+    <concept>
+      <code value="ihe-iid"/>
+      <display value="IHE IID endpoint"/>
+      <definition value="IHE IID endpoint connection type."/>
+    </concept>
+  </concept>
+</CodeSystem>

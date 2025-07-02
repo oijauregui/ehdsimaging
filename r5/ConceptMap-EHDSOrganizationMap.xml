@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSOrganizationMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSOrganizationMap</b></p><a name="EHDSOrganizationMap"> </a><a name="hcEHDSOrganizationMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSOrganization.html">Organization model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSOrganization.html">Organization model</a> to <a href="http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-organization-eu.html">Organization (EU base)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>identifier (C.3.1 - Identifier)</td></tr><tr><td>type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>type (C.3.2 - Type)</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>name (C.3.3 - Name)</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>contact.address (C.3.4 - Address)</td></tr><tr><td>telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>contact.telecom (C.3.5 - Telecom)</td></tr><tr><td>partOf</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>partOf (C.3.6 - Part of)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSOrganizationMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSOrganizationMap"/>
+  <title value="EHDSOrganization Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSOrganization"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSOrganization"/>
+    <target value="http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu"/>
+    <element>
+      <code value="identifier"/>
+      <target>
+        <code value="identifier"/>
+        <display value="C.3.1 - Identifier"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="type"/>
+      <target>
+        <code value="type"/>
+        <display value="C.3.2 - Type"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="name"/>
+      <target>
+        <code value="name"/>
+        <display value="C.3.3 - Name"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="address"/>
+      <target>
+        <code value="contact.address"/>
+        <display value="C.3.4 - Address"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="telecom"/>
+      <target>
+        <code value="contact.telecom"/>
+        <display value="C.3.5 - Telecom"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="partOf"/>
+      <target>
+        <code value="partOf"/>
+        <display value="C.3.6 - Part of"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

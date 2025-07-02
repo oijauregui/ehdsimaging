@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSHumanNameMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSHumanNameMap</b></p><a name="EHDSHumanNameMap"> </a><a name="hcEHDSHumanNameMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSHumanName.html">Human name model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSHumanName.html">Human name model</a> to <a href="http://hl7.org/fhir/R5/datatypes.html#HumanName">HumanName</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>use</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>use (C.27.1 - Use)</td><td/></tr><tr><td>text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>text (C.27.2 - Text)</td><td>Concatenation of family names and given names..</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-broader-than-target" title="source-is-broader-than-target">is broader than</a></td><td>family (C.27.3 - Family)</td><td>Concatenation of family names.</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>given (C.27.4 - Given)</td><td/></tr><tr><td>prefix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>prefix (C.27.5 - Prefix)</td><td/></tr><tr><td>suffix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>suffix (C.27.6 - Suffix)</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSHumanNameMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSHumanNameMap"/>
+  <title value="EHDSHumanName Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-06-16T13:38:01+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSHumanName"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSHumanName"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/HumanName"/>
+    <element>
+      <code value="use"/>
+      <target>
+        <code value="use"/>
+        <display value="C.27.1 - Use"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="text"/>
+      <target>
+        <code value="text"/>
+        <display value="C.27.2 - Text"/>
+        <relationship value="equivalent"/>
+        <comment value="Concatenation of family names and given names.."/>
+      </target>
+    </element>
+    <element>
+      <code value="family"/>
+      <target>
+        <code value="family"/>
+        <display value="C.27.3 - Family"/>
+        <relationship value="source-is-broader-than-target"/>
+        <comment value="Concatenation of family names."/>
+      </target>
+    </element>
+    <element>
+      <code value="given"/>
+      <target>
+        <code value="given"/>
+        <display value="C.27.4 - Given"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="prefix"/>
+      <target>
+        <code value="prefix"/>
+        <display value="C.27.5 - Prefix"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="suffix"/>
+      <target>
+        <code value="suffix"/>
+        <display value="C.27.6 - Suffix"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

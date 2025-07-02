@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ValueSet/R5-imagingselection-2dgraphictype-for-R4> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "R5-imagingselection-2dgraphictype-for-R4"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet R5-imagingselection-2dgraphictype-for-R4</b></p><a name=\"R5-imagingselection-2dgraphictype-for-R4\"> </a><a name=\"hcR5-imagingselection-2dgraphictype-for-R4\"> </a><p>This value set expansion contains 5 concepts.</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-point\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-point\">point</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>POINT</td><td>A single location denoted by a single (x,y) pair.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-polyline\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-polyline\">polyline</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>POLYLINE</td><td>A series of connected line segments with ordered vertices denoted by (x,y) triplets; the points need not be coplanar.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-interpolated\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-interpolated\">interpolated</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>INTERPOLATED</td><td>An n-tuple list of (x,y) pair end points between which some form of implementation dependent curved lines are to be drawn. The rendered line shall pass through all the specified points.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-circle\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-circle\">circle</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>CIRCLE</td><td>Two points shall be present; the first point is to be interpreted as the center and the second point as a point on the circumference of a circle, some form of implementation dependent representation of which is to be drawn.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"R5-imagingselection-2dgraphictype-for-R4-http://hl7.org/fhir/imagingselection-2dgraphictype-ellipse\"> </a>  <a href=\"http://hl7.org/fhir/R5/codesystem-imagingselection-2dgraphictype.html#imagingselection-2dgraphictype-ellipse\">ellipse</a></td><td>http://hl7.org/fhir/imagingselection-2dgraphictype</td><td>ELLIPSE</td><td>An ellipse defined by four (x,y) pairs, the first two pairs specifying the endpoints of the major axis and the second two pairs specifying the endpoints of the minor axis.</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/xver/5.0/ValueSet/R5-imagingselection-2dgraphictype-for-R4"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.0.1-snapshot-1"] ; # 
+  fhir:name [ fhir:v "R5-imagingselection-2dgraphictype-for-R4"] ; # 
+  fhir:title [ fhir:v "Cross-version VS for R5.ImagingSelection2DGraphicType for use in FHIR R4"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-06-03T03:14:45.7140378+02:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This cross-version ValueSet represents concepts from http://hl7.org/fhir/ValueSet/imagingselection-2dgraphictype|5.0.0 for use in FHIR R4. Concepts not present here have direct `equivalent` mappings crossing all versions from R5 to R4."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-2dgraphictype"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "point" ] ;
+         fhir:display [ fhir:v "POINT" ]
+       ] [
+         fhir:code [ fhir:v "polyline" ] ;
+         fhir:display [ fhir:v "POLYLINE" ]
+       ] [
+         fhir:code [ fhir:v "interpolated" ] ;
+         fhir:display [ fhir:v "INTERPOLATED" ]
+       ] [
+         fhir:code [ fhir:v "circle" ] ;
+         fhir:display [ fhir:v "CIRCLE" ]
+       ] [
+         fhir:code [ fhir:v "ellipse" ] ;
+         fhir:display [ fhir:v "ELLIPSE" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:expansion [
+     fhir:contains ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-2dgraphictype"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "point" ] ;
+       fhir:display [ fhir:v "POINT" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-2dgraphictype"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "polyline" ] ;
+       fhir:display [ fhir:v "POLYLINE" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-2dgraphictype"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "interpolated" ] ;
+       fhir:display [ fhir:v "INTERPOLATED" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-2dgraphictype"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "circle" ] ;
+       fhir:display [ fhir:v "CIRCLE" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/imagingselection-2dgraphictype"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "5.0.0" ] ;
+       fhir:code [ fhir:v "ellipse" ] ;
+       fhir:display [ fhir:v "ELLIPSE" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

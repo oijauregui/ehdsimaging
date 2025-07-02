@@ -1,0 +1,124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSPatientMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSPatientMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSPatientMap</b></p><a name=\"EHDSPatientMap\"> </a><a name=\"hcEHDSPatientMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSPatient.html\">Patient model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSPatient.html\">Patient model</a> to <a href=\"http://hl7.eu/fhir/base-r5/0.1.0-ballot/StructureDefinition-patient-eu.html\">Patient (EU base)</a></p><table class=\"grid\"><tr><td colspan=\"2\"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan=\"2\"><b>Target Concept Details</b></td></tr><tr><td colspan=\"2\"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient</td><td/><td colspan=\"2\"><b>Codes</b> from http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu</td></tr><tr><td style=\"border-right-width: 0px\">personalIdentifier</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">identifier</td><td style=\"border-left-width: 0px\">C.1.1 - Personal identifier</td></tr><tr><td style=\"border-right-width: 0px\">name</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">name</td><td style=\"border-left-width: 0px\">C.1.2 - Name</td></tr><tr><td style=\"border-right-width: 0px\">dateOfBirth</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">birthDate</td><td style=\"border-left-width: 0px\">C.1.3 - Date of birth</td></tr><tr><td style=\"border-right-width: 0px\">administrativeGender</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">gender</td><td style=\"border-left-width: 0px\">C.1.4 - Administrative gender</td></tr><tr><td style=\"border-right-width: 0px\">address</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">address</td><td style=\"border-left-width: 0px\">C.1.5 - Address</td></tr><tr><td style=\"border-right-width: 0px\">telecom</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">telecom</td><td style=\"border-left-width: 0px\">C.1.6 - Telecom</td></tr><tr><td style=\"border-right-width: 0px\">maritalStatus</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">maritalStatus</td><td style=\"border-left-width: 0px\">C.1.7 - Marital status</td></tr><tr><td style=\"border-right-width: 0px; border-bottom-style: none\">citizenship</td><td style=\"border-left-width: 0px; border-bottom-style: none\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">extension[patient-citizenship]</td><td style=\"border-left-width: 0px\">C.1.8 - Citizenship (nationality)</td></tr><tr><td style=\"border-right-width: 0px; border-top-style: none\"/><td style=\"border-top-style: none; border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">extension[patient-nationality]</td><td style=\"border-left-width: 0px\">C.1.8 - Citizenship (nationality)</td></tr><tr><td style=\"border-right-width: 0px\">communicationLanguage</td><td style=\"border-left-width: 0px\"/><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td style=\"border-right-width: 0px\">communication.language</td><td style=\"border-left-width: 0px\">C.1.9 - Communcation language</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSPatientMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSPatientMap"] ; # 
+  fhir:title [ fhir:v "EHDSPatient Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-07-02T12:58:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSPatient"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSPatient>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "personalIdentifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "identifier" ] ;
+         fhir:display [ fhir:v "C.1.1 - Personal identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "name" ] ;
+         fhir:display [ fhir:v "C.1.2 - Name" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "dateOfBirth" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "birthDate" ] ;
+         fhir:display [ fhir:v "C.1.3 - Date of birth" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "administrativeGender" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "gender" ] ;
+         fhir:display [ fhir:v "C.1.4 - Administrative gender" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "address" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "address" ] ;
+         fhir:display [ fhir:v "C.1.5 - Address" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "telecom" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "telecom" ] ;
+         fhir:display [ fhir:v "C.1.6 - Telecom" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "maritalStatus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "maritalStatus" ] ;
+         fhir:display [ fhir:v "C.1.7 - Marital status" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "citizenship" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension[patient-citizenship]" ] ;
+         fhir:display [ fhir:v "C.1.8 - Citizenship (nationality)" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] [
+         fhir:code [ fhir:v "extension[patient-nationality]" ] ;
+         fhir:display [ fhir:v "C.1.8 - Citizenship (nationality)" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "communicationLanguage" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "communication.language" ] ;
+         fhir:display [ fhir:v "C.1.9 - Communcation language" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

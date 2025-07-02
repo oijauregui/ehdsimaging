@@ -1,0 +1,180 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationMap> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHDSMedicationMap"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSMedicationMap</b></p><a name=\"EHDSMedicationMap\"> </a><a name=\"hcEHDSMedicationMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSMedication.html\">Medicinal product model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSMedication.html\">Medicinal product model</a> to <a href=\"StructureDefinition-MedicationEu.html\">EU Medication</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td/><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-EHDSMedication.html\">Medicinal product model</a> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifyingCode[x] ((Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>classification ((CodeableConcept))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>productName ((Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>marketingAuthorisationHolder</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>marketingAuthorisationHolder.organizationName ((Name of the organisation holding the authorisation for marketing/mahufacturing))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>marketingAuthorisationHolder.organizationIdentifier ((Identifier of the organisation and/or its physical location))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>doseForm ((Dose form(s) on a product level. Dose form for a single package item is defined below.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>packSize ((UCUM for units of measure. EDQM Standard Terms for units of presentation. (preferred)))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item ((A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.doseForm ((Dose form))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.ingredient ((Ingredients))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.ingredient.isActive ((Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.ingredient.substance ((Substance))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.ingredient.strengthInfo ((Strength of the product - amount of substance per unit))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.ingredient.strengthInfo.strength ((Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.ingredient.strengthInfo.basisOfStrengthSubstance ((Substance that the strength refers to, in case it's different from the main substance))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.unitOfPresentation ((Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.containedQuantity ((Manufactured item quantity for liquids (3ml / 1 vial)))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.amount ((Number of such manufactured items in this product (5 vials)))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>item.packageType ((Type of package of the medication item))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>device ((Administration device included in the product))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>device.deviceQuantity ((Number of such devices))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>device.device[x] ((Device coded))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>characteristic ((Other features of the product))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>characteristic.type ((A code expressing the type of characteristic))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>characteristic.value[x] ((Description of the characteristic))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>batch ((Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>batch.lotNumber ((Batch identifier of the medicinal product))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>batch.expirationDate ((Batch expiration date of the medicinal product.))</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSMedicationMap"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-ballot"] ; # 
+  fhir:name [ fhir:v "EHDSMedicationMap"] ; # 
+  fhir:title [ fhir:v "EHDSMedication Mapping"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-07-02T12:58:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Map for EHDSMedication"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication>
+     ] ;
+     fhir:target [
+       fhir:v "http://hl7.eu/fhir/imaging-r5/StructureDefinition/MedicationEu"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/imaging-r5/StructureDefinition/MedicationEu>
+     ] ;
+     fhir:element ( [
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] [
+     fhir:source [
+       fhir:v "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication"^^xsd:anyURI ;
+       fhir:link <https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSMedication>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "identifyingCode[x]" ] ;
+       fhir:display [ fhir:v "(Identifier or code for the product (virtual product, branded product or package). If several identifiers are specified, they shall not have conflicting meanings or very different granularities.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "classification" ] ;
+       fhir:display [ fhir:v "(CodeableConcept)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "productName" ] ;
+       fhir:display [ fhir:v "(Name of the product (full name, invented name, other). When the product has different names, the appropriate one for the context should be used. Translations of names can be provided.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "marketingAuthorisationHolder" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "marketingAuthorisationHolder.organizationName" ] ;
+       fhir:display [ fhir:v "(Name of the organisation holding the authorisation for marketing/mahufacturing)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "marketingAuthorisationHolder.organizationIdentifier" ] ;
+       fhir:display [ fhir:v "(Identifier of the organisation and/or its physical location)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "doseForm" ] ;
+       fhir:display [ fhir:v "(Dose form(s) on a product level. Dose form for a single package item is defined below.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "packSize" ] ;
+       fhir:display [ fhir:v "(UCUM for units of measure. EDQM Standard Terms for units of presentation. (preferred))" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item" ] ;
+       fhir:display [ fhir:v "(A medication item. For combination packs, this can be manufactured items with each item having its own dose form and ingredients+strengths defined)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.doseForm" ] ;
+       fhir:display [ fhir:v "(Dose form)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.ingredient" ] ;
+       fhir:display [ fhir:v "(Ingredients)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.ingredient.isActive" ] ;
+       fhir:display [ fhir:v "(Marks if the ingredient is considered an active ingredient. Typically excipients are not needed, so by default active ingredients are expected.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.ingredient.substance" ] ;
+       fhir:display [ fhir:v "(Substance)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.ingredient.strengthInfo" ] ;
+       fhir:display [ fhir:v "(Strength of the product - amount of substance per unit)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.ingredient.strengthInfo.strength" ] ;
+       fhir:display [ fhir:v "(Concentration or presentation strength, e.g 100mg/1ml or 500mg per 1 tablet)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.ingredient.strengthInfo.basisOfStrengthSubstance" ] ;
+       fhir:display [ fhir:v "(Substance that the strength refers to, in case it's different from the main substance)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.unitOfPresentation" ] ;
+       fhir:display [ fhir:v "(Unit of presentation for the manufactured item (tablet, vial, tube). Typically, the smallest countable object in the package.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.containedQuantity" ] ;
+       fhir:display [ fhir:v "(Manufactured item quantity for liquids (3ml / 1 vial))" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.amount" ] ;
+       fhir:display [ fhir:v "(Number of such manufactured items in this product (5 vials))" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "item.packageType" ] ;
+       fhir:display [ fhir:v "(Type of package of the medication item)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "device" ] ;
+       fhir:display [ fhir:v "(Administration device included in the product)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "device.deviceQuantity" ] ;
+       fhir:display [ fhir:v "(Number of such devices)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "device.device[x]" ] ;
+       fhir:display [ fhir:v "(Device coded)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "characteristic" ] ;
+       fhir:display [ fhir:v "(Other features of the product)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "characteristic.type" ] ;
+       fhir:display [ fhir:v "(A code expressing the type of characteristic)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "characteristic.value[x]" ] ;
+       fhir:display [ fhir:v "(Description of the characteristic)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "batch" ] ;
+       fhir:display [ fhir:v "(Batch information of a medicinal product. Typically recorded during dispense or administration, rarely known or relevant for a prescription/request.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "batch.lotNumber" ] ;
+       fhir:display [ fhir:v "(Batch identifier of the medicinal product)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] [
+       fhir:code [ fhir:v "batch.expirationDate" ] ;
+       fhir:display [ fhir:v "(Batch expiration date of the medicinal product.)" ] ;
+       fhir:noMap [ fhir:v true ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

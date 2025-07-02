@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="EHDSServiceRequestMap"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap EHDSServiceRequestMap</b></p><a name="EHDSServiceRequestMap"> </a><a name="hcEHDSServiceRequestMap"> </a><p>Mapping from <a href="StructureDefinition-EHDSServiceRequest.html">Service request model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-EHDSServiceRequest.html">Service request model</a> to <a href="http://hl7.org/fhir/R5/servicerequest.html">ServiceRequest</a></p><table class="grid"><tr><td colspan="2"><b>Source Concept Details</b></td><td><b>Relationship</b></td><td colspan="2"><b>Target Concept Details</b></td><td><b>Comment</b></td></tr><tr><td colspan="2"><b>Codes</b> from https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest</td><td/><td colspan="2"><b>Codes</b> from http://hl7.org/fhir/StructureDefinition/ServiceRequest</td><td/></tr><tr><td style="border-right-width: 0px">serviceText</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#source-is-narrower-than-target" title="source-is-narrower-than-target">is narrower than</a></td><td style="border-right-width: 0px">text</td><td style="border-left-width: 0px">C.8.1 - Service text</td><td/></tr><tr><td style="border-right-width: 0px">serviceCode</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">code.concept</td><td style="border-left-width: 0px">C.8.2 - Service code</td><td/></tr><tr><td style="border-right-width: 0px">reasonCode</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reason.concept</td><td style="border-left-width: 0px">C.8.3 - Reason code</td><td/></tr><tr><td style="border-right-width: 0px">quantity</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">quantityQuantity</td><td style="border-left-width: 0px">C.8.4 - Quantity</td><td/></tr><tr><td style="border-right-width: 0px">anatomicLocation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">bodySite</td><td style="border-left-width: 0px">C.8.5 - Anatomic location</td><td/></tr><tr><td style="border-right-width: 0px">reasonReference</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">reason.reference</td><td style="border-left-width: 0px">C.8.6 - Reason reference</td><td/></tr><tr><td style="border-right-width: 0px">priority</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">priority</td><td style="border-left-width: 0px">C.8.7 - Priority</td><td/></tr><tr><td style="border-right-width: 0px">supportingInformation</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">supportingInfo</td><td style="border-left-width: 0px">C.8.8 - Supporting information</td><td>Point to observations and conditions</td></tr><tr><td style="border-right-width: 0px">specimen</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">specimen</td><td style="border-left-width: 0px">C.8.9 - Specimen</td><td/></tr><tr><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">subject</td><td style="border-left-width: 0px">C.8.10 - Subject</td><td/></tr><tr><td style="border-right-width: 0px">encounter</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">encounter</td><td style="border-left-width: 0px">C.8.11 - Encounter</td><td/></tr><tr><td style="border-right-width: 0px; border-bottom-style: none">occurance[x]</td><td style="border-left-width: 0px; border-bottom-style: none"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">occurrenceDateTime</td><td style="border-left-width: 0px">C.8.12 - Occurance</td><td/></tr><tr><td style="border-right-width: 0px; border-top-style: none"/><td style="border-top-style: none; border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">occurrencePeriod</td><td style="border-left-width: 0px">C.8.12 - Occurance</td><td/></tr><tr><td style="border-right-width: 0px">patientInstructions</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">patientInstruction.instructionMarkdown</td><td style="border-left-width: 0px">C.8.13 - Patient instructions</td><td/></tr><tr><td style="border-right-width: 0px">coverage</td><td style="border-left-width: 0px"/><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td style="border-right-width: 0px">insurance</td><td style="border-left-width: 0px">C.8.14 - Coverage</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSServiceRequestMap"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EHDSServiceRequestMap"/>
+  <title value="EHDSServiceRequest Mapping"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-07-02T12:58:33+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Map for EHDSServiceRequest"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"/>
+  <group>
+    <source value="https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSServiceRequest"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <element>
+      <code value="serviceText"/>
+      <target>
+        <code value="text"/>
+        <display value="C.8.1 - Service text"/>
+        <relationship value="source-is-narrower-than-target"/>
+      </target>
+    </element>
+    <element>
+      <code value="serviceCode"/>
+      <target>
+        <code value="code.concept"/>
+        <display value="C.8.2 - Service code"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="reasonCode"/>
+      <target>
+        <code value="reason.concept"/>
+        <display value="C.8.3 - Reason code"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="quantity"/>
+      <target>
+        <code value="quantityQuantity"/>
+        <display value="C.8.4 - Quantity"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="anatomicLocation"/>
+      <target>
+        <code value="bodySite"/>
+        <display value="C.8.5 - Anatomic location"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="reasonReference"/>
+      <target>
+        <code value="reason.reference"/>
+        <display value="C.8.6 - Reason reference"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="priority"/>
+      <target>
+        <code value="priority"/>
+        <display value="C.8.7 - Priority"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="supportingInformation"/>
+      <target>
+        <code value="supportingInfo"/>
+        <display value="C.8.8 - Supporting information"/>
+        <relationship value="equivalent"/>
+        <comment value="Point to observations and conditions"/>
+      </target>
+    </element>
+    <element>
+      <code value="specimen"/>
+      <target>
+        <code value="specimen"/>
+        <display value="C.8.9 - Specimen"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="subject"/>
+      <target>
+        <code value="subject"/>
+        <display value="C.8.10 - Subject"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="encounter"/>
+      <target>
+        <code value="encounter"/>
+        <display value="C.8.11 - Encounter"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="occurance[x]"/>
+      <target>
+        <code value="occurrenceDateTime"/>
+        <display value="C.8.12 - Occurance"/>
+        <relationship value="equivalent"/>
+      </target>
+      <target>
+        <code value="occurrencePeriod"/>
+        <display value="C.8.12 - Occurance"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="patientInstructions"/>
+      <target>
+        <code value="patientInstruction.instructionMarkdown"/>
+        <display value="C.8.13 - Patient instructions"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="coverage"/>
+      <target>
+        <code value="insurance"/>
+        <display value="C.8.14 - Coverage"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

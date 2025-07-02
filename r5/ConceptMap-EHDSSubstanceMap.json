@@ -1,0 +1,101 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "EHDSSubstanceMap",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap EHDSSubstanceMap</b></p><a name=\"EHDSSubstanceMap\"> </a><a name=\"hcEHDSSubstanceMap\"> </a><p>Mapping from <a href=\"StructureDefinition-EHDSSubstance.html\">Substance model</a> to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-EHDSSubstance.html\">Substance model</a> to <a href=\"http://hl7.org/fhir/R5/substance.html\">Substance</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>identifier (C.28.1 - Identifier)</td></tr><tr><td>code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>code (C.28.2 - Code)</td></tr><tr><td>description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>description (C.28.3 - Description)</td></tr><tr><td>expiry</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>expiry (C.28.4 - Expiry)</td></tr><tr><td>quantity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>quantity (C.28.5 - Quantity)</td></tr><tr><td>ingredients</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ingredient (C.28.6 - Ingredients)</td></tr><tr><td>ingredients.quantity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ingredient.quantity (C.28.6.1 - Quantity)</td></tr><tr><td>ingredients.substance</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ingredient.substanceReference (C.28.6.2 - Substance)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/imaging-r5/ConceptMap/EHDSSubstanceMap",
+  "version" : "0.1.0-ballot",
+  "name" : "EHDSSubstanceMap",
+  "title" : "EHDSSubstance Mapping",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-07-02T12:58:33+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Map for EHDSSubstance",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceScopeUri" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance",
+  "group" : [{
+    "source" : "https://www.xt-ehr.eu/specifications/fhir/StructureDefinition/EHDSSubstance",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Substance",
+    "element" : [{
+      "code" : "identifier",
+      "target" : [{
+        "code" : "identifier",
+        "display" : "C.28.1 - Identifier",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "code",
+      "target" : [{
+        "code" : "code",
+        "display" : "C.28.2 - Code",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "description",
+      "target" : [{
+        "code" : "description",
+        "display" : "C.28.3 - Description",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "expiry",
+      "target" : [{
+        "code" : "expiry",
+        "display" : "C.28.4 - Expiry",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "quantity",
+      "target" : [{
+        "code" : "quantity",
+        "display" : "C.28.5 - Quantity",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "ingredients",
+      "target" : [{
+        "code" : "ingredient",
+        "display" : "C.28.6 - Ingredients",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "ingredients.quantity",
+      "target" : [{
+        "code" : "ingredient.quantity",
+        "display" : "C.28.6.1 - Quantity",
+        "relationship" : "equivalent"
+      }]
+    },
+    {
+      "code" : "ingredients.substance",
+      "target" : [{
+        "code" : "ingredient.substanceReference",
+        "display" : "C.28.6.2 - Substance",
+        "relationship" : "equivalent"
+      }]
+    }]
+  }]
+}
