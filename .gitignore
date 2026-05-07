@@ -14,3 +14,4 @@ translations/**
 subigs/**
 ig-test
 .vscode/settings.json
+jira/node_modules/**
