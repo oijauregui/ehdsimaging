@@ -5,126 +5,52 @@
 | Field | Value |
 |-------|-------|
 | Key | FHIR-56557 |
-| Issue Type | Technical Correction |
-| Summary | Suggested editorial changes |
+| Title | Suggested editorial changes |
+| Type | Technical Correction |
 | Status | Submitted |
-| Resolution | Unresolved |
 | Reporter | NikolausKrondraf |
-| Assignee | Unassigned |
 | Created | 4/28/26 |
-
 
 ## Description
 
 This is a list of suggested editorial changes (typos, wording, grammar) that I came across while reading the IG. The line numbers always refer to the markdown files:
 
-URL: https://hl7.eu/fhir/imaging/1.0.0-ballot/en/index.html
-Markdown: igs\imaging-r4\input\pagecontent\index.md
-
-Line 46:
-"as defined in and refined by ,"
-→ "as defined in and refined by (missing reference),"
-
-Line 47:
-"The structure and contents of a FHIR imaging study reports."
-→ "FHIR imaging study reports" or "a FHIR imaging study report" (singular/plural inconsistency)
-
-Line 50:
-"relation of this specification…"
-→ "The relation of this specification…" (add article to align with other bullet points)
-
-Line 56:
-"a and for each document including instances of the referred resources"
-→ "a (missing reference) for each document, including instances of the referred resources"
-
-Line 57:
-"as the previous but the (important) resources are harmonized"
-→ "as in the previous approach, but the (important) resources are harmonized"
-
-Line 57:
-"meaning that all documents point to the same , and other resources"
-→ "meaning that all documents point to the same (missing reference), and other resources"
-
-####
-
-URL: https://hl7.eu/fhir/imaging/1.0.0-ballot/en/use-cases.html
-Markdown: igs\imaging-r4\input\pagecontent\use-cases.md
-
-Line 2:
-"how are obligations on data element utilizied" 
-→ "how obligations on data elements are utilized" (correct word order and typo)
-
-igs\imaging-r4\input\pagecontent\use-case-other-specs.md
-Line 8: 
-"THe" → "The"
-
-"so a instance that conforms… also conforms" 
-→ "so that an instance that conforms… also conforms"
-
-"slight unconformities" 
-→ "slight non-conformities" or "inconsistencies"
-
-"with with IHE-RAD" → "with IHE-RAD"
-
-Line 24:
-"...and determines which image/serie to view." 
-→ "...and determines which images/series to view."
-
-####
-
-URL: https://hl7.eu/fhir/imaging/1.0.0-ballot/en/imaging-report.html
-Markdown: igs\imaging-r4\input\pagecontent\imaging-report.md
-
-Line 12:
-"contains both a DiagnosticReport as a Composition resource" 
-→ "contains both a DiagnosticReport and a Composition resource"
-
-Line 15:
-"As described by IHE-IDR, the all radiology reports" 
-→ "As described by IHE-IDR, all radiology reports"
-
-The closing parenthesis should be moved from the end of the sentence after "see DiagnosticReportEuImaging"
-
-Line 26:
-"It includes such as"
-→ "It includes information such as"
-
-Line 100:
-"as it not anticipated" 
-→ "as it is not anticipated"
-
-Line 110:
-"Communication resources" 
-→ "Communication resource"
-
-Line 119:
-"issues/last changed" 
-→ "issued/last changed"
-
 ## Implementation Status
 
-**Status**: Pending Decision  
-**GitHub Evidence**: None reported  
-**Related Tickets**: None identified  
+### Current Status: Submitted
+
+### Disposition Classification
+
+Based on the ticket status and metadata:
+
+- **Status Field**: Submitted
+- **Resolution**: Not specified
+- **Related Sections**: Not specified
 
 ## Disposition Analysis
 
-### Current State
-- Ticket Status: **Submitted**
-- Resolution: **Unresolved**
-- Classification: **Pending Decision**
+### Ticket Metadata Analysis
+
+The ticket is currently classified as **Submitted** and requires governance review to determine final disposition.
+
+### Evidence & Links
+
+
+
 
 ## Proposed Dispositions
 
-### Disposition A: Accept As Requested
+### Disposition A: Accept & Implement
 
 #### Proposal
 
-Review this ticket with the work group to determine if the requested change should be accepted and implemented exactly as described.
+Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
 
 #### Justification
 
-The ticket is in status Submitted and presents a specific change request. Work group review is needed to make an informed decision on whether this approach is feasible and aligns with specification goals.
+- The request addresses a legitimate use case in imaging workflows
+- Implementation would improve clarity or functionality
+- Change is consistent with existing FHIR design principles
 
 ---
 
@@ -132,11 +58,17 @@ The ticket is in status Submitted and presents a specific change request. Work g
 
 #### Proposal
 
-Address the underlying need of the ticket through an alternative mechanism or different approach that differs from what was literally requested.
+Address the underlying need through an alternative mechanism, such as:
+- Using extensions instead of core elements
+- Applying constraints through a profile
+- Implementing in examples rather than core specification
+- Different cardinality or data type
 
 #### Justification
 
-Alternative approaches may better align with existing patterns, minimize implementation burden, or provide better long-term maintainability while still addressing the ticket's core concern.
+- Alternative approach achieves the same goals with fewer breaking changes
+- Reduces implementation burden on existing systems
+- Better aligns with FHIR architecture principles
 
 ---
 
@@ -144,34 +76,53 @@ Alternative approaches may better align with existing patterns, minimize impleme
 
 #### Proposal
 
-Decline the request with clear rationale (e.g., out of scope, insufficient use cases, already addressed by existing mechanism, breaking change not justified).
+The request should not be adopted. Clear rationale:
+- Out of scope for imaging IG
+- Insufficient use cases to justify change
+- Addressed by existing mechanism
+- Would introduce unnecessary complexity
+- Breaking change not justified by value
 
 #### Justification
 
-Declining may be appropriate if the change would introduce unnecessary complexity, conflict with design principles, or if existing mechanisms already address the need.
+Provide specific reasoning why declining is the right decision for the FHIR imaging community.
 
 ---
+
+### Recommendation
+
+**Recommended disposition:** [A / B / C to be determined by work group]
+
+Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
+- Community feedback and use cases
+- Alignment with FHIR design principles  
+- Implementation complexity vs. value delivered
+- Impact on existing implementers
+
+## Related Tickets
+
+No related grouping specified
 
 ## Next Steps
 
-- [ ] Present ticket to imaging work group for review
-- [ ] Obtain work group consensus on disposition
-- [ ] Assign to implementation team if approved
-- [ ] Create GitHub issue/PR for approved changes
-- [ ] Link GitHub artifacts in ticket comments
-- [ ] Update ticket status upon resolution
-- [ ] Document disposition rationale
+1. Present to work group for review and discussion
+2. Gather implementer feedback on proposed dispositions
+3. Document final decision and rationale
+4. If accepted, create implementation task with specific requirements
+5. Track implementation in GitHub PRs/commits
+6. Update specification and generate updated artifacts
 
-### Verification Checklist
+## Verification Checklist
 
 - [ ] Work group review completed
-- [ ] Disposition decision documented
-- [ ] Implementation assigned (if approved)
-- [ ] GitHub artifacts created (if applicable)
-- [ ] Ticket status updated
-- [ ] Community notified
+- [ ] Disposition approved
+- [ ] Implementation (if accepted) committed to repository
+- [ ] Changes verified in main branch
+- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
+- [ ] Documentation updated if needed
+- [ ] Resolution file finalized and committed
 
 ---
 
-*Resolution generated: 2026-05-07*  
-*Ticket Status: Submitted → Awaiting Governance Review*  
+*Generated: 2026-05-07T14:25:15.900Z*
+*Ticket Status: Submitted*

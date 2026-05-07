@@ -5,95 +5,52 @@
 | Field | Value |
 |-------|-------|
 | Key | FHIR-53600 |
-| Issue Type | Change Request |
-| Summary | Update Xt-EHR mapping table |
+| Title | Update Xt-EHR mapping table |
+| Type | Change Request |
 | Status | Resolved - change required |
-| Resolution | Persuasive |
 | Reporter | IgnacioJauregui |
-| Assignee | Unassigned |
 | Created | 12/9/25 |
-
 
 ## Description
 
-A number of updates are needed in the mapping table due to ImagingReport IG and  XtEHR model updates. 
-
-Chenges applied here: Xt-EHR mapping - HL7 Europe Imaging Report R5 v0.1.1-build
-
-	mention source TSV file
-	Specific mapping target differences
-	
-		EHDSImagingReport.header.documentType (update slice name )
-		
-			Current: CompositionEuImaging.category&#91;imaging&#93;; DiagnosticReportEuImaging.category&#91;imaging&#93;
-			New: CompositionEuImaging.category&#91;diagnostic-service&#93;; DiagnosticReportEuImaging.category&#91;diagnostic-service&#93;
-		
-		
-		EHDSImagingReport.header.period (resolve to .period, aligning with EUCore)
-		
-			Current: CompositionEuImaging.event; DiagnosticReportEuImaging.effectivePeriod
-			New: CompositionEuImaging.event.period; DiagnosticReportEuImaging.effectivePeriod
-		
-		
-		EHDSImagingReport.header.eventType (EUCore asked for clarification. Not using event anymore, Procedure.location seems wrong)
-		
-			Current: CompositionEuImaging.event&#91;imagingstudy&#93;; ProcedureEuImaging.location; CompositionEuImaging.event&#91;procedure&#93;; ImagingStudyEuImaging.series; ImagingStudyEuImaging.modality
-			New: CompositionEuImaging.category&#91;diagnostic-service&#93;; ProcedureEuImaging.code; ImagingStudyEuImaging.series; ImagingStudyEuImaging.modality
-		
-		
-		EHDSImagingReport.header.documentFormat (applying FHIR-51171 Composition: remove fixed code for type - Jira)
-		
-			Current: CompositionEuImaging.type
-			New: BundleReportEuImagingDocumentReference.content.profile
-		
-		
-		EHDSImagingReport.header.confidentiality (resolve more in detail)
-		
-			MasterR5: CompositionEuImaging.meta; DiagnosticReportEuImaging.meta
-			ForkR5: CompositionEuImaging.meta.security; DiagnosticReportEuImaging.meta.security
-		
-		
-		EHDSImagingReport.header.authorSpecialty, (need to change to ServiceSpecialty -though commented by EUCore. Add DiagnosticReport)
-		
-			MasterR5: CompositionEuImaging.author&#91;author&#93;
-			ForkR5: CompositionEuImaging.author&#91;author&#93;; DiagnosticReportEuImaging.resultIntepreter&#91;author&#93;
-		
-		
-	
-	
-
-
-
-4. Exposure Information Comment
-
-ForkR5 adds a reference to a GitHub issue:
-
-"Comments in this issue &#91;https://github.com/Xt-EHR/xt-ehr-common/issues/365|vscode-file://vscode-app/c:/Users/320166472/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-browser/workbench/workbench.html&#93;"
+A number of updates are needed in the mapping table due to ImagingReport IG and  XtEHR model updates.
 
 ## Implementation Status
 
-**Status**: Alternative or Pending  
-**GitHub Evidence**: None reported  
-**Related Tickets**: None identified  
+### Current Status: Resolved - change required
+
+### Disposition Classification
+
+Based on the ticket status and metadata:
+
+- **Status Field**: Resolved - change required
+- **Resolution**: Not specified
+- **Related Sections**: Not specified
 
 ## Disposition Analysis
 
-### Current State
-- Ticket Status: **Resolved - change required**
-- Resolution: **Persuasive**
-- Classification: **Alternative or Pending**
+### Ticket Metadata Analysis
+
+The ticket is currently classified as **Resolved - change required** and requires governance review to determine final disposition.
+
+### Evidence & Links
+
+
+
 
 ## Proposed Dispositions
 
-### Disposition A: Accept As Requested
+### Disposition A: Accept & Implement
 
 #### Proposal
 
-Review this ticket with the work group to determine if the requested change should be accepted and implemented exactly as described.
+Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
 
 #### Justification
 
-The ticket is in status Resolved - change required and presents a specific change request. Work group review is needed to make an informed decision on whether this approach is feasible and aligns with specification goals.
+- The request addresses a legitimate use case in imaging workflows
+- Implementation would improve clarity or functionality
+- Change is consistent with existing FHIR design principles
 
 ---
 
@@ -101,11 +58,17 @@ The ticket is in status Resolved - change required and presents a specific chang
 
 #### Proposal
 
-Address the underlying need of the ticket through an alternative mechanism or different approach that differs from what was literally requested.
+Address the underlying need through an alternative mechanism, such as:
+- Using extensions instead of core elements
+- Applying constraints through a profile
+- Implementing in examples rather than core specification
+- Different cardinality or data type
 
 #### Justification
 
-Alternative approaches may better align with existing patterns, minimize implementation burden, or provide better long-term maintainability while still addressing the ticket's core concern.
+- Alternative approach achieves the same goals with fewer breaking changes
+- Reduces implementation burden on existing systems
+- Better aligns with FHIR architecture principles
 
 ---
 
@@ -113,34 +76,53 @@ Alternative approaches may better align with existing patterns, minimize impleme
 
 #### Proposal
 
-Decline the request with clear rationale (e.g., out of scope, insufficient use cases, already addressed by existing mechanism, breaking change not justified).
+The request should not be adopted. Clear rationale:
+- Out of scope for imaging IG
+- Insufficient use cases to justify change
+- Addressed by existing mechanism
+- Would introduce unnecessary complexity
+- Breaking change not justified by value
 
 #### Justification
 
-Declining may be appropriate if the change would introduce unnecessary complexity, conflict with design principles, or if existing mechanisms already address the need.
+Provide specific reasoning why declining is the right decision for the FHIR imaging community.
 
 ---
+
+### Recommendation
+
+**Recommended disposition:** [A / B / C to be determined by work group]
+
+Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
+- Community feedback and use cases
+- Alignment with FHIR design principles  
+- Implementation complexity vs. value delivered
+- Impact on existing implementers
+
+## Related Tickets
+
+No related grouping specified
 
 ## Next Steps
 
-- [ ] Present ticket to imaging work group for review
-- [ ] Obtain work group consensus on disposition
-- [ ] Assign to implementation team if approved
-- [ ] Create GitHub issue/PR for approved changes
-- [ ] Link GitHub artifacts in ticket comments
-- [ ] Update ticket status upon resolution
-- [ ] Document disposition rationale
+1. Present to work group for review and discussion
+2. Gather implementer feedback on proposed dispositions
+3. Document final decision and rationale
+4. If accepted, create implementation task with specific requirements
+5. Track implementation in GitHub PRs/commits
+6. Update specification and generate updated artifacts
 
-### Verification Checklist
+## Verification Checklist
 
 - [ ] Work group review completed
-- [ ] Disposition decision documented
-- [ ] Implementation assigned (if approved)
-- [ ] GitHub artifacts created (if applicable)
-- [ ] Ticket status updated
-- [ ] Community notified
+- [ ] Disposition approved
+- [ ] Implementation (if accepted) committed to repository
+- [ ] Changes verified in main branch
+- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
+- [ ] Documentation updated if needed
+- [ ] Resolution file finalized and committed
 
 ---
 
-*Resolution generated: 2026-05-07*  
-*Ticket Status: Resolved - change required → Awaiting Governance Review*  
+*Generated: 2026-05-07T14:25:15.898Z*
+*Ticket Status: Resolved - change required*

@@ -5,67 +5,52 @@
 | Field | Value |
 |-------|-------|
 | Key | FHIR-51273 |
-| Issue Type | Change Request |
-| Summary | Further Guidance Should Be Given on Endpoint Image Access Across Networks and Behind NCPs |
+| Title | Further Guidance Should Be Given on Endpoint Image Access Across Networks and Behind NCPs |
+| Type | Change Request |
 | Status | Triaged |
-| Resolution | Unresolved |
-| Related Artifacts | IM WADO Endpoint [deprecated] |
 | Reporter | JoshPriebe |
-| Assignee | Unassigned |
 | Created | 6/27/25 |
-
-**Related:**
-- Grouping: [manifest]
-
 
 ## Description
 
 It is unclear from the implementation guide how access to the endpoints (IID, WADO-RS) are controlled. This should be specified so clients and hosts can achieve consistent access methods to images.
 
-	Do the authors envision that all queries would be proxied through the NCP, with the NCP providing endpoints that would direct reference resolution to the appropriate record holders? If so, how is this managed?
-	Alternatively, is direct access allowed?
-	Would the NCPs themselves support IID viewing?
-	Who could be hosting the viewer (source, intermediary, local, all of the above), and how widely are they deploying access? If an IID viewer is communicated cross-border, is there an expectation to localize the viewer to the destination?
-	Are concepts from from XC-WADO or SMART Imaging Access / SMART Multi Auth leveraged?
-
-
-
- 
-
-One idea to help implementers would be to create end-to-end sequence diagrams for the key envisioned workflows, along the lines of the below. Ideally, this would include information on the pre-coordination steps anticipated and expected authentication/authorization and endpoint discovery flows behind NCPs, even if some details are left to national infrastructure.
-
-
-
- Expanding on the functional process steps (described on Page 9 of the Guidelines on medical imaging studies and reports, Release 1.1, Nov 2024, page 9) with diagrams for the key workflows would help the implementer community during implementation. This would reduce both cost and the time to implement.
-
-
-
-Furthermore, creating such documentation now ensures a consistent understanding of the envisioned flows during design and further balloting of this specification. This would be very helpful to add with the Transactions page under development.
-
 ## Implementation Status
 
-**Status**: Pending Governance Review  
-**GitHub Evidence**: None reported  
-**Related Tickets**: [[manifest]]  
+### Current Status: Triaged
+
+### Disposition Classification
+
+Based on the ticket status and metadata:
+
+- **Status Field**: Triaged
+- **Resolution**: Not specified
+- **Related Sections**: Recommended New section on "Image Access Endpoint Obligations"
 
 ## Disposition Analysis
 
-### Current State
-- Ticket Status: **Triaged**
-- Resolution: **Unresolved**
-- Classification: **Pending Governance Review**
+### Ticket Metadata Analysis
+
+The ticket is currently classified as **Triaged** and requires governance review to determine final disposition.
+
+### Evidence & Links
+
+- **Grouping**: [manifest]
+
 
 ## Proposed Dispositions
 
-### Disposition A: Accept As Requested
+### Disposition A: Accept & Implement
 
 #### Proposal
 
-Review this ticket with the work group to determine if the requested change should be accepted and implemented exactly as described.
+Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
 
 #### Justification
 
-The ticket is in status Triaged and presents a specific change request. Work group review is needed to make an informed decision on whether this approach is feasible and aligns with specification goals.
+- The request addresses a legitimate use case in imaging workflows
+- Implementation would improve clarity or functionality
+- Change is consistent with existing FHIR design principles
 
 ---
 
@@ -73,11 +58,17 @@ The ticket is in status Triaged and presents a specific change request. Work gro
 
 #### Proposal
 
-Address the underlying need of the ticket through an alternative mechanism or different approach that differs from what was literally requested.
+Address the underlying need through an alternative mechanism, such as:
+- Using extensions instead of core elements
+- Applying constraints through a profile
+- Implementing in examples rather than core specification
+- Different cardinality or data type
 
 #### Justification
 
-Alternative approaches may better align with existing patterns, minimize implementation burden, or provide better long-term maintainability while still addressing the ticket's core concern.
+- Alternative approach achieves the same goals with fewer breaking changes
+- Reduces implementation burden on existing systems
+- Better aligns with FHIR architecture principles
 
 ---
 
@@ -85,34 +76,53 @@ Alternative approaches may better align with existing patterns, minimize impleme
 
 #### Proposal
 
-Decline the request with clear rationale (e.g., out of scope, insufficient use cases, already addressed by existing mechanism, breaking change not justified).
+The request should not be adopted. Clear rationale:
+- Out of scope for imaging IG
+- Insufficient use cases to justify change
+- Addressed by existing mechanism
+- Would introduce unnecessary complexity
+- Breaking change not justified by value
 
 #### Justification
 
-Declining may be appropriate if the change would introduce unnecessary complexity, conflict with design principles, or if existing mechanisms already address the need.
+Provide specific reasoning why declining is the right decision for the FHIR imaging community.
 
 ---
+
+### Recommendation
+
+**Recommended disposition:** [A / B / C to be determined by work group]
+
+Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
+- Community feedback and use cases
+- Alignment with FHIR design principles  
+- Implementation complexity vs. value delivered
+- Impact on existing implementers
+
+## Related Tickets
+
+- Part of grouping: [manifest]
 
 ## Next Steps
 
-- [ ] Present ticket to imaging work group for review
-- [ ] Obtain work group consensus on disposition
-- [ ] Assign to implementation team if approved
-- [ ] Create GitHub issue/PR for approved changes
-- [ ] Link GitHub artifacts in ticket comments
-- [ ] Update ticket status upon resolution
-- [ ] Document disposition rationale
+1. Present to work group for review and discussion
+2. Gather implementer feedback on proposed dispositions
+3. Document final decision and rationale
+4. If accepted, create implementation task with specific requirements
+5. Track implementation in GitHub PRs/commits
+6. Update specification and generate updated artifacts
 
-### Verification Checklist
+## Verification Checklist
 
 - [ ] Work group review completed
-- [ ] Disposition decision documented
-- [ ] Implementation assigned (if approved)
-- [ ] GitHub artifacts created (if applicable)
-- [ ] Ticket status updated
-- [ ] Community notified
+- [ ] Disposition approved
+- [ ] Implementation (if accepted) committed to repository
+- [ ] Changes verified in main branch
+- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
+- [ ] Documentation updated if needed
+- [ ] Resolution file finalized and committed
 
 ---
 
-*Resolution generated: 2026-05-07*  
-*Ticket Status: Triaged → Awaiting Governance Review*  
+*Generated: 2026-05-07T14:25:15.894Z*
+*Ticket Status: Triaged*

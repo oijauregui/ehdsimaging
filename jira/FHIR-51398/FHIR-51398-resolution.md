@@ -5,18 +5,11 @@
 | Field | Value |
 |-------|-------|
 | Key | FHIR-51398 |
-| Issue Type | Change Request |
-| Summary | Move generic EU profiles to Europe Base/Core IG |
+| Title | Move generic EU profiles to Europe Base/Core IG |
+| Type | Change Request |
 | Status | Deferred |
-| Resolution | Considered for Future Use |
-| Related Artifacts | EU AllergyIntolerance [deprecated] |
 | Reporter | Ben McAlister |
-| Assignee | Unassigned |
 | Created | 6/30/25 |
-
-**Related:**
-- Grouping: [Block-Vote-2]
-
 
 ## Description
 
@@ -24,28 +17,40 @@ Move more generic EU Resource and Data Type Profiles to the HL7 Europe Base and 
 
 ## Implementation Status
 
-**Status**: Pending Decision  
-**GitHub Evidence**: None reported  
-**Related Tickets**: [[Block-Vote-2]]  
+### Current Status: Deferred
+
+### Disposition Classification
+
+Based on the ticket status and metadata:
+
+- **Status Field**: Deferred
+- **Resolution**: Not specified
+- **Related Sections**: https://hl7.eu/fhir/imaging-r5/0.1.0-ballot/artifacts-structural.html#resource-profiles-that-might-be-more-generic
 
 ## Disposition Analysis
 
-### Current State
-- Ticket Status: **Deferred**
-- Resolution: **Considered for Future Use**
-- Classification: **Pending Decision**
+### Ticket Metadata Analysis
+
+The ticket is currently classified as **Deferred** and requires governance review to determine final disposition.
+
+### Evidence & Links
+
+- **Grouping**: [Block-Vote-2]
+
 
 ## Proposed Dispositions
 
-### Disposition A: Accept As Requested
+### Disposition A: Accept & Implement
 
 #### Proposal
 
-Review this ticket with the work group to determine if the requested change should be accepted and implemented exactly as described.
+Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
 
 #### Justification
 
-The ticket is in status Deferred and presents a specific change request. Work group review is needed to make an informed decision on whether this approach is feasible and aligns with specification goals.
+- The request addresses a legitimate use case in imaging workflows
+- Implementation would improve clarity or functionality
+- Change is consistent with existing FHIR design principles
 
 ---
 
@@ -53,11 +58,17 @@ The ticket is in status Deferred and presents a specific change request. Work gr
 
 #### Proposal
 
-Address the underlying need of the ticket through an alternative mechanism or different approach that differs from what was literally requested.
+Address the underlying need through an alternative mechanism, such as:
+- Using extensions instead of core elements
+- Applying constraints through a profile
+- Implementing in examples rather than core specification
+- Different cardinality or data type
 
 #### Justification
 
-Alternative approaches may better align with existing patterns, minimize implementation burden, or provide better long-term maintainability while still addressing the ticket's core concern.
+- Alternative approach achieves the same goals with fewer breaking changes
+- Reduces implementation burden on existing systems
+- Better aligns with FHIR architecture principles
 
 ---
 
@@ -65,34 +76,53 @@ Alternative approaches may better align with existing patterns, minimize impleme
 
 #### Proposal
 
-Decline the request with clear rationale (e.g., out of scope, insufficient use cases, already addressed by existing mechanism, breaking change not justified).
+The request should not be adopted. Clear rationale:
+- Out of scope for imaging IG
+- Insufficient use cases to justify change
+- Addressed by existing mechanism
+- Would introduce unnecessary complexity
+- Breaking change not justified by value
 
 #### Justification
 
-Declining may be appropriate if the change would introduce unnecessary complexity, conflict with design principles, or if existing mechanisms already address the need.
+Provide specific reasoning why declining is the right decision for the FHIR imaging community.
 
 ---
+
+### Recommendation
+
+**Recommended disposition:** [A / B / C to be determined by work group]
+
+Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
+- Community feedback and use cases
+- Alignment with FHIR design principles  
+- Implementation complexity vs. value delivered
+- Impact on existing implementers
+
+## Related Tickets
+
+- Part of grouping: [Block-Vote-2]
 
 ## Next Steps
 
-- [ ] Present ticket to imaging work group for review
-- [ ] Obtain work group consensus on disposition
-- [ ] Assign to implementation team if approved
-- [ ] Create GitHub issue/PR for approved changes
-- [ ] Link GitHub artifacts in ticket comments
-- [ ] Update ticket status upon resolution
-- [ ] Document disposition rationale
+1. Present to work group for review and discussion
+2. Gather implementer feedback on proposed dispositions
+3. Document final decision and rationale
+4. If accepted, create implementation task with specific requirements
+5. Track implementation in GitHub PRs/commits
+6. Update specification and generate updated artifacts
 
-### Verification Checklist
+## Verification Checklist
 
 - [ ] Work group review completed
-- [ ] Disposition decision documented
-- [ ] Implementation assigned (if approved)
-- [ ] GitHub artifacts created (if applicable)
-- [ ] Ticket status updated
-- [ ] Community notified
+- [ ] Disposition approved
+- [ ] Implementation (if accepted) committed to repository
+- [ ] Changes verified in main branch
+- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
+- [ ] Documentation updated if needed
+- [ ] Resolution file finalized and committed
 
 ---
 
-*Resolution generated: 2026-05-07*  
-*Ticket Status: Deferred → Awaiting Governance Review*  
+*Generated: 2026-05-07T14:25:15.897Z*
+*Ticket Status: Deferred*
