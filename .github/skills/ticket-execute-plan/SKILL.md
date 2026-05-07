@@ -45,6 +45,13 @@ This skill turns a plan into implementation by:
   - `igs/imaging-r4/`
   - `igs/imaging-r5/`
 
+## Outputs
+
+- **Execution Summary**: `jira/FHIR-XXXXX/FHIR-XXXXX-execution-summary.md`
+  - Complete record of implementation tasks, file changes, build validation results, and acceptance criteria verification
+  - Automatically generated at the end of each successful or documented-blocked execution
+  - Used for code review, audit trails, and governance records
+
 ## Workflow
 
 ### Step 1: Validate Prerequisites
@@ -133,6 +140,28 @@ Finish with a concise execution summary containing:
 - Deferred or blocked items with reason
 - Final build-check status
 - Remaining risk notes
+
+### Step 7: Store Execution Summary
+
+**Automatic**: A markdown execution summary is generated and stored in the ticket directory:
+- **File**: `jira/FHIR-XXXXX/FHIR-XXXXX-execution-summary.md`
+- **Content**: Complete record of implementation details, build verification results, acceptance criteria verification, and final status
+- **Purpose**: Provides reproducible evidence for ticket review, governance, and audit trails
+
+The execution summary includes:
+- Ticket metadata (key, issue type, disposition)
+- Summary of all changes applied with file references
+- Build verification results for R4 and R5
+- Rendered output verification
+- Acceptance criteria checklist
+- Quality assessment and risk analysis
+- Final completion status (PASSED, PASSED-WITH-UNRELATED-BLOCKER, or BLOCKED)
+
+This artifact is essential for:
+- Code review and change tracking
+- Governance record keeping
+- Troubleshooting failed executions
+- Replaying the ticket resolution for consistency checks
 
 ## Quality Criteria
 
