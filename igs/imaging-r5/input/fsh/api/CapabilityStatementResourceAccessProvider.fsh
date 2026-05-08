@@ -64,12 +64,15 @@ Servers SHALL accept scopes for the resources they support:
 - system/Observation.read, system/Observation.search
 - system/Composition.read, system/Observation.search
 - system/DiagnosticReport.read, system/DiagnosticReport.search
+- system/ImagingStudy.read, system/ImagingStudy.search
+- system/Device.read, system/Device.search
 - system/MedicationRequest.read, system/MedicationRequest.search
 - system/MedicationDispense.read, system/MedicationDispense.search
 - system/Encounter.read, system/Encounter.search (if Encounter supported)
 - system/Practitioner.read (if Practitioner supported)
 - system/Organization.read (if Organization supported)
 - system/Procedure.read
+- system/ServiceRequest.read, system/ServiceRequest.search
 - system/Provenance.read
 """
 
