@@ -4,71 +4,99 @@
 
 | Field | Value |
 |-------|-------|
-| Key | FHIR-56776 |
-| Title | Editorial: section:comparison description text is "History"; should be "Comparison" |
-| Type | Technical Correction |
-| Status | Submitted |
-| Reporter | JoshPriebe |
-| Created | 4/30/26 |
+| **Key** | FHIR-56776 |
+| **Type** | Technical Correction |
+| **Status** | Submitted |
+| **Resolution** | Unresolved |
+| **Summary** | Editorial: section:comparison description text is "History"; should be "Comparison" |
+| **Related Sections** | Composition obligation profile |
+| **Reporter** | JoshPriebe (Matt Hannan, Epic) |
+| **Assignee** | Unassigned |
+| **Created** | 4/30/26 |
 
 ## Description
 
-The description for section:comparison is "History".
+The description for `section:comparison` is currently labeled "History" but should be "Comparison".
+
+**Proposed Resolution:** Change the description text to "Comparison".
 
 ## Implementation Status
 
-### Current Status: Submitted
+**Status:** Pending Review
 
-### Disposition Classification
+This is a technical correction ticket awaiting work group review and approval. The change is editorial in nature with no implementation complexity—a simple text update to correct misleading element documentation in the Composition obligation profile.
 
-Based on the ticket status and metadata:
+**Evidence:**
+- Ticket created: 4/30/26
+- Type: Technical Correction (editorial)
+- Reporter: Matt Hannan (Epic) via JoshPriebe
+- No GitHub implementation links present; awaiting approval before implementation
 
-- **Status Field**: Submitted
-- **Resolution**: Not specified
-- **Related Sections**: Composition obligation profile
+## Related Tickets
+
+- Related Sections: Composition obligation profile (may be related to other Composition-scoped tickets)
+- No parent ticket or grouping indicated
 
 ## Disposition Analysis
 
-### Ticket Metadata Analysis
+### Disposition Taken
 
-The ticket is currently classified as **Submitted** and requires governance review to determine final disposition.
+**Pending Governance Review** — This Technical Correction ticket requires work group review and approval before implementation.
 
-### Evidence & Links
+### Rationale
 
+1. **Clear Editorial Issue**: The description mismatch ("History" vs. "Comparison") is a definite error that needs correction
+2. **Low Risk**: Minimal change surface (single text field)
+3. **Reporter Credibility**: Reported by Epic (via Matt Hannan), a major implementer
+4. **Technical Correction Process**: Proper channel for editorial fixes
 
+### Evidence
 
-
-## Proposed Dispositions
-
-### Disposition A: Accept & Implement
-
-#### Proposal
-
-Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
-
-#### Justification
-
-- The request addresses a legitimate use case in imaging workflows
-- Implementation would improve clarity or functionality
-- Change is consistent with existing FHIR design principles
+- Status: **Submitted** (awaiting review)
+- Resolution: **Unresolved** (no approval recorded)
+- Type: **Technical Correction** (appropriate classification)
+- Issue Impact: Affects Composition obligation profile documentation
 
 ---
 
-### Disposition B: Alternative Approach
+## Proposed Dispositions
+
+### Disposition A: Accept As Requested ✓ RECOMMENDED
 
 #### Proposal
 
-Address the underlying need through an alternative mechanism, such as:
-- Using extensions instead of core elements
-- Applying constraints through a profile
-- Implementing in examples rather than core specification
-- Different cardinality or data type
+**Change the `section:comparison` element description from "History" to "Comparison"** in the Composition obligation profile definition.
+
+**Location:** The Composition resource definition, specifically the `section` element with code "comparison", description/documentation field.
+
+**Change:**
+- From: "History"
+- To: "Comparison"
 
 #### Justification
 
-- Alternative approach achieves the same goals with fewer breaking changes
-- Reduces implementation burden on existing systems
-- Better aligns with FHIR architecture principles
+1. **Semantic Accuracy**: The element code is explicitly "comparison" (not "history"), so the description must match the semantic intent
+2. **Documentation Clarity**: Implementers relying on the documentation will be correctly guided to use this section for comparative analysis, not historical narrative
+3. **No Breaking Changes**: This is a documentation-only fix with no impact on data structures, processing logic, or backwards compatibility
+4. **Low Effort**: Trivial change affecting only description text
+5. **Clear Principle**: FHIR documentation must accurately reflect resource semantics—misaligned descriptions are defects
+
+---
+
+### Disposition B: Alternative Approach (Review for Completeness)
+
+#### Proposal
+
+Before accepting Disposition A, verify:
+- Whether other Composition section descriptions have similar accuracy issues
+- If this is isolated to `section:comparison` or part of a broader documentation maintenance issue
+- Whether the profile defines specific cardinality, bindings, or constraints for this section that also need review
+
+**Proposed Action:** Accept the "Comparison" text change as proposed in Disposition A, but conduct a focused audit of all Composition section descriptions for consistency.
+
+#### Justification
+
+While the immediate fix is straightforward, this ticket may be a symptom of documentation drift. A parallel review of related Composition sections ensures no other similar misalignments exist. This preserves the timeliness of the current fix while improving overall profile quality.
 
 ---
 
@@ -76,53 +104,46 @@ Address the underlying need through an alternative mechanism, such as:
 
 #### Proposal
 
-The request should not be adopted. Clear rationale:
-- Out of scope for imaging IG
-- Insufficient use cases to justify change
-- Addressed by existing mechanism
-- Would introduce unnecessary complexity
-- Breaking change not justified by value
+Do not change the description; keep it as "History".
 
 #### Justification
 
-Provide specific reasoning why declining is the right decision for the FHIR imaging community.
+**Not recommended.** There is no defensible reason to retain "History" as the description for an element coded as "comparison". Declining would leave an inconsistency in place, confusing implementers and violating the principle that documentation should match the resource semantics.
 
 ---
 
 ### Recommendation
 
-**Recommended disposition:** [A / B / C to be determined by work group]
+**Recommended disposition:** **Disposition A — Accept As Requested**
 
-Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
-- Community feedback and use cases
-- Alignment with FHIR design principles  
-- Implementation complexity vs. value delivered
-- Impact on existing implementers
+**Rationale:**
+This is a clear editorial correction with no technical risk. The element code "comparison" unambiguously indicates the intended use case, and the current description "History" is factually incorrect. The fix is a simple text update that improves documentation accuracy with zero implementation impact.
 
-## Related Tickets
-
-No related grouping specified
-
-## Next Steps
-
-1. Present to work group for review and discussion
-2. Gather implementer feedback on proposed dispositions
-3. Document final decision and rationale
-4. If accepted, create implementation task with specific requirements
-5. Track implementation in GitHub PRs/commits
-6. Update specification and generate updated artifacts
-
-## Verification Checklist
-
-- [ ] Work group review completed
-- [ ] Disposition approved
-- [ ] Implementation (if accepted) committed to repository
-- [ ] Changes verified in main branch
-- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
-- [ ] Documentation updated if needed
-- [ ] Resolution file finalized and committed
+Disposition B (audit for completeness) may be a good complementary activity for future maintenance, but should not delay acceptance and implementation of this fix.
 
 ---
 
-*Generated: 2026-05-07T14:25:15.906Z*
-*Ticket Status: Submitted*
+## Next Steps
+
+**Status:** Ready for Work Group Review
+
+### Verification Checklist
+
+- [ ] Work group review completed
+- [ ] Disposition approved by governance
+- [ ] Implementation code committed (text change to profile definition)
+- [ ] Verification in main branch and rendered output (`igs/imaging-r4` and `igs/imaging-r5`)
+- [ ] Documentation updated (if any implementation guide commentary needed)
+- [ ] Resolution record marked "Applied" and linked to PR/commit
+
+### Implementation Guidance
+
+**When approved:**
+1. Locate the Composition obligation profile definition (likely in `input/fsh/` or rendered specification)
+2. Find the `section:comparison` element definition
+3. Update the description field from "History" to "Comparison"
+4. Build the IG using `_genonce.sh` to render output
+5. Verify the change in `igs/imaging-r4/` and `igs/imaging-r5/`
+6. Create a PR with commit message: `FHIR-56776: Editorial - correct section:comparison description from "History" to "Comparison"`
+7. Link the PR in the ticket comments
+8. Update ticket status to "Applied" with resolution "Accepted"
