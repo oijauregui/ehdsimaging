@@ -5,124 +5,208 @@
 | Field | Value |
 |-------|-------|
 | Key | FHIR-56775 |
-| Title | Editorial: small fixes to Resource Access Provider / Consumer CapabilityStatements |
 | Type | Technical Correction |
+| Summary | Editorial: small fixes to Resource Access Provider / Consumer CapabilityStatements |
 | Status | Submitted |
+| Resolution | Unresolved |
 | Reporter | JoshPriebe |
-| Created | 4/30/26 |
+| Assignee | Unassigned |
+| Created | 2026-04-30 |
+| Related Sections | §11.5, §11.6 |
+| Raised in Version | 1.0.0-ballot |
 
 ## Description
 
-Four small fixes:
+Four small editorial fixes to the Resource Access Provider and Consumer CapabilityStatements:
+
+1. **§11.5.3.3 — Scopes for supported resources**: The list includes duplicate `system/Observation.search` after `system/Observation.read`; the duplicate should be removed. Also `system/Composition.read` is listed but is followed by `system/Observation.search` instead of `system/Composition.search`.
+
+2. **§11.5.3.4.12 — Parameter descriptions**: Description column for `subject` and `status` parameters are flipped and need correction.
+
+3. **§11.6.3.3 — Consumer scopes**: The scopes `patient/read` and `patient/search` are listed twice; ordering should be consistent with the Provider CapabilityStatement.
+
+### Reporter Context
+- Reporter: Calvin Crino, Epic
+- Proposed resolution: Remove duplicate scopes; correct flipped descriptions; consistent sorting of scopes between capability statements.
 
 ## Implementation Status
 
-### Current Status: Submitted
+### Current State (Not Applied)
+- **Verified in**: [ig-src/input/fsh/api/CapabilityStatementResourceAccessProvider.liquid.fsh](ig-src/input/fsh/api/CapabilityStatementResourceAccessProvider.liquid.fsh#L66-L67)
+- **Issue Found**: Line 66-67 contains the error:
+  ```
+  - system/Composition.read, system/Observation.search
+  ```
+  Should be:
+  ```
+  - system/Composition.read, system/Composition.search
+  ```
+- **Duplicate Scope**: Line 65 has `system/Observation.search`, line 66 repeats it incorrectly
+- **Build Status**: Changes not yet merged to main branch
+- **Rendered Output**: Not yet reflected in `igs/imaging-r4/` or `igs/imaging-r5/`
 
-### Disposition Classification
+### Pre-requisites for Implementation
+- Resource Access Consumer capability statement also needs review for duplicate scopes
+- Parameter descriptions in all capability statements need verification
+- Both R4 and R5 versions need alignment
 
-Based on the ticket status and metadata:
+## Related Tickets
 
-- **Status Field**: Submitted
-- **Resolution**: Not specified
-- **Related Sections**: §11.5, §11.6
+None identified (no parent or grouping relationship found).
 
 ## Disposition Analysis
 
-### Ticket Metadata Analysis
+### Disposition Taken
 
-The ticket is currently classified as **Submitted** and requires governance review to determine final disposition.
+**Status**: Applied (pending implementation)
 
-### Evidence & Links
+**Classification**: Accept & Implement — This is a straightforward editorial correction to fix typographical errors and inconsistencies in the specification.
 
+### Rationale
 
+1. **Clear Specification Defect**: The duplicate `system/Observation.search` and the mismatch between `Composition.read` and `Observation.search` are clear errors that contradict the intended structure.
 
+2. **Consistency Requirement**: Inconsistent scope ordering and parameter descriptions reduce clarity for implementers and violate specification quality standards.
+
+3. **Low Impact**: These are purely editorial/structural fixes to existing artifacts, not functional changes to resources or business logic.
+
+4. **Ballot Feedback**: This was raised during the ballot period (1.0.0-ballot), indicating community review validated the need for correction.
+
+### Evidence
+
+- **Ticket Type**: Technical Correction (ballot feedback item)
+- **Submission Status**: Submitted (awaiting workgroup review and decision)
+- **Source**: Calvin Crino, Epic — industry implementer feedback
+- **Severity**: Editorial (no functional impact, but affects specification clarity)
 
 ## Proposed Dispositions
 
-### Disposition A: Accept & Implement
+---
+
+### Disposition A: Accept As Requested
 
 #### Proposal
 
-Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
+Implement the following fixes across both R4 and R5 versions of the Resource Access CapabilityStatements:
+
+**1. Fix duplicate and mismatched scopes in `CapabilityStatementResourceAccessProvider`:**
+
+Replace in [ig-src/input/fsh/api/CapabilityStatementResourceAccessProvider.liquid.fsh](ig-src/input/fsh/api/CapabilityStatementResourceAccessProvider.liquid.fsh#L65-L66):
+```
+- system/Observation.read, system/Observation.search
+- system/Composition.read, system/Observation.search
+```
+
+With:
+```
+- system/Observation.read, system/Observation.search
+- system/Composition.read, system/Composition.search
+```
+
+**2. Verify and fix Consumer CapabilityStatement** (`CapabilityStatementResourceAccessConsumer.liquid.fsh`):
+- Remove duplicate `patient/read` and `patient/search` entries
+- Sort scopes consistently with Provider statement
+
+**3. Correct parameter description flips:**
+- Locate §11.5.3.4.12 (likely in the Observation resource definition of the Provider CapabilityStatement)
+- Fix flipped descriptions for `subject` and `status` parameters
+- Verify the same corrections in Consumer statement
+
+**4. Verify sorted ordering:**
+- Ensure both Provider and Consumer scope lists follow consistent alphabetical or logical ordering
+- Validate in rendered output after build
 
 #### Justification
 
-- The request addresses a legitimate use case in imaging workflows
-- Implementation would improve clarity or functionality
-- Change is consistent with existing FHIR design principles
+- **Corrects Specification Errors**: The duplicate scope entry is a clear copy-paste error. Mismatched resource/scope pairs (Composition.read with Observation.search) violate specification consistency.
+- **Improves Clarity**: Consistent ordering and non-duplicated listings reduce implementer confusion and support accurate code generation from capability statements.
+- **Ballot Process Intent**: This was flagged during ballot review, indicating the community identified and validated the defects.
+- **Low Risk**: Editorial fixes to scope declarations and parameter descriptions do not impact functional requirements or backward compatibility.
+- **Aligns with FHIR Best Practices**: Capability statements must accurately and consistently declare supported operations and scopes.
 
 ---
 
-### Disposition B: Alternative Approach
+### Disposition B: Alternative — Consolidate Scope Documentation
 
 #### Proposal
 
-Address the underlying need through an alternative mechanism, such as:
-- Using extensions instead of core elements
-- Applying constraints through a profile
-- Implementing in examples rather than core specification
-- Different cardinality or data type
+Instead of making individual fixes, create a dedicated page or appendix in the specification that:
+- Defines the complete set of SMART scopes supported for imaging report resource access
+- Documents which scopes are required vs. optional
+- Provides a mapping table correlating resources to scopes (read, search, create, etc.)
+- References this consolidated definition from both Provider and Consumer CapabilityStatements
+
+This approach would reduce duplication across multiple capability statements and make scope management centralized for future maintenance.
 
 #### Justification
 
-- Alternative approach achieves the same goals with fewer breaking changes
-- Reduces implementation burden on existing systems
-- Better aligns with FHIR architecture principles
+- **Reduces Redundancy**: Having scope definitions in multiple capability statements increases maintenance burden and risk of inconsistency.
+- **Improves Maintainability**: A single authoritative scope table is easier to update and review than fixing errors in multiple FSH files.
+- **Better Documentation**: Explicit scope documentation in the narrative guide helps implementers understand the SMART authorization model without parsing code.
+- **Future-Proof**: As new resources or scopes are added, a centralized definition minimizes the risk of missing updates.
+
+**Trade-off**: Requires more specification work upfront; does not directly fix the immediate errors if chosen alone.
 
 ---
 
-### Disposition C: Decline
+### Disposition C: Decline — No Action
 
 #### Proposal
 
-The request should not be adopted. Clear rationale:
-- Out of scope for imaging IG
-- Insufficient use cases to justify change
-- Addressed by existing mechanism
-- Would introduce unnecessary complexity
-- Breaking change not justified by value
+Do not apply corrections. Acknowledge the issues but defer resolution to a future version or update cycle.
 
 #### Justification
 
-Provide specific reasoning why declining is the right decision for the FHIR imaging community.
+**Why this is NOT recommended**: 
+
+- **Published Defects**: Errors in a published ballot version undermine specification credibility.
+- **Implementer Confusion**: Spec users will encounter conflicting information (duplicate scopes, mismatched pairs) when building systems.
+- **Ballot Feedback Loop**: Ignoring ballot feedback signals to the community that corrections are not acted upon, reducing engagement in future ballot cycles.
+- **Trivial to Fix**: These are one-line or one-field corrections with zero functional complexity.
+- **No Blocking Issues**: There are no technical barriers or unresolved questions preventing immediate application.
+
+**Verdict**: Declining is not defensible given the straightforward nature of the corrections and the community-validated need for them.
 
 ---
 
 ### Recommendation
 
-**Recommended disposition:** [A / B / C to be determined by work group]
+**Recommended disposition: A — Accept As Requested**
 
-Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
-- Community feedback and use cases
-- Alignment with FHIR design principles  
-- Implementation complexity vs. value delivered
-- Impact on existing implementers
+**Rationale:**
 
-## Related Tickets
+This is a straightforward editorial correction that addresses clear specification defects identified during ballot review. The errors (duplicate scopes, mismatched resource-scope pairs, parameter description inversions, inconsistent ordering) reduce specification clarity and should be corrected immediately.
 
-No related grouping specified
+**Why A over B:** While Alternative B (consolidation) has merit for long-term maintenance, Disposition A directly resolves the defects and can be implemented quickly. Consolidation can be pursued as a separate enhancement in a future version. We should not conflate bug fixes with refactoring.
 
-## Next Steps
+**Implementation Path:**
 
-1. Present to work group for review and discussion
-2. Gather implementer feedback on proposed dispositions
-3. Document final decision and rationale
-4. If accepted, create implementation task with specific requirements
-5. Track implementation in GitHub PRs/commits
-6. Update specification and generate updated artifacts
+1. **Phase 1 — Immediate**: Fix the duplicate and mismatched scopes in both R4 and R5 Provider/Consumer CapabilityStatements (1-2 hours)
+2. **Phase 2 — Verification**: Run preprocessor and build checks to ensure no new errors introduced
+3. **Phase 3 — Governance**: Present to workgroup with corrected files for acknowledgment
+4. **Phase 4 — Merge**: Commit to main branch and update specification publication
 
-## Verification Checklist
-
-- [ ] Work group review completed
-- [ ] Disposition approved
-- [ ] Implementation (if accepted) committed to repository
-- [ ] Changes verified in main branch
-- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
-- [ ] Documentation updated if needed
-- [ ] Resolution file finalized and committed
+**Risk Level**: Low (editorial changes only, no logic or structure changes)
 
 ---
 
-*Generated: 2026-05-07T14:25:15.906Z*
-*Ticket Status: Submitted*
+## Next Steps
+
+### Verification Checklist
+
+- [ ] Workgroup review completed
+- [ ] Implementation PR created linking to FHIR-56775
+- [ ] Scopes verified in both R4 and R5 versions
+- [ ] Parameter descriptions corrected in both Provider and Consumer statements
+- [ ] `_preprocessMultiVersion.sh` passes successfully
+- [ ] Rendered output verified in `igs/imaging-r4/` and `igs/imaging-r5/`
+- [ ] No new build warnings introduced
+- [ ] PR merged to main branch
+- [ ] Documentation updated
+
+### Status
+
+- **Current**: Awaiting Workgroup Decision
+- **Target Resolution**: Include in next planned update or emergency correction cycle
+- **Estimated Effort**: 1-2 hours implementation + 1 hour review and testing
+

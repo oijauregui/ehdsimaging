@@ -62,7 +62,7 @@ Servers SHALL accept scopes for the resources they support:
 - system/Condition.read, system/Condition.search (if Condition supported)
 - system/AllergyIntolerance.read, system/AllergyIntolerance.search (if AllergyIntolerance supported)
 - system/Observation.read, system/Observation.search
-- system/Composition.read, system/Observation.search
+- system/Composition.read, system/Composition.search
 - system/DiagnosticReport.read, system/DiagnosticReport.search
 - system/ImagingStudy.read, system/ImagingStudy.search
 - system/Device.read, system/Device.search

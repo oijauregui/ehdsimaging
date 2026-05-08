@@ -54,7 +54,7 @@ lookup is required; other resources are requested as needed.
 Clients SHALL request scopes for the resources they need:
 - system/AdverseEvent.read, system/AdverseEvent.search
 - system/AllergyIntolerance.read, system/AllergyIntolerance.search (if AllergyIntolerance needed)
-- system/Composition.read, system/Observation.search
+- system/Composition.read, system/Composition.search
 - system/Condition.read, system/Condition.search (if Condition needed)
 - system/DiagnosticReport.read, system/DiagnosticReport.search
 - system/ImagingStudy.read, system/ImagingStudy.search (if ImagingStudy needed)
@@ -64,7 +64,6 @@ Clients SHALL request scopes for the resources they need:
 - system/MedicationRequest.read, system/MedicationRequest.search (if MedicationRequest needed)
 - system/Observation.read, system/Observation.search
 - system/Organization.read (if Organization needed)
-- system/Patient.read, system/Patient.search
 - system/Patient.read, system/Patient.search (REQUIRED - read and search Patient)
 - system/Practitioner.read (if Practitioner needed)
 - system/Procedure.read
