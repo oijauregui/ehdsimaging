@@ -15,7 +15,7 @@ classDiagram
     category
     resultingEffect
     seriousness
-    occurence
+    occurrence
     suspectEntity.causality.entityRelatedness
     suspectedEntity.instance
     contributingFactor.item
@@ -58,7 +58,7 @@ The decided modeling choice in this IG to represent an adverse reaction.
   * It can point to an AllergyIntolerance resource, for the cases in which that pathogenic mechanisms is suspected or confirmed.
 * Cons:
   * it lacks some of the allergy-specific elements required (i.e. `criticality`, `verification status`).
-  * The resource focuses mainly is on the registration and monitoring of adverse events.
+  * The resource focuses mainly on the registration and monitoring of adverse events.
   * The link to the rest of the model is done through AdverseEvent.SuspectedEntity.ProcedureEuImaging, which is probably not the best way of referencing it, as it needs a reverse include to query adverse events happened in a given procedure.
   * A custom extension is required to encode the `criticality` data point.
 
@@ -70,7 +70,7 @@ The decided modeling choice in this IG to represent an allergic condition.
   * This resource provides off-the-shelf data elements to convey `severity`, `criticality`, `propensity` and a [standard extension](http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty) is available for the `certainty` element.
 * Cons:
   * Although it has a `.reaction` element, the focus of the resource is on establishing allergic states, not on capturing events.
-  * There is not a straightforward way to reference to or from a `Procedure` resource, so it can be linked to the main model. It could be achieved through `.encounter`, but that resource might not be exchanged in the Bundle, thus the reference would be lost.
+  * There is not a straightforward way to reference to or from a `Procedure` resource, so it cannot be directly linked to the main model. It could be achieved through `.encounter`, but that resource might not be exchanged in the Bundle, thus the reference would be lost.
 
 #### Condition resource
 
