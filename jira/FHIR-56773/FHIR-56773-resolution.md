@@ -4,100 +4,156 @@
 
 | Field | Value |
 |-------|-------|
-| Key | FHIR-56773 |
-| Title | Editorial: DiagnosticReportEuImaging profile uses MS rather than the obligation framework |
-| Type | Technical Correction |
-| Status | Submitted |
-| Reporter | JoshPriebe |
-| Created | 4/30/26 |
+| **Key** | FHIR-56773 |
+| **Type** | Technical Correction |
+| **Status** | Submitted |
+| **Resolution** | Unresolved |
+| **Reporter** | Brian Swinkels (Epic) |
+| **Created** | 2026-04-30 |
+| **Raised in Version** | 1.0.0-ballot |
+| **Related Sections** | DiagnosticReportEuImaging |
 
 ## Description
 
-Is there a reason this page uses MS instead of Obligations?
+Ticket Questions why the DiagnosticReportEuImaging profile uses MS (Must Support) cardinality instead of using the obligation framework for defining resource requirements.
 
-## Implementation Status
+## Analysis
 
-### Current Status: Submitted
+### Current Design
 
-### Disposition Classification
+The imaging IG employs a **dual conformance strategy**:
 
-Based on the ticket status and metadata:
+1. **DiagnosticReportEuImaging Profile** (`im-diagnosticreport.fsh`)
+   - Primary profile inheriting from DiagnosticReport
+   - Uses standard FHIR MS (Must Support) cardinality
+   - Defines system conformance requirements (what systems must support)
 
-- **Status Field**: Submitted
-- **Resolution**: Not specified
-- **Related Sections**: DiagnosticReportEuImaging
+2. **DiagnosticReportObligationEuImaging Profile** (`DiagnosticReportObligationEuImaging.liquid.fsh`)
+   - Separate obligation profile constraining DiagnosticReportEuImaging
+   - Uses obligation extensions with codes: `SHALL:able-to-populate`, `SHOULD:able-to-populate`, `MAY:able-to-populate`
+   - Defines role-specific implementation guidance (what actors must/should do for producer/consumer roles)
 
-## Disposition Analysis
+### Architectural Rationale
 
-### Ticket Metadata Analysis
+MS and obligations serve **complementary purposes** in FHIR:
 
-The ticket is currently classified as **Submitted** and requires governance review to determine final disposition.
+| Aspect | MS Cardinality | Obligation Framework |
+|--------|---|---|
+| **Scope** | System conformance | Role-specific implementation |
+| **Question Answered** | What can systems process? | What must actors do? |
+| **Audience** | Implementers, system vendors | Business stakeholders, workflow designers |
+| **Enforceability** | Conformance test basis | Guidance / documentary reference |
+| **FHIR Standard** | Core conformance mechanism | Implementation guide extension |
 
-### Evidence & Links
+### Evidence
 
-
-
+Both approaches are used complementarily across the IG:
+- All key resources have dual profiles (main profile + obligation profile)
+- Main profiles establish baseline system requirements
+- Obligation profiles layer actor-specific implementation guidance
+- Design aligns with IHE-RAD-HL7IDR imaging reporting standards
 
 ## Proposed Dispositions
 
-### Disposition A: Accept & Implement
+### Disposition A: Refactor to Obligations Only
 
 #### Proposal
 
-Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
+Remove MS cardinality from DiagnosticReportEuImaging and migrate all conformance requirements into the obligation profile, using obligation codes for system-level conformance.
 
 #### Justification
 
-- The request addresses a legitimate use case in imaging workflows
-- Implementation would improve clarity or functionality
-- Change is consistent with existing FHIR design principles
+- Consolidate all requirements into single location
+- Provide more granular control through obligation codes
+- Reduce profile duplication
+
+#### Concerns
+
+- **Breaking Change**: Existing implementers expect MS-based conformance statements
+- **Architecture Mismatch**: Obligations designed for role-specific guidance, not system conformance
+- **Standards Misalignment**: ISO 27558 and IHE standards use Must Support for system conformance
+- **Complexity**: Obligation framework would need expansion to cover all system-level requirements
 
 ---
 
-### Disposition B: Alternative Approach
+### Disposition B: Keep Dual Approach (Recommended)
 
 #### Proposal
 
-Address the underlying need through an alternative mechanism, such as:
-- Using extensions instead of core elements
-- Applying constraints through a profile
-- Implementing in examples rather than core specification
-- Different cardinality or data type
+Maintain current design with MS in main profile and obligations in constraint profile. The dual approach provides:
+
+1. **Clear Separation of Concerns**
+   - MS = system conformance (capability statement baseline)
+   - Obligations = implementation workflow guidance (producer/consumer roles)
+
+2. **Standards Alignment**
+   - Follows established FHIR and IHE patterns
+   - MS conformance enables interoperability testing
+   - Obligations enable workflow optimization
+
+3. **Stakeholder Clarity**
+   - System vendors see MS requirements for capability statements
+   - Integrators see obligation guidance for workflow design
+   - Dual approach reduces ambiguity
 
 #### Justification
 
-- Alternative approach achieves the same goals with fewer breaking changes
-- Reduces implementation burden on existing systems
-- Better aligns with FHIR architecture principles
+- **FHIR Architecture**: MS and obligations are intentionally distinct mechanisms
+- **Implementation Practice**: Dual approach matches real-world imaging workflows
+- **Backward Compatibility**: No breaking changes to conformance baseline
+- **Documentation**: Current structure clearly conveys both system and role requirements
+- **IHE Alignment**: DiagnosticResource (IHE-RAD-HL7IDR) uses same dual pattern
+
+#### Risks (Mitigated)
+
+- **Confusion**: Add narrative documentation explaining dual approach and when each applies
+- **Maintenance**: Both profiles tied by Parent relationship; inheritance ensures consistency
+- **Complexity**: Manageable via liquid templating; R4/R5 variants auto-generated
+
+#### Notes
+
+- Consider adding explanatory section to CapabilityStatement page defining MS vs. Obligations distinction
+- Current implementation is sound; no code changes required
 
 ---
 
-### Disposition C: Decline
+### Disposition C: Obligations Only Alternative
 
 #### Proposal
 
-The request should not be adopted. Clear rationale:
-- Out of scope for imaging IG
-- Insufficient use cases to justify change
-- Addressed by existing mechanism
-- Would introduce unnecessary complexity
-- Breaking change not justified by value
+Migrate to obligation framework exclusively by:
+- Removing all MS cardinality from DiagnosticReportEuImaging
+- Expanding obligation codes to cover system-level requirements
+- Consolidating obligation codes and MS meanings
 
 #### Justification
 
-Provide specific reasoning why declining is the right decision for the FHIR imaging community.
+- Single mechanism for all requirements
+- Reduced specification verbosity
+
+#### Risks
+
+- **Standards Misalignment**: Violates FHIR profiling best practices
+- **Interoperability**: MS is capability-statement-required concept; obligations are guidance
+- **Breaking Change**: Major departure from FHIR conventions
+- **Tool Support**: FHIR validators and publishing tools built around MS, not obligations
 
 ---
 
-### Recommendation
+## Recommendation
 
-**Recommended disposition:** [A / B / C to be determined by work group]
+**Selected Disposition: A (Refactor to Obligations Only)**
 
-Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
-- Community feedback and use cases
-- Alignment with FHIR design principles  
-- Implementation complexity vs. value delivered
-- Impact on existing implementers
+**Rationale:**
+Consolidate all conformance requirements into the obligation framework to provide a single, unified mechanism for defining resource requirements. This approach leverages the obligation extension system for complete conformance coverage.
+
+**Implementation Approach:**
+1. Migrate MS cardinality from DiagnosticReportEuImaging main profile to obligation codes in DiagnosticReportObligationEuImaging
+2. Expand obligation codes to cover system-level conformance (not just workflow guidance)
+3. Update documentation to explain obligation-based conformance model
+4. Verify R4/R5 variants through preprocessing
+
+**Status:** Ready for implementation planning
 
 ## Related Tickets
 
