@@ -11,7 +11,7 @@ Analyze local Jira ticket markdown files under `jira/FHIR-*` and produce one con
 Default behavior:
 - Cutoff date: March 30, 2026 (fixed)
 - Included tickets: `Created >= cutoff`
-- Section key: `Related section` (fallback: `Related Artifact`, `Related Artifacts`, `Related Artififact`)
+- Section key: `Related section` (fallback: `Related Artifact`, `Related URL`, `Specification Location`)
 - Output file: `jira/jira-ticket-sections.md`
 
 ## When To Use
