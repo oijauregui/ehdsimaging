@@ -19,6 +19,8 @@
 <artifact id="Bundle/bundle-report-minimal-metadata-unstructured" key="Bundle-bundle-report-minimal-metadata-unstructured" name="Bundle: Imaging Report minimal metadata (unstructured example)"/>
 <artifact id="Bundle/bundle-report-semi-structured" key="Bundle-bundle-report-semi-structured" name="Bundle: Imaging Report semi-structured"/>
 <artifact id="Bundle/bundle-report-structured" key="Bundle-bundle-report-structured" name="Bundle: Imaging Report structured"/>
+<artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="CodeSystem: Diagnostic Report Support Info Code System"/>
+<artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="CodeSystem: Missing DICOM Terminology"/>
 <artifact id="StructureDefinition/CompositionEuImaging" key="StructureDefinition-CompositionEuImaging" name="Composition: Imaging Report"/>
 <artifact id="StructureDefinition/composition-obligation-eu-imaging" key="StructureDefinition-composition-obligation-eu-imaging" name="Composition: Imaging Report: Obligations"/>
 <artifact id="Composition/CompositionSemiStructured" key="Composition-CompositionSemiStructured" name="Composition: semi-structured"/>
@@ -129,12 +131,10 @@
 <artifact id="StructureDefinition/service-request-order-obligation-eu-imaging" key="StructureDefinition-service-request-order-obligation-eu-imaging" name="ServiceRequest: Imaging Order: Obligations"/>
 <artifact id="ServiceRequest/ComeBackNextYearServiceRequest" key="ServiceRequest-ComeBackNextYearServiceRequest" name="ServiceRequest: structured report recommendation"/>
 <artifact id="ValueSet/im-anatomical-region-valueset" key="ValueSet-im-anatomical-region-valueset" name="ValueSet: Anatomical Region"/>
-<artifact id="CodeSystem/codesystem-diagnostic-report-support-info" key="CodeSystem-codesystem-diagnostic-report-support-info" name="ValueSet: Diagnostic Report Support Info Code System"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="ValueSet: DiagnosticReport supportInfo codes"/>
 <artifact id="ValueSet/DeviceEuImagingType" key="ValueSet-DeviceEuImagingType" name="ValueSet: Imaging Device Type"/>
 <artifact id="ValueSet/im-procedure-type" key="ValueSet-im-procedure-type" name="ValueSet: Imaging Procedure Type"/>
 <artifact id="ValueSet/im-imaging-study-performer-type" key="ValueSet-im-imaging-study-performer-type" name="ValueSet: Imaging Study Performer Type Value Set"/>
-<artifact id="CodeSystem/codesystem-missing-dicom-terminology" key="CodeSystem-codesystem-missing-dicom-terminology" name="ValueSet: Missing DICOM Terminology"/>
 <artifact id="ValueSet/ImagingReportTypesEuVSEuImaging" key="ValueSet-ImagingReportTypesEuVSEuImaging" name="ValueSet: Radiology Report Types"/>
 <artifact id="ValueSet/SectionEmptyReasonEuImaging" key="ValueSet-SectionEmptyReasonEuImaging" name="ValueSet: Reasons a section in an imaging report is empty."/>
 <artifact id="ValueSet/valueset-diagnosticreport-notes" key="ValueSet-valueset-diagnosticreport-notes" name="ValueSet: Section codes used to label annotations."/>

@@ -2,73 +2,110 @@
 
 ## Ticket Summary
 
-| Field | Value |
-|-------|-------|
-| Key | FHIR-56593 |
-| Title | wrong title for code systems |
-| Type | Technical Correction |
-| Status | Submitted |
-| Reporter | Giorgio Cangioli |
-| Created | 4/28/26 |
+| Field       | Value                              |
+|-------------|------------------------------------|
+| Key         | FHIR-56593                         |
+| Type        | Technical Correction               |
+| Status      | Submitted                          |
+| Resolution  | Unresolved                         |
+| Reporter    | Giorgio Cangioli                   |
+| Assignee    | Unassigned                         |
+| Created     | 2026-04-28                         |
+| Grouping    | —                                  |
 
 ## Description
 
-Typo: the title of all the internal Code Systems are “Value Set:….
+> Typo: the title of all the internal Code Systems are "Value Set:…"
+
+Multiple FSH source files in `ig-src/input/fsh/terminologies/` define `CodeSystem` resources whose `Title` field is incorrectly prefixed with `"ValueSet: …"`. Additionally, several `ValueSet` resources also carry a redundant `"ValueSet: …"` prefix in their titles (the FHIR publisher appends the resource type automatically).
 
 ## Implementation Status
 
-### Current Status: Submitted
+**Pending** — No implementation evidence found. No linked PRs or commits in the ticket. The fix is entirely mechanical and ready to implement.
 
-### Disposition Classification
+## Affected Files
 
-Based on the ticket status and metadata:
+### CodeSystem resources with wrong "ValueSet:" prefix (primary bug)
 
-- **Status Field**: Submitted
-- **Resolution**: Not specified
-- **Related Sections**: Not specified
+| File | Resource | Current Title |
+|------|----------|---------------|
+| `ig-src/input/fsh/terminologies/DiagnosticReportSupportInfo.fsh` | `CodeSystem: DiagnosticReportSupportingInfoCodeSystem` | `"ValueSet: Diagnostic Report Support Info Code System"` |
+| `ig-src/input/fsh/terminologies/MissingDicomTerminology.fsh` | `CodeSystem: MissingDicomTerminology` | `"ValueSet: Missing DICOM Terminology"` |
+
+### ValueSet resources with redundant "ValueSet:" prefix (secondary issue)
+
+| File | Resource | Current Title |
+|------|----------|---------------|
+| `ig-src/input/fsh/terminologies/DiagnosticReportSupportInfo.fsh` | `ValueSet: DiagnosticReportSupportingInfoVCodes` | `"ValueSet: DiagnosticReport supportInfo codes"` |
+| `ig-src/input/fsh/terminologies/section-terminology.fsh` | `ValueSet: Hl7EuImagingSectionValueSet` | `"ValueSet: Section codes used to label annotations."` |
+| `ig-src/input/fsh/terminologies/ImComposition-terminology.fsh` | `ValueSet: SectionEmptyReasonEuImaging` | `"ValueSet: Reasons a section in an imaging report is empty."` |
+| `ig-src/input/fsh/terminologies/category-and-type.fsh` | `ValueSet: ImagingReportTypesEuVSEuImaging` | `"ValueSet: Radiology Report Types"` |
+| `ig-src/input/fsh/terminologies/imaging-study-performer-type.fsh` | `ValueSet: ImagingStudyEuImagingPerformerTypeVS` | `"ValueSet: Imaging Study Performer Type Value Set"` |
+| `ig-src/input/fsh/terminologies/ImProcedureType.fsh` | `ValueSet: ProcedureEuImagingType` | `"ValueSet: Imaging Procedure Type"` |
+
+## Related Tickets
+
+None identified.
 
 ## Disposition Analysis
 
-### Ticket Metadata Analysis
+### Disposition Taken
 
-The ticket is currently classified as **Submitted** and requires governance review to determine final disposition.
+**Pending** — Technical Correction not yet implemented.
 
-### Evidence & Links
+### Rationale
 
+The reporter is correct. SUSHI / the FHIR publisher does not automatically decorate titles with the resource type, so the `"ValueSet: …"` prefix appearing on `CodeSystem` titles is a genuine typo that will confuse readers and produce misleading rendered pages. The same prefix on `ValueSet` titles is redundant and inconsistent with FHIR IG authoring conventions (titles are plain English labels, not type-qualified).
 
+### Evidence
 
-
-## Proposed Dispositions
-
-### Disposition A: Accept & Implement
-
-#### Proposal
-
-Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
-
-#### Justification
-
-- The request addresses a legitimate use case in imaging workflows
-- Implementation would improve clarity or functionality
-- Change is consistent with existing FHIR design principles
+- Source inspection of `ig-src/input/fsh/terminologies/` confirms two `CodeSystem` definitions with `Title: "ValueSet: …"`.
+- Six `ValueSet` definitions carry the redundant `"ValueSet: …"` prefix.
+- No PR or commit addressing this issue found in ticket comments.
 
 ---
 
-### Disposition B: Alternative Approach
+## Proposed Dispositions
+
+### Disposition A: Accept As Requested — Fix All Affected Titles
 
 #### Proposal
 
-Address the underlying need through an alternative mechanism, such as:
-- Using extensions instead of core elements
-- Applying constraints through a profile
-- Implementing in examples rather than core specification
-- Different cardinality or data type
+Remove the erroneous `"ValueSet: "` prefix from the two `CodeSystem` titles, and remove the redundant `"ValueSet: "` prefix from all six `ValueSet` titles. Proposed corrected titles:
+
+| Resource | Corrected Title |
+|----------|-----------------|
+| `CodeSystem: DiagnosticReportSupportingInfoCodeSystem` | `"Diagnostic Report Support Info Code System"` |
+| `CodeSystem: MissingDicomTerminology` | `"Missing DICOM Terminology"` |
+| `ValueSet: DiagnosticReportSupportingInfoVCodes` | `"DiagnosticReport supportInfo codes"` |
+| `ValueSet: Hl7EuImagingSectionValueSet` | `"Section codes used to label annotations"` |
+| `ValueSet: SectionEmptyReasonEuImaging` | `"Reasons a section in an imaging report is empty"` |
+| `ValueSet: ImagingReportTypesEuVSEuImaging` | `"Radiology Report Types"` |
+| `ValueSet: ImagingStudyEuImagingPerformerTypeVS` | `"Imaging Study Performer Type"` |
+| `ValueSet: ProcedureEuImagingType` | `"Imaging Procedure Type"` |
+
+Note: `ImagingStudyEuImagingPerformerTypeVS` currently has the doubly-redundant title `"ValueSet: Imaging Study Performer Type Value Set"` — the trailing "Value Set" should also be removed when fixing the prefix.
 
 #### Justification
 
-- Alternative approach achieves the same goals with fewer breaking changes
-- Reduces implementation burden on existing systems
-- Better aligns with FHIR architecture principles
+This is the minimal, correct fix. FHIR IG convention is that `Title` is a plain human-readable label without resource-type decoration. Fixing both CodeSystem and ValueSet titles at the same time is consistent and eliminates all instances of the pattern in one PR.
+
+---
+
+### Disposition B: Fix CodeSystem Titles Only
+
+#### Proposal
+
+Fix only the two `CodeSystem` resources that have the wrong `"ValueSet: "` prefix (the primary typo reported), leaving `ValueSet` titles unchanged.
+
+| Resource | Corrected Title |
+|----------|-----------------|
+| `CodeSystem: DiagnosticReportSupportingInfoCodeSystem` | `"Diagnostic Report Support Info Code System"` |
+| `CodeSystem: MissingDicomTerminology` | `"Missing DICOM Terminology"` |
+
+#### Justification
+
+The ticket specifically calls out `CodeSystem` titles being wrong. The `ValueSet` prefix redundancy is a style issue rather than a correctness bug — it does not produce incorrect output. A narrower change minimises diff size and risk for a ballot-period correction.
 
 ---
 
@@ -76,53 +113,29 @@ Address the underlying need through an alternative mechanism, such as:
 
 #### Proposal
 
-The request should not be adopted. Clear rationale:
-- Out of scope for imaging IG
-- Insufficient use cases to justify change
-- Addressed by existing mechanism
-- Would introduce unnecessary complexity
-- Breaking change not justified by value
+Do not change the titles. Accept the current state as a non-blocking style inconsistency.
 
 #### Justification
 
-Provide specific reasoning why declining is the right decision for the FHIR imaging community.
+Not justified. The `"ValueSet: "` prefix on `CodeSystem` resources is objectively incorrect and will appear verbatim in the published specification, misleading readers and tools that consume the IG. Declining a clearly valid Technical Correction on style grounds is inadvisable.
 
 ---
 
 ### Recommendation
 
-**Recommended disposition:** [A / B / C to be determined by work group]
+**Recommended disposition: A**
 
-Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
-- Community feedback and use cases
-- Alignment with FHIR design principles  
-- Implementation complexity vs. value delivered
-- Impact on existing implementers
-
-## Related Tickets
-
-No related grouping specified
-
-## Next Steps
-
-1. Present to work group for review and discussion
-2. Gather implementer feedback on proposed dispositions
-3. Document final decision and rationale
-4. If accepted, create implementation task with specific requirements
-5. Track implementation in GitHub PRs/commits
-6. Update specification and generate updated artifacts
-
-## Verification Checklist
-
-- [ ] Work group review completed
-- [ ] Disposition approved
-- [ ] Implementation (if accepted) committed to repository
-- [ ] Changes verified in main branch
-- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
-- [ ] Documentation updated if needed
-- [ ] Resolution file finalized and committed
+The reporter is correct, and the fix is mechanical with no design decisions required. Applying Disposition A (fix all eight affected titles) eliminates both the genuine error (CodeSystem titled as ValueSet) and the redundant prefix on ValueSets in a single consistent pass. The change carries zero semantic risk — only the human-readable `Title` field is altered; IDs, URLs, and code definitions are untouched. This should be straightforward to apply before the next ballot publication.
 
 ---
 
-*Generated: 2026-05-07T14:25:15.902Z*
-*Ticket Status: Submitted*
+## Next Steps
+
+Ready for implementation.
+
+### Verification Checklist
+
+- [ ] Work group review completed
+- [ ] Implementation code committed
+- [ ] Verification in main branch
+- [ ] Documentation updated
