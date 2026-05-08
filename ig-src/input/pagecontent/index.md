@@ -1,5 +1,5 @@
-{% raw %}{% include fsh-link-references.md %}{% endraw %}
-{% raw %}{% include variable-definitions.md %}{% endraw %}
+{% include fsh-link-references.md %}
+{% include variable-definitions.md %}
 
   <!-- Horizontal banner -->
 <div style="border: 2px solid #003366; border-radius: 8px; padding: 1em; margin: 1.5em 0; background-color: #f9f9ff; display: flex; flex-direction: column; align-items: flex-start;">
@@ -66,16 +66,16 @@ The development of this implementation guide is promoted by HL7 Europe, but real
 
 ### FHIR specific Dependencies
 
-{% raw %}{% include dependency-table-en.xhtml %}{% endraw %}
+{% include dependency-table-en.xhtml %}
 
 ### Cross Version Analysis
 
-{% raw %}{% include cross-version-analysis-en.xhtml %}{% endraw %}
+{% include cross-version-analysis-en.xhtml %}
 
 ### Global Profiles
 
-{% raw %}{% include globals-table-en.xhtml %}{% endraw %}
+{% include globals-table-en.xhtml %}
 
 ### IP statements
 
-{% raw %}{% include ip-statements-en.xhtml %}{% endraw %}
+{% include ip-statements-en.xhtml %}
