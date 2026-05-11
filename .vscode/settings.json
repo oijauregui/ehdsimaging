@@ -24,6 +24,7 @@
         "/^cd /home/nly98977/SwArchives/hl7eu/imaging && bash \\./\\.github/skills/ig-preprocess-build-check/scripts/check-preprocess-build\\.sh$/": {
             "approve": true,
             "matchCommandLine": true
-        }
+        },
+        "./_preprocessMultiVersion.sh": true
     },
 }
