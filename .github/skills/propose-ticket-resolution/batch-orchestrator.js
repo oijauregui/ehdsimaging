@@ -19,10 +19,12 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 // Configuration
-const JIRA_DIR = process.cwd();
+const CWD = process.cwd();
+const JIRA_DIR = fs.existsSync(path.join(CWD, 'jira'))
+  ? path.join(CWD, 'jira')
+  : CWD;
 const RESOLVED_STATUSES = [
   'Applied',
   'Not Persuasive with Modification',
@@ -31,13 +33,39 @@ const RESOLVED_STATUSES = [
   'Declined'
 ];
 
+function getTicketRootDirs() {
+  return [
+    JIRA_DIR,
+    path.join(JIRA_DIR, 'open'),
+    path.join(JIRA_DIR, 'closed')
+  ].filter(dir => fs.existsSync(dir) && fs.statSync(dir).isDirectory());
+}
+
+function findTicketDir(ticketKey) {
+  for (const root of getTicketRootDirs()) {
+    const candidate = path.join(root, ticketKey);
+    const ticketFile = path.join(candidate, `${ticketKey}.md`);
+    if (fs.existsSync(candidate) && fs.statSync(candidate).isDirectory() && fs.existsSync(ticketFile)) {
+      return candidate;
+    }
+  }
+  return null;
+}
+
+function ticketOutputPath(ticketKey, fileName) {
+  const ticketDir = findTicketDir(ticketKey);
+  if (!ticketDir) return null;
+  return path.relative(JIRA_DIR, path.join(ticketDir, fileName));
+}
+
 /**
  * Extract metadata from ticket markdown file
  */
 function extractTicketMetadata(ticketKey) {
-  const ticketFile = path.join(JIRA_DIR, ticketKey, `${ticketKey}.md`);
+  const ticketDir = findTicketDir(ticketKey);
+  const ticketFile = ticketDir ? path.join(ticketDir, `${ticketKey}.md`) : null;
   
-  if (!fs.existsSync(ticketFile)) {
+  if (!ticketFile || !fs.existsSync(ticketFile)) {
     return null;
   }
   
@@ -49,9 +77,9 @@ function extractTicketMetadata(ticketKey) {
   if (metadataMatch) {
     const lines = metadataMatch[1].split('\n');
     lines.forEach(line => {
-      const [key, value] = line.split('|').map(s => s.trim()).filter(Boolean);
-      if (key && value) {
-        metadata[key] = value;
+      const match = line.match(/^\s*-\s+([^:]+):\s*(.*)$/);
+      if (match) {
+        metadata[match[1].trim()] = match[2].trim();
       }
     });
   }
@@ -74,28 +102,27 @@ function isUnresolved(ticketKey) {
  * Scan jira directory for all unresolved tickets
  */
 function findUnresolvedTickets() {
-  const entries = fs.readdirSync(JIRA_DIR);
-  const unresolvedTickets = [];
-  
-  entries.forEach(entry => {
-    if (entry.match(/^FHIR-\d+$/) && isUnresolved(entry)) {
-      unresolvedTickets.push(entry);
+  const unresolvedTickets = new Set();
+
+  for (const root of getTicketRootDirs()) {
+    const entries = fs.readdirSync(root, { withFileTypes: true });
+    entries.forEach(entry => {
+      if (entry.isDirectory() && entry.name.match(/^FHIR-\d+$/) && isUnresolved(entry.name)) {
+        unresolvedTickets.add(entry.name);
+      }
     }
-  });
-  
-  return unresolvedTickets.sort();
+    );
+  }
+
+  return Array.from(unresolvedTickets).sort();
 }
 
 /**
  * Check if resolution file already exists
  */
 function resolutionExists(ticketKey) {
-  const resolutionFile = path.join(
-    JIRA_DIR,
-    ticketKey,
-    `${ticketKey}-resolution.md`
-  );
-  return fs.existsSync(resolutionFile);
+  const outputRel = ticketOutputPath(ticketKey, `${ticketKey}-resolution.md`);
+  return outputRel ? fs.existsSync(path.join(JIRA_DIR, outputRel)) : false;
 }
 
 /**
@@ -105,6 +132,7 @@ function resolutionExists(ticketKey) {
  * For now, we prepare the invocation data.
  */
 function invokeSubagentForTicket(ticketKey) {
+  const outputRel = ticketOutputPath(ticketKey, `${ticketKey}-resolution.md`) || `${ticketKey}/${ticketKey}-resolution.md`;
   const agentInvocation = {
     agentName: 'default',
     description: `Generate resolution for ${ticketKey}`,
@@ -117,7 +145,7 @@ This ticket needs a resolution proposal that includes:
 4. Evidence from linked GitHub PRs/commits
 5. Recommendation for the work group
 
-Generate a complete resolution file at jira/${ticketKey}/${ticketKey}-resolution.md`
+Generate a complete resolution file at jira/${outputRel}`
   };
   
   return agentInvocation;
@@ -177,10 +205,11 @@ async function orchestrateBatch() {
   invocations.forEach((inv, idx) => {
     const ticketMatch = inv.prompt.match(/FHIR-\d+/);
     const ticketKey = ticketMatch ? ticketMatch[0] : 'UNKNOWN';
+    const outputRel = ticketOutputPath(ticketKey, `${ticketKey}-resolution.md`) || `${ticketKey}/${ticketKey}-resolution.md`;
     console.log(`[${idx + 1}/${invocations.length}] Subagent Session: ${ticketKey}`);
     console.log(`     Agent: ${inv.agentName}`);
     console.log(`     Mode: Isolated session (no history from previous tickets)`);
-    console.log(`     Output: jira/${ticketKey}/${ticketKey}-resolution.md\n`);
+    console.log(`     Output: jira/${outputRel}\n`);
   });
   
   return summary;
@@ -194,10 +223,12 @@ function processSingleTicket(ticketKey) {
     console.error(`Error: Ticket ${ticketKey} not found in jira/ directory`);
     process.exit(1);
   }
+
+  const outputRel = ticketOutputPath(ticketKey, `${ticketKey}-resolution.md`) || `${ticketKey}/${ticketKey}-resolution.md`;
   
   console.log(`Processing single ticket: ${ticketKey}`);
   console.log('This ticket will be processed in the current session.');
-  console.log(`Output: jira/${ticketKey}/${ticketKey}-resolution.md`);
+  console.log(`Output: jira/${outputRel}`);
   
   // Single ticket processing would proceed here
 }
@@ -227,7 +258,7 @@ async function main() {
     console.log('1. Each ticket above will be processed in a separate Copilot session');
     console.log('2. Resolution files will be generated at: jira/FHIR-XXXXX/FHIR-XXXXX-resolution.md');
     console.log('3. After all sessions complete, review results and commit to git:');
-    console.log('   git add jira/FHIR-*/FHIR-*-resolution.md');
+    console.log('   git add jira/open/FHIR-*/FHIR-*-resolution.md jira/closed/FHIR-*/FHIR-*-resolution.md');
     console.log('   git commit -m "Generate resolution proposals for unresolved tickets"');
     
   } else {

@@ -91,7 +91,13 @@ The script will:
      - Status
      - Issue Type
      - Created
-     - Path
+     - Proposal
+     - Implementation
+     - Result
+   - Populate companion columns from ticket directory files:
+     - `Proposal`: link to `*-resolution.md` / `*proposal*.md` when present
+     - `Implementation`: link to `*implementation*.md` when present
+     - `Result`: if explicit result file exists use that; otherwise derive from `**Recommended disposition:**` in proposal/resolution file
 
 7. **Add data-quality appendix**
    - List skipped tickets with missing/invalid `Created`
@@ -134,8 +140,10 @@ The skill includes two implementation files:
 
 | Key | Summary | Status | Issue Type | Created | Path |
 |-----|---------|--------|------------|---------|------|
-| FHIR-56772 | Editorial: ... | Submitted | Technical Correction | 4/30/26 | jira/FHIR-56772/FHIR-56772.md |
+| [FHIR-56772](https://jira.hl7.org/browse/FHIR-56772) | Editorial: ... | Submitted | Technical Correction | 4/30/26 | [proposal](./open/FHIR-56772/FHIR-56772-resolution.md) |  | Pending (recommended: B) |
 ```
+
+Note: The generated file is the canonical `jira/jira-ticket-sections.md` used by governance workflows and must preserve the same table schema and section structure.
 
 ## Decision Points
 

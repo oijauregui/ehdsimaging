@@ -67,6 +67,13 @@ When you provide a ticket key (e.g., `FHIR-51010`):
    - Structure with sections: Summary, Implementation Status, Disposition Analysis, Resolution Proposals, Proposed Dispositions
    - Include all extracted evidence and GitHub links
 
+6. **Update Ticket Sections Report (Required Final Step)**
+   - Update `jira/jira-ticket-sections.md`
+   - Find the row for the processed ticket and populate:
+     - `Proposal` column with link to `./open/FHIR-XXXXX/FHIR-XXXXX-resolution.md` or `./closed/FHIR-XXXXX/FHIR-XXXXX-resolution.md`
+     - `Result` column with current state (for example: `Pending (recommended: A|B|C)`)
+   - Preserve existing section ordering and table formatting
+
 ### Batch Processing (All Unresolved Tickets)
 
 When you use the `--all` flag, each unresolved ticket is processed in a **separate Copilot chat session** via `runSubagent`:
@@ -96,6 +103,13 @@ When you use the `--all` flag, each unresolved ticket is processed in a **separa
      - Errors encountered
      - Links to all generated resolution files
    - Batch report written to `jira/batch-resolution-report.md`
+
+4. **Update Ticket Sections Report (Required Final Step)**
+    - Update `jira/jira-ticket-sections.md` after all ticket files are generated
+    - For each processed ticket row, fill/update:
+       - `Proposal` column with the generated resolution file link
+       - `Result` column with disposition state and recommendation
+    - Keep all unrelated rows unchanged
 
 ### Session Isolation Benefits
 
@@ -235,6 +249,7 @@ Output: `jira/FHIR-51010/FHIR-51010-resolution.md` created with:
 - Full description and comments
 - Three proposed disposition options
 - Verification checklist
+- `jira/jira-ticket-sections.md` updated for the ticket row (Proposal + Result)
 
 ### Generate Resolutions for All Unresolved Tickets
 
@@ -252,6 +267,9 @@ Generated FHIR-51274-resolution.md
 Summary: 245 total tickets, 38 unresolved processed, 207 resolved/excluded
 ```
 
+Final step after generation:
+- Update `jira/jira-ticket-sections.md` for all processed tickets.
+
 ### Update Existing Resolution File
 
 Simply re-run with the same ticket key to overwrite:
@@ -265,7 +283,8 @@ The existing `jira/FHIR-51010/FHIR-51010-resolution.md` will be updated.
 
 - **Single ticket**: `jira/FHIR-XXXXX/FHIR-XXXXX-resolution.md`
 - **Batch mode**: Individual files in each `jira/FHIR-XXXXX/` directory
-- **Summary report**: Printed to console (not written to file)
+- **Batch summary report**: `jira/batch-resolution-report.md`
+- **Index update**: `jira/jira-ticket-sections.md` (required final step)
 
 ## Disposition Classification Rules
 
@@ -335,7 +354,10 @@ ticket-resolution FHIR-51010
 # 3. Review the generated file
 cat jira/FHIR-51010/FHIR-51010-resolution.md
 
-# 4. Edit manually as needed before presenting to work group
+# 4. Update ticket index report row
+# (Proposal + Result columns)
+
+# 5. Edit manually as needed before presenting to work group
 ```
 
 ### Batch Resolution Documentation
@@ -349,8 +371,10 @@ ticket-resolution --all
 # 3. Review summary output in console
 # Review individual files in your editor
 
-# 4. Commit resolution proposals to git
-git add jira/FHIR-*/FHIR-*-resolution.md
+# 4. Update jira-ticket-sections.md for processed tickets
+
+# 5. Commit resolution proposals and section index updates to git
+git add jira/FHIR-*/FHIR-*-resolution.md jira/open/FHIR-*/*-resolution.md jira/closed/FHIR-*/*-resolution.md jira/jira-ticket-sections.md jira/batch-resolution-report.md
 git commit -m "Generate resolution proposals for unresolved tickets"
 ```
 
@@ -365,7 +389,9 @@ ticket-resolution --all
 # 3. Filter results for newly generated Applied tickets
 grep -r "Applied" jira/FHIR-*/FHIR-*-resolution.md | head -10
 
-# 4. Review implementation evidence in generated files
+# 4. Update jira-ticket-sections.md rows for processed tickets
+
+# 5. Review implementation evidence in generated files
 ```
 
 ## Implementation Details
@@ -422,6 +448,8 @@ After all subagent sessions complete:
   ↓
   Write report to jira/batch-resolution-report.md
   ↓
+   Update jira/jira-ticket-sections.md for processed tickets
+   ↓
   Print summary to console
 ```
 
@@ -440,7 +468,8 @@ When a specific ticket key is provided (e.g., `FHIR-51010`), the skill processes
    - Disposition analysis and recommendations
    - Verification checklist
 7. **Write Output**: Save file atomically and report completion
-8. **Return Result**: Print file path to console
+8. **Update Ticket Sections Report**: Update `jira/jira-ticket-sections.md` row for this ticket
+9. **Return Result**: Print file path to console
 
 ### Multi-Session Benefits
 

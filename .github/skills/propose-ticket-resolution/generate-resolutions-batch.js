@@ -15,15 +15,44 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const JIRA_DIR = '/home/nly98977/SwArchives/hl7eu/imaging/jira';
+const CWD = process.cwd();
+const JIRA_DIR = fs.existsSync(path.join(CWD, 'jira'))
+  ? path.join(CWD, 'jira')
+  : CWD;
+
+function getTicketRootDirs() {
+  return [
+    JIRA_DIR,
+    path.join(JIRA_DIR, 'open'),
+    path.join(JIRA_DIR, 'closed')
+  ].filter(dir => fs.existsSync(dir) && fs.statSync(dir).isDirectory());
+}
+
+function findTicketDir(ticketKey) {
+  for (const root of getTicketRootDirs()) {
+    const ticketDir = path.join(root, ticketKey);
+    const ticketFile = path.join(ticketDir, `${ticketKey}.md`);
+    if (fs.existsSync(ticketDir) && fs.statSync(ticketDir).isDirectory() && fs.existsSync(ticketFile)) {
+      return ticketDir;
+    }
+  }
+  return null;
+}
+
+function resolveOutputDir(ticketKey) {
+  const existing = findTicketDir(ticketKey);
+  if (existing) return existing;
+  return path.join(JIRA_DIR, 'open', ticketKey);
+}
 
 /**
  * Extract full ticket data from markdown
  */
 function extractTicketData(ticketKey) {
-  const ticketFile = path.join(JIRA_DIR, ticketKey, `${ticketKey}.md`);
+  const ticketDir = findTicketDir(ticketKey);
+  const ticketFile = ticketDir ? path.join(ticketDir, `${ticketKey}.md`) : null;
   
-  if (!fs.existsSync(ticketFile)) {
+  if (!ticketFile || !fs.existsSync(ticketFile)) {
     return null;
   }
   
@@ -308,7 +337,7 @@ async function main() {
       const proposal = generateResolutionProposal(ticket);
       
       // Determine output path
-      const outputDir = path.join(JIRA_DIR, ticketKey);
+      const outputDir = resolveOutputDir(ticketKey);
       const outputFile = path.join(outputDir, `${ticketKey}-resolution.md`);
       
       // Ensure directory exists
@@ -324,7 +353,7 @@ async function main() {
       results.push({
         ticket: ticketKey,
         status: 'success',
-        file: outputFile
+        file: path.relative(JIRA_DIR, outputFile)
       });
       
     } catch (err) {
@@ -367,7 +396,7 @@ async function main() {
   console.log('1. Review generated resolution files:');
   console.log('   find jira -name "*-resolution.md" -type f');
   console.log('2. Commit generated files:');
-  console.log('   git add jira/FHIR-*/*-resolution.md');
+  console.log('   git add jira/open/FHIR-*/*-resolution.md jira/closed/FHIR-*/*-resolution.md');
   console.log('   git commit -m "Generate resolution proposals for unresolved tickets"');
   console.log('3. Present to work group for review and disposition decisions');
 }

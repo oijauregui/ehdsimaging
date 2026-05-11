@@ -90,15 +90,19 @@
 
 ## §1 Home (5)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/index.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/index.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/index.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/index.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
-| [FHIR-56716](https://jira.hl7.org/browse/FHIR-56716) | Scope and modeling of electrocardiogram (ECG) examinations | Triaged | Question | 4/30/26 |  |  | [result](./open/FHIR-56716/FHIR-56716-resolution.md) |
-| [FHIR-56765](https://jira.hl7.org/browse/FHIR-56765) | Editorial: TOC should be linked in a menu | Triaged | Change Request | 4/30/26 |  |  |  |
-| [FHIR-56779](https://jira.hl7.org/browse/FHIR-56779) | Editorial: cross-spec link to xt-ehr-common is confusing as an orientation page; | Triaged | Change Request | 4/30/26 |  |  |  |
-| [FHIR-56563](https://jira.hl7.org/browse/FHIR-56563) | How to read page | Triaged | Change Request | 4/28/26 |  |  |  |
-| [FHIR-56564](https://jira.hl7.org/browse/FHIR-56564) | Add a kind of background page | Triaged | Change Request | 4/28/26 |  |  |  |
+| [FHIR-56716](https://jira.hl7.org/browse/FHIR-56716) | Scope and modeling of electrocardiogram (ECG) examinations | Triaged | Question | 4/30/26 | [proposal](./open/FHIR-56716/FHIR-56716-resolution.md) |  | Pending (recommended: A) |
+| [FHIR-56765](https://jira.hl7.org/browse/FHIR-56765) | Editorial: TOC should be linked in a menu | Triaged | Change Request | 4/30/26 | [proposal](./open/FHIR-56765/FHIR-56765-resolution.md) |  | Pending (recommended: A) |
+| [FHIR-56779](https://jira.hl7.org/browse/FHIR-56779) | Editorial: cross-spec link to xt-ehr-common is confusing as an orientation page; | Triaged | Change Request | 4/30/26 | [proposal](./open/FHIR-56779/FHIR-56779-resolution.md) |  | Pending (recommended: B) |
+| [FHIR-56563](https://jira.hl7.org/browse/FHIR-56563) | How to read page | Triaged | Change Request | 4/28/26 | [proposal](./open/FHIR-56563/FHIR-56563-resolution.md) |  | Pending (recommended: A) |
+| [FHIR-56564](https://jira.hl7.org/browse/FHIR-56564) | Add a kind of background page | Triaged | Change Request | 4/28/26 | [proposal](./open/FHIR-56564/FHIR-56564-resolution.md) |  | Pending (recommended: B) |
 
 ## §1.1 Changes (3)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/changes.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/changes.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/changes.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/changes.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -108,11 +112,15 @@
 
 ## §1.2 Dependencies (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/dependencies.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/dependencies.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/dependencies.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/dependencies.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56561](https://jira.hl7.org/browse/FHIR-56561) | Move dependencies page under About | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §1.3 References (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/references.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/references.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/references.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/references.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -120,11 +128,15 @@
 
 ## §1.4 Adapting Guidelines for Country use (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/adapting.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/adapting.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/adapting.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/adapting.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56562](https://jira.hl7.org/browse/FHIR-56562) | Remove adapting guidelines page | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §1.5 Authors and contributors (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/contributors.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/contributors.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/contributors.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/contributors.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -132,11 +144,15 @@
 
 ## §2 System actors (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/actors-and-transactions.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/actors-and-transactions.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/actors-and-transactions.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/actors-and-transactions.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56571](https://jira.hl7.org/browse/FHIR-56571) | Revise System actor page | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §3 Use Cases (3)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/use-cases.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/use-cases.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/use-cases.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/use-cases.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -166,6 +182,8 @@
 
 ## §4 Data formats (3)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/data-formats.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/data-formats.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/data-formats.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/data-formats.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56722](https://jira.hl7.org/browse/FHIR-56722) | The IG offers two paths to the same imaging report data (DocumentReference searc | Triaged | Change Request | 4/30/26 |  |  |  |
@@ -180,12 +198,16 @@
 
 ## §6 EU Health Data API for Imaging Reports (2)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/api.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/api.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/api.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/api.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56578](https://jira.hl7.org/browse/FHIR-56578) | Revise API page | Triaged | Change Request | 4/28/26 |  |  |  |
 | [FHIR-56590](https://jira.hl7.org/browse/FHIR-56590) | Revise MHD DocRef | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §7 Xt-EHR mapping (2)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/xtehr-mapping.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/xtehr-mapping.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/xtehr-mapping.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/xtehr-mapping.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -199,6 +221,8 @@
 | [FHIR-56720](https://jira.hl7.org/browse/FHIR-56720) | Clarify that document bundles may be generated on demand and that Bundle.meta.la | Triaged | Change Request | 4/30/26 |  |  |  |
 
 ## §8 Patterns and Guidelines (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/patterns-and-guidelines.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/patterns-and-guidelines.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/patterns-and-guidelines.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/patterns-and-guidelines.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -236,6 +260,8 @@
 
 ## §9 Design considerations (5)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/design-considerations.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/design-considerations.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/design-considerations.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/design-considerations.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56721](https://jira.hl7.org/browse/FHIR-56721) | Composition need not be signed by a single radiologist; allow Organization as at | Triaged | Change Request | 4/30/26 |  |  |  |
@@ -251,6 +277,8 @@
 | [FHIR-56772](https://jira.hl7.org/browse/FHIR-56772) | Editorial: §9.9 lists three resources as alternatives while §9.8 recommends usin | Applied | Technical Correction | 4/30/26 |  |  |  |
 
 ## §10.2 Obligations (4)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/artifacts-obligations.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/artifacts-obligations.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/artifacts-obligations.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/artifacts-obligations.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -273,6 +301,8 @@
 
 ## §10.3 Imaging Report (2)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/imaging-report.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/imaging-report.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/imaging-report.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/imaging-report.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56753](https://jira.hl7.org/browse/FHIR-56753) | Identical elements (history / findings / comparison / recommendation) carry diff | Triaged | Change Request | 4/30/26 |  |  |  |
@@ -286,12 +316,16 @@
 
 ## §11.3 EEHRxF Imaging Report Document Access Provider CapabilityStatement (2)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/CapabilityStatement-EehrxfImagingDocumentAccessProvider.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/CapabilityStatement-EehrxfImagingDocumentAccessProvider.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/CapabilityStatement-EehrxfImagingDocumentAccessProvider.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/CapabilityStatement-EehrxfImagingDocumentAccessProvider.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56579](https://jira.hl7.org/browse/FHIR-56579) | Revise capabilityStatement pages | Triaged | Change Request | 4/28/26 |  |  |  |
 | [FHIR-56582](https://jira.hl7.org/browse/FHIR-56582) | Check search parameters | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §11.5 EEHRxF Imaging Report Resource Access Provider CapabilityStatement (2)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/CapabilityStatement-EeehrxfImagingReportResourceAccessProvider.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/CapabilityStatement-EeehrxfImagingReportResourceAccessProvider.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/CapabilityStatement-EeehrxfImagingReportResourceAccessProvider.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/CapabilityStatement-EeehrxfImagingReportResourceAccessProvider.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -312,11 +346,15 @@
 
 ## §11.7 OperationDefinition: $document on DiagnosticReport (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/OperationDefinition-DiagnosticReport-fhir-report.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/OperationDefinition-DiagnosticReport-fhir-report.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/OperationDefinition-DiagnosticReport-fhir-report.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/OperationDefinition-DiagnosticReport-fhir-report.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56614](https://jira.hl7.org/browse/FHIR-56614) | Suggest remove $document operation | Triaged | Change Request | 4/29/26 |  |  |  |
 
 ## §11.10 AdverseEvent: Imaging Adverse Event (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-AdverseEventEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-BundleReportMinimalMetadataEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-AdverseEventEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-BundleReportMinimalMetadataEuImaging.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -324,11 +362,15 @@
 
 ## §11.13 Bundle: Imaging Report (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-BundleReportEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-DeviceEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-BundleReportEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-DeviceEuImaging.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56485](https://jira.hl7.org/browse/FHIR-56485) | References to "EU Base" profiles instead of "EU Core" equivalents | Triaged | Change Request | 4/24/26 |  |  |  |
 
 ## §11.15 Composition: Imaging Report (7)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-CompositionEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-DiagnosticReportEuImagingMinimalMetadata.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-CompositionEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-DiagnosticReportEuImagingMinimalMetadata.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -341,6 +383,8 @@
 | [FHIR-56248](https://jira.hl7.org/browse/FHIR-56248) | Finding section should allow for impressions as well | Triaged | Change Request | 4/1/26 |  |  |  |
 
 ## §11.16 Composition: Imaging Report: Obligations (3)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-composition-obligation-eu-imaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-diagnostic-report-obligation-eu-imaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-composition-obligation-eu-imaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-diagnostic-report-obligation-eu-imaging.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -374,6 +418,8 @@
 
 ## §11.17 Device: Imaging Device (3)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-DeviceEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-DocumentReferenceKeyImageEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-DeviceEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-DocumentReferenceKeyImageEuImaging.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56741](https://jira.hl7.org/browse/FHIR-56741) | Imaging Report Provider is often downstream of the resulting system and may not  | Triaged | Change Request | 4/30/26 |  |  |  |
@@ -381,6 +427,8 @@
 | [FHIR-56503](https://jira.hl7.org/browse/FHIR-56503) | Binding to DiagnosticServiceSectionCodes ValueSet in category:imaging-report and | Triaged | Change Request | 4/24/26 |  |  |  |
 
 ## §11.20 DiagnosticReport: Imaging Report: Obligations (2)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-diagnostic-report-obligation-eu-imaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-patient-obligation-eu-imaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-diagnostic-report-obligation-eu-imaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-patient-obligation-eu-imaging.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -395,6 +443,8 @@
 
 ## §11.21 DocumentReference: Key Image (3)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-DocumentReferenceKeyImageEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-SrInstanceImagingSelectionEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-DocumentReferenceKeyImageEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-SrInstanceImagingSelectionEuImaging.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56761](https://jira.hl7.org/browse/FHIR-56761) | SHALL populate a description for every instance and series, but content expectat | Triaged | Change Request | 4/30/26 |  |  |  |
@@ -402,6 +452,8 @@
 | [FHIR-56785](https://jira.hl7.org/browse/FHIR-56785) | Replace RadLex Playbook ValueSet with SNOMED CT for ImagingStudy.procedureCode | Triaged | Change Request | 4/30/26 |  |  |  |
 
 ## §11.23 EuCarePlan: Obligations (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-care-plan-obligation-eu-imaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-ImagingSelectionKeyImageEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-care-plan-obligation-eu-imaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-ImagingSelectionKeyImageEuImaging.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -415,12 +467,16 @@
 
 ## §11.24 ImagingStudy: General (2)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-ImagingStudyEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-ImagingStudyEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-ImagingStudyEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-ImagingStudyEuImaging.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56729](https://jira.hl7.org/browse/FHIR-56729) | Extend ObservationFindingEuImaging value set with OBX-3-style codes (Impression, | Triaged | Change Request | 4/30/26 |  |  |  |
 | [FHIR-56594](https://jira.hl7.org/browse/FHIR-56594) | Check identifier:observationUid | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §11.25 ImagingStudy: General: Obligations (4)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-imaging-study-obligation-eu-imaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-imaging-study-obligation-eu-imaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-imaging-study-obligation-eu-imaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-imaging-study-obligation-eu-imaging.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -443,17 +499,23 @@
 
 ## §11.33 Procedure: Imaging Acquisition (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-ProcedureEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-ServiceRequestOrderEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-ProcedureEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-ServiceRequestOrderEuImaging.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56730](https://jira.hl7.org/browse/FHIR-56730) | HL7IDRCommunication is a bare 0..1 Reference with no target type; cannot carry m | Triaged | Change Request | 4/30/26 |  |  |  |
 
 ## §11.35 ServiceRequest: Imaging Order (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-ServiceRequestOrderEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/StructureDefinition-AccessionNumberIdentifierEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-ServiceRequestOrderEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/StructureDefinition-AccessionNumberIdentifierEuImaging.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56728](https://jira.hl7.org/browse/FHIR-56728) | Extensible SNOMED binding on Procedure.code requires extensive mapping; allow LO | Triaged | Change Request | 4/30/26 |  |  |  |
 
 ## §11.51 Extension: Number of Frames (2)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/StructureDefinition-NumberOfFrames.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/ValueSet-valueset-diagnosticreport-report-support-info.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/StructureDefinition-NumberOfFrames.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/ValueSet-valueset-diagnosticreport-report-support-info.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -462,11 +524,15 @@
 
 ## §11.54 ValueSet: DiagnosticReport supportInfo codes (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/ValueSet-valueset-diagnosticreport-report-support-info.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/ValueSet-im-imaging-study-performer-type.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/ValueSet-valueset-diagnosticreport-report-support-info.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/ValueSet-im-imaging-study-performer-type.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56586](https://jira.hl7.org/browse/FHIR-56586) | Revise Imaging Report Bundle | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §11.56 ValueSet: Imaging Procedure Type (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/ValueSet-im-procedure-type.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/ValueSet-SectionEmptyReasonEuImaging.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/ValueSet-im-procedure-type.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/ValueSet-SectionEmptyReasonEuImaging.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -474,11 +540,15 @@
 
 ## §11.58 ValueSet: Radiology Report Types (1)
 
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/ValueSet-ImagingReportTypesEuVSEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/CodeSystem-codesystem-diagnostic-report-support-info.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/ValueSet-ImagingReportTypesEuVSEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/CodeSystem-codesystem-diagnostic-report-support-info.html)
+
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
 | [FHIR-56589](https://jira.hl7.org/browse/FHIR-56589) | Revise the Diagnostic Report profile | Triaged | Change Request | 4/28/26 |  |  |  |
 
 ## §11.59 ValueSet: Reasons a section in an imaging report is empty. (1)
+
+[R4 ballot](https://hl7.eu/fhir/imaging/1.0.0-ballot/en/ValueSet-SectionEmptyReasonEuImaging.html) | [R5 ballot](https://hl7.eu/fhir/imaging-r5/1.0.0-ballot/en/CodeSystem-codesystem-missing-dicom-terminology.html) | [R4 build](https://build.fhir.org/ig/hl7-eu/imaging-r4/en/ValueSet-SectionEmptyReasonEuImaging.html) | [R5 build](https://build.fhir.org/ig/hl7-eu/imaging-r5/en/CodeSystem-codesystem-missing-dicom-terminology.html)
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
@@ -569,7 +639,7 @@
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
-| [FHIR-56766](https://jira.hl7.org/browse/FHIR-56766) | Editorial: menu ordering doesn't match IG-builder ordering | Submitted | Technical Correction | 4/30/26 |  |  | [result](./open/FHIR-56766/FHIR-56766-resolution.md) |
+| [FHIR-56766](https://jira.hl7.org/browse/FHIR-56766) | Editorial: menu ordering doesn't match IG-builder ordering | Submitted | Technical Correction | 4/30/26 | [proposal](./open/FHIR-56766/FHIR-56766-resolution.md) |  | Pending (recommended: A) |
 | [FHIR-56766](https://jira.hl7.org/browse/FHIR-56766) | Editorial: menu ordering doesn't match IG-builder ordering | Applied | Technical Correction | 4/30/26 |  |  |  |
 
 ## Obligations (2)
@@ -583,7 +653,7 @@
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
-| [FHIR-56750](https://jira.hl7.org/browse/FHIR-56750) | Phrasing is circular ("if supported, must support"); rewrite to specify what tri | Submitted | Technical Correction | 4/30/26 |  | [implementation](./open/FHIR-56750/FHIR-56750-implementation-plan.md) | [result](./open/FHIR-56750/FHIR-56750-resolution.md) |
+| [FHIR-56750](https://jira.hl7.org/browse/FHIR-56750) | Phrasing is circular ("if supported, must support"); rewrite to specify what tri | Submitted | Technical Correction | 4/30/26 | [proposal](./open/FHIR-56750/FHIR-56750-resolution.md) | [implementation](./open/FHIR-56750/FHIR-56750-implementation-plan.md) | Pending (recommended: A) |
 | [FHIR-56750](https://jira.hl7.org/browse/FHIR-56750) | Phrasing is circular ("if supported, must support"); rewrite to specify what tri | Applied | Technical Correction | 4/30/26 |  |  |  |
 
 ## ServiceRequestOrderEuImaging + ObservationFindingEuImaging (1)
@@ -600,7 +670,7 @@
 | [FHIR-56553](https://jira.hl7.org/browse/FHIR-56553) | Diagrams contain HTML elements | Triaged | Technical Correction | 4/28/26 |  |  |  |
 | [FHIR-56557](https://jira.hl7.org/browse/FHIR-56557) | Suggested editorial changes | Submitted | Technical Correction | 4/28/26 |  |  |  |
 | [FHIR-56557](https://jira.hl7.org/browse/FHIR-56557) | Suggested editorial changes | Applied | Technical Correction | 4/28/26 |  |  |  |
-| [FHIR-56569](https://jira.hl7.org/browse/FHIR-56569) | typo in §3.3.1 | Submitted | Technical Correction | 4/28/26 |  |  | [result](./open/FHIR-56569/FHIR-56569-resolution.md) |
+| [FHIR-56569](https://jira.hl7.org/browse/FHIR-56569) | typo in §3.3.1 | Submitted | Technical Correction | 4/28/26 | [proposal](./open/FHIR-56569/FHIR-56569-resolution.md) |  | Pending (recommended: A) |
 | [FHIR-56569](https://jira.hl7.org/browse/FHIR-56569) | typo in §3.3.1 | Applied | Technical Correction | 4/28/26 |  |  |  |
 | [FHIR-56593](https://jira.hl7.org/browse/FHIR-56593) | wrong title for code systems | Applied | Technical Correction | 4/28/26 |  |  |  |
 | [FHIR-56372](https://jira.hl7.org/browse/FHIR-56372) | Absence of an Encounter profile in the Imaging Guide | Resolved - No Change | Question | 4/16/26 |  |  |  |

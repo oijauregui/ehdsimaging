@@ -14,7 +14,10 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const JIRA_DIR = '/home/nly98977/SwArchives/hl7eu/imaging/jira';
+const CWD = process.cwd();
+const JIRA_DIR = fs.existsSync(path.join(CWD, 'jira'))
+  ? path.join(CWD, 'jira')
+  : CWD;
 const RESOLVED_STATUSES = [
   'Applied',
   'Not Persuasive with Modification',
@@ -23,13 +26,39 @@ const RESOLVED_STATUSES = [
   'Declined'
 ];
 
+function getTicketRootDirs() {
+  return [
+    JIRA_DIR,
+    path.join(JIRA_DIR, 'open'),
+    path.join(JIRA_DIR, 'closed')
+  ].filter(dir => fs.existsSync(dir) && fs.statSync(dir).isDirectory());
+}
+
+function findTicketDir(ticketKey) {
+  for (const root of getTicketRootDirs()) {
+    const ticketDir = path.join(root, ticketKey);
+    const ticketFile = path.join(ticketDir, `${ticketKey}.md`);
+    if (fs.existsSync(ticketDir) && fs.statSync(ticketDir).isDirectory() && fs.existsSync(ticketFile)) {
+      return ticketDir;
+    }
+  }
+  return null;
+}
+
+function ticketOutputRelPath(ticketKey, fileName) {
+  const ticketDir = findTicketDir(ticketKey);
+  if (!ticketDir) return null;
+  return path.relative(JIRA_DIR, path.join(ticketDir, fileName));
+}
+
 /**
  * Extract Status from Metadata section of ticket
  */
 function extractTicketStatus(ticketKey) {
-  const ticketFile = path.join(JIRA_DIR, ticketKey, `${ticketKey}.md`);
+  const ticketDir = findTicketDir(ticketKey);
+  const ticketFile = ticketDir ? path.join(ticketDir, `${ticketKey}.md`) : null;
   
-  if (!fs.existsSync(ticketFile)) {
+  if (!ticketFile || !fs.existsSync(ticketFile)) {
     return null;
   }
   
@@ -56,16 +85,18 @@ function isUnresolved(ticketKey) {
  * Scan jira directory for all unresolved tickets
  */
 function findUnresolvedTickets() {
-  const entries = fs.readdirSync(JIRA_DIR);
-  const unresolvedTickets = [];
-  
-  entries.forEach(entry => {
-    if (entry.match(/^FHIR-\d+$/) && isUnresolved(entry)) {
-      unresolvedTickets.push(entry);
-    }
-  });
-  
-  return unresolvedTickets.sort((a, b) => {
+  const unresolvedTickets = new Set();
+
+  for (const root of getTicketRootDirs()) {
+    const entries = fs.readdirSync(root, { withFileTypes: true });
+    entries.forEach(entry => {
+      if (entry.isDirectory() && entry.name.match(/^FHIR-\d+$/) && isUnresolved(entry.name)) {
+        unresolvedTickets.add(entry.name);
+      }
+    });
+  }
+
+  return Array.from(unresolvedTickets).sort((a, b) => {
     const aNum = parseInt(a.split('-')[1]);
     const bNum = parseInt(b.split('-')[1]);
     return aNum - bNum;
@@ -76,12 +107,8 @@ function findUnresolvedTickets() {
  * Check if resolution file already exists
  */
 function resolutionExists(ticketKey) {
-  const resolutionFile = path.join(
-    JIRA_DIR,
-    ticketKey,
-    `${ticketKey}-resolution.md`
-  );
-  return fs.existsSync(resolutionFile);
+  const resolutionRel = ticketOutputRelPath(ticketKey, `${ticketKey}-resolution.md`);
+  return resolutionRel ? fs.existsSync(path.join(JIRA_DIR, resolutionRel)) : false;
 }
 
 /**
@@ -133,10 +160,11 @@ async function main() {
     
     newTickets.forEach((ticketKey, idx) => {
       const status = extractTicketStatus(ticketKey);
+      const outputRel = ticketOutputRelPath(ticketKey, `${ticketKey}-resolution.md`) || `${ticketKey}/${ticketKey}-resolution.md`;
       console.log(`\n[${idx + 1}/${newTickets.length}] ${ticketKey}`);
       console.log(`  Status: ${status}`);
       console.log(`  Mode: Isolated session (separate Copilot chat)`);
-      console.log(`  Output: jira/${ticketKey}/${ticketKey}-resolution.md`);
+      console.log(`  Output: jira/${outputRel}`);
     });
     
     console.log('\n' + '='.repeat(70));
@@ -155,7 +183,7 @@ async function main() {
       invocationPlan: newTickets.map(ticketKey => ({
         ticketKey: ticketKey,
         status: extractTicketStatus(ticketKey),
-        outputFile: `jira/${ticketKey}/${ticketKey}-resolution.md`
+        outputFile: `jira/${ticketOutputRelPath(ticketKey, `${ticketKey}-resolution.md`) || `${ticketKey}/${ticketKey}-resolution.md`}`
       }))
     };
     
@@ -176,7 +204,8 @@ async function main() {
     
     console.log(`Processing single ticket: ${ticketKey}`);
     console.log(`Status: ${status}`);
-    console.log(`Output: jira/${ticketKey}/${ticketKey}-resolution.md`);
+    const outputRel = ticketOutputRelPath(ticketKey, `${ticketKey}-resolution.md`) || `${ticketKey}/${ticketKey}-resolution.md`;
+    console.log(`Output: jira/${outputRel}`);
     
     if (resolutionExists(ticketKey)) {
       console.log('Note: Resolution file already exists and will be overwritten.');
