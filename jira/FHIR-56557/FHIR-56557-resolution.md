@@ -3,126 +3,144 @@
 ## Ticket Summary
 
 | Field | Value |
-|-------|-------|
+| --- | --- |
 | Key | FHIR-56557 |
-| Title | Suggested editorial changes |
-| Type | Technical Correction |
+| Issue Type | Technical Correction |
+| Summary | Suggested editorial changes |
 | Status | Submitted |
+| Resolution | Unresolved |
 | Reporter | NikolausKrondraf |
+| Assignee | Unassigned |
 | Created | 4/28/26 |
+| Raised in Version | 1.0.0-ballot |
+| Parent key | None identified |
+| Grouping | None identified |
 
 ## Description
 
-This is a list of suggested editorial changes (typos, wording, grammar) that I came across while reading the IG. The line numbers always refer to the markdown files:
+Ticket requests editorial corrections (typos, grammar, wording, and pluralization) across these pages:
+
+- `index.md`
+- `use-cases.md`
+- `use-case-other-specs.md`
+- `imaging-report.md`
+
+The request provides concrete line-level edits for the rendered IG content under:
+
+- `igs/imaging-r4/input/pagecontent/*`
 
 ## Implementation Status
 
-### Current Status: Submitted
+### Current Status
 
-### Disposition Classification
+Pending (not implemented)
 
-Based on the ticket status and metadata:
+No GitHub PR links, commit hashes, or issue cross-links were found in the ticket content. Current rendered outputs still contain the reported editorial defects in both streams:
 
-- **Status Field**: Submitted
-- **Resolution**: Not specified
-- **Related Sections**: Not specified
+- `igs/imaging-r4/input/pagecontent/index.md`
+- `igs/imaging-r4/input/pagecontent/use-cases.md`
+- `igs/imaging-r4/input/pagecontent/use-case-other-specs.md`
+- `igs/imaging-r4/input/pagecontent/imaging-report.md`
+- `igs/imaging-r5/input/pagecontent/index.md`
+- `igs/imaging-r5/input/pagecontent/use-cases.md`
+- `igs/imaging-r5/input/pagecontent/use-case-other-specs.md`
+- `igs/imaging-r5/input/pagecontent/imaging-report.md`
+
+### Implementation Details (if Applied)
+
+- PR links: None found
+- Commit hashes: None found
+- Merge dates and authors: None found
+
+## Related Tickets
+
+- No parent ticket declared.
+- No grouping value declared.
 
 ## Disposition Analysis
 
-### Ticket Metadata Analysis
+### Disposition Taken
 
-The ticket is currently classified as **Submitted** and requires governance review to determine final disposition.
+Pending governance decision (ticket is `Submitted` / `Unresolved`).
 
-### Evidence & Links
+### Rationale
 
+The requested changes are editorial and do not alter profile semantics, cardinalities, value sets, or conformance requirements. They improve clarity, readability, and consistency for implementers and reviewers.
 
+### Evidence
 
+- Ticket metadata indicates unresolved status: `Submitted`, `Unresolved`.
+- No implementation evidence links (PR/commit) in ticket body.
+- Reported problematic phrases remain present in rendered `igs/imaging-r4` and `igs/imaging-r5` pagecontent files.
 
 ## Proposed Dispositions
 
-### Disposition A: Accept & Implement
+### Disposition A: Accept As Requested
 
-#### Proposal
+#### A Proposal
 
-Review the technical merits and feasibility of this proposal. If the underlying requirement is valid and aligns with FHIR imaging scope, accept and implement the requested change to the specification or examples.
+Apply the listed editorial corrections exactly as requested to the source content that feeds both R4 and R5 outputs (preferably in shared source templates where applicable), then regenerate/preprocess both output variants so the same corrections appear in:
 
-#### Justification
+- `igs/imaging-r4/input/pagecontent/*`
+- `igs/imaging-r5/input/pagecontent/*`
 
-- The request addresses a legitimate use case in imaging workflows
-- Implementation would improve clarity or functionality
-- Change is consistent with existing FHIR design principles
+Scope includes spelling/grammar fixes such as:
+
+- "utilizied" -> "utilized"
+- "THe" -> "The"
+- "with with" -> "with"
+- "image/serie" -> "images/series"
+- "the all radiology reports" -> "all radiology reports"
+- "It includes such as" -> "It includes information such as"
+- "as it not anticipated" -> "as it is not anticipated"
+
+Also resolve punctuation/article consistency and missing-token wording called out in the ticket.
+
+#### A Justification
+
+Editorial corrections are low risk, improve implementer comprehension, and align with ballot quality expectations. Applying them as requested preserves author intent while reducing ambiguity in normative narrative text.
 
 ---
 
 ### Disposition B: Alternative Approach
 
-#### Proposal
+#### B Proposal
 
-Address the underlying need through an alternative mechanism, such as:
-- Using extensions instead of core elements
-- Applying constraints through a profile
-- Implementing in examples rather than core specification
-- Different cardinality or data type
+Adopt a selective editorial cleanup now (high-impact readability and correctness items), and defer uncertain wording where the ticket indicates "missing reference" until the intended referenced artifact/token is explicitly identified by editors. Track deferred items in a follow-up technical correction ticket.
 
-#### Justification
+#### B Justification
 
-- Alternative approach achieves the same goals with fewer breaking changes
-- Reduces implementation burden on existing systems
-- Better aligns with FHIR architecture principles
+This avoids introducing potentially incorrect placeholders while still delivering most quality improvements immediately. Trade-off: one additional follow-up ticket and delayed closure for the deferred lines.
 
 ---
 
 ### Disposition C: Decline
 
-#### Proposal
+#### C Proposal
 
-The request should not be adopted. Clear rationale:
-- Out of scope for imaging IG
-- Insufficient use cases to justify change
-- Addressed by existing mechanism
-- Would introduce unnecessary complexity
-- Breaking change not justified by value
+Do not apply the requested wording changes.
 
-#### Justification
+#### C Justification
 
-Provide specific reasoning why declining is the right decision for the FHIR imaging community.
+Declining is hard to justify because the request is editorial, concrete, and does not create breaking changes. A decline would leave known readability defects in ballot text.
 
 ---
 
 ### Recommendation
 
-**Recommended disposition:** [A / B / C to be determined by work group]
+### Recommended Disposition
 
-Work group should review this ticket and supporting evidence to determine the best path forward. Consider:
-- Community feedback and use cases
-- Alignment with FHIR design principles  
-- Implementation complexity vs. value delivered
-- Impact on existing implementers
+A
 
-## Related Tickets
-
-No related grouping specified
+Accept and implement the edits as requested. The change set is editorial-only, carries minimal regression risk, and improves clarity across both R4 and R5 rendered guides. Where the ticket mentions "missing reference," implementation should use the intended existing alias/token from source templates or replace with neutral wording if the alias is not yet defined, then validate preprocessing output for both versions.
 
 ## Next Steps
 
-1. Present to work group for review and discussion
-2. Gather implementer feedback on proposed dispositions
-3. Document final decision and rationale
-4. If accepted, create implementation task with specific requirements
-5. Track implementation in GitHub PRs/commits
-6. Update specification and generate updated artifacts
+Ready for Review
 
-## Verification Checklist
+### Verification Checklist
 
 - [ ] Work group review completed
-- [ ] Disposition approved
-- [ ] Implementation (if accepted) committed to repository
-- [ ] Changes verified in main branch
-- [ ] Rendered output updated (igs/imaging-r4, igs/imaging-r5)
-- [ ] Documentation updated if needed
-- [ ] Resolution file finalized and committed
-
----
-
-*Generated: 2026-05-07T14:25:15.900Z*
-*Ticket Status: Submitted*
+- [ ] Implementation code committed
+- [ ] Verification in main branch
+- [ ] Documentation updated
