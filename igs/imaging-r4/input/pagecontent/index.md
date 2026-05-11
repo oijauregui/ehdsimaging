@@ -44,17 +44,17 @@
 ### Scope
 
 This implementation guide specifies imaging study report data in the **European** context, as defined in {{ehnImaging}} and refined by {{XtEhrImaging}}, as a FHIR model. It defines:
-* The structure and contents of a FHIR imaging study reports.
+* The structure and contents of FHIR imaging study reports.
 * Mapping between this IG and the Xt-EHR logical models for imaging reports, as functional requirements.
 * Example implementations of the defined models for Imaging Study Reports.
-* relation of this specification with the existing ecosystem, including IHE MADO, IHE RAD, and EHDS API specifications.
+* The relation of this specification with the existing ecosystem, including IHE MADO, IHE RAD, and EHDS API specifications.
 
 The specification is to be used in a variety of deployment models, which includes the EHDS use cases: exchange data within healthcare organizations, across nations/regions and cross border information exchange. In all of these use cases it is important that it is compatible with the existing ecosystem.
 
 Current approaches within Europe use different approaches to information exchange:
 * **Document based exchange**, the document is represented as a FHIR Document Bundle.
 * **REST API based access to documents**, a {{Composition}} and {{DiagnosticReport}} for each document including instances of the referred resources
-* **REST API based access to resources**, as the previous but the (important) resources are *harmonized*, meaning that all documents point to the same {{Patient}}, {{Organization}} and other resources.
+* **REST API based access to resources**, as in the previous approach, but the (important) resources are *harmonized*, meaning that all documents point to the same {{Patient}}, {{Organization}}, and other resources.
 
 The specification is being designed in such a way that it can be used in all of these deployment scenarios.
 
