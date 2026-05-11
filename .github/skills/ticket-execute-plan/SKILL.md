@@ -163,6 +163,24 @@ This artifact is essential for:
 - Troubleshooting failed executions
 - Replaying the ticket resolution for consistency checks
 
+### Step 8: Stage Scope-Limited Changes and Ask for Commit
+
+After successful execution (or documented unrelated blocker), always prepare a clean commit set:
+
+1. Stage only files that are in the ticket implementation scope:
+   - Source files changed for the ticket
+   - Ticket artifacts under `jira/FHIR-XXXXX/` created/updated by this execution
+2. Do **not** stage unrelated workspace changes.
+3. Show staged file list and a concise staged diff summary.
+4. Propose a commit message tailored to the ticket.
+5. Explicitly ask the user whether to create the commit now.
+
+If the user confirms:
+- Create the commit using the proposed (or user-edited) message.
+
+If the user declines:
+- Leave staged changes intact and report how to commit later.
+
 ## Quality Criteria
 
 Execution is complete only if all are true:
@@ -173,6 +191,7 @@ Execution is complete only if all are true:
 4. If failures occurred, at least one fix-check iteration was performed unless blocked by unrelated issues.
 5. Final status is explicit: `passed`, `passed-with-unrelated-blocker`, or `blocked`.
 6. Evidence is recorded (key error lines or summary path).
+7. A scope-limited staging set is prepared and commit confirmation is requested.
 
 ## Decision Rules
 
@@ -187,6 +206,8 @@ Execution is complete only if all are true:
 - Do not silently skip failed validation steps.
 - Do not claim success without running build verification.
 - Do not rewrite unrelated files to force a passing result.
+- Do not auto-commit without explicit user confirmation.
+- Do stage only ticket-scoped files before requesting commit confirmation.
 
 ## Suggested Prompts
 
