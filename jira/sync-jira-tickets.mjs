@@ -137,25 +137,96 @@ function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
 
+function isClosedStatus(status) {
+  const closedStatuses = ["Applied", "Duplicate", "Resolved - No Change", "Resolved - change required", "Deferred"];
+  return closedStatuses.includes(status);
+}
+
+function migrateOldTicketStructure(outDir) {
+  // Migrate any root-level FHIR-* directories to open/closed structure
+  const rootTickets = [];
+  try {
+    const entries = fs.readdirSync(outDir, { withFileTypes: true });
+    entries.forEach((entry) => {
+      if (entry.isDirectory() && KEY_PATTERN.test(entry.name)) {
+        rootTickets.push(entry.name);
+      }
+    });
+  } catch (e) {
+    // Directory may not exist yet
+  }
+
+  rootTickets.forEach((ticketKey) => {
+    const sourcePath = path.join(outDir, ticketKey);
+    const markdownFile = path.join(sourcePath, `${ticketKey}.md`);
+    
+    try {
+      // Try to determine if ticket should be open or closed
+      // by reading its markdown file
+      if (fs.existsSync(markdownFile)) {
+        const content = fs.readFileSync(markdownFile, "utf8");
+        const statusMatch = content.match(/^- Status: (.+)$/m);
+        const status = statusMatch ? statusMatch[1].trim() : "";
+        
+        const isClosed = isClosedStatus(status);
+        const destDir = isClosed ? "closed" : "open";
+        const destPath = path.join(outDir, destDir, ticketKey);
+        
+        // Only migrate if destination doesn't already exist
+        if (!fs.existsSync(destPath)) {
+          ensureDir(path.dirname(destPath));
+          fs.renameSync(sourcePath, destPath);
+        } else {
+          // If destination exists, just remove the old one
+          fs.rmSync(sourcePath, { recursive: true, force: true });
+        }
+      }
+    } catch (e) {
+      console.warn(`Warning: Could not migrate ${ticketKey}: ${e.message}`);
+    }
+  });
+}
+
 function syncTickets({ excelPath, outDir, prune }) {
   const { tickets, sheetName } = parseWorkbook(excelPath);
   ensureDir(outDir);
 
+  // Migrate old root-level ticket structure
+  migrateOldTicketStructure(outDir);
+
+  const openDir = path.join(outDir, "open");
+  const closedDir = path.join(outDir, "closed");
+  ensureDir(openDir);
+  ensureDir(closedDir);
+
   const keys = [...tickets.keys()].sort();
+  let openCount = 0;
+  let closedCount = 0;
+
   keys.forEach((key) => {
     const ticket = tickets.get(key);
-    const ticketDir = path.join(outDir, key);
+    const isClosed = isClosedStatus(ticket.status);
+    const statusDir = isClosed ? closedDir : openDir;
+    
+    const ticketDir = path.join(statusDir, key);
     ensureDir(ticketDir);
 
     const markdownPath = path.join(ticketDir, `${key}.md`);
     const content = renderTicketMarkdown(ticket);
     fs.writeFileSync(markdownPath, content, "utf8");
+
+    if (isClosed) {
+      closedCount++;
+    } else {
+      openCount++;
+    }
   });
 
   if (prune) {
-    const existing = fs.readdirSync(outDir, { withFileTypes: true });
-    const keySet = new Set(keys);
-    existing.forEach((entry) => {
+    // Prune closed tickets
+    const existingClosed = fs.readdirSync(closedDir, { withFileTypes: true });
+    const closedKeySet = new Set([...tickets.values()].filter(t => isClosedStatus(t.status)).map(t => t.key));
+    existingClosed.forEach((entry) => {
       if (!entry.isDirectory()) {
         return;
       }
@@ -163,13 +234,29 @@ function syncTickets({ excelPath, outDir, prune }) {
         return;
       }
       const normalized = entry.name.toUpperCase();
-      if (!keySet.has(normalized)) {
-        fs.rmSync(path.join(outDir, entry.name), { recursive: true, force: true });
+      if (!closedKeySet.has(normalized)) {
+        fs.rmSync(path.join(closedDir, entry.name), { recursive: true, force: true });
+      }
+    });
+
+    // Prune open tickets
+    const existingOpen = fs.readdirSync(openDir, { withFileTypes: true });
+    const openKeySet = new Set([...tickets.values()].filter(t => !isClosedStatus(t.status)).map(t => t.key));
+    existingOpen.forEach((entry) => {
+      if (!entry.isDirectory()) {
+        return;
+      }
+      if (!KEY_PATTERN.test(entry.name)) {
+        return;
+      }
+      const normalized = entry.name.toUpperCase();
+      if (!openKeySet.has(normalized)) {
+        fs.rmSync(path.join(openDir, entry.name), { recursive: true, force: true });
       }
     });
   }
 
-  return { count: keys.length, sheetName };
+  return { count: keys.length, openCount, closedCount, sheetName };
 }
 
 function main() {
@@ -185,9 +272,13 @@ function main() {
     throw new Error(`Excel file not found: ${excelPath}`);
   }
 
-  const { count, sheetName } = syncTickets({ excelPath, outDir, prune });
+  const { count, openCount, closedCount, sheetName } = syncTickets({ excelPath, outDir, prune });
   console.log(`Synced ${count} Jira tickets from sheet '${sheetName}'.`);
+  console.log(`  - Open (unresolved): ${openCount}`);
+  console.log(`  - Closed (resolved): ${closedCount}`);
   console.log(`Output directory: ${outDir}`);
+  console.log(`  - Open tickets: ${outDir}/open`);
+  console.log(`  - Closed tickets: ${outDir}/closed`);
   console.log(`Prune mode: ${prune ? "enabled" : "disabled"}`);
 }
 

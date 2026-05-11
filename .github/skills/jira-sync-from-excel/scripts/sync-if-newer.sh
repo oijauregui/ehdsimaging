@@ -60,6 +60,18 @@ OLDEST_DIR_MTIME=0
 OLDEST_DIR_NAME=""
 
 if [[ -d "$JIRA_DIR" ]]; then
+    # Check both open and closed directories
+    for dir in "$JIRA_DIR"/open/FHIR-*/ "$JIRA_DIR"/closed/FHIR-*/; do
+        if [[ -d "$dir" ]]; then
+            DIR_MTIME=$(stat -c %Y "$dir" 2>/dev/null || stat -f %m "$dir" 2>/dev/null)
+            if [[ $OLDEST_DIR_MTIME -eq 0 ]] || [[ $DIR_MTIME -lt $OLDEST_DIR_MTIME ]]; then
+                OLDEST_DIR_MTIME=$DIR_MTIME
+                OLDEST_DIR_NAME=$(basename "$dir")
+            fi
+        fi
+    done
+    
+    # Also check root level for backward compatibility with old structure
     for dir in "$JIRA_DIR"/FHIR-*/; do
         if [[ -d "$dir" ]]; then
             DIR_MTIME=$(stat -c %Y "$dir" 2>/dev/null || stat -f %m "$dir" 2>/dev/null)
