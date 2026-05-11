@@ -168,7 +168,7 @@ Clients SHOULD support this resource but MAY omit it based on their needs.
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 Condition resources represent problems, diagnoses, and health concerns.
-If supported, clients SHALL support search by patient and SHOULD support additional filters.
+For clients that advertise Condition resources, search by patient SHALL be supported and additional filters SHOULD be supported.
 Clients MAY omit this resource based on their needs.
 """
 
@@ -218,7 +218,7 @@ Clients MAY omit this resource based on their needs.
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 AllergyIntolerance resources represent patient allergies and intolerances.
-If supported, clients SHALL support search by patient.
+For clients that advertise AllergyIntolerance resources, search by patient SHALL be supported.
 Clients MAY omit this resource based on their needs.
 """
 
@@ -254,8 +254,8 @@ Clients MAY omit this resource based on their needs.
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 Observation resources represent clinical observations including vital signs,
-laboratory results, and other measurements. If supported, clients SHALL support
-search by patient and category. Clients MAY omit this resource based on their needs.
+laboratory results, and other measurements. For clients that advertise Observation resources, search by patient and category SHALL be supported.
+Clients MAY omit this resource based on their needs.
 """
 
 * rest[=].resource[=].interaction[+].code = #read
@@ -311,7 +311,7 @@ search by patient and category. Clients MAY omit this resource based on their ne
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 DiagnosticReport resources represent laboratory results and imaging reports.
-If supported, clients SHALL support search by patient and category.
+For clients that advertise DiagnosticReport resources, search by patient and category SHALL be supported.
 Clients MAY omit this resource based on their needs.
 """
 
@@ -368,7 +368,7 @@ Clients MAY omit this resource based on their needs.
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 MedicationRequest resources represent medication orders and prescriptions.
-If supported, clients SHALL support search by patient.
+For clients that advertise MedicationRequest resources, search by patient SHALL be supported.
 Clients MAY omit this resource based on their needs.
 """
 
@@ -418,7 +418,7 @@ Clients MAY omit this resource based on their needs.
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 MedicationDispense resources represent medication dispensing events.
-If supported, clients SHALL support search by patient.
+For clients that advertise MedicationDispense resources, search by patient SHALL be supported.
 Clients MAY omit this resource based on their needs.
 """
 
@@ -461,7 +461,7 @@ Clients MAY omit this resource based on their needs.
 * rest[=].resource[=].extension[=].valueCode = #SHOULD
 * rest[=].resource[=].documentation = """
 Encounter resources represent patient encounters (visits, admissions, etc.).
-If supported, clients SHALL support search by patient.
+For clients that advertise Encounter resources, search by patient SHALL be supported.
 Clients MAY omit this resource based on their needs.
 """
 
