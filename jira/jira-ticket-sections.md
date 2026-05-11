@@ -666,18 +666,18 @@
 
 | Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |
 |-----|---------|--------|------------|---------|----------|----------------|--------|
-| [FHIR-56552](https://jira.hl7.org/browse/FHIR-56552) | Improve explanation about exchange approaches | Triaged | Change Request | 4/28/26 |  |  |  |
-| [FHIR-56553](https://jira.hl7.org/browse/FHIR-56553) | Diagrams contain HTML elements | Triaged | Technical Correction | 4/28/26 |  |  |  |
-| [FHIR-56557](https://jira.hl7.org/browse/FHIR-56557) | Suggested editorial changes | Submitted | Technical Correction | 4/28/26 |  |  |  |
-| [FHIR-56557](https://jira.hl7.org/browse/FHIR-56557) | Suggested editorial changes | Applied | Technical Correction | 4/28/26 |  |  |  |
+| [FHIR-56552](https://jira.hl7.org/browse/FHIR-56552) | Improve explanation about exchange approaches | Triaged | Change Request | 4/28/26 | [proposal](./open/FHIR-56552/FHIR-56552-resolution.md) |  | Pending (recommended: A) |
+| [FHIR-56553](https://jira.hl7.org/browse/FHIR-56553) | Diagrams contain HTML elements | Triaged | Technical Correction | 4/28/26 | [proposal](./open/FHIR-56553/FHIR-56553-resolution.md) |  | Pending (recommended: A) |
+| [FHIR-56557](https://jira.hl7.org/browse/FHIR-56557) | Suggested editorial changes | Submitted | Technical Correction | 4/28/26 | [proposal](./closed/FHIR-56557/FHIR-56557-resolution.md) |  | Superseded by Applied row (recommended: B) |
+| [FHIR-56557](https://jira.hl7.org/browse/FHIR-56557) | Suggested editorial changes | Applied | Technical Correction | 4/28/26 | [proposal](./closed/FHIR-56557/FHIR-56557-resolution.md) |  | Pending (Applied in Jira; evidence missing; recommended: B) |
 | [FHIR-56569](https://jira.hl7.org/browse/FHIR-56569) | typo in §3.3.1 | Submitted | Technical Correction | 4/28/26 | [proposal](./open/FHIR-56569/FHIR-56569-resolution.md) |  | Pending (recommended: A) |
-| [FHIR-56569](https://jira.hl7.org/browse/FHIR-56569) | typo in §3.3.1 | Applied | Technical Correction | 4/28/26 |  |  |  |
-| [FHIR-56593](https://jira.hl7.org/browse/FHIR-56593) | wrong title for code systems | Applied | Technical Correction | 4/28/26 |  |  |  |
-| [FHIR-56372](https://jira.hl7.org/browse/FHIR-56372) | Absence of an Encounter profile in the Imaging Guide | Resolved - No Change | Question | 4/16/26 |  |  |  |
-| [FHIR-56324](https://jira.hl7.org/browse/FHIR-56324) | References to FHIR standard resources | Waiting for Input | Question | 4/10/26 |  |  |  |
-| [FHIR-56315](https://jira.hl7.org/browse/FHIR-56315) | Broken links in the HL7 Europe Imaging Report documentation | Applied | Technical Correction | 4/9/26 |  |  |  |
-| [FHIR-56317](https://jira.hl7.org/browse/FHIR-56317) | Clarification on the use of fixed values | Triaged | Question | 4/9/26 |  |  |  |
-| [FHIR-56306](https://jira.hl7.org/browse/FHIR-56306) | Relationship with IHE MADO needs to be clarified | Waiting for Input | Change Request | 4/8/26 |  |  |  |
+| [FHIR-56569](https://jira.hl7.org/browse/FHIR-56569) | typo in §3.3.1 | Applied | Technical Correction | 4/28/26 | [proposal](./closed/FHIR-56569/FHIR-56569-resolution.md) |  | Applied (Persuasive; recommended: A) |
+| [FHIR-56593](https://jira.hl7.org/browse/FHIR-56593) | wrong title for code systems | Applied | Technical Correction | 4/28/26 | [proposal](./closed/FHIR-56593/FHIR-56593-resolution.md) |  | Applied (Persuasive; recommended: A) |
+| [FHIR-56372](https://jira.hl7.org/browse/FHIR-56372) | Absence of an Encounter profile in the Imaging Guide | Resolved - No Change | Question | 4/16/26 | [proposal](./closed/FHIR-56372/FHIR-56372-resolution.md) |  | Declined (question answered; no profile required) |
+| [FHIR-56324](https://jira.hl7.org/browse/FHIR-56324) | References to FHIR standard resources | Waiting for Input | Question | 4/10/26 | [proposal](./open/FHIR-56324/FHIR-56324-resolution.md) |  | Pending (recommended: B) |
+| [FHIR-56315](https://jira.hl7.org/browse/FHIR-56315) | Broken links in the HL7 Europe Imaging Report documentation | Applied | Technical Correction | 4/9/26 | [proposal](./closed/FHIR-56315/FHIR-56315-resolution.md) |  | Applied (Persuasive; recommended: A) |
+| [FHIR-56317](https://jira.hl7.org/browse/FHIR-56317) | Clarification on the use of fixed values | Triaged | Question | 4/9/26 | [proposal](./open/FHIR-56317/FHIR-56317-resolution.md) |  | Pending (recommended: A) |
+| [FHIR-56306](https://jira.hl7.org/browse/FHIR-56306) | Relationship with IHE MADO needs to be clarified | Waiting for Input | Change Request | 4/8/26 | [proposal](./open/FHIR-56306/FHIR-56306-resolution.md) |  | Pending (recommended: A) |
 
 ## Appendix: Excluded Tickets
 
