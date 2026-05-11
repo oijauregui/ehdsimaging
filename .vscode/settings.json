@@ -25,6 +25,10 @@
             "approve": true,
             "matchCommandLine": true
         },
-        "./_preprocessMultiVersion.sh": true
+        "./_preprocessMultiVersion.sh": true,
+        "/^cd /home/nly98977/SwArchives/hl7eu/imaging/jira && bash \\.\\./\\.github/skills/jira-sync-from-excel/scripts/sync-if-newer\\.sh$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     },
 }

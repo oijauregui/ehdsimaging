@@ -134,33 +134,43 @@ function readTickets() {
     console.error(`Error: jira directory not found at ${JIRA_DIR}`);
     process.exit(1);
   }
-  const entries = fs.readdirSync(JIRA_DIR, { withFileTypes: true });
-  for (const entry of entries) {
-    if (!entry.isDirectory() || !entry.name.match(/^FHIR-\d+$/)) {
-      continue;
+  const searchDirs = [JIRA_DIR];
+  for (const subdir of ['open', 'closed']) {
+    const dirPath = path.join(JIRA_DIR, subdir);
+    if (fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory()) {
+      searchDirs.push(dirPath);
     }
-    const ticketDir = path.join(JIRA_DIR, entry.name);
-    const ticketFile = path.join(ticketDir, `${entry.name}.md`);
-    if (!fs.existsSync(ticketFile)) {
-      continue;
-    }
-    try {
-      const content = fs.readFileSync(ticketFile, 'utf-8');
-      const metadata = extractMetadata(content);
-      const ticket = {
-        key: metadata['Key'] || entry.name,
-        summary: metadata['Summary'] || '(no summary)',
-        issueType: metadata['Issue Type'] || 'Unknown',
-        status: metadata['Status'] || 'Unknown',
-        created: metadata['Created'],
-        parsedDate: parseDate(metadata['Created']),
-        section: getSection(metadata),
-        path: './' + path.relative(JIRA_DIR, ticketFile),
-        fullMetadata: metadata
-      };
-      tickets.push(ticket);
-    } catch (err) {
-      console.error(`Error reading ${ticketFile}: ${err.message}`);
+  }
+
+  for (const rootDir of searchDirs) {
+    const entries = fs.readdirSync(rootDir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory() || !entry.name.match(/^FHIR-\d+$/)) {
+        continue;
+      }
+      const ticketDir = path.join(rootDir, entry.name);
+      const ticketFile = path.join(ticketDir, `${entry.name}.md`);
+      if (!fs.existsSync(ticketFile)) {
+        continue;
+      }
+      try {
+        const content = fs.readFileSync(ticketFile, 'utf-8');
+        const metadata = extractMetadata(content);
+        const ticket = {
+          key: metadata['Key'] || entry.name,
+          summary: metadata['Summary'] || '(no summary)',
+          issueType: metadata['Issue Type'] || 'Unknown',
+          status: metadata['Status'] || 'Unknown',
+          created: metadata['Created'],
+          parsedDate: parseDate(metadata['Created']),
+          section: getSection(metadata),
+          path: './' + path.relative(JIRA_DIR, ticketFile),
+          fullMetadata: metadata
+        };
+        tickets.push(ticket);
+      } catch (err) {
+        console.error(`Error reading ${ticketFile}: ${err.message}`);
+      }
     }
   }
   return tickets;
@@ -236,14 +246,52 @@ function sortTicketsInSection(tickets) {
   });
 }
 
+function findCompanionFile(ticket, type) {
+  const ticketFileAbs = path.join(JIRA_DIR, ticket.path.replace(/^\.\//, ''));
+  const ticketDirAbs = path.dirname(ticketFileAbs);
+  const ticketBaseName = path.basename(ticketFileAbs);
+
+  if (!fs.existsSync(ticketDirAbs)) return null;
+
+  const candidates = fs.readdirSync(ticketDirAbs)
+    .filter(name => name.toLowerCase().endsWith('.md') && name !== ticketBaseName)
+    .map(name => ({
+      name,
+      lower: name.toLowerCase(),
+      rel: './' + path.relative(JIRA_DIR, path.join(ticketDirAbs, name))
+    }));
+
+  const patternsByType = {
+    proposal: ['proposal', 'proposed'],
+    implementation: ['implementation-plan', 'implementation'],
+    result: ['result', 'resolution']
+  };
+
+  const patterns = patternsByType[type] || [];
+  for (const pattern of patterns) {
+    const match = candidates.find(c => c.lower.includes(pattern));
+    if (match) return match.rel;
+  }
+
+  return null;
+}
+
+function formatCompanionLink(ticket, type, label) {
+  const relPath = findCompanionFile(ticket, type);
+  return relPath ? `[${label}](${relPath})` : '';
+}
+
 function generateSectionTable(sectionName, tickets) {
   let markdown = `## ${sectionName} (${tickets.length})\n\n`;
-  markdown += '| Key | Summary | Status | Issue Type | Created | Path |\n';
-  markdown += '|-----|---------|--------|------------|---------|------|\n';
+  markdown += '| Key | Summary | Status | Issue Type | Created | Proposal | Implementation | Result |\n';
+  markdown += '|-----|---------|--------|------------|---------|----------|----------------|--------|\n';
   for (const ticket of tickets) {
     const summary = ticket.summary.replace(/\|/g, '\\|').substring(0, 80);
-    const resolutionPath = ticket.path.replace(/\.md$/, '-resolution.md');
-    markdown += `| [${ticket.key}](${resolutionPath}) | ${summary} | ${ticket.status} | ${ticket.issueType} | ${ticket.created} | ${ticket.path} |\n`;
+    const jiraUrl = `https://jira.hl7.org/browse/${ticket.key}`;
+    const proposalLink = formatCompanionLink(ticket, 'proposal', 'proposal');
+    const implementationLink = formatCompanionLink(ticket, 'implementation', 'implementation');
+    const resultLink = formatCompanionLink(ticket, 'result', 'result');
+    markdown += `| [${ticket.key}](${jiraUrl}) | ${summary} | ${ticket.status} | ${ticket.issueType} | ${ticket.created} | ${proposalLink} | ${implementationLink} | ${resultLink} |\n`;
   }
   markdown += '\n';
   return markdown;
