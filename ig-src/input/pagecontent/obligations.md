@@ -12,4 +12,4 @@ Systems are expected to handle specific data elements according to the role (act
  </blockquote>
 </div>
 
-Following this guidance, for {{ProducerActor}}s `SHALL/SHOULD/MAY:able-to-populate` obligations are added indicating the required capability of the Producer to populate a field. For {{ConsumerActor}}s `SHALL/SHOULD/MAY:process` obligations are used to express what fields a {{ConsumerActor}} is required to process. Note that no display related obligations are used. The the variety of {{ConsumerActor}}s makes it very difficult if not impossible to determine a generic rule for this.
+Following this guidance, for {{ProducerActor}}s `SHALL/SHOULD/MAY:able-to-populate` obligations are added indicating the required capability of the Producer to populate a field. For {{ConsumerActor}}s `SHALL/SHOULD/MAY:process` obligations are used to express what fields a {{ConsumerActor}} is required to process. Note that no display related obligations are used and the variety of {{ConsumerActor}}s makes it very difficult if not impossible to determine a generic rule for this.
