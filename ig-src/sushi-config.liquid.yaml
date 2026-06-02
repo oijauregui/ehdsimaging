@@ -163,6 +163,7 @@ parameters:
 menu:
   Home: index.html
   Introduction:
+    Table of Contents: toc.html
     Changes: changes.html
     Dependencies: dependencies.html
     References: references.html
