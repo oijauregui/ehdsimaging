@@ -73,6 +73,10 @@ dependencies:
 pages:
   index.md:
     title: Home
+    how-to-read.md:
+      title: How to read this guide
+    background.md:
+      title: Background and context
     changes.md: 
       title: Changes
     dependencies.md:
@@ -164,6 +168,8 @@ menu:
   Home: index.html
   Introduction:
     Table of Contents: toc.html
+    How to read this guide: how-to-read.html
+    Background and context: background.html
     Changes: changes.html
     Dependencies: dependencies.html
     References: references.html
