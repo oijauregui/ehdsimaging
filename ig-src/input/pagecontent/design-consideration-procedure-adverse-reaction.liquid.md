@@ -70,7 +70,7 @@ classDiagram
     reaction.substance
     reaction.manifestation
     reaction.severity
-    reaction.onse
+    reaction.onset
     type
     note
   }
