@@ -85,7 +85,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for proper branch handling
-          token: ${{ secrets.DEPLOY_TOKEN || github.token }}
+          # Use the automatic workflow token to check out THIS repo.
+          # DEPLOY_TOKEN (a PAT) is only needed later to clone the target repos;
+          # using it here breaks checkout if the PAT is expired/invalid.
+          token: ${{ github.token }}
 
       - name: Setup Git configuration
         run: |
@@ -167,7 +170,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for proper branch handling
-          token: ${{ secrets.DEPLOY_TOKEN || github.token }}
+          # Use the automatic workflow token to check out THIS repo.
+          # DEPLOY_TOKEN (a PAT) is only needed later to clone the target repos;
+          # using it here breaks checkout if the PAT is expired/invalid.
+          token: ${{ github.token }}
 
       - name: Setup Git configuration
         run: |
