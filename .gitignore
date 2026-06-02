@@ -10,7 +10,11 @@ ig-template/**/*.db
 ig-template/**/*index.json
 publisher.jar
 translations/**
+igs/**
 
 subigs/**
 ig-test
 .vscode/settings.json
+
+# LibreOffice/OpenOffice lock files
+.~lock.*#

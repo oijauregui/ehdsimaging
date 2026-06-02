@@ -110,7 +110,7 @@ jobs:
             echo "Add secret DEPLOY_TOKEN with write access to $R4_REPO_URL."
             exit 1
           fi
-          git clone https://$DEPLOY_TOKEN@github.com/$R4_REPO_URL.git r4-repo
+          git clone https://x-access-token:$DEPLOY_TOKEN@github.com/$R4_REPO_URL.git r4-repo
 
       - name: Prepare R4 repository branch
         working-directory: ./r4-repo
@@ -138,6 +138,9 @@ jobs:
           
           # Ensure hidden files are copied too (excluding .git)
           find ./igs/imaging-r4 -name ".*" -not -name ".git" -not -name "." -not -name ".." -exec cp -r {} ./r4-repo/ \; 2>/dev/null || true
+
+          # Remove stray LibreOffice/OpenOffice lock files
+          find ./r4-repo -name '.~lock.*#' -delete 2>/dev/null || true
 
       - name: Commit and push R4 changes
         working-directory: ./r4-repo
@@ -195,7 +198,7 @@ jobs:
             echo "Add secret DEPLOY_TOKEN with write access to $R5_REPO_URL."
             exit 1
           fi
-          git clone https://$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git r5-repo
+          git clone https://x-access-token:$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git r5-repo
 
       - name: Prepare R5 repository branch
         working-directory: ./r5-repo
@@ -223,6 +226,9 @@ jobs:
           
           # Ensure hidden files are copied too (excluding .git)
           find ./igs/imaging-r5 -name ".*" -not -name ".git" -not -name "." -not -name ".." -exec cp -r {} ./r5-repo/ \; 2>/dev/null || true
+
+          # Remove stray LibreOffice/OpenOffice lock files
+          find ./r5-repo -name '.~lock.*#' -delete 2>/dev/null || true
 
       - name: Commit and push R5 changes
         working-directory: ./r5-repo
