@@ -5,7 +5,7 @@ The diagram also shows how these use-case actors relate to the system actors des
 
 <figure>
   {% include ehds-actors-usecases.svg %}
-  <figcaption>Figure: EHDS Imaging Report Functional Use Cases</figcaption>
+  <figcaption>Figure 1: EHDS Imaging Report Functional Use Cases</figcaption>
 </figure>
 <br clear="all"/>
 

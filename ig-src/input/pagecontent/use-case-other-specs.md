@@ -15,7 +15,7 @@ The sequence diagram presented below presents a typical use case in which both s
 
 <figure>
   {% include report-and-mado-usecase.svg %}
-  <figcaption>Figure: Use case describing report and manifest use</figcaption>
+  <figcaption>Figure 1: Use case describing report and manifest use</figcaption>
 </figure>
 <br clear="all"/>
 
