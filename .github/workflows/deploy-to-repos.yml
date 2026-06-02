@@ -6,9 +6,6 @@ on:
       - '1.0.0-ballot'  # Never run on pushes from this branch
   workflow_dispatch:  # Allow manual triggering
 
-permissions:
-  contents: read
-
 jobs:
   # Validation jobs run first
   validate-r4:
@@ -88,7 +85,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for proper branch handling
-          token: ${{ github.token }}
+          token: ${{ secrets.DEPLOY_TOKEN || github.token }}
 
       - name: Setup Git configuration
         run: |
@@ -110,7 +107,7 @@ jobs:
             echo "Add secret DEPLOY_TOKEN with write access to $R4_REPO_URL."
             exit 1
           fi
-          git clone https://x-access-token:$DEPLOY_TOKEN@github.com/$R4_REPO_URL.git r4-repo
+          git clone https://$DEPLOY_TOKEN@github.com/$R4_REPO_URL.git r4-repo
 
       - name: Prepare R4 repository branch
         working-directory: ./r4-repo
@@ -141,9 +138,6 @@ jobs:
 
       - name: Commit and push R4 changes
         working-directory: ./r4-repo
-        env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-          R4_REPO_URL: ${{ vars.R4_REPO_URL || format('{0}/{1}-r4', github.repository_owner, github.event.repository.name) }}
         run: |
           # Create a build trigger file to ensure there's always a commit for auto-ig-builder
           echo "Build triggered at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .build-trigger
@@ -160,7 +154,6 @@ jobs:
             git commit -m "Auto-sync from imaging repository - commit ${{ github.sha }}"
           fi
           
-          git remote set-url origin https://x-access-token:$DEPLOY_TOKEN@github.com/$R4_REPO_URL.git
           git push origin ${{ github.ref_name }}
           echo "R4 repository updated successfully - auto-ig-builder should trigger"
 
@@ -174,7 +167,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for proper branch handling
-          token: ${{ github.token }}
+          token: ${{ secrets.DEPLOY_TOKEN || github.token }}
 
       - name: Setup Git configuration
         run: |
@@ -196,7 +189,7 @@ jobs:
             echo "Add secret DEPLOY_TOKEN with write access to $R5_REPO_URL."
             exit 1
           fi
-          git clone https://x-access-token:$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git r5-repo
+          git clone https://$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git r5-repo
 
       - name: Prepare R5 repository branch
         working-directory: ./r5-repo
@@ -227,9 +220,6 @@ jobs:
 
       - name: Commit and push R5 changes
         working-directory: ./r5-repo
-        env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-          R5_REPO_URL: ${{ vars.R5_REPO_URL || format('{0}/{1}-r5', github.repository_owner, github.event.repository.name) }}
         run: |
           # Create a build trigger file to ensure there's always a commit for auto-ig-builder
           echo "Build triggered at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .build-trigger
@@ -246,6 +236,5 @@ jobs:
             git commit -m "Auto-sync from imaging repository - commit ${{ github.sha }}"
           fi
           
-          git remote set-url origin https://x-access-token:$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git
           git push origin ${{ github.ref_name }}
           echo "R5 repository updated successfully - auto-ig-builder should trigger"
