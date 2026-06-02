@@ -4,7 +4,7 @@ This page summarizes the policy and implementation context for this implementati
 
 ### EHDS
 
-The European Health Data Space (EHDS) defines a common policy and legal framework for the use and exchange of electronic health data across Europe. In this context, interoperability specifications are needed so health data can be shared consistently between systems, regions, and countries. Imaging is defined as one of the priority categories to be exchanged together with laboratory reports, medication, hospital discharge reports, and patient summaries. This implementation guide contributes to that objective by defining a computable FHIR specification for exchanging imaging study reports. Access to imaging data is defined in an independent specification called Manifes-based Access to DICOM Objects (MADO).
+The European Health Data Space (EHDS) defines a common policy and legal framework for the use and exchange of electronic health data across Europe. In this context, interoperability specifications are needed so health data can be shared consistently between systems, regions, and countries. Imaging is defined as one of the priority categories to be exchanged together with laboratory reports, medication, hospital discharge reports, and patient summaries. This implementation guide contributes to that objective by defining a computable FHIR specification for exchanging imaging study reports. Access to imaging data is defined in an independent specification called Manifest-based Access to DICOM Objects (MADO).
 
 ### Xt-EHR context
 
