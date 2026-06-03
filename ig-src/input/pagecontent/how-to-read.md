@@ -29,7 +29,7 @@ If you are an implementer, architect, or validator, focus on:
 - [EU Health Data API for Imaging Reports](api.html)
 - [Patterns and Guidelines](patterns-and-guidelines.html)
 - [Artifacts](artifacts.html)
-- [Obligations](obligations.html)
+- [Obligations](artifacts-obligations.html)
 
 ### R4 and R5 versions
 
