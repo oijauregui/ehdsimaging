@@ -169,8 +169,6 @@ parameters:
 menu:
   Home: index.html
   Introduction:
-    Table of Contents: toc.html
-    How to read this guide: how-to-read.html
     Background and context: background.html
     Changes: changes.html
     Dependencies: dependencies.html
@@ -192,6 +190,8 @@ menu:
   About:
     Authors and contributors: contributors.html
     Copyright: copyright.html
+    Dependencies: dependencies.html
+    Cross-version analysis: cross-version-analysis.html
   Artifacts:
     Structural: artifacts-structural.html
     Obligations: artifacts-obligations.html

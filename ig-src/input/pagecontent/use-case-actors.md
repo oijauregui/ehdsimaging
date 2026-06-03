@@ -14,7 +14,7 @@ The diagram also shows how these use-case actors relate to the system actors des
 - **Producer:** creates and publishes imaging reports using clinical and technical source data.
 - **Accessor:** searches and retrieves reports for patients or healthcare professionals.
 - **Processor:** extracts and processes structured and narrative report content for downstream use.
-- **Displayer:** presents imaging reports to end users in static or dynamic user interfaces.
+- **Displayer:** presents imaging reports to end users in static or dynamic user interfaces (for images display refer to {{iheMADO}}).
 
 #### Use-cases details
 

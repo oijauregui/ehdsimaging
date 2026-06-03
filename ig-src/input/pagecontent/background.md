@@ -1,5 +1,3 @@
-### Background and context
-
 This page summarizes the policy and implementation context for this implementation guide.
 
 ### EHDS
@@ -8,7 +6,7 @@ The European Health Data Space (EHDS) defines a common policy and legal framewor
 
 ### Xt-EHR context
 
-Xt-EHR is a European Joint Action that develops common specifications and implementation assets to operationalize EHDS priorities. The EHDS Imaging Report specification was included in the Xt-EHR work deliverables as a key component of the clinical content and interoperability layer. The guide is aligned with the logical models defined in the Xt-EHR Clinical Content and Interoperability Specification (CCIS) and maps them to FHIR artifacts for implementation.
+Xt-EHR was a European EU Commission funded joint action project that develops common specifications and implementation assets to operationalize EHDS priorities. The EHDS Imaging Report specification was included in the Xt-EHR work deliverables as a key component of the clinical content and interoperability layer. The guide is aligned with the [logical models](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html) defined in the Xt-EHR Clinical Content and Interoperability Specification (CCIS) and maps them to FHIR artifacts for implementation.
 
 ### HL7 Europe and IHE collaboration
 

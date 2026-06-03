@@ -31,9 +31,9 @@ If you are an implementer, architect, or validator, focus on:
 - [Artifacts](artifacts.html)
 - [Obligations](artifacts-obligations.html)
 
-### R4 and R5 versions
+### FHIR versions
 
-This implementation guide is published and maintained in both FHIR R4 and R5.
+This implementation guide is published and maintained in both FHIR R4 and R5 versions.
 
 - Conceptual content is aligned across versions.
 - Some technical details differ because of FHIR version-specific constraints.

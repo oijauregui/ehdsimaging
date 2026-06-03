@@ -17,7 +17,7 @@
 {% assign iheRad            = "[IHE-RAD](https://profiles.ihe.net/RAD/)" %}
 {% assign iheIid            = "[IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf)" %}
 {% assign iheIDR            = "[IHE-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/)" %}
-{% assign iheMADO           = "[IHE-MADO](https://build.fhir.org/ig/hl7-eu/imaging-manifest/)" %}
+{% assign iheMADO           = "[IHE-MADO](https://profiles.ihe.net/RAD/MADO)" %}
 {% assign iheMHD-R4         = "[IHE-MHD](https://profiles.ihe.net/ITI/MHD/index.html)" %}
 {% assign iheMHD-R5         = "[IHE-MHD](https://profiles.ihe.net/ITI/MHD/index.html)" %}
 {% if isR5 %}{% assign iheMHD = iheMHD-R5 %}{% else %}{% assign iheMHD = iheMHD-R4 %}{% endif %}
