@@ -194,7 +194,6 @@ menu:
     Authors and contributors: contributors.html
     Copyright: copyright.html
     Dependencies: dependencies.html
-    Cross-version analysis: cross-version-analysis.html
   Artifacts:
     Structural: artifacts-structural.html
     Obligations: artifacts-obligations.html
