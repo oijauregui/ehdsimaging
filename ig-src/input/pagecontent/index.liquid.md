@@ -49,7 +49,7 @@ This implementation guide specifies imaging study report data in the **European*
 * Example implementations of the defined models for Imaging Study Reports.
 * Relation of this specification with the existing ecosystem, including IHE MADO, IHE RAD, and EHDS API specifications.
 
-This specification has been designed to be compatible with {{EuridiceHealthDataAPI}}.
+This specification has been designed to be compatible with {% raw %}{{EuridiceHealthDataAPI}}{% endraw %}.
 
 ### Purpose
 
@@ -57,6 +57,8 @@ The goal of this Implementation Guide is to define an European standard for the 
 
 The development of this implementation guide is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects. The aspiration of this guide is to be used as basis for European National Guides, the European EHRxF ,and - consequently - by MyHealth@EU for the EU cross-border services.
 
-### How to read this guide
-
 {% raw %}{% include how-to-read.md %}{% endraw %}
+
+### Cross Version Analysis
+
+{% raw %}{% include cross-version-analysis-en.xhtml %}{% endraw %}
