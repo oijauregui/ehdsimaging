@@ -80,6 +80,8 @@ This profile shares all common imaging report modeling with DiagnosticReportEuIm
 {{R5}}* composition 0..0
 {{R5}}* composition ^short = "Composition is not allowed in this minimal metadata profile. If composition is present, use the DiagnosticReportEuImaging profile instead."
 
+///////////////////////
+
 RuleSet: DiagnosticReportEuImagingCommonRules
 * extension contains $artifact-version-url named artifactVersion 0..1
 * extension contains AnatomicalRegionExtension named anatomical-region 0..*
@@ -120,6 +122,8 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
   * ^definition = "Defines the category of the report, Diagnostic imaging report."
 
 * subject only Reference($EuPatient)
+
+* basedOn only Reference(ServiceRequest or CarePlan)
 
 * issued 
   * ^short = "Date and time of report issuance"
