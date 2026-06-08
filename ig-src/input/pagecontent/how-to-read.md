@@ -12,7 +12,7 @@ Start here:
 6. Use [Patterns and Guidelines](patterns-and-guidelines.html) and [Design considerations](design-considerations.html) for implementation rules and rationale.
 7. Use [Examples](examples.html) and [Artifacts](artifacts.html) for conformance and testing.
 
-### Functional and technical paths
+#### Functional and technical paths
 
 If you are a policy or functional stakeholder, focus on:
 
@@ -31,7 +31,7 @@ If you are an implementer, architect, or validator, focus on:
 - [Artifacts](artifacts.html)
 - [Obligations](artifacts-obligations.html)
 
-### FHIR versions
+#### FHIR versions
 
 This implementation guide is published and maintained in both FHIR R4 and R5 versions.
 
@@ -39,7 +39,7 @@ This implementation guide is published and maintained in both FHIR R4 and R5 ver
 - Some technical details differ because of FHIR version-specific constraints.
 - Always verify examples and artifacts in the version you are implementing.
 
-### Practical reading tips
+#### Practical reading tips
 
 - Use the top menu to navigate by topic.
 - Use the [Table of Contents](toc.html) for a full page index.
