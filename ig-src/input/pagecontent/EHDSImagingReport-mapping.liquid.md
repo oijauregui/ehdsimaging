@@ -747,13 +747,6 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>media</td>
         <td></td>
       </tr>
-      <tr>
-        <td>attachments</td>
-        <td>equivalent</td>
-        <td><a href="./StructureDefinition-ObservationFindingEuImaging.html">ObservationFindingEuImaging</a></td>
-        <td>derivedFrom</td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
 </div>
@@ -1478,13 +1471,6 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>equivalent</td>
         <td><a href="./StructureDefinition-DiagnosticReportEuImaging.html">DiagnosticReportEuImaging</a></td>
         <td>media</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>attachments</td>
-        <td>equivalent</td>
-        <td><a href="./StructureDefinition-ObservationFindingEuImaging.html">ObservationFindingEuImaging</a></td>
-        <td>derivedFrom</td>
         <td></td>
       </tr>
     </tbody>
