@@ -23,13 +23,14 @@ class DocumentReference {
 class Bundle <<type: document>> {
 }
 
-class Composition <<first entry - for display purposes>> {
+class Composition {
   +section : BackboneElement[]
   +section.text : Narrative
+  +section.entry[finding] : Reference~Observation~[]
   ...
 }
 
-class DiagnosticReport <<for structured data>> {
+class DiagnosticReport  {
   +presentedForm : Attachment~PDF~ (optional)
   ...
 }
@@ -42,7 +43,12 @@ class ServiceRequest {
   ...
 }
 
-class Observation <<findings / measurements>> {
+class ObservationFindingEuImaging <<structured findings / measurements>> {
+  ...
+}
+
+class ObservationNarrativeReport <<report narrative>> {
+  +valueString : string
   ...
 }
 
@@ -50,12 +56,15 @@ class Observation <<findings / measurements>> {
 DocumentReference --> Bundle : content
 Bundle --> Composition : entry[0]
 Bundle --> DiagnosticReport : entry
-Bundle --> ImagingStudy : entry
-Bundle --> ServiceRequest : entry
-Bundle --> Observation : entry
+' Bundle --> ImagingStudy : entry
+' Bundle --> ServiceRequest : entry
+' Bundle --> ObservationFindingEuImaging : entry
+' Bundle --> ObservationNarrativeReport : entry
 DiagnosticReport --> ImagingStudy : imagingStudy
 DiagnosticReport --> ServiceRequest : basedOn
-DiagnosticReport --> Observation : result
+DiagnosticReport --> ObservationFindingEuImaging : result
+DiagnosticReport --> ObservationNarrativeReport : result
+Composition --> ObservationFindingEuImaging : section.entry[finding]
 
 DiagnosticReport --> Composition : composition
 

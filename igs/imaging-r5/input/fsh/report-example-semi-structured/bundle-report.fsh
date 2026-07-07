@@ -37,8 +37,8 @@ Usage: #example
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Binary/BinarySemistructuredReport"
   * resource = BinarySemistructuredReport
 * entry[findings]
-  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/ObservationAnchor"
-  * resource = ObservationAnchor
+  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/ObservationNarrative"
+  * resource = ObservationNarrative
 // * entry[order]
 //   * fullUrl = "http://hl7.eu/fhir/imaging-r5/ServiceRequest/ServiceRequestSemiStructured"
 //   * resource = ServiceRequestSemiStructured

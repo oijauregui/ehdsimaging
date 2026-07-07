@@ -157,14 +157,14 @@ menu:
     System actors: actors-and-transactions.html
     Use Cases: use-cases.html
   Implementation:
+    Imaging Report: imaging-report.html
     Data formats: data-formats.html
     Imaging Report Examples: examples.html
-    EU Health Data API for Imaging Reports: api.html
     Xt-EHR mapping: xtehr-mapping.html
+    EU Health Data API for Imaging Reports: api.html
     Patterns and Guidelines: patterns-and-guidelines.html
     Handling missing data: missing-data.html
     Design considerations: design-considerations.html
-    Imaging Report: imaging-report.html
   About:
     Change Log: changes.html
     Dependencies: dependencies.html

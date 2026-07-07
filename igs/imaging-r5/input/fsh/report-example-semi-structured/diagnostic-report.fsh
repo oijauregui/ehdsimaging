@@ -31,26 +31,7 @@ Usage: #example
 //R4* extension[composition].valueReference = Reference(CompositionSemiStructured)
 * composition = Reference(CompositionSemiStructured)
 
-//R4* extension[note][+].valueAnnotation
-* note[+]
-  * extension[annotation-type].valueCodeableConcept = $loinc#59776-5
-  * text = """
-Linker Fuß:
-  Allenfalls geringe Abflachung des Fußgewölbes und normale Dicke der Plantarfaszie. Regelrechte
-  Artikulation im Rückfuß, Mittelfuß und Vorfußes. Im Großzehengrundgelenk deutliche Verschmälerung des
-  Gelenkspaltes und Ausbildung von subchondralen Geröllzysten sowie deutliche postoperative
-  Veränderungen nach Umstellungsosteotomie. Die Beuge- und Strecksehnen sind intakt.
-"""
-//R4* extension[note][+].valueAnnotation
-* note[+]
-  * extension[annotation-type].valueCodeableConcept = $loinc#59776-5
-  * text = """
-Rechter Fuß:
-  Analog zur Gegenseite zeigt sich eine allenfalls geringe Abflachung des Fußgewölbes und unauffällige
-  Plantarfaszie. Normale Artikulation im Rückfuß, Mittelfußes und Vorfußes. Im Seitenvergleich rechts
-  geringere degenerative Veränderungen des Großzehengrundgelenkes. Keine Signalauffälligkeiten an den
-  Beuge- und Strecksehnen.
-"""
+* result = Reference(ObservationNarrative)
 * conclusion = "Beginnende Großzehengrundgelenksarthrose, links mehr als rechts. Z.n. Umstellungsosteotomie des MFK1 links."
 
 * presentedForm
@@ -59,10 +40,6 @@ Rechter Fuß:
   * pages = 1
 //R4  * url = "http://hl7.eu/fhir/imaging-r5/Binary/BinarySemistructuredReport"
   * url = "http://hl7.eu/fhir/imaging-r5/Binary/BinarySemistructuredReport"
-
- // R5 validation requires a .result element to be present if .composition is present. This is a known issue: https://github.com/HL7/fhir-ig-publisher/issues/1267
-* result = Reference(ObservationAnchor)
-
 
 // Instance: BinarySemiStructuredReport
 // InstanceOf: Binary

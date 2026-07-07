@@ -110,7 +110,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0
-  * extension contains $note-url named note 0..*
   * entry 
     * insert SliceElement( #profile, $this )
   * entry contains imagingstudy 1..*
@@ -124,8 +123,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Order"
   * ^definition = "This section holds information related to the order for the imaging study."
   * code = $loinc#55115-0 // "Requested imaging studies information Document"
-  * extension contains $note-url named note 0..*
-
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -135,7 +132,6 @@ The `text` field of each section SHALL contain a textual representation of all l
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
   * entry[order] only Reference(ServiceRequestOrderEuImaging)  
-  
 
 // // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
@@ -145,10 +141,9 @@ The `text` field of each section SHALL contain a textual representation of all l
   with information specific for imaging (i.e. Observation, Condition, Device, Medication Administration).
   """
   * code = $loinc#11329-0 // "History general Narrative - Reported"
-  * extension contains $note-url named note 0..*
   * entry 
     * insert SliceElement( #profile, [[$this.resolve()]] )
-  * entry contains vitals 0..* and problemlist 0..* and implants 0..* and medication 0..* 
+  * entry contains vitals 0..* and problemlist 0..* and implants 0..* and medication 0..*
   * entry[vitals] only Reference(Observation)
   * entry[problemlist] only Reference(Condition)
   * entry[implants] only Reference(Device)
@@ -159,9 +154,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Procedure"
   * ^definition = "This section holds information related to the (performed) procedure(s) the generated the imaging study."
   * code = $loinc#55111-9 // "Current imaging procedure descriptions Document"
-  * extension contains 
-    $note-url named note 0..*
-
   * entry 
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -176,12 +168,10 @@ The `text` field of each section SHALL contain a textual representation of all l
     * ^short = "Radiation-dose information"
     * ^definition = "Information on radiation the patient was exposed to during the procedure."
 
-
 // ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "Comparison"
   * code = $loinc#18834-2 // "Radiology Comparison study (narrative)"
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
   * entry contains 
@@ -192,7 +182,6 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 // "Findings"
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
   * entry contains 
@@ -208,7 +197,6 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 // "Radiology Imaging study [Impression] (narrative)"
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
@@ -223,7 +211,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 // "Radiology Study recommendation (narrative)"
-  * extension contains $note-url named note 0..*
+  
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains suggestion 0..*
@@ -235,14 +223,17 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Communications"
 // a proper code is needed
   * code = $loinc#73568-8 // "Communication"
-  * extension contains $note-url named note 0..*
+  
 
-// /////////////////// COMMUNICATION SECTION //////////////////////////
+// /////////////////// FULL-REPORT SECTION //////////////////////////
 * section[report]
   * ^short = "Report - all content in one section"
 // a proper code is needed
   * code = $loinc#LP173421-1 // "Report"
-  * extension contains $note-url named note 0..*
+  * entry
+    * insert SliceElement( #profile, $this )
+  * entry contains narrative-report 1..*
+  * entry[narrative-report] only Reference(ObservationNarrativeReport)
 
 Extension: DeviceAttesterExt
 Title: "Extension: Device Attester"

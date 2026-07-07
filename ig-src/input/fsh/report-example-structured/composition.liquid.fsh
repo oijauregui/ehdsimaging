@@ -155,6 +155,7 @@ Usage: #example
   * entry[finding][+] = Reference (StressWmsi17)
   * entry[finding][+] = Reference (RestWmsi11)
   * entry[finding][+] = Reference (StressWmsi11)
+  * entry[finding][+] = Reference (NarrativeFindingsAll)
   * entry[image] = Reference (WMSIImage)
 // /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]

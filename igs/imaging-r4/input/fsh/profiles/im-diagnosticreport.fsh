@@ -129,14 +129,6 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
   * ^short = "Date and time of report issuance"
   * ^definition = "The date and time that the report was issued. This is not necessarily the same as the date and time that the report was created, since a report may be revised and/or reviewed after it is created."
 
-* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note named note 0..*
-* extension[note].valueAnnotation.extension contains $annotation-type named annotation-type 0..*
-* extension[note].valueAnnotation.extension[annotation-type].valueCodeableConcept from Hl7EuImagingSectionValueSet (preferred)
-
-//R5* note 
-//R5  * extension contains $annotation-type named annotation-type 0..*
-//R5  * extension[annotation-type].valueCodeableConcept from Hl7EuImagingSectionValueSet (preferred)
-
 // * composition 0..0 -> we use composition
 // * media 0..0 // not in not in keyimages section
 
@@ -155,7 +147,7 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 * resultsInterpreter[author] only Reference($EuPractitioner or $EuPractitionerRole)
 
 * result 0..* MS
-* result only Reference(ObservationFindingEuImaging)
+* result only Reference(ObservationFindingEuImaging or ObservationNarrativeReport)
 * result ^short = "Findings"
 * result ^definition = """
 Detailed description of the findings on the imaging study. The findings should be described in a clear and concise manner,

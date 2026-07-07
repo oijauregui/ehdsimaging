@@ -47,7 +47,13 @@ for version in "${versions[@]}"; do
     find ig-src/ -maxdepth 1 -type f -exec cp {} "$build_dir" \;
     cp -R ig-src/input "$build_dir"
     cp -R ig-src/ig-template "$build_dir"
-    
+
+    echo "Ensuring liquidjs is available (warming npx cache)..."
+    if ! npx --yes liquidjs --help >/dev/null 2>&1; then
+        echo "ERROR: unable to install/run liquidjs via npx" >&2
+        exit 1
+    fi
+
     # Process all liquid files
     echo Processing liquid files
     pids=()
@@ -59,7 +65,10 @@ for version in "${versions[@]}"; do
                 echo "- $file_path --> $clean_file_path"
 
                 # Process liquid template and inline version tags
-                content=$(npx --yes liquidjs -t @"$file" --context @"context-${context_version}.json")
+                if ! content=$(npx --yes liquidjs -t @"$file" --context @"context-${context_version}.json"); then
+                    echo "ERROR: liquidjs failed processing $file_path" >&2
+                    exit 1
+                fi
                 printf '%s\n' "$content" > "$clean_file_path"
                 rm -f "$file"
             ) &
@@ -67,9 +76,14 @@ for version in "${versions[@]}"; do
         fi
     done < <(find "$build_dir" -type f -name "*.liquid.*" -print0)
 
+    fail=0
     for pid in "${pids[@]}"; do
-        wait "$pid"
+        wait "$pid" || fail=1
     done
+    if [ "$fail" -ne 0 ]; then
+        echo "ERROR: one or more liquid files failed to process for $build_dir" >&2
+        exit 1
+    fi
 
     # # make readonly
     # echo Setting read-only permissions on $build_dir

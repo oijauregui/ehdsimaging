@@ -93,7 +93,7 @@ Usage: #example
 ///////////////////////////////////////////////////////////////////////
 * section[findings]
  // R5 validator requires to populate the result field if composition is referenced, even if the report is semi-structured and does not contain any result reference. This is a known issue: 
-  * entry[finding] = Reference(ObservationAnchor)
+  * entry[finding] = Reference(ObservationNarrative)
   * title = "Findings"
   * code = $loinc#59776-5 "Procedure findings Narrative"
   * extension[note][+].valueAnnotation

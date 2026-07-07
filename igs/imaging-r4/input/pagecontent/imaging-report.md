@@ -27,7 +27,7 @@ Information on the studies that this report is reporting on. It includes informa
 
 ##### Order
 
-The order section contains information on the orders that resulted in the studies and this report. It includes information such as the `AccessionNumber`, the identity of the referring physician or organization, the indication for examination, and, ideally, additional patient context and specific clinical questions provided by the referring physician. Clinical questions are sometimes of the form “Follow-up X”, where X is an existing known finding (perhaps from a previous exam), or “Rule out X”, where X is a condition for which imaging input is requested on whether or not it is present. Indications are also, hopefully, provided to provide important clinical context to the imaging clinician, and to support assessment of the appropriateness of the order and/or billing. If indications are not present, they are sometimes sought out by imaging staff.
+The order section contains information on the orders that resulted in the studies and this report. It includes information such as one or many `AccessionNumbers`, the identity of the referring physician or organization, the indication for examination, and, ideally, additional patient context and specific clinical questions provided by the referring physician. Clinical questions are sometimes of the form “Follow-up X”, where X is an existing known finding (perhaps from a previous exam), or “Rule out X”, where X is a condition for which imaging input is requested on whether or not it is present. Indications are also, hopefully, provided to provide important clinical context to the imaging clinician, and to support assessment of the appropriateness of the order and/or billing. If indications are not present, they are sometimes sought out by imaging staff.
 
 > Note: “Rule out X”, while somewhat helpful for the imaging clinician, can be problematic for billing since the symptoms that suggest the possible presence of the condition and establish the medical necessity of the imaging exam are implied, but not captured. Site practices increasingly deprecate such wording.
 
@@ -108,6 +108,23 @@ Communication is not listed as a separate section in the ACR guidance, but codes
 The communication entry typically records the date, time, and method of communication, the person/organization contacted, and may summarize the content communicated.
 
 Typically a [[[Communication]]] resource is used to represent such an event.
+
+### Representing unstructured (narrative) text in the report
+
+The unstructured (narrative) text present in most imaging reports SHALL be encoded in each `Composition.section[].text` of the [`CompositionEuImaging`](StructureDefinition-CompositionEuImaging.html) profile,  if sections are present in the report, or in `Composition.section[report].text` if no sections are present.
+
+The source data of that text SHALL be represented in an [`ObservationNarrativeReport`](StructureDefinition-ObservationNarrativeReport.html) profile, using its `valueString` or `valueAttachment` (in R4 a cross-version extension enables this type) element. That resource SHALL be referenced from [`DiagnosticReportEuImaging.result`](StructureDefinition-DiagnosticReportEuImaging-definitions.html#DiagnosticReport.result).
+
+<figure>
+ {% include narrative-report-diagram.svg %}
+ <figcaption><b>Figure: Unstructured Narrative Representation in Imaging Report</b></figcaption>
+ <p></p>
+</figure>
+
+<!-- Note: Although not mandated, creators MAY link the text in `Composition.section[].text` to the corresponding `ObservationNarrativeReport` that is present in the Bundle using the standard (textLink extension)[https://hl7.org/fhir/extensions/StructureDefinition-textLink.html]. -->
+Note: When using `ObservationNarrativeReport.valueString`, two extensions are available to encode [xhtml](https://hl7.org/fhir/R4/extension-rendering-xhtml.html) or [markdown](https://hl7.org/fhir/R4/extension-rendering-markdown.html) content.
+
+For more information on the rationale for this design, please read [Design Considerations: Narrative Content](design-considerations.html#narrative-unstructured-report-content-encoding).
 
 ### Report Versions
 

@@ -34,6 +34,7 @@ Description: "Document Bundle for Imaging Report"
     practitioner 0..* and
     organization 0..* and
     binary 0..*
+    // narrative-report 0..*
 
 * entry[CompositionEuImaging]
   * ^short = "The Composition containing the rendering of the imaging report"
@@ -68,7 +69,9 @@ Description: "Document Bundle for Imaging Report"
 * entry[binary]
   * ^short = "The original rendered report as a binary attachment"
   * resource only Binary
-
+// * entry[narrative-report]
+//   * ^short = "The unstructured narrative report"
+//   * resource only ObservationNarrativeReport
 
 Invariant: dr-comp-author-org
 Description: "DiagnosticReport and Composition SHALL have the same author Organization"

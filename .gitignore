@@ -23,5 +23,27 @@ ig-test
 .~lock.*#
 .vscode/settings.json
 
+# Local test folder
+ig-test
+
+# Generated/build artifacts
+input-cache/
+output/
+temp/
+template/
+fsh-generated/**
+ig-template/**/*.db
+ig-template/**/*index.json
+publisher.jar
+translations/**
+igs/**
+
 # FHIR publisher specific
+# igs/imaging-r4/**
+# igs/imaging-r5/**
+subigs/**
+
+# LibreOffice/OpenOffice lock files
+.~lock.*#
+
 build-logs/**

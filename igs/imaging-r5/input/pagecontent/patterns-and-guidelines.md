@@ -6,11 +6,6 @@ As is discussed in the [Data Formats](data-formats.html) section there are two f
 * For imaging reports with minimal metadata the presented form is the pdf attached to the `DiagnosticReport`.
 * For Regular imaging reports the presented form is the html Narrative of the `Composition` resource, stored in `Compostion.text` and `Compostion.section.text`.
 
-
-### Representing unstructured text (dictated notes)
-
-These are stored in DiagnosticReport.note and in Composition.section.extension[note]. Based on this content the section.text and DiagnosticReport.text and Composition.text are populated.
-
 ### Inclusion of tables
 
 The annotations are entered as markdown which allows inclusion of tables

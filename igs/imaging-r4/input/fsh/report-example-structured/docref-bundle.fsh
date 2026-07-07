@@ -185,6 +185,9 @@ Usage: #example
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/StressWmsi17"
   * resource = StressWmsi17
 * entry[+]
+  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/NarrativeFindingsAll"
+  * resource = NarrativeFindingsAll
+* entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageRest"
   * resource = StructuredKeyImageRest
 * entry[+]

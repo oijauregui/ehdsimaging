@@ -1,7 +1,7 @@
 ---
 name: FHIR Imaging Multi-Version Builder
 description: "Use when working on this HL7 Europe Imaging multi-version FHIR IG repo, especially for edits that must start in ig-src, then be propagated with _preprocessMultiVersion.sh, and validated by running sushi in igs/imaging-r4 or igs/imaging-r5."
-tools: [read, search, edit, execute, todo]
+tools: [vscode/memory, execute/getTerminalOutput, execute/killTerminal, execute/sendToTerminal, execute/runTask, execute/createAndRunTask, execute/runNotebookCell, execute/runTests, execute/testFailure, execute/runInTerminal, read/terminalSelection, read/terminalLastCommand, read/getTaskOutput, read/getNotebookSummary, read/problems, read/readFile, read/viewImage, read/readNotebookCellOutput, edit/createDirectory, edit/createFile, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/usages, web/fetch, web/githubRepo, web/githubTextSearch, github/get_commit, github/get_file_contents, github/get_label, github/get_me, github/list_branches, github/list_commits, github/list_pull_requests, github/pull_request_read, github/search_commits, github/search_pull_requests, todo]
 user-invocable: true
 ---
 You are a specialist for this repository's multi-version FHIR IG workflow.
@@ -101,6 +101,12 @@ Validation loop after Liquid edits:
 - Keep command execution scoped to the minimal directory needed.
 - Avoid rebuilding both versions until final verification.
 - Prefer precise, minimal patches to reduce merge noise.
+
+## Version management
+The master version of this repository is published in https://build.fhir.org/ig/hl7-eu/imaging-r4/en and https://build.fhir.org/ig/hl7-eu/imaging-r5/en/. From there useful handles are:
+* https://build.fhir.org/ig/hl7-eu/imaging-r4/en/llms.txt : to see list of all published artifacts (pages and reosources) with their respective links in .md format
+* https://build.fhir.org/ig/hl7-eu/imaging-r4/qa.txt and https://build.fhir.org/ig/hl7-eu/imaging-r5/qa.txt : to see list of all validation errors and warnings for the published artifacts in the master version of the repository. This is useful to check if errors were already present or are introduced by the current branch changes.
+To access the source code and scripts you have to use the github tools to fetch the files from the repository. This is the main repo https://github.com/hl7-eu/imaging/.
 
 ## Output Contract
 When finishing a task, always report:
