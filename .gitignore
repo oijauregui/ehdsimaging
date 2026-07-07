@@ -11,8 +11,9 @@ ig-template/**/*.db
 ig-template/**/*index.json
 publisher.jar
 translations/**
-# igs/imaging-r4/**
-# igs/imaging-r5/**
+
+igs/imaging-r4/**
+igs/imaging-r5/**
 
 subigs/**
 ig-test
@@ -24,9 +25,3 @@ ig-test
 
 # FHIR publisher specific
 build-logs/**
-
-igs/imaging-r4/output-stable/**
-igs/imaging-r5/output-stable/**
-
-output/codesystem-list.csv
-/output
