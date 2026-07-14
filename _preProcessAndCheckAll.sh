@@ -11,18 +11,17 @@ ensure_publisher_for_ig() {
 		return 0
 	fi
 
-	echo "IG Publisher NOT FOUND for $ig_dir. Running _updatePublisher..."
-	(
-		cd "$ig_dir" || exit 1
-		./_updatePublisher.sh -y
-	)
+	echo "IG Publisher NOT FOUND for $ig_dir. Downloading publisher..."
+	mkdir -p "$ig_dir/input-cache"
+	curl -fL https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+		-o "$ig_dir/input-cache/publisher.jar" --retry 3
 
 	if [ -f "$local_publisher" ] || [ -f "$parent_publisher" ]; then
-		echo "IG Publisher ready for $ig_dir"
+		echo "IG Publisher downloaded for $ig_dir"
 		return 0
 	fi
 
-	echo "IG Publisher still missing for $ig_dir after update. Aborting..."
+	echo "IG Publisher still missing for $ig_dir after download. Aborting..."
 	return 1
 }
 
