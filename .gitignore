@@ -11,8 +11,9 @@ ig-template/**/*.db
 ig-template/**/*index.json
 publisher.jar
 translations/**
-# igs/imaging-r4/**
-# igs/imaging-r5/**
+
+igs/imaging-r4/**
+igs/imaging-r5/**
 
 subigs/**
 ig-test
@@ -46,5 +47,3 @@ subigs/**
 .~lock.*#
 
 build-logs/**
-jira/node_modules/**
-
