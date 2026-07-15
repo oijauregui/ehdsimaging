@@ -48,4 +48,5 @@ Although many participants contributed over the development of the specification
 | Josh Priebe | EU | Epic |
 | Rick Busbridge | Netherlands | Nictiz |
 | David Wattien | Netherlands | Nictiz |
+| Charles Parisot | France | Agence du Numérique en Santé / IHE Europe |
 
