@@ -25,3 +25,5 @@ The obligation codes used in this guide are interpreted as follows:
 | `SHALL/SHOULD/MAY:process` | {{ ConsumerActor }} | The consumer SHALL/SHOULD/MAY process the field (e.g. store it, act on it, or make it available to the reader). |
 
 Note that no display related obligations are used: the variety of {{ ConsumerActor }}s makes it very difficult if not impossible to determine a generic display rule. Where a field is important to surface to the reader (such as the releasing organization), the expected consumer behaviour is described as narrative guidance rather than as a `display` obligation.
+
+The `SHALL/SHOULD/MAY:able-to-populate` comes from the {{XtEhrImaging}} and is taken as is in this IG.
