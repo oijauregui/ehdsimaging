@@ -22,6 +22,8 @@ The participants represent organizations from 20 countries (plus international v
 
 ![Participation by country](participation-map.svg)
 
+<p style="clear: both; font-size: 50%;"><em>Map boundaries derived from <a href="https://github.com/leakyMirror/map-of-europe">leakyMirror/map-of-europe</a>, based on <a href="https://www.naturalearthdata.com/">Natural Earth</a> public-domain data; coordinates simplified. Shading reflects participation, not official boundaries.</em></p>
+
 Although many participants contributed over the development of the specification, we like to mention the most active participants:
 
 | Contributor | Country | Organization |
