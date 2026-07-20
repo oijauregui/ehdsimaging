@@ -23,7 +23,16 @@ Description: "Imaging Device Type."
 * insert SetFmmAndStatusRule( 1, draft )
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
-* include codes from system $sct where concept is-a #314789007 // "Diagnostic imaging equipment"
+* include codes from system $sct where concept is-a #314789007 // "Diagnostic imaging equipment" (x-ray, CT, MRI, fluoroscopy, angiography, radiography)
+* include codes from system $sct where concept is-a #105794008 // "Scope/camera, device" (endoscopy, microscopy, ophthalmoscopy, cameras)
+* include codes from system $sct where concept is-a #706332007 // "Ultrasound imaging system"
+* include codes from system $sct where concept is-a #706321007 // "Nuclear medicine system"
+* include codes from system $sct where concept is-a #462323006 // "PET system"
+* include codes from system $sct where concept is-a #717313001 // "SPECT - Single photon emission computed tomography system"
+* include codes from system $sct where concept is-a #706318005 // "Mammographic x-ray system"
+* include codes from system $sct where concept is-a #706317000 // "Breast imaging system"
+* include codes from system $sct where concept is-a #392012008 // "Optical coherence tomography scanner"
+* include codes from system $sct where concept is-a #706290000 // "Thermography system"
 
 Mapping: DicomToDeviceEuImaging
 Source: DeviceEuImaging
