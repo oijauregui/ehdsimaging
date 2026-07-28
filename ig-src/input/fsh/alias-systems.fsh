@@ -24,6 +24,8 @@ Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $orpha = https://www.orpha.net // Used urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5 for the MyHealth@EU lab guide to be checked <====
 Alias: $pei = http://pei.de
+Alias: $radlex = http://radlex.org/ // RadLex CodeSystem, per HL7 Terminology (THO); OID urn:oid:2.16.840.1.113883.6.256
+Alias: $loincRsnaPlaybook = http://loinc.org/vs/loinc-rsna-radiology-playbook // LOINC/RSNA Radiology Playbook value set (resolvable on tx.fhir.org; bound by FHIR R4 core ImagingStudy.procedure)
 Alias: $referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $sct = http://snomed.info/sct
 Alias: $sex-parameter-for-clinical-use = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use
