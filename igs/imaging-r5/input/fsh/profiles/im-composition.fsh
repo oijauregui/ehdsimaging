@@ -15,8 +15,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 """
 * insert SetFmmAndStatusRule( 1, draft )
 
-{{R5}}* identifier 1..*
-{{R4}}* identifier 1..1
+* identifier 1..*
+//R4* identifier 1..1
   * ^short = "Report identifier"
   * ^definition = "Identifiers assigned to this report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
@@ -32,7 +32,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "The intended recipient of the report, if any. The information recipient is the target of a directive to receive the report, such as a report being sent to a practitioner or organization. The information recipient may also be a target for reporting relevant information about the report, such as reporting an issue with the report content.
   This is included as an extension as this information is typically render in the header section of the report."
 
-{{R4}}* extension contains $CrossVersion-Composition.version named version 0..1
+//R4* extension contains $CrossVersion-Composition.version named version 0..1
 
 * subject 1..1
 
@@ -78,7 +78,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * insert SliceElement( #value, $this )
 * category contains diagnostic-service 0..1 and imaging-report 1..1 and imaging 1..1
 * category[diagnostic-service] from $diagnostic-service-sections (required)
-* category[imaging] = http://hl7.eu/fhir/{% if isR5 %}eu-{% endif %}health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
   * ^definition = "Defines the priority category of the report as defined in the API spec."
 * category[imaging-report] = $loinc#85430-7 //Diagnostic imaging report
   * ^definition = "Defines the category of the report, Diagnostic imaging report."
@@ -89,18 +89,18 @@ The `text` field of each section SHALL contain a textual representation of all l
 // Relationship to a prior report: replacement or retraction (both use replaces).
 // Mirrors the FHIR Clinical Document Composition profile slicing.
 * relatesTo ^slicing.discriminator.type = #value
-{{R4}}* relatesTo ^slicing.discriminator.path = "code"
-{{R5}}* relatesTo ^slicing.discriminator.path = "type"
+//R4* relatesTo ^slicing.discriminator.path = "code"
+* relatesTo ^slicing.discriminator.path = "type"
 * relatesTo ^slicing.rules = #open
 * relatesTo contains replaced_document 0..1
 * relatesTo[replaced_document] ^short = "Prior report this one replaces or retracts"
-{{R4}}* relatesTo[replaced_document].code = #replaces
-{{R4}}* relatesTo[replaced_document].target[x] only Identifier
-{{R4}}* relatesTo[replaced_document].targetIdentifier 1..1
-{{R5}}* relatesTo[replaced_document].type = #replaces
-{{R5}}* relatesTo[replaced_document].resourceReference 1..1
-{{R5}}* relatesTo[replaced_document].resourceReference.identifier 1..1
-{{R5}}* relatesTo[replaced_document].resourceReference.reference 0..0
+//R4* relatesTo[replaced_document].code = #replaces
+//R4* relatesTo[replaced_document].target[x] only Identifier
+//R4* relatesTo[replaced_document].targetIdentifier 1..1
+* relatesTo[replaced_document].type = #replaces
+* relatesTo[replaced_document].resourceReference 1..1
+* relatesTo[replaced_document].resourceReference.identifier 1..1
+* relatesTo[replaced_document].resourceReference.reference 0..0
 
 
 * obeys eu-imaging-comp-status-succession
@@ -209,7 +209,7 @@ The `text` field of each section SHALL contain a textual representation of all l
       image 0..*
   * entry[finding] only Reference(Observation)
   * entry[keyimage] only Reference( DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging )
-  * entry[image] only Reference( DocumentReference {% if isR4 %} or Media {% endif %} )
+  * entry[image] only Reference( DocumentReference  )
 
 
 // /////////////////// IMPRESSION SECTION //////////////////////////
@@ -276,5 +276,5 @@ Expression: "text.exists() or entry.exists() or section.exists()"
 Invariant: eu-imaging-comp-status-succession
 Description: "A Composition that replaces or retracts a prior report SHALL have status final or entered-in-error."
 * severity = #error
-{{R4}}* expression = "relatesTo.where(code = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
-{{R5}}* expression = "relatesTo.where(type = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
+//R4* expression = "relatesTo.where(code = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
+* expression = "relatesTo.where(type = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
