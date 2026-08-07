@@ -139,11 +139,11 @@ Document versioning is tracked using different concepts:
  
 These fields are present on the key resources of this IG as is illustrated by the table below:
 
-| Concept | DocumentReferenceImagingReport | DiagnosticReportEuImaging | CompositionEuImaging | 
+| Concept               | DocumentReferenceImagingReport                        | DiagnosticReportEuImaging  | CompositionEuImaging | 
 | --------------------- | ----------------------------------------------------- | -------------------------- | -------------------- |
-| issued/last-edit date | date | issued | date |
-| version | {%if isR4%}extension[version]{%else%}version{%endif%} | extension[artifactVersion] | {%if isR4%}extension[version]{%else%}version{%endif%} |
-| related | {%if isR4%}related{%else%}relatesTo{%endif%} | - | relatesTo |
+| issued/last-edit date |                                                       | issued                     | date |
+| version               | {%if isR4%}extension[version]{%else%}version{%endif%} | extension[artifactVersion] | {%if isR4%}extension[version]{%else%}version{%endif%} |
+| related               | {%if isR4%}related{%else%}relatesTo{%endif%}          | -                          | relatesTo |
  
 
 Imaging Report Producers SHOULD include version information in the documents, Consumers SHOULD take versioning into account.
