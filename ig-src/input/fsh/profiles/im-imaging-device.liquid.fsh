@@ -14,16 +14,7 @@ Description: """The device the made the image."""
 {{R5}}* category contains imaging 1..1
 {{R5}}* category[imaging] = $sct#314789007 // "Diagnostic imaging equipment"
 
-* type from DeviceEuImagingType (extensible)
-
-
-ValueSet: DeviceEuImagingType
-Title: "ValueSet: Imaging Device Type"
-Description: "Imaging Device Type."
-* insert SetFmmAndStatusRule( 1, draft )
-* insert SNOMEDCopyrightForVS
-* ^experimental = false
-* include codes from system $sct where concept is-a #314789007 // "Diagnostic imaging equipment"
+* type from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html (extensible)
 
 Mapping: DicomToDeviceEuImaging
 Source: DeviceEuImaging

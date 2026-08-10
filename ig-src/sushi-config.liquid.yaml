@@ -32,6 +32,10 @@ license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 #
 dependencies:
   # hl7.fhir.uv.ips: 2.0.0
+  fhir.dicom:
+    id: DICOM
+    uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
+    version: 2025.3.20250714
   
 
   {% if isR4 %}
@@ -49,10 +53,6 @@ dependencies:
     uri: http://hl7.org/fhir/uv/xver
     version: 0.0.1-snapshot-2
   ihe.iti.mhd: 4.2.3
-  fhir.dicom: 
-    id: DICOM
-    uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
-    version: 2025.3.20250714
   {% endif %}
 
   {% if isR5 %}
