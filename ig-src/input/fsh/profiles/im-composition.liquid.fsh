@@ -190,6 +190,11 @@ The `text` field of each section SHALL contain a textual representation of all l
 // ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "Comparison"
+  * ^definition = """
+  This section holds the other studies that were considered relevant for comparison with the current study.
+  The comparison section MAY refer to content that is not stored in the same PACS or held by the same healthcare provider,
+  and the receiver MAY be prepared to fall back to national or cross-national searches to locate the referred study.
+  """
   * code = $loinc#18834-2 // "Radiology Comparison study (narrative)"
   * entry
     * insert SliceElement( #profile, [[resolve()]] )

@@ -172,6 +172,8 @@ using standardized anatomic, pathologic, and radiologic terminology whenever pos
 * extension[comparison] ^short = "Comparison studies"
 * extension[comparison] ^definition = """
 Studies used for comparison in part of diagnostic reporting.
+A comparison study MAY refer to content that is not stored in the same PACS or held by the same healthcare provider,
+and the receiver MAY be prepared to fall back to national or cross-national searches to locate the referred study.
 """
 
 * extension contains HL7IDRPatientHistoryExt named patientHistory 0..* MS
