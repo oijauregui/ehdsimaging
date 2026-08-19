@@ -65,6 +65,8 @@ This section is a list of other studies that were considered relevant by the ima
 
 In this specification a comparison study can be represented as an [[[ImagingStudyEuImaging]]] describing the full study or an [[[ImagingSelectionEuImaging]]] resource representing part of a study.
 
+The comparison section MAY refer to content that is not stored in the same PACS or held by the same healthcare provider. Consequently, the receiver of the report MAY be prepared to fall back to national or cross-national searches to locate the referred study.
+
 ##### Findings
 
 This section provides a detailed description of the findings on the imaging examination. The findings should be described in a clear and concise manner, using standardized anatomic, pathologic, and radiologic terminology whenever possible.
@@ -139,11 +141,32 @@ Document versioning is tracked using different concepts:
  
 These fields are present on the key resources of this IG as is illustrated by the table below:
 
-| Concept | DocumentReferenceImagingReport | DiagnosticReportEuImaging | CompositionEuImaging | 
+| Concept               | DocumentReferenceImagingReport                        | DiagnosticReportEuImaging  | CompositionEuImaging | 
 | --------------------- | ----------------------------------------------------- | -------------------------- | -------------------- |
-| issued/last-edit date | date | issued | date |
-| version | {%if isR4%}extension[version]{%else%}version{%endif%} | extension[artifactVersion] | {%if isR4%}extension[version]{%else%}version{%endif%} |
-| related | {%if isR4%}related{%else%}relatesTo{%endif%} | - | relatesTo |
+| issued/last-edit date |                                                       | issued                     | date |
+| version               | {%if isR4%}extension[version]{%else%}version{%endif%} | extension[artifactVersion] | {%if isR4%}extension[version]{%else%}version{%endif%} |
+| related               | {%if isR4%}related{%else%}relatesTo{%endif%}          | -                          | relatesTo |
  
 
 Imaging Report Producers SHOULD include version information in the documents, Consumers SHOULD take versioning into account.
+
+#### Imaging report succession management
+
+This IG adopts the HL7 [FHIR Clinical Document — Succession Management](https://hl7.org/fhir/uv/fhir-clinical-document/en/versioning.html) rules for Imaging Reports, restricted to replacement and retraction. The addendum scenario described in the mentioned specification is not allowed for EHDS Imaging Reports.
+
+**Allowed scenarios:**
+
+* **Replacement** — the previously reported content is changed. A *complete* new document (the full report, not only the changes) supersedes the previous one, which is not meant to be read anymore except for audit purposes.
+In this case the new report references the previous one through `Composition.relatesTo` with {%if isR4%}`code = replaces` and the prior `Bundle.identifier` in `targetIdentifier`{%endif%}{%if isR5%}`type = replaces` and the prior `Bundle.identifier` in `resourceReference.identifier`{%endif%}. `DiagnosticReport.status` and `Composition.status` SHALL be aligned for both the new and previous reports as shown below.
+* **Retraction** — the report was issued in error and is withdrawn, for example because it was assigned to the wrong patient or study. Following the FHIR Clinical Documents IG, the original report is replaced by an empty `Composition` and empty `DiagnosticReport` (no clinical content, preserving/updating the references, and a minimal explanatory narrative) with the value of `Composition.status` and `DiagnosticReport.status` set to `entered-in-error`.
+
+Note: The `DiagnosticReport.status` version management model is specific to this specification and is not part of the FHIR Clinical Documents IG.
+
+**Succession status mapping**
+
+| Use case | New Composition.relatesTo.{%if isR4%}code{%else%}type{%endif%} | New Composition.status | New DiagnosticReport.status | Previous Composition.relatesTo | Previous Composition.status | Previous DiagnosticReport.status |
+| -------------------- | -------------------------- | ---------------------- | --------------------------- | ------------------------------ | --------------------------- | -------------------------------- |
+| Replacement | `replaces` | `final` | `amended` | – | `final` | `final` |
+| Retraction | `replaces` | `entered-in-error` | `entered-in-error` | – | `final` | `final` |
+
+See [Support for report replacement and retraction](patterns-and-guidelines.html#support-for-report-replacement-and-retraction) for implementation guidance and worked examples.

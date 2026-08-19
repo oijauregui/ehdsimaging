@@ -38,36 +38,97 @@ These links can be included in the text (Narrative) using the mechanism describe
 
 The specification focusses first on the infrastructural aspects and marks the terminology related this as extensible. We are conservative in placing terminology requirements on findings and interpretations are there currently is not a widespread consensus on what terminology is used.
 
-### Support for addendum documents
+### Support for report replacement and retraction
 
-These are separate documents; separate imaging reports. The relationship of the addendum to the source document should be represented in the `Composition.relatesTo` field, as is illustrated below.
+This spec follows the document-level mechanics outlined in the HL7 [FHIR Clinical Document — Succession Management](https://build.fhir.org/ig/HL7/fhir-clinical-document/en/versioning.html) specification, except that addenda are not allowed, and introducing requirements to the `DiagnosticReport.status` population.
+
+#### Replacement of a report example snippet
+
+See the replacement [DiagnosticReport example](DiagnosticReport-ImagingReportReplacementExample.html) and [Composition example](Composition-ImagingReportReplacementComposition.html).
 
 {% if isR4 %}
 ```json
-...
- "relatesTo" : [
- { "code": "appends",
- "targetIdentifier": { "system": ..., "value", ...} 
- }
- ]
-...
-
+// DiagnosticReport
+{
+  "resourceType": "DiagnosticReport",
+  "status": "amended"
+}
+// Composition
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "relatesTo": [
+    {
+      "code": "replaces",
+      "targetIdentifier": { "system": "...", "value": "..." }
+    }
+  ]
+}
 ```
 {% endif %}
 {% if isR5 %}
 ```json
-...
- "relatesTo" : [
- { "type": "amends",
- "resourceReference":{ 
- ...
- "identifier": { "system": ..., "value", ...} 
- ...
- }
- }
- ]
-...
+// DiagnosticReport
+{
+  "resourceType": "DiagnosticReport",
+  "status": "amended"
+}
+// Composition
+{
+  "resourceType": "Composition",
+  "status": "final",
+  "relatesTo": [
+    {
+      "type": "replaces",
+      "resourceReference": { "identifier": { "system": "...", "value": "..." } }
+    }
+  ]
+}
+```
+{% endif %}
 
+#### Retraction of a report example snippet
+
+See the retraction [DiagnosticReport example](DiagnosticReport-ImagingReportRetractionExample.html) and [Composition example](Composition-ImagingReportRetractionComposition.html).
+
+{% if isR4 %}
+```json
+// DiagnosticReport
+{
+  "resourceType": "DiagnosticReport",
+  "status": "entered-in-error"
+}
+// Composition
+{
+  "resourceType": "Composition",
+  "status": "entered-in-error",
+  "relatesTo": [
+    {
+      "code": "replaces",
+      "targetIdentifier": { "system": "...", "value": "..." }
+    }
+  ]
+}
+```
+{% endif %}
+{% if isR5 %}
+```json
+// DiagnosticReport
+{
+  "resourceType": "DiagnosticReport",
+  "status": "entered-in-error"
+}
+// Composition
+{
+  "resourceType": "Composition",
+  "status": "entered-in-error",
+  "relatesTo": [
+    {
+      "type": "replaces",
+      "resourceReference": { "identifier": { "system": "...", "value": "..." } }
+    }
+  ]
+}
 ```
 {% endif %}
 

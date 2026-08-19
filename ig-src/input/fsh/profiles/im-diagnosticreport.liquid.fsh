@@ -28,6 +28,11 @@ The structure of the modelled has been aligned with the DiagnosticResource as de
 {{R5}}* result 1..*
 {{R5}}  * ^definition = "R5 requires a .result element to be present if .composition is present. This mandatory cardinality fills that gap for the model in which no Observations are part of the report."
 
+// Correspondence between DiagnosticReport.status and the referenced Composition succession data
+* obeys eu-imaging-dr-status-replacement
+* obeys eu-imaging-dr-status-retraction
+* obeys eu-imaging-dr-status-no-addendum
+
 Profile: DiagnosticReportEuImagingMinimalMetadata
 Parent: DiagnosticReport
 Title: "DiagnosticReport: Imaging Report Minimal Metadata"
@@ -102,7 +107,6 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 
 * status
   * ^short = "Status of the Report"
-  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
 /////////////////////
 
@@ -168,6 +172,8 @@ using standardized anatomic, pathologic, and radiologic terminology whenever pos
 * extension[comparison] ^short = "Comparison studies"
 * extension[comparison] ^definition = """
 Studies used for comparison in part of diagnostic reporting.
+A comparison study MAY refer to content that is not stored in the same PACS or held by the same healthcare provider,
+and the receiver MAY be prepared to fall back to national or cross-national searches to locate the referred study.
 """
 
 * extension contains HL7IDRPatientHistoryExt named patientHistory 0..* MS
@@ -327,3 +333,22 @@ Invariant: hl7eu-im-dr-finding
 Description: "Finding must be present in composition."
 * severity = #error
 * expression = "DiagnosticReport.composition.resolve().section.entry.reference.superset(result.reference)"
+
+// ////////////////////////// Status <-> relatesTo correspondence //////////////////////////
+
+Invariant: eu-imaging-dr-status-replacement
+Description: "DiagnosticReport.status SHALL be 'amended' if and only if the referenced Composition replaces a prior report and has status 'final'."
+* severity = #error
+{{R4}}* expression = "(status = 'amended') = extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').value.resolve().where(status = 'final' and relatesTo.where(code = 'replaces').exists()).exists()"
+{{R5}}* expression = "(status = 'amended') = composition.resolve().where(status = 'final' and relatesTo.where(type = 'replaces').exists()).exists()"
+
+Invariant: eu-imaging-dr-status-retraction
+Description: "DiagnosticReport.status SHALL be 'entered-in-error' if and only if the referenced Composition retracts a prior report by replacing it with status 'entered-in-error'."
+* severity = #error
+{{R4}}* expression = "(status = 'entered-in-error') = extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition').value.resolve().where(status = 'entered-in-error' and relatesTo.where(code = 'replaces').exists()).exists()"
+{{R5}}* expression = "(status = 'entered-in-error') = composition.resolve().where(status = 'entered-in-error' and relatesTo.where(type = 'replaces').exists()).exists()"
+
+Invariant: eu-imaging-dr-status-no-addendum
+Description: "DiagnosticReport.status SHALL NOT be 'appended' or 'corrected'; content added or corrected after final issuance is represented as a complete replacement with status 'amended'."
+* severity = #error
+* expression = "status != 'appended' and status != 'corrected'"
