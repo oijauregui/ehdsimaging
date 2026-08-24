@@ -4,7 +4,13 @@
 
 As is discussed in the [Data Formats](data-formats.html) section there are two formats of the imaging reports. When presenting the content to the user two different presentation forms are used:
 * For imaging reports with minimal metadata the presented form is the pdf attached to the `DiagnosticReport`.
-* For Regular imaging reports the presented form is the html Narrative of the `Composition` resource, stored in `Compostion.text` and `Compostion.section.text`.
+* For Regular imaging reports the presented form is the html Narrative of the `Composition` resource, stored in `Composition.text` and `Composition.section.text`.
+
+The `Composition` carries narrative at two levels, which serve different purposes:
+* `Composition.text` renders the **document-level metadata** that applies to the report as a whole - for example the patient, the authoring practitioner and organization, the report date, and the document type/title. It provides a human-readable summary of *who/what/when* the document is about, independent of any single section.
+* `Composition.section.text` renders the **section-specific** content (for example the findings, impression or recommendations of that section).
+
+For a full explanation of what to place where, and how the attested narrative relates to the structured entries, see the FHIR guidance on [Document presentation](https://hl7.org/fhir/R4/documents.html#presentation). Worked examples are available in the [structured](Composition-CompositionStructured.html) and [semi-structured](Composition-CompositionSemiStructured.html) Imaging Report examples.
 
 ### Inclusion of tables
 

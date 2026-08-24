@@ -36,9 +36,10 @@ Usage: #example
 * author[organization] = Reference(OrganizationStructuredReport)
 
 * title = "Transthoracic echocardiogram" // invented - not there in the report
-* text
+// Composition.text renders the document-level metadata (patient, author, organization, date, type).
+// The section-specific content is rendered in each Composition.section.text.* text
   * status = #generated
-  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-GB\" lang=\"en-GB\">Stress echocardiography composition narrative. See section narratives below.</div>"
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-GB\" lang=\"en-GB\"><p><b>Transthoracic echocardiogram</b> (stress TTE complete) &#8212; final report.</p><table><tr><td><b>Patient</b></td><td>3D TEE 2D, born 1976-04-29</td></tr><tr><td><b>Author</b></td><td>Prof. Philips van de Jochemsen, Ph.D. (Cardiology)</td></tr><tr><td><b>Organization</b></td><td>Ultrasound centrum</td></tr><tr><td><b>Report date</b></td><td>2025-09-05</td></tr><tr><td><b>Report identifier</b></td><td>dfkjewoieoijwoskdjf</td></tr></table></div>"
 
 ///////////////////////////////////////////////////////////////////////
 * section[imagingstudy]
