@@ -28,7 +28,7 @@ The following table lists the elements that should be included in the narrative 
 | DiagnosticReportEuImaging | status |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.status |
 | CompositionEuImaging | language |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.language |
 | DiagnosticReportEuImaging | language |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.language |
-| CompositionEuImaging | category |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentType |
+| CompositionEuImaging | category[diagnostic-service] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentType |
 | CompositionEuImaging | title |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentTitle |
 | CompositionEuImaging | event.period |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.period |
 | DiagnosticReportEuImaging | effectivePeriod |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.period |
@@ -174,13 +174,4 @@ The following table lists the elements that should be included in the narrative 
 | First order resource | Element | Referenced resource | Logical model resource.field | Comments |
 | -------- | ------- | -------------- | --------------------- | -------- |
 | R5 Mapped Resource | R5 Mapped Field |  | [Xt-EHR resource](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-Xt-EHR resource.html).Xt-EHR field | R5 Comments |
-
-### R5 Composition section
-
-The following table lists the elements that should be included in the narrative of the R5 Composition section section.
-
-{:.grid}
-| First order resource | Element | Referenced resource | Logical model resource.field | Comments |
-| -------- | ------- | -------------- | --------------------- | -------- |
-| R5 Mapped Resource | R5 Mapped Field |  | [Xt-EHR resource](https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-Xt-EHR resource.html).Xt-EHR field | R5 Comments |
 
