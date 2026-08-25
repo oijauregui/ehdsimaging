@@ -22,9 +22,6 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 * identifier contains studyInstanceUid 0..1
 * identifier[studyInstanceUid] only StudyInstanceUidIdentifierEuImaging
   * ^comment = "If the Study Instance UID is known to the report creator it SHALL be populated, as it is the primary identifier used to retrieve the imaging manifest (MADO) and the associated images."
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate-if-known
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "The Study Instance UID SHALL be populated when known, to allow retrieval of the imaging manifest (MADO)."
 
 * subject 1..1
 * subject only Reference( $EuPatient or $EuDevice )

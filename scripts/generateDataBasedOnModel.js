@@ -41,8 +41,7 @@ const XtEHRBaseUrl = "https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinitio
 
 // Configuration: Define which models are considered "core" for this IG
 const CORE_MODELS = [
-    'EHDSImagingReport',
-    'EHDSImagingStudy'
+    'EHDSImagingReport'
     // Add other core models here as needed
 ];
 
@@ -54,7 +53,11 @@ const USED_COMMON_MODELS = [
     'EHDSPatient',
     'EHDSOrganisation',
     'EHDSAddress',
-    'EHDSTelecom'
+    'EHDSTelecom',
+    // EHDSImagingStudy is populated by the imaging manifest (MADO), not the report creator.
+    // It is listed as a used common model and its source rows are excluded from obligation generation;
+    // only report-referenced study data (e.g. Study Instance UID) is carried via EHDSImagingReport mappings.
+    'EHDSImagingStudy'
 ];
 
 // Configuration (FHIR-56779): compact top-level cardinality summary shown on the mapping page
@@ -908,6 +911,7 @@ function generateObligationFiles(parsedData) {
         const sourceMappings = new Set(
             parsedData
                 .filter((row, index) => index > 0)
+                .filter(row => !USED_COMMON_MODELS.includes(getValue(row, indices.srcResource)))
                 .filter(row => {
                     const targetResource = liquidCondition === 'isR5'
                         ? getValue(row, indices.tgtResource)
@@ -997,6 +1001,7 @@ function generateObligationFiles(parsedData) {
     function buildVersionData(resourceName, targetResourceIndex, targetElementIndex, actorVersionConfigs) {
         const rows = parsedData
             .filter((row, index) => index > 0)
+            .filter(row => !USED_COMMON_MODELS.includes(getValue(row, indices.srcResource)))
             .filter(row => getValue(row, targetResourceIndex) === resourceName)
             .filter(row => getValue(row, targetElementIndex).length > 0)
             .filter(row => actorVersionConfigs.some(cfg => getValue(row, cfg.obligationCodeIndex).length > 0));
@@ -1040,6 +1045,7 @@ function generateObligationFiles(parsedData) {
         const names = new Set();
         parsedData
             .filter((row, index) => index > 0)
+            .filter(row => !USED_COMMON_MODELS.includes(getValue(row, indices.srcResource)))
             .forEach(row => {
                 const resource = getValue(row, targetResourceIndex);
                 const hasAnyObligation = actorVersionConfigs.some(cfg => getValue(row, cfg.obligationCodeIndex).length > 0);
