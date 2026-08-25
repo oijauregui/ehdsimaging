@@ -112,7 +112,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section obeys eu-imaging-composition-1
 * section obeys eu-imaging-composition-2
 * section contains 
-    imagingstudy 1..1  and
+    imagingstudy 0..1  and
     order 1..1 and
     history 1..1 and 
     procedure 1..1 and
@@ -131,10 +131,11 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18726-0
   * entry 
     * insert SliceElement( #profile, $this )
-  * entry contains imagingstudy 1..*
+  * entry contains imagingstudy 0..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
+    * ^comment = "When the report creator has access to an ImagingStudy resource, or knows the Study Instance UID, this SHALL be populated (as a reference or, when no resource is available, using entry-by-identifier with the Study Instance UID). When the section is present but empty, the reason SHALL be conveyed via section.emptyReason."
   * entry[imagingstudy] only Reference(ImagingStudyEuImaging)  
 
 // ///////////////////////////////// ORDER SECTION ///////////////////////////////////////
