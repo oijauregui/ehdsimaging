@@ -3,7 +3,7 @@ Id: im-procedure-type
 Title: "ValueSet: Imaging Procedure Type"
 Description: """
 This value set includes all imaging procedure types defined in SNOMED CT. The codes represent
-combinations of the modality to be used and the procedure to be performed.sorry, my bad go ahead
+combinations of the modality to be used and the procedure to be performed.
 
 """
 * insert SetFmmAndStatusRule( 1, draft )
