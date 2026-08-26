@@ -684,7 +684,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>body.examinationReport.conclusion.conditionOrFinding[<a href="http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation">EHDSObservation</a>]</td>
         <td>equivalent</td>
         <td><a href="./StructureDefinition-DiagnosticReportEuImaging.html">DiagnosticReportEuImaging</a></td>
-        <td>.extension[impression]</td>
+        <td>extension[impression]</td>
         <td></td>
       </tr>
       <tr>
