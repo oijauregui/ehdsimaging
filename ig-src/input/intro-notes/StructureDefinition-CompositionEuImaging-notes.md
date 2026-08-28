@@ -136,9 +136,10 @@ The following table lists the elements that should be included in the narrative 
 {:.grid}
 | First order resource | Element | Referenced resource | Logical model resource.field |
 | -------- | ------- | -------------- | --------------------- |
-| DiagnosticReportEuImaging | extension[finding] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
-| CompositionEuImaging | section[findings].extension[note] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
-| DiagnosticReportEuImaging | note |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
+| ObservationNarrativeReport | value[x] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
+| CompositionEuImaging | section[report].entry[narrative-report] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
+| CompositionEuImaging | section[findings].entry[finding] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
+| DiagnosticReportEuImaging | result |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.results[x] |
 
 ### Impression
 
@@ -149,7 +150,7 @@ The following table lists the elements that should be included in the narrative 
 | -------- | ------- | -------------- | --------------------- |
 | EuCondition | code |  | [EHDSCondition](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCondition.html).problem |
 | EuCondition | severity |  | [EHDSCondition](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCondition.html).severity |
-| CompositionEuImaging | section[impression].extension[note] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.conclusion.impression |
+| CompositionEuImaging | section[impression].text |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.conclusion.impression |
 | CompositionEuImaging | section[impression].entry[impression] | ObservationFindingEuImaging | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.examinationReport.conclusion.conditionOrFinding[x] |
 
 ### Recommendation
@@ -174,13 +175,4 @@ The following table lists the elements that should be included in the narrative 
 | First order resource | Element | Referenced resource | Logical model resource.field | Comments |
 | -------- | ------- | -------------- | --------------------- | -------- |
 | R5 Mapped Resource | R5 Mapped Field |  | [Xt-EHR resource](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-Xt-EHR resource.html).Xt-EHR field | R5 Comments |
-
-### R5 Composition section
-
-The following table lists the elements that should be included in the narrative of the R5 Composition section section.
-
-{:.grid}
-| First order resource | Element | Referenced resource | Logical model resource.field | Comments |
-| -------- | ------- | -------------- | --------------------- | -------- |
-| R5 Mapped Resource | R5 Mapped Field |  | [Xt-EHR resource](https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-Xt-EHR resource.html).Xt-EHR field | R5 Comments |
 

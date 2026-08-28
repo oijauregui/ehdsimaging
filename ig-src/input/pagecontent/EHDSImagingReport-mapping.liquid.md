@@ -152,7 +152,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>header.documentType</td>
         <td>equivalent</td>
         <td><a href="./StructureDefinition-CompositionEuImaging.html">CompositionEuImaging</a></td>
-        <td>category[diagnostic-service]</td>
+        <td>category</td>
         <td></td>
       </tr>
       <tr>
@@ -284,7 +284,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>header.serviceSpecialty</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-DiagnosticReportEuImaging.html">DiagnosticReportEuImaging</a></td>
+        <td><a href="./StructureDefinition-CompositionEuImaging.html">CompositionEuImaging</a></td>
         <td>category[diagnostic-service]</td>
         <td></td>
       </tr>
@@ -684,7 +684,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>body.examinationReport.conclusion.conditionOrFinding[<a href="http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation">EHDSObservation</a>]</td>
         <td>equivalent</td>
         <td><a href="./StructureDefinition-DiagnosticReportEuImaging.html">DiagnosticReportEuImaging</a></td>
-        <td>.extension[impression]</td>
+        <td>extension[impression]</td>
         <td></td>
       </tr>
       <tr>
