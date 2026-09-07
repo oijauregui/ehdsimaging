@@ -27,21 +27,12 @@ Information on the studies that this report is reporting on. It includes informa
 
 The amount of imaging study information available to the report creator varies by setting. Systems with full access to a PACS can populate the complete study metadata, while other systems (e.g. reports from dentistry, dermatology, or legacy systems) may know only part of it, or nothing at all. The following rules and use cases describe how to populate the imaging study information accordingly:
 
-* The Study Instance UID SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest (MADO) and the images.
-* When only the Study Instance UID is known, the creator MAY choose the simpler option of not creating an `ImagingStudy` resource and instead conveying the UID by reference-by-identifier. In that case the identifier SHALL be aligned in both `Composition.section[imagingstudy].entry` and `DiagnosticReport.study.identifier`, and no `ImagingStudy` entry is placed in the Bundle. Creating a minimal `ImagingStudy` with just the UID remains equally valid but discouraged.
-* Whenever any study metadata (modality, anatomy, procedure code, time) or accession number is known, the report creator SHALL provide an [[[ImagingStudyEuImaging]]] resource and reference it accordingly in the model.
+* The Study Instance UID SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest ({{iheMADO}}) and the images.
+* Whenever any study metadata (modality, anatomy, procedure code, date and time) or accession number is known, the report creator SHALL provide an [[[ImagingStudyEuImaging]]] resource and reference it accordingly in the model.
+* When only the Study Instance UID, and no other metadata is known, the creator MAY choose the simpler option of not creating an `ImagingStudy` resource and instead conveying the UID by reference-by-identifier. In that case the identifier SHALL be aligned in both `Composition.section[imagingstudy].entry` and `DiagnosticReport.study.identifier`, and no `ImagingStudy` entry is placed in the Bundle. Creating a minimal `ImagingStudy` with just the UID remains equally valid but discouraged.
 * When nothing about the study is known, `section[imagingstudy]` SHALL be present-but-empty with `section.emptyReason` conveying why (invariant `eu-imaging-composition-1`).
 
-The table below summarises how to represent the imaging study information depending on which data elements are known to the report creator.
-
-| Use case | StudyInstanceUID | Accession Number | Modality | Anatomy | Procedure code | Time | Implementation |
-| -------- | ---------------- | ---------------- | -------- | ------- | -------------- | ---- | -------------- |
-| Access to PACS (all data known) | Yes | Yes | Yes | Yes | Yes | Yes | Use `ImagingStudy` resource; populate per current model; reference from Composition / Bundle / DiagnosticReport |
-| Only StudyInstanceUID known | Yes | No | No | No | No | No | MAY omit the `ImagingStudy` resource and convey the UID by reference-by-identifier, aligned in both `Composition.section[imagingstudy].entry` and `DiagnosticReport.study.identifier` (no Bundle entry); or create a minimal `ImagingStudy` carrying only the `studyInstanceUid` |
-| UID + metadata known, Accession not known | Yes | No | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource; populate per current model; reference it |
-| Only Accession number known | No | Yes | No | No | No | No | Use `ImagingStudy` resource with only `.basedOn[ServiceRequestOrderImagingAccession]` |
-| Accession + metadata known, StudyInstanceUID not known | No | Yes | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource with no `identifier`; populate `.basedOn` + metadata per current model |
-| Only metadata known | No | No | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource with no `identifier` and no accession; populate metadata per current model |
+For a detailed description of the possible use cases and how to represent the imaging study information in each of them, see [Imaging study population use cases](design-considerations.html#imaging-study-population-use-cases).
 
 ##### Order
 
