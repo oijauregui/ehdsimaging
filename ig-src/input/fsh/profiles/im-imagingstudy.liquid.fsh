@@ -1,6 +1,6 @@
 Profile: ImagingStudyEuImaging
 Parent: ImagingStudy
-Title: "ImagingStudy: General"
+Title: "ImagingStudy: Reported Study"
 Description: """ 
 This profile represents an imaging study instance.
 """
