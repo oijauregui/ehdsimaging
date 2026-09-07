@@ -25,6 +25,24 @@ General information on the report. Most of the information elements in this part
 
 Information on the studies that this report is reporting on. It includes information such as the study identifiers, date and time the exam was done, the modalities used in the exam and the different series. In this implementation guide this is represented by the [[[ImagingStudyEuImaging]]] profile.
 
+The amount of imaging study information available to the report creator varies by setting. Systems with full access to a PACS can populate the complete study metadata, while other systems (e.g. reports from dentistry, dermatology, or legacy systems) may know only part of it, or nothing at all. The following rules and use cases describe how to populate the imaging study information accordingly:
+
+* The Study Instance UID SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest (MADO) and the images.
+* When only the Study Instance UID is known, the creator MAY choose the simpler option of not creating an `ImagingStudy` resource and instead conveying the UID by reference-by-identifier. In that case the identifier SHALL be aligned in both `Composition.section[imagingstudy].entry` and `DiagnosticReport.study.identifier`, and no `ImagingStudy` entry is placed in the Bundle. Creating a minimal `ImagingStudy` with just the UID remains equally valid but discouraged.
+* Whenever any study metadata (modality, anatomy, procedure code, time) or accession number is known, the report creator SHALL provide an [[[ImagingStudyEuImaging]]] resource and reference it accordingly in the model.
+* When nothing about the study is known, `section[imagingstudy]` SHALL be present-but-empty with `section.emptyReason` conveying why (invariant `eu-imaging-composition-1`).
+
+The table below summarises how to represent the imaging study information depending on which data elements are known to the report creator.
+
+| Use case | StudyInstanceUID | Accession Number | Modality | Anatomy | Procedure code | Time | Implementation |
+| -------- | ---------------- | ---------------- | -------- | ------- | -------------- | ---- | -------------- |
+| Access to PACS (all data known) | Yes | Yes | Yes | Yes | Yes | Yes | Use `ImagingStudy` resource; populate per current model; reference from Composition / Bundle / DiagnosticReport |
+| Only StudyInstanceUID known | Yes | No | No | No | No | No | MAY omit the `ImagingStudy` resource and convey the UID by reference-by-identifier, aligned in both `Composition.section[imagingstudy].entry` and `DiagnosticReport.study.identifier` (no Bundle entry); or create a minimal `ImagingStudy` carrying only the `studyInstanceUid` |
+| UID + metadata known, Accession not known | Yes | No | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource; populate per current model; reference it |
+| Only Accession number known | No | Yes | No | No | No | No | Use `ImagingStudy` resource with only `.basedOn[ServiceRequestOrderImagingAccession]` |
+| Accession + metadata known, StudyInstanceUID not known | No | Yes | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource with no `identifier`; populate `.basedOn` + metadata per current model |
+| Only metadata known | No | No | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource with no `identifier` and no accession; populate metadata per current model |
+
 ##### Order
 
 The order section contains information on the orders that resulted in the studies and this report. It includes information such as one or many `AccessionNumbers`, the identity of the referring physician or organization, the indication for examination, and, ideally, additional patient context and specific clinical questions provided by the referring physician. Clinical questions are sometimes of the form “Follow-up X”, where X is an existing known finding (perhaps from a previous exam), or “Rule out X”, where X is a condition for which imaging input is requested on whether or not it is present. Indications are also, hopefully, provided to provide important clinical context to the imaging clinician, and to support assessment of the appropriateness of the order and/or billing. If indications are not present, they are sometimes sought out by imaging staff.
