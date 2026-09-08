@@ -130,7 +130,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18726-0
   * entry 
     * insert SliceElement( #profile, $this )
-  * entry contains imagingstudy 0..*
+  * entry contains imagingstudy 1..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."

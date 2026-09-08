@@ -29,7 +29,7 @@ The amount of imaging study information available to the report creator varies b
 
 * The Study Instance UID SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest ({{iheMADO}}) and the images.
 * If the report creator knows and has access to a corresponding study that exists in the PACS, it SHALL populate an [[[ImagingStudyEuImaging]]] resource with the known identifiers (Study Instance UID and/or Accession number) and any available study metadata (e.g. modality, anatomy, procedure code, date and time), and reference it in the model.
-* When nothing about the study is known, `section[imagingstudy]` SHALL be present-but-empty with `section.emptyReason` conveying why (invariant `eu-imaging-composition-1`).
+* When nothing about the study is known, `section[imagingstudy]` MAY be omitted from the report.
 
 For a detailed description of the possible use cases and how to represent the imaging study information in each of them, see [Imaging study population use cases](design-considerations.html#imaging-study-population-use-cases).
 
