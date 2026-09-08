@@ -9,7 +9,7 @@ The table below details how to represent the imaging study information depending
 | Access to PACS (all data known) | Yes | Yes | Yes | Yes | Yes | Yes | Use `ImagingStudy` resource; populate per current model; reference from Composition / Bundle / DiagnosticReport |
 | Only StudyInstanceUID known | Yes | No | No | No | No | No | Use a thin `ImagingStudy` resource carrying only the `studyInstanceUid`; reference it |
 | UID + metadata known, Accession not known | Yes | No | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource; populate per current model; reference it |
-| Only Accession number known | No | Yes | No | No | No | No | Use `ImagingStudy` resource with only `.basedOn[ServiceRequestOrderImagingAccession]` |
+| Only Accession number known | No | Yes | No | No | No | No | Use `ImagingStudy` resource with only `.basedOn[ServiceRequestOrderEuImagingaccession]` |
 | Accession + metadata known, StudyInstanceUID not known | No | Yes | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource with no `identifier`; populate `.basedOn` + metadata per current model |
 | Only metadata known | No | No | Yes/No | Yes/No | Yes/No | Yes/No | Use `ImagingStudy` resource with no `identifier` and no accession; populate metadata per current model |
 | Nothing known | No | No | No | No | No | No | Do not create an `ImagingStudy` resource; `section[imagingstudy]` is present-but-empty with `section.emptyReason` |
