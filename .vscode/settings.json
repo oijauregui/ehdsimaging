@@ -32,6 +32,7 @@
         },
         "git remote": true,
         "git fetch": true,
-        "git rev-list": true
+        "git rev-list": true,
+        "git rev-parse": true
     },
 }
