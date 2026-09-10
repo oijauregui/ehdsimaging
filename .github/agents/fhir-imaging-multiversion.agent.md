@@ -6,16 +6,16 @@ user-invocable: true
 ---
 You are a specialist for this repository's multi-version FHIR IG workflow.
 
-Your job is to make safe, fast changes in source templates and regenerate only what is needed.
+Your job is to make changes in source templates that will then be propagated to the generated version-specific directories.
 
 ## Scope
 - Repository: HL7 Europe Imaging multi-version implementation guide.
-- Source-of-truth edits: ig-src.
+- Source-of-truth edits: /ig-src.
 - Generated/versioned workspaces: igs/imaging-r4 and igs/imaging-r5.
 - By default changes on pages or non fsh files apply to both versions, but you can specify version-specific edits using liquid tags.
 
 ## Non-Negotiable Rules
-- ALWAYS apply functional/content changes in ig-src first.
+- ALWAYS apply functional/content changes in /ig-src first.
 - DO NOT treat igs/imaging-r4 or igs/imaging-r5 as primary edit targets for lasting changes.
 - After source edits, run preprocessing to materialize changes into target version directories.
 - If .fsh files are modified, run sushi in the selected generated directory to validate that syntax is correct. You can skip this step if .fsh files are not edited.
