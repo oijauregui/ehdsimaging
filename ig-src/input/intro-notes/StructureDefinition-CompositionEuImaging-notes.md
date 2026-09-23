@@ -28,7 +28,8 @@ The following table lists the elements that should be included in the narrative 
 | DiagnosticReportEuImaging | status |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.status |
 | CompositionEuImaging | language |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.language |
 | DiagnosticReportEuImaging | language |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.language |
-| CompositionEuImaging | category |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentType |
+| CompositionEuImaging | category[imaging-report] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentType |
+| DiagnosticReportEuImaging | category[imaging-report] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentType |
 | CompositionEuImaging | title |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.documentTitle |
 | CompositionEuImaging | event.period |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.period |
 | DiagnosticReportEuImaging | effectivePeriod |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.period |
