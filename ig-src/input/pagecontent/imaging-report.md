@@ -55,6 +55,10 @@ Any deficiencies of the study may also be described here, such as whether the im
 
 While the actual instructions given to the patient are not typically listed in the report, some mention the fact that instructions were given, and perhaps that risks were discussed, and consent was obtained. Procedure notes from the technologist are typically captured elsewhere, but significant details such as adverse patient reactions, or things that may affect the quality of the study, may be included here.
 
+Complications that occur during the procedure are also documented in this section. These cover a wide range of events, for example an adverse reaction to a medication or contrast agent administered as part of the procedure, a patient fall from the examination table, claustrophobia, post-biopsy bleeding, etc. In this specification, complications may additionally be captured in a structured way through the [[[AdverseEventEuImaging]]] profile referenced from the procedure section entries (see [`Composition.section[procedure].entry[adverse-event]`](StructureDefinition-CompositionEuImaging-definitions.html#Composition.section:procedure.entry:adverse-event)). The rationale for this design is described in [Design Considerations](design-considerations.html).
+
+This procedure section usually includes free text, which is included in the `Composition.section[procedure].text` narrative (see [Representing unstructured (narrative) text in the report](#representing-unstructured-narrative-text-in-the-report)). When a large amount of information needs to be conveyed in this section, sub-sections (for example, a dedicated sub-section for complications) can be used. 
+
 Procedure details that may be required for billing are sometimes included here as well.
 
 In this specification, this information is represented by the [[[ProcedureEuImaging]]] profile.
