@@ -34,3 +34,5 @@ The same linkage model supports both directions:
 The primary anchors for this linkage are:
 * **StudyInstanceUID** (study-level relation);
 * **accession-number** (order/request-level relation).
+
+Matching solely on **StudyInstanceUID** is often not feasible, as RIS and PACS systems do not always share the same Study Instance UID (for example, when the RIS was not the Modality Worklist Provider). Implementers should therefore support matching on **accession-number**, recognising that an accession number may not be globally unique. It is **recommended** to carry both identifiers, and to combine **accession-number** with **patient identifiers** when resolving manifests. The report-driven retrieval flow above accordingly supports retrieval of imaging study manifests using accession number and patient identifiers.
