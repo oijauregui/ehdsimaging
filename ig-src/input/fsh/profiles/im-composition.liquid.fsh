@@ -63,8 +63,17 @@ The `text` field of each section SHALL contain a textual representation of all l
     author 0..* and 
     authoringDevice 0..* and
     organization 0..*
+* author[author]
+  * ^short = "Healthcare professional responsible for the report"
+  * ^definition = "The healthcare professional responsible for interpreting the imaging results and authoring the clinical report."
 * author[author] only Reference( $EuPractitioner or $EuPractitionerRole )
+* author[authoringDevice]
+  * ^short = "System that generated the report"
+  * ^definition = "The device or system used to generate the report, such as an AI system producing a preliminary read or other machine-generated result. This does not identify the imaging modality used to acquire the study."
 * author[authoringDevice] only Reference( $EuDevice )
+* author[organization]
+  * ^short = "Organization responsible for the report"
+  * ^definition = "The organization responsible for the report."
 * author[organization] only Reference( $EuOrganization )
 
 // type of the report. Matching DiagnosticReport.code

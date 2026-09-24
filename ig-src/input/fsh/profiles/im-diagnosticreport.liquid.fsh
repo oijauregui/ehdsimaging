@@ -148,6 +148,9 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 * resultsInterpreter 0..*
   * insert SliceElementWithDescription( #profile, [[resolve()]], [[Primary interpreter of results]] )
 * resultsInterpreter contains author 0..* 
+* resultsInterpreter[author]
+  * ^short = "Healthcare professional responsible for the report"
+  * ^definition = "The healthcare professional responsible for interpreting the imaging results and authoring the clinical report."
 * resultsInterpreter[author] only Reference($EuPractitioner or $EuPractitionerRole)
 
 * result 0..* MS

@@ -19,6 +19,10 @@ As described by {{iheIDR}}, all radiology reports contain similar information. T
 
 General information on the report. Most of the information elements in this part of the report overlap with other clinical reports. The document header includes information on the patient, source organization, author, attester and custodian of the report.
 
+The author is expected to describe the healthcare professional responsible for the report. A `Device` may be referenced to identify the system used to generate the report, for example an AI system producing a preliminary read or other machine-generated result; it does not identify the imaging modality used to acquire the study, which belongs to the `ImagingStudy` resource. A `Device` or `Organization` as the only author SHOULD only be used when a practitioner was not involved in the imaging acquisition or the practitioner is not known.
+
+For more on AI-assisted reporting, see [Identifying AI-generated or CAD-assisted content](patterns-and-guidelines.html#identifying-ai-generated-or-cad-assisted-content).
+
 #### Document sections
 
 ##### Imaging Study
