@@ -152,7 +152,14 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>header.documentType</td>
         <td>equivalent</td>
         <td><a href="./StructureDefinition-CompositionEuImaging.html">CompositionEuImaging</a></td>
-        <td>category</td>
+        <td>category[imaging-report]</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>header.documentType</td>
+        <td>equivalent</td>
+        <td><a href="./StructureDefinition-DiagnosticReportEuImaging.html">DiagnosticReportEuImaging</a></td>
+        <td>category[imaging-report]</td>
         <td></td>
       </tr>
       <tr>
@@ -885,7 +892,14 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
         <td>header.documentType</td>
         <td>equivalent</td>
         <td><a href="./StructureDefinition-CompositionEuImaging.html">CompositionEuImaging</a></td>
-        <td>category</td>
+        <td>category[imaging-report]</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>header.documentType</td>
+        <td>equivalent</td>
+        <td><a href="./StructureDefinition-DiagnosticReportEuImaging.html">DiagnosticReportEuImaging</a></td>
+        <td>category[imaging-report]</td>
         <td></td>
       </tr>
       <tr>
