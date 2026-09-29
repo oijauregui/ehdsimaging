@@ -19,9 +19,23 @@ As described by {{iheIDR}}, all radiology reports contain similar information. T
 
 General information on the report. Most of the information elements in this part of the report overlap with other clinical reports. The document header includes information on the patient, source organization, author, attester and custodian of the report.
 
-The author is expected to describe the healthcare professional responsible for the report. A `Device` may be referenced to identify the system used to generate the report, for example an AI system producing a preliminary read or other machine-generated result; it does not identify the imaging modality used to acquire the study, which belongs to the `ImagingStudy` resource. A `Device` or `Organization` as the only author SHOULD only be used when a practitioner was not involved in the imaging acquisition or the practitioner is not known.
+##### Authoring caveats
 
-For more on AI-assisted reporting, see [Identifying AI-generated or CAD-assisted content](patterns-and-guidelines.html#identifying-ai-generated-or-cad-assisted-content).
+The author is expected to describe the healthcare professional responsible for the report. A `Device` may be referenced to identify the system used to generate the report, for example an AI system producing a preliminary read (see [Identifying AI-generated or CAD-assisted content](patterns-and-guidelines.html#identifying-ai-generated-or-cad-assisted-content)); it does not identify the imaging modality. A `Device` or `Organization` as the only author SHOULD only be used when a practitioner was not involved or is not known.
+
+* **Multiple authors**: in dual or collaborative reads, all contributing clinicians are authors. In resident workflows, the resident is the author and the supervising radiologist the attester. For legacy data, list all known contributors.
+* **Attesters**: `attester[resultValidator]` records professional validation, `attester[legalAuthenticator]` legal responsibility. Compositions are often assembled by the system at query time, so consumers SHALL NOT rely on attesters being present and SHOULD use the `DiagnosticReport` elements below.
+* **Custodian**: the organization maintaining the report, not necessarily where it was authored.
+
+{:.grid}
+| Concept | CompositionEuImaging | DiagnosticReportEuImaging |
+| --- | --- | --- |
+| Responsible professional | author[author] | resultsInterpreter[author] |
+| Responsible organization | author[organization] | performer[organization] |
+| Validation / legal authentication | attester[resultValidator] / attester[legalAuthenticator] | - (use resultsInterpreter, status, issued) |
+| Custodian | custodian | - |
+
+See the [FHIR Clinical Documents IG](https://hl7.org/fhir/uv/fhir-clinical-document/en/StructureDefinition-clinical-document-composition.html) for more on document participants.
 
 #### Document sections
 
