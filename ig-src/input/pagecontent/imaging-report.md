@@ -81,7 +81,7 @@ This section provides a detailed description of the findings on the imaging exam
 
 When there are significant numbers of findings, the imaging clinician will typically organize them into groups, typically by anatomy. Reporting templates for particular procedure types (such as those at [radreport.org](https://radreport.org/)) will also often organize the findings.
 
-An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms.
+An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms. In cases of disease-like imaging appearances (e.g. *5 mm non-obstructing left renal calculus*) that are observed in the images, they should be encoded as [[[ObservationFindingEuImaging]]] as well, not as Condition resources.
 
 In this specification, findings are represented as resources following the [[[ObservationFindingEuImaging]]] profile. Optionally, this section can also hold one or more key image resources represented by either [[[ImagingSelectionKeyImageEuImaging]]] or [[[DocumentReferenceKeyImageEuImaging]]] or other relevant images represented by a [[[DocumentReference]]].
 
@@ -99,7 +99,7 @@ Some items in the impression may be clinically significant but were not associat
 
 Some items in the impression may be critical, in that they represent the potential for severe negative clinical impact to the patient if appropriate action is not taken promptly. The presence of such items almost always results in a communication with care staff and/or the patient.
 
-In this specification, impressions are represented by [[[ObservationFindingEuImaging]]] and [[[Condition]]] resources.
+In this specification, impressions are represented by [[[ObservationFindingEuImaging]]] and [[[Condition]]] resources. The latter can be used when the imaging clinician asserts a diagnosis.
 
 ##### Recommendation
 
