@@ -120,7 +120,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section obeys eu-imaging-composition-1
 * section obeys eu-imaging-composition-2
 * section contains 
-    imagingstudy 1..1  and
+    imagingstudy 0..1  and
     order 1..1 and
     history 1..1 and 
     procedure 1..1 and
@@ -220,7 +220,8 @@ The `text` field of each section SHALL contain a textual representation of all l
       finding 0..* and
       keyimage 0..* and
       image 0..*
-  * entry[finding] only Reference(Observation)
+  * entry[finding] only Reference(ObservationFindingEuImaging or ObservationNarrativeReport)
+    * ^short = "Imaging findings"
   * entry[keyimage] only Reference( DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging )
   * entry[image] only Reference( DocumentReference {% if isR4 %} or Media {% endif %} )
 
@@ -232,11 +233,11 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      finding 0..* and
-      impression 0..* and
+      impressions 0..* and
       keyimage 0..*
-  * entry[finding] only Reference(ObservationFindingEuImaging)
-  * entry[impression] only Reference( $EuCondition )
+  * entry[impressions] only Reference( ObservationFindingEuImaging or $EuCondition )
+    * ^short = "Impressions"
+    * ^definition = "What the imaging clinician concluded from the findings. Use an Observation when the impression is an observed (imaging) finding and a Condition when the imaging clinician asserts a diagnosis."
   * entry[keyimage] only Reference(DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging)
 
 // /////////////////// RECOMMENDATION SECTION //////////////////////////

@@ -43,6 +43,14 @@ See the [FHIR Clinical Documents IG](https://hl7.org/fhir/uv/fhir-clinical-docum
 
 Information on the studies that this report is reporting on. It includes information such as the study identifiers, date and time the exam was done, the modalities used in the exam and the different series. In this implementation guide this is represented by the [[[ImagingStudyEuImaging]]] profile.
 
+The amount of imaging study information available to the report creator varies by setting. Systems with full access to a PACS can populate the complete study metadata, while other systems (e.g. reports from dentistry, dermatology, or legacy systems) may know only part of it, or nothing at all. The following rules and use cases describe how to populate the imaging study information accordingly:
+
+* The Study Instance UID SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest ({{iheMADO}}) and the images.
+* If the report creator knows and has access to a corresponding study that exists in the PACS, it SHALL populate an [[[ImagingStudyEuImaging]]] resource with the known identifiers (Study Instance UID and/or Accession number) and any available study metadata (e.g. modality, anatomy, procedure code, date and time), and reference it in the model.
+* When nothing about the study is known, `section[imagingstudy]` MAY be omitted from the report.
+
+For a detailed description of the possible use cases and how to represent the imaging study information in each of them, see [Imaging study population use cases](design-considerations.html#imaging-study-population-use-cases).
+
 ##### Order
 
 The order section contains information on the orders that resulted in the studies and this report. It includes information such as one or many `AccessionNumbers`, the identity of the referring physician or organization, the indication for examination, and, ideally, additional patient context and specific clinical questions provided by the referring physician. Clinical questions are sometimes of the form “Follow-up X”, where X is an existing known finding (perhaps from a previous exam), or “Rule out X”, where X is a condition for which imaging input is requested on whether or not it is present. Indications are also, hopefully, provided to provide important clinical context to the imaging clinician, and to support assessment of the appropriateness of the order and/or billing. If indications are not present, they are sometimes sought out by imaging staff.
@@ -95,7 +103,7 @@ This section provides a detailed description of the findings on the imaging exam
 
 When there are significant numbers of findings, the imaging clinician will typically organize them into groups, typically by anatomy. Reporting templates for particular procedure types (such as those at [radreport.org](https://radreport.org/)) will also often organize the findings.
 
-An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms.
+An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms. In cases of disease-like imaging appearances (e.g. *5 mm non-obstructing left renal calculus*) that are observed in the images, they should be encoded as [[[ObservationFindingEuImaging]]] as well, not as Condition resources.
 
 In this specification, findings are represented as resources following the [[[ObservationFindingEuImaging]]] profile. Optionally, this section can also hold one or more key image resources represented by either [[[ImagingSelectionKeyImageEuImaging]]] or [[[DocumentReferenceKeyImageEuImaging]]] or other relevant images represented by a [[[DocumentReference]]].
 
@@ -113,7 +121,7 @@ Some items in the impression may be clinically significant but were not associat
 
 Some items in the impression may be critical, in that they represent the potential for severe negative clinical impact to the patient if appropriate action is not taken promptly. The presence of such items almost always results in a communication with care staff and/or the patient.
 
-In this specification, impressions are represented by [[[ObservationFindingEuImaging]]] and [[[Condition]]] resources.
+In this specification, impressions are represented by [[[ObservationFindingEuImaging]]] and [[[Condition]]] resources. The latter can be used when the imaging clinician asserts a diagnosis.
 
 ##### Recommendation
 
