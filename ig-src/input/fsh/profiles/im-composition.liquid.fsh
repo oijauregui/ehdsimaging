@@ -228,7 +228,7 @@ The `text` field of each section SHALL contain a textual representation of all l
       keyimage 0..*
   * entry[impressions] only Reference( ObservationFindingEuImaging or $EuCondition )
     * ^short = "Impressions"
-    * ^definition = "What the imaging clinician concluded from the findings. Use an Observation when the impression is an observed (imaging) finding and a Condition when the imaging clinician asserts a diagnosis; see the Imaging Report page for guidance."
+    * ^definition = "What the imaging clinician concluded from the findings. Use an Observation when the impression is an observed (imaging) finding and a Condition when the imaging clinician asserts a diagnosis."
   * entry[keyimage] only Reference(DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging)
 
 // /////////////////// RECOMMENDATION SECTION //////////////////////////
