@@ -7,11 +7,6 @@ Parent: ServiceRequestOrderEuImaging
 Id: service-request-order-obligation-eu-imaging
 Title: "ServiceRequest: Imaging Order: Obligations"
 Description: "Obligations for ServiceRequest: Imaging Order"
-* identifier[accessionNumber]
-  * ^requirements = "EHDSImagingReport.header.accessionNumber"
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.header.accessionNumber"
 * authoredOn
   * ^requirements = "EHDSImagingReport.body.orderInformation.orderDateAndTime"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #MAY:able-to-populate
@@ -42,11 +37,6 @@ Parent: ServiceRequestOrderEuImaging
 Id: service-request-order-obligation-eu-imaging
 Title: "ServiceRequest: Imaging Order: Obligations"
 Description: "Obligations for ServiceRequest: Imaging Order"
-* identifier[accessionNumber]
-  * ^requirements = "EHDSImagingReport.header.accessionNumber"
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.header.accessionNumber"
 * authoredOn
   * ^requirements = "EHDSImagingReport.body.orderInformation.orderDateAndTime"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #MAY:able-to-populate

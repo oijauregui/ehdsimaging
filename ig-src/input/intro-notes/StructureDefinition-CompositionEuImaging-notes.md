@@ -74,7 +74,7 @@ The following table lists the elements that should be included in the narrative 
 {:.grid}
 | First order resource | Element | Referenced resource | Logical model resource.field | Comments |
 | -------- | ------- | -------------- | --------------------- | -------- |
-| ServiceRequestOrderEuImaging | identifier[accessionNumber] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.accessionNumber |  |
+| ImagingServiceRequestEuImaging | identifier[accessionNumber] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.accessionNumber |  |
 | CompositionEuImaging | extension[informationRecipient] |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).header.intendedRecipient[x] |  |
 | ServiceRequestOrderEuImaging | authoredOn |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.orderInformation.orderDateAndTime |  |
 | ServiceRequestOrderEuImaging | requester |  | [EHDSImagingReport](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImagingReport.html).body.orderInformation.orderPlacer[x] |  |

@@ -319,7 +319,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>header.accessionNumber</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ImagingServiceRequestEuImaging.html">ImagingServiceRequestEuImaging</a></td>
         <td>identifier[accessionNumber]</td>
         <td></td>
       </tr>
@@ -1059,7 +1059,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>header.accessionNumber</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ImagingServiceRequestEuImaging.html">ImagingServiceRequestEuImaging</a></td>
         <td>identifier[accessionNumber]</td>
         <td></td>
       </tr>
