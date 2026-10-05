@@ -36,8 +36,13 @@ class "ImagingStudyEuImaging\n<<ImagingStudy>>" as ImagingStudyEuImaging [[./Str
   ...
 }
 
-class "ServiceRequestOrderEuImaging\n<<ServiceRequest>>" as ServiceRequestOrderEuImaging [[./StructureDefinition-ServiceRequestOrderEuImaging.html]] {
+class "ImagingServiceRequestEuImaging\n<<ServiceRequest>>" as ImagingServiceRequestEuImaging [[./StructureDefinition-ImagingServiceRequestEuImaging.html]] {
   +identifier : AccessionNumberIdentifierEuImaging
+  ...
+}
+
+class "ServiceRequestOrderEuImaging\n<<ServiceRequest>>" as ServiceRequestOrderEuImaging [[./StructureDefinition-ServiceRequestOrderEuImaging.html]] {
+  +identifier : placer / filler order number
   ...
 }
 
@@ -49,10 +54,11 @@ class "BinaryUnstructuredReport\n<<Binary>>" as BinaryUnstructuredReport [[./Bin
 DocumentReferenceImagingReport --> BundleReportMinimalMetadataEuImaging : content.attachment.url
 BundleReportMinimalMetadataEuImaging --> DiagnosticReportEuImagingMinimalMetadata : entry
 BundleReportMinimalMetadataEuImaging --> ImagingStudyEuImaging : entry (optional)
-BundleReportMinimalMetadataEuImaging --> ServiceRequestOrderEuImaging : entry (optional)
+BundleReportMinimalMetadataEuImaging --> ImagingServiceRequestEuImaging : entry (optional)
 DiagnosticReportEuImagingMinimalMetadata --> BinaryUnstructuredReport : presentedForm
 DiagnosticReportEuImagingMinimalMetadata --> ImagingStudyEuImaging : study/imagingStudy
-DiagnosticReportEuImagingMinimalMetadata --> ServiceRequestOrderEuImaging : basedOn
+DiagnosticReportEuImagingMinimalMetadata --> ImagingServiceRequestEuImaging : basedOn
+ImagingServiceRequestEuImaging "0..*" --> "0..*" ServiceRequestOrderEuImaging : basedOn
 
 note right of DiagnosticReportEuImagingMinimalMetadata
 R4 element name: imagingStudy

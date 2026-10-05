@@ -144,12 +144,17 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      order 0..*
+      order 0..* and
+      imaging-service-request 0..*
 
   * entry[order]
-    * ^short = "Order reference"
-    * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
+    * ^short = "Placer order reference"
+    * ^definition = "This entry holds a reference to the placer order(s) for the Imaging Study and report."
   * entry[order] only Reference(ServiceRequestOrderEuImaging)  
+  * entry[imaging-service-request]
+    * ^short = "Imaging Service Request reference"
+    * ^definition = "This entry holds a reference to the Imaging Service Request(s), carrying the Accession Number, that fulfil the placer order(s)."
+  * entry[imaging-service-request] only Reference(ImagingServiceRequestEuImaging)  
 
 // // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]

@@ -7,6 +7,7 @@
 {% assign DocumentReferenceKeyImageEuImaging = "[`DocumentReferenceKeyImageEuImaging`](StructureDefinition-DocumentReferenceKeyImageEuImaging.html)" %}
 {% assign ImagingSelectionKeyImageEuImaging  = "[`ImagingSelectionKeyImageEuImaging`](StructureDefinition-ImagingSelectionKeyImageEuImaging.html)" %}
 {% assign ServiceRequestOrderEuImaging                     = "[`ServiceRequestOrderEuImaging`](StructureDefinition-ServiceRequestOrderEuImaging.html)" %}
+{% assign ImagingServiceRequestEuImaging           = "[`ImagingServiceRequestEuImaging`](StructureDefinition-ImagingServiceRequestEuImaging.html)" %}
 {% assign ProcedureEuImaging                 = "[`ProcedureEuImaging`](StructureDefinition-ProcedureEuImaging.html)" %}
 {% assign ImagingStudyEuImaging              = "[`ImagingStudyEuImaging`](StructureDefinition-ImagingStudyEuImaging.html)" %}
 {% assign ImImpression                       = "[`ImImpression`](StructureDefinition-ImImpression.html)" %}

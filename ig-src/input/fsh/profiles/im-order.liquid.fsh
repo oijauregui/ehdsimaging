@@ -2,9 +2,15 @@ Profile: ServiceRequestOrderEuImaging
 Parent: $EuServiceRequest
 Title: "ServiceRequest: Imaging Order"
 Description: """
-This profile on ServiceRequest represents the order for the Imaging Study and report. In DICOM this is referred
-to as the *Requested Procedure*. The `code` element represents the requested imaging procedure type which includes
-the requested modality.
+This profile on ServiceRequest represents the **placer order**: the order for imaging placed by the requester
+(typically from the EHR) and received by the imaging department. It carries the information provided by the requester,
+such as the reason for the order, the clinical question, the requester and the date of the order.
+The `code` element represents the requested orderable, which may be generic (e.g. "imaging of the knee").
+
+The imaging department fulfils the placer order through one or more Imaging Service Requests
+(see [ImagingServiceRequestEuImaging](StructureDefinition-ImagingServiceRequestEuImaging.html)) that carry the
+Accession Number and the requested procedure as protocolled by the department. One Imaging Service Request MAY fulfil
+several placer orders.
 """
 
 * insert SetFmmAndStatusRule( 1, draft )
@@ -16,11 +22,22 @@ the requested modality.
 
 * identifier
   * insert SliceElement( #value, type )
-* identifier contains accessionNumber 0..1
-* identifier[accessionNumber] only AccessionNumberIdentifierEuImaging
+* identifier contains placerOrder 0..1 and fillerOrder 0..1
+* identifier[placerOrder] ^short = "Placer order number assigned by the requester"
+* identifier[placerOrder]
+  * type 1..1
+  * type = $v2-0203#PLAC
+  * system 1..1
+  * value 1..1
+* identifier[fillerOrder] ^short = "Filler order number assigned by the receiving imaging department"
+* identifier[fillerOrder]
+  * type 1..1
+  * type = $v2-0203#FILL
+  * system 1..1
+  * value 1..1
 
 * code
-  * ^short = "Requested procedure"
+  * ^short = "Requested orderable"
 * code from ProcedureEuImagingType (example)
 
 {{R4}}* supportingInfo.extension contains 
@@ -66,10 +83,9 @@ Source: ServiceRequestOrderEuImaging
 Target: "http://nema.org/dicom"
 Title: "Mapping from DICOM to Imaging Order"
 Description: "Mapping from DICOM to Imaging Order."
-{{R }}* identifier[accessionNumber] -> "AccessionNumber (0008,0050)"
+{{R }}* identifier[placerOrder] -> "PlacerOrderNumberImagingServiceRequest (0040,2016)"
 {{R }}* subject -> "(0010/*)"
-{{R }}* note -> "RequestedProcedureDescription (0040,0100)"
-{{R }}* code -> "RequestedProcedureCodeSequence (0040,1001)"
+{{R }}* requester -> "RequestingPhysician (0032,1032)"
 {{R4}}* extension[reason].valueCodeableConcept.text -> "ReasonForTheRequestedProcedure (0040,1002)"
 {{R5}}* reason.concept.text -> "ReasonForTheRequestedProcedure (0040,1002)"
 {{R4}}* extension[reason].valueCodeableConcept -> "ReasonForTheRequestedProcedure (0040,100A)"

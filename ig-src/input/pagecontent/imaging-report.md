@@ -39,7 +39,18 @@ The order section contains information on the orders that resulted in the studie
 
 > Note: “Rule out X”, while somewhat helpful for the imaging clinician, can be problematic for billing since the symptoms that suggest the possible presence of the condition and establish the medical necessity of the imaging exam are implied, but not captured. Site practices increasingly deprecate such wording.
 
-In this specification, the order is represented by the [[[ServiceRequestOrderEuImaging]]] profile.
+In this specification, the order is represented by two profiles, following the placer/fulfiller split described in the [Clinical Order Workflows IG](https://build.fhir.org/ig/HL7/fhir-cow-ig/) and the [HL7 FHIR Imaging ServiceRequest IG](https://build.fhir.org/ig/HL7/imaging-service-request-ig/):
+
+* The **placer order** ([[[ServiceRequestOrderEuImaging]]]) is the order as placed by the requester, typically from the EHR. It carries the information provided by the requester: the requested orderable (which may be generic, e.g. "imaging of the knee"), the reason for the order and the clinical question, the requester, and the date of the order. It MAY carry the placer and filler order numbers.
+* The **Imaging Service Request** ([[[ImagingServiceRequestEuImaging]]]) is the internal order created by the imaging department (typically the RIS) when it accepts the placer order(s). It carries the Accession Number that drives the departmental workflow and links the studies and reports, and the requested procedure as protocolled by the department, which may be more specific than the requested orderable. It refers to the placer order(s) it fulfils through `basedOn`.
+
+The relation between placer orders and Imaging Service Requests is many-to-many: one Imaging Service Request MAY fulfil several placer orders (e.g. a CT of the chest and a CT of the abdomen ordered by different requesters, performed as one CT of the thorax and abdomen), and one placer order MAY be fulfilled by several Imaging Service Requests (e.g. an order that results in both a CT and an MRI examination).
+
+The procedure that was actually performed is represented in the Procedure section by [[[ProcedureEuImaging]]].
+
+The order section SHOULD reference the Imaging Service Request(s) and SHOULD reference the placer order(s) when known. Resources produced as part of the imaging workflow (e.g. [[[ImagingStudyEuImaging]]], [[[DiagnosticReportEuImaging]]]) refer to the Imaging Service Request through its Accession Number.
+
+When the imaging department does not distinguish between the placer order and the Imaging Service Request, a single `ServiceRequest` conforming to [[[ImagingServiceRequestEuImaging]]] MAY be used. In that case it also carries the order information provided by the requester (reason, clinical question, requester, date of the order). A placer order usually does not carry an Accession Number.
 
 ##### History
 
