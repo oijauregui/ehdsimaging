@@ -10,7 +10,7 @@ E.g. based on information from [DICOM part 16](https://dicom.nema.org/medical/di
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains ServiceRequestOrderEuImagingaccession 0..1
-* insert BasedOnImagingServiceRequestEuImagingReference( ServiceRequestOrderEuImagingaccession )
+* insert BasedOnServiceRequestFillerOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
 
 // Remove it as it is not and identifier of the Observation
 // * identifier 0..*

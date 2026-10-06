@@ -2,11 +2,11 @@
 ////////////////////////////////////////////////////
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
-Profile: ServiceRequestOrderObligationEuImaging
-Parent: ServiceRequestOrderEuImaging
-Id: service-request-order-obligation-eu-imaging
-Title: "ServiceRequest: Imaging Order: Obligations"
-Description: "Obligations for ServiceRequest: Imaging Order"
+Profile: ServiceRequestPlacerOrderObligationEuImaging
+Parent: ServiceRequestPlacerOrderEuImaging
+Id: service-request-placer-order-obligation-eu-imaging
+Title: "ServiceRequest: Imaging Placer Order: Obligations"
+Description: "Obligations for ServiceRequest: Imaging Placer Order"
 * authoredOn
   * ^requirements = "EHDSImagingReport.body.orderInformation.orderDateAndTime"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #MAY:able-to-populate
@@ -32,11 +32,11 @@ Description: "Obligations for ServiceRequest: Imaging Order"
 ////////////////////////////////////////////////////
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
-Profile: ServiceRequestOrderObligationEuImaging
-Parent: ServiceRequestOrderEuImaging
-Id: service-request-order-obligation-eu-imaging
-Title: "ServiceRequest: Imaging Order: Obligations"
-Description: "Obligations for ServiceRequest: Imaging Order"
+Profile: ServiceRequestPlacerOrderObligationEuImaging
+Parent: ServiceRequestPlacerOrderEuImaging
+Id: service-request-placer-order-obligation-eu-imaging
+Title: "ServiceRequest: Imaging Placer Order: Obligations"
+Description: "Obligations for ServiceRequest: Imaging Placer Order"
 * authoredOn
   * ^requirements = "EHDSImagingReport.body.orderInformation.orderDateAndTime"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #MAY:able-to-populate

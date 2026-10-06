@@ -28,7 +28,6 @@ Description: "Document Bundle for Imaging Report"
     Patient 1..1 and 
     ImagingStudy 0..* and 
     requested-procedure 0..* and
-    imaging-service-request 0..* and
     performed-procedure 0..* and 
     findings 0..* and
     key-images 0..* and
@@ -50,11 +49,8 @@ Description: "Document Bundle for Imaging Report"
   * ^short = "The imaging study/studies associated with this report"
   * resource only ImagingStudyEuImaging
 * entry[requested-procedure]
-  * ^short = "Placer order(s) for the procedure to be performed"
-  * resource only ServiceRequestOrderEuImaging
-* entry[imaging-service-request]
-  * ^short = "Imaging Service Request(s), carrying the Accession Number, that fulfil the placer order(s)"
-  * resource only ImagingServiceRequestEuImaging
+  * ^short = "Placer order(s) and/or filler order(s) for the procedure to be performed"
+  * resource only ServiceRequestPlacerOrderEuImaging or ServiceRequestFillerOrderEuImaging
 * entry[performed-procedure]
   * ^short = "Procedures performed as part of the imaging study"
   * resource only ProcedureEuImaging

@@ -2,7 +2,7 @@ Profile: AccessionNumberIdentifierEuImaging
 Parent: Identifier
 Title: "Identifier: Accession Number"
 Description: """
-This profile on Identifier represents the Accession Number for the Imaging Service Request.
+This profile on Identifier represents the Accession Number for the imaging filler order.
 
 Within a Hospital Information System environment, accession numbers will **usually** uniquely identify a manifest or report but are not required to **always** map 1:1 with a report or manifest due to certain imaging workflows. The imaging report may not be uniquely identified by accession number in an overread scenario (two radiologists reading a single imaging study). The manifest may not be uniquely identified by accession number in the case that the RIS imaging request (accession number assigner) requires two imaging modalities to perform the exam, and thus produces two image manifests.
 
@@ -21,8 +21,8 @@ In order to ensure uniqueness **across** Hospital Information Systems, accession
   * coding[v2-0203-coding] = $v2-0203#ACSN 
   * coding[dcm] = http://dicom.nema.org/resources/ontology/DCM#121022 "Accession Number"
 
-RuleSet: BasedOnImagingServiceRequestEuImagingReference( slicename )
-* basedOn[{slicename}] only Reference( ImagingServiceRequestEuImaging )
+RuleSet: BasedOnServiceRequestFillerOrderEuImagingReference( slicename )
+* basedOn[{slicename}] only Reference( ServiceRequestFillerOrderEuImaging )
   * identifier 1..1
   * identifier only AccessionNumberIdentifierEuImaging
 

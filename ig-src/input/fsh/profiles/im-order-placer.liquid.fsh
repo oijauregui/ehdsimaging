@@ -1,15 +1,15 @@
-Profile: ServiceRequestOrderEuImaging
+Profile: ServiceRequestPlacerOrderEuImaging
 Parent: $EuServiceRequest
-Title: "ServiceRequest: Imaging Order"
+Title: "ServiceRequest: Imaging Placer Order"
 Description: """
 This profile on ServiceRequest represents the **placer order**: the order for imaging placed by the requester
 (typically from the EHR) and received by the imaging department. It carries the information provided by the requester,
 such as the reason for the order, the clinical question, the requester and the date of the order.
 The `code` element represents the requested orderable, which may be generic (e.g. "imaging of the knee").
 
-The imaging department fulfils the placer order through one or more Imaging Service Requests
-(see [ImagingServiceRequestEuImaging](StructureDefinition-ImagingServiceRequestEuImaging.html)) that carry the
-Accession Number and the requested procedure as protocolled by the department. One Imaging Service Request MAY fulfil
+The imaging department fulfils the placer order through one or more filler orders
+(see [ServiceRequestFillerOrderEuImaging](StructureDefinition-ServiceRequestFillerOrderEuImaging.html)) that carry the
+Accession Number and the requested procedure as protocolled by the department. One filler order MAY fulfil
 several placer orders.
 """
 
@@ -78,11 +78,11 @@ several placer orders.
 
 
 
-Mapping: DicomToServiceRequestOrderEuImaging
-Source: ServiceRequestOrderEuImaging
+Mapping: DicomToServiceRequestPlacerOrderEuImaging
+Source: ServiceRequestPlacerOrderEuImaging
 Target: "http://nema.org/dicom"
-Title: "Mapping from DICOM to Imaging Order"
-Description: "Mapping from DICOM to Imaging Order."
+Title: "Mapping from DICOM to Imaging Placer Order"
+Description: "Mapping from DICOM to Imaging Placer Order."
 {{R }}* identifier[placerOrder] -> "PlacerOrderNumberImagingServiceRequest (0040,2016)"
 {{R }}* subject -> "(0010/*)"
 {{R }}* requester -> "RequestingPhysician (0032,1032)"

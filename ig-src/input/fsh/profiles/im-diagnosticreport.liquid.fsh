@@ -14,7 +14,7 @@ The structure of the modelled has been aligned with the DiagnosticResource as de
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains ServiceRequestOrderEuImagingaccession 0..*
-* insert BasedOnImagingServiceRequestEuImagingReference( ServiceRequestOrderEuImagingaccession )
+* insert BasedOnServiceRequestFillerOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
 
 * extension contains $information-recipient-url  named informationRecipient 0..*
 {{R4}} and $diagnosticReport-composition named composition 1..1
@@ -49,7 +49,7 @@ This profile shares all common imaging report modeling with DiagnosticReportEuIm
 * basedOn contains
     order-resource 0..* and
     order-identifier 0..*
-* basedOn[order-resource] only Reference(ServiceRequestOrderEuImaging or ImagingServiceRequestEuImaging)
+* basedOn[order-resource] only Reference(ServiceRequestPlacerOrderEuImaging or ServiceRequestFillerOrderEuImaging)
 * basedOn[order-resource].reference 1..1
 * basedOn[order-resource].identifier 0..0
 * basedOn[order-identifier].reference 0..0

@@ -865,8 +865,8 @@ function generateObligationFiles(parsedData) {
     const IG_NAME_SUFFIX = 'EuImaging';
     const RESOURCE_TITLES = {
         CompositionEuImaging: 'Composition: Imaging Report',
-        ServiceRequestOrderEuImaging: 'ServiceRequest: Imaging Order',
-        ImagingServiceRequestEuImaging: 'ServiceRequest: Imaging Service Request',
+        ServiceRequestPlacerOrderEuImaging: 'ServiceRequest: Imaging Placer Order',
+        ServiceRequestFillerOrderEuImaging: 'ServiceRequest: Imaging Filler Order',
         ImagingStudyEuImaging: 'ImagingStudy: Reported Study',
         DiagnosticReportEuImaging: 'DiagnosticReport: Imaging Report',
         ObservationFindingEuImaging: 'Observation: Imaging Finding',

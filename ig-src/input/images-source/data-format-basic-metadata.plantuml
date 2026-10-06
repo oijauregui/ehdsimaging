@@ -36,12 +36,12 @@ class "ImagingStudyEuImaging\n<<ImagingStudy>>" as ImagingStudyEuImaging [[./Str
   ...
 }
 
-class "ImagingServiceRequestEuImaging\n<<ServiceRequest>>" as ImagingServiceRequestEuImaging [[./StructureDefinition-ImagingServiceRequestEuImaging.html]] {
+class "ServiceRequestFillerOrderEuImaging\n<<ServiceRequest>>" as ServiceRequestFillerOrderEuImaging [[./StructureDefinition-ServiceRequestFillerOrderEuImaging.html]] {
   +identifier : AccessionNumberIdentifierEuImaging
   ...
 }
 
-class "ServiceRequestOrderEuImaging\n<<ServiceRequest>>" as ServiceRequestOrderEuImaging [[./StructureDefinition-ServiceRequestOrderEuImaging.html]] {
+class "ServiceRequestPlacerOrderEuImaging\n<<ServiceRequest>>" as ServiceRequestPlacerOrderEuImaging [[./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html]] {
   +identifier : placer / filler order number
   ...
 }
@@ -54,11 +54,11 @@ class "BinaryUnstructuredReport\n<<Binary>>" as BinaryUnstructuredReport [[./Bin
 DocumentReferenceImagingReport --> BundleReportMinimalMetadataEuImaging : content.attachment.url
 BundleReportMinimalMetadataEuImaging --> DiagnosticReportEuImagingMinimalMetadata : entry
 BundleReportMinimalMetadataEuImaging --> ImagingStudyEuImaging : entry (optional)
-BundleReportMinimalMetadataEuImaging --> ImagingServiceRequestEuImaging : entry (optional)
+BundleReportMinimalMetadataEuImaging --> ServiceRequestFillerOrderEuImaging : entry (optional)
 DiagnosticReportEuImagingMinimalMetadata --> BinaryUnstructuredReport : presentedForm
 DiagnosticReportEuImagingMinimalMetadata --> ImagingStudyEuImaging : study/imagingStudy
-DiagnosticReportEuImagingMinimalMetadata --> ImagingServiceRequestEuImaging : basedOn
-ImagingServiceRequestEuImaging "0..*" --> "0..*" ServiceRequestOrderEuImaging : basedOn
+DiagnosticReportEuImagingMinimalMetadata --> ServiceRequestFillerOrderEuImaging : basedOn
+ServiceRequestFillerOrderEuImaging "0..*" --> "0..*" ServiceRequestPlacerOrderEuImaging : basedOn
 
 note right of DiagnosticReportEuImagingMinimalMetadata
 R4 element name: imagingStudy

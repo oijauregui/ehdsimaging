@@ -16,7 +16,7 @@ Description: "Unstructured narrative text in an imaging report."
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains ServiceRequestOrderEuImagingaccession 0..*
-* insert BasedOnImagingServiceRequestEuImagingReference( ServiceRequestOrderEuImagingaccession )
+* insert BasedOnServiceRequestFillerOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
 
 * value[x] 0..1
 * value[x] ^short = "Unstructured narrative imaging report"

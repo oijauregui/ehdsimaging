@@ -1,0 +1,70 @@
+@startuml imaging-order-modeling
+
+skinparam backgroundColor white
+skinparam handwritten false
+skinparam defaultFontSize 10
+skinparam classAttributeFontSize 9
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+
+skinparam class {
+  BackgroundColor White
+  BorderColor Black
+  ArrowColor Black
+}
+
+package "Placer (EHR)" as placer [[https://hl7.org/fhir/uv/cow/2025May/core-concepts.html#actors]] {
+  class "ServiceRequestPlacerOrderEuImaging\n<<ServiceRequest>>\nplacer order" as Order [[./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html]] {
+    +identifier[placerOrder] : PLAC
+    +identifier[fillerOrder] : FILL
+    +code : requested orderable
+    +reason : reason / clinical question
+    +requester
+    +authoredOn
+  }
+}
+
+package "Fulfiller (imaging department / RIS)" as filler [[https://hl7.org/fhir/uv/cow/2025May/core-concepts.html#actors]] {
+  class "ServiceRequestFillerOrderEuImaging\n<<ServiceRequest>>\nfiller order" as ISR [[./StructureDefinition-ServiceRequestFillerOrderEuImaging.html]] {
+    +identifier[accessionNumber] : ACSN (1..1)
+    +identifier[fillerOrder] : FILL
+    +code : requested procedure (protocolled)
+    +basedOn : Reference(ServiceRequestPlacerOrderEuImaging)
+  }
+
+  class "ProcedureEuImaging\n<<Procedure>>\nperformed procedure" as Proc [[./StructureDefinition-ProcedureEuImaging.html]]
+
+  class "ImagingStudyEuImaging\n<<ImagingStudy>>" as Study [[./StructureDefinition-ImagingStudyEuImaging.html]]
+
+  class "DiagnosticReportEuImaging\n<<DiagnosticReport>>" as DR [[./StructureDefinition-DiagnosticReportEuImaging.html]]
+
+  class "CompositionEuImaging\n<<Composition>>" as Comp [[./StructureDefinition-CompositionEuImaging.html]] {
+    +section[order]
+    +section[procedure]
+  }
+
+  class "Requested Procedure / Scheduled Procedure Step\n<<ServiceRequest / Task>>\n(DICOM MWL, not profiled here)" as MWL [[https://build.fhir.org/ig/HL7/imaging-service-request-ig/en/architecture.html#mwl-resource-reference-chain]] #EEEEEE
+}
+
+ISR "0..*" --> "0..*" Order : basedOn
+Study --> ISR : basedOn (Accession Number)
+DR --> ISR : basedOn (Accession Number)
+Comp --> Order : section[order]
+Comp --> ISR : section[order]
+Comp --> Proc : section[procedure]
+MWL ..> ISR : basedOn
+Proc ..> ISR : fulfils
+
+note right of ISR
+  Aligned with ImagingServiceRequestProfile
+  of the HL7 FHIR Imaging ServiceRequest IG
+  [[https://build.fhir.org/ig/HL7/imaging-service-request-ig/en/StructureDefinition-imaging-service-request.html ImagingServiceRequestProfile]]
+end note
+
+note left of Order
+  Placer Request in the
+  Clinical Order Workflows IG
+  [[https://hl7.org/fhir/uv/cow/2025May/core-concepts.html#requests-tasks-and-outputs-events Requests, Tasks and Outputs]]
+end note
+
+@enduml

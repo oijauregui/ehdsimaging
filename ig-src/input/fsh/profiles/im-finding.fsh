@@ -14,5 +14,5 @@ Description: "Finding during imaging procedure."
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains ServiceRequestOrderEuImagingaccession 0..*
-* insert BasedOnImagingServiceRequestEuImagingReference( ServiceRequestOrderEuImagingaccession )
+* insert BasedOnServiceRequestFillerOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
   

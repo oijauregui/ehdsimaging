@@ -319,7 +319,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>header.accessionNumber</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ImagingServiceRequestEuImaging.html">ImagingServiceRequestEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestFillerOrderEuImaging.html">ServiceRequestFillerOrderEuImaging</a></td>
         <td>identifier[accessionNumber]</td>
         <td></td>
       </tr>
@@ -396,21 +396,21 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>body.orderInformation.orderDateAndTime</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>authoredOn</td>
         <td></td>
       </tr>
       <tr>
         <td>body.orderInformation.orderPlacer[<a href="http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">EHDSHealthProfessional</a>]</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>requester</td>
         <td></td>
       </tr>
       <tr>
         <td>body.orderInformation.orderReason[CodeableConcept]</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>extension[reason].extension[concept].valueCodeableConcept</td>
         <td></td>
       </tr>
@@ -438,7 +438,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>body.orderInformation.clinicalQuestion</td>
         <td>source-is-narrower-than-target</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>extension[reason].extension[concept].valueCodeableConcept</td>
         <td>Order reason and clinical question map to the same element by design choice</td>
       </tr>
@@ -1059,7 +1059,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>header.accessionNumber</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ImagingServiceRequestEuImaging.html">ImagingServiceRequestEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestFillerOrderEuImaging.html">ServiceRequestFillerOrderEuImaging</a></td>
         <td>identifier[accessionNumber]</td>
         <td></td>
       </tr>
@@ -1136,21 +1136,21 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>body.orderInformation.orderDateAndTime</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>authoredOn</td>
         <td></td>
       </tr>
       <tr>
         <td>body.orderInformation.orderPlacer[<a href="http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional">EHDSHealthProfessional</a>]</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>requester</td>
         <td></td>
       </tr>
       <tr>
         <td>body.orderInformation.orderReason[CodeableConcept]</td>
         <td>equivalent</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>reason.concept</td>
         <td></td>
       </tr>
@@ -1178,7 +1178,7 @@ The following table shows the mapping from EHDSImagingReport logical model eleme
       <tr>
         <td>body.orderInformation.clinicalQuestion</td>
         <td>source-is-narrower-than-target</td>
-        <td><a href="./StructureDefinition-ServiceRequestOrderEuImaging.html">ServiceRequestOrderEuImaging</a></td>
+        <td><a href="./StructureDefinition-ServiceRequestPlacerOrderEuImaging.html">ServiceRequestPlacerOrderEuImaging</a></td>
         <td>reason.concept</td>
         <td>Order reason and clinical question map to the same element by design choice</td>
       </tr>
