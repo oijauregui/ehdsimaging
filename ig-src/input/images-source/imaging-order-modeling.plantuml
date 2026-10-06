@@ -27,7 +27,6 @@ package "Placer (EHR)" as placer [[https://hl7.org/fhir/uv/cow/2025May/core-conc
 package "Fulfiller (imaging department / RIS)" as filler [[https://hl7.org/fhir/uv/cow/2025May/core-concepts.html#actors]] {
   class "ServiceRequestFillerOrderEuImaging\n<<ServiceRequest>>\nfiller order" as ISR [[./StructureDefinition-ServiceRequestFillerOrderEuImaging.html]] {
     +identifier[accessionNumber] : ACSN (1..1)
-    +identifier[fillerOrder] : FILL
     +code : requested procedure (protocolled)
     +basedOn : Reference(ServiceRequestPlacerOrderEuImaging)
   }

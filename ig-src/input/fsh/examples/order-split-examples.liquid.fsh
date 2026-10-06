@@ -48,10 +48,6 @@ Usage: #example
     * coding[v2-0203-coding] = $v2-0203#ACSN
   * system = "http://example.org/myhospital/ris/accession"
   * value = "ACC-2025-000123"
-* identifier[fillerOrder]
-  * type = $v2-0203#FILL
-  * system = "http://example.org/myhospital/ris/fillerorder"
-  * value = "FO-5001"
 * basedOn[+] = Reference(ServiceRequestPlacerOrderChestCT)
 * basedOn[+] = Reference(ServiceRequestPlacerOrderAbdomenCT)
 * status = #active

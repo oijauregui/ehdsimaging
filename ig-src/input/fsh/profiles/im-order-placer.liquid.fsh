@@ -30,6 +30,7 @@ several placer orders.
   * system 1..1
   * value 1..1
 * identifier[fillerOrder] ^short = "Filler order number assigned by the receiving imaging department"
+* identifier[fillerOrder] ^definition = "The number assigned to this placer order by the order filler (typically the RIS), as returned to the placer (e.g. HL7 v2 ORC-3, IHE RAD-3)."
 * identifier[fillerOrder]
   * type 1..1
   * type = $v2-0203#FILL
@@ -84,6 +85,7 @@ Target: "http://nema.org/dicom"
 Title: "Mapping from DICOM to Imaging Placer Order"
 Description: "Mapping from DICOM to Imaging Placer Order."
 {{R }}* identifier[placerOrder] -> "PlacerOrderNumberImagingServiceRequest (0040,2016)"
+{{R }}* identifier[fillerOrder] -> "FillerOrderNumberImagingServiceRequest (0040,2017)"
 {{R }}* subject -> "(0010/*)"
 {{R }}* requester -> "RequestingPhysician (0032,1032)"
 {{R4}}* extension[reason].valueCodeableConcept.text -> "ReasonForTheRequestedProcedure (0040,1002)"

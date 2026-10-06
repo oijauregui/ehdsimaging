@@ -26,16 +26,10 @@ This profile corresponds to the DICOM *Imaging Service Request* and *Requested P
 
 * identifier 1..*
   * insert SliceElement( #value, type )
-* identifier contains accessionNumber 1..1 and fillerOrder 0..1
+* identifier contains accessionNumber 1..1
 * identifier[accessionNumber] only AccessionNumberIdentifierEuImaging
 * identifier[accessionNumber].type = $v2-0203#ACSN
 * identifier[accessionNumber] ^short = "Accession Number assigned by the imaging department"
-* identifier[fillerOrder] ^short = "Filler order number assigned by the imaging department"
-* identifier[fillerOrder]
-  * type 1..1
-  * type = $v2-0203#FILL
-  * system 1..1
-  * value 1..1
 
 * basedOn only Reference(ServiceRequestPlacerOrderEuImaging)
 * basedOn ^short = "Placer order(s) fulfilled by this filler order"
@@ -58,7 +52,6 @@ Target: "http://nema.org/dicom"
 Title: "Mapping from DICOM to Imaging Filler Order"
 Description: "Mapping from DICOM to Imaging Filler Order."
 * identifier[accessionNumber] -> "AccessionNumber (0008,0050)"
-* identifier[fillerOrder] -> "FillerOrderNumberImagingServiceRequest (0040,2017)"
 * basedOn.identifier -> "PlacerOrderNumberImagingServiceRequest (0040,2016)"
 * subject -> "(0010/*)"
 * code -> "RequestedProcedureCodeSequence (0032,1064), RequestedProcedureDescription (0032,1060)"
