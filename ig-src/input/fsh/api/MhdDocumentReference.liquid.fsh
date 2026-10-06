@@ -10,6 +10,7 @@ Profile for DocumentReference resources used in the EEHRxF context, based on the
 
 // practice setting
 {{R4}}* context.practiceSetting ^short = "Clinical specialty (e.g., radiology, laboratory) - SHOULD be used for lab vs imaging differentiation"
+{{R4}}* context.practiceSetting from ImagingReportPracticeSetting (preferred)
 {{R5}}* practiceSetting ^short = "Clinical specialty (e.g., radiology, laboratory) - SHOULD be used for lab vs imaging differentiation"
 
 * status 1..1
