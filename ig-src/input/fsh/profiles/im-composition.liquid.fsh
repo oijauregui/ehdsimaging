@@ -149,7 +149,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the placer order(s) and/or the filler order(s), carrying the Accession Number, for the Imaging Study and report."
-  * entry[order] only Reference(ServiceRequestPlacerOrderEuImaging or ServiceRequestFillerOrderEuImaging)  
+  * entry[order] only Reference(ServiceRequestPlacerOrderEuImaging or ImagingServiceRequestEuImaging)  
 
 // // ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]

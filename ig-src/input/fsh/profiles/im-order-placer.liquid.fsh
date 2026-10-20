@@ -7,9 +7,9 @@ This profile on ServiceRequest represents the **placer order**: the order for im
 such as the reason for the order, the clinical question, the requester and the date of the order.
 The `code` element represents the requested orderable, which may be generic (e.g. "imaging of the knee").
 
-The imaging department fulfils the placer order through one or more filler orders
-(see [ServiceRequestFillerOrderEuImaging](StructureDefinition-ServiceRequestFillerOrderEuImaging.html)) that carry the
-Accession Number and the requested procedure as protocolled by the department. One filler order MAY fulfil
+The imaging department fulfils the placer order through one or more Imaging Service Requests
+(see [ImagingServiceRequestEuImaging](StructureDefinition-ImagingServiceRequestEuImaging.html)) that carry the
+Accession Number and the requested procedure as protocolled by the department. One Imaging Service Request MAY fulfil
 several placer orders.
 """
 

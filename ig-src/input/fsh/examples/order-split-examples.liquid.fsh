@@ -1,9 +1,9 @@
-// Two placer orders from different requesters, fulfilled by a single filler order (many-to-one).
+// Two placer orders from different requesters, fulfilled by a single Imaging Service Request (many-to-one).
 
 Instance: ServiceRequestPlacerOrderChestCT
 InstanceOf: ServiceRequestPlacerOrderEuImaging
 Title: "ServiceRequest: placer order for a CT of the chest"
-Description: "Placer order for a CT of the chest, placed in the EHR and fulfilled by ServiceRequestFillerOrderChestAbdomenCT."
+Description: "Placer order for a CT of the chest, placed in the EHR and fulfilled by ImagingServiceRequestChestAbdomenCT."
 Usage: #example
 * identifier[placerOrder]
   * type = $v2-0203#PLAC
@@ -22,7 +22,7 @@ Usage: #example
 Instance: ServiceRequestPlacerOrderAbdomenCT
 InstanceOf: ServiceRequestPlacerOrderEuImaging
 Title: "ServiceRequest: placer order for a CT of the abdomen"
-Description: "Placer order for a CT of the abdomen, placed in the EHR and fulfilled by ServiceRequestFillerOrderChestAbdomenCT."
+Description: "Placer order for a CT of the abdomen, placed in the EHR and fulfilled by ImagingServiceRequestChestAbdomenCT."
 Usage: #example
 * identifier[placerOrder]
   * type = $v2-0203#PLAC
@@ -38,10 +38,10 @@ Usage: #example
 {{R4}}* reasonCode[+].text = "Abdominal pain, weight loss"
 {{R5}}* reason[+].concept.text = "Abdominal pain, weight loss"
 
-Instance: ServiceRequestFillerOrderChestAbdomenCT
-InstanceOf: ServiceRequestFillerOrderEuImaging
-Title: "ServiceRequest: filler order for a CT of the chest and abdomen"
-Description: "Filler order created by the RIS that fulfils two placer orders with a single protocolled procedure and Accession Number."
+Instance: ImagingServiceRequestChestAbdomenCT
+InstanceOf: ImagingServiceRequestEuImaging
+Title: "ServiceRequest: Imaging Service Request for a CT of the chest and abdomen"
+Description: "Imaging Service Request created by the RIS that fulfils two placer orders with a single protocolled procedure and Accession Number."
 Usage: #example
 * identifier[accessionNumber]
   * type

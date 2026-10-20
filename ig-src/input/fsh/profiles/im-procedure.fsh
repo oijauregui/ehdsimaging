@@ -11,7 +11,7 @@ referred as the 'Performed Procedure Step' (PPS). This profile is used to captur
 // * basedOn
 //   * insert SliceElement( #type, $this )
 // * basedOn contains ServiceRequestOrderEuImagingaccession 0..1
-// * insert BasedOnServiceRequestFillerOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
+// * insert BasedOnImagingServiceRequestEuImagingReference( ServiceRequestOrderEuImagingaccession )
 
 * code 1..1
 * code from ProcedureEuImagingType (extensible)

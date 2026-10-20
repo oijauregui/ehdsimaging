@@ -21,8 +21,8 @@ In order to ensure uniqueness **across** Hospital Information Systems, accession
   * coding[v2-0203-coding] = $v2-0203#ACSN 
   * coding[dcm] = http://dicom.nema.org/resources/ontology/DCM#121022 "Accession Number"
 
-RuleSet: BasedOnServiceRequestFillerOrderEuImagingReference( slicename )
-* basedOn[{slicename}] only Reference( ServiceRequestFillerOrderEuImaging )
+RuleSet: BasedOnImagingServiceRequestEuImagingReference( slicename )
+* basedOn[{slicename}] only Reference( ImagingServiceRequestEuImaging )
   * identifier 1..1
   * identifier only AccessionNumberIdentifierEuImaging
 

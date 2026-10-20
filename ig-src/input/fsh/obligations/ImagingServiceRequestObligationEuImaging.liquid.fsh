@@ -2,11 +2,11 @@
 ////////////////////////////////////////////////////
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
-Profile: ServiceRequestFillerOrderObligationEuImaging
-Parent: ServiceRequestFillerOrderEuImaging
-Id: service-request-filler-order-obligation-eu-imaging
-Title: "ServiceRequest: Imaging Filler Order: Obligations"
-Description: "Obligations for ServiceRequest: Imaging Filler Order"
+Profile: ImagingServiceRequestObligationEuImaging
+Parent: ImagingServiceRequestEuImaging
+Id: imaging-service-request-obligation-eu-imaging
+Title: "ServiceRequest: Imaging Service Request: Obligations"
+Description: "Obligations for ServiceRequest: Imaging Service Request"
 * identifier[accessionNumber]
   * ^requirements = "EHDSImagingReport.header.accessionNumber"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -18,11 +18,11 @@ Description: "Obligations for ServiceRequest: Imaging Filler Order"
 ////////////////////////////////////////////////////
 // Generated file. Do not edit.
 ////////////////////////////////////////////////////
-Profile: ServiceRequestFillerOrderObligationEuImaging
-Parent: ServiceRequestFillerOrderEuImaging
-Id: service-request-filler-order-obligation-eu-imaging
-Title: "ServiceRequest: Imaging Filler Order: Obligations"
-Description: "Obligations for ServiceRequest: Imaging Filler Order"
+Profile: ImagingServiceRequestObligationEuImaging
+Parent: ImagingServiceRequestEuImaging
+Id: imaging-service-request-obligation-eu-imaging
+Title: "ServiceRequest: Imaging Service Request: Obligations"
+Description: "Obligations for ServiceRequest: Imaging Service Request"
 * identifier[accessionNumber]
   * ^requirements = "EHDSImagingReport.header.accessionNumber"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate

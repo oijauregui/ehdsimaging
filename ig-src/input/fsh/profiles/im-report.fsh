@@ -49,8 +49,8 @@ Description: "Document Bundle for Imaging Report"
   * ^short = "The imaging study/studies associated with this report"
   * resource only ImagingStudyEuImaging
 * entry[requested-procedure]
-  * ^short = "Placer order(s) and/or filler order(s) for the procedure to be performed"
-  * resource only ServiceRequestPlacerOrderEuImaging or ServiceRequestFillerOrderEuImaging
+  * ^short = "Placer order(s) and/or Imaging Service Request(s) for the procedure to be performed"
+  * resource only ServiceRequestPlacerOrderEuImaging or ImagingServiceRequestEuImaging
 * entry[performed-procedure]
   * ^short = "Procedures performed as part of the imaging study"
   * resource only ProcedureEuImaging
