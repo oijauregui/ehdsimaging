@@ -22,7 +22,7 @@ The figure below shows the main structure of the report.
   <p></p>
 </figure>
 
-As in the previous example, the report is wrapped by a `DocumentReference` that points to a document `Bundle` containing all resources of the example. Within the bundle, the core report consists of a [[[ImDiagnoticReport]]] and a [[[CompositionEuImaging]]] resource. The study the report is about is represented by an [[[ImagingStudyEuImaging]]] resource. The different resources point to the [[[Patient]]] and the author. The author is represented by an [[[PractitionerRole]]], [[[Practitioner]]] and [[[Organization]]] resource. The [[[Organization]]] is also the custodian of the report.
+As in the previous example, a document `Bundle` contains all resources of the report. Within the bundle, the core report consists of a [[[ImDiagnoticReport]]] and a [[[CompositionEuImaging]]] resource. The study the report is about is represented by an [[[ImagingStudyEuImaging]]] resource. The different resources point to the [[[Patient]]] and the author. The author is represented by an [[[PractitionerRole]]], [[[Practitioner]]] and [[[Organization]]] resource. The [[[Organization]]] is also the custodian of the report.
 
 This report contains structured data in the patient history section. It points to height, weight, heart rate and blood pressure observations for the patient.
 
@@ -32,7 +32,7 @@ This report contains structured data in the patient history section. It points t
   <p></p>
 </figure>
 
-The finding sections hold the notes indicated in the report and references to observations of the different wall motion index scores of the different segments indicated in the graph on page three of the report. These observation include a reference to a [[[DocumentReference]]] resource which holds the image itself.
+The finding sections hold the notes indicated in the report and references to observations of the different wall motion index scores of the different segments indicated in the graph on page three of the report. These observations include a reference to a {% if isR4 %}[[[Media]]]{% else %}[[[DocumentReference]]]{% endif %} resource which holds the image itself.
 
 <figure>
   {% include example-structured-findings.svg %}
@@ -40,7 +40,7 @@ The finding sections hold the notes indicated in the report and references to ob
   <p></p>
 </figure>
 
-The document contains two key images. These are included as [[[DocumentReference]]] resources.
+The document contains two key images. These are included as {% if isR4 %}[[[Media]]]{% else %}[[[DocumentReference]]]{% endif %} resources.
 
 The figure below illustrates the way the conclusion is represented.
 

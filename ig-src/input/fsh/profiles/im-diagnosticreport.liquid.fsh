@@ -1,9 +1,10 @@
 Profile: DiagnosticReportEuImaging
-Parent: DiagnosticReport
+Parent: $EuDiagnosticReport
 Title: "DiagnosticReport: Imaging Report"
 Description: """
 DiagnosticReport profile for Imaging Reports. This document represents the report of an imaging study. It is the anchor resource that refers to all structured data as well as the `Composition` resource that contains the narrative text of the report.   
 The structure of the modelled has been aligned with the DiagnosticResource as defined by [IHE-RAD-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/StructureDefinition-imaging-diagnosticreport.html). As this specification has not been published yet, the relevant extensions have been included in this specification.
+The healthcare professional who interprets the results is identified by `resultsInterpreter[author]`. The Composition author should identify a healthcare professional; its authoring Device may identify the system used to generate the report. Device or Organization as the only Composition author SHOULD only be used when a practitioner was not involved in the imaging acquisition or the practitioner is not known.
 """
 * insert SetFmmAndStatusRule( 1, draft )
 // * insert MandateLanguageAndSecurity
@@ -17,9 +18,11 @@ The structure of the modelled has been aligned with the DiagnosticResource as de
 * insert BasedOnServiceRequestOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
 
 * extension contains $information-recipient-url  named informationRecipient 0..*
-{{R4}} and $diagnosticReport-composition named composition 1..1
-{{R4}}* extension[composition] ^short = "Imaging Diagnostic Report"
-{{R4}}* extension[composition].valueReference only Reference(CompositionEuImaging)
+
+// EU Core already slices this extension URL as DiagnosticReportCompositionR5; refine that slice rather than redeclaring it.
+{{R4}}* extension[DiagnosticReportCompositionR5] 1..1
+{{R4}}* extension[DiagnosticReportCompositionR5] ^short = "Imaging Diagnostic Report"
+{{R4}}* extension[DiagnosticReportCompositionR5].valueReference only Reference(CompositionEuImaging)
 
 {{R5}}* composition 1..1
 {{R5}}* composition ^short = "Imaging Diagnostic Report"
@@ -34,7 +37,7 @@ The structure of the modelled has been aligned with the DiagnosticResource as de
 * obeys eu-imaging-dr-status-no-addendum
 
 Profile: DiagnosticReportEuImagingMinimalMetadata
-Parent: DiagnosticReport
+Parent: $EuDiagnosticReport
 Title: "DiagnosticReport: Imaging Report Minimal Metadata"
 Description: """
 DiagnosticReport profile for minimal metadata imaging report exchange. 
@@ -95,7 +98,7 @@ RuleSet: DiagnosticReportEuImagingCommonRules
 The anatomical regions covered by the report, depending on the study there can be zero, one or more regions. 
 The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.bodysite`, if present.
 """
-* extension[anatomical-region] ^requirements = "This field is present in order to be able to populate the MHD DocumentReference field."
+* extension[anatomical-region] ^requirements = "Identifies the anatomical region covered by the report when additional anatomical context is available."
 
 //business identifier and relation with the composition resource
 * identifier 1..*
@@ -116,6 +119,7 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
   * ^short = "Type of Imaging Diagnostic Report"
   * ^definition = "Defines the document type, it is recommended to take this from the suggested LOINC set."
 
+// EU Core 2.0.1 no longer slices category; define the Imaging slices in both versions.
 * category 0..*
   * insert SliceElement( #value, $this )
 * category contains diagnostic-service 0..1 and imaging-report 1..1 and imaging 1..1
@@ -127,7 +131,8 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 
 * subject only Reference($EuPatient)
 
-* basedOn only Reference(ServiceRequest or CarePlan)
+// EU Core constrains basedOn to ServiceRequest in both versions.
+* basedOn only Reference(ServiceRequest)
 
 * issued 
   * ^short = "Date and time of report issuance"
@@ -137,18 +142,14 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 // * media 0..0 // not in not in keyimages section
 
 // at least one performer is an Organization, the practitioner must follow the profile in this guide
-* performer 
-  * insert SliceElementWithDescription( #profile, $this, [[Organization that delivered the report]] )
-* performer contains organization 0..*
-* performer[organization] only Reference($EuOrganization)
+// EU Core already slices performer and defines the organization slice as Reference(organization-eu-core).
 * performer[organization] ^short = "The organization producer of this report"
 * performer[organization] ^definition = "The organization responsible for producing this report. In case practitioners produce them in their private practices, they will be accounted as an organization for this purpose."
 
 // author etc.
-* resultsInterpreter 0..*
-  * insert SliceElementWithDescription( #profile, [[resolve()]], [[Primary interpreter of results]] )
-* resultsInterpreter contains author 0..* 
-* resultsInterpreter[author] only Reference($EuPractitioner or $EuPractitionerRole)
+// EU Core already slices resultsInterpreter and constrains the author slice to practitionerRole-eu-core.
+* resultsInterpreter[author] ^short = "Primary interpreter of results"
+* resultsInterpreter[author] ^definition = "The healthcare professional who interprets the imaging results."
 
 * result 0..* MS
 * result only Reference(ObservationFindingEuImaging or ObservationNarrativeReport)
@@ -189,14 +190,6 @@ automated tools, or by the radiologists themselves.
 Imaging procedure used to acquire the study.
 """
 
-* extension contains HL7IDRFindingExt named finding 0..* MS
-* extension[finding] ^short = "Key image findings"
-* extension[finding] ^definition = """
-Key images in the report
-"""
-* extension[findings]
-
-
 * extension contains HL7IDRImpressionExt named impression 0..* MS
 * extension[impression] ^short = "Impression"
 * extension[impression] ^definition = """
@@ -225,7 +218,6 @@ Communications captures what communications have been made with other care provi
 // * obeys hl7eu-im-dr-impression
 // * obeys hl7eu-im-dr-recommendation
 // * obeys hl7eu-im-dr-communication
-// * obeys hl7eu-im-dr-finding
 
 Extension: HL7IDRComparisonStudiesExt
 Title: "Extension: HL7IDR DiagnosticReport Comparison Study"
@@ -249,19 +241,12 @@ Description: "Imaging procedure used for the imaging acquisition and procedure s
 Context: DiagnosticReport
 * value[x] only Reference(ProcedureEuImaging or AdverseEvent or ObservationRadiationDoseEuImaging)
 
-Extension: HL7IDRFindingExt
-Title: "Extension: HL7IDR KeyImage Finding"
-Id: HL7IDRFinding
-Description: "KeyImage in the imaging report"
-Context: DiagnosticReport
-* value[x] only Reference(ObservationFindingEuImaging or ImagingSelectionKeyImageEuImaging or DocumentReferenceKeyImageEuImaging or DocumentReference {% if isR4 %} or Media {% endif %}  )
-
 Extension: HL7IDRImpressionExt
 Title: "Extension: HL7IDR Impression"
 Id: HL7IDRImpression
 Description: "Impression in the imaging report"
 Context: DiagnosticReport
-* value[x] only Reference(ObservationFindingEuImaging or Condition or DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging )
+* value[x] only Reference(ObservationFindingEuImaging or Condition or ImagingSelectionKeyImageEuImaging {% if isR4 %} or MediaKeyImageEuImaging {% else %} or DocumentReferenceKeyImageEuImaging {% endif %} )
 
 Extension: HL7IDRRecommendationExt
 Title: "Extension: HL7IDR Recommendation"
@@ -275,7 +260,7 @@ Title: "Extension: HL7IDR Communication"
 Id: HL7IDRCommunication
 Description: "Communications captures what communications have been made with other care providers"
 Context: DiagnosticReport
-* value[x] only Reference
+* value[x] only Reference(Communication)
 
 // ////////////////////////// Invariants ///////////////////////////////////////////////////////////////////
 

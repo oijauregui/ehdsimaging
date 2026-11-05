@@ -57,6 +57,16 @@ source_changes_under_ig_src() {
     grep -vE '(^|/)(input-cache|temp|fsh-generated|output)(/|$)' || true
 }
 
+api_root="$repo_dir/ig-api"
+api_output_dir="$api_root/output"
+api_needs_rebuild=false
+
+api_source_changes() {
+  git status --porcelain=1 --untracked-files=normal -- ig-api |
+    cut -c4- |
+    grep -vE '(^|/)ig-api/(input-cache|temp|fsh-generated|output|template|translations)(/|$)|(^|/)ig-api/Requirements-fromNarrative\.json$' || true
+}
+
 needs_rebuild=false
 
 if [ ! -d "$source_dir" ]; then
@@ -72,6 +82,26 @@ if [ -n "$source_changes" ]; then
   needs_rebuild=true
 else
   echo "No source changes detected under $source_dir."
+fi
+
+if [ -f "$api_root/sushi-config.yaml" ]; then
+  api_changes="$(api_source_changes)"
+  if [ -n "$api_changes" ]; then
+    echo "API source changes detected under ig-api:"
+    echo "$api_changes" | sed 's/^/  /'
+    api_needs_rebuild=true
+  elif [ ! -f "$api_output_dir/qa.txt" ] ||
+       [ ! -s "$api_root/.build-source.sha256" ] ||
+       [ "$(bash "$api_root/_source-state.sh")" != "$(cat "$api_root/.build-source.sha256")" ]; then
+    echo "API build evidence is missing or does not match the current authoring sources."
+    api_needs_rebuild=true
+  elif find "$api_root/input" "$api_root/ig-template" -type f -newer "$api_output_dir/qa.txt" -print -quit 2>/dev/null | grep -q .; then
+    echo "API input sources are newer than the Publisher QA output."
+    api_needs_rebuild=true
+  elif [ "$api_root/sushi-config.yaml" -nt "$api_output_dir/qa.txt" ] || [ "$api_root/ig.ini" -nt "$api_output_dir/qa.txt" ]; then
+    echo "API root configuration is newer than the Publisher QA output."
+    api_needs_rebuild=true
+  fi
 fi
 
 for version in "${versions[@]}"; do
@@ -131,6 +161,8 @@ run_build_in_docker() {
   local instance_name="ig-publisher-imaging-${version}-$(date +%s%N | cut -b1-13)"
   local ig_container_dir="/home/publisher/ig/igs/imaging-${version}"
   local version_log="$log_dir/build-${version}-$timestamp.log"
+  local tx_variable="TX_URL_${version^^}"
+  local tx_url="${!tx_variable:-}"
 
   local cache_args=()
   if [ "$cache_mode" = "volume" ]; then
@@ -140,13 +172,28 @@ run_build_in_docker() {
     cache_args=(--tmpfs "/home/publisher/.fhir")
   fi
 
+  local tx_args=()
+  if [[ -n "$tx_url" ]]; then
+    if [[ "$tx_url" == http://localhost:* ]]; then
+      tx_url="${tx_url/localhost/host.docker.internal}"
+      tx_args+=(--add-host "host.docker.internal:host-gateway")
+    fi
+    if [[ -n "${FHIR_SETTINGS:-}" && -f "$FHIR_SETTINGS" ]]; then
+      tx_args+=(-v "$FHIR_SETTINGS:/tmp/fhir-settings.json:ro")
+      tx_args+=(-e "FHIR_SETTINGS=/tmp/fhir-settings.json")
+    fi
+    tx_args+=(-e "TX_URL=$tx_url")
+  fi
+
   echo "Starting docker build for imaging-${version} (container: $instance_name)"
+  [[ -n "$tx_url" ]] && echo "Terminology endpoint for imaging-${version}: $tx_url"
   echo "Version build log: $version_log"
   docker run \
     --name "$instance_name" \
     --rm \
     -v "$repo_dir:/home/publisher/ig" \
     "${cache_args[@]}" \
+    "${tx_args[@]}" \
     "$publisher_image" \
     bash -lc "cd '$ig_container_dir' && ./_genonce.sh" 2>&1 | tee -a "$version_log" | sed -u "s/^/[${version}] /"
 }
@@ -155,12 +202,20 @@ run_build_locally() {
   local version="$1"
   local ig_dir="$repo_dir/igs/imaging-${version}"
   local version_log="$log_dir/build-${version}-$timestamp.log"
+  local tx_variable="TX_URL_${version^^}"
+  local tx_url="${!tx_variable:-}"
+  local fhir_settings=""
+
+  if [[ "$tx_url" == http://localhost:* && -n "${FHIR_SETTINGS:-}" ]]; then
+    fhir_settings="$FHIR_SETTINGS"
+  fi
 
   echo "Starting local build for imaging-${version}"
+  [[ -n "$tx_url" ]] && echo "Terminology endpoint for imaging-${version}: $tx_url"
   echo "Version build log: $version_log"
   (
     cd "$ig_dir"
-    ./_genonce.sh
+    TX_URL="$tx_url" FHIR_SETTINGS="$fhir_settings" ./_genonce.sh
   ) 2>&1 | tee -a "$version_log" | sed -u "s/^/[${version}] /"
 }
 
@@ -180,6 +235,21 @@ print_qa_summary() {
   else
     echo "imaging-${version} QA summary: no err/warn/info line found in $qa_file"
   fi
+}
+
+print_api_qa_summary() {
+  local qa_file="$api_output_dir/qa.txt"
+  if [ ! -f "$api_root/sushi-config.yaml" ]; then
+    echo "imaging-api-r4 QA summary: standalone API IG not present"
+    return 0
+  fi
+  if [ ! -f "$qa_file" ]; then
+    echo "imaging-api-r4 QA summary: missing $qa_file"
+    return 0
+  fi
+  local qa_line
+  qa_line="$(grep -m1 '^err =' "$qa_file" || true)"
+  echo "imaging-api-r4 QA summary: ${qa_line:-no err/warn/info line found in $qa_file}"
 }
 
 publisher_image_has_java() {
@@ -250,4 +320,24 @@ else
   echo "- Run log: $run_log"
   echo "- R4 log:  $log_dir/build-r4-$timestamp.log"
   echo "- R5 log:  $log_dir/build-r5-$timestamp.log"
+fi
+
+if [ -f "$api_root/sushi-config.yaml" ]; then
+  if [ "$api_needs_rebuild" = true ]; then
+    log_step "Building standalone R4 API IG directly (no preprocessing)"
+    if [ ! -f "$api_root/input-cache/publisher.jar" ] && [ ! -f "$api_root/publisher.jar" ]; then
+      (cd "$api_root" && ./_updatePublisher.sh -y)
+    fi
+    api_log="$log_dir/build-api-r4-$timestamp.log"
+    if (cd "$api_root" && ./_genonce.sh) > >(tee -a "$api_log") 2>&1; then
+      echo "Standalone API R4 build completed. Log: $api_log"
+    else
+      echo "Standalone API R4 build failed. Log: $api_log"
+      print_api_qa_summary
+      exit 1
+    fi
+  else
+    echo "No standalone API rebuild needed: source is clean and API output is present."
+  fi
+  print_api_qa_summary
 fi

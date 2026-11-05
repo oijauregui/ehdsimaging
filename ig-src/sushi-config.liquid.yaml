@@ -7,7 +7,7 @@ id: hl7.fhir.eu.imaging-{{r-code}}
 canonical: http://hl7.eu/fhir/imaging-{{r-code}}
 {% endif %}
 name: HL7EuImagingStudyReport
-title: HL7 Europe Imaging Report {{R-code}}
+title: EU Imaging Report {{R-code}}
 description: This guide describes how a Imaging Report can be represented in the European REALM using FHIR {{R-code}}.
 status: draft # draft | active | retired | unknown
 experimental: false
@@ -41,7 +41,7 @@ dependencies:
   {% if isR4 %}
   hl7.fhir.eu.health-data-api: 1.0.0-ballot
   # hl7.fhir.eu.health-data-api: current
-  hl7.fhir.eu.base: 2.0.0-ballot
+  hl7.fhir.eu.base: 2.0.1
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.eu.extensions.r4:
     uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
@@ -51,29 +51,21 @@ dependencies:
     version: 7.1.0
   hl7.fhir.uv.xver-r5.r4:
     uri: http://hl7.org/fhir/uv/xver
-    version: 0.0.1-snapshot-2
-  ihe.iti.mhd: 4.2.3
+    version: 0.1.0
   {% endif %}
 
   {% if isR5 %}
   # hl7.fhir.uv.ips: 2.0.0
 
-  hl7.fhir.eu.base-r5: 2.0.0-ballot
+  hl7.fhir.eu.base-r5: 2.0.1
   hl7.fhir.uv.extensions: 5.3.0-ballot
   hl7.fhir.eu.extensions: 1.2.0
   hl7.terminology.r5:
     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
     version: 7.1.0
-  ihe.iti.mhd: 5.0.0
   {% endif %}  
 
-  # eu.ehds.models: 0.1.0sushi
-  # eu.ehds.models: current
-  # required for medication extensions
-  # ihe.pharm.mpd: current
-
-  
-  
+    
 pages:
   index.md:
     title: Home
@@ -109,8 +101,6 @@ pages:
       title: Example semi structured report
     example-structured.md:
       title: Example structured report
-  api.md: 
-    title: EU Health Data API for Imaging Reports
   xtehr-mapping.md:
     title: Mapping to EHDS Logical Model profiles
   patterns-and-guidelines.md:
@@ -156,6 +146,13 @@ parameters:
   releaselabel: 0.1.1-build
   
   special-url-base: https://www.xt-ehr.eu/specifications/fhir
+  # Root OID per package (assigned by HL7 Europe); per-resource OIDs are kept in ig-src/oids.liquid.ini
+{% if isR4 %}
+  auto-oid-root: 2.16.840.1.113883.2.51.22.10
+{% endif %}
+{% if isR5 %}
+  auto-oid-root: 2.16.840.1.113883.2.51.22.12
+{% endif %}
   # add all fsh results to _data directory
   # produce-jekyll-data: true
   # broken links are not errors, but warnings
@@ -181,7 +178,6 @@ menu:
     Imaging Report: imaging-report.html
     Data formats: data-formats.html
     Imaging Report Examples: examples.html
-    EU Health Data API for Imaging Reports: api.html
     Mapping to EHDS Logical Model profiles: xtehr-mapping.html
     Patterns and Guidelines: patterns-and-guidelines.html
     Handling missing data: missing-data.html
@@ -197,7 +193,7 @@ menu:
     Structural: artifacts-structural.html
     Obligations: artifacts-obligations.html
     All: artifacts.html
-    Examples: artifacts.html#example-example-instances
+    Examples: examples.html
 
 {% if isR4 %}
   R5: https://build.fhir.org/ig/hl7-eu/imaging-r5/

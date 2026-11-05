@@ -1,5 +1,5 @@
 Profile: CompositionEuImaging
-Parent: Composition
+Parent: $EuComposition
 Title: "Composition: Imaging Report"
 Description: "Clinical document used to represent a Imaging Report for the scope of the HL7 Europe project."
 * . ^short = "Imaging Report composition"
@@ -22,36 +22,22 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
 * extension contains 
-    $event-basedOn-url          named basedOn 0..* and
-    $information-recipient-url  named informationRecipient 0..* and
-    $hl7euDiagnosticReferenceReference named diagnosticreport-reference 0..1
+    $event-basedOn-url          named basedOn 0..*
+    // $information-recipient-url  named informationRecipient 0..* and
 
-* extension[diagnosticreport-reference].valueReference only Reference ( DiagnosticReportEuImaging )
+* extension[diagnosticReport].valueReference only Reference ( DiagnosticReportEuImaging )
 * extension[informationRecipient]
   * ^short = "Information Recipient"
   * ^definition = "This extension corresponds to the clinical recipient of the report. A report is traditionally often written as a letter, the information recipient representes the addressee of the letter (often but not always this is the requester of the report mentioned in the ServiceRequest.requester field)."
 
-{{R4}}* extension contains $CrossVersion-Composition.version named version 0..1
+// {{R4}}* extension contains $CrossVersion-Composition.version named version 0..1
 
 * subject 1..1
 
 * custodian only Reference( $EuOrganization )
   * ^short = "Organization that manages the Imaging Report"
 
-* attester 0..*
-  * insert SliceElement( #value, mode )
-* attester contains legalAuthenticator 0..* and resultValidator 0..*
-* attester[legalAuthenticator]
-  * mode 1..1
-  * mode = http://hl7.org/fhir/composition-attestation-mode#legal
-  * party only Reference( $EuPractitioner or $EuPractitionerRole )
-  * time 1..1
-* attester[resultValidator]
-  * mode 1..1
-  * mode = http://hl7.org/fhir/composition-attestation-mode#professional
-  * party only Reference( $EuPractitioner or $EuPractitionerRole )
-  * party.extension contains DeviceAttesterExt named deviceAttester 0..1
-  * time 1..1
+* attester[validator].party.extension contains DeviceAttesterExt named deviceAttester 0..1
 
 * author 1..*
   // * insert SliceElement( #profile, [[$this.resolve()]] )
@@ -64,8 +50,14 @@ The `text` field of each section SHALL contain a textual representation of all l
     authoringDevice 0..* and
     organization 0..*
 * author[author] only Reference( $EuPractitioner or $EuPractitionerRole )
+  * ^short = "Healthcare professional who authored the report"
+  * ^definition = "The author should identify a healthcare professional."
 * author[authoringDevice] only Reference( $EuDevice )
+  * ^short = "System used to generate the report"
+  * ^definition = "Identifies the Device used to generate the report. Device as the only author SHOULD only be used when a practitioner was not involved in the imaging acquisition or the practitioner is not known."
 * author[organization] only Reference( $EuOrganization )
+  * ^short = "Organization author"
+  * ^definition = "Organization as the only author SHOULD only be used when a practitioner was not involved in the imaging acquisition or the practitioner is not known."
 
 // type of the report. Matching DiagnosticReport.code
 // code 
@@ -105,13 +97,14 @@ The `text` field of each section SHALL contain a textual representation of all l
 * obeys eu-imaging-comp-status-succession
 
 * section.code 1..1 
-* section 
-  * insert SliceElement( #value, code )
 * section.emptyReason from SectionEmptyReasonEuImaging (preferred)  
 * section obeys eu-imaging-composition-1
 * section obeys eu-imaging-composition-2
+
+* section 3..*
+  * insert SliceElement( #value, code )
 * section contains 
-    imagingstudy 1..1  and
+    imagingstudy 0..1  and
     order 1..1 and
     history 1..1 and 
     procedure 1..1 and
@@ -126,11 +119,10 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[imagingstudy]
   * ^short = "Imaging Study"
   * ^definition = "This section holds information related to the imaging studies covered by this report."
-  // * title = "Imaging Studies"
   * code = $loinc#18726-0
   * entry 
     * insert SliceElement( #profile, $this )
-  * entry contains imagingstudy 1..*
+  * entry contains imagingstudy 0..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
@@ -207,13 +199,16 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#59776-5 // "Findings"
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
-  * entry contains 
+  * entry contains
       finding 0..* and
-      keyimage 0..* and
       image 0..*
-  * entry[finding] only Reference(Observation)
-  * entry[keyimage] only Reference( DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging )
-  * entry[image] only Reference( DocumentReference {% if isR4 %} or Media {% endif %} )
+  * entry[finding] only Reference(ObservationFindingEuImaging or ObservationNarrativeReport)
+    * ^short = "Imaging findings"
+{{R4}}  * entry[image] only Reference( Media or MediaKeyImageEuImaging or ImagingSelectionKeyImageEuImaging )
+{{R5}}  * entry[image] only Reference( DocumentReference or DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging )
+  * entry[image] ^short = "Images and key images"
+{{R4}}  * entry[image] ^definition = "Used to include general images as well as key images. This may be a general image as a `Media` resource, a key image represented as image content (`MediaKeyImageEuImaging`), or a key image identified using DICOM selection data (`ImagingSelectionKeyImageEuImaging`)."
+{{R5}}  * entry[image] ^definition = "Used to include general images as well as key images. This may be a general image as a `DocumentReference` resource, a key image represented as image content (`DocumentReferenceKeyImageEuImaging`), or a key image identified using DICOM selection data (`ImagingSelectionKeyImageEuImaging`)."
 
 
 // /////////////////// IMPRESSION SECTION //////////////////////////
@@ -223,18 +218,17 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains 
-      finding 0..* and
-      impression 0..* and
+      impressions 0..* and
       keyimage 0..*
-  * entry[finding] only Reference(ObservationFindingEuImaging)
-  * entry[impression] only Reference( $EuCondition )
-  * entry[keyimage] only Reference(DocumentReferenceKeyImageEuImaging or ImagingSelectionKeyImageEuImaging)
+  * entry[impressions] only Reference( ObservationFindingEuImaging or $EuCondition )
+    * ^short = "Impressions"
+    * ^definition = "What the imaging clinician concluded from the findings. Use an Observation when the impression is an observed (imaging) finding and a Condition when the imaging clinician asserts a diagnosis."
+  * entry[keyimage] only Reference(ImagingSelectionKeyImageEuImaging {% if isR4 %} or MediaKeyImageEuImaging {% else %} or DocumentReferenceKeyImageEuImaging {% endif %})
 
 // /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
   * ^short = "Recommendations"
-  * code = $loinc#18783-1 // "Radiology Study recommendation (narrative)"
-  
+  * code = $loinc#18783-1 // "Radiology Study recommendation (narrative)" 
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains suggestion 0..*
@@ -252,7 +246,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[report]
   * ^short = "Report - all content in one section"
 // a proper code is needed
-  * code = $loinc#LP173421-1 // "Report"
+  * code = $sct#4201000179104 "Imaging report"
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains narrative-report 1..*
@@ -271,9 +265,9 @@ Severity: #error
 Expression: "entry.empty().not() or emptyReason.exists() or section.exists() or extension('http://hl7.org/fhir/StructureDefinition/note').value.text.exists()"
 
 Invariant: eu-imaging-composition-2
-Description: "A section must contain at least one of text, entries, or sub-sections."
+Description: "A section must contain at least one of text, entries, sub-sections, or an emptyReason."
 Severity: #error 
-Expression: "text.exists() or entry.exists() or section.exists()"
+Expression: "text.exists() or entry.exists() or section.exists() or emptyReason.exists()"
 
 // ////////////////////////// Status <-> relatesTo correspondence //////////////////////////
 

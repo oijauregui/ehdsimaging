@@ -7,7 +7,7 @@ The imaging report represents a report made by a radiologist based on an imaging
 
 The figure below illustrates the structure of the Imaging Report.
 
-{% include img.html img="imaging-report-overview.drawio.png" caption="Figure 1: Imaging report overview" %}
+{% include img.html img="imaging-report-overview.drawio.svg" caption="Figure 1: Imaging report overview" interactiveSvg=true %}
 
 An Imaging Report is a FHIR Clinical Document that contains both a [[[DiagnosticReport]]] and a [[[Composition]]] resource.
 The report uses the [[[DiagnosticReportEuImaging]]] to store the structured data. This resource might also include a rendered version of the document. The [[[CompositionEuImaging]]] resource is used to present a rendered version of the document as a FHIR document.
@@ -19,11 +19,21 @@ As described by {{iheIDR}}, all radiology reports contain similar information. T
 
 General information on the report. Most of the information elements in this part of the report overlap with other clinical reports. The document header includes information on the patient, source organization, author, attester and custodian of the report.
 
+The author should identify a healthcare professional. A Device may also be used to indicate the system used to generate the report. Device or Organization as the only author SHOULD only be used when a practitioner was not involved in the imaging acquisition or the practitioner is not known.
+
 #### Document sections
 
 ##### Imaging Study
 
 Information on the studies that this report is reporting on. It includes information such as the study identifiers, date and time the exam was done, the modalities used in the exam and the different series. In this implementation guide this is represented by the [[[ImagingStudyEuImaging]]] profile.
+
+The amount of imaging study information available to the report creator varies by setting. Systems with full access to a PACS can populate the complete study metadata, while other systems (e.g. reports from dentistry, dermatology, or legacy systems) may know only part of it, or nothing at all. The following rules and use cases describe how to populate the imaging study information accordingly:
+
+* The Study Instance UID SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest ({{iheMADO}}) and the images.
+* If the report creator knows that an entry in the PACS exists, it SHALL populate an [[[ImagingStudyEuImaging]]] resource with known identifiers (Study Instance UID and/or Accession number) and any available study metadata (e.g. modality, anatomy, procedure code, date and time), and reference it in the model.
+* When nothing about the study is known, `section[imagingstudy]` SHALL be present but empty, with `section.emptyReason` conveying why.
+
+For a detailed description of the possible use cases and how to represent the imaging study information in each of them, see [Imaging study population use cases](design-considerations.html#imaging-study-population-use-cases).
 
 ##### Order
 
@@ -73,9 +83,9 @@ This section provides a detailed description of the findings on the imaging exam
 
 When there are significant numbers of findings, the imaging clinician will typically organize them into groups, typically by anatomy. Reporting templates for particular procedure types (such as those at [radreport.org](https://radreport.org/)) will also often organize the findings.
 
-An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms.
+An important distinction between Findings and Impressions is that Findings capture what the imaging clinician saw in the image, while Impressions capture what they inferred/concluded. The findings might record a radiolucency, while the impression records a fracture. There are some cases where the two overlap, but generally imaging clinicians try to capture in the Findings what the significant image features are and strive in the Impressions to communicate to the referring physician what they think those represent in clinical terms. In cases of disease-like imaging appearances (e.g. *5 mm non-obstructing left renal calculus*) that are observed in the images, they should be encoded as [[[ObservationFindingEuImaging]]] as well, not as Condition resources.
 
-In this specification, findings are represented as resources following the [[[ObservationFindingEuImaging]]] profile. Optionally, this section can also hold one or more key image resources represented by either [[[ImagingSelectionKeyImageEuImaging]]] or [[[DocumentReferenceKeyImageEuImaging]]] or other relevant images represented by a [[[DocumentReference]]].
+In this specification, findings are represented as resources following the [[[ObservationFindingEuImaging]]] profile. Optionally, this section can also hold one or more key image resources represented by either [[[ImagingSelectionKeyImageEuImaging]]] or {% if isR4 %}{{ MediaKeyImageEuImaging }}{% else %}{{ DocumentReferenceKeyImageEuImaging }}{% endif %} or other relevant images represented by a {% if isR4 %}[[[Media]]] or [[[DocumentReference]]]{% else %}[[[DocumentReference]]]{% endif %}.
 
 ##### Impression
 
@@ -91,7 +101,7 @@ Some items in the impression may be clinically significant but were not associat
 
 Some items in the impression may be critical, in that they represent the potential for severe negative clinical impact to the patient if appropriate action is not taken promptly. The presence of such items almost always results in a communication with care staff and/or the patient.
 
-In this specification, impressions are represented by [[[ObservationFindingEuImaging]]] and [[[Condition]]] resources.
+In this specification, impressions are represented by [[[ObservationFindingEuImaging]]] and [[[Condition]]] resources. The latter can be used when the imaging clinician asserts a diagnosis.
 
 ##### Recommendation
 
@@ -141,11 +151,14 @@ Document versioning is tracked using different concepts:
  
 These fields are present on the key resources of this IG as is illustrated by the table below:
 
-| Concept               | DocumentReferenceImagingReport                        | DiagnosticReportEuImaging  | CompositionEuImaging | 
-| --------------------- | ----------------------------------------------------- | -------------------------- | -------------------- |
-| issued/last-edit date |                                                       | issued                     | date |
-| version               | {%if isR4%}extension[version]{%else%}version{%endif%} | extension[artifactVersion] | {%if isR4%}extension[version]{%else%}version{%endif%} |
-| related               | {%if isR4%}related{%else%}relatesTo{%endif%}          | -                          | relatesTo |
+| Concept | DiagnosticReportEuImaging | CompositionEuImaging | BundleReportEuImaging |
+| ------- | ------------------------- | -------------------- | --------------------- |
+| clinically effective time (when study took place) | effective[x] | {%if isR4%}event.period{%else%}period{%endif%} | - |
+| report content last logically changed by the author | - | date | - |
+| report version issued/released to providers | issued | - | - |
+| document created/assembled | - | - | timestamp |
+| version | extension[artifactVersion] | {%if isR4%}extension[version]{%else%}version{%endif%} | - |
+| related | - | relatesTo | - |
  
 
 Imaging Report Producers SHOULD include version information in the documents, Consumers SHOULD take versioning into account.

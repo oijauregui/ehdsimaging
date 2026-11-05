@@ -1,6 +1,6 @@
 Profile: ImagingStudyEuImaging
 Parent: ImagingStudy
-Title: "ImagingStudy: General"
+Title: "Imaging Study: Reported Study"
 Description: """ 
 This profile represents an imaging study instance.
 """
@@ -13,14 +13,16 @@ This profile represents an imaging study instance.
 * extension[anatomical-region] ^short = "The anatomical regions covered by the study."
 * extension[anatomical-region] ^definition = """
 The anatomical regions covered by the study, depending on the study there can be zero, one or more regions. 
-The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.bodysite`.
+The regions SHALL overlap with the bodysite references from `ImagingStudy.series.bodySite`.
 """
 * extension[anatomical-region] ^requirements = "This field may be present to align with a similar field on the Imaging Manifest."
 
 * identifier
   * insert SliceElement( #profile, system )
-* identifier contains studyInstanceUid 1..1
+* identifier contains studyInstanceUid 0..1
 * identifier[studyInstanceUid] only StudyInstanceUidIdentifierEuImaging
+* identifier[studyInstanceUid] ^short = "Study Instance UID"
+* identifier[studyInstanceUid] ^definition = "The DICOM Study Instance UID. It SHALL be populated whenever it is known, as it is the key used to retrieve the imaging manifest (MADO) and the images."
 
 * subject 1..1
 * subject only Reference( $EuPatient or $EuDevice )
@@ -39,12 +41,12 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
     * insert SliceElement( #value, function )
   * performer contains performer 0..1 and device 0..1 and custodian 0..1 and organization 0..1
   * performer[performer]
-    * ^short = "The practitioner/device/organization that preformed the imaging."
+    * ^short = "The practitioner/device/organization that performed the imaging."
     * ^definition = "The performer of the series. Device or Organization SHALL only be used when a practitioner is not involved in the imaging acquisition or the practitioner is not known."
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF
     * actor only Reference( $EuPractitionerRole or $EuDevice or $EuOrganization )
   * performer[custodian]
-    * ^short = "The custodian of the report."
+    * ^short = "The custodian of the imaging study."
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST
     * actor only Reference( $EuOrganization )
   * performer[device]
@@ -81,4 +83,3 @@ Invariant: im-imagingstudy-01
 Description: "A DICOM instance UID must start with 'urn:oid:'"
 Severity: #warning
 Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:')"
-

@@ -13,37 +13,10 @@ This page lists the structural profiles defined in this specification
  ]
 } %}
 
-### EU Access Related Profiles
-
-#### DocumentReference
-
-{% sql {
- "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND ( Name LIKE 'DocumentReferenceUnstructuredImagingReport' OR Name LIKE 'DocumentReferenceImagingReport')" ,
- "class" : "lines",
- "columns" : [
- { "name" : "Title" , "type" : "link" , "source" : "Name", "target" : "Web"},
- { "name" : "Name" , "type" : "markdown" , "source" : "Title" },
- { "name" : "Description", "type" : "markdown" , "source" : "Description"}
- ]
-} %}
-
-### CapabilityStatements
-
-{% sql {
- "query" : "SELECT name AS Name, title AS Title, Type, Description, Web, Url FROM Resources WHERE Type='CapabilityStatement' ORDER BY Name",
- "class" : "lines",
- "columns" : [
- { "name" : "Title" , "type" : "link" , "source" : "Name", "target" : "Web"},
- { "name" : "Name" , "type" : "markdown" , "source" : "Title" },
- { "name" : "Description", "type" : "markdown" , "source" : "Description"}
- ]
-}
-%}
-
 ### Other Resource profiles
 
 {% sql {
- "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE '%EuImaging' AND Name NOT LIKE 'BundleReportEuImaging' AND NOT Name LIKE 'CompositionEuImaging' AND Name NOT LIKE 'DiagnosticReportEuImaging' AND Name NOT LIKE 'DiagnosticReportEuImagingMinimalMetadata' AND Name NOT LIKE 'DocumentReferenceKeyImageEuImaging' AND Name NOT LIKE '%ProducerEuImaging' AND Name NOT LIKE '%ConsumerEuImaging' AND Name NOT LIKE '%ObligationEuImaging' ORDER BY Name ",
+ "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE '%EuImaging' AND Name NOT LIKE 'BundleReportEuImaging' AND NOT Name LIKE 'CompositionEuImaging' AND Name NOT LIKE 'DiagnosticReportEuImaging' AND Name NOT LIKE 'DiagnosticReportEuImagingMinimalMetadata' AND Name NOT LIKE 'DocumentReferenceKeyImageEuImaging' AND Name NOT LIKE 'MediaKeyImageEuImaging' AND Name NOT LIKE '%ProducerEuImaging' AND Name NOT LIKE '%ConsumerEuImaging' AND Name NOT LIKE '%ObligationEuImaging' ORDER BY Name ",
  "class" : "lines",
  "columns" : [
  { "name" : "Title" , "type" : "link" , "source" : "Name", "target" : "Web"},
@@ -75,6 +48,5 @@ This page lists the structural profiles defined in this specification
  { "name" : "Description", "type" : "markdown" , "source" : "Description"}
  ]
 } %}
-
 
 

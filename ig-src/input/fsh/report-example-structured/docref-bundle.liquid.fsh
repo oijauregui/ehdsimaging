@@ -1,40 +1,3 @@
-Instance: DocumentReferenceStructuredReport
-InstanceOf: DocumentReferenceImagingReport
-Title: "DocumentReference: Renderable format structured"
-Description: "MHD DocumentReference for structured report."
-Usage: #example
-{{R4}}* masterIdentifier[+]
-{{R5}}* identifier[+]
-  * system = "urn:ietf:rfc:3986"
-  * use = #usual
-  * value = "http://structured-report.example.com"
-* status = #current
-* date = "2025-09-05T00:00:00Z"
-{{R4}}* extension[modality].valueCodeableConcept = http://dicom.nema.org/resources/ontology/DCM#US
-{{R5}}* modality = http://dicom.nema.org/resources/ontology/DCM#US
-* category[+]
-  * coding[priority-area] = http://hl7.eu/fhir/{% if isR5 %}eu-{% endif %}health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
-* type
-  * coding[imaging-report] = $loinc#85430-7 "Diagnostic imaging report - example sections and entries"
-* subject = Reference(PatientStructuredReport)
-* custodian = Reference(OrganizationStructuredReport)
-{{R4}}* extension[bodysite]
-{{R4}}  * extension[concept]
-{{R4}}    * valueCodeableConcept
-{{R4}}      * coding[+] = $sct#67734004
-{{R5}}* bodySite
-{{R5}}  * concept
-{{R5}}    * coding = $sct#67734004
-* content[+]
-{{R4}}  * extension[profile]
-{{R4}}    * valueCanonical = Canonical(BundleReportMinimalMetadataEuImaging)
-{{R5}}  * profile[bundle-report].valueCanonical = Canonical(BundleReportEuImaging)
-  * attachment[0]
-    * contentType = #application/fhir+json
-    * url = "Bundle/bundle-report-structured"
-    * language = #en-GB
-    * creation = "2025-09-05T00:00:00Z"
-
 Instance: BundleReportStructured
 InstanceOf: BundleReportEuImaging
 Title: "Bundle: Imaging Report structured"
@@ -80,8 +43,21 @@ Usage: #example
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/HRObservation"
   * resource = HRObservation
 * entry[+]
-  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/WMSIImage"
+{{R4}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Media/WMSIImage"
+{{R5}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/WMSIImage"
   * resource = WMSIImage
+{{R4}}* entry[+]
+{{R4}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Media/StructuredKeyImageRestR4"
+{{R4}}  * resource = StructuredKeyImageRestR4
+{{R4}}* entry[+]
+{{R4}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Media/StructuredKeyImageStressR4"
+{{R4}}  * resource = StructuredKeyImageStressR4
+{{R5}}* entry[+]
+{{R5}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageRest"
+{{R5}}  * resource = StructuredKeyImageRest
+{{R5}}* entry[+]
+{{R5}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageStress"
+{{R5}}  * resource = StructuredKeyImageStress
 * entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/RestWmsi01"
   * resource = RestWmsi01
@@ -187,12 +163,6 @@ Usage: #example
 * entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/NarrativeFindingsAll"
   * resource = NarrativeFindingsAll
-{{R4}}* entry[+]
-{{R4}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageRest"
-{{R4}}  * resource = StructuredKeyImageRest
-{{R4}}* entry[+]
-{{R4}}  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageStress"
-{{R4}}  * resource = StructuredKeyImageStress
 * entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/ServiceRequest/ComeBackNextYearServiceRequest"
   * resource = ComeBackNextYearServiceRequest
